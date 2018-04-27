@@ -1,0 +1,89 @@
+header {
+	background-color: #343d46;
+	padding: 30px;
+	color: #ec0047;
+
+	input {
+		outline: none;
+		color: white;
+		font-size: 15px;
+		font-weight: 100;
+		background-color: #343d46;
+		padding: 16px 26px 16px 52px;
+		border: 1px solid #6498cf;
+		border-radius: 3px;
+	}
+}
+
+.paging  {
+	.pagination-list {
+		justify-content: center;
+	}
+
+	.is-current a {
+		background-color: #343d46;
+		color: white;
+	}	
+}
+
+#videos {
+	.card {
+		
+		transition: 0.4s ease;
+
+		nav.actions {
+			transition: 0.4s ease;
+			opacity: 0;
+		}
+	}
+
+	.card {
+
+		.image {
+
+			background-size: cover;
+	    	position: relative;
+
+	    	div.is-overlay {
+	    		transition: 0.4s ease;
+	    		background-image: url('/images/overlay.png');
+	    	}
+
+		.ttl {
+		    position: absolute;
+		    bottom: 20px;
+		    width: 90%;
+		    left: 10%;
+		    background-color: #4988cb;
+		    opacity: 0.9;
+		    color: white;
+		    padding: 5px 0 5px 20px;
+		    /*font-size: 0.8rem;*/
+		    padding-right: 20px;
+		}	    	
+	    } 
+
+	}
+
+	.card:not(.verified) {
+	}
+
+	.card em {
+		color: #ec0047;
+	}
+
+	.card:hover {
+
+		box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
+
+		cursor: pointer;
+
+		div.is-overlay {
+			opacity: 0;
+		}
+
+		nav.actions {
+			opacity: 1;
+		}
+	}	
+}

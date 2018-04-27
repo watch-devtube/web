@@ -1,0 +1,21 @@
+language: node_js
+branches:
+  only:
+  - master
+before_script:
+- git config --global user.email "travis@dev.tube"
+- git config --global user.name "Travis at Dev.Tube"
+- npm install -g gulp-cli
+script:
+- gulp build
+
+deploy:
+  provider: pages
+  local-dir: build
+  skip-cleanup: true
+  repo: git@github.com:watch-devtube/watch-devtube.github.io.git
+  target-branch: master
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
