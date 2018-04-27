@@ -13,7 +13,7 @@ deploy:
   provider: pages
   local-dir: build
   skip-cleanup: true
-  repo: git@github.com:watch-devtube/watch-devtube.github.io.git
+  repo: watch-devtube/watch-devtube.github.io
   target-branch: master
   github-token: $GH_TOKEN
   keep-history: true
