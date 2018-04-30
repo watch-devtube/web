@@ -1,18 +1,19 @@
-# example-vue-router
+# Web
 
-> Algolia search with Vue Router
+> This is a web front-end for Dev.Tube
 
-## Build Setup
+## Commands
 
 ``` bash
+# make sure yarn is installed
+npm install --global yarn
+
 # install dependencies
-npm install
+yarn
 
-# serve with hot reload at localhost:8080
-npm run dev
+# serve with hot reload
+yarn run dev
 
-# build for production with minification
-npm run build
+# build for production
+yarn run build
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
