@@ -19,48 +19,49 @@
                 .columns
                   .column
                     h1.title Tags
-                    #tag.is-uppercase
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags")
                 .columns
                   .column
                     h1.title Speaker
-                    #speaker.is-uppercase
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker")
               .column
                 .columns
                   .column
                     .has-text-right
-                      #sort.select
-                  ais-results#videos.columns.is-multiline
-                    template(slot-scope="{ result }")
-                      .column.is-6.is-4-widescreen
-                        .card(@click="watch(result.objectID)")
-                            .card-image
-                              .image.is-16by9(:style="'background-image:url(https://img.youtube.com/vi/' + result.objectID + '/maxresdefault.jpg)'")
-                                .is-overlay
-                                  p.ttl.is-uppercase.is-size-7 {{result.title}}
-                            .card-content
-                                nav.level.is-mobile
-                                  .level-item.has-text-centered
-                                    div
-                                      p.heading: i.far.fa-smile
-                                      p.title.is-size-7 {{result.likes}}
-                                  .level-item.has-text-centered
-                                    div
-                                      p.heading Views
-                                      p.title.is-size-7 {{result.views}}
-                                  .level-item.has-text-centered
-                                    div                
-                                      p.heading Duration
-                                      p.title.is-size-7 {{result.duration}}
-                                  .level-item.has-text-centered
-                                    div                
-                                      p.heading Date
-                                      p.title.is-size-7 {{result.publishedAt}}
-                                span.tag.is-uppercase Java 
-                                span.tag.is-uppercase {{result.channelTitle}} 
-                                span.tag.is-uppercase.is-success Top 100
-                                nav.actions.is-pulled-right
-                                    i.fas.fa-star
-                                    i.fas.fa-share-alt
+                      .select
+                        ais-sort-by-selector(:indices="[{ name: 'videos_date_desc', label: 'Newest' },{ name: 'videos_rating_desc', label: 'Highly rated' },{ name: 'videos', label: 'Most relevant' },{ name: 'videos_views_desc', label: 'Most viewed' }]")
+                    ais-results#videos.columns.is-multiline
+                      template(slot-scope="{ result }")
+                        .column.is-6.is-4-widescreen
+                          .card(@click="watch(result.objectID)")
+                              .card-image
+                                .image.is-16by9(:style="'background-image:url(https://img.youtube.com/vi/' + result.objectID + '/maxresdefault.jpg)'")
+                                  .is-overlay
+                                    p.ttl.is-uppercase.is-size-7 {{result.title}}
+                              .card-content
+                                  nav.level.is-mobile
+                                    .level-item.has-text-centered
+                                      div
+                                        p.heading: i.far.fa-smile
+                                        p.title.is-size-7 {{result.likes}}
+                                    .level-item.has-text-centered
+                                      div
+                                        p.heading Views
+                                        p.title.is-size-7 {{result.views}}
+                                    .level-item.has-text-centered
+                                      div                
+                                        p.heading Duration
+                                        p.title.is-size-7 {{result.duration}}
+                                    .level-item.has-text-centered
+                                      div                
+                                        p.heading Date
+                                        p.title.is-size-7 {{result.publishedAt}}
+                                  span.tag.is-uppercase Java 
+                                  span.tag.is-uppercase {{result.channelTitle}} 
+                                  span.tag.is-uppercase.is-success Top 100
+                                  nav.actions.is-pulled-right
+                                      i.fas.fa-star
+                                      i.fas.fa-share-alt
     section.section
       .container
         .columns

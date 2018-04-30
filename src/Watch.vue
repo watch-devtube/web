@@ -1,6 +1,6 @@
 <template lang="pug">
 	.watch
-		iframe(:src="'https://www.youtube.com/embed/' + id" width="560" height="315" frameborder="0")
+		iframe(:src="'https://www.youtube.com/embed/' + id" width="853" height="505" frameborder="0")
 </template>
 
 <script>
