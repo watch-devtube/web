@@ -11,7 +11,7 @@ script:
 
 deploy:
   provider: pages
-  local-dir: build
+  local-dir: dist
   skip-cleanup: true
   repo: watch-devtube/watch-devtube.github.io
   target-branch: master
