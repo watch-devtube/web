@@ -32,7 +32,7 @@
                   ais-results#videos.columns.is-multiline
                     template(slot-scope="{ result }")
                       .column.is-6.is-4-widescreen
-                        .card
+                        .card(@click="watch(result.objectID)")
                             .card-image
                               .image.is-16by9(:style="'background-image:url(https://img.youtube.com/vi/' + result.objectID + '/maxresdefault.jpg)'")
                                 .is-overlay
@@ -183,6 +183,14 @@ export default {
     return {
       searchStore,
     };
+  },
+  methods: {
+    watch: function(videoId) {
+      this.$router.push({
+        name: 'watch',
+        params: { id: videoId }
+      });
+    }
   },
   watch: {
     'searchStore.queryParameters'(parameters) {
