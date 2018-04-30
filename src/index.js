@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   routes: [
-    { path: '/search', component: Search, props: route => ({ queryParameters: route.query }) },
+    { name: 'search', path: '/search', component: Search, props: route => ({ queryParameters: route.query }) },
     { path: '/', redirect: '/search' },
     { path: '/foo', redirect: '/search' }
   ],
