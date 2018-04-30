@@ -5,9 +5,8 @@ branches:
 before_script:
 - git config --global user.email "travis@dev.tube"
 - git config --global user.name "Travis at Dev.Tube"
-- npm install -g gulp-cli
 script:
-- gulp build
+- npm run build
 
 deploy:
   provider: pages
