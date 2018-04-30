@@ -7,6 +7,7 @@
             .level-item
               img(src="./logo.png")
           .level-item.has-text-centered
+              router-link(to="/foo") Go to Foo
               ais-input(placeholder="Search for videos...")
     section.section
           .container

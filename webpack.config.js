@@ -7,8 +7,7 @@ const webpack = require('webpack');
 module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
-    // publicPath: '/dist/',
-    filename: 'build.js',
+    filename: 'build.js'
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'})
@@ -52,8 +51,7 @@ module.exports = {
     },
   },
   devServer: {
-    historyApiFallback: false,
-    openPage: "dist/index.html"
+    historyApiFallback: false
   },
   performance: {
     hints: false,
