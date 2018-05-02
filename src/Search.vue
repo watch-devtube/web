@@ -18,6 +18,10 @@
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle")
                 .columns
                   .column
+                    h1.title Language
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="audioLanguage")                      
+                .columns
+                  .column
                     h1.title Tags
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags")
                 .columns
@@ -33,11 +37,12 @@
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
                         .column.is-6.is-4-widescreen
-                          .card(@click="watch(result.objectID)")
+                          .card
                               .card-image
                                 .image.is-16by9(:style="'background-image:url(https://img.youtube.com/vi/' + result.objectID + '/maxresdefault.jpg)'")
+                                  a.watch.button.is-outlined.is-inverted.is-link(v-on:click.stop.prevent="watch(result.objectID)") Watch
                                   .is-overlay
-                                    p.ttl.is-uppercase.is-size-7 {{result.title}}
+                                  p.ttl.is-uppercase.is-size-7 {{result.title}}
                               .card-content
                                   nav.level.is-mobile
                                     .level-item.has-text-centered
@@ -56,12 +61,14 @@
                                       div                
                                         p.heading Date
                                         p.title.is-size-7 {{result.publishedAt}}
-                                  span.tag.is-uppercase Java 
+                                  span.tag.is-uppercase Java
+                                  | &nbsp;
                                   span.tag.is-uppercase {{result.channelTitle}} 
-                                  span.tag.is-uppercase.is-success Top 100
+                                  //- span.tag.is-uppercase.is-success Top 100
                                   nav.actions.is-pulled-right
-                                      i.fas.fa-star
-                                      i.fas.fa-share-alt
+                                      a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + result.objectID + '.json'"): i.fab.fa-github
+                                      //- i.fas.fa-star
+                                      //- i.fas.fa-share-alt
     section.section
       .container
         .columns
@@ -100,21 +107,24 @@ header {
 
 #videos {
   .card {
-    
     transition: 0.4s ease;
-
-    nav.actions {
-      transition: 0.4s ease;
-      opacity: 0;
-    }
   }
 
   .card {
 
     div.image {
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-size: cover;
-      position: relative;
+
+        .watch {
+          z-index: 1;
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          transition: 0.4s ease;
+        }
 
         div.is-overlay {
           transition: 0.4s ease;
@@ -148,14 +158,8 @@ header {
 
     box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
 
-    cursor: pointer;
-
     div.is-overlay {
-      opacity: 0;
-    }
-
-    nav.actions {
-      opacity: 1;
+      // opacity: 0;
     }
   } 
 }
