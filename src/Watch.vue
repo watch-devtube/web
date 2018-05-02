@@ -1,10 +1,79 @@
 <template lang="pug">
-	.watch
-		iframe(:src="'https://www.youtube.com/embed/' + id" width="853" height="505" frameborder="0")
+.watch
+  section.section.body
+   .container
+    .columns
+      .column.is-one-half
+        .card
+          .card-image
+            .videoWrapper
+              iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
+          .card-content
+                nav.level.is-mobile
+                  .level-item.has-text-centered
+                    div
+                      p.heading: i.far.fa-smile
+                      p.title.is-size-7 35353
+                  .level-item.has-text-centered
+                    div
+                      p.heading Views
+                      p.title.is-size-7 w53
+                  .level-item.has-text-centered                        
+                    div
+                      p.heading Duration
+                      p.title.is-size-7 w4353
+      .column
+        .content
+          h1 {{video.title}}
+          p {{video.description}}
 </template>
+<style scoped lang="scss">
+  body {
 
+  }
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+  }
+  .card-content {
+    p { color: white; }
+    background-color: #343d46;
+  }
+</style>
 <script>
-export default {
-  props: ['id']
-}
- </script>
+  import axios from 'axios';
+  export default {
+    data() {
+      return {
+        errors: [],
+        video: {}
+      }
+    },    
+    created() {
+        axios.get(`https://DR90AOGGE9.algolia.net/1/indexes/videos/a-BOSpxYJ9M`, {
+            headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',
+            'X-Algolia-API-Key': 'c2655fa0f331ebf28c89f16ec8268565' }
+        }).then(response => {
+          this.video = response.data
+        }).catch(error => {
+          this.errors.push(error)
+        })
+    },
+    metaInfo() {
+      return {
+        title: this.video.title
+      }
+    },
+    props: ['id']
+  }
+
+</script>
