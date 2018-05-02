@@ -17,11 +17,15 @@
                   .level-item.has-text-centered
                     div
                       p.heading Views
-                      p.title.is-size-7 w53
+                      p.title.is-size-7 {{video.views | views}}
                   .level-item.has-text-centered                        
                     div
                       p.heading Duration
-                      p.title.is-size-7 w4353
+                      p.title.is-size-7 {{video.duration | duration}}
+                  .level-item.has-text-centered                        
+                    div
+                      p.heading Published
+                      p.title.is-size-7 {{video.publishedAt | published}}
       .column
         .content
           h1 {{video.title}}

@@ -5,10 +5,38 @@ import InstantSearch from 'vue-instantsearch';
 import App from './App.vue';
 import Watch from './Watch.vue';
 import Search from './Search.vue';
+import dayjs from 'dayjs'
 
 Vue.use(InstantSearch);
 Vue.use(VueRouter);
 Vue.use(Meta);
+Vue.filter('views', it => {
+   return it && it >= 1000 
+   		?  
+   			Math.round(it / 1000) + '.' + (it % 1000).toString().charAt(0) +  'K' 
+   		: 
+   			it;
+})
+
+Vue.filter('duration', it => {
+   if (!it) {
+   		return it
+   }
+
+   let h = it >= 3600 ? Math.round(it / 3600) : 0
+   let hs = h ? `${h} hour ` : ''
+   let m = h ? Math.round(it % 3600 / 60) : Math.round(it / 60)
+   let ms = m ? `${m} min` : ''
+   return `${hs}${ms}`
+})
+
+Vue.filter('published', it => {
+   return it
+   		?  	
+   			dayjs(it * 1000).format('YYYY MMM')
+   		: 
+   			it;
+})
 
 const router = new VueRouter({
   mode: 'history',

@@ -52,15 +52,15 @@
                                     .level-item.has-text-centered
                                       div
                                         p.heading Views
-                                        p.title.is-size-7 {{result.views}}
+                                        p.title.is-size-7 {{result.views | views}}
                                     .level-item.has-text-centered
                                       div                
                                         p.heading Duration
-                                        p.title.is-size-7 {{result.duration}}
+                                        p.title.is-size-7 {{result.duration | duration}}
                                     .level-item.has-text-centered
                                       div                
-                                        p.heading Date
-                                        p.title.is-size-7 {{result.publishedAt}}
+                                        p.heading Published
+                                        p.title.is-size-7 {{result.publishedAt | published}}
                                   span.tag.is-uppercase Java
                                   | &nbsp;
                                   span.tag.is-uppercase {{result.channelTitle}} 
