@@ -9,7 +9,6 @@
     "build": "cross-env webpack --progress --hide-modules --mode=production"
   },
   "dependencies": {
-    "qs": "^6.5.0",
     "vue": "^2.2.1",
     "vue-instantsearch": "1.4.0",
     "vue-router": "^3.0.1"

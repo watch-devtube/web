@@ -169,20 +169,10 @@ const searchStore = createFromAlgoliaCredentials(
 );
 searchStore.indexName = 'videos';
 
-export default {
-  props: {
-    queryParameters: {
-      type: Object,
-      default: '',
-    },
-  },
-  
-  created() {
-    this.searchStore.queryParameters = this.queryParameters;
-  },
+export default {  
   data() {
     return {
-      searchStore,
+      searchStore
     };
   },
   methods: {
@@ -192,17 +182,6 @@ export default {
         params: { id: videoId }
       });
     }
-  },
-  watch: {
-    'searchStore.queryParameters'(parameters) {
-      const query = parameters;
-      delete query.index;
-
-      this.$router.push({
-        name: 'search',
-        query,
-      });
-    },
-  },
+  }
 };
 </script>
