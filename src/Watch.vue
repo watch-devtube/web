@@ -59,7 +59,7 @@
       }
     },    
     created() {
-        axios.get(`https://DR90AOGGE9.algolia.net/1/indexes/videos/a-BOSpxYJ9M`, {
+        axios.get(`https://DR90AOGGE9.algolia.net/1/indexes/videos/${this.id}`, {
             headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',
             'X-Algolia-API-Key': 'c2655fa0f331ebf28c89f16ec8268565' }
         }).then(response => {
