@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'}),
-    new CnameWebpackPlugin({domain: 'dev.tube'})
+    // new CnameWebpackPlugin({domain: 'dev.tube'})
   ],  
   module: {
     rules: [
