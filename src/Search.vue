@@ -18,7 +18,7 @@
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle")
                     a.button.is-small(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml")
                       span.icon: i.fab.fa-github
-                      span Contribute        
+                      span Contribute
                 .columns
                   .column
                     h1.title Language

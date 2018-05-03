@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+const CnameWebpackPlugin = require('cname-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -10,7 +11,8 @@ module.exports = {
     filename: 'build.js'
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'})
+    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new CnameWebpackPlugin({domain: 'dev.tube'})
   ],  
   module: {
     rules: [
