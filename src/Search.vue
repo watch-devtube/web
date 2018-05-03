@@ -34,7 +34,7 @@
               .column
                 .columns
                   .column
-                    .has-text-right
+                    h1.subtitle.has-text-right
                       .select
                         ais-sort-by-selector(:indices="[{ name: 'videos_date_desc', label: 'Newest' },{ name: 'videos_rating_desc', label: 'Highly rated' },{ name: 'videos', label: 'Most relevant' },{ name: 'videos_views_desc', label: 'Most viewed' }]")
                     ais-no-results
