@@ -37,6 +37,17 @@
                     .has-text-right
                       .select
                         ais-sort-by-selector(:indices="[{ name: 'videos_date_desc', label: 'Newest' },{ name: 'videos_rating_desc', label: 'Highly rated' },{ name: 'videos', label: 'Most relevant' },{ name: 'videos_views_desc', label: 'Most viewed' }]")
+                    ais-no-results
+                      template(slot-scope="props")
+                        .notification
+                          h1.title
+                            i.far.fa-times-circle 
+                            |  No videos matching 
+                            em.has-text-info {{props.query}}
+                            | , sorry
+                          a.button(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml")
+                            span.icon: i.fab.fa-github
+                            span Add YouTube channel
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
                         .column.is-6.is-4-widescreen
