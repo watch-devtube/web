@@ -62,7 +62,7 @@
                                     .level-item.has-text-centered
                                       div
                                         p.heading: i.far.fa-smile
-                                        p.title.is-size-7 {{result.likes}}
+                                        p.title.is-size-7 {{result.satisfaction}}%
                                     .level-item.has-text-centered
                                       div
                                         p.heading Views
