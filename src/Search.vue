@@ -15,7 +15,11 @@
                 .columns
                   .column
                     h1.title Tags
-                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags")                
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags")
+                .columns
+                  .column
+                    h1.title Speaker
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker.name")
                 .columns
                   .column
                     h1.title Channel
@@ -26,11 +30,7 @@
                 .columns
                   .column
                     h1.title Language
-                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="audioLanguage")                      
-                .columns
-                  .column
-                    h1.title Speaker
-                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker.name")
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="audioLanguage")
               .column
                 .columns
                   .column
