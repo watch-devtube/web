@@ -14,6 +14,10 @@
               .column.is-one-quarter
                 .columns
                   .column
+                    h1.title Tags
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags")                
+                .columns
+                  .column
                     h1.title Channel
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle")
                     a.button.is-small(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml")
@@ -25,10 +29,6 @@
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="audioLanguage")                      
                 .columns
                   .column
-                    h1.title Tags
-                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags")
-                .columns
-                  .column
                     h1.title Speaker
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker")
               .column
@@ -36,7 +36,7 @@
                   .column
                     h1.subtitle.has-text-right
                       .select
-                        ais-sort-by-selector(:indices="[{ name: 'videos_date_desc', label: 'Newest' },{ name: 'videos_rating_desc', label: 'Highly rated' },{ name: 'videos', label: 'Most relevant' },{ name: 'videos_views_desc', label: 'Most viewed' }]")
+                        ais-sort-by-selector(:indices="[{ name: 'videos', label: 'Rating' }, { name: 'videos_publishedAt_desc', label: 'Date published' },{ name: 'videos_views_desc', label: 'Views' }]")
                     ais-no-results
                       template(slot-scope="props")
                         .notification
@@ -75,14 +75,9 @@
                                       div                
                                         p.heading Published
                                         p.title.is-size-7 {{result.publishedAt | published}}
-                                  span.tag.is-uppercase Java
-                                  | &nbsp;
-                                  span.tag.is-uppercase {{result.channelTitle}} 
-                                  //- span.tag.is-uppercase.is-success Top 100
-                                  nav.actions.is-pulled-right
-                                      a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + result.objectID + '.json'"): i.fab.fa-github
-                                      //- i.fas.fa-star
-                                      //- i.fas.fa-share-alt
+                                  .tags
+                                    span.tag.is-uppercase(v-for="(tag) in result.tags") {{tag}}
+                                    span.tag.is-uppercase {{result.channelTitle}}
     section.section
       .container
         .columns
