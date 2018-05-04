@@ -31,7 +31,7 @@
           h1 {{video.title}}
           .tags
             span.tag.is-uppercase(v-for="(tag) in video.tags") {{tag}}
-            span.tag.is-uppercase {{video.channelTitle}}          
+            span.tag.is-info.is-uppercase {{video.channelTitle}}          
           p {{video.description}}
           a.button(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.json'")
             span.icon: i.fab.fa-github

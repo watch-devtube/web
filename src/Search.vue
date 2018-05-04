@@ -77,7 +77,7 @@
                                         p.title.is-size-7 {{result.publishedAt | published}}
                                   .tags
                                     span.tag.is-uppercase(v-for="(tag) in result.tags") {{tag}}
-                                    span.tag.is-uppercase {{result.channelTitle}}
+                                    span.tag.is-info.is-uppercase {{result.channelTitle}}
     section.section
       .container
         .columns
