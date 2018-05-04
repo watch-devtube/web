@@ -30,7 +30,7 @@
                 .columns
                   .column
                     h1.title Speaker
-                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker")
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker.name")
               .column
                 .columns
                   .column
@@ -58,6 +58,13 @@
                                   .is-overlay
                                   p.ttl.is-uppercase.is-size-7 {{result.title}}
                               .card-content
+                                  .media(v-if="result.speaker")
+                                      .media-left
+                                          figure.image.is-48x48
+                                            img.avatar(:src="'https://avatars.io/twitter/' + result.speaker.twitter")
+                                      .media-content
+                                        p.title.is-4 {{result.speaker.name}}
+                                        p.subtitle.is-6 @{{result.speaker.twitter}}
                                   nav.level.is-mobile
                                     .level-item.has-text-centered
                                       div
@@ -120,6 +127,10 @@ header {
   }
 
   .card {
+
+    .avatar {
+      border-radius: 50%
+    }
 
     div.image {
       display: flex;

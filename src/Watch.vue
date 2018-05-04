@@ -29,6 +29,14 @@
       .column
         .content
           h1 {{video.title}}
+          .box.is-shadowless(v-if="video.speaker")
+            .media
+                .media-left
+                    figure.image.is-48x48
+                      img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
+                .media-content
+                  p.title.is-4 {{video.speaker.name}}
+                  p.subtitle.is-6 @{{video.speaker.twitter}}
           .tags
             span.tag.is-uppercase(v-for="(tag) in video.tags") {{tag}}
             span.tag.is-info.is-uppercase {{video.channelTitle}}          
@@ -58,6 +66,10 @@
     p { color: white; }
     background-color: #343d46;
   }
+
+  .avatar {
+    border-radius: 50%
+  }  
 </style>
 <script>
   import axios from 'axios';
