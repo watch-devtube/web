@@ -30,7 +30,7 @@
                 .columns
                   .column
                     h1.title Language
-                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="audioLanguage")
+                    ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="language")
               .column
                 .columns
                   .column
