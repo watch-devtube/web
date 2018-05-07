@@ -8,6 +8,10 @@
               img(src="./logo.png")
           .level-item.has-text-centered
               ais-input(placeholder="Search for videos...")
+          .level-right
+            .level-item
+              a.contribute(href="https://github.com/watch-devtube/contrib")
+                i.fab.fa-github
     section.section
           .container
             .columns
@@ -95,6 +99,10 @@ header {
   background-color: #343d46;
   padding: 30px;
   color: #ec0047;
+
+  a.contribute {
+    color: white;
+  }
 
   input {
     outline: none;
