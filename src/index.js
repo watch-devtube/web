@@ -10,12 +10,13 @@ import dayjs from 'dayjs'
 Vue.use(InstantSearch);
 Vue.use(VueRouter);
 Vue.use(Meta);
+
 Vue.filter('views', it => {
    return it && it >= 1000 
    		?  
    			Math.round(it / 1000) + '.' + (it % 1000).toString().charAt(0) +  'K' 
    		: 
-   			it;
+   			it
 })
 
 Vue.filter('duration', it => {

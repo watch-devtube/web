@@ -8,6 +8,7 @@ const webpack = require('webpack');
 module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
+    publicPath: '/',
     filename: 'build.js'
   },
   plugins: [
