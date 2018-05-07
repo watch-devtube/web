@@ -195,7 +195,8 @@ searchStore.indexName = 'videos';
 
 export default { 
   metaInfo: {
-      title: 'DevTube — The best developer videos in one place',
+      title: 'The best developer videos in one place',
+      titleTemplate: 'DevTube — %s'
   },
   data() {
     return {
