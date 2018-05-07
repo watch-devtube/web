@@ -44,7 +44,7 @@
           a.button(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.json'")
             span.icon: i.fab.fa-github
             span Edit
-          a.button.twitter-share-button(:href="'https://twitter.com/intent/tweet?text=' + video.title + '&via=WatchDevTube&hashtags=' + video.tags.join(',') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
+          a.button.twitter-share-button(:href="'https://twitter.com/intent/tweet?text=' + video.title + '&via=WatchDevTube&hashtags=' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
             span.icon: i.fab.fa-twitter
             span Tweet
 </template>
