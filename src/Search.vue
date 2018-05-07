@@ -82,9 +82,7 @@
                                       div                
                                         p.heading Published
                                         p.title.is-size-7 {{result.publishedAt | published}}
-                                  .tags
-                                    span.tag.is-uppercase(v-for="(tag) in result.tags") {{tag}}
-                                    span.tag.is-info.is-uppercase {{result.channelTitle}}
+                                  Tags(:tags="result.tags" :channel="result.channelTitle")
     section.section
       .container
         .columns
@@ -186,6 +184,7 @@ header {
 </style>
 <script>
 import { createFromAlgoliaCredentials } from 'vue-instantsearch';
+import Tags from './Tags.vue'
 
 const searchStore = createFromAlgoliaCredentials(
   'DR90AOGGE9',
@@ -210,6 +209,7 @@ export default {
         params: { id: videoId }
       });
     }
-  }
+  },
+  components: { Tags }
 };
 </script>

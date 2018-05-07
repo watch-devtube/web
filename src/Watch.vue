@@ -29,17 +29,19 @@
       .column
         .content
           h1 {{video.title}}
-          .box.is-shadowless(v-if="video.speaker")
+          .box.is-paddingless.is-shadowless(v-if="video.speaker")
             .media
-                .media-left
-                    figure.image.is-48x48
+                .media-left.has-text-left
+                    figure.image.is-48x48.is-marginless
                       img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
                 .media-content
                   p.title.is-4 {{video.speaker.name}}
                   p.subtitle.is-6 @{{video.speaker.twitter}}
           .tags
             span.tag.is-uppercase(v-for="(tag) in video.tags") {{tag}}
-            span.tag.is-info.is-uppercase {{video.channelTitle}}          
+            span.tag.is-uppercase 
+              i.fab.fa-youtube 
+              | &nbsp; {{video.channelTitle}}
           p {{video.description}}
           a.button(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.json'")
             span.icon: i.fab.fa-github

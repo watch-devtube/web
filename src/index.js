@@ -7,9 +7,9 @@ import Watch from './Watch.vue';
 import Search from './Search.vue';
 import dayjs from 'dayjs'
 
-Vue.use(InstantSearch);
-Vue.use(VueRouter);
-Vue.use(Meta);
+Vue.use(InstantSearch)
+Vue.use(VueRouter)
+Vue.use(Meta)
 
 Vue.filter('views', it => {
    return it && it >= 1000 
