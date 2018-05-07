@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/',
-    filename: 'build.js'
+    filename: `[name].[hash].js`
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'}),
