@@ -44,7 +44,7 @@
                       .column
                         h1.subtitle.has-text-right
                           .select
-                            ais-sort-by-selector(:indices="[{ name: 'videos', label: 'Rating' }, { name: 'videos_publishedAt_desc', label: 'Date published' },{ name: 'videos_views_desc', label: 'Views' }]")
+                            ais-sort-by-selector(:indices="[{ name: 'videos', label: 'Relevant' }, { name: 'videos_addedAt_desc', label: 'New' }, { name: 'videos_publishedAt_desc', label: 'Recorded' }, { name: 'videos_views_desc', label: 'Views' }]")
                     ais-no-results
                       template(slot-scope="props")
                         .notification
@@ -88,9 +88,9 @@
                                         p.title.is-size-7 {{result.duration | duration}}
                                     .level-item.has-text-centered
                                       div                
-                                        p.heading Published
+                                        p.heading Recorded
                                         p.title.is-size-7 {{result.publishedAt | published}}
-                                  Tags(:tags="result.tags" :channel="result.channelTitle")
+                                  Tags(:tags="result.tags" :channel="result.channelTitle" :addedAt="result.addedAt")
     section.section
       .container
         .columns

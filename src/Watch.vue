@@ -24,7 +24,7 @@
                       p.title.is-size-7 {{video.duration | duration}}
                   .level-item.has-text-centered                        
                     div
-                      p.heading Published
+                      p.heading Recorded
                       p.title.is-size-7 {{video.publishedAt | published}}
       .column
         .content
