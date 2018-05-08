@@ -14,11 +14,6 @@
       channel: { required: true }
     },
     mixins: [Component],
-    computed: {
-      query() {
-        return this.searchStore.query;
-      },
-    },
     methods: {
       refineTag: function (tag) {
         this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('tags', tag)

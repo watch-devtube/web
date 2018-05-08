@@ -38,9 +38,13 @@
               .column
                 .columns
                   .column
-                    h1.subtitle.has-text-right
-                      .select
-                        ais-sort-by-selector(:indices="[{ name: 'videos', label: 'Rating' }, { name: 'videos_publishedAt_desc', label: 'Date published' },{ name: 'videos_views_desc', label: 'Views' }]")
+                    .columns
+                      .column.is-three-quarters
+                        ActiveFilters
+                      .column
+                        h1.subtitle.has-text-right
+                          .select
+                            ais-sort-by-selector(:indices="[{ name: 'videos', label: 'Rating' }, { name: 'videos_publishedAt_desc', label: 'Date published' },{ name: 'videos_views_desc', label: 'Views' }]")
                     ais-no-results
                       template(slot-scope="props")
                         .notification
@@ -191,8 +195,9 @@ header {
 }
 </style>
 <script>
-import { createFromAlgoliaCredentials } from 'vue-instantsearch';
+import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import Tags from './Tags.vue'
+import ActiveFilters from './ActiveFilters.vue'
 
 const searchStore = createFromAlgoliaCredentials(
   'DR90AOGGE9',
@@ -218,6 +223,6 @@ export default {
       });
     }
   },
-  components: { Tags }
+  components: { Tags, ActiveFilters }
 };
 </script>

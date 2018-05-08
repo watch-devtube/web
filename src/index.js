@@ -11,6 +11,18 @@ Vue.use(InstantSearch)
 Vue.use(VueRouter)
 Vue.use(Meta)
 
+Vue.filter('flatten', it => {
+  if (!it) {
+    return it
+  }
+
+  let flatten = arr => 
+    arr.reduce((flat, toFlatten) => 
+      flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten), []);
+
+  return flatten(it)
+})
+
 Vue.filter('views', it => {
    return it && it >= 1000 
    		?  
