@@ -1,6 +1,6 @@
 <template lang="pug">
   .tags
-    a.tag.is-primary.is-uppercase(v-if="isNew(addedAt)") New
+    span.tag.is-primary.is-uppercase(v-if="isNew(addedAt)") New
     a.tag.is-uppercase(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag}}
     a.tag.is-uppercase(v-on:click="refineChannel(channel)") 
       i.fab.fa-youtube 
