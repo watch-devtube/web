@@ -8,7 +8,7 @@
       tags: { required: true },
       channel: { required: true },
       creationDate: { required: true }      
-    },   
+    },
     computed: {
       componentLoader() {
         return () => this.clickable 

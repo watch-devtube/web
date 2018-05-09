@@ -1,15 +1,17 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Meta from 'vue-meta';
-import InstantSearch from 'vue-instantsearch';
-import App from './App.vue';
-import Watch from './Watch.vue';
-import Search from './Search.vue';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Meta from 'vue-meta'
+import AsyncComputed from 'vue-async-computed'
+import InstantSearch from 'vue-instantsearch'
+import App from './App.vue'
+import Watch from './Watch.vue'
+import Search from './Search.vue'
 import dayjs from 'dayjs'
 
 Vue.use(InstantSearch)
 Vue.use(VueRouter)
 Vue.use(Meta)
+Vue.use(AsyncComputed)
 
 Vue.filter('flatten', it => {
   if (!it) {

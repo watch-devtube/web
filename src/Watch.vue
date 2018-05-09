@@ -50,7 +50,7 @@
           a.button.twitter-share-button(:href="'https://twitter.com/intent/tweet?text=' + ((video.speaker && video.speaker.twitter) ? 'Thanks @' + video.speaker.twitter + ' for ' : '') + video.title + '&via=WatchDevTube&hashtags=' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
             span.icon: i.fab.fa-twitter
             span Tweet
-    RelatedVideos(:speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+    RelatedVideos(:videoId="video.objectID" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
   body {
@@ -82,12 +82,12 @@
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
   export default {
-    data() {
+    data: function() {
       return {
         errors: [],
         video: {}
       }
-    },    
+    },
     created() {
         axios.get(`https://DR90AOGGE9-dsn.algolia.net/1/indexes/videos/${this.id}`, {
             headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',

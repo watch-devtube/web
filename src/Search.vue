@@ -119,7 +119,7 @@ export default {
       title: 'The best developer videos in one place',
       titleTemplate: 'DevTube — %s'
   },
-  data() {
+  data: function() {
     return {
       searchStore
     };
