@@ -10,10 +10,10 @@
               ais-input(placeholder="Search for videos...")
           .level-right
             .level-item.links.is-size-4
-              a(href="https://www.algolia.com")
+              a(href="https://www.algolia.com" target="_blank")
                 i.fab.fa-algolia
               | &nbsp;
-              a(href="https://github.com/watch-devtube/contrib")
+              a(href="https://github.com/watch-devtube/contrib" target="_blank")
                 i.fab.fa-github
     section.section
           .container
@@ -53,7 +53,7 @@
                             |  No videos matching 
                             em.has-text-info {{props.query}}
                             | , sorry
-                          a.button(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml")
+                          a.button(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml" target="_blank")
                             span.icon: i.fab.fa-github
                             span Add YouTube channel
                     ais-results#videos.columns.is-multiline
