@@ -4,6 +4,9 @@
    .container
     .columns
       .column.is-one-half
+        a(href="/") 
+          i.fas.fa-arrow-left
+          |  Back to search
         .card
           .card-image
             .videoWrapper
