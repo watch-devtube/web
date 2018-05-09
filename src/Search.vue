@@ -9,8 +9,11 @@
           .level-item.has-text-centered
               ais-input(placeholder="Search for videos...")
           .level-right
-            .level-item
-              a.contribute(href="https://github.com/watch-devtube/contrib")
+            .level-item.links.is-size-4
+              a(href="https://www.algolia.com")
+                i.fab.fa-algolia
+              | &nbsp;
+              a(href="https://github.com/watch-devtube/contrib")
                 i.fab.fa-github
     section.section
           .container
@@ -28,9 +31,6 @@
                   .column
                     h1.title Channel
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle")
-                    a.button.is-small(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml")
-                      span.icon: i.fab.fa-github
-                      span Contribute
                 .columns
                   .column
                     h1.title Language
@@ -59,38 +59,7 @@
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
                         .column.is-6.is-4-widescreen
-                          .card
-                              .card-image
-                                .image.is-16by9(:style="'background-image:url(https://img.youtube.com/vi/' + result.objectID + '/maxresdefault.jpg)'")
-                                  a.watch.button.is-outlined.is-inverted.is-link(v-on:click.stop.prevent="watch(result.objectID)") Watch
-                                  .is-overlay
-                                  p.ttl.is-uppercase.is-size-7 {{result.title}}
-                              .card-content
-                                  .media(v-if="result.speaker")
-                                      .media-left
-                                          figure.image.is-48x48
-                                            img.avatar(:src="'https://avatars.io/twitter/' + result.speaker.twitter")
-                                      .media-content
-                                        p.title.is-4 {{result.speaker.name}}
-                                        p.subtitle.is-6 @{{result.speaker.twitter}}
-                                  nav.level.is-mobile
-                                    .level-item.has-text-centered
-                                      div
-                                        p.heading: i.far.fa-smile
-                                        p.title.is-size-7 {{result.satisfaction}}%
-                                    .level-item.has-text-centered
-                                      div
-                                        p.heading Views
-                                        p.title.is-size-7 {{result.views | views}}
-                                    .level-item.has-text-centered
-                                      div                
-                                        p.heading Duration
-                                        p.title.is-size-7 {{result.duration | duration}}
-                                    .level-item.has-text-centered
-                                      div                
-                                        p.heading Recorded
-                                        p.title.is-size-7 {{result.recordingDate | published}}
-                                  Tags(:tags="result.tags" :channel="result.channelTitle" :creationDate="result.creationDate")
+                          VideoCard(:tags="result.tags" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
     section.section
       .container
         .columns
@@ -102,9 +71,8 @@
 header {
   background-color: #343d46;
   padding: 30px;
-  color: #ec0047;
 
-  a.contribute {
+  .links a {
     color: white;
   }
 
@@ -132,71 +100,12 @@ header {
 }
 
 #videos {
-  .card {
-    transition: 0.4s ease;
-  }
 
-  .card {
-
-    .avatar {
-      border-radius: 50%
-    }
-
-    div.image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-size: cover;
-
-        .watch {
-          z-index: 1;
-          position: absolute;
-          right: 5px;
-          top: 5px;
-          transition: 0.4s ease;
-        }
-
-        div.is-overlay {
-          transition: 0.4s ease;
-          background: url('./overlay.png');
-        }
-
-    .ttl {
-        position: absolute;
-        bottom: 20px;
-        width: 90%;
-        left: 10%;
-        background-color: #4988cb;
-        opacity: 0.9;
-        color: white;
-        padding: 5px 0 5px 20px;
-        /*font-size: 0.8rem;*/
-        padding-right: 20px;
-    }       
-      } 
-
-  }
-
-  .card:not(.verified) {
-  }
-
-  .card em {
-    color: #ec0047;
-  }
-
-  .card:hover {
-
-    box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
-
-    div.is-overlay {
-      // opacity: 0;
-    }
-  } 
 }
 </style>
 <script>
 import { createFromAlgoliaCredentials } from 'vue-instantsearch'
-import Tags from './Tags.vue'
+import VideoCard from './VideoCard.vue'
 import ActiveFilters from './ActiveFilters.vue'
 
 const searchStore = createFromAlgoliaCredentials(
@@ -215,14 +124,6 @@ export default {
       searchStore
     };
   },
-  methods: {
-    watch: function(videoId) {
-      this.$router.push({
-        name: 'watch',
-        params: { id: videoId }
-      });
-    }
-  },
-  components: { Tags, ActiveFilters }
+  components: { ActiveFilters, VideoCard }
 };
 </script>

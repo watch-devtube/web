@@ -38,7 +38,7 @@
                   p.title.is-4 {{video.speaker.name}}
                   p.subtitle.is-6 @{{video.speaker.twitter}}
           .tags
-            span.tag.is-uppercase(v-for="(tag) in video.tags") {{tag}}
+            span.tag.is-uppercase(v-for="tag in video.tags") {{tag}}
             span.tag.is-uppercase 
               i.fab.fa-youtube 
               | &nbsp; {{video.channelTitle}}
@@ -50,6 +50,7 @@
           a.button.twitter-share-button(:href="'https://twitter.com/intent/tweet?text=' + ((video.speaker && video.speaker.twitter) ? 'Thanks @' + video.speaker.twitter + ' for ' : '') + video.title + '&via=WatchDevTube&hashtags=' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
             span.icon: i.fab.fa-twitter
             span Tweet
+    RelatedVideos(:speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
   body {
@@ -79,6 +80,7 @@
 </style>
 <script>
   import axios from 'axios';
+  import RelatedVideos from './RelatedVideos.vue'
   export default {
     data() {
       return {
@@ -87,7 +89,7 @@
       }
     },    
     created() {
-        axios.get(`https://DR90AOGGE9.algolia.net/1/indexes/videos/${this.id}`, {
+        axios.get(`https://DR90AOGGE9-dsn.algolia.net/1/indexes/videos/${this.id}`, {
             headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',
             'X-Algolia-API-Key': 'c2655fa0f331ebf28c89f16ec8268565' }
         }).then(response => {
@@ -109,7 +111,8 @@
         ]
       }
     },
-    props: ['id']
+    props: ['id'],
+    components: { RelatedVideos }
   }
 
 </script>
