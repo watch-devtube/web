@@ -23,7 +23,7 @@
 
         var tags = ""
         for (let tag of this.tags) {
-          tags += ` OR tags:${tag} `              
+          tags += ` OR tags:'${tag}' `              
         }
 
         let query = `NOT objectID:${this.videoId} AND (speaker.twitter:${this.speakerTwitter ? this.speakerTwitter : 'WHATEVER'} ${tags})`
