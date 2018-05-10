@@ -11,9 +11,9 @@
                   figure.image.is-48x48
                     img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .media-content
-                p.title.is-4 {{speaker.name}}
-                p.subtitle.is-6 @{{speaker.twitter}}
-          nav.level.is-mobile
+                p.title.is-6 {{speaker.name}}
+                p.subtitle.is-7 @{{speaker.twitter}}
+          nav.level
             .level-item.has-text-centered
               div
                 p.heading: i.far.fa-smile
