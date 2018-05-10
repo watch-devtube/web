@@ -1,10 +1,11 @@
 <template lang="pug">
-  component(:is="componentLoader" :tags="tags" :creationDate="creationDate" :channel="channel")
+  component(:is="componentLoader" :featured="featured" :tags="tags" :creationDate="creationDate" :channel="channel")
 </template>
 <script>
   export default {
     props: {
       clickable: { type: Boolean, default: false },
+      featured: { type: Boolean, required: true },
       tags: { required: true },
       channel: { required: true },
       creationDate: { required: true }      

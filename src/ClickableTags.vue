@@ -1,6 +1,7 @@
 <template lang="pug">
   .tags
     span.tag.is-primary.is-uppercase(v-if="isNew(creationDate)") New
+    span.tag.is-danger.is-uppercase(v-if="featured") Featured
     a.tag.is-uppercase(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag}}
     a.tag.is-uppercase(v-on:click="refineChannel(channel)") 
       i.fab.fa-youtube 
@@ -11,6 +12,7 @@
 
   export default {
     props: { 
+      featured: { type: Boolean, required: true },
       tags: { required: true },
       channel: { required: true },
       creationDate: { required: true }

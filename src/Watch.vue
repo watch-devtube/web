@@ -53,7 +53,7 @@
           a.button.twitter-share-button(:href="'https://twitter.com/intent/tweet?text=' + ((video.speaker && video.speaker.twitter) ? 'Thanks @' + video.speaker.twitter + ' for ' : '') + video.title + '&via=WatchDevTube&hashtags=' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
             span.icon: i.fab.fa-twitter
             span Tweet
-    RelatedVideos(:videoId="video.objectID" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+    RelatedVideos(:videoId="video.objectID" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
   body {

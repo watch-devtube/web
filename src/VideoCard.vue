@@ -30,7 +30,7 @@
               div                
                 p.heading Recorded
                 p.title.is-size-7 {{recordingDate | published}}
-          Tags(:tags="tags" :clickable="tagsClickable" :channel="channel" :creationDate="creationDate")
+          Tags(:tags="tags" :featured="featured.length > 0" :clickable="tagsClickable" :channel="channel" :creationDate="creationDate")
 </template>
 <style lang="scss">
   .card {
@@ -107,6 +107,7 @@
       recordingDate: { type: Number, required: true },
       creationDate: { type: Number, required: true },
       tags: { type: Array, required: true },
+      featured: { type: Array, default: []},
       tagsClickable: { type: Boolean, default: false},
       speaker: {
         required: false,
