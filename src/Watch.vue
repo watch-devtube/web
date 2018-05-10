@@ -100,14 +100,18 @@
     methods: {
       fetch() {
         this.video = {}
-        axios.get(`https://DR90AOGGE9-dsn.algolia.net/1/indexes/videos/${this.id}`, {
-            headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',
-            'X-Algolia-API-Key': 'c2655fa0f331ebf28c89f16ec8268565' }
-        }).then(response => {
-          this.video = response.data
-        }).catch(error => {
-          this.errors.push(error)
-        })        
+        if (window.preloadedEntity) {
+          this.video = window.preloadedEntity
+        } else {
+          axios.get(`https://DR90AOGGE9-dsn.algolia.net/1/indexes/videos/${this.id}`, {
+              headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',
+              'X-Algolia-API-Key': 'c2655fa0f331ebf28c89f16ec8268565' }
+          }).then(response => {
+            this.video = response.data
+          }).catch(error => {
+            this.errors.push(error)
+          })   
+        }     
       }
     },
     metaInfo() {
