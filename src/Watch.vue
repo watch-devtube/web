@@ -39,7 +39,8 @@
                       img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
                 .media-content
                   p.title.is-4 {{video.speaker.name}}
-                  p.subtitle.is-6 @{{video.speaker.twitter}}
+                  p.subtitle.is-6 @{{video.speaker.twitter}} 
+                    a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
           .tags
             span.tag.is-uppercase(v-for="tag in video.tags") {{tag}}
             span.tag.is-uppercase 

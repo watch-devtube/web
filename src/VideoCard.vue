@@ -12,7 +12,8 @@
                     img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .media-content
                 p.title.is-6 {{speaker.name}}
-                p.subtitle.is-7 @{{speaker.twitter}}
+                p.subtitle.is-7 @{{speaker.twitter}} 
+                  a.has-text-black(:href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
           nav.level
             .level-item.has-text-centered
               div
