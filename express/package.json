@@ -1,0 +1,22 @@
+{
+  "name": "dev-tube-express",
+  "description": "Dev.Tube Web Express App",
+  "version": "1.0.0",
+  "author": "Eduards Sizovs <eduards@devternity.com>",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "dev": "PORT=8100 DEV_MODE=true node app.js $PORT"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.27.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mustache-express": "^1.2.6"
+  },
+  "devDependencies": {}
+}

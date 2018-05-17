@@ -115,10 +115,6 @@ const searchStore = createFromAlgoliaCredentials(
 searchStore.indexName = 'videos';
 
 export default { 
-  metaInfo: {
-      title: 'The best developer videos in one place',
-      titleTemplate: 'DevTube — %s'
-  },
   data: function() {
     return {
       searchStore

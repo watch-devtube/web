@@ -2,18 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>DevTube — The best developer videos in one place</title>
+    <title>{{{title}}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="The best developer videos in one place.">
     <meta name="keywords" content="">
     <meta name="robots" content="index,follow">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@WatchDevTube">
+    <meta name="twitter:creator" content="@WatchDevTube">
+    {{#meta}}
+      <meta name="{{name}}" content="{{{content}}}">
+    {{/meta}}
   </head>
   <body>
     <script>
-      var PRELOADED_ENTITY = undefined
-      window.preloadedEntity = PRELOADED_ENTITY
+      window.preloadedEntity = {{& preloadedEntity}}{{^preloadedEntity}}undefined{{/preloadedEntity}}
     </script>
     <script type="text/javascript">
         (function (d, w, c) {

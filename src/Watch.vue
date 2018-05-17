@@ -53,7 +53,7 @@
           a.button.twitter-share-button(:href="'https://twitter.com/intent/tweet?text=' + ((video.speaker && video.speaker.twitter) ? 'Thanks @' + video.speaker.twitter + ' for ' : '') + video.title + '&via=WatchDevTube&hashtags=' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
             span.icon: i.fab.fa-twitter
             span Tweet
-    RelatedVideos(:videoId="video.objectID" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+    RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
   body {
@@ -114,19 +114,20 @@
         }     
       }
     },
-    metaInfo() {
-      return {
-        title: `${this.video.title} at DevTube`,
-        meta: [
-          { name: 'twitter:card', content: 'summary_large_image' },
-          { name: 'twitter:site', content: '@WatchDevTube' },
-          { name: 'twitter:creator', content: '@WatchDevTube' },
-          { name: 'twitter:title', content: this.video.title },
-          { name: 'twitter:description', content: this.video.description },
-          { name: 'twitter:image', content: `https://img.youtube.com/vi/${this.video.objectID}/maxresdefault.jpg` }
-        ]
-      }
-    },
+    // metaInfo() {
+    //   return {
+    //     title: `${this.video.title} at DevTube`,
+    //     meta: [
+             // { name: 'description'}
+    //       { name: 'twitter:card', content: 'summary_large_image' },
+    //       { name: 'twitter:site', content: '@WatchDevTube' },
+    //       { name: 'twitter:creator', content: '@WatchDevTube' },
+    //       { name: 'twitter:title', content: this.video.title },
+    //       { name: 'twitter:description', content: this.video.description },
+    //       { name: 'twitter:image', content: `https://img.youtube.com/vi/${this.video.objectID}/maxresdefault.jpg` }
+    //     ]
+    //   }
+    // },
     props: ['id'],
     components: { RelatedVideos }
   }

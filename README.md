@@ -1,19 +1,31 @@
-# Web
+# Dev.Tube
 
-> This is a web front-end for Dev.Tube
+> Hi! I am Dev.Tube – the place where dev videos live.
 
-## Commands
+This web app comprise of `Vue` client app and s slim `node` server app, through which the client app is served.
 
+# How to run the app locally?
 ``` bash
 # make sure yarn is installed
 npm install --global yarn
 
-# install dependencies
+# install client app dependencies
 yarn
 
-# serve with hot reload
+# run client app
 yarn run dev
 
-# build for production
-yarn run build
+# go to server app
+cd express
+
+# install server app dependencies 
+yarn
+
+# run server app on
+yarn run dev
 ```
+
+Voila! The app is available via  :8100.
+
+# Build for production
+{in progress}

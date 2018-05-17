@@ -11,6 +11,7 @@
   export default {
     props: {
       videoId: { type: String },
+      channel: { type: String },
       speakerTwitter: { type: String },
       tags: { type: Array }
     },
@@ -26,8 +27,18 @@
           tags += ` OR tags:'${tag}' `              
         }
 
-        let query = `NOT objectID:${this.videoId} AND (speaker.twitter:${this.speakerTwitter ? this.speakerTwitter : 'WHATEVER'} ${tags})`
+        let noTags = !this.tags || this.tags.length == 0
+        let noTwitter = !this.speakerTwitter || 0 === this.speakerTwitter.length
 
+
+        let query = noTags && noTwitter 
+          ? `NOT objectID:${this.videoId} AND (channelTitle:'${this.channel}')`
+          : `NOT objectID:${this.videoId} AND (speaker.twitter:${this.speakerTwitter ? this.speakerTwitter : 'WHATEVER'} ${tags})`
+ 
+
+        if (noTags || noTwitter) {
+
+        }
 
 
         var client = algolia('DR90AOGGE9', 'c2655fa0f331ebf28c89f16ec8268565')

@@ -2,7 +2,7 @@
   .card
       .card-image
         .image.is-16by9(:style="'background-image:url(https://img.youtube.com/vi/' + id + '/maxresdefault.jpg)'")
-          a.watch.button.is-outlined.is-inverted.is-link(v-on:click.stop.prevent="watch(id)") Watch
+          a.watch.button.is-outlined.is-inverted.is-link(:href="'/video' + '/' + id") Watch
           .is-overlay
           p.ttl.is-uppercase.is-size-7 {{title}}
       .card-content
