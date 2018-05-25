@@ -10,11 +10,7 @@
               ais-input(placeholder="Search for videos...")
           .level-right
             .level-item.links.is-size-4
-              a(href="https://www.algolia.com" target="_blank")
-                i.fab.fa-algolia
-              | &nbsp;
-              a(href="https://github.com/watch-devtube/contrib" target="_blank")
-                i.fab.fa-github
+              a(href="https://www.algolia.com"): img(src="/search-by-algolia.png")
     section.section
           .container
             .columns
