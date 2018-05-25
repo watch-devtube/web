@@ -32,7 +32,6 @@ app.get("/", (req, res) => {
   let title = 'DevTube — The best developer videos in one place'
   let description = 'Enjoy the best technical videos and share it all friends, colleagues, and the world.'
 
-  console.log("yo")
   res.render('index.html', {
     title: title,
     meta: [
@@ -49,7 +48,6 @@ app.get("/video/:id", async (req, res) => {
   let client = algolia('DR90AOGGE9', 'c2655fa0f331ebf28c89f16ec8268565')
   let index = client.initIndex('videos');
   let video = await index.getObject(req.params.id)
-  console.log(video)
 
   res.render('index.html', {
     title: `${video.title} – Watch at Dev.Tube`,

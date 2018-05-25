@@ -115,20 +115,6 @@
         }     
       }
     },
-    // metaInfo() {
-    //   return {
-    //     title: `${this.video.title} at DevTube`,
-    //     meta: [
-             // { name: 'description'}
-    //       { name: 'twitter:card', content: 'summary_large_image' },
-    //       { name: 'twitter:site', content: '@WatchDevTube' },
-    //       { name: 'twitter:creator', content: '@WatchDevTube' },
-    //       { name: 'twitter:title', content: this.video.title },
-    //       { name: 'twitter:description', content: this.video.description },
-    //       { name: 'twitter:image', content: `https://img.youtube.com/vi/${this.video.objectID}/maxresdefault.jpg` }
-    //     ]
-    //   }
-    // },
     props: ['id'],
     components: { RelatedVideos }
   }
