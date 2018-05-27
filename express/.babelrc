@@ -1,5 +1,8 @@
 {
   "presets": [
-    ["latest"]
-  ]
+    ["latest", {
+      "es2015": { "modules": false }
+    }]
+  ],
+  "plugins": ["syntax-dynamic-import"]
 }

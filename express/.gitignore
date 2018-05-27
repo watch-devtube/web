@@ -1,0 +1,4 @@
+*.js
+service_key.json
+.serverless/
+dist/

@@ -1,0 +1,34 @@
+service: devtube-proxy
+
+provider:
+  name: google
+  runtime: nodejs
+  project: dev-tube
+  credentials: service_key.json
+  memorySize: 512
+  timeout: 540s
+  labels:
+    application: DevTube Proxy
+
+plugins:
+  - serverless-google-cloudfunctions
+  - serverless-plugin-typescript
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+    - yarn*
+    - app.js
+    - app.ts
+    - service_key.json
+  include:
+    - ../dist/**
+    - "*.js"
+
+functions:
+  proxy:
+    handler: proxy
+    events:
+      - http: path

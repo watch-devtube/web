@@ -1,0 +1,9 @@
+{
+  "git.autofetch": true,
+  "files.autoSave": "afterDelay",
+  "editor.renderControlCharacters": false,
+  "git.enableSmartCommit": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false
+}

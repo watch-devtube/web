@@ -1,10 +1,11 @@
 # Dev.Tube
 
-> Hi! I am Dev.Tube – the place where dev videos live.
+> Hi! I am Dev.Tube – the place where developer videos live.
 
-This web app comprise of `Vue` client app and s slim `node` server app, through which the client app is served.
+This web app comprises of `Vue` client app and s slim `node` server app, through which the client app is served.
 
-# How to run the app locally?
+## How to run the app locally?
+
 ``` bash
 # make sure yarn is installed
 npm install --global yarn
@@ -25,7 +26,9 @@ yarn
 yarn run dev
 ```
 
-Voila! The app is available via  :8100.
+Voila! The app is available via port `8100`.
 
-# Build for production
-{in progress}
+## Build for production
+
+...in progress...
+

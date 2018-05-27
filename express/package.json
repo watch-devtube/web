@@ -3,20 +3,30 @@
   "description": "Dev.Tube Web Express App",
   "version": "1.0.0",
   "author": "Eduards Sizovs <eduards@devternity.com>",
-  "main": "app.js",
+  "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "PORT=8100 DEV_MODE=true node app.js $PORT"
+    "dev": "tsc --project tsconfig.json && node app.js dev",
+    "compile": "tsc --project tsconfig.json"
   },
   "dependencies": {
+    "@types/algoliasearch": "ts2.9",
+    "@types/request": "ts2.9",
+    "@types/express": "ts2.9",
+    "@types/lodash": "^4.14.109",
+    "lodash": "^4.17.10",
     "algoliasearch": "^3.27.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
+    "serverless-google-cloudfunctions": "^1.1.0",
+    "serverless-plugin-typescript": "^1.1.5",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "mustache-express": "^1.2.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^10.0.3"
+  }
 }
