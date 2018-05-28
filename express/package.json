@@ -14,17 +14,17 @@
     "@types/request": "ts2.9",
     "@types/express": "ts2.9",
     "@types/lodash": "^4.14.109",
+    "express": "^4.16.3",
+    "mustache-express": "^1.2.6",
     "lodash": "^4.17.10",
     "algoliasearch": "^3.27.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",    
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "serverless-google-cloudfunctions": "^1.1.0",
-    "serverless-plugin-typescript": "^1.1.5",
-    "body-parser": "^1.18.2",
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "mustache-express": "^1.2.6"
+    "serverless-plugin-typescript": "^1.1.5"
   },
   "devDependencies": {
     "@types/node": "^10.0.3"

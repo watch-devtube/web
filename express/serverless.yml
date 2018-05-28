@@ -20,8 +20,6 @@ package:
     - .gitignore
     - .git/**
     - yarn*
-    - app.js
-    - app.ts
     - service_key.json
   include:
     - ../dist/**
