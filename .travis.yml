@@ -1,20 +1,11 @@
 language: node_js
+
 branches:
   only:
-  - master
-before_script:
-- git config --global user.email "travis@dev.tube"
-- git config --global user.name "Travis at Dev.Tube"
-script:
-- npm run build
+    - master
 
-deploy:
-  provider: pages
-  local-dir: dist
-  skip-cleanup: true
-  repo: watch-devtube/watch-devtube.github.io
-  target-branch: master
-  github-token: $GH_TOKEN
-  keep-history: true
-  on:
-    branch: master
+script:
+  - yarn
+  - yarn build
+  - cd express && yarn 
+  - cd express && serverless deploy
