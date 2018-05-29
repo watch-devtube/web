@@ -1,14 +1,15 @@
 language: node_js
-
 branches:
   only:
-    - master
-
+  - master
+before_install:
+- openssl aes-256-cbc -K $encrypted_96b65b213c3c_key -iv $encrypted_96b65b213c3c_iv
+  -in service_key.json.enc -out service_key.json -d
 script:
-  - yarn
-  - yarn build
-  - cd express 
-  - yarn 
-  - npm i serverless -g
-  - npm i typescript -g
-  - serverless deploy
+- yarn
+- yarn build
+- cd express
+- yarn
+- npm i serverless -g
+- npm i typescript -g
+- serverless deploy
