@@ -9,4 +9,6 @@ script:
   - yarn build
   - cd express 
   - yarn 
+  - npm i serverless -g
+  - npm i typescript -g
   - serverless deploy
