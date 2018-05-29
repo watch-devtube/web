@@ -12,5 +12,7 @@ script:
 - yarn
 - npm i serverless -g
 - npm i typescript -g
+- serverless package
 - ls -la
+- unzip -l .serverless\devtube-proxy.zip
 - serverless deploy
