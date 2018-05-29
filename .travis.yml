@@ -14,5 +14,5 @@ script:
 - npm i typescript -g
 - serverless package
 - ls -la
-- unzip -l .serverless\devtube-proxy.zip
+- unzip -l .serverless/devtube-proxy.zip
 - serverless deploy
