@@ -12,4 +12,5 @@ script:
 - yarn
 - npm i serverless -g
 - npm i typescript -g
+- ls -la
 - serverless deploy
