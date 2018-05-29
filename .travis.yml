@@ -7,5 +7,6 @@ branches:
 script:
   - yarn
   - yarn build
-  - cd express && yarn 
-  - cd express && serverless deploy
+  - cd express 
+  - yarn 
+  - serverless deploy
