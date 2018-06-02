@@ -57,7 +57,7 @@
           a.button(v-if="!video.speaker || !video.speaker.twitter" :href="'https://twitter.com/intent/tweet?text=' + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")            
             span.icon: i.fab.fa-twitter
             span Share
-    //- RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+    RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
   body {
