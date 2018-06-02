@@ -35,12 +35,8 @@
                 .columns
                   .column
                     .columns
-                      .column.is-three-quarters
-                        ActiveFilters
                       .column
-                        h1.subtitle.has-text-right
-                          .select
-                            ais-sort-by-selector(:indices="[{ name: 'videos', label: 'Relevant' }, { name: 'videos_creationDate_desc', label: 'New' }, { name: 'videos_recordingDate_desc', label: 'Recorded' }, { name: 'videos_views_desc', label: 'Views' }]")
+                        ActiveFilters
                     ais-no-results
                       template(slot-scope="props")
                         .notification
