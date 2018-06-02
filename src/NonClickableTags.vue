@@ -5,7 +5,7 @@
     span.tag.is-uppercase(v-for="(tag) in tags") {{tag}}
     span.tag.is-uppercase 
       i.fab.fa-youtube 
-      | &nbsp; {{channel}}
+      | &nbsp; {{channel | truncate(10)}}
 </template>
 <script>
   export default {

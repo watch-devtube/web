@@ -13,7 +13,7 @@
       videoId: { type: String },
       channel: { type: String },
       speakerTwitter: { type: String },
-      tags: { type: Array }
+      tags: { type: Array, required: false }
     },
     asyncComputed: {
       hits() {
@@ -23,8 +23,10 @@
         }
 
         var tags = ""
-        for (let tag of this.tags) {
-          tags += ` OR tags:'${tag}' `              
+        if (this.tags) {
+          for (let tag of this.tags) {
+            tags += ` OR tags:'${tag}' `              
+          }
         }
 
         let noTags = !this.tags || this.tags.length == 0

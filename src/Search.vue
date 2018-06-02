@@ -60,6 +60,7 @@
              ais-pagination.pagination(:class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
 </template>
 <style lang="scss">
+
 header {
   background-color: #343d46;
   padding: 30px;

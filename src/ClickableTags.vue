@@ -5,7 +5,7 @@
     a.tag.is-uppercase(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag}}
     a.tag.is-uppercase(v-on:click="refineChannel(channel)") 
       i.fab.fa-youtube 
-      | &nbsp; {{channel}}
+      | &nbsp; {{channel | truncate(10)}}
 </template>
 <script>
   import { Component } from 'vue-instantsearch';

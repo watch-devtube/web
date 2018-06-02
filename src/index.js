@@ -44,6 +44,14 @@ Vue.filter('duration', it => {
    return `${hs}${ms}`
 })
 
+Vue.filter('truncate', (it, max) => {
+   return it
+      ?   
+        it.slice(0, max) + (max < it.length ? '...' : '')
+      : 
+        it;
+})
+
 Vue.filter('published', it => {
    return it
    		?  	

@@ -107,7 +107,7 @@
       duration: { type: Number, required: true },
       recordingDate: { type: Number, required: true },
       creationDate: { type: Number, required: true },
-      tags: { type: Array, required: true },
+      tags: { type: Array, required: false },
       featured: { type: [Boolean, Array], default: false},
       tagsClickable: { type: Boolean, default: false},
       speaker: {
