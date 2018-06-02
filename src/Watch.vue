@@ -32,7 +32,7 @@
       .column
         .content
           h1 {{video.title}}
-          .box.is-paddingless.is-shadowless(v-if="video.speaker")
+          .box.is-paddingless.is-shadowless(v-if="video.speaker && video.speaker.twitter")
             .media
                 .media-left.has-text-left
                     figure.image.is-48x48.is-marginless
@@ -51,10 +51,13 @@
             span.icon: i.fab.fa-github
             span Edit
           | &nbsp;
-          a.button.twitter-share-button(:href="'https://twitter.com/intent/tweet?text=' + ((video.speaker && video.speaker.twitter) ? 'Thanks @' + video.speaker.twitter + ' for ' : '') + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
+          a.button(v-if="video.speaker && video.speaker.twitter" :href="'https://twitter.com/intent/tweet?text=Thanks @' + video.speaker.twitter + ' for ' + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
+            span.icon: i.fab.fa-twitter
+            span Thank @{{video.speaker.twitter}}
+          a.button(v-if="!video.speaker || !video.speaker.twitter" :href="'https://twitter.com/intent/tweet?text=' + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")            
             span.icon: i.fab.fa-twitter
             span Share
-    RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+    //- RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
   body {
