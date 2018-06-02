@@ -42,10 +42,10 @@ async function proxy(req: Request, res: Response) {
         { name: "description", content: description },
         { name: "og:title", content: title },
         { name: "og:description", content: description },
-        { name: "og:image", content: 'open_graph.jpg' },
+        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
         { name: 'twitter:title', content: title },
         { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: 'open_graph.jpg' }
+        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
   } else if (req.path.startsWith('/video/')) {
