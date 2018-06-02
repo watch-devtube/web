@@ -40,6 +40,9 @@ async function proxy(req: Request, res: Response) {
       title: title,
       meta: [
         { name: "description", content: description },
+        { name: "og:title", content: title },
+        { name: "og:description", content: description },
+        { name: "og:image", content: 'open_graph.jpg' },
         { name: 'twitter:title', content: title },
         { name: 'twitter:description', content: description },
         { name: 'twitter:image', content: 'open_graph.jpg' }
@@ -57,6 +60,9 @@ async function proxy(req: Request, res: Response) {
         preloadedEntity: JSON.stringify(video),
         meta: [
           { name: 'description', content: video.description },
+          { name: "og:title", content: video.title },
+          { name: "og:description", content: video.description },
+          { name: "og:image", content: `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg` },
           { name: 'twitter:title', content: video.title },
           { name: 'twitter:description', content: video.description },
           { name: 'twitter:image', content: `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg` }
