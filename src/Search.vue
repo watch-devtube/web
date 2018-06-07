@@ -14,7 +14,7 @@
     section.section
           .container
             .columns
-              .column.is-one-quarter
+              .column.is-one-quarter.is-hidden-touch
                 .columns
                   .column
                     h1.title Tags
