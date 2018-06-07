@@ -42,14 +42,21 @@
 
         }
 
+        let shuffle = (a) => {
+          for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+          }
+          return a;
+        }
 
         var client = algolia('DR90AOGGE9', 'c2655fa0f331ebf28c89f16ec8268565')
         var index = client.initIndex('videos');
         return index.search({
           filters: query,
-          hitsPerPage: 3,
+          hitsPerPage: 20,
           sumOrFiltersScores: true,
-        }).then(it => it.hits)
+        }).then(it => shuffle(it.hits).slice(0, 3))
       }
     },
     components: { VideoCard }
