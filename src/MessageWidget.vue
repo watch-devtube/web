@@ -74,7 +74,7 @@ export default {
 
         axios.get(`https://raw.githubusercontent.com/watch-devtube/ads/master/ads.json?r=${Math.random()}`
         ).then(response => {
-          this.ad = response.data.reverse().find(it => textForMatching.match(it.pattern))
+          this.ad = response.data.reverse().find(it => new RegExp(it.pattern, 'i').test(textForMatching))
         }).catch(error => {
         })
       }      
