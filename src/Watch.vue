@@ -58,6 +58,7 @@
             span.icon: i.fab.fa-twitter
             span Share
     RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+    MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
   body {
@@ -88,6 +89,7 @@
 <script>
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
+  import MessageWidget from './MessageWidget.vue'
   export default {
     data: function() {
       return {
@@ -119,7 +121,7 @@
       }
     },
     props: ['id'],
-    components: { RelatedVideos }
+    components: { RelatedVideos, MessageWidget }
   }
 
 </script>

@@ -13,6 +13,7 @@
     "dayjs": "^1.5.16",
     "vue": "^2.2.1",
     "vue-async-computed": "^3.3.1",
+    "vue-delay": "^0.1.0",
     "vue-instantsearch": "1.4.0",
     "vue-meta": "^1.5.0",
     "vue-router": "^3.0.1"
