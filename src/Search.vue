@@ -5,7 +5,7 @@
         nav.level
           .level-left
             .level-item
-              img(src="./logo.png")
+              img.logo(src="./logo.png")
           .level-item.has-text-centered
               ais-input(placeholder="Search for videos...")
           .level-right
@@ -64,6 +64,13 @@
 header {
   background-color: #343d46;
   padding: 30px;
+
+  @media only screen and (max-width: 768px) {
+    .logo {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+  }
 
   .links a {
     color: white;
