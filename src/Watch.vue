@@ -47,7 +47,7 @@
               i.fab.fa-youtube 
               | &nbsp; {{video.channelTitle}}
           p {{video.description}}
-          a.button(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.json'" target="_blank")
+          a.button(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
             span.icon: i.fab.fa-github
             span Edit
           | &nbsp;
