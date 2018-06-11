@@ -18,6 +18,9 @@ let devMode = process.env.DEV_MODE === 'true' || process.argv[2] === 'dev'
 let staticDir = devMode ? '../dist' : './dist'
 let port = process.env.PORT || 8100
 
+let client = algolia('DR90AOGGE9', 'c2655fa0f331ebf28c89f16ec8268565')
+let index = client.initIndex('videos')
+
 app.use(cors())
 app.use(body.json())
 app.use(express.static(staticDir, {
@@ -49,8 +52,6 @@ async function proxy(req: Request, res: Response) {
       ]
     })
   } else if (req.path.startsWith('/video/')) {
-    let client = algolia('DR90AOGGE9', 'c2655fa0f331ebf28c89f16ec8268565')
-    let index = client.initIndex('videos')
     let objectID = req.path.split('/')[2]
     console.log(`VIDEO REQUEST: ${objectID}`)
     try {
