@@ -39,7 +39,7 @@
                         ActiveFilters
                     ais-no-results
                       template(slot-scope="props")
-                        .notification
+                        .notification(v-if="props.query")
                           h1.title
                             i.far.fa-times-circle 
                             |  No videos matching 
@@ -48,6 +48,9 @@
                           a.button(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml" target="_blank")
                             span.icon: i.fab.fa-github
                             span Add YouTube channel
+                        .notification.is-danger(v-if="!props.query") 
+                          p Sorry, search is not available now. We're working on the solution.
+
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
                         .column.is-6.is-4-widescreen

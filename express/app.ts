@@ -74,7 +74,13 @@ async function proxy(req: Request, res: Response) {
         res.status(404).send('Not found')
       } else {
         console.error(e) 
-        res.status(500).send()
+
+        res.render('index.html', {
+          title: `Error at Dev.Tube`,
+          serverSideError: JSON.stringify(
+            { message: 'Sorry, but the video is not available now. We\'re working on the solution.' })
+        })
+
       }
     }
   } else {

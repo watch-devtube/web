@@ -1,7 +1,12 @@
 <template lang="pug">
 .watch
   section.section.body
-   .container
+  .container(v-if="errors.length > 0")
+    .columns
+      .column
+        .notification.is-danger
+          p {{errors[0]}}
+  .container(v-if="errors.length == 0")
     .columns
       .column.is-one-half
         a(href="/") 
@@ -106,7 +111,9 @@
     methods: {
       fetch() {
         this.video = {}
-        if (window.preloadedEntity) {
+        if (window.serverSideError) {
+          this.errors.push(window.serverSideError.message)  
+        } else if (window.preloadedEntity) {
           this.video = window.preloadedEntity
         } else {
           axios.get(`https://DR90AOGGE9-dsn.algolia.net/1/indexes/videos/${this.id}`, {
