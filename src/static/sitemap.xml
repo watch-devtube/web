@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://dev.tube/</loc> <lastmod>2018-06-17T03:41:59.620Z</lastmod> <changefreq>daily</changefreq> <priority>1.0</priority> </url>
 <url> <loc>https://dev.tube/video/-A9FsUOcDYw</loc> <lastmod>2018-06-17T01:28:24.295Z</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority> </url>
 <url> <loc>https://dev.tube/video/-AlmhhnfJ-E</loc> <lastmod>2018-06-17T01:28:03.464Z</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority> </url>
 <url> <loc>https://dev.tube/video/--LMflqDH7I</loc> <lastmod>2018-06-17T01:26:48.822Z</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority> </url>
