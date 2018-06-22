@@ -1,6 +1,6 @@
 <template lang="pug">
   .tags
-    span.tag.is-primary.is-uppercase(v-if="isNew(creationDate)") New
+    span.tag.is-primary.is-uppercase(v-if="isNew") New
     span.tag.is-danger.is-uppercase(v-if="featured") Featured
     span.tag.is-uppercase(v-for="(tag) in tags") {{tag}}
     span.tag.is-uppercase 
@@ -16,13 +16,6 @@
       isNew: { required: true }
     },
     methods: {
-      isNew: function(creationDate) {
-        let createdDaysAgo = it => {
-          let today = new Date().getTime() / 1000
-          return (today - it) / (24*12*60)
-        }
-        return createdDaysAgo(creationDate) < 14
-      },
       refineTag: function (tag) {
         this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('tags', tag)
       },

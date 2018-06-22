@@ -31,7 +31,7 @@
               div                
                 p.heading Recorded
                 p.title.is-size-7 {{recordingDate | published}}
-          Tags(:tags="tags" :featured="featured" :clickable="tagsClickable" :channel="channel" :creationDate="creationDate")
+          Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
 </template>
 <style lang="scss">
   .card {
@@ -118,6 +118,11 @@
         twitter: {
           type: String
         }        
+      }
+    },
+    computed: {
+      isNew() {
+        return window.newVideos.find(it => it === this.id)
       }
     },
     methods: {
