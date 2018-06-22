@@ -5,7 +5,7 @@
         nav.level
           .level-left
             .level-item
-              img.logo(src="./logo.png")
+              a(href="//dev.tube"): img.logo(src="./logo.png")
           .level-item.has-text-centered
               ais-input(placeholder="Search for videos...")
           .level-right
