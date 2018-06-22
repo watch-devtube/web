@@ -1,6 +1,10 @@
 <template lang="pug">
   .activeFilters
     .field.is-grouped.is-grouped-multiline
+      .control
+        .tags.has-addons(v-if="newOnly")
+          .tag.is-link.is-uppercase new additions
+          a.tag.is-delete(v-on:click="removeNewOnly()")
       .control(v-for="filter in facetFilters")
         .tags.has-addons
             .tag.is-link.is-uppercase {{filter.refinement}}
@@ -11,6 +15,9 @@
 
   export default {
     computed: {
+      newOnly() {
+        return this.searchStore.algoliaHelper.state.filters
+      },
       facetFilters() {
         let refinements = this.searchStore.algoliaHelper.state.disjunctiveFacetsRefinements
         let facets = Object.keys(refinements)
@@ -30,6 +37,9 @@
     methods: {
       remove: function (facet, refinement) {
         this.searchStore.algoliaHelper.removeDisjunctiveFacetRefinement(facet, refinement)
+      },
+      removeNewOnly: function() {
+        this.searchStore.algoliaHelper.setQueryParameter("filters", undefined)
       }
     }    
   }

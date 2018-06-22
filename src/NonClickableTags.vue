@@ -13,7 +13,7 @@
       featured: { type: Boolean, required: true },
       tags: { required: true },
       channel: { required: true },
-      creationDate: { required: true }
+      isNew: { required: true }
     },
     methods: {
       isNew: function(creationDate) {

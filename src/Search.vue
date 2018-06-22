@@ -15,7 +15,7 @@
           .container
             .columns
               .column.is-one-quarter.is-hidden-touch
-                .columns(v-if="newVideos.length")
+                .columns(v-if="newVideos.length && !newOnly")
                   .column
                     .content
                       p 
@@ -137,6 +137,11 @@ export default {
   watch: {
     '$route': 'fetch'
   },  
+  computed: {
+    newOnly() {
+      return this.searchStore.algoliaHelper.state.filters
+    }
+  },
   methods: {
     fetch() {
       this.newVideos = window.newVideos;
@@ -145,7 +150,7 @@ export default {
       let newOnly = this.newVideos.map(id => `objectID:${id}`).join(' OR ')
       this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
-  },  
+  },
   components: { ActiveFilters, VideoCard, Footer }
 };
 </script>
