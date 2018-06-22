@@ -61,6 +61,8 @@
           .column
             nav.paging(role="navigation" aria-label="pagination")
              ais-pagination.pagination(:class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
+
+    Footer
 </template>
 <style lang="scss">
 
@@ -109,6 +111,7 @@ header {
 <script>
 import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import VideoCard from './VideoCard.vue'
+import Footer from './Footer.vue'
 import ActiveFilters from './ActiveFilters.vue'
 
 const searchStore = createFromAlgoliaCredentials(
@@ -123,6 +126,6 @@ export default {
       searchStore
     };
   },
-  components: { ActiveFilters, VideoCard }
+  components: { ActiveFilters, VideoCard, Footer }
 };
 </script>

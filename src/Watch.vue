@@ -1,5 +1,17 @@
 <template lang="pug">
 .watch
+  header
+    .container
+      nav.level
+        .level-left
+          .level-item
+            img.logo(src="./logo.png")
+        .level-item.has-text-centered
+        .level-right
+          .level-item.links.is-size-4
+            a(href="/") 
+              i.fas.fa-arrow-left
+              |  Back to search
   section.section.body
   .container(v-if="errors.length > 0")
     .columns
@@ -9,9 +21,6 @@
   .container(v-if="errors.length == 0")
     .columns
       .column.is-one-half
-        a(href="/") 
-          i.fas.fa-arrow-left
-          |  Back to search
         .card
           .card-image
             .videoWrapper
@@ -64,11 +73,30 @@
             span Share
     RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
     MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+  Footer    
 </template>
 <style scoped lang="scss">
   body {
 
   }
+
+  header {
+    background-color: #343d46;
+    padding: 10px;
+
+    @media only screen and (max-width: 768px) {
+      .logo {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .links a {
+      color: white;
+    }
+  }
+
+
   .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -95,6 +123,7 @@
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
   import MessageWidget from './MessageWidget.vue'
+  import Footer from './Footer.vue'
   export default {
     data: function() {
       return {
@@ -128,7 +157,7 @@
       }
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget }
+    components: { RelatedVideos, MessageWidget, Footer }
   }
 
 </script>
