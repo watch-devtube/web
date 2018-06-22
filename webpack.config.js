@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-
-const CnameWebpackPlugin = require('cname-webpack-plugin');
 const webpack = require('webpack');
 
 const dest = path.resolve(__dirname, './dist');
@@ -23,7 +21,6 @@ module.exports = {
       { from: "src/static" }
     ]),
     new WriteFilePlugin()
-    // new CnameWebpackPlugin({domain: 'dev.tube'})
   ],  
   module: {
     rules: [
