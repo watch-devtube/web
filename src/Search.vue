@@ -15,6 +15,13 @@
           .container
             .columns
               .column.is-one-quarter.is-hidden-touch
+                .columns(v-if="newVideos.length")
+                  .column
+                    .content
+                      p 
+                        b {{newVideos.length}} 
+                        | new videos since yesterday!
+                      a.button.is-info.is-outlined(v-on:click="showNewVideos()") Show me
                 .columns
                   .column
                     h1.title Tags
@@ -123,9 +130,22 @@ searchStore.indexName = 'videos';
 export default { 
   data: function() {
     return {
+      newVideos: window.newVideos,
       searchStore
     };
   },
+  watch: {
+    '$route': 'fetch'
+  },  
+  methods: {
+    fetch() {
+      this.newVideos = window.newVideos;
+    },
+    showNewVideos: function() {
+      let newOnly = this.newVideos.map(id => `objectID:${id}`).join(' OR ')
+      this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
+    }
+  },  
   components: { ActiveFilters, VideoCard, Footer }
 };
 </script>
