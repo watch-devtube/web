@@ -1,7 +1,8 @@
 <template lang="pug">
   .card
       .card-image
-        .image.is-16by9(:style="'background-image:url(https://img.youtube.com/vi/' + id + '/maxresdefault.jpg)'")
+        .image
+          img(:src="'//img.youtube.com/vi/' + id + '/hqdefault.jpg'")
           a.watch.button.is-outlined.is-inverted.is-link(:href="'/video' + '/' + id") Watch
           .is-overlay
           p.ttl.is-uppercase.is-size-7 {{title}}
