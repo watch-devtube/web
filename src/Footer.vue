@@ -9,7 +9,7 @@
         |  and 
         a(href="https://twitter.com/eduardsi" target="_blank") @eduardsi
         | .
-      p This product has been developer in spare time. Say thanks by sharing this work or following us on Twitter.
+      p This product has been developed in spare time. Say thanks by sharing this work or following us on Twitter.
       p 
        i.far.fa-envelope
        |  Email us at 
