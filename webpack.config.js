@@ -16,14 +16,14 @@ module.exports = {
     filename: `[name].[hash].js`
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new HtmlWebpackPlugin({template: './src/index.pug'}),
     new CopyWebpackPlugin([
       { from: "src/static" }
     ]),
     new WriteFilePlugin()
   ],  
   module: {
-    rules: [
+    rules: [  
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -36,11 +36,19 @@ module.exports = {
             sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
           },
         },
-      },
+      },  
       {
         test: /\.pug$/,
-        loader: 'pug-plain-loader'
-      },      
+        oneOf: [
+          {
+            resourceQuery: /^\?vue/,
+            use: ['pug-plain-loader'] 
+          },
+          {
+            use: ['source-loader', 'pug-static-loader']
+          }
+        ]
+      },          
       {
         test: /\.js$/,
         loader: 'babel-loader',
