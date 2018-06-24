@@ -34,6 +34,9 @@ app.set('view engine', 'mustache')
 app.set('view cache', !devMode)
 app.set('views', path.join(__dirname, staticDir))
 
+let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
+let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
+
 async function proxy(req: Request, res: Response) {
   console.log(`REQUEST PATH: ${req.path}`)
   if (!req.path || req.path == '/') {
@@ -41,6 +44,7 @@ async function proxy(req: Request, res: Response) {
     let description = 'Enjoy the best technical videos and share it all friends, colleagues, and the world.'
     res.render('index.html', {      
       title: title,
+      newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
