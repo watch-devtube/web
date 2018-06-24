@@ -51,9 +51,9 @@
                           h1.title
                             i.far.fa-times-circle 
                             |  No videos matching your query
-                          a.button(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml" target="_blank")
+                          a.button(href="https://github.com/watch-devtube/contrib" target="_blank")
                             span.icon: i.fab.fa-github
-                            span Add YouTube channel
+                            span Contribute
                         //- .notification.is-danger(v-if="!props.query") 
                           p Sorry, search is not available now. We're working on the solution.
                     ais-results#videos.columns.is-multiline

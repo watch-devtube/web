@@ -18,7 +18,7 @@
 
   export default {
     props: { 
-      speaker: { type: String, required: true }
+      speaker: { type: String, required: false }
     },
     computed: {
       newOnly() {
