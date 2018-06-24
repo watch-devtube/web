@@ -10,10 +10,11 @@
           .media(v-if="speaker")
               .media-left
                   figure.image.is-48x48
-                    img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+                    a(:href="'/@' + speaker.twitter"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .media-content
-                p.title.is-6 {{speaker.name}}
-                p.subtitle.is-7 @{{speaker.twitter}} 
+                p.title.is-6: a.has-text-black(:href="'/@' + speaker.twitter") {{speaker.name}}
+                p.subtitle.is-7 
+                  a.has-text-black(:href="'/@' + speaker.twitter") @{{speaker.twitter}} 
                   a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
           nav.level
             .level-item.has-text-centered
@@ -104,7 +105,7 @@
       title: { type: String, required: true },
       channel: { type: String, required: true },
       satisfaction: { type: Number, required: true },
-      views: { type: Number, required: true },
+      views: { type: Number, default: 0 },
       duration: { type: Number, required: true },
       recordingDate: { type: Number, required: true },
       creationDate: { type: Number, required: true },

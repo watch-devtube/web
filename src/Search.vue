@@ -1,5 +1,5 @@
 <template lang="pug">
-  ais-index(:search-store="searchStore")
+  ais-index(:search-store="searchStore" index-name="videos")
     header
       .container
         nav.level
@@ -26,7 +26,7 @@
                   .column
                     h1.title Tags
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags")
-                .columns
+                .columns(v-if="!speaker")
                   .column
                     h1.title Speaker
                     ais-refinement-list.is-uppercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker.name")
@@ -43,21 +43,19 @@
                   .column
                     .columns
                       .column
-                        ActiveFilters
+                        ActiveFilters(:speaker="speaker")
                     ais-no-results
                       template(slot-scope="props")
-                        .notification(v-if="props.query")
+                        //- .notification(v-if="props.query")
+                        .notification
                           h1.title
                             i.far.fa-times-circle 
-                            |  No videos matching 
-                            em.has-text-info {{props.query}}
-                            | , sorry
+                            |  No videos matching your query
                           a.button(href="https://github.com/watch-devtube/contrib/edit/master/channels.yml" target="_blank")
                             span.icon: i.fab.fa-github
                             span Add YouTube channel
-                        .notification.is-danger(v-if="!props.query") 
+                        //- .notification.is-danger(v-if="!props.query") 
                           p Sorry, search is not available now. We're working on the solution.
-
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
                         .column.is-6.is-4-widescreen
@@ -125,7 +123,11 @@ const searchStore = createFromAlgoliaCredentials(
   'DR90AOGGE9',
   'c2655fa0f331ebf28c89f16ec8268565'
 );
-searchStore.indexName = 'videos';
+
+if (window.speaker) {
+  searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
+  searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
+}
 
 export default { 
   data: function() {
@@ -137,13 +139,18 @@ export default {
   watch: {
     '$route': 'fetch'
   },  
+  created() {
+    this.fetch()
+  },
   computed: {
     newOnly() {
-      return this.searchStore.algoliaHelper.state.filters
+      return this.searchStore.algoliaHelper.state.filters && 
+        this.searchStore.algoliaHelper.state.filters.includes('objectID')
     }
   },
   methods: {
     fetch() {
+      this.speaker = window.speaker;
       this.newVideos = window.newVideos;
     },
     showNewVideos: function() {

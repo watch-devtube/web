@@ -50,10 +50,12 @@
             .media
                 .media-left.has-text-left
                     figure.image.is-48x48.is-marginless
-                      img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
+                      a.has-text-black(:href="'/@' + video.speaker.twitter")
+                        img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
                 .media-content
-                  p.title.is-4 {{video.speaker.name}}
-                  p.subtitle.is-6 @{{video.speaker.twitter}} 
+                  p.title.is-4: a.has-text-black(:href="'/@' + video.speaker.twitter") {{video.speaker.name}}
+                  p.subtitle.is-6
+                    a.has-text-black(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}} 
                     a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
           .tags
             span.tag.is-uppercase(v-for="tag in video.tags") {{tag}}

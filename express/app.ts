@@ -41,10 +41,27 @@ async function proxy(req: Request, res: Response) {
   console.log(`REQUEST PATH: ${req.path}`)
   if (!req.path || req.path == '/') {
     let title = 'DevTube - The best developer videos in one place'
-    let description = 'Enjoy the best technical videos and share it all friends, colleagues, and the world.'
+    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     res.render('index.html', {      
       title: title,
       newVideos: JSON.stringify(newVideosSinceYesterday),
+      meta: [
+        { name: "description", content: description },
+        { name: "og:title", content: title },
+        { name: "og:description", content: description },
+        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
+      ]
+    })
+  } else if (req.path.startsWith("/@")) {
+    let speaker = req.path.split("/@")[1]
+    let title = `DevTube - Videos by @${speaker}`
+    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+    res.render('index.html', {
+      title: title,
+      speaker: `"${speaker}"`,
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
