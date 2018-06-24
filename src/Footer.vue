@@ -15,5 +15,7 @@
        |  Email us at 
        a(href="mailto:hello@dev.tube") hello@dev.tube
       p
-        a(href="https://github.com/watch-devtube/contrib" target="_blank"): i.fab.fa-github
+        a(href="https://github.com/watch-devtube" target="_blank"): i.fab.fa-github
+        | 
+        a(href="https://twitter.com/WatchDevTube" target="_blank"): i.fab.fa-twitter
 </template>
