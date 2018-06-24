@@ -14,4 +14,6 @@
        i.far.fa-envelope
        |  Email us at 
        a(href="mailto:hello@dev.tube") hello@dev.tube
+      p
+        a(href="https://github.com/watch-devtube/contrib" target="_blank"): i.fab.fa-github
 </template>
