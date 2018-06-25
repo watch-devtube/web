@@ -1,11 +1,12 @@
 <template lang="pug">
   .card
       .card-image
-        .image
-          img(:src="'//img.youtube.com/vi/' + id + '/hqdefault.jpg'")
-          a.watch.button.is-outlined.is-inverted.is-link(:href="'/video' + '/' + id") Watch
-          .is-overlay
-          p.ttl.is-uppercase.is-size-7 {{title}}
+        a(:href="'/video' + '/' + id")
+          .image
+            img(:src="'//img.youtube.com/vi/' + id + '/hqdefault.jpg'")
+            a.watch.button.is-outlined.is-inverted.is-link(:href="'/video' + '/' + id") Watch
+            .is-overlay
+            p.ttl.is-uppercase.is-size-7 {{title}}
       .card-content
           .media(v-if="speaker")
               .media-left
