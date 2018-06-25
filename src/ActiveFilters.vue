@@ -3,14 +3,14 @@
     .field.is-grouped.is-grouped-multiline
       .control
         .tags.has-addons(v-if="newOnly")
-          .tag.is-link.is-uppercase new additions
+          .tag.is-link.is-lowercase new additions
           a.tag.is-delete(v-on:click="removeNewOnly()")
       .control(v-for="filter in facetFilters")
         .tags.has-addons(v-if="filter.refinement == speaker")
-            .tag.is-link.is-uppercase @{{speaker}}
+            .tag.is-link.is-lowercase @{{speaker}}
             a.tag.is-delete(href="/")
         .tags.has-addons(v-else)  
-            .tag.is-link.is-uppercase {{filter.refinement}}
+            .tag.is-link.is-lowercase {{filter.refinement}}
             a.tag.is-delete(v-on:click="remove(filter.facet, filter.refinement)")
 </template>
 <script>

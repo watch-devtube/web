@@ -58,8 +58,8 @@
                     a.has-text-black(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}} 
                     a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
           .tags
-            span.tag.is-uppercase(v-for="tag in video.tags") {{tag}}
-            span.tag.is-uppercase 
+            span.tag.is-lowercase(v-for="tag in video.tags") {{tag}}
+            span.tag.is-lowercase 
               i.fab.fa-youtube 
               | &nbsp; {{video.channelTitle}}
           p {{video.description}}

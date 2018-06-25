@@ -20,19 +20,19 @@
           nav.level
             .level-item.has-text-centered
               div
-                p.heading: i.far.fa-smile
+                p.heading.is-lowercase: i.far.fa-smile
                 p.title.is-size-7 {{satisfaction}} 
-            .level-item.has-text-centered
+            .level-item.has-text-centered.is-lowercase
               div
-                p.heading Views
+                p.heading.is-lowercase Views
                 p.title.is-size-7 {{views | views}}
             .level-item.has-text-centered
               div                
-                p.heading Duration
+                p.heading.is-lowercase Duration
                 p.title.is-size-7 {{duration | duration}}
             .level-item.has-text-centered
               div                
-                p.heading Recorded
+                p.heading.is-lowercase Recorded
                 p.title.is-size-7 {{recordingDate | published}}
           Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
 </template>
