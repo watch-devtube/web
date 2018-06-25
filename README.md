@@ -2,7 +2,7 @@
 
 > Hi! I am Dev.Tube – the place where developer videos live.
 
-This web app comprises of `Vue` client app and s slim `node` server app, through which the client app is served.
+This web app comprises of `Vue` client app and a slim `node` server app, through which the client app is served.
 
 ## How to run the app locally?
 
