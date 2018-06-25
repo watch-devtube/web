@@ -45,3 +45,6 @@ serverles deploy
 
 ```
 
+## How to contribute content?
+The info is [here](https://github.com/watch-devtube/contrib).
+
