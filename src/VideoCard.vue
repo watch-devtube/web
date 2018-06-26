@@ -4,7 +4,7 @@
         a(:href="'/video' + '/' + id")
           .image
             img(:src="'//img.youtube.com/vi/' + id + '/hqdefault.jpg'")
-            a.watch.button.is-outlined.is-inverted.is-link(:href="'/video' + '/' + id") Watch
+            i.is-size-3.fab.fa-youtube.watch.has-text-light
             .is-overlay
             p.ttl.is-capitalized.is-size-7 {{title}}
       .card-content
@@ -72,10 +72,9 @@
         width: 90%;
         left: 10%;
         background-color: #4988cb;
-        opacity: 0.9;
+        
         color: white;
         padding: 5px 0 5px 20px;
-        /*font-size: 0.8rem;*/
         padding-right: 20px;
     }       
       } 
@@ -93,8 +92,8 @@
 
     box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
 
-    div.is-overlay {
-      // opacity: 0;
+    .watch {
+      color: #4988cb !important;
     }
   } 
 </style>
