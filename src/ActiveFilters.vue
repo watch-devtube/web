@@ -13,6 +13,7 @@
             .tag.is-link.is-uppercase {{filter.refinement}}
             a.tag.is-delete(v-on:click="remove(filter.facet, filter.refinement)")
 </template>
+
 <script>
   import { Component } from 'vue-instantsearch'
 

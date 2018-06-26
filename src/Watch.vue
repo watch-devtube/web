@@ -77,11 +77,11 @@
     MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
   Footer    
 </template>
+
 <style scoped lang="scss">
   body {
 
   }
-
   header {
     background-color: #343d46;
     padding: 10px;
@@ -92,35 +92,36 @@
         margin-bottom: 10px;
       }
     }
-
     .links a {
       color: white;
     }
   }
-
-
   .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     padding-top: 25px;
     height: 0;
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+  
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
   .card-content {
-    p { color: white; }
     background-color: #343d46;
-  }
 
+    p {
+      color: white;
+    }
+  }
   .avatar {
     border-radius: 50%
   }  
 </style>
+
 <script>
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
@@ -161,5 +162,4 @@
     props: ['id'],
     components: { RelatedVideos, MessageWidget, Footer }
   }
-
 </script>

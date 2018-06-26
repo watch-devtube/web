@@ -38,59 +38,58 @@
 </template>
 
 <style lang="scss">
-.card {
-  transition: 0.4s ease;
+  .card {
+    transition: 0.4s ease;
 
-  .avatar {
-    border-radius: 50%
+    .avatar {
+      border-radius: 50%
+    }
+    div.image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+
+      .watch {
+        z-index: 1;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        transition: 0.4s ease;
+      }
+
+      div.is-overlay {
+        transition: 0.4s ease;
+        background: url('./overlay.png');
+      }
+
+      .ttl {
+        position: absolute;
+        bottom: 20px;
+        width: 90%;
+        left: 10%;
+        background-color: #4988cb;
+        opacity: 0.9;
+        color: white;
+        padding: 5px 0 5px 20px;
+        /*font-size: 0.8rem;*/
+        padding-right: 20px;
+      }
+    }
+    em {
+      color: #ec0047;
+    }
+    &:hover {
+      box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
+
+      div.is-overlay {
+        // opacity: 0;
+      }
+    } 
+    // &:not(.verified) {
+    // // do stuff here
+    // }
   }
-  div.image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-
-    .watch {
-      z-index: 1;
-      position: absolute;
-      right: 5px;
-      top: 5px;
-      transition: 0.4s ease;
-    }
-
-    div.is-overlay {
-      transition: 0.4s ease;
-      background: url('./overlay.png');
-    }
-
-    .ttl {
-      position: absolute;
-      bottom: 20px;
-      width: 90%;
-      left: 10%;
-      background-color: #4988cb;
-      opacity: 0.9;
-      color: white;
-      padding: 5px 0 5px 20px;
-      /*font-size: 0.8rem;*/
-      padding-right: 20px;
-    }
-  }
-  em {
-    color: #ec0047;
-  }
-  &:hover {
-    box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
-
-    div.is-overlay {
-      // opacity: 0;
-    }
-  } 
-}
-
-// .card:not(.verified) {
-// do stuff here
-// }
 </style>
 
 <script>
