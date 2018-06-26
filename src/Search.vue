@@ -34,6 +34,10 @@
                   .column
                     h1.title Channel
                     ais-refinement-list.is-lowercase(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle")
+                .columns
+                  .column
+                    h1.title Year
+                    YearRange
               .column
                 .columns
                   .column
@@ -114,6 +118,7 @@ import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import VideoCard from './VideoCard.vue'
 import Footer from './Footer.vue'
 import ActiveFilters from './ActiveFilters.vue'
+import YearRange from './YearRange.vue'
 
 const searchStore = createFromAlgoliaCredentials(
   'DR90AOGGE9',
@@ -154,6 +159,6 @@ export default {
       this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
   },
-  components: { ActiveFilters, VideoCard, Footer }
+  components: { ActiveFilters, VideoCard, Footer, YearRange }
 };
 </script>
