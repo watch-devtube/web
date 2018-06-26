@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueDisqus from 'vue-disqus'
 import AsyncComputed from 'vue-async-computed'
 import InstantSearch from 'vue-instantsearch'
 import App from './App.vue'
@@ -9,6 +10,7 @@ import dayjs from 'dayjs'
 
 Vue.use(InstantSearch)
 Vue.use(VueRouter)
+Vue.use(VueDisqus)
 Vue.use(AsyncComputed)
 
 Vue.filter('flatten', it => {
