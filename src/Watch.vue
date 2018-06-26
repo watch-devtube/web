@@ -8,73 +8,68 @@
             a(href="//dev.tube"): img.logo(src="./logo.png")
         .level-item.has-text-centered
         .level-right
-          .level-item.links.is-size-4
-            a(href="/") 
-              i.fas.fa-arrow-left
-              |  Back to search
+          .level-item.is-size-4
+            .buttons
+              a.button.is-primary.is-inverted.is-outlined(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                span.icon: i.fab.fa-github
+                span Edit info   
+              a.button.is-primary.is-inverted.is-outlined(href="/") 
+                span.icon: i.fas.fa-arrow-circle-left
+                span Back to search  
   section.section.body
-  .container(v-if="errors.length > 0")
-    .columns
-      .column
-        .notification.is-danger
-          p {{errors[0]}}
-  .container(v-if="errors.length == 0")
-    .columns
-      .column.is-one-half
-        .card
-          .card-image
-            .videoWrapper
-              iframe(:src="'https://www.youtube-nocookie.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
-          .card-content
-                nav.level.is-mobile
-                  .level-item.has-text-centered
-                    div
-                      p.heading: i.far.fa-smile
-                      p.title.is-size-7 {{video.satisfaction}}
-                  .level-item.has-text-centered
-                    div
-                      p.heading Views
-                      p.title.is-size-7 {{video.views | views}}
-                  .level-item.has-text-centered                        
-                    div
-                      p.heading Duration
-                      p.title.is-size-7 {{video.duration | duration}}
-                  .level-item.has-text-centered                        
-                    div
-                      p.heading Recorded
-                      p.title.is-size-7 {{video.recordingDate | published}}
-      .column
-        .content
-          h1 {{video.title}}
-          .box.is-paddingless.is-shadowless(v-if="video.speaker && video.speaker.twitter")
-            .media
-                .media-left.has-text-left
-                    figure.image.is-48x48.is-marginless
-                      a.has-text-black(:href="'/@' + video.speaker.twitter")
-                        img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
-                .media-content
-                  p.title.is-4: a.has-text-black(:href="'/@' + video.speaker.twitter") {{video.speaker.name}}
-                  p.subtitle.is-6
-                    a.has-text-black(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}} 
-                    a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
-          .tags
-            span.tag.is-capitalized(v-for="tag in video.tags") {{tag}}
-            span.tag.is-capitalized 
-              i.fab.fa-youtube 
-              | &nbsp; {{video.channelTitle}}
-          p {{video.description}}
-          a.button(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-            span.icon: i.fab.fa-github
-            span Edit
-          | &nbsp;
-          a.button(v-if="video.speaker && video.speaker.twitter" :href="'https://twitter.com/intent/tweet?text=Thanks @' + video.speaker.twitter + ' for ' + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")
-            span.icon: i.fab.fa-twitter
-            span Thank @{{video.speaker.twitter}}
-          a.button(v-if="!video.speaker || !video.speaker.twitter" :href="'https://twitter.com/intent/tweet?text=' + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank")            
-            span.icon: i.fab.fa-twitter
-            span Share
-    RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
-    MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+    .container(v-if="errors.length > 0")
+      .columns
+        .column
+          .notification.is-danger
+            p {{errors[0]}}
+    .container(v-if="errors.length == 0")
+      .columns
+        .column.is-one-half
+          .card
+            .card-image
+              .videoWrapper
+                iframe(:src="'https://www.youtube-nocookie.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
+            .card-content
+                  nav.level.is-mobile
+                    .level-item.has-text-centered
+                      div
+                        p.heading: i.far.fa-smile
+                        p.title.is-size-7 {{video.satisfaction}}
+                    .level-item.has-text-centered
+                      div
+                        p.heading Views
+                        p.title.is-size-7 {{video.views | views}}
+                    .level-item.has-text-centered                        
+                      div
+                        p.heading Duration
+                        p.title.is-size-7 {{video.duration | duration}}
+                    .level-item.has-text-centered                        
+                      div
+                        p.heading Recorded
+                        p.title.is-size-7 {{video.recordingDate | published}}
+        .column
+          .content
+            h1 {{video.title}}
+            .box.is-paddingless.is-shadowless(v-if="video.speaker && video.speaker.twitter")
+              .media
+                  .media-left.has-text-left
+                      figure.image.is-48x48.is-marginless
+                        a.has-text-black(:href="'/@' + video.speaker.twitter")
+                          img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
+                  .media-content
+                    p.title.is-4: a.has-text-black(:href="'/@' + video.speaker.twitter") {{video.speaker.name}}
+                    p.subtitle.is-6
+                      a.has-text-black(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}} 
+                      a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
+            .tags
+              span.tag.is-capitalized(v-for="tag in video.tags") {{tag}}
+              span.tag.is-capitalized 
+                i.fab.fa-youtube 
+                | &nbsp; {{video.channelTitle}}
+            p {{video.description}}
+            .addthis_inline_share_toolbox
+      RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+      MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
   Footer    
 </template>
 <style scoped lang="scss">
