@@ -44,6 +44,8 @@
                     .columns
                       .column
                         ActiveFilters(:speaker="speaker")
+                      .column.has-text-right
+                        .addthis_inline_share_toolbox
                     ais-no-results
                       template(slot-scope="props")
                         //- .notification(v-if="props.query")
