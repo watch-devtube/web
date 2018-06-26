@@ -1,9 +1,9 @@
 <template lang="pug">
   .tags
-    span.tag.is-primary.is-lowercase(v-if="isNew") New
-    span.tag.is-danger.is-lowercase(v-if="featured") Featured
-    a.tag.is-lowercase(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag}}
-    a.tag.is-lowercase(v-on:click="refineChannel(channel)") 
+    span.tag.is-primary.is-capitalized(v-if="isNew") New
+    span.tag.is-danger.is-capitalized(v-if="featured") Featured
+    a.tag.is-capitalized(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag}}
+    a.tag.is-capitalized(v-on:click="refineChannel(channel)") 
       i.fab.fa-youtube 
       | &nbsp; {{channel | truncate(10)}}
 </template>

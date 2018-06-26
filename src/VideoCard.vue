@@ -6,7 +6,7 @@
             img(:src="'//img.youtube.com/vi/' + id + '/hqdefault.jpg'")
             a.watch.button.is-outlined.is-inverted.is-link(:href="'/video' + '/' + id") Watch
             .is-overlay
-            p.ttl.is-uppercase.is-size-7 {{title}}
+            p.ttl.is-capitalized.is-size-7 {{title}}
       .card-content
           .media(v-if="speaker")
               .media-left
@@ -20,19 +20,19 @@
           nav.level
             .level-item.has-text-centered
               div
-                p.heading.is-lowercase: i.far.fa-smile
+                p.heading.is-capitalized: i.far.fa-smile
                 p.title.is-size-7 {{satisfaction}} 
-            .level-item.has-text-centered.is-lowercase
+            .level-item.has-text-centered.is-capitalized
               div
-                p.heading.is-lowercase Views
+                p.heading.is-capitalized Views
                 p.title.is-size-7 {{views | views}}
             .level-item.has-text-centered
               div                
-                p.heading.is-lowercase Duration
+                p.heading.is-capitalized Duration
                 p.title.is-size-7 {{duration | duration}}
             .level-item.has-text-centered
               div                
-                p.heading.is-lowercase Recorded
+                p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}
           Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
 </template>
