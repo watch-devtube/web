@@ -87,6 +87,7 @@ header {
   }
 
   input {
+    -webkit-appearance: none;
     outline: none;
     color: white;
     font-size: 15px;
@@ -97,6 +98,10 @@ header {
     border-radius: 3px;
   }
 }
+
+  input::placeholder{
+    color: #fff;
+  }
 
 .paging  {
   .pagination-list {
