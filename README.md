@@ -41,7 +41,7 @@ yarn && yarn build
 cd express && yarn && yarn compile
 
 # deploy server app as Google cloud function
-serverles deploy
+serverless deploy
 
 ```
 
