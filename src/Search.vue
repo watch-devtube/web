@@ -132,6 +132,8 @@ const searchStore = createFromAlgoliaCredentials(
   'c2655fa0f331ebf28c89f16ec8268565'
 );
 
+searchStore.queryParameters = { hitsPerPage : 21 }
+
 if (window.speaker) {
   searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
   searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
