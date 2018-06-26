@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card
+  .card(@click="watch(id)")
       .card-image
         a(:href="'/video' + '/' + id")
           .image
@@ -40,6 +40,7 @@
 <style lang="scss">
   .card {
     transition: 0.4s ease;
+    cursor: pointer;
 
     .avatar {
       border-radius: 50%
@@ -125,7 +126,7 @@
     methods: {
       watch: function(videoId) {
         this.$router.push({
-          name: 'watch',
+          name: 'video',
           params: { id: videoId }
         });
       }
