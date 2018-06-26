@@ -4,6 +4,7 @@
       .column.is-6.is-4-widescreen(v-for="video in hits")
         VideoCard(:tags="video.tags" :featured="video.featured" :speaker="video.speaker" :creationDate="video.creationDate" :recordingDate="video.recordingDate" :duration="video.duration" :views="video.views" :satisfaction="video.satisfaction" :title="video.title" :id="video.objectID" :channel="video.channelTitle")
 </template>
+
 <script>
   import algolia from 'algoliasearch'
   import VideoCard from './VideoCard.vue'

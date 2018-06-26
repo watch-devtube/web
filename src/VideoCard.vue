@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card
+  .card(@click="watch(id)")
       .card-image
         a(:href="'/video' + '/' + id")
           .image
@@ -36,37 +36,35 @@
                 p.title.is-size-7 {{recordingDate | published}}
           Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
 </template>
+
 <style lang="scss">
   .card {
     transition: 0.4s ease;
-  }
-
-  .card {
+    cursor: pointer;
 
     .avatar {
       border-radius: 50%
     }
-
     div.image {
       display: flex;
       align-items: center;
       justify-content: center;
       background-size: cover;
 
-        .watch {
-          z-index: 1;
-          position: absolute;
-          right: 5px;
-          top: 5px;
-          transition: 0.4s ease;
-        }
+      .watch {
+        z-index: 1;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        transition: 0.4s ease;
+      }
 
-        div.is-overlay {
-          transition: 0.4s ease;
-          background: url('./overlay.png');
-        }
+      div.is-overlay {
+        transition: 0.4s ease;
+        background: url('./overlay.png');
+      }
 
-    .ttl {
+      .ttl {
         position: absolute;
         bottom: 20px;
         width: 90%;
@@ -77,27 +75,24 @@
         padding: 5px 0 5px 20px;
         /*font-size: 0.8rem;*/
         padding-right: 20px;
-    }       
-      } 
-
-  }
-
-  .card:not(.verified) {
-  }
-
-  .card em {
-    color: #ec0047;
-  }
-
-  .card:hover {
-
-    box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
-
-    div.is-overlay {
-      // opacity: 0;
+      }
     }
-  } 
+    em {
+      color: #ec0047;
+    }
+    &:hover {
+      box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
+
+      div.is-overlay {
+        // opacity: 0;
+      }
+    } 
+    // &:not(.verified) {
+    // // do stuff here
+    // }
+  }
 </style>
+
 <script>
   import Tags from './Tags.vue'
   export default {
@@ -131,7 +126,7 @@
     methods: {
       watch: function(videoId) {
         this.$router.push({
-          name: 'watch',
+          name: 'video',
           params: { id: videoId }
         });
       }

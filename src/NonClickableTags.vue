@@ -7,6 +7,7 @@
       i.fab.fa-youtube 
       | &nbsp; {{channel | truncate(10)}}
 </template>
+
 <script>
   export default {
     props: { 

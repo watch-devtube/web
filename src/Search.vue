@@ -58,7 +58,7 @@
                           p Sorry, search is not available now. We're working on the solution.
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
-                        .column.is-6.is-4-widescreen
+                        .column.is-6.is-4-widescreen.is-flex
                           VideoCard(:tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
     section.section
       .container
@@ -69,95 +69,91 @@
 
     Footer
 </template>
+
 <style lang="scss">
+  header {
+    background-color: #343d46;
+    padding: 30px;
 
-header {
-  background-color: #343d46;
-  padding: 30px;
-
-  @media only screen and (max-width: 768px) {
-    .logo {
-      width: 50px;
-      margin-bottom: 10px;
+    @media only screen and (max-width: 768px) {
+      .logo {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+    }
+    .links a {
+      color: white;
+    }
+    input {
+      outline: none;
+      color: white;
+      font-size: 15px;
+      font-weight: 100;
+      background-color: #343d46;
+      padding: 16px 26px 16px 52px;
+      border: 1px solid #6498cf;
+      border-radius: 3px;
     }
   }
-
-  .links a {
-    color: white;
+  .paging  {
+    .pagination-list {
+      justify-content: center;
+    }
+    .is-current a {
+      background-color: #343d46;
+      color: white;
+    } 
   }
+  #videos {
 
-  input {
-    outline: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 100;
-    background-color: #343d46;
-    padding: 16px 26px 16px 52px;
-    border: 1px solid #6498cf;
-    border-radius: 3px;
   }
-}
-
-.paging  {
-  .pagination-list {
-    justify-content: center;
-  }
-
-  .is-current a {
-    background-color: #343d46;
-    color: white;
-  } 
-}
-
-#videos {
-
-}
 </style>
+
 <script>
-import { createFromAlgoliaCredentials } from 'vue-instantsearch'
-import VideoCard from './VideoCard.vue'
-import Footer from './Footer.vue'
-import ActiveFilters from './ActiveFilters.vue'
+  import { createFromAlgoliaCredentials } from 'vue-instantsearch'
+  import VideoCard from './VideoCard.vue'
+  import Footer from './Footer.vue'
+  import ActiveFilters from './ActiveFilters.vue'
 
-const searchStore = createFromAlgoliaCredentials(
-  'DR90AOGGE9',
-  'c2655fa0f331ebf28c89f16ec8268565'
-);
+  const searchStore = createFromAlgoliaCredentials(
+    'DR90AOGGE9',
+    'c2655fa0f331ebf28c89f16ec8268565'
+  );
 
-if (window.speaker) {
-  searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
-  searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
-}
+  if (window.speaker) {
+    searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
+    searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
+  }
 
-export default { 
-  data: function() {
-    return {
-      newVideos: window.newVideos,
-      searchStore
-    };
-  },
-  watch: {
-    '$route': 'fetch'
-  },  
-  created() {
-    this.fetch()
-  },
-  computed: {
-    newOnly() {
-      return this.searchStore.algoliaHelper.state.filters && 
-        this.searchStore.algoliaHelper.state.filters.includes('objectID')
-    }
-  },
-  methods: {
-    fetch() {
-      this.speaker = window.speaker;
-      this.newVideos = window.newVideos;
+  export default { 
+    data: function() {
+      return {
+        newVideos: window.newVideos,
+        searchStore
+      };
     },
-    showNewVideos: function() {
-      let newOnly = this.newVideos.map(id => `objectID:${id}`).join(' OR ')
-      this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
-    }
-  },
-  components: { ActiveFilters, VideoCard, Footer }
-};
+    watch: {
+      '$route': 'fetch'
+    },  
+    created() {
+      this.fetch()
+    },
+    computed: {
+      newOnly() {
+        return this.searchStore.algoliaHelper.state.filters && 
+          this.searchStore.algoliaHelper.state.filters.includes('objectID')
+      }
+    },
+    methods: {
+      fetch() {
+        this.speaker = window.speaker;
+        this.newVideos = window.newVideos;
+      },
+      showNewVideos: function() {
+        let newOnly = this.newVideos.map(id => `objectID:${id}`).join(' OR ')
+        this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
+      }
+    },
+    components: { ActiveFilters, VideoCard, Footer }
+  };
 </script>
