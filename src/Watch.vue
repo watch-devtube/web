@@ -10,10 +10,10 @@
         .level-right
           .level-item.is-size-4
             .buttons
-              a.button.is-primary.is-inverted.is-outlined(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+              a.button.is-info.is-outlined(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
                 span.icon: i.fab.fa-github
                 span Edit info   
-              a.button.is-primary.is-inverted.is-outlined(href="/") 
+              a.button.is-info.is-outlined(href="/") 
                 span.icon: i.fas.fa-arrow-circle-left
                 span Back to search  
   section.section.body
