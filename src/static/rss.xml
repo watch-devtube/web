@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[DevTube the place where developer videos live]]></title>
+        <description><![CDATA[DevTube the place where developer videos live]]></description>
+        <link>https://dev.tube</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Wed, 27 Jun 2018 18:52:12 GMT</lastBuildDate>
+        <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Philip Roberts: What the heck is the event loop anyway?]]></title>
+            <description><![CDATA[JavaScript programmers like to use words like, “event-loop”, “non-blocking”, “callback”, “asynchronous”, “single-threaded” and “concurrency”.\n\nWe say things like “don’t block the event loop”, “make sure your code runs at 60 frames-per-second”, “well of course, it won’t work, that function is an asynchronous callback!”\n\nIf you’re anything like me, you nod and agree, as if it’s all obvious, even though you don’t actually know what the words mean; and yet, finding good explanations of how JavaScript actually works isn’t all that easy, so let’s learn!\n\nWith some handy visualisations, and fun hacks, let’s get an intuitive understanding of what happens when JavaScript runs.\n\nTranscript: http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html\n\nLicense: For reuse of this video under a more permissive license please get in touch with us. The speakers retain the copyright for their performances.]]></description>
+            <link>https://dev.tube/video/8aGhZQkoFbQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/8aGhZQkoFbQ</guid>
+            <pubDate>Sun, 10 Jun 2018 01:29:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Google Python Class Day 1 Part 1]]></title>
+            <description><![CDATA[Google Python Class Day 1 Part 1:
+Introduction and Strings.
+
+Interested in learning python? Then you must watch this video!
+ 
+By Nick Parlante.
+ 
+Support materials and exercises: https://goo.gl/ztTFg
+
+Subscribe to the Google Developers channel at http://goo.gl/mQyv5L]]></description>
+            <link>https://dev.tube/video/tKTZoB2Vjuk</link>
+            <guid isPermaLink="true">https://dev.tube/video/tKTZoB2Vjuk</guid>
+            <pubDate>Sun, 10 Jun 2018 01:31:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS Grid Changes EVERYTHING]]></title>
+            <description><![CDATA[CSS Grid is now live in all major browsers, and with it everything we know about web layouts changes! The CSS Grid Layout Module introduces a native CSS grid system, provided at the viewport level, that achieves what CSS frameworks and popular grid systems could only dream about: Responsive, flexible, pure CSS grid layouts, independent of document source order, that allow us to treat the browser as a true design and layout surface.
+
+EVENT: WordCamp Europe, Paris, France, June 2017
+
+SPEAKER: Morten Rand-Hendriksen, https://www.linkedin.com/in/mortenrandhendriksen/
+
+SLIDES: https://www.slideshare.net/mor10/css-grid-changes-everything-about-web-layouts-wordcamp-europe-2017
+
+PERMISSION: The original content of this video is under the Creative Commons Attribution license (reuse allowed).
+
+ORIGINAL SOURCE: https://www.youtube.com/watch?v=txZq7Laz7_4&t=14s]]></description>
+            <link>https://dev.tube/video/7kVeCqQCxlk</link>
+            <guid isPermaLink="true">https://dev.tube/video/7kVeCqQCxlk</guid>
+            <pubDate>Sun, 10 Jun 2018 01:26:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Anjana Vakil: Learning Functional Programming with JavaScript - JSUnconf 2016]]></title>
+            <description><![CDATA[Anjana's next talk at JSConf EU in May: http://2017.jsconf.eu/speakers/anjana-vakil-immutable-data-structures-for-functional-js.html
+
+Slides: https://slidr.io/vakila/learning-functional-programming-with-javascript]]></description>
+            <link>https://dev.tube/video/e-5obm1G_FY</link>
+            <guid isPermaLink="true">https://dev.tube/video/e-5obm1G_FY</guid>
+            <pubDate>Sun, 10 Jun 2018 01:27:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Google I/O 2013: Keynote]]></title>
+            <description><![CDATA[Google I/O keynote. To check out, "Here's to your imagination," the opening video to the conference, visit http://www.youtube.com/watch?v=Dr3STRBtTp0
+
+Brought to you by Google Developers Live developers.google.com/live.]]></description>
+            <link>https://dev.tube/video/9pmPa_KxsAM</link>
+            <guid isPermaLink="true">https://dev.tube/video/9pmPa_KxsAM</guid>
+            <pubDate>Sun, 10 Jun 2018 01:29:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What Does It Take To Be An Expert At Python?]]></title>
+            <description><![CDATA[If you want to become an expert in Python, you should definitely watch this PyData talk from James Powell.
+
+EVENT: PyData, 2017
+
+SPEAKER: James Powell
+
+PERMISSIONS: Coding Tech received permissions from the Organizer to republish this video. 
+
+ORIGINAL SOURCE: https://www.youtube.com/watch?v=cKPlPJyQrt4]]></description>
+            <link>https://dev.tube/video/7lmCu8wz8ro</link>
+            <guid isPermaLink="true">https://dev.tube/video/7lmCu8wz8ro</guid>
+            <pubDate>Sun, 10 Jun 2018 01:26:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[New Tech Start-Up Bubble]]></title>
+            <description><![CDATA[When he lost his job at Newsweek, Lyons - who had long reported on Silicon Valley companies - accepted an offer from HubSpot, a red-hot Boston startup, as a "marketing fellow". Watch the talk to learn what happened next.
+
+EVENT: Open Source Leadership Summit, February 2017
+
+SPEAKER: Dan Lyons
+
+PERMISSIONS: The original content of this video is under the Creative Commons Attribution license (reuse allowed). 
+
+ORIGINAL SOURCE: https://www.youtube.com/watch?v=IRphJ7_FJO0]]></description>
+            <link>https://dev.tube/video/G7vrCpWbmDw</link>
+            <guid isPermaLink="true">https://dev.tube/video/G7vrCpWbmDw</guid>
+            <pubDate>Sun, 10 Jun 2018 01:26:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Make CSS Your Secret Super Drawing Tool]]></title>
+            <description><![CDATA[As we all know, everything rendered out of CSS is in a box model. That is why not many people are as enthusiastic as Wenting is about using CSS to draw, since everything has to be some sort of rectangles. In this talk, Wenting works inside of the box and transforms a single div to this mustache icon, all this live!
+
+EVENT:
+
+dotCSS 2016
+
+SPEAKER:
+
+Wenting Zhang
+
+PERMISSIONS:
+
+The original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=Y0_FMCji3iE]]></description>
+            <link>https://dev.tube/video/mNKz3devFAw</link>
+            <guid isPermaLink="true">https://dev.tube/video/mNKz3devFAw</guid>
+            <pubDate>Sun, 10 Jun 2018 01:28:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Using Node.js To Create Electronic Dance Music]]></title>
+            <description><![CDATA[Did you know that we can create electronic dance music with JavaScript? Watch this presentation to learn how to do that with Node.js.
+
+CREDITS: This video was originally published on SFNode YouTube Channel (https://www.youtube.com/channel/UCbWHWaCKZqIm5pE5hSD7KFw). Please check out the channel to watch more presentations.
+
+SPEAKER: Walmik Deshpande, https://twitter.com/_walmik
+
+SLIDES: https://speakerdeck.com/walmik/node-dot-js
+
+PERMISSION: This video was published with the Author's permission.
+
+ORIGINAL SOURCE: https://www.youtube.com/watch?v=iwuZzp_ZnLo]]></description>
+            <link>https://dev.tube/video/dIiwFzFvsmw</link>
+            <guid isPermaLink="true">https://dev.tube/video/dIiwFzFvsmw</guid>
+            <pubDate>Sun, 10 Jun 2018 01:26:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Gary Vaynerchuk: Building Personal Brand Within the Social Media Landscape - Web 2.0 Expo NY]]></title>
+            <description><![CDATA[Don't miss an upload! Subscribe! http://goo.gl/szEauh
+Building Personal Brand Within the Social Media Landscape. 
+Note: This presentation contains adult language.
+
+Stay Connected to O'Reilly Media by Email - http://goo.gl/YZSWbO
+
+Follow O'Reilly Media:
+http://plus.google.com/+oreillymedia
+https://www.facebook.com/OReilly
+https://twitter.com/OReillyMedia]]></description>
+            <link>https://dev.tube/video/EhqZ0RU95d4</link>
+            <guid isPermaLink="true">https://dev.tube/video/EhqZ0RU95d4</guid>
+            <pubDate>Sun, 10 Jun 2018 01:31:09 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Cory Doctorow - The Internet of Things That Do What You Tell Them]]></title>
+            <description><![CDATA[From Solid Conference 2015: From “ecosystem” strategies to the war on terror, from the copyright wars to the subprime lending industry, it seems like everyone wants to build an Internet of Treacherous Things whose primary loyalty is to someone other than the people with whose lives they are intimately entwined.
+
+Your gesture-driven, voice-controlled future is a future in which you are never off-camera, never out of range of a mic. The difference between a world where computers say “Yes, Master” and computers say “I can’t let you do that, Dave,” is the difference between utopia and dystopia.
+
+EFF is laying the legal groundwork for an Internet of Things That Do What You Tell Them, and we need your help!
+
+About Cory Doctorow (craphound.com):
+Cory Doctorow (craphound.com) is a science fiction novelist, blogger, and technology activist. He is the co-editor of the popular weblog Boing Boing, and a contributor to “The Guardian”, “The New York Times”, “Publishers Weekly”, “Wired”, and many other newspapers, magazines, and websites. He was formerly director of European affairs for the Electronic Frontier Foundation (eff.org), a non-profit civil liberties group that defends freedom in technology law, policy, standards, and treaties. He holds an honorary doctorate in computer science from the Open University (UK), where he is a visiting senior lecturer; in 2007, he served as the Fulbright Chair at the Annenberg Center for Public Diplomacy at the University of Southern California.
+
+His novels have been translated into dozens of languages, and are published by Tor Books and simultaneously released on the Internet under Creative Commons licenses that encourage their re-use and sharing, a move that increases his sales by enlisting his readers to help promote his work. He has won the Locus and Sunburst Awards, and been nominated for the Hugo, Nebula, and British Science Fiction Awards. His latest young adult novel is PIRATE CINEMA, a story of mashup guerillas who declare war on the entertainment industry. His latest novel for adults is RAPTURE OF THE NERDS, written with Charles Stross and published in 2012. His New York Times Bestseller LITTLE BROTHER was published in 2008. A sequel, HOMELAND, was published in 2013. His latest short story collection is WITH A LITTLE HELP, available in paperback, ebook, audiobook and limited edition hardcover. In 2011, Tachyon Books published a collection of his essays, called CONTEXT: FURTHER SELECTED ESSAYS ON PRODUCTIVITY, CREATIVITY, PARENTING, AND POLITICS IN THE 21ST CENTURY (with an introduction by Tim O’Reilly), and IDW published a collection of comic books inspired by his short fiction called CORY DOCTOROW’S FUTURISTIC TALES OF THE HERE AND NOW. THE GREAT BIG BEAUTIFUL TOMORROW, a PM Press Outspoken Authors chapbook, was also published in 2011.
+
+LITTLE BROTHER was nominated for the 2008 Hugo, Nebula, Sunburst, and Locus Awards. It won the Ontario Library White Pine Award, the Prometheus Award, as well as the Indienet Award for bestselling young adult novel in America’s top 1000 independent bookstores in 2008.
+
+He co-founded the open source peer-to-peer software company OpenCola, sold to OpenText, Inc. in 2003, and presently serves on the boards and advisory boards of the Participatory Culture Foundation, the Clarion Foundation, The Glenn Gould Foundation, and the Chabot Space & Science Center’s SpaceTime project.
+
+In 2007, Entertainment Weekly called him “the William Gibson of his generation.” He was also named one of Forbes magazine’s 2007/8/9/10 Web Celebrities, and one of the World Economic Forum’s Young Global Leaders for 2007.
+
+His forthcoming books include ANDA’S GAME (a graphic novel from FirstSecond).
+
+On February 3, 2008, he became a father. The little girl is called Poesy Emmeline Fibonacci Nautilus Taylor Doctorow, and is a marvel that puts all the works of technology and artifice to shame.
+
+Check out these related O'Reilly products: 'Opportunities and Challenges in the IoT: A Conversation with Cory Doctorow and Tim O'Reilly' (free eBook; http://oreil.ly/1NbyR3V) and 'Abusing the Internet of Things' by Nitesh Dhanjani (http://oreil.ly/1eHFPTz).
+
+Watch more from the 2015 Solid Conference: https://goo.gl/4TNIww
+Find out more about Solid: http://oreilly.com/go/solidcon
+Don't miss an upload! Subscribe! http://goo.gl/szEauh
+Stay Connected to O'Reilly Media by Email - http://goo.gl/YZSWbO
+
+Follow O'Reilly Media:
+http://plus.google.com/+oreillymedia
+https://www.facebook.com/OReilly
+https://twitter.com/OReillyMedia]]></description>
+            <link>https://dev.tube/video/jayTknqC2uc</link>
+            <guid isPermaLink="true">https://dev.tube/video/jayTknqC2uc</guid>
+            <pubDate>Sun, 10 Jun 2018 01:29:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Quick Tip: Localization 101 (Route 85)]]></title>
+            <description><![CDATA[Translating your product -- it's easier than you think! On this episode of Route 85, Rony Rozen shows you how to set up your iOS Swift app so that it can be easily localized and translated later.
+
+Watch more episodes of Route 85 here: https://goo.gl/FZmFM0
+
+Subscribe to the Google Developers channel at http://goo.gl/mQyv5L]]></description>
+            <link>https://dev.tube/video/87dQNnslltg</link>
+            <guid isPermaLink="true">https://dev.tube/video/87dQNnslltg</guid>
+            <pubDate>Sun, 10 Jun 2018 01:32:03 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Make the Web Fast: Google Web Fonts - making pretty, fast!]]></title>
+            <description><![CDATA[Join us for a technical deep-dive on Web Fonts: how they work, the data formats, performance optimizations, and tips and tricks for making your site both fast and pretty at the same time - turns out, these two goals are not mutually exclusive!]]></description>
+            <link>https://dev.tube/video/sqesm0euf9M</link>
+            <guid isPermaLink="true">https://dev.tube/video/sqesm0euf9M</guid>
+            <pubDate>Sun, 10 Jun 2018 01:31:49 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Launchpad Online: Accessing Google Maps from a spreadsheet?!?]]></title>
+            <description><![CDATA[Connecting to Google Maps from a spreadsheet? Sounds intriguing doesn't it? The best part is that this is no parlor trick. In this follow-up Google Apps Script episode (watch first one first: http://goo.gl/1sXeuD), developers will create a Google Map from an address stored in a Google Sheet! We'll also present some scenarios of when this may be useful, and perhaps we'll have a special surprise waiting for you at the end!
+
+Watch the full Launchpad Online playlist at http://goo.gl/kxqisI -
+Subscribe to the brand new Firebase Channel: https://goo.gl/9giPHG]]></description>
+            <link>https://dev.tube/video/hkpj-xzXhaw</link>
+            <guid isPermaLink="true">https://dev.tube/video/hkpj-xzXhaw</guid>
+            <pubDate>Sun, 10 Jun 2018 01:28:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[7 minutes on recent DOM APIs]]></title>
+            <description><![CDATA[Paul Irish gives you a heads up on recent DOM APIs with good browser support that were designed to make things easier for you. HTML5 classList, dataset, matchMedia(), textContent, and matchesSelector() are explained and demonstrated.]]></description>
+            <link>https://dev.tube/video/svEg7MiqGf8</link>
+            <guid isPermaLink="true">https://dev.tube/video/svEg7MiqGf8</guid>
+            <pubDate>Sun, 10 Jun 2018 01:29:09 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Livestream Day 3: Stage 1 (Google I/O '18)]]></title>
+            <description><![CDATA[This livestream covers all of the Google I/O 2018 day 3 sessions that take place on Stage 1. Stay tuned for technical sessions and deep dives into Google's latest developer products and platforms.
+
+Event schedule (all times are PDT) → https://goo.gl/x5ENpG
+
+23:12 - Navigation
+1:19:15 - What's new in Android security
+2:17:35 - Personalize Actions for the Google Assistant
+3:16:31 - Intro to machine learning on Google Cloud Platform
+5:16:25 - What's new with ConstraintLayout and Android Studio design tools
+6:16:46 - Android Jetpack: manage infinite lists with RecyclerView and Paging
+7:16:20 - Distributed TensorFlow training
+
+Google I/O 2018 All Sessions playlist → https://goo.gl/q1Tr8x
+Subscribe to the Google Developers channel → http://goo.gl/mQyv5L
+
+Music by Terra Monk → https://goo.gl/wPgbHP]]></description>
+            <link>https://dev.tube/video/LhIoknQThFQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/LhIoknQThFQ</guid>
+            <pubDate>Sun, 10 Jun 2018 01:28:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Quick tip: Animating Constraints in Your iOS App (Route 85)]]></title>
+            <description><![CDATA[Just because you're using constraints in your iOS app doesn't mean you need to give up your fancy animations! 
+
+In this video, Todd shares a quick tip sent in by a view on how to animate a constraint, animate a constraint's multiplier, or do some extra fancy constraint animation by adding and removing constraints at runtime. Stay tuned!
+
+Subscribe to the Google Developers channel at http://goo.gl/mQyv5L]]></description>
+            <link>https://dev.tube/video/ZLPg2InQ44U</link>
+            <guid isPermaLink="true">https://dev.tube/video/ZLPg2InQ44U</guid>
+            <pubDate>Sun, 10 Jun 2018 01:28:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A Gentle Introduction To Deep Learning with TensorFlow [Intermediate Level]]]></title>
+            <description><![CDATA[Deep learning's explosion of spectacular results over the past few years may make it appear esoteric and daunting, but in reality, if you are familiar with traditional machine learning, you're more than ready to start exploring deep learning. This talk aims to gently bridge the divide by demonstrating how deep learning operates on core machine learning concepts and getting attendees started coding deep neural networks using Google's TensorFlow library.
+
+EVENT:
+
+PyCon 2017
+
+SPEAKER:
+
+Michelle Fullwood
+
+PERMISSIONS:
+
+PyCon Organizer provided Coding Tech with the permission to republish this video.]]></description>
+            <link>https://dev.tube/video/6g0lPlHc-E8</link>
+            <guid isPermaLink="true">https://dev.tube/video/6g0lPlHc-E8</guid>
+            <pubDate>Sun, 10 Jun 2018 01:27:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Building AI Products: From Paper to Prototype to Production]]></title>
+            <description><![CDATA[Watch this talk to learn the following:
+- Steps it takes to make an AI product
+- Challenges of creating AI products
+- Do it with a real world example
+
+EVENT:
+
+AI Day Singapore 2018
+
+SPEAKER:
+
+Sam Witteveen, Google Developer Expert Machine Learning
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=Flbtvno9bkc]]></description>
+            <link>https://dev.tube/video/QaWdhHfI3tY</link>
+            <guid isPermaLink="true">https://dev.tube/video/QaWdhHfI3tY</guid>
+            <pubDate>Sun, 10 Jun 2018 01:26:19 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DartConf 2018: Day 2 Livestream]]></title>
+            <description><![CDATA[Join us for two days of the latest information about the Dart language, libraries, and tools (#dartlang). A few of the topics: evolving Dart, writing Android and iOS apps using Flutter, and sharing code between web and mobile apps. 
+
+Event Details: https://goo.gl/RUjS9n
+
+Technical info:
+- Dart language, libraries, and tools: https://goo.gl/GGFSGk
+- Mobile app development: https://goo.gl/gA17Ag
+- Web app development: https://goo.gl/PTsoTE
+
+Track the Dart project, get help, and talk with other Dart developers:  https://goo.gl/Dy5KNK
+
+Watch the rest of the Dart Conference 2018 session videos here: https://goo.gl/4bwhE5
+Subscribe to the Google Developers Channel: http://goo.gl/mQyv5L]]></description>
+            <link>https://dev.tube/video/4lLI-hZvGg0</link>
+            <guid isPermaLink="true">https://dev.tube/video/4lLI-hZvGg0</guid>
+            <pubDate>Sun, 10 Jun 2018 01:29:11 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
