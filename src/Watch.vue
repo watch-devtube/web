@@ -70,6 +70,8 @@
             .addthis_inline_share_toolbox
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+      .comments
+        vue-disqus(shortname="dev-tube" :identifier="id" :url="'https://dev.tube/video/' + id")
   Footer    
 </template>
 <style scoped lang="scss">
@@ -83,7 +85,7 @@
 
     @media only screen and (max-width: 768px) {
       .logo {
-        width: 50px;
+        width: 70px;
         margin-bottom: 10px;
       }
     }

@@ -17,7 +17,7 @@
                 p.subtitle.is-7 
                   a.has-text-black(:href="'/@' + speaker.twitter") @{{speaker.twitter}} 
                   a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
-          nav.level
+          nav.level.is-mobile
             .level-item.has-text-centered
               div
                 p.heading.is-capitalized: i.far.fa-smile
