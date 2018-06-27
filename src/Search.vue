@@ -8,9 +8,11 @@
               a(href="//dev.tube"): img.logo(src="./logo.png")
           .level-item.has-text-centered
               ais-input(placeholder="Search for videos...")
-          .level-right
-            .level-item.links.is-size-4
-              a(href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png")
+          .level-right(style="font-family: Lato")
+            .level-item.links.is-size-10.has-text-white
+              a(href="https://devternity.com" target="_blank")
+                span inspired by  
+                strong DevTernity
     section.section
           .container
             .columns
@@ -65,7 +67,10 @@
     section.section
       .container
         .columns
-          .column
+          .column.has-text-right
+            a(href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png")
+            br
+            br
             nav.paging(role="navigation" aria-label="pagination")
              ais-pagination.pagination(:class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
 
@@ -79,7 +84,7 @@ header {
 
   @media only screen and (max-width: 768px) {
     .logo {
-      width: 50px;
+      width: 70px;
       margin-bottom: 10px;
     }
   }
