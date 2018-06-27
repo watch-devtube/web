@@ -85,7 +85,7 @@
 
     @media only screen and (max-width: 768px) {
       .logo {
-        width: 50px;
+        width: 70px;
         margin-bottom: 10px;
       }
     }
