@@ -1,0 +1,240 @@
+{
+    "channels": [
+        {
+            "title": "Devoxx",
+            "id": "UCCBVCTuk6uJrN3iFV_3vurg"
+        },
+        {
+            "title": "DevTernity",
+            "id": "UCvzMZyJZZ3XYQwbvOACVYrQ"
+        },
+        {
+            "title": "jeeconf",
+            "id": "UCaGHGAZiSwb8if6yfBF4NLA"
+        },
+        {
+            "title": "JSConf",
+            "id": "UCzoVCacndDCfGDf41P-z0iA"
+        },
+        {
+            "title": "Google Developers",
+            "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw"
+        },
+        {
+            "title": "Coding Tech",
+            "id": "UCtxCXg-UvSnTKPOzLH4wJaQ"
+        },
+        {
+            "title": "O'Reilly",
+            "id": "UC3BGlwmI-Vk6PWyMt15dKGw"
+        },
+        {
+            "title": "GOTO Conferences",
+            "id": "UCs_tLP3AiwYKwdUHpltJPuA"
+        },
+        {
+            "title": "InfoQ",
+            "id": "UCkQX1tChV7Z7l1LFF4L9j_g"
+        },
+        {
+            "title": "GoogleTechTalks",
+            "id": "UCtXKDgv1AVoG88PLl8nGXmw"
+        },
+        {
+            "title": "PyData",
+            "id": "UCOjD18EJYcsBog4IozkF_7w"
+        },
+        {
+            "title": "Netflix UI Engineering",
+            "id": "UCGGRRqAjPm6sL3-WGBDnKJA"
+        },
+        {
+            "title": "CppCon",
+            "id": "UCMlGfpWw-RUdWX_JbLCukXg"
+        },
+        {
+            "title": "NDC Conferences",
+            "id": "UCTdw38Cw6jcm0atBPA39a0Q"
+        },
+        {
+            "title": "Strange Loop",
+            "id": "UC_QIfHvN9auy2CoOdSfMWDw"
+        },
+        {
+            "title": "ng-conf",
+            "id": "UCm9iiIfgmVODUJxINecHQkA"
+        },
+        {
+            "title": "NorfolkDevelopers",
+            "id": "UC_EIAFaVqQuHpf1ZfzDDWWQ"
+        },
+        {
+            "title": "Dev Day",
+            "id": "UCSy0eOtiWe6TOQS8y6PpgaQ"
+        },
+        {
+            "title": "ClojureTV",
+            "id": "UCaLlzGqiPE2QRj6sSOawJRg"
+        },
+        {
+            "title": "WeAreDevelopers",
+            "id": "UCSD0dLRGQk_T-D3RvpM5aFQ"
+        },
+        {
+            "title": "Nordic.js",
+            "id": "UCTZ3O2cZo1b4JSwvhgBnAbw"
+        },
+        {
+            "title": "Gopher Academy",
+            "id": "UCx9QVEApa5BKLw9r8cnOFEA"
+        },
+        {
+            "title": "YOW! Conferences",
+            "id": "UCAvGvvEemkeX8hurdPXr7hA"
+        },
+        {
+            "title": "Domain-Driven Design Europe",
+            "id": "UC3PGn-hQdbtRiqxZK9XBGqQ"
+        },
+        {
+            "title": "Golang UK Conference",
+            "id": "UC9ZNrGdT2aAdrNbX78lbNlQ"
+        },
+        {
+            "title": "DevWeek Events",
+            "id": "UChD_rWjKa41OGl3RPMhF7bw"
+        },
+        {
+            "title": "Engineers.SG",
+            "id": "UCjRZr5HQKHVKP3SZdX8y8Qw"
+        },
+        {
+            "title": "Erlang Solutions",
+            "id": "UCKrD_GYN3iDpG_uMmADPzJQ"
+        },
+        {
+            "title": "BrazilJS",
+            "id": "UCnLdHOuue5i1O7TsH6oh07w"
+        },
+        {
+            "title": "JetBrainsTV",
+            "id": "UCGp4UBwpTNegd_4nCpuBcow"
+        },
+        {
+            "title": "White October Events",
+            "id": "UCmM3eCpmWKLJj2PDW_jdGkg"
+        },
+        {
+            "title": "PyCon Canada",
+            "id": "UCclkPrurwUP_ajqi3vDTNDg"
+        },
+        {
+            "title": "Build Stuff",
+            "id": "UCis5B3Zru-vymPRcbpM1NEA"
+        },
+        {
+            "title": "Docker",
+            "id": "UC76AVf2JkrwjxNKMuPpscHQ"
+        },
+        {
+            "title": "Chef Software",
+            "id": "UCvwl5-yXsQR5zluYPl8NEeQ"
+        },
+        {
+            "title": "PyCon Australia",
+            "id": "UCS9sdEyduD9K83K3GkvQlOA"
+        },
+        {
+            "title": "DevOps Enterprise Summit",
+            "id": "UCkyYEVVmT9vQ4yPBR4ciFUA"
+        },
+        {
+            "title": "Cloud Foundry",
+            "id": "UC0ZYS0Y7b5oiVLvxGf4magw"
+        },
+        {
+            "title": "ElixirConf",
+            "id": "UC0l2QTnO1P2iph-86HHilMQ"
+        },
+        {
+            "title": "Codemotion",
+            "id": "UCdS8EbQyTDYyJYgtftnTyhg"
+        },
+        {
+            "title": "newthinking communications GmbH",
+            "id": "UCWo9EhK1MUOuACENfXoAXZQ"
+        },
+        {
+            "title": "Voxxed Days Luxembourg",
+            "id": "UCPLFcPPtjRCVVa4yxm-EEgA"
+        },
+        {
+            "title": "Coding Serbia Conference",
+            "id": "UCJy6S-UuSdRfBC5oMvdmcjA"
+        },
+        {
+            "title": "Codurance",
+            "id": "UCacyhBPMQpC4Vi-WqtrRpBw"
+        },
+        {
+            "title": "Agile Latvia",
+            "id": "UCPIadpPCThbK4qm1SVlHzIA"
+        },
+        {
+            "title": "AFUP PHP",
+            "id": "UCb-D560WkMEPE7dwNta_nqA"
+        },
+        {
+            "title": "MLconf",
+            "id": "UCjeM1xxYb_37bZfyparLS3Q"
+        },
+        {
+            "title": "GopherConIndia",
+            "id": "UCa-OZB5VIMcdzgrXRM2U0Ww"
+        },
+        {
+            "title": "Agile Lietuva",
+            "id": "UCMRzYvSXf5kkLpfnF8L_G6Q"
+        },
+        {
+            "title": "PyCon UK",
+            "id": "UChA9XP_feY1-1oSy2L7acog"
+        },
+        {
+            "title": "Agile Croatia",
+            "id": "UCP6WJ2itKT-TQoxMUnzxpWQ"
+        },
+        {
+            "title": "DomCode",
+            "id": "UCk3VAfcmYP-rDmzip8NmVIg"
+        },
+        {
+            "title": "JS Kongress",
+            "id": "UCe2uw4y9oTxfq-Z61ODWRhg"
+        },
+        {
+            "title": "exchangewiretv",
+            "id": "UCC41Wkvj5FyelFirGe4Q8uA"
+        },
+        {
+            "title": "Cucumber",
+            "id": "UC0eV4MhnmCd-48XdDhzf6Hg"
+        },
+        {
+            "title": "Uber Engineering",
+            "id": "UCQlvjgieHGgkpP_9GiVyTGw"
+        },
+        {
+            "title": "Flink Forward",
+            "id": "UCY8_lgiZLZErZPF47a2hXMA"
+        },
+        {
+            "title": "Web Rebels",
+            "id": "UCM9cTs_C0PmTlHXTNrqTpnw"
+        },
+        {
+            "title": "I T.A.K.E. Unconference",
+            "id": "UC9Fz4NzvzA5tlGohpS3-ndg"
+        }
+    ]
+}

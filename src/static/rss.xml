@@ -4,7 +4,7 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 28 Jun 2018 03:23:15 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 Jun 2018 22:30:22 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Tetiana Ivanova - How to become a Data Scientist in 6 months a hacker’s approach to career planning]]></title>
@@ -101,32 +101,6 @@ Academic and industry research in Natural Language Processing (NLP) has progress
             <pubDate>Wed, 27 Jun 2018 20:01:07 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Cadreon's Erica Schmidt Discusses the Evolution of the Agency Model]]></title>
-            <description><![CDATA[Videography by Jim Chan, Dreambox Productions ( http://dreamboxpro.com/)]]></description>
-            <link>https://dev.tube/video/LR7tlAxqhrM</link>
-            <guid isPermaLink="true">https://dev.tube/video/LR7tlAxqhrM</guid>
-            <pubDate>Wed, 27 Jun 2018 20:01:26 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Horrors of Distributed Systems]]></title>
-            <description><![CDATA[Andrew Godwin
-
-http://2017.pycon-au.org/schedule/presentation/52/
-
-#pyconau
-
-This talk was given at PyCon Australia 2017 which was held from 3-8 August, 2017 in Melbourne, Victoria.
-
-PyCon Australia is the national conference for users of the Python Programming Language. In August 2017, we're returning to Melbourne, bringing together students, enthusiasts, and professionals with a love of Python from around Australia, and from all over the World. 
-
-August 3-8 2017, Melbourne, Victoria
-
-Python, PyCon, PyConAU]]></description>
-            <link>https://dev.tube/video/jx1Hkxe64Xs</link>
-            <guid isPermaLink="true">https://dev.tube/video/jx1Hkxe64Xs</guid>
-            <pubDate>Wed, 27 Jun 2018 20:01:34 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Ted Willke, Sr. Principal Engineer, Intel]]></title>
             <description><![CDATA[Ted Willke leads a team that researches large-scale machine learning and data mining techniques in Intel Labs. His research interests include parallel and distributed systems, image processing, machine learning, graph analytics, and cognitive neuroscience. Ted is also a co-principal investigator in a multi-year grand challenge project on real-time brain decoding with the Princeton Neuroscience Institute. Previously, he founded an Intel venture focused on graph analytics for data science that is now an Intel-supported open source project. In 2014, he won Intel’s highest award for this effort. In 2015, he was appointed to the Science & Technology Advisory Committee of the US Department of Homeland Security. Ted holds a doctorate in electrical engineering from Columbia University, a master’s from the University of Wisconsin-Madison, and a bachelor’s from the University of Illinois.
 
@@ -205,6 +179,24 @@ Slides: https://ibmdbanalytics.github.io/pydata-berlin-2016-ibmdbpy.slides.html]
             <link>https://dev.tube/video/J9kbKhzuMd0</link>
             <guid isPermaLink="true">https://dev.tube/video/J9kbKhzuMd0</guid>
             <pubDate>Wed, 27 Jun 2018 20:00:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Zoom sur les objets PHP - Julien Pauli - Forum PHP 2015]]></title>
+            <description><![CDATA[Cette vidéo vous a plu ? Adhérez à l'AFUP pour soutenir son activité : http://afup.org/pages/site/?route=vie-associative/56/devenir-membre
+
+Nous cherchons des sponsors et des conférenciers pour le prochain événement AFUP : http://event.afup.org/
+
+Captation & montage : http://www.dfusion.fr/]]></description>
+            <link>https://dev.tube/video/_84eIkA3j54</link>
+            <guid isPermaLink="true">https://dev.tube/video/_84eIkA3j54</guid>
+            <pubDate>Wed, 27 Jun 2018 20:03:33 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Justin Basilico, Research/ Engineering Manager, Netflix @ MLconf SF]]></title>
+            <description><![CDATA[Recommendations for Building Machine Learning Software: Building a real system that uses machine learning can be a difficult both in terms of the algorithmic and engineering challenges involved. In this talk, I will focus on the engineering side and discuss some of the practical lessons we’ve learned from years of developing the machine learning systems that power Netflix. I will go over what it takes to get machine learning working in a real-life feedback loop with our users and how that imposes different requirements and a different focus than doing machine learning only within a lab environment. This involves lessons around challenges such as where to place algorithmic components, how to handle distribution and parallelism, what kinds of modularity are useful, how to support both production experimentation, and how to test machine learning systems.]]></description>
+            <link>https://dev.tube/video/KoYDs44_4ys</link>
+            <guid isPermaLink="true">https://dev.tube/video/KoYDs44_4ys</guid>
+            <pubDate>Wed, 27 Jun 2018 20:00:51 GMT</pubDate>
         </item>
     </channel>
 </rss>

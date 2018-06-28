@@ -1,0 +1,144 @@
+{
+    "speakers": [
+        {
+            "twitter": "venkat_s",
+            "name": "Venkat Subramaniam"
+        },
+        {
+            "twitter": "simonbrown",
+            "name": "Simon Brown"
+        },
+        {
+            "twitter": "eduardsi",
+            "name": "Eduards Sizovs"
+        },
+        {
+            "twitter": "codingandrey",
+            "name": "Andrey Adamovich"
+        },
+        {
+            "twitter": "jnabrdalik",
+            "name": "Jakub Nabrdalik"
+        },
+        {
+            "twitter": "RoyOsherove",
+            "name": "Roy Osherove"
+        },
+        {
+            "twitter": "sandromancuso",
+            "name": "Sandro Mancuso"
+        },
+        {
+            "twitter": "kevlinhenney",
+            "name": "Kevlin Henney"
+        },
+        {
+            "twitter": "philip_roberts",
+            "name": "Philip Roberts"
+        },
+        {
+            "twitter": "martinfowler",
+            "name": "Martin Fowler"
+        },
+        {
+            "twitter": "martin_gorner",
+            "name": "Martin Görner"
+        },
+        {
+            "twitter": "shanselman",
+            "name": "Scott Hanselman"
+        },
+        {
+            "twitter": "samnewman",
+            "name": "Sam Newman"
+        },
+        {
+            "twitter": "sandimetz",
+            "name": "Sandi Metz"
+        },
+        {
+            "twitter": "jezhumble",
+            "name": "Jez Humble"
+        },
+        {
+            "twitter": "tastapod",
+            "name": "Dan North"
+        },
+        {
+            "twitter": "mpjme",
+            "name": "Mattias Petter Johansson"
+        },
+        {
+            "twitter": "trisha_gee",
+            "name": "Trisha Gee"
+        },
+        {
+            "twitter": "wesbos",
+            "name": "Wes Bos"
+        },
+        {
+            "twitter": "jonskeet",
+            "name": "Jon Skeet"
+        },
+        {
+            "twitter": "hintjens",
+            "name": "Pieter Hintjens"
+        },
+        {
+            "twitter": "ethomson",
+            "name": "Edward Thomson"
+        },
+        {
+            "twitter": "annashipman",
+            "name": "Anna Shipman"
+        },
+        {
+            "twitter": "nora_js",
+            "name": "Nora Jones"
+        },
+        {
+            "twitter": "unclebobmartin",
+            "name": "Robert C. Martin"
+        },
+        {
+            "twitter": "bridgetkromhout",
+            "name": "Bridget Kromhout"
+        },
+        {
+            "twitter": "RealGeneKim",
+            "name": "Gene Kim"
+        },
+        {
+            "twitter": "kartar",
+            "name": "James Turnbull"
+        },
+        {
+            "twitter": "martinwoodward",
+            "name": "Martin Woodward"
+        },
+        {
+            "twitter": "xeraa",
+            "name": "Philipp Krenn"
+        },
+        {
+            "twitter": "edith_h",
+            "name": "Edith Harbaugh"
+        },
+        {
+            "twitter": "HannahFoxwell",
+            "name": "Hannah Foxwell"
+        },
+        {
+            "twitter": "icooper",
+            "name": "Ian Cooper"
+        },
+        {
+            "twitter": "nicolefv",
+            "name": "Nicole Forsgren"
+        },
+        {
+            "twitter": "emmajanehw",
+            "name": "Emma Jane Hogbin Westby"
+        }
+    ]
+}
