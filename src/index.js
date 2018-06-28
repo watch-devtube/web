@@ -39,9 +39,9 @@ Vue.filter('duration', it => {
    		return it
    }
 
-   let h = it >= 3600 ? Math.round(it / 3600) : 0
+   let h = it >= 3600 ? Math.floor(it / 3600) : 0
    let hs = h ? `${h} h ` : ''
-   let m = h ? Math.round(it % 3600 / 60) : Math.round(it / 60)
+   let m = h ? Math.floor(it % 3600 / 60) : Math.round(it / 60)
    let ms = m ? `${m} min` : ''
    return `${hs}${ms}`
 })
