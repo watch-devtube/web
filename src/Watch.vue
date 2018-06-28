@@ -28,7 +28,7 @@
           .card
             .card-image
               .videoWrapper
-                iframe(:src="'https://www.youtube-nocookie.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
+                iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
             .card-content
                   nav.level.is-mobile
                     .level-item.has-text-centered
