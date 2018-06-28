@@ -39,9 +39,12 @@
         this.searchStore.algoliaHelper.removeNumericRefinement('recordingDate')
       },
       showVideosInBetween: function (from, to) {
+        this.searchStore.stop();
         this.searchStore.algoliaHelper.removeNumericRefinement('recordingDate')
         this.searchStore.algoliaHelper.addNumericRefinement('recordingDate', '>=', from)
         this.searchStore.algoliaHelper.addNumericRefinement('recordingDate', '<=', to)
+        this.searchStore.start();
+        this.searchStore.refresh();
       }
     }    
   };
