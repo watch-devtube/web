@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[DevTube the place where developer videos live]]></title>
+        <description><![CDATA[DevTube the place where developer videos live]]></description>
+        <link>https://dev.tube</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 28 Jun 2018 03:23:15 GMT</lastBuildDate>
+        <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Tetiana Ivanova - How to become a Data Scientist in 6 months a hacker’s approach to career planning]]></title>
+            <description><![CDATA[PyData London 2016
+
+This talk outlines my journey from complete novice to machine learning practitioner. It started in November 2015 when I left my job as a project manager, and by April 2016 I was hired as a Data Scientist by a startup developing bleeding edge deep learning algorithms for medical imagery processing.
+
+SHORT INTRO
+Who I am, my background and short summary of my story. Here I will list the steps I personally took to achieve the goal I had.
+
+HOW DID I DO IT?
+Why I chose a “hacky” way to enter this career path. First mover advantage, why getting a degree doesn’t always improve your career prospects. Possibly a rant on the signalling function of formal education and how that is rarely aligned with a relevant practical skill set. Some stats to back it up (best career success predictors). Examples of hacking bureaucracies/social hierarchies from my experience and elsewhere.
+List of things not to do and common cognitive pitfalls.
+Networking for nerds - how to do it right.
+Time management for chronic procrastinators - how to plan a self-guided project. Some notes on psychology of time discounting and need for external reinforcement, with autobiographical examples.
+CONCLUSION
+You don’t need a PhD or even a masters to do machine learning. On taking calculated risks and especially calculated exits from one’s comfort zone. Some notes on soul searching and how to choose a career that is also a passion. Reading list.
+
+Slides available here: https://www.slideshare.net/TetianaIvanova2/how-to-become-a-data-scientist-in-6-months]]></description>
+            <link>https://dev.tube/video/rIofV14c0tc</link>
+            <guid isPermaLink="true">https://dev.tube/video/rIofV14c0tc</guid>
+            <pubDate>Wed, 27 Jun 2018 20:01:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Netflix JavaScript Talks - RxJS + Redux + React = Amazing!]]></title>
+            <description><![CDATA[Jay Phelps (@_jayphelps ) talks about why Netflix loves reactive programming with Rx. In this talk he shares the basics of RxJS 5 Observables and how they can be used with React and Redux to manage asynchronous effects using redux-observable.
+
+http://redux-observable.js.org
+
+Slides: http://www.slideshare.net/jayphelps/rxjs-redux-react-amazing]]></description>
+            <link>https://dev.tube/video/AslncyG8whg</link>
+            <guid isPermaLink="true">https://dev.tube/video/AslncyG8whg</guid>
+            <pubDate>Wed, 27 Jun 2018 19:58:59 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[James Powell - So you want to be a Python expert?]]></title>
+            <description><![CDATA[www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/cKPlPJyQrt4</link>
+            <guid isPermaLink="true">https://dev.tube/video/cKPlPJyQrt4</guid>
+            <pubDate>Wed, 27 Jun 2018 20:04:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Netflix JavaScript Talks - Version 7: The Evolution of JavaScript]]></title>
+            <description><![CDATA[Jafar Husain discusses interesting features that can be used today in JS6, such as Object.observe, async functions and async generators, while also giving a peek at what's being explored for JS7 to make async programming easier.]]></description>
+            <link>https://dev.tube/video/DqMFX91ToLw</link>
+            <guid isPermaLink="true">https://dev.tube/video/DqMFX91ToLw</guid>
+            <pubDate>Wed, 27 Jun 2018 19:58:59 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ryan Zotti | How to Build Your Own Self Driving Toy Car]]></title>
+            <description><![CDATA[PyData DC 2016
+
+I’ve spent the past 6 months building a self-driving toy car using a Raspberry Pi, OpenCV, and TensorFlow. If you’ve ever thought about building your own self-driving toy car, this presentation will help you avoid common pitfalls and shed light on important tradeoffs that you’ll have to weigh along the way. I’ll cover things like how to parse images, how to effectively tune machine learning neural]]></description>
+            <link>https://dev.tube/video/QbbOxrR0zdA</link>
+            <guid isPermaLink="true">https://dev.tube/video/QbbOxrR0zdA</guid>
+            <pubDate>Wed, 27 Jun 2018 20:04:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Nordic.js 2014 • Douglas Crockford - The Better Parts]]></title>
+            <link>https://dev.tube/video/PSGEjv3Tqo0</link>
+            <guid isPermaLink="true">https://dev.tube/video/PSGEjv3Tqo0</guid>
+            <pubDate>Wed, 27 Jun 2018 20:00:01 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GopherCon 2017: Kavya Joshi - Understanding Channels]]></title>
+            <description><![CDATA[Channels provide a simple mechanism for goroutines to communicate, and a powerful construct to build sophisticated concurrency patterns. We will delve into the inner workings of channels and channel operations, including how they're supported by the runtime scheduler and memory management systems.]]></description>
+            <link>https://dev.tube/video/KBZlN0izeiY</link>
+            <guid isPermaLink="true">https://dev.tube/video/KBZlN0izeiY</guid>
+            <pubDate>Wed, 27 Jun 2018 20:03:39 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Patrick Harrison | Modern NLP in Python]]></title>
+            <description><![CDATA[PyData DC 2016
+
+Academic and industry research in Natural Language Processing (NLP) has progressed at an accelerating pace over the last several years. Members of the Python community have been hard at work moving cutting-edge research out of papers and into open source, "batteries included" software libraries that can be applied to practical problems. We'll explore some of these tools for modern NLP in Python.]]></description>
+            <link>https://dev.tube/video/6zm9NC9uRkk</link>
+            <guid isPermaLink="true">https://dev.tube/video/6zm9NC9uRkk</guid>
+            <pubDate>Wed, 27 Jun 2018 20:04:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GopherCon 2016: Rob Pike - The Design of the Go Assembler]]></title>
+            <link>https://dev.tube/video/KINIAgRpkDA</link>
+            <guid isPermaLink="true">https://dev.tube/video/KINIAgRpkDA</guid>
+            <pubDate>Wed, 27 Jun 2018 20:03:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Golang UK Conference 2016 - Dave Cheney - SOLID Go Design]]></title>
+            <link>https://dev.tube/video/zzAdEt3xZ1M</link>
+            <guid isPermaLink="true">https://dev.tube/video/zzAdEt3xZ1M</guid>
+            <pubDate>Wed, 27 Jun 2018 20:01:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Cadreon's Erica Schmidt Discusses the Evolution of the Agency Model]]></title>
+            <description><![CDATA[Videography by Jim Chan, Dreambox Productions ( http://dreamboxpro.com/)]]></description>
+            <link>https://dev.tube/video/LR7tlAxqhrM</link>
+            <guid isPermaLink="true">https://dev.tube/video/LR7tlAxqhrM</guid>
+            <pubDate>Wed, 27 Jun 2018 20:01:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Horrors of Distributed Systems]]></title>
+            <description><![CDATA[Andrew Godwin
+
+http://2017.pycon-au.org/schedule/presentation/52/
+
+#pyconau
+
+This talk was given at PyCon Australia 2017 which was held from 3-8 August, 2017 in Melbourne, Victoria.
+
+PyCon Australia is the national conference for users of the Python Programming Language. In August 2017, we're returning to Melbourne, bringing together students, enthusiasts, and professionals with a love of Python from around Australia, and from all over the World. 
+
+August 3-8 2017, Melbourne, Victoria
+
+Python, PyCon, PyConAU]]></description>
+            <link>https://dev.tube/video/jx1Hkxe64Xs</link>
+            <guid isPermaLink="true">https://dev.tube/video/jx1Hkxe64Xs</guid>
+            <pubDate>Wed, 27 Jun 2018 20:01:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ted Willke, Sr. Principal Engineer, Intel]]></title>
+            <description><![CDATA[Ted Willke leads a team that researches large-scale machine learning and data mining techniques in Intel Labs. His research interests include parallel and distributed systems, image processing, machine learning, graph analytics, and cognitive neuroscience. Ted is also a co-principal investigator in a multi-year grand challenge project on real-time brain decoding with the Princeton Neuroscience Institute. Previously, he founded an Intel venture focused on graph analytics for data science that is now an Intel-supported open source project. In 2014, he won Intel’s highest award for this effort. In 2015, he was appointed to the Science & Technology Advisory Committee of the US Department of Homeland Security. Ted holds a doctorate in electrical engineering from Columbia University, a master’s from the University of Wisconsin-Madison, and a bachelor’s from the University of Illinois.
+
+Abstract Summary:
+
+Can Machine Learning Save the Whales?:
+In the 1960’s whales faced mass extinction from whaling. Careful scientific study and regulatory action saved them. Now many whale species are facing another wave of extinction due to poorly understood forces. Is it depletion of their food stock? Collisions with ships? High-energy sonar? The problem is not so obvious this time. I’ll argue that we need breakthroughs in machine learning to figure it out. I’ll discuss two new projects and the impact they had on our expeditions to Alaska in 2017. In the first, we explore the use of new features to identify individual whales. In the second, we use deep learning-based morphometry to study their energy stores, which are vital to their survival and reproduction. Both problems suffer data starvation and challenges unique to the marine environment. I’ll discuss our race to clear these hurdles and save the whales.]]></description>
+            <link>https://dev.tube/video/RmKLoo7e9_g</link>
+            <guid isPermaLink="true">https://dev.tube/video/RmKLoo7e9_g</guid>
+            <pubDate>Wed, 27 Jun 2018 20:02:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Image Processing in Scale with Go - GopherConIndia 2015]]></title>
+            <description><![CDATA[Talks on "Image Processing in Scale with Go" by Jyotiska NK
+
+Live Blog: https://sourcegraph.com/blog/live/gopherconindia/111648697747
+Slides: https://speakerdeck.com/jyotiska/image-processing-in-scale-with-go-gophercon-india-2015]]></description>
+            <link>https://dev.tube/video/R-0vNocr-9Q</link>
+            <guid isPermaLink="true">https://dev.tube/video/R-0vNocr-9Q</guid>
+            <pubDate>Wed, 27 Jun 2018 20:02:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Nexage's Todd Tran Explains How a New Breed of Mobile Publishers are Dominating Mobile]]></title>
+            <link>https://dev.tube/video/ChoFbks333M</link>
+            <guid isPermaLink="true">https://dev.tube/video/ChoFbks333M</guid>
+            <pubDate>Wed, 27 Jun 2018 20:03:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Frameworks: A History of Violence - Francois Zaninotto #phptour]]></title>
+            <description><![CDATA[Les frameworks de développement web, on les aime, on les déteste. Quand jQuery est sorti, c'était une révolution. Aujourd'hui beaucoup de lead developers conseillent de ne pas l'utiliser. Il faut dire que les frameworks donnent naissance à des débats passionnés. Dans le monde PHP, c'est pareil : Symfony, Zend Framework ou Laravel ? Derrière ces questions se cachent des choix cruciaux : WTF contre RAD, vitesse contre expressivité, facilité d'utilisation contre facilité d'intégration... Un framework est toujours un compromis fait à un instant donné pour aider ses utilisateurs sans se mettre en travers de leur chemin. Mais les besoins des développeurs changent. C'est pourquoi les frameworks doivent aussi changer. Après une brève histoire des frameworks de développement depuis les années 2000, nous essaierons de découvrir ensemble quelles sont les tendances dans l'évolution des frameworks, de comprendre où ils nous mèneront dans quelques années, et si vous aurez à les utiliser...
+
+https://joind.in/talk/view/14268
+
+Cette vidéo vous a plu ? Adhérez à l'AFUP pour soutenir son activité : http://afup.org/pages/site/?route=vie-associative/56/devenir-membre
+
+Nous cherchons des sponsors et des conférenciers pour le prochain Forum PHP : http://www.forumphp.org
+
+Captation & montage : http://www.dfusion.fr/]]></description>
+            <link>https://dev.tube/video/56Tzc9wQuQQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/56Tzc9wQuQQ</guid>
+            <pubDate>Wed, 27 Jun 2018 20:02:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Neural Networks Demystified: Part 7, Welch Labs @ MLconf SF]]></title>
+            <description><![CDATA[MLconf: http://mlconf.com/
+Welch Labs: http://www.welchlabs.com/machinelearning]]></description>
+            <link>https://dev.tube/video/Xo3X6iqaMsk</link>
+            <guid isPermaLink="true">https://dev.tube/video/Xo3X6iqaMsk</guid>
+            <pubDate>Wed, 27 Jun 2018 20:00:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pycon UK 2016: Micro Python, the Internet of Things and the £3 device]]></title>
+            <description><![CDATA[Presentation by: Kirk Northrop
+
+The Internet of Things has been talked about hugely over the last ten years, but with the rise of the Raspberry Pi and Arduino, it is suddenly starting to become real. Nowadays, you can build an entire, WiFi connected device for £3 including the batteries and using Micro Python.]]></description>
+            <link>https://dev.tube/video/3ood9xagDCk</link>
+            <guid isPermaLink="true">https://dev.tube/video/3ood9xagDCk</guid>
+            <pubDate>Wed, 27 Jun 2018 20:04:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Automate your data analysis testing (Stephen Childs)]]></title>
+            <description><![CDATA[The scientific Python ecosystem has made a Python a great language for data analysis, encouraging readable and expressive code, but data analysts struggle with applying Python test frameworks to their data transformation and analysis code. This talk will give a good starting point: how to compare different versions of tabular data and turn that into automated tests.]]></description>
+            <link>https://dev.tube/video/ovvU41ve1FQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/ovvU41ve1FQ</guid>
+            <pubDate>Wed, 27 Jun 2018 20:04:01 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Edouard Fouché - Accelerating Python Analytics by In-Database Processing]]></title>
+            <description><![CDATA[PyData Berlin 2016
+
+Python Analytics can be accelerated using SQL- Pushdowns to benefit from in-database performance-enhancing features such as column-stores and parallel processing. We will show the benefits of this approach and present ibmdbpy, a prototype which provides a Python interface for data manipulation and in-database algorithms in IBM DB2 and IBM dashDB on Bluemix .
+
+The Python ecosystem is very rich and provides intuitive tools for data analysis. However, most Python libraries require the data to be extracted from the database to working memory and resources are limited by computational power and memory. Analyzing a large amount of data is often impractical or even impossible. Ibmdbpy is an open-source Python package, developed by IBM, which provides a Python interface for data manipulation and machine learning algorithms such as Kmeans or Linear Regression to make working with databases more efficient by seamlessly pushing operations into the underlying database for execution. This does not only lift the memory limit of Python, but also allows users to profit from performance-enhancing features of the database management system. Ibmdbpy is designed for IBM DB2 and IBM dashDB, a database system available on IBM BlueMix, the IBM cloud application development and analytics platform. Via remote connection, user operations can benefit from in-database specific features, such as columnar technology and parallel processing, without having to interact with the database explicitly. Some in-database functions additionally use lazy loading to load only parts of the data that are actually required to further increase efficiency. Keeping the data in the database also avoids security issues that are associated with extracting data and ensures that the data that is being analyzed is as current as possible. Ibmdbpy can be used by Python developers with very little additional knowledge, since it imitates the well-known interface of Pandas library for data manipulation and Scikit-learn library for machine learning algorithms. Ibmdbpy provides a great runtime advantage for operations on medium to large dataset, i.e. on tables that have 1 million rows or more. Providing a Python interface for databases allows to bridge the gap between data warehousing platform and end-user environment, so that developers can benefit both from the expressivity of Python and from the speed-up provided by SQL execution in the database, which can be run on a cluster. In this talk, we will show the advantages of such approach for scaling Python analytics and do a short demo of data analysis with ibmdbpy.
+
+Slides: https://ibmdbanalytics.github.io/pydata-berlin-2016-ibmdbpy.slides.html]]></description>
+            <link>https://dev.tube/video/J9kbKhzuMd0</link>
+            <guid isPermaLink="true">https://dev.tube/video/J9kbKhzuMd0</guid>
+            <pubDate>Wed, 27 Jun 2018 20:00:56 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

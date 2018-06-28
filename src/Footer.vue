@@ -18,4 +18,9 @@
         a(href="https://github.com/watch-devtube" target="_blank"): i.fab.fa-github
         | 
         a(href="https://twitter.com/WatchDevTube" target="_blank"): i.fab.fa-twitter
+      hr
+      p.is-size-7 
+        | We use cookies to improve your UX (resuming video from the last played position). To inspect and block cookies use 
+        a(href="//ghostery.com") Ghostery
+        |  on your browser.
 </template>

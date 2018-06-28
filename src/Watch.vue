@@ -5,7 +5,7 @@
       nav.level
         .level-left
           .level-item
-            a(href="//dev.tube"): img.logo(src="./logo.png")
+            a(href="//dev.tube"): img.logo(src="/logo.png" srcset="/logo.svg")
         .level-item.has-text-centered
         .level-right
           .level-item.is-size-4
@@ -24,11 +24,11 @@
             p {{errors[0]}}
     .container(v-if="errors.length == 0")
       .columns
-        .column.is-one-half
+        .column.is-one-half(v-bind:class="{ active: isFullWidth }")
           .card
             .card-image
               .videoWrapper
-                iframe(:src="'https://www.youtube-nocookie.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
+                iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
             .card-content
                   nav.level.is-mobile
                     .level-item.has-text-centered
@@ -47,6 +47,10 @@
                       div
                         p.heading Recorded
                         p.title.is-size-7 {{video.recordingDate | published}}
+                    .level-item.has-text-centered(id="toggleWidth")                        
+                      a(v-on:click="toggleWidth")
+                        p.heading {{ isFullWidth ? 'Collapse' : 'Expand' }}
+                        p.title.is-size-7: i.fas.fa-expand
         .column
           .content
             h1 {{video.title}}
@@ -95,6 +99,19 @@
     }
   }
 
+  .columns:not(.is-desktop) {
+    flex-wrap: wrap;
+  }
+
+  .column.is-one-half.active {
+    min-width: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    #toggleWidth {
+      display: none;
+    }
+  }
 
   .videoWrapper {
     position: relative;
@@ -107,6 +124,9 @@
         left: 0;
         width: 100%;
         height: 100%;
+        &.active {
+          min-width: 100%;
+        }
       }
   }
   .card-content {
@@ -127,7 +147,8 @@
     data: function() {
       return {
         errors: [],
-        video: {}
+        video: {},
+        isFullWidth: false
       }
     },
     created() {
@@ -153,6 +174,9 @@
             this.errors.push(error)
           })   
         }     
+      },
+      toggleWidth: function() {
+        this.isFullWidth = !this.isFullWidth;
       }
     },
     props: ['id'],

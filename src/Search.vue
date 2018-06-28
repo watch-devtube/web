@@ -5,7 +5,7 @@
         nav.level
           .level-left
             .level-item
-              a(href="//dev.tube"): img.logo(src="./logo.png")
+              a(href="//dev.tube"): img.logo(src="/logo.png" srcset="/logo.svg")
           .level-item.has-text-centered
               ais-input(placeholder="Search for videos...")
           .level-right(style="font-family: Lato")
@@ -62,13 +62,13 @@
                           p Sorry, search is not available now. We're working on the solution.
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
-                        .column.is-6.is-4-widescreen
+                        .column.is-6.is-4-widescreen.is-flex-tablet
                           VideoCard(:tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
     section.section
       .container
         .columns
           .column.has-text-right
-            a(href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png")
+            a(href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png" srcset="/search-by-algolia.svg")
             br
             br
             nav.paging(role="navigation" aria-label="pagination")
