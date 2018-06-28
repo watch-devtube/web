@@ -70,6 +70,7 @@
               span.tag.is-capitalized 
                 i.fab.fa-youtube 
                 | &nbsp; {{video.channelTitle}}
+              a.tag.clickable.is-capitalized(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank"): i.fas.fa-edit
             p {{video.description}}
             .addthis_inline_share_toolbox
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
