@@ -17,10 +17,10 @@
     },
     computed: {
       componentLoader() {
-        return this.clickable
+        return () => this.clickable
           ? import('./ClickableTags.vue')
           : import('./NonClickableTags.vue')
-      }
+      },
     }
   }
 </script>
