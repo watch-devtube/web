@@ -5,7 +5,7 @@
         nav.level
           .level-left
             .level-item
-              a(href="//dev.tube"): img.logo(src="./logo.png")
+              a(href="//dev.tube"): img.logo(src="/logo.png" srcset="/logo.svg")
           .level-item.has-text-centered
               ais-input(placeholder="Search for videos...")
           .level-right(style="font-family: Lato")
@@ -68,7 +68,7 @@
       .container
         .columns
           .column.has-text-right
-            a(href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png")
+            a(href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png" srcset="/search-by-algolia.svg")
             br
             br
             nav.paging(role="navigation" aria-label="pagination")
