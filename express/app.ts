@@ -3,11 +3,26 @@ import { Request, Response } from 'express'
 
 import * as path from 'path'
 import * as fs from 'fs'
+import * as lru from 'lru-cache'
 import * as dns from 'dns'
 import * as dnscache from 'dnscache'
 import * as algolia from 'algoliasearch'
 
-let algoliaAppId = 'DR90AOGGE9'
+
+// Configuration settings
+const algoliaAppId = 'DR90AOGGE9'
+const algoliaApiKey = 'c2655fa0f331ebf28c89f16ec8268565'
+const algoliaIndexName = 'videos'
+const videoCacheSize = 500
+const videoCacheTTL = 1000 * 60 * 60 
+
+
+
+// Configure video cache
+let videoCache = lru({ 
+  max: videoCacheSize, 
+  maxAge: videoCacheTTL
+})
 
 // Configure DNS cache
 let dnsCache = dnscache({
@@ -41,7 +56,8 @@ dnsNames.forEach(dnsName => {
   })  
 })
 
-// Configure application dependencies
+
+// Configure Express application dependencies
 let express = require('express')
 let body = require('body-parser')
 let mustache = require('mustache-express')
@@ -52,8 +68,8 @@ let devMode = process.env.DEV_MODE === 'true' || process.argv[2] === 'dev'
 let staticDir = devMode ? '../dist' : './dist'
 let port = process.env.PORT || 8100
 
-let client = algolia(algoliaAppId, 'c2655fa0f331ebf28c89f16ec8268565')
-let index = client.initIndex('videos')
+let client = algolia(algoliaAppId, algoliaApiKey)
+let index = client.initIndex(algoliaIndexName)
 
 app.use(cors())
 app.use(body.json())
@@ -68,6 +84,9 @@ app.set('view engine', 'mustache')
 app.set('view cache', !devMode)
 app.set('views', path.join(__dirname, staticDir))
 
+
+
+// Preload static data
 let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
 let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
 
@@ -117,7 +136,8 @@ async function proxy(req: Request, res: Response) {
     let objectID = req.path.split('/')[2]
     console.log(`VIDEO REQUEST: ${objectID}`)
     try {
-      let video = await index.getObject(objectID) as any
+      let video = videoCache.has(objectID) ? videoCache.get(objectID) : await index.getObject(objectID) as any
+      videoCache.set(objectID, video)
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
         preloadedEntity: JSON.stringify(video),
