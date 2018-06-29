@@ -1,13 +1,47 @@
 
 import { Request, Response } from 'express'
 
-import * as _ from 'lodash'
 import * as path from 'path'
 import * as fs from 'fs'
-
-import * as request from 'request'
+import * as dns from 'dns'
+import * as dnscache from 'dnscache'
 import * as algolia from 'algoliasearch'
 
+let algoliaAppId = 'DR90AOGGE9'
+
+// Configure DNS cache
+let dnsCache = dnscache({
+  enable: true,
+  ttl: 300,
+  cachesize: 1000
+})
+let dnsNames = [ 
+  'www.github.com', 
+  'github.com', 
+  'api.github.com', 
+  'www.googleapis.com', 
+  'www.google.com', 
+  'googleapis.com',
+  'www.googleapis.com',  
+  'www.algolia.com',
+  'algolia.com',  
+  `${algoliaAppId}.algolia.net`,
+  `${algoliaAppId}-dsn.algolia.net`,
+  `${algoliaAppId}-1.algolianet.com`,
+  `${algoliaAppId}-2.algolianet.com`,
+  `${algoliaAppId}-3.algolianet.com`  
+]
+dnsNames.forEach(dnsName => {
+  dnsCache.lookup(dnsName, (err, result) => {
+    if (err) {
+      console.error(`${dnsName}: ${JSON.stringify(err)}`)
+    } else {
+      console.log(`${dnsName}: ${JSON.stringify(result)}`)
+    }    
+  })  
+})
+
+// Configure application dependencies
 let express = require('express')
 let body = require('body-parser')
 let mustache = require('mustache-express')
@@ -18,7 +52,7 @@ let devMode = process.env.DEV_MODE === 'true' || process.argv[2] === 'dev'
 let staticDir = devMode ? '../dist' : './dist'
 let port = process.env.PORT || 8100
 
-let client = algolia('DR90AOGGE9', 'c2655fa0f331ebf28c89f16ec8268565')
+let client = algolia(algoliaAppId, 'c2655fa0f331ebf28c89f16ec8268565')
 let index = client.initIndex('videos')
 
 app.use(cors())
@@ -36,6 +70,13 @@ app.set('views', path.join(__dirname, staticDir))
 
 let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
 let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Application logic
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 async function proxy(req: Request, res: Response) {
   console.log(`REQUEST PATH: ${req.path}`)
