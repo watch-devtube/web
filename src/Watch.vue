@@ -77,7 +77,6 @@
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       .comments
         vue-disqus(shortname="dev-tube" :identifier="id" :url="'https://dev.tube/video/' + id")
-  Footer    
 </template>
 <style scoped lang="scss">
   body {
