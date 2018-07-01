@@ -7,7 +7,7 @@
             .level-item
               a(href="//dev.tube"): img.logo(src="/logo.png" srcset="/logo.svg")
           .level-item.has-text-centered
-              ais-input(placeholder="Search for videos...")
+              Input(placeholder="Search for videos...")
           .level-right(style="font-family: Lato")
             .level-item.links.is-size-10.has-text-white
               a(href="https://devternity.com" target="_blank")
@@ -131,6 +131,7 @@ import VideoCard from './VideoCard.vue'
 import Footer from './Footer.vue'
 import ActiveFilters from './ActiveFilters.vue'
 import YearRange from './YearRange.vue'
+import Input from './Input.vue'
 
 const searchStore = createFromAlgoliaCredentials(
   'DR90AOGGE9',
@@ -173,6 +174,6 @@ export default {
       this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
   },
-  components: { ActiveFilters, VideoCard, Footer, YearRange }
+  components: { ActiveFilters, VideoCard, Footer, YearRange, Input }
 };
 </script>
