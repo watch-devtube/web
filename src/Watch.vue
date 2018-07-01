@@ -142,7 +142,6 @@
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
   import MessageWidget from './MessageWidget.vue'
-  import Footer from './Footer.vue'
   export default {
     data: function() {
       return {
@@ -180,7 +179,7 @@
       }
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget, Footer }
+    components: { RelatedVideos, MessageWidget }
   }
 
 </script>

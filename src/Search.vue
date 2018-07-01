@@ -128,7 +128,6 @@ import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import { createFromAlgoliaClient } from 'vue-instantsearch'
 
 import VideoCard from './VideoCard.vue'
-import Footer from './Footer.vue'
 import ActiveFilters from './ActiveFilters.vue'
 import YearRange from './YearRange.vue'
 import Input from './Input.vue'
@@ -191,6 +190,6 @@ export default {
       this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
   },
-  components: { ActiveFilters, VideoCard, Footer, YearRange, Input }
+  components: { ActiveFilters, VideoCard, YearRange, Input }
 };
 </script>
