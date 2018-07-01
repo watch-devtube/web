@@ -1,14 +1,13 @@
 
 import { Request, Response } from 'express'
 
-import * as path from 'path'
 import * as fs from 'fs'
+import * as path from 'path'
 import * as lru from 'lru-cache'
 import * as dns from 'dns'
 import * as dnscache from 'dnscache'
 import * as algolia from 'algoliasearch'
-import * as Fuse from 'fuse.js'
-
+import Fastr from './fastr'
 
 // Configuration settings
 const algoliaAppId = 'DR90AOGGE9'
@@ -95,31 +94,7 @@ let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v
 // EXPERIMENTAL FUSE.JS MODE
 let fuseMode = process.env.FUSE_MODE
 let fuseDir = `${__dirname}/backup`
-let fuseOpts = {
-   threshold: 0.1,
-   distance: 1000,
-   keys: ['title', 'speaker.name', 'tags', 'channelTitle']
-}
-
-let fuseVideos = () => {
-  const walkSync = (dir, filelist = []) => {
-      fs.readdirSync(dir).forEach(file => {
-        filelist = fs.statSync(path.join(dir, file)).isDirectory()
-          ? walkSync(path.join(dir, file), filelist)
-          : filelist.concat(path.join(dir, file));
-      });
-      return filelist;
-    }
-
-    console.log(`Experimental Fuse.js mode is turned on.`)
-    console.log(`Loading .json videos from dir ${fuseDir}`)
-
-    let videoFiles = walkSync(fuseDir).filter(f => f.endsWith('.json')).map(f => require(f))
-    console.log(`${videoFiles.length} videos loaded`)
-    return videoFiles
-}
-
-let fuse = fuseMode ? new Fuse(fuseVideos(), fuseOpts) : new Fuse([], {})
+let fastr = fuseMode ? new Fastr(fuseDir) : undefined
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Application logic
@@ -162,35 +137,25 @@ async function proxy(req: Request, res: Response) {
       ]
     })
   } else if (req.path.startsWith("/search") && fuseMode) {
-    let q = req.body.requests[0].params.query ? req.body.requests[0].params.query : 'c'
-    let sort = (it, that) => {
-      let left = that as any
-      let right = it as any
 
-      if (left.featured && !right.featured) return 1;
-      if (right.featured && !left.featured) return -1;
-
-      return left.satisfaction - right.satisfaction
-    }
-
-    console.log(q)
-    let max = 21
+    let q = req.body.requests[0].params.query
+    let p = req.body.requests[0].params.page
 
     console.time(`Query ${q}`)
-    let hits = fuse.search(q).sort(sort)
-    let hitsShown = hits.slice(0, max)
+    let maxHitsPerPage = 21
+    let maxHitsPerQuery = maxHitsPerPage * 10
+    let hits = fastr.search(q, p, maxHitsPerPage, maxHitsPerQuery)
+    let hitsPerPage = hits.slice(0, maxHitsPerPage)
     console.timeEnd(`Query ${q}`)
-
-    console.log(`Showing ${hitsShown.length}/${hits.length}`)
     res.status(200).send(
       {
         "results": [
           {
-            "hits": hitsShown,
+            "hits": hitsPerPage,
             "nbHits": hits.length,
-            "page": 0,
-            "nbPages": Math.floor(hits.length / max),
-            "hitsPerPage": max,
+            "page": p,
+            "nbPages": Math.floor(hits.length / maxHitsPerPage),
+            "hitsPerPage": maxHitsPerPage,
             "processingTimeMS": 2,
             "facets": {
               "tags": {
