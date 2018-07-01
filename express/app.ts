@@ -7,6 +7,7 @@ import * as lru from 'lru-cache'
 import * as dns from 'dns'
 import * as dnscache from 'dnscache'
 import * as algolia from 'algoliasearch'
+import * as Fuse from 'fuse.js'
 
 
 // Configuration settings
@@ -91,7 +92,33 @@ let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/l
 let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
 
 
+// EXPERIMENTAL FUSE.JS MODE
+let fuseMode = process.env.FUSE_MODE
+let fuseDir = `${__dirname}/backup`
+let fuseOpts = {
+   threshold: 0.2,
+   keys: ['title', 'speaker.name', 'tags', 'channelTitle']
+}
 
+let fuseVideos = () => {
+  const walkSync = (dir, filelist = []) => {
+      fs.readdirSync(dir).forEach(file => {
+        filelist = fs.statSync(path.join(dir, file)).isDirectory()
+          ? walkSync(path.join(dir, file), filelist)
+          : filelist.concat(path.join(dir, file));
+      });
+      return filelist;
+    }
+
+    console.log(`Experimental Fuse.js mode is turned on.`)
+    console.log(`Loading .json videos from dir ${fuseDir}`)
+
+    let videoFiles = walkSync(fuseDir).filter(f => f.endsWith('.json')).map(f => require(f))
+    console.log(`${videoFiles.length} videos loaded`)
+    return videoFiles
+}
+
+let fuse = fuseMode ? new Fuse(fuseVideos(), fuseOpts) : new Fuse([], {})
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Application logic
@@ -104,6 +131,7 @@ async function proxy(req: Request, res: Response) {
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     res.render('index.html', {      
       title: title,
+      fuseMode: JSON.stringify(fuseMode),
       newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
         { name: "description", content: description },
@@ -132,6 +160,45 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
+  } else if (req.path.startsWith("/search") && fuseMode) {
+    let q = req.body.requests[0].params.query
+    console.log(q)
+    let max = 21
+    let hits = fuse.search(q).slice(0, max)
+    console.log(hits.length)
+    console.log(hits)
+    res.status(200).send(
+      {
+        "results": [
+          {
+            "hits": hits,
+            "nbHits": hits.length,
+            "page": 0,
+            "nbPages": 1,
+            "hitsPerPage": max,
+            "processingTimeMS": 2,
+            "facets": {
+              "tags": {
+                "career": 2,
+                "craftsmanship": 2,
+                ".net": 1
+              },
+              "channelTitle": {
+                "Agile Lietuva": 1,
+                "I T.A.K.E. Unconference": 1
+              },
+              "speaker.name": {
+                "Eduards Sizovs": 2
+              }
+            },
+            "exhaustiveFacetsCount": true,
+            "exhaustiveNbHits": true,
+            "query": q,
+            "index": "videos"
+          }
+        ]
+      }
+     )
   } else if (req.path.startsWith('/video/')) {
     let objectID = req.path.split('/')[2]
     console.log(`VIDEO REQUEST: ${objectID}`)
@@ -175,6 +242,7 @@ async function proxy(req: Request, res: Response) {
 }
 
 app.get("*", proxy)
+app.post("*", proxy)
 
 if (devMode) {
   let listener = app.listen(port, () => {

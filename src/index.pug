@@ -26,6 +26,7 @@ html(lang='en')
       window.serverSideError = {{& serverSideError}}{{^serverSideError}}undefined{{/serverSideError}}
       window.newVideos = {{& newVideos}}{{^newVideos}}[]{{/newVideos}}
       window.speaker = {{& speaker}}{{^speaker}}undefined{{/speaker}}
+      window.fuseMode = {{& fuseMode}}{{^fuseMode}}false{{/fuseMode}}
     script(type='text/javascript').
       (function (d, w, c) {
       (w[c] = w[c] || []).push(function() {

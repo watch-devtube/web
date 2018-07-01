@@ -127,18 +127,37 @@ header {
 </style>
 <script>
 import { createFromAlgoliaCredentials } from 'vue-instantsearch'
+import { createFromAlgoliaClient } from 'vue-instantsearch'
+
 import VideoCard from './VideoCard.vue'
 import Footer from './Footer.vue'
 import ActiveFilters from './ActiveFilters.vue'
 import YearRange from './YearRange.vue'
 import Input from './Input.vue'
 
-const searchStore = createFromAlgoliaCredentials(
-  'DR90AOGGE9',
-  'c2655fa0f331ebf28c89f16ec8268565'
+const fuseSearchClient = {
+  search(requests) {
+    return fetch('http://localhost:8100/search', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ requests }),
+    }).then(res => res.json());
+  },
+  addAlgoliaAgent(agent) {}
+};
+
+const searchStore = window.fuseMode ? 
+  createFromAlgoliaClient(fuseSearchClient) : 
+  createFromAlgoliaCredentials(
+    'DR90AOGGE9',
+    'c2655fa0f331ebf28c89f16ec8268565'
 );
 
 searchStore.queryParameters = { hitsPerPage : 21 }
+
+
 
 if (window.speaker) {
   searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
