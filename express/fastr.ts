@@ -75,8 +75,7 @@ export default class Fastr {
 
       docsLoaded.forEach(video => {
         this.add(video)
-        var isNew = !speakers.by("twitter", video.speaker.twitter)
-        if (video.speaker && isNew) {
+        if (video.speaker && !speakers.by("twitter", video.speaker.twitter)) {
           speakers.insert(video.speaker)  
         }
         videos.insert(video)
