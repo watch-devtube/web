@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/watch-devtube/web.svg?branch=master)](https://travis-ci.org/watch-devtube/web)
+
 # Dev.Tube
 
 > Hi! I am Dev.Tube – the place where developer videos live.
