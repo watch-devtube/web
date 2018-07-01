@@ -136,6 +136,11 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
+  } else if (req.path.startsWith("/tags") && fuseMode) {
+    console.time(`Tags lookup`)
+    let tags = fastr.searchTags()
+    console.timeEnd(`Tags lookup`)
+    res.status(200).send(tags)
   } else if (req.path.startsWith("/speakers") && fuseMode) {
 
     console.time(`Speakers lookup`)

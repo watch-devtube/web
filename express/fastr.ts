@@ -14,6 +14,7 @@ export default class Fastr {
 
   lunr: Lunr
   videos: any
+  tags: Set<string>
   speakers: any
   byRank: any
 
@@ -28,6 +29,11 @@ export default class Fastr {
     let speakers = loki.addCollection('speakers', { 
       unique: ['twitter']
     })
+
+    let tags = new Set<string>()
+    this.tags = tags
+
+
 
     this.speakers = speakers
     this.videos = videos
@@ -78,9 +84,17 @@ export default class Fastr {
         if (video.speaker && !speakers.by("twitter", video.speaker.twitter)) {
           speakers.insert(video.speaker)  
         }
+
+        if (video.tags) {
+          video.tags.forEach(tag => tags.add(tag))
+        }
         videos.insert(video)
       })
     })    
+  }
+
+  searchTags() {
+    return Array.from(this.tags).sort()
   }
 
   searchSpeakers() {
