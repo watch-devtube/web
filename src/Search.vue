@@ -28,10 +28,13 @@
                   .column
                     h1.title Tags
                     ais-refinement-list.is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags" :sort-by="['count:desc', 'name:asc']")
-                .columns(v-if="!speaker")
+                .columns(v-if="!speaker && !newMode")
                   .column
                     h1.title Speaker
                     ais-refinement-list.is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker.name" :sort-by="['count:desc', 'name:asc']")
+                .columns(v-if="!speaker && newMode")
+                  .column
+                    SpeakerPicker
                 .columns
                   .column
                     h1.title Channel
@@ -129,12 +132,13 @@ import { createFromAlgoliaClient } from 'vue-instantsearch'
 
 import VideoCard from './VideoCard.vue'
 import ActiveFilters from './ActiveFilters.vue'
+import SpeakerPicker from './SpeakerPicker.vue'
 import YearRange from './YearRange.vue'
 import Input from './Input.vue'
 
 const fuseSearchClient = {
   search(requests) {
-    return fetch('http://localhost:8100/search', {
+    return fetch('/search', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -164,6 +168,7 @@ if (window.speaker) {
 export default { 
   data: function() {
     return {
+      newMode: window.fuseMode,
       newVideos: window.newVideos,
       searchStore
     };
@@ -190,6 +195,6 @@ export default {
       this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
   },
-  components: { ActiveFilters, VideoCard, YearRange, Input }
+  components: { ActiveFilters, VideoCard, YearRange, Input, SpeakerPicker }
 };
 </script>
