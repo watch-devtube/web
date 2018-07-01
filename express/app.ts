@@ -96,7 +96,8 @@ let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v
 let fuseMode = process.env.FUSE_MODE
 let fuseDir = `${__dirname}/backup`
 let fuseOpts = {
-   threshold: 0.2,
+   threshold: 0.1,
+   distance: 1000,
    keys: ['title', 'speaker.name', 'tags', 'channelTitle']
 }
 
@@ -161,20 +162,34 @@ async function proxy(req: Request, res: Response) {
       ]
     })
   } else if (req.path.startsWith("/search") && fuseMode) {
-    let q = req.body.requests[0].params.query
+    let q = req.body.requests[0].params.query ? req.body.requests[0].params.query : 'c'
+    let sort = (it, that) => {
+      let left = that as any
+      let right = it as any
+
+      if (left.featured && !right.featured) return 1;
+      if (right.featured && !left.featured) return -1;
+
+      return left.satisfaction - right.satisfaction
+    }
+
     console.log(q)
     let max = 21
-    let hits = fuse.search(q).slice(0, max)
-    console.log(hits.length)
-    console.log(hits)
+
+    console.time(`Query ${q}`)
+    let hits = fuse.search(q).sort(sort)
+    let hitsShown = hits.slice(0, max)
+    console.timeEnd(`Query ${q}`)
+
+    console.log(`Showing ${hitsShown.length}/${hits.length}`)
     res.status(200).send(
       {
         "results": [
           {
-            "hits": hits,
+            "hits": hitsShown,
             "nbHits": hits.length,
             "page": 0,
-            "nbPages": 1,
+            "nbPages": Math.floor(hits.length / max),
             "hitsPerPage": max,
             "processingTimeMS": 2,
             "facets": {
