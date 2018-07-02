@@ -4,7 +4,7 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 02 Jul 2018 10:25:48 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 02 Jul 2018 10:54:07 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Composition over Inheritance]]></title>
@@ -232,94 +232,91 @@ https://github.com/mattdesl/promise-cookbook#the-problem]]></description>
             <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[[DevFest Nantes 2017] Plateforme economy  augmenter l'offre et la demande grâce à l'UX]]></title>
-            <description><![CDATA[Speaker : Olivier Godement
+            <title><![CDATA[BDX I/O 2017 - what I've learned after reading the source code of... Angular, Emmanuel DEMEY]]></title>
+            <description><![CDATA[BDX I/O 2017 - what I've learned after reading the source code of... Angular, Emmanuel DEMEY 
 
-Depuis 2014, une startup sur 3 créée en France est une place de marché. Tourisme, alimentation, services... le développement de nouveaux modes de consommation touche chaque secteur, l'un après l'autre. Stripe, en tant que partenaire de paiements des startups les plus innovantes du monde (Deliveroo, Kickstarter, Drivy, Heetch, Instacart...), observe de près les stratégies et avantages compétitifs développés par les leaders de chaque secteur. Et si la partie "Demande" (produit, design, marketing) est une part évidente de leur succès, l'"Offre" et l'expérience des marchands (vendeurs, livreurs, restaurants, porteurs de projet,...) sur la plateforme est sans aucun doute ce qui fait toute la différence entre un bon et un excellent produit. Lors de ce workshop, nous présenterons des conseils et des exemples concrets pour améliorer l'expérience utilisateur sur une plateforme, pour les consommateurs, comme pour le marchants. Nous aborderons dans un premier temps les tactiques adoptées lors des premières années de la place de marché (e.g., du lancement au moment où une masse critique est atteinte) où des initiatives non-scalables pour constituer rapidement une offre de qualité sont adoptées. Nous présenterions ensuite les stratégies mises en place lors du développement (post-masse critique) pour étendre son leadership, maintenir un équilibre offre/demande et s'étendre à l'étranger.]]></description>
-            <link>https://dev.tube/video/KEFxoRAeceY</link>
-            <guid isPermaLink="true">https://dev.tube/video/KEFxoRAeceY</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Interview Stephane Distinguin & Gaspard Koenig]]></title>
-            <link>https://dev.tube/video/1-82xpaINeU</link>
-            <guid isPermaLink="true">https://dev.tube/video/1-82xpaINeU</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:13 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[BDX I/O 2015 - Aurelia est-elle une concurrente sérieuse pour Angular 2 (Philippe Charriere)]]></title>
-            <description><![CDATA[Speaker: Philippe Charriere (Nicolas Bourbaki)]]></description>
-            <link>https://dev.tube/video/cSXbQqzFACA</link>
-            <guid isPermaLink="true">https://dev.tube/video/cSXbQqzFACA</guid>
-            <pubDate>Mon, 02 Jul 2018 09:59:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[16/06/28 - 03 - Loop, améliorez votre workflow de développement d'application Web]]></title>
-            <description><![CDATA[Travailler un framework Web full-stack comme Play ou Rails permet un workflow de développement productif: les changements apportés au code entraine automatiquement le rechargement de l'application, et un pipeline dédié de compilation des assets (JS, CSS, ...) est intégré au build principal.
-
-Mais lorsque l'on doit travailler avec des micro-frameworks ou des système de build hétérogènes, tout ça se complique. Laissez moi vous présenter Loop.
-
-Loop gère vos différents système de build, redémarre votre serveur au besoin, bloque l'accès à l'application tant qu'elle n'est pas prête, affiche directement les erreurs de compilation dans le navigateur.
-
-Loop est indépendant de la technologie et saura gérer vos build Maven, SBT, Gradle, grunt, gulp, make, cargo, (etc.) pour améliorer votre workflow de développement d'application Web en Javascript, Java, Scala, Python, Rust, Go, (etc.).
-
-Par Guillaume Bort]]></description>
-            <link>https://dev.tube/video/ZgFpFryzGzw</link>
-            <guid isPermaLink="true">https://dev.tube/video/ZgFpFryzGzw</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:15 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[2018/01/08 - Young blood V - Réconciliez vous avec le JS grâce à Flow]]></title>
-            <description><![CDATA[L'écosystème JavaScript a beaucoup évolué depuis ces derniers temps. On oublie presque que c’est un language simple, développable avec seul un browser et un éditeur de texte. Chez Fluo, la startup qui est en train de révolutionner le monde de l'assurance, nous avons fait le choix de Flow, le static type checker pour JavaScript développé par Facebook. Je vous propose de vous montrer qu’écrire du code JavaScript robuste et maintenable ce n’est plus une mission impossible. Lors de ce quickie nous aborderons :
-
-Le principe de base du Flow et pourquoi l’équipe Fluo a choisi cet outil
-Les erreurs les plus courantes et comment les éviter
-Les bonnes pratiques à garder en tête
-par Nhu Duc Trung Nguyen]]></description>
-            <link>https://dev.tube/video/uZZa--50WZI</link>
-            <guid isPermaLink="true">https://dev.tube/video/uZZa--50WZI</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:15 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CSS Tu peux pas test - Thomas Zilliox]]></title>
-            <link>https://dev.tube/video/mnzO08iQndg</link>
-            <guid isPermaLink="true">https://dev.tube/video/mnzO08iQndg</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:29 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[2018/01/08 - Young blood V -  Il était une fois la fonction reduce]]></title>
-            <description><![CDATA[Dans le paradigm de programmation impératif, nous avons l’habitude d’utiliser des boucles pour calculer un résultat à partir d’un ensemble de valeurs. Cette approche fonctionne mais elle oblige à faire modifier une variable à l'extérieure de la boucle que sera le résultat du calcul et à noyer le calcul dans le corps de la boucle. Cette approche ne sépare pas ce qui est la résolution du problème des éléments techniques pour itérer. Pour pouvoir paralléliser ou lire les valeurs depuis une socket ou une fichier il faut tout modifier. C’est pour cette raison que le paradigm de programmation fonctionnel s’appuie sur la fonction reduce. Je vous propose de vous montrer comment reduce peut être implémentée. Puis de voir qu’elle peut également servir pour implémenter map et filter. On terminera par chaîner les trois opérations map, filter et reduce sans avoir de listes intermédiaires.
-
-par Patrick Giry]]></description>
-            <link>https://dev.tube/video/iBUGk15Zrr0</link>
-            <guid isPermaLink="true">https://dev.tube/video/iBUGk15Zrr0</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:15 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CSS orienté objet - Lenny ROUANET]]></title>
-            <description><![CDATA[Réutiliser, partager et maintenir ses objets CSS : c’est possible ! 
-
-Par ce terme j’entends l’organisation de feuilles de styles sous forme d’objet pouvant être : déclinées et surchargées, réutilisées pour d’autres projets, partagées avec d’autres développeurs et intégrateurs, maintenables au cours des différentes versions du site ou de l’application. 👉 La présentation sur SlideShare : http://bit.ly/2zLcAK1]]></description>
-            <link>https://dev.tube/video/fUs4vr4hgic</link>
-            <guid isPermaLink="true">https://dev.tube/video/fUs4vr4hgic</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:36 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[BDX I/O 2017 - Suivre les avions avec un Raspberry, Guillaume MEMBRÉ]]></title>
-            <description><![CDATA[BDX I/O 2017 - Suivre les avions avec un Raspberry, Guillaume MEMBRÉ 
-
-En hackant une clé USB de réception TNT, La Radio Logicielle (ou SDR) est à la portée de tous. Il est alors possible d'écouter les balises de positionnement des avions de lignes sur un rayon de plusieurs dizaines de km avec une simple antenne. Mais, connaissez vous les différentes bandes de fréquences (Wifi, GSM, FM, Avion…) ? Voulez vous connaitre le fonctionnement du projet comme [flightradar24](https://www.flightradar24.com) ? Nous verrons comment mettre en oeuvre un tel projet avec du matériel grand public et accessible comme un Raspberry Pi.]]></description>
-            <link>https://dev.tube/video/2NiJEA9C_B4</link>
-            <guid isPermaLink="true">https://dev.tube/video/2NiJEA9C_B4</guid>
+L'un des meilleurs moyens d'apprendre de nouveaux patterns de développement, de nouvelles idées ou encore comment résoudre un nouveau problème, c'est de prendre un projet, de lire le code et d'essayer de le comprendre. C'est le but de cette série de conférences. Voici l'édition #1 : "what I've learned after reading the source code of... Angular". Oui en effet, pour la première édition, j'ai choisi un sujet que je connais plutôt bien. Mais je vous assure vous allez apprendre pas mal de choses: de la gestion de l'internationalisation au support des Web Components, en passant par l'utilisation des décorateurs.]]></description>
+            <link>https://dev.tube/video/_mIvidao83A</link>
+            <guid isPermaLink="true">https://dev.tube/video/_mIvidao83A</guid>
             <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[BDX I/O 2017 - Amazon Alexa Développer votre chatbot vocal intelligent, Ouadie LAHDIOUI]]></title>
-            <description><![CDATA[BDX I/O 2017 - Amazon Alexa - Développer votre chatbot vocal intelligent et entrer de plain-pied dans la science fiction ! Ouadie LAHDIOUI
+            <title><![CDATA[Bundlers et Packers : du site web à l’applicatif web, par Matthias Dugué]]></title>
+            <link>https://dev.tube/video/KnjeJZNNckc</link>
+            <guid isPermaLink="true">https://dev.tube/video/KnjeJZNNckc</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:29 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BDX I/O 2017 - Serverless : embarquement immédiat,  Antoine BRETTE]]></title>
+            <description><![CDATA[BDX I/O 2017 - Serverless : embarquement immédiat,  Antoine BRETTE
 
-Avec l'explosion du machine learning, vous avez sans doute rêvé du jour où vous atteindriez le niveau des films science fiction en développant des applications intelligentes capables de réagir à la commande vocale 🤔 tout comme Ava du film EX MACHINA ou bien Jarvis d'Iron Man. Manifestez-vous, ce jour est déjà venu ! et je vous le prouve à travers cette conférence retour d'expérience sur les 🤖 chatbots 🤖. Nous verrons les différents Frameworks et bibliothèques Node.js pour développer ce genre d'application, les idées reçues et les pièges à éviter, ainsi qu'un tour d'horizon des techniques d'intelligence artificielle (les réseaux de neurones, le deep learning et le natural language processing) pour les rendre de plus en plus humaines. Nous ferons aussi un live coding avec l'enceinte Amazon Echo pour mettre ce panel en pratique.]]></description>
-            <link>https://dev.tube/video/sw-4ShBCjPU</link>
-            <guid isPermaLink="true">https://dev.tube/video/sw-4ShBCjPU</guid>
+’entrée ? En retraçant la mise en place d’une application de comptage de tweets, cette présentation propose une initiation aux problématiques de conception, de développement, et de déploiement d’une application serverless sur AWS. Il sera ensuite temps pour les premiers retours la mise en œuvre d'une appli Serverless, en généralisant les observations faites lors de la démo et en dressant le tableaux des cas d’usage, des limitations actuelles et des tendances futures]]></description>
+            <link>https://dev.tube/video/z-dkXMXoyyM</link>
+            <guid isPermaLink="true">https://dev.tube/video/z-dkXMXoyyM</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Créez vos Vidéos sous Blender: Montage et Motion Design]]></title>
+            <description><![CDATA[Le séquenceur est le parent pauvre de Blender. Pourtant, avec les outils d’animation, c’est l’alternative libre la plus complète et la plus stable que vous pourrez trouver à After Effects.
+
+Après avoir travaillé sous Sony Vegas et souffert de centaines de crashs, j’ai édité plus de 150 tutoriels sous Blender. Lui ne m’a jamais laissé tomber.
+
+Vous allez découvrir comment créer vos propres vidéos efficacement. Nous allons parler des avantages et des faiblesses de l’outil, mais aussi des plug-ins gratuits indispensables pour le rendre encore plus puissant.]]></description>
+            <link>https://dev.tube/video/YTG_8aqGl9I</link>
+            <guid isPermaLink="true">https://dev.tube/video/YTG_8aqGl9I</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:02 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BDX I/O 2015 - Jeu de rôle en ligne multijoueur avec Firebase (Alexis Moussine-Pouchkine, Google)]]></title>
+            <description><![CDATA[Speaker : Alexis Moussine-Pouchkine (Google)]]></description>
+            <link>https://dev.tube/video/keFNCM0rjqA</link>
+            <guid isPermaLink="true">https://dev.tube/video/keFNCM0rjqA</guid>
+            <pubDate>Mon, 02 Jul 2018 09:59:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Elm, est-ce si bien qu'on le dit (Paul Dijou)]]></title>
+            <description><![CDATA[Elm est un language fonctionnel fortement typé qui compile vers JavaScript. Il offre une approche pure et immutable avec un compiler proposant des messages d'erreur extrêmement compréhensibles. Lorsque l'on lit des articles à son sujet sur internet, on peut voir des phrases fortes comme "Aucune erreur au runtime" ou "Quand ça compile, ça marche" ou encore "Le compiler Elm est mon meilleur ami de pair-programming".Après avoir utilisé ce language pendant plus d'un an en production, nous verrons si tout est si magique que cela et surtout, le cas échéant, quel est le prix à payer pour y parvenir. Nous aborderons également des points comme "Quelle est la différence avec TypeScript ?" ou "Est-ce que cela marche aussi bien côté client que côté serveur ?".
+
+Par : Paul Dijou
+
+Talk filmé au DevFest Toulouse 2017
+https://devfesttoulouse.fr]]></description>
+            <link>https://dev.tube/video/BHTgiBGyY8U</link>
+            <guid isPermaLink="true">https://dev.tube/video/BHTgiBGyY8U</guid>
+            <pubDate>Mon, 02 Jul 2018 09:57:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Big Data, de l’étude à l’action en marketing - Christophe Benavent]]></title>
+            <description><![CDATA[Vidéo tournée lors de #BlendWebMix 2015.
+
+Big Data, de l’étude à l’action en marketing - Christophe Benavent]]></description>
+            <link>https://dev.tube/video/lKrRGRANG8A</link>
+            <guid isPermaLink="true">https://dev.tube/video/lKrRGRANG8A</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:09 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BDX I/O 2017 - Réalisation et déploiement rapide d'un chatbot, Coenen BENJAMIN]]></title>
+            <description><![CDATA[Actuellement les chatbots sont en pleine expansion et sont de plus en plus utilisés. Comment on développe un chatbot ? Quels sont les pièges ? Quels sont les cas d’utilisations ? La manière de penser l'UX (user experience) est totalement différente de nos applications, comment pouvons-nous tirer pleinement partie de ces nouvelles expériences ? La phase de déploiement ou de test d'un chatbot peut être rapidement un frein pour un développeur. Après avoir développé plusieurs chatbot qui sont maintenant en production je vais tenter de vous présenter différents moyens pour déployer vos chatbots à moindre coût et sans trop d'effort.]]></description>
+            <link>https://dev.tube/video/f4Oj8YD6D0k</link>
+            <guid isPermaLink="true">https://dev.tube/video/f4Oj8YD6D0k</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fontes variables, la matrice typographique - Malou VERLOMME]]></title>
+            <description><![CDATA[À l’heure de la création liquide ou “responsive”, les fontes se mettent à la page. 
+
+La technologie “Multiple Master” et plus récemment les “variable fonts” permettent au dessinateur de caractères de de réfléchir en terme d’espace de design et non plus en forme statique, comme cela a été le cas pendant des siècles. 
+
+Cela ouvre des perspectives infinies pour le créateur, mais aussi pour l’utilisateur qui se trouvera demain en possession d’une matrice typographique. 👉 La présentation sur SlideShare : http://bit.ly/2klARDN]]></description>
+            <link>https://dev.tube/video/YOwsQN5PKSU</link>
+            <guid isPermaLink="true">https://dev.tube/video/YOwsQN5PKSU</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BDX I/O 2017 - Les Vendredis noirs : même pas peur ! David PILATO]]></title>
+            <description><![CDATA[Surveiller une application complexe n'est pas une tâche aisée, mais avec les bons outils, ce n'est pas si sorcier. Néanmoins, des périodes fortes type "Black Friday" (Vendredi noir) peuvent pousser votre application aux limites de ce qu'elle peut supporter, ou pire, la faire crasher. Et parce que le système est fortement sollicité, il génère encore davantage de logs qui peuvent également mettre à mal votre système de supervision. Cette session aborde les bonnes pratiques d'utilisation de la suite Elastic ainsi que des trucs et astuces pour vous aider à passer sans souci vos Vendredis noirs !]]></description>
+            <link>https://dev.tube/video/QgK8Yf3S4V8</link>
+            <guid isPermaLink="true">https://dev.tube/video/QgK8Yf3S4V8</guid>
             <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
         </item>
     </channel>
