@@ -17,16 +17,16 @@
             "name": "Andrey Adamovich"
         },
         {
+            "twitter": "sandromancuso",
+            "name": "Sandro Mancuso"
+        },
+        {
             "twitter": "jnabrdalik",
             "name": "Jakub Nabrdalik"
         },
         {
             "twitter": "RoyOsherove",
             "name": "Roy Osherove"
-        },
-        {
-            "twitter": "sandromancuso",
-            "name": "Sandro Mancuso"
         },
         {
             "twitter": "kevlinhenney",
@@ -81,8 +81,16 @@
             "name": "Jon Skeet"
         },
         {
+            "twitter": "unclebobmartin",
+            "name": "Uncle Bob"
+        },
+        {
             "twitter": "hintjens",
             "name": "Pieter Hintjens"
+        },
+        {
+            "twitter": "stolinski",
+            "name": "Scott Tolinski"
         },
         {
             "twitter": "ethomson",
@@ -97,8 +105,8 @@
             "name": "Nora Jones"
         },
         {
-            "twitter": "unclebobmartin",
-            "name": "Robert C. Martin"
+            "twitter": "kartar",
+            "name": "James Turnbull"
         },
         {
             "twitter": "bridgetkromhout",
@@ -109,8 +117,12 @@
             "name": "Gene Kim"
         },
         {
-            "twitter": "kartar",
-            "name": "James Turnbull"
+            "twitter": "Pterolex",
+            "name": "Alexey Zaslavsky"
+        },
+        {
+            "twitter": "nicolefv",
+            "name": "Nicole Forsgren"
         },
         {
             "twitter": "martinwoodward",
@@ -131,10 +143,6 @@
         {
             "twitter": "icooper",
             "name": "Ian Cooper"
-        },
-        {
-            "twitter": "nicolefv",
-            "name": "Nicole Forsgren"
         },
         {
             "twitter": "emmajanehw",
