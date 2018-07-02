@@ -4,52 +4,323 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 02 Jul 2018 08:30:28 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 02 Jul 2018 10:25:48 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Developer's Gym with ThoughtWorks - Session 1 - Junior Dev SG]]></title>
-            <description><![CDATA[Speaker: Gordon Song
+            <title><![CDATA[Composition over Inheritance]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
 
-Slides: https://github.com/JuniorDevSingapore/developers_gym/raw/master/Introduction%20to%20TDD.pdf
-
-Event Page: https://www.meetup.com/Junior-Developers-Singapore/events/252052209/
-
-Produced by Engineers.SG
-Recorded by: Michael Cheng
-
-Help us caption & translate this video!
-
-https://amara.org/v/kIBc/]]></description>
-            <link>https://dev.tube/video/FPJXv6hK4Ng</link>
-            <guid isPermaLink="true">https://dev.tube/video/FPJXv6hK4Ng</guid>
-            <pubDate>Sun, 01 Jul 2018 01:30:12 GMT</pubDate>
+This is a weekly show where we try to become more confident and excited about programming by learning intriguing things that we didn’t know before. Today, we are are going to talk about composition over inheritance. Inheritance is when you design your types after what they are, while composition is when you design your types after what they cando. We are going to learn about the limitations of inheritance, and how to solve them using composition.
+Full script here: https://medium.com/@mpjme/cb6f88070205
+This is a weekly show where we try to become more confident and excited about programming by learning intriguing things that we didn’t know before.]]></description>
+            <link>https://dev.tube/video/wfMtDGfHWpA</link>
+            <guid isPermaLink="true">https://dev.tube/video/wfMtDGfHWpA</guid>
+            <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Solving Pokemon Blue With a Single, Huge Regular Expression]]></title>
-            <description><![CDATA[I was playing my old copy of Pokemon Blue for the original Game Boy one day during winter holidays, for old times’ sake. About an hour in, I realized that this was probably going to take me on the order of 20-30 hours to complete. 
+            <title><![CDATA[My Code Editor: Atom, Setup & Packages]]></title>
+            <description><![CDATA[I've gotten this question so much lately that it's time to make a video about it. Let's look at my current favorite code editor, my setup and packages that I use.
 
-20-30 hours! Who has time for that? 
+- - -
 
-What I’d really like to do is sit down, think very carefully, and write down all the moves I’d like to make, all at once, and then pass them to a regular expression, which will accept if (and only if) those moves will win a game of Pokemon Blue. This approach has a lot of advantages! For example, in addition to being faster to specify a complete moveset for a game, it allows you to put your entire game of Pokemon Blue into a version control system (e.g., git), which allows you to apply the “infrastructure as code” philosophy to your Pokemon Blue runthrough.
+This video was sponsored by the DevTips Patron Community - https://www.patreon.com/DevTips
 
-EVENT:
+Listen to Travis' Podcast - http://www.travandlos.com/
 
-!!Con 2018
+Get awesomeness emailed to you every thursday - http://travisneilson.com/notes 
 
-SPEAKER:
+You should follow DevTips on Twitter - https://twitter.com/DevTipsShow]]></description>
+            <link>https://dev.tube/video/hPC6keUUiTA</link>
+            <guid isPermaLink="true">https://dev.tube/video/hPC6keUUiTA</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:01 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Higher-order functions - Part 1 of Functional Programming in JavaScript]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
 
-Alex Clemmer
+In this video series, I will teach you how to do functional programming in JavaScript. In this first one, I will tell you about one of the most important concepts in functional programming: Higher-order functions. I will talk about what higher order-functions are, and then move on to code, and show you how to use them. I will also tell you why you should learn functional programming in the first place.]]></description>
+            <link>https://dev.tube/video/BMUiFMZr7vk</link>
+            <guid isPermaLink="true">https://dev.tube/video/BMUiFMZr7vk</guid>
+            <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to Build a Responsive Website From Start to Finish - Discovery & Documentation - Part1]]></title>
+            <description><![CDATA[Today is Part 1 of a multi part series called "How to build a professional responsive website from start to finish"
 
-PERMISSIONS:
+Let's look at planning — Ideation, Discovery, and Documentation.
 
-Original video was published with Creative Commons Attribution license (reuse allowed).
+---
 
-CREDITS:
+DevTips is a YouTube show about web design and development.
 
-Original video source: https://www.youtube.com/watch?v=n-HTvjIueX0]]></description>
-            <link>https://dev.tube/video/Q2g9d29UIzk</link>
-            <guid isPermaLink="true">https://dev.tube/video/Q2g9d29UIzk</guid>
-            <pubDate>Sun, 01 Jul 2018 01:27:45 GMT</pubDate>
+HTML5 Basics Playlist:
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4KlJn1pMYPVV3eYzxJlWcON
+
+CSS Basics Playlist:
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4IOmy04kDxh_hqODMqoeeCy
+
+----
+
+DevTips now has a twitter account:
+https://twitter.com/DevTipsShow
+
+Travis also tweets:
+https://twitter.com/travisneilson]]></description>
+            <link>https://dev.tube/video/VcMjo_wczCc</link>
+            <guid isPermaLink="true">https://dev.tube/video/VcMjo_wczCc</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:48 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS FlexBox Essentials]]></title>
+            <description><![CDATA[Today we talk about CSS3 FlexBox. Everything you need to know to use FlexBox right away.
+
+See the code: http://codepen.io/devtips/pen/JorKGm/?editors=110
+
+
+---
+
+DevTips is a YouTube show about web design and development.
+
+"HTML5 Basics" Playlist:
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4KlJn1pMYPVV3eYzxJlWcON
+
+"CSS Basics" Playlist:
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4IOmy04kDxh_hqODMqoeeCy
+
+"How to build a professional website from start to finish" Playlist:
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI
+
+----
+
+Follow the DevTips GitHub Page to get all the codez:
+https://github.com/DevTips
+
+DevTips now has a twitter account:
+https://twitter.com/DevTipsShow
+
+Travis also tweets:
+https://twitter.com/travisneilson]]></description>
+            <link>https://dev.tube/video/G7EIAgfkhmg</link>
+            <guid isPermaLink="true">https://dev.tube/video/G7EIAgfkhmg</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:49 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Parallax on the Web (Part 1) - Parallax Examples]]></title>
+            <description><![CDATA[Let's look at several examples of Parallax on the web!
+
+"The phenomena of parallax is a result of having a perspective in  in 3D space when movement is introduced to the observational experience."
+
+Examples ------
+
+## 1 - Fixed background, scrolling body
+http://www.ok-studios.de/home/
+http://themes.tvda.eu/demos/kutcherstudio/
+
+## 2 - Slow Elements
+http://jason-kenny.com/
+http://unfold.no/
+http://www.apple.com/macbook/
+
+## 3 - Landing Elements
+http://www.apple.com/macbook]
+http://www.streamlineicons.com/
+http://news.microsoft.com/stories/garage/index.html
+
+## 4 - Multiple direction elements
+http://mainequarterly.com/thoreau/
+https://carousel.dropbox.com/
+
+
+## 5 - Mouse movements
+http://stephband.info/jparallax/
+http://www.alquimiawrg.com/#/home
+http://travisneilson.com/rootbeer-tasting/
+
+## 6 - thumbnails
+http://tympanus.net/Development/HoverEffectIdeas/
+
+## 7 - Follow the rabbit
+http://poppyspend.britishlegion.org.uk/
+http://lostworldsfairs.com/atlantis/
+http://benthebodyguard.com/index.php
+https://www.fiftythree.com/pencil
+
+## 8 - Zooming elements
+http://travisneilson.com/workflow-tools/
+http://www.nytimes.com/projects/2013/tomato-can-blues/?hp
+
+---
+
+This video was sponsored by the DevTips Patron Community - https://www.patreon.com/DevTips
+
+You should follow DevTips on Twitter - https://twitter.com/DevTipsShow]]></description>
+            <link>https://dev.tube/video/STwoa-9jxi0</link>
+            <guid isPermaLink="true">https://dev.tube/video/STwoa-9jxi0</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:49 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS Transition (CSS Animations Series Part 1)]]></title>
+            <description><![CDATA[Let's talk about CSS animations. Movement on the web. In this part 1 of the series we talk about css transitions.
+
+Animatable CSS Properties: http://oli.jp/2010/css-animatable-properties/
+
+Performant Properties to Animate: http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
+
+Do you even Jade Bro? https://youtu.be/wzAWI9h3q18
+
+Check out the CodePen: http://codepen.io/devtips/pen/xOdodB/
+
+- - -
+
+This video was sponsored by the DevTips Patron Community - https://www.patreon.com/DevTips
+
+Listen to Travis' Podcast - http://www.travandlos.com/
+
+Get awesomeness emailed to you every thursday - http://travisneilson.com/notes 
+
+You should follow DevTips on Twitter - https://twitter.com/DevTipsShow]]></description>
+            <link>https://dev.tube/video/8kK-cA99SA0</link>
+            <guid isPermaLink="true">https://dev.tube/video/8kK-cA99SA0</guid>
+            <pubDate>Mon, 02 Jul 2018 09:59:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to Make a Full Screen Landing Page (HTML & CSS)]]></title>
+            <description><![CDATA[Nicolai Andersen wants to know how to make a full screen landing page. We can do that :)
+
+It's easy with just a little html and css. Checkit on Codepen - http://codepen.io/devtips/pen/XJByvr/
+
+Join the DevTips Community on Patreon! https://www.patreon.com/DevTips
+
+]]></description>
+            <link>https://dev.tube/video/hExwnLlj2xk</link>
+            <guid isPermaLink="true">https://dev.tube/video/hExwnLlj2xk</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:49 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Map - Part 2 of Functional Programming in JavaScript]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
+
+In this video series, we learn how to do functional programming in JavaScript. In this second one, I show you how and when to use the higher-order function map, and why it is the best thing ever. 
+Resources:
+
+Code from the video
+https://gist.github.com/mpj/c5ae804e576042b3287d
+
+How to install and use io.js (for the arrow functions example)
+http://davidwalsh.name/es6-io]]></description>
+            <link>https://dev.tube/video/bCqtb-Z5YGQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/bCqtb-Z5YGQ</guid>
+            <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Promises - Part 8 of Functional Programming in JavaScript]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
+
+Promises are, just like callbacks, a way of dealing with things being asynchronous - when we don't know for certain in what order things will happen. But promises are more powerful than callbacks because they compose - you can combine promises and chain them, all kinds of cool stuff - I've showed you some in this video, but there is WAY more you'll be able to do when you get comfortable with promises.
+
+Full code example from the video here:
+https://github.com/mpj/fpjs8
+
+Much inspiration for this episode was drawn from this fantastic guide y mattdesl:
+https://github.com/mattdesl/promise-cookbook#the-problem]]></description>
+            <link>https://dev.tube/video/2d7s3spWAzo</link>
+            <guid isPermaLink="true">https://dev.tube/video/2d7s3spWAzo</guid>
+            <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[[DevFest Nantes 2017] Plateforme economy  augmenter l'offre et la demande grâce à l'UX]]></title>
+            <description><![CDATA[Speaker : Olivier Godement
+
+Depuis 2014, une startup sur 3 créée en France est une place de marché. Tourisme, alimentation, services... le développement de nouveaux modes de consommation touche chaque secteur, l'un après l'autre. Stripe, en tant que partenaire de paiements des startups les plus innovantes du monde (Deliveroo, Kickstarter, Drivy, Heetch, Instacart...), observe de près les stratégies et avantages compétitifs développés par les leaders de chaque secteur. Et si la partie "Demande" (produit, design, marketing) est une part évidente de leur succès, l'"Offre" et l'expérience des marchands (vendeurs, livreurs, restaurants, porteurs de projet,...) sur la plateforme est sans aucun doute ce qui fait toute la différence entre un bon et un excellent produit. Lors de ce workshop, nous présenterons des conseils et des exemples concrets pour améliorer l'expérience utilisateur sur une plateforme, pour les consommateurs, comme pour le marchants. Nous aborderons dans un premier temps les tactiques adoptées lors des premières années de la place de marché (e.g., du lancement au moment où une masse critique est atteinte) où des initiatives non-scalables pour constituer rapidement une offre de qualité sont adoptées. Nous présenterions ensuite les stratégies mises en place lors du développement (post-masse critique) pour étendre son leadership, maintenir un équilibre offre/demande et s'étendre à l'étranger.]]></description>
+            <link>https://dev.tube/video/KEFxoRAeceY</link>
+            <guid isPermaLink="true">https://dev.tube/video/KEFxoRAeceY</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Interview Stephane Distinguin & Gaspard Koenig]]></title>
+            <link>https://dev.tube/video/1-82xpaINeU</link>
+            <guid isPermaLink="true">https://dev.tube/video/1-82xpaINeU</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:13 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BDX I/O 2015 - Aurelia est-elle une concurrente sérieuse pour Angular 2 (Philippe Charriere)]]></title>
+            <description><![CDATA[Speaker: Philippe Charriere (Nicolas Bourbaki)]]></description>
+            <link>https://dev.tube/video/cSXbQqzFACA</link>
+            <guid isPermaLink="true">https://dev.tube/video/cSXbQqzFACA</guid>
+            <pubDate>Mon, 02 Jul 2018 09:59:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[16/06/28 - 03 - Loop, améliorez votre workflow de développement d'application Web]]></title>
+            <description><![CDATA[Travailler un framework Web full-stack comme Play ou Rails permet un workflow de développement productif: les changements apportés au code entraine automatiquement le rechargement de l'application, et un pipeline dédié de compilation des assets (JS, CSS, ...) est intégré au build principal.
+
+Mais lorsque l'on doit travailler avec des micro-frameworks ou des système de build hétérogènes, tout ça se complique. Laissez moi vous présenter Loop.
+
+Loop gère vos différents système de build, redémarre votre serveur au besoin, bloque l'accès à l'application tant qu'elle n'est pas prête, affiche directement les erreurs de compilation dans le navigateur.
+
+Loop est indépendant de la technologie et saura gérer vos build Maven, SBT, Gradle, grunt, gulp, make, cargo, (etc.) pour améliorer votre workflow de développement d'application Web en Javascript, Java, Scala, Python, Rust, Go, (etc.).
+
+Par Guillaume Bort]]></description>
+            <link>https://dev.tube/video/ZgFpFryzGzw</link>
+            <guid isPermaLink="true">https://dev.tube/video/ZgFpFryzGzw</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2018/01/08 - Young blood V - Réconciliez vous avec le JS grâce à Flow]]></title>
+            <description><![CDATA[L'écosystème JavaScript a beaucoup évolué depuis ces derniers temps. On oublie presque que c’est un language simple, développable avec seul un browser et un éditeur de texte. Chez Fluo, la startup qui est en train de révolutionner le monde de l'assurance, nous avons fait le choix de Flow, le static type checker pour JavaScript développé par Facebook. Je vous propose de vous montrer qu’écrire du code JavaScript robuste et maintenable ce n’est plus une mission impossible. Lors de ce quickie nous aborderons :
+
+Le principe de base du Flow et pourquoi l’équipe Fluo a choisi cet outil
+Les erreurs les plus courantes et comment les éviter
+Les bonnes pratiques à garder en tête
+par Nhu Duc Trung Nguyen]]></description>
+            <link>https://dev.tube/video/uZZa--50WZI</link>
+            <guid isPermaLink="true">https://dev.tube/video/uZZa--50WZI</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS Tu peux pas test - Thomas Zilliox]]></title>
+            <link>https://dev.tube/video/mnzO08iQndg</link>
+            <guid isPermaLink="true">https://dev.tube/video/mnzO08iQndg</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:29 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2018/01/08 - Young blood V -  Il était une fois la fonction reduce]]></title>
+            <description><![CDATA[Dans le paradigm de programmation impératif, nous avons l’habitude d’utiliser des boucles pour calculer un résultat à partir d’un ensemble de valeurs. Cette approche fonctionne mais elle oblige à faire modifier une variable à l'extérieure de la boucle que sera le résultat du calcul et à noyer le calcul dans le corps de la boucle. Cette approche ne sépare pas ce qui est la résolution du problème des éléments techniques pour itérer. Pour pouvoir paralléliser ou lire les valeurs depuis une socket ou une fichier il faut tout modifier. C’est pour cette raison que le paradigm de programmation fonctionnel s’appuie sur la fonction reduce. Je vous propose de vous montrer comment reduce peut être implémentée. Puis de voir qu’elle peut également servir pour implémenter map et filter. On terminera par chaîner les trois opérations map, filter et reduce sans avoir de listes intermédiaires.
+
+par Patrick Giry]]></description>
+            <link>https://dev.tube/video/iBUGk15Zrr0</link>
+            <guid isPermaLink="true">https://dev.tube/video/iBUGk15Zrr0</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS orienté objet - Lenny ROUANET]]></title>
+            <description><![CDATA[Réutiliser, partager et maintenir ses objets CSS : c’est possible ! 
+
+Par ce terme j’entends l’organisation de feuilles de styles sous forme d’objet pouvant être : déclinées et surchargées, réutilisées pour d’autres projets, partagées avec d’autres développeurs et intégrateurs, maintenables au cours des différentes versions du site ou de l’application. 👉 La présentation sur SlideShare : http://bit.ly/2zLcAK1]]></description>
+            <link>https://dev.tube/video/fUs4vr4hgic</link>
+            <guid isPermaLink="true">https://dev.tube/video/fUs4vr4hgic</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BDX I/O 2017 - Suivre les avions avec un Raspberry, Guillaume MEMBRÉ]]></title>
+            <description><![CDATA[BDX I/O 2017 - Suivre les avions avec un Raspberry, Guillaume MEMBRÉ 
+
+En hackant une clé USB de réception TNT, La Radio Logicielle (ou SDR) est à la portée de tous. Il est alors possible d'écouter les balises de positionnement des avions de lignes sur un rayon de plusieurs dizaines de km avec une simple antenne. Mais, connaissez vous les différentes bandes de fréquences (Wifi, GSM, FM, Avion…) ? Voulez vous connaitre le fonctionnement du projet comme [flightradar24](https://www.flightradar24.com) ? Nous verrons comment mettre en oeuvre un tel projet avec du matériel grand public et accessible comme un Raspberry Pi.]]></description>
+            <link>https://dev.tube/video/2NiJEA9C_B4</link>
+            <guid isPermaLink="true">https://dev.tube/video/2NiJEA9C_B4</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[BDX I/O 2017 - Amazon Alexa Développer votre chatbot vocal intelligent, Ouadie LAHDIOUI]]></title>
+            <description><![CDATA[BDX I/O 2017 - Amazon Alexa - Développer votre chatbot vocal intelligent et entrer de plain-pied dans la science fiction ! Ouadie LAHDIOUI
+
+Avec l'explosion du machine learning, vous avez sans doute rêvé du jour où vous atteindriez le niveau des films science fiction en développant des applications intelligentes capables de réagir à la commande vocale 🤔 tout comme Ava du film EX MACHINA ou bien Jarvis d'Iron Man. Manifestez-vous, ce jour est déjà venu ! et je vous le prouve à travers cette conférence retour d'expérience sur les 🤖 chatbots 🤖. Nous verrons les différents Frameworks et bibliothèques Node.js pour développer ce genre d'application, les idées reçues et les pièges à éviter, ainsi qu'un tour d'horizon des techniques d'intelligence artificielle (les réseaux de neurones, le deep learning et le natural language processing) pour les rendre de plus en plus humaines. Nous ferons aussi un live coding avec l'enceinte Amazon Echo pour mettre ce panel en pratique.]]></description>
+            <link>https://dev.tube/video/sw-4ShBCjPU</link>
+            <guid isPermaLink="true">https://dev.tube/video/sw-4ShBCjPU</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
         </item>
     </channel>
 </rss>

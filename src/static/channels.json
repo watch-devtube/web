@@ -29,8 +29,16 @@
             "id": "UCtxCXg-UvSnTKPOzLH4wJaQ"
         },
         {
+            "title": "Fun Fun Function",
+            "id": "UCO1cgjhGzsSYb1rsB4bFe4Q"
+        },
+        {
             "title": "O'Reilly",
             "id": "UC3BGlwmI-Vk6PWyMt15dKGw"
+        },
+        {
+            "title": "DevTips",
+            "id": "UCyIe-61Y8C4_o-zZCtO4ETQ"
         },
         {
             "title": "GOTO Conferences",
@@ -241,6 +249,10 @@
             "id": "UCJy6S-UuSdRfBC5oMvdmcjA"
         },
         {
+            "title": "BreizhCamp",
+            "id": "UCVelKVoLQIhwx9C2LWf-CDA"
+        },
+        {
             "title": "Codurance",
             "id": "UCacyhBPMQpC4Vi-WqtrRpBw"
         },
@@ -273,6 +285,10 @@
             "id": "UChA9XP_feY1-1oSy2L7acog"
         },
         {
+            "title": "BlendWebMix",
+            "id": "UCVA4ZOoyUyLB_LS6flBjhRg"
+        },
+        {
             "title": "Agile Croatia",
             "id": "UCP6WJ2itKT-TQoxMUnzxpWQ"
         },
@@ -283,6 +299,14 @@
         {
             "title": "DomCode",
             "id": "UCk3VAfcmYP-rDmzip8NmVIg"
+        },
+        {
+            "title": "GDG France",
+            "id": "UCx83f-KzDd3o1QK2AdJIftg"
+        },
+        {
+            "title": "Codeurs en Seine",
+            "id": "UCWujmG5rANxJI0nHbMFs08w"
         },
         {
             "title": "GeeCON Conference",
@@ -301,6 +325,10 @@
             "id": "UC0eV4MhnmCd-48XdDhzf6Hg"
         },
         {
+            "title": "Capitole du Libre",
+            "id": "UCceC8Q8hThsWwmhqkjclcZg"
+        },
+        {
             "title": "Droidcon Italy",
             "id": "UC9f8652addezs8ZUuKPB4Ow"
         },
@@ -311,6 +339,18 @@
         {
             "title": "Flink Forward",
             "id": "UCY8_lgiZLZErZPF47a2hXMA"
+        },
+        {
+            "title": "Paris JUG",
+            "id": "UCPNEu33xtYpKjQKcn9E5m0Q"
+        },
+        {
+            "title": "Best of Web",
+            "id": "UCqU8dtoFv2r0cA795pHvtOw"
+        },
+        {
+            "title": "bdxio",
+            "id": "UCA7pEYY0BlgCdpbnjhCDezQ"
         },
         {
             "title": "Web Rebels",
@@ -325,8 +365,20 @@
             "id": "UCCc-KoF0DT3-t2lrhAgZWAA"
         },
         {
+            "title": "AFUP Rennes",
+            "id": "UCv1VGfqKhygjTOZkdVUWfpQ"
+        },
+        {
             "title": "DeltaV Conf",
             "id": "UCL1qMvsgfDBu2WjQxzypmxA"
+        },
+        {
+            "title": "AFUP Hauts de France",
+            "id": "UCkMGtNcB-VeqMlQ9p2JMIKg"
+        },
+        {
+            "title": "AFUP Aix / Marseille",
+            "id": "UC77cQ1izl155u6Y8daMZYiA"
         },
         {
             "title": "SphereIT",
