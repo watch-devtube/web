@@ -1,23 +1,21 @@
 <template lang="pug">
   .picker
-    a.button(v-on:click="pickATag()") 
+    a.button(v-on:click="pickAChannel()") 
       span.icon: i.fas.fa-filter
-      span Tags
+      span Channels
     .modal(v-if="open" v-bind:class="{ 'is-active': open }")
         .modal-background
         .modal-card
           header.modal-card-head
-            p.modal-card-title Tags
+            p.modal-card-title Channels
             button.delete(aria-label="close" v-on:click="close()")
           section.modal-card-body
-            .tags
-              a.tag.is-capitalized(v-for="tag in tags" :href="'/tag/' + tag") {{tag}}        
+            .media(v-for="channel in channels")
+                .media-left
+                    i.fab.fa-youtube
+                .media-content
+                  p.title.is-6: a.has-text-black.is-capitalized(:href="'/channel/' + channel.id") {{channel.title}}
 </template>
-<style lang="scss">
-  .avatar {
-    border-radius: 50%
-  }
-</style>
 <script>
 
 export default {
@@ -27,10 +25,10 @@ export default {
     }
   },
   asyncComputed: {
-    tags: {
+    channels: {
       lazy: true,
       get() {
-        return fetch('/tags', {
+        return fetch('/channels', {
           method: 'get',
           headers: {
           'Content-Type': 'application/json',
@@ -40,7 +38,7 @@ export default {
     }
   },
   methods: {
-    pickATag: function() {
+    pickAChannel: function() {
       this.open = true
     },
     close: function() {

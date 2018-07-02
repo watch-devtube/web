@@ -16,6 +16,7 @@ export default class Fastr {
   videos: any
   tags: Set<string>
   speakers: any
+  channels: any
   byRank: any
 
   constructor(docsHome: String) {
@@ -30,11 +31,16 @@ export default class Fastr {
       unique: ['twitter']
     })
 
+    let channels = loki.addCollection('channels', { 
+      unique: ['id']
+    })    
+
     let tags = new Set<string>()
     this.tags = tags
 
 
 
+    this.channels = channels
     this.speakers = speakers
     this.videos = videos
 
@@ -85,12 +91,23 @@ export default class Fastr {
           speakers.insert(video.speaker)  
         }
 
+        if (!channels.by("id", video.channelId)) {
+          channels.insert({
+            id: video.channelId,
+            title: video.channelTitle
+          })  
+        }
+
         if (video.tags) {
           video.tags.forEach(tag => tags.add(tag))
         }
         videos.insert(video)
       })
     })    
+  }
+
+  searchChannels() {
+    return this.channels.chain().simplesort('title').data()
   }
 
   searchTags() {

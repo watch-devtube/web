@@ -38,10 +38,13 @@
                 .columns(v-if="!speaker && newMode")
                   .column
                     SpeakerPicker
-                .columns
+                .columns(v-if="!newMode")
                   .column
                     h1.title Channel
                     ais-refinement-list.is-is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle" :sort-by="['count:desc', 'name:asc']")
+                .columns(v-if="newMode")
+                  .column
+                    ChannelPicker             
                 .columns
                   .column
                     h1.title Year
@@ -136,6 +139,7 @@ import { createFromAlgoliaClient } from 'vue-instantsearch'
 import VideoCard from './VideoCard.vue'
 import ActiveFilters from './ActiveFilters.vue'
 import SpeakerPicker from './SpeakerPicker.vue'
+import ChannelPicker from './ChannelPicker.vue'
 import TagPicker from './TagPicker.vue'
 import YearRange from './YearRange.vue'
 import Input from './Input.vue'
@@ -199,6 +203,6 @@ export default {
       this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
   },
-  components: { ActiveFilters, VideoCard, YearRange, Input, SpeakerPicker, TagPicker }
+  components: { ActiveFilters, VideoCard, YearRange, Input, SpeakerPicker, TagPicker, ChannelPicker }
 };
 </script>

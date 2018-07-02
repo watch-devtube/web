@@ -141,6 +141,11 @@ async function proxy(req: Request, res: Response) {
     let tags = fastr.searchTags()
     console.timeEnd(`Tags lookup`)
     res.status(200).send(tags)
+  } else if (req.path.startsWith("/channels") && fuseMode) {
+    console.time(`Channels lookup`)
+    let tags = fastr.searchChannels()
+    console.timeEnd(`Channels lookup`)
+    res.status(200).send(tags)    
   } else if (req.path.startsWith("/speakers") && fuseMode) {
 
     console.time(`Speakers lookup`)
