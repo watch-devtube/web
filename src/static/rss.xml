@@ -4,7 +4,7 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 02 Jul 2018 10:54:07 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 02 Jul 2018 12:02:25 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Composition over Inheritance]]></title>
@@ -232,92 +232,240 @@ https://github.com/mattdesl/promise-cookbook#the-problem]]></description>
             <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[BDX I/O 2017 - what I've learned after reading the source code of... Angular, Emmanuel DEMEY]]></title>
-            <description><![CDATA[BDX I/O 2017 - what I've learned after reading the source code of... Angular, Emmanuel DEMEY 
+            <title><![CDATA[Drop Down Menu — CSS Animations]]></title>
+            <description><![CDATA[Let's look at a few different ways to animate a css drop down menu!
 
-L'un des meilleurs moyens d'apprendre de nouveaux patterns de développement, de nouvelles idées ou encore comment résoudre un nouveau problème, c'est de prendre un projet, de lire le code et d'essayer de le comprendre. C'est le but de cette série de conférences. Voici l'édition #1 : "what I've learned after reading the source code of... Angular". Oui en effet, pour la première édition, j'ai choisi un sujet que je connais plutôt bien. Mais je vous assure vous allez apprendre pas mal de choses: de la gestion de l'internationalisation au support des Web Components, en passant par l'utilisation des décorateurs.]]></description>
-            <link>https://dev.tube/video/_mIvidao83A</link>
-            <guid isPermaLink="true">https://dev.tube/video/_mIvidao83A</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
+Follow along using the code at: http://codepen.io/devtips/pen/PzJqza/
+
+- - -
+
+This video was sponsored by the DevTips Patron Community - https://www.patreon.com/DevTips
+
+Listen to Travis' Podcast - http://www.travandlos.com/
+
+Get awesomeness emailed to you every thursday - http://travisneilson.com/notes 
+
+You should follow DevTips on Twitter - https://twitter.com/DevTipsShow]]></description>
+            <link>https://dev.tube/video/AIdslaUj9wg</link>
+            <guid isPermaLink="true">https://dev.tube/video/AIdslaUj9wg</guid>
+            <pubDate>Mon, 02 Jul 2018 09:59:47 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Bundlers et Packers : du site web à l’applicatif web, par Matthias Dugué]]></title>
-            <link>https://dev.tube/video/KnjeJZNNckc</link>
-            <guid isPermaLink="true">https://dev.tube/video/KnjeJZNNckc</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:29 GMT</pubDate>
+            <title><![CDATA[bind and this - Object Creation in JavaScript P1 - FunFunFunction #43]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
+
+This video is the first in a video series about how to do Object Creation in JavaScript. I will NOT be teaching object orientation principles in general - this video series is for you if you’re already pretty familiar with object orientation, but confused around how it works in JavaScript specifically. At the end of this series, you’ll be a lot less confused about the prototype, classes, bind,  Object.create, modules, factories, constructors and so on.
+
+Object Creation in JavaScript
+https://goo.gl/KFeTFN
+
+Higher-order functions in JavaScript
+https://goo.gl/3aTDR6]]></description>
+            <link>https://dev.tube/video/GhbhD1HR5vk</link>
+            <guid isPermaLink="true">https://dev.tube/video/GhbhD1HR5vk</guid>
+            <pubDate>Mon, 02 Jul 2018 09:56:45 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[BDX I/O 2017 - Serverless : embarquement immédiat,  Antoine BRETTE]]></title>
-            <description><![CDATA[BDX I/O 2017 - Serverless : embarquement immédiat,  Antoine BRETTE
+            <title><![CDATA[My First Websites Were Horrible! [ SHOWCASE ]]]></title>
+            <description><![CDATA[No one was ever born with enough skill. It takes time and patience. I want to prove that by showing you my early work.
 
-’entrée ? En retraçant la mise en place d’une application de comptage de tweets, cette présentation propose une initiation aux problématiques de conception, de développement, et de déploiement d’une application serverless sur AWS. Il sera ensuite temps pour les premiers retours la mise en œuvre d'une appli Serverless, en généralisant les observations faites lors de la démo et en dressant le tableaux des cas d’usage, des limitations actuelles et des tendances futures]]></description>
-            <link>https://dev.tube/video/z-dkXMXoyyM</link>
-            <guid isPermaLink="true">https://dev.tube/video/z-dkXMXoyyM</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
+- - -
+
+This video was sponsored by the DevTips Patron Community - https://www.patreon.com/DevTips
+
+Listen to Travis' Podcast - http://www.travandlos.com/
+
+Get awesomeness emailed to you every thursday - http://travisneilson.com/notes 
+
+You should follow DevTips on Twitter - https://twitter.com/DevTipsShow]]></description>
+            <link>https://dev.tube/video/QLbUzwxkwHA</link>
+            <guid isPermaLink="true">https://dev.tube/video/QLbUzwxkwHA</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:01 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Créez vos Vidéos sous Blender: Montage et Motion Design]]></title>
-            <description><![CDATA[Le séquenceur est le parent pauvre de Blender. Pourtant, avec les outils d’animation, c’est l’alternative libre la plus complète et la plus stable que vous pourrez trouver à After Effects.
+            <title><![CDATA[StarWars BB-8 CSS Speed Drawing]]></title>
+            <description><![CDATA[Who hasn't seen the new Star Wars movie? For me, the cute little BB-8 droid stole the show. Today we draw and animate BB-8 using HTML+CSS.
 
-Après avoir travaillé sous Sony Vegas et souffert de centaines de crashs, j’ai édité plus de 150 tutoriels sous Blender. Lui ne m’a jamais laissé tomber.
+See the original art here: https://dribbble.com/shots/2408834-BB-8
 
-Vous allez découvrir comment créer vos propres vidéos efficacement. Nous allons parler des avantages et des faiblesses de l’outil, mais aussi des plug-ins gratuits indispensables pour le rendre encore plus puissant.]]></description>
-            <link>https://dev.tube/video/YTG_8aqGl9I</link>
-            <guid isPermaLink="true">https://dev.tube/video/YTG_8aqGl9I</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:02 GMT</pubDate>
+Get the code here: http://codepen.io/devtips/pen/5b37e510cea021d6a999eacf620ea0b0
+
+- - -
+
+This video was sponsored by the DevTips Patron Community - https://www.patreon.com/DevTips
+
+Listen to Travis' Podcast - http://www.travandlos.com/
+
+Get awesomeness emailed to you every thursday - http://travisneilson.com/notes 
+
+You should follow DevTips on Twitter - https://twitter.com/DevTipsShow]]></description>
+            <link>https://dev.tube/video/QZdj42liTtU</link>
+            <guid isPermaLink="true">https://dev.tube/video/QZdj42liTtU</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:01 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[BDX I/O 2015 - Jeu de rôle en ligne multijoueur avec Firebase (Alexis Moussine-Pouchkine, Google)]]></title>
-            <description><![CDATA[Speaker : Alexis Moussine-Pouchkine (Google)]]></description>
-            <link>https://dev.tube/video/keFNCM0rjqA</link>
-            <guid isPermaLink="true">https://dev.tube/video/keFNCM0rjqA</guid>
-            <pubDate>Mon, 02 Jul 2018 09:59:43 GMT</pubDate>
+            <title><![CDATA[Reduce basics - Part 3 of Functional Programming in JavaScript]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
+
+In this video series, we learn how to do functional programming in JavaScript. In this third one, I show you how *reduce* fits into your toolbox and a basic example of it's usage. 
+Code from the video here:
+https://jsfiddle.net/mattiasjle/w789neex/
+
+How to install and use io.js (for the arrow functions example)
+http://davidwalsh.name/es6-io
+
+You want to follow me on Twitter and Quora:
+https://twitter.com/mpjme
+http://www.quora.com/Mattias-Petter-Johansson]]></description>
+            <link>https://dev.tube/video/Wl98eZpkp-c</link>
+            <guid isPermaLink="true">https://dev.tube/video/Wl98eZpkp-c</guid>
+            <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Elm, est-ce si bien qu'on le dit (Paul Dijou)]]></title>
-            <description><![CDATA[Elm est un language fonctionnel fortement typé qui compile vers JavaScript. Il offre une approche pure et immutable avec un compiler proposant des messages d'erreur extrêmement compréhensibles. Lorsque l'on lit des articles à son sujet sur internet, on peut voir des phrases fortes comme "Aucune erreur au runtime" ou "Quand ça compile, ça marche" ou encore "Le compiler Elm est mon meilleur ami de pair-programming".Après avoir utilisé ce language pendant plus d'un an en production, nous verrons si tout est si magique que cela et surtout, le cas échéant, quel est le prix à payer pour y parvenir. Nous aborderons également des points comme "Quelle est la différence avec TypeScript ?" ou "Est-ce que cela marche aussi bien côté client que côté serveur ?".
+            <title><![CDATA[var, let and const - What, why and how - ES6 JavaScript Features]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
 
-Par : Paul Dijou
+In ES5, we only had one type of variable, var, but in ES6, we have three. types of variables: var, let and const. In this video, we explore the what, why, and how of var, let and const, and I also do a little lecture on the value of minimising mutable state. 
 
-Talk filmé au DevFest Toulouse 2017
-https://devfesttoulouse.fr]]></description>
-            <link>https://dev.tube/video/BHTgiBGyY8U</link>
-            <guid isPermaLink="true">https://dev.tube/video/BHTgiBGyY8U</guid>
-            <pubDate>Mon, 02 Jul 2018 09:57:20 GMT</pubDate>
+► 00:35 var keyword in JavaScript
+► 02:35 Immediately-Invoked Function Expression (IIFE) in JavaScript
+► 03:14 hoisting variables in JavaScript
+► 08:29 let keyword in JavaScript
+► 11:55 const keyword in JavaScript
+► 14:14 Minimize mutable state when programming
+
+I'm also active on:
+- Twitter https://twitter.com/mpjme
+- Medium https://medium.com/@mpjme
+- Quora https://www.quora.com/profile/Mattias-Petter-Johansson
+
+Resources:
+
+- Semicolons cannot save you! (Another funfunfunction video)
+https://www.youtube.com/watch?v=Qlr-FGbhKaI&index=11&list=PL0zVEGEvSaeH21VDycWYNWU7VKUA-xLzg
+
+- ES6 JavaScript Features (Playlist of this series)
+https://www.youtube.com/watch?v=ategZqxHkz4&index=1&list=PL0zVEGEvSaeHJppaRLrqjeTPnCH6vw-sm]]></description>
+            <link>https://dev.tube/video/sjyJBL5fkp8</link>
+            <guid isPermaLink="true">https://dev.tube/video/sjyJBL5fkp8</guid>
+            <pubDate>Mon, 02 Jul 2018 09:56:45 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Big Data, de l’étude à l’action en marketing - Christophe Benavent]]></title>
-            <description><![CDATA[Vidéo tournée lors de #BlendWebMix 2015.
+            <title><![CDATA[How to Build a Responsive Website From Start to Finish - Sketching, Wireframes & Design - Part2]]></title>
+            <description><![CDATA[Today we sketch UI's ( 2:28 ) and execute a visual design in photoshop ( 24:25 )
 
-Big Data, de l’étude à l’action en marketing - Christophe Benavent]]></description>
-            <link>https://dev.tube/video/lKrRGRANG8A</link>
-            <guid isPermaLink="true">https://dev.tube/video/lKrRGRANG8A</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:09 GMT</pubDate>
+---
+
+Extended Photoshop video - http://youtu.be/xHUZyvQGuX4
+
+---
+
+A big thank you to these creators for contributing sample projects for the "work" section:
+
+Micael Butial -https://www.behance.net/gallery/14751131/-TYPO-International-Design-Talks 
+
+Petras Nargėla - https://www.behance.net/gallery/16750837/Free-80-Crispy-Icons-in-PSD-AI-SVG-Webfont 
+
+Sergey Valiukh - https://www.behance.net/gallery/13745729/Timeline-Page 
+
+Ayoub Elred - https://www.behance.net/gallery/15812143/Flat-Mobile-UIUX-Concept-download 
+
+Anton Skvortsov - https://www.behance.net/gallery/16483395/City-IN-website-concept 
+
+Nick Zoutendijk - https://www.behance.net/gallery/13870569/Stripes-Co-Free-icon-Set 
+
+Jonathan Quintin - https://www.behance.net/gallery/12748107/Weather-Dashboard-Global-Outlook-UIUX
+
+Jieyu Xiong - https://www.behance.net/gallery/15063575/Fresh-It-Up-App-Design 
+
+---
+
+DevTips is a YouTube show about web design and development.
+
+HTML5 Basics Playlist:
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4KlJn1pMYPVV3eYzxJlWcON
+
+CSS Basics Playlist:
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4IOmy04kDxh_hqODMqoeeCy
+
+----
+
+DevTips now has a twitter account:
+https://twitter.com/DevTipsShow
+
+Travis also tweets:
+https://twitter.com/travisneilson]]></description>
+            <link>https://dev.tube/video/mkHFrk3WuYQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/mkHFrk3WuYQ</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:48 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[BDX I/O 2017 - Réalisation et déploiement rapide d'un chatbot, Coenen BENJAMIN]]></title>
-            <description><![CDATA[Actuellement les chatbots sont en pleine expansion et sont de plus en plus utilisés. Comment on développe un chatbot ? Quels sont les pièges ? Quels sont les cas d’utilisations ? La manière de penser l'UX (user experience) est totalement différente de nos applications, comment pouvons-nous tirer pleinement partie de ces nouvelles expériences ? La phase de déploiement ou de test d'un chatbot peut être rapidement un frein pour un développeur. Après avoir développé plusieurs chatbot qui sont maintenant en production je vais tenter de vous présenter différents moyens pour déployer vos chatbots à moindre coût et sans trop d'effort.]]></description>
-            <link>https://dev.tube/video/f4Oj8YD6D0k</link>
-            <guid isPermaLink="true">https://dev.tube/video/f4Oj8YD6D0k</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
+            <title><![CDATA[Design + Code my Personal Website in 12 hours – Hour 1: Discovery]]></title>
+            <description><![CDATA[Today we start an incredibly personal project. Thank you for joining me on this.
+
+Last year's long series: https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI
+
+This video was sponsored by the DevTips Patron Community - https://www.patreon.com/DevTips
+
+You should follow DevTips on Twitter - https://twitter.com/DevTipsShow]]></description>
+            <link>https://dev.tube/video/sJhhLvW-Xvg</link>
+            <guid isPermaLink="true">https://dev.tube/video/sJhhLvW-Xvg</guid>
+            <pubDate>Mon, 02 Jul 2018 09:58:49 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Fontes variables, la matrice typographique - Malou VERLOMME]]></title>
-            <description><![CDATA[À l’heure de la création liquide ou “responsive”, les fontes se mettent à la page. 
+            <title><![CDATA[async / await in JavaScript - What, Why and How - Fun Fun Function]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
 
-La technologie “Multiple Master” et plus récemment les “variable fonts” permettent au dessinateur de caractères de de réfléchir en terme d’espace de design et non plus en forme statique, comme cela a été le cas pendant des siècles. 
+async and await in JavaScript allows us to pause the execution of functions, and that allows us to write asynchronous code that reads like synchronous code.
 
-Cela ouvre des perspectives infinies pour le créateur, mais aussi pour l’utilisateur qui se trouvera demain en possession d’une matrice typographique. 👉 La présentation sur SlideShare : http://bit.ly/2klARDN]]></description>
-            <link>https://dev.tube/video/YOwsQN5PKSU</link>
-            <guid isPermaLink="true">https://dev.tube/video/YOwsQN5PKSU</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:36 GMT</pubDate>
+🔗 Code snippets from the episode
+https://gist.github.com/mpj/3f8bc0c6ecda4294fbeff99f1e3fae85
+
+🔗 Promises video
+https://youtu.be/2d7s3spWAzo?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+
+🔗 Map video
+https://youtu.be/bCqtb-Z5YGQ?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+
+🔗 Inline evaluation plugin
+http://quokka.funfunfunction.com
+
+🔗  mpj on Twitter
+https://twitter.com/mpjme
+
+🔗  Help translate the show to your language
+http://www.youtube.com/timedtext_cs_panel?tab=2&c=UCO1cgjhGzsSYb1rsB4bFe4Q
+
+Inside a function marked as async in JavaScript, you are allowed to place the await keyword in front of an expression that returns a Promise. When you do, the execution of the async function is paused until that Promise is resolved.
+
+The idea with async / await in JavaScript is to be able to write asynchronous code that flows like synchronous code.]]></description>
+            <link>https://dev.tube/video/568g8hxJJp4</link>
+            <guid isPermaLink="true">https://dev.tube/video/568g8hxJJp4</guid>
+            <pubDate>Mon, 02 Jul 2018 09:59:36 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[BDX I/O 2017 - Les Vendredis noirs : même pas peur ! David PILATO]]></title>
-            <description><![CDATA[Surveiller une application complexe n'est pas une tâche aisée, mais avec les bons outils, ce n'est pas si sorcier. Néanmoins, des périodes fortes type "Black Friday" (Vendredi noir) peuvent pousser votre application aux limites de ce qu'elle peut supporter, ou pire, la faire crasher. Et parce que le système est fortement sollicité, il génère encore davantage de logs qui peuvent également mettre à mal votre système de supervision. Cette session aborde les bonnes pratiques d'utilisation de la suite Elastic ainsi que des trucs et astuces pour vous aider à passer sans souci vos Vendredis noirs !]]></description>
-            <link>https://dev.tube/video/QgK8Yf3S4V8</link>
-            <guid isPermaLink="true">https://dev.tube/video/QgK8Yf3S4V8</guid>
-            <pubDate>Mon, 02 Jul 2018 09:58:46 GMT</pubDate>
+            <title><![CDATA[Reduce Advanced - Part 4 of Functional Programming in JavaScript]]></title>
+            <description><![CDATA[💖 Support the show by becoming a Patreon
+https://www.patreon.com/funfunfunction
+
+In this video series, we learn how to do functional programming in JavaScript. In this fourth one, we spend a little bit more time on *reduce*. 
+
+Playlist of full series is here:
+https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+
+How to install and use io.js (for the arrow functions example)
+http://davidwalsh.name/es6-io
+
+You want to follow me on Twitter and Quora:
+https://twitter.com/mpjme
+http://www.quora.com/Mattias-Petter-Johansson]]></description>
+            <link>https://dev.tube/video/1DMolJ2FrNY</link>
+            <guid isPermaLink="true">https://dev.tube/video/1DMolJ2FrNY</guid>
+            <pubDate>Mon, 02 Jul 2018 09:57:24 GMT</pubDate>
         </item>
     </channel>
 </rss>
