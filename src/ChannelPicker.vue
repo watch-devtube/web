@@ -1,8 +1,6 @@
 <template lang="pug">
-  .picker
-    a.button(v-on:click="pickAChannel()") 
-      span.icon: i.fas.fa-filter
-      span Channels
+  .control
+    a.button.is-small(v-on:click="pickAChannel()") Channels
     .modal(v-if="open" v-bind:class="{ 'is-active': open }")
         .modal-background
         .modal-card

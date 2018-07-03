@@ -1,8 +1,6 @@
 <template lang="pug">
-  .picker
-    a.button(v-on:click="pickATag()") 
-      span.icon: i.fas.fa-filter
-      span Tags
+  .control
+    a.button.is-small(v-on:click="pickATag()") Tags
     .modal(v-if="open" v-bind:class="{ 'is-active': open }")
         .modal-background
         .modal-card
@@ -10,12 +8,23 @@
             p.modal-card-title Tags
             button.delete(aria-label="close" v-on:click="close()")
           section.modal-card-body
-            .tags
-              a.tag.is-capitalized(v-for="tag in tags" :href="'/tag/' + tag") {{tag}}        
+            .columns.is-multiline.is-mobile
+              .column.is-one-quarter-desktop.is-one-third-tablet.is-half-mobile(v-for="tag in tags")
+                a.tag.picker.is-capitalized(:href="'/tag/' + tag"): span {{tag}}        
 </template>
 <style lang="scss">
   .avatar {
     border-radius: 50%
+  }
+
+  a.tag.picker {
+    width: 100%;
+
+    span {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
   }
 </style>
 <script>

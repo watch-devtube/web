@@ -16,7 +16,8 @@
     section.section
           .container
             .columns
-              .column.is-one-quarter.is-hidden-touch
+
+              .column.is-one-quarter.is-hidden-touch(v-if="!newMode")
                 .columns(v-if="newVideos.length && !newOnly")
                   .column
                     .content
@@ -24,27 +25,18 @@
                         b {{newVideos.length}} 
                         | new videos since yesterday!
                       a.button.is-info.is-outlined(v-on:click="showNewVideos()") Show me
-                .columns(v-if="!newMode")
+                .columns
                   .column
                     h1.title Tags
                     ais-refinement-list.is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags" :sort-by="['count:desc', 'name:asc']")
-                .columns(v-if="newMode")
-                  .column
-                    TagPicker
-                .columns(v-if="!speaker && !newMode")
+                .columns(v-if="!speaker")
                   .column
                     h1.title Speaker
                     ais-refinement-list.is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker.name" :sort-by="['count:desc', 'name:asc']")
-                .columns(v-if="!speaker && newMode")
-                  .column
-                    SpeakerPicker
-                .columns(v-if="!newMode")
+                .columns
                   .column
                     h1.title Channel
-                    ais-refinement-list.is-is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle" :sort-by="['count:desc', 'name:asc']")
-                .columns(v-if="newMode")
-                  .column
-                    ChannelPicker             
+                    ais-refinement-list.is-is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle" :sort-by="['count:desc', 'name:asc']")     
                 .columns
                   .column
                     h1.title Year
@@ -55,8 +47,16 @@
                     .columns
                       .column
                         ActiveFilters(:speaker="speaker")
-                      .column.has-text-right
-                        .addthis_inline_share_toolbox
+                      .column
+                        .field.is-grouped.r(v-if="newMode")
+                          .control
+                            a.button.is-info.is-small.is-outlined(v-if="!newOnly" v-on:click="showNewVideos()") 
+                              | Show&nbsp;
+                              b {{newVideos.length}}
+                              | &nbsp;new videos
+                          TagPicker
+                          SpeakerPicker
+                          ChannelPicker
                     ais-no-results
                       template(slot-scope="props")
                         //- .notification(v-if="props.query")
@@ -71,19 +71,23 @@
                           p Sorry, search is not available now. We're working on the solution.
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
-                        .column.is-6.is-4-widescreen.is-flex-tablet
+                        .column.is-6.is-flex-tablet(v-bind:class="{ 'is-3-widescreen': newMode, 'is-4-widescreen': !newMode }")
                           VideoCard(:tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
     section.section
       .container
         .columns
           .column.has-text-right
-            a(href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png" srcset="/search-by-algolia.svg")
+            a(v-if="!newMode" href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png" srcset="/search-by-algolia.svg")
             br
             br
             nav.paging(role="navigation" aria-label="pagination")
              ais-pagination.pagination(:class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
 </template>
 <style lang="scss">
+
+.field.is-grouped.r {
+  justify-content: flex-end;
+}
 
 header {
   background-color: #343d46;
