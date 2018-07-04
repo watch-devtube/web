@@ -118,24 +118,33 @@ export default class Fastr {
     return this.speakers.chain().simplesort('name').data()
   }
 
-  search(q: string, p: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
-    if (q) {
-      let hits = this.lunr.search(q)
-      let hitsTotal = hits.length
-      return hits
-        .map(hit => this.videos.by("objectID", hit.ref))
-        .sort(this.byRank)
-        .slice(p * maxHitsPerPage, p * maxHitsPerPage + maxHitsPerQuery)
-    } else {
+  search(query: string, refinement = {}, page: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
+    // if there is fuzzy query string provided, then search in Loki
+    if (!query) {
       let descending = true
       return this.videos
         .chain()
+        .find(refinement)
         .compoundsort([['featured', descending], ['satisfaction', descending]])
-        .offset(p * maxHitsPerPage)
+        .offset(page * maxHitsPerPage)
         .limit(maxHitsPerQuery)
         .data()
     }
 
+    // if fuzzy query string provided, then search in Lunr AND Loki
+    if (query) {
+      let queryHits = this.searchInLunr(query, page, maxHitsPerPage, maxHitsPerQuery)
+      return queryHits
+    }    
+  }
+
+  private searchInLunr(query: string, page: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
+    let hits = this.lunr.search(query)
+    let hitsTotal = hits.length
+    return hits
+      .map(hit => this.videos.by("objectID", hit.ref))
+      .sort(this.byRank)
+      .slice(page * maxHitsPerPage, page * maxHitsPerPage + maxHitsPerQuery)
   }
 
 

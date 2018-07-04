@@ -5,7 +5,7 @@
       nav.level
         .level-left
           .level-item
-            a(href="//dev.tube"): img.logo(src="/logo.png" srcset="/logo.svg")
+            a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
         .level-item.has-text-centered
         .level-right
           .level-item.is-size-4

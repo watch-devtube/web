@@ -11,7 +11,8 @@
           .media(v-if="speaker")
               .media-left
                   figure.image.is-48x48
-                    a(:href="'/@' + speaker.twitter"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+                    a(v-if="!newMode" :href="'/@' + speaker.twitter"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+                    router-link.has-text-white(v-else :to="{ name: 'speaker', params: { speaker : speaker.twitter} }"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .media-content
                 p.title.is-6: a.has-text-black(:href="'/@' + speaker.twitter") {{speaker.name}}
                 p.subtitle.is-7 
@@ -101,6 +102,7 @@
   import Tags from './Tags.vue'
   export default {
     props: { 
+      newMode: { type: Boolean, required: true },
       id: { type: String, required: true },
       title: { type: String, required: true },
       channel: { type: String, required: true },

@@ -5,12 +5,17 @@
         nav.level
           .level-left
             .level-item
-              a(href="//dev.tube"): img.logo(src="/logo.png" srcset="/logo.svg")
-          .level-item.has-text-centered
+              a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
+          .level-item.has-text-centered(v-if="newMode")
+              Input(v-bind:class="{ 'is-invisible': speaker }" placeholder="Search for videos...")
+              router-link.has-text-white(v-if="speaker" :to="{ name: 'search' }") 
+                i.fas.fa-arrow-circle-left 
+                |  back to search
+          .level-item.has-text-centered(v-else)
               Input(placeholder="Search for videos...")
-          .level-right(style="font-family: Lato")
-            .level-item.links.is-size-10.has-text-white
-              a(href="https://devternity.com" target="_blank")
+          .level-right.has-text-lato
+            .level-item.links.is-size-10
+              a.has-text-white(href="https://devternity.com" target="_blank")
                 span inspired by  
                 strong DevTernity
     section.section
@@ -45,12 +50,18 @@
                 .columns
                   .column
                     .columns
-                      .column
+                      .column(v-if="newMode")
+                        .field.is-grouped.is-grouped-multiline
+                        .control
+                          .tags.has-addons(v-if="speaker")
+                            .tag.is-link.is-lowercase @{{speaker}}
+                            router-link.tag.is-delete(:to="{ name: 'search' }")
+                      .column(v-else)
                         ActiveFilters(:speaker="speaker")
                       .column
                         .field.is-grouped.r(v-if="newMode")
                           .control
-                            a.button.is-info.is-small.is-outlined(v-if="!newOnly" v-on:click="showNewVideos()") 
+                            a.button.is-info.is-small.is-outlined(v-if="!newOnly && newVideos.length && !speaker" v-on:click="showNewVideos()") 
                               | Show&nbsp;
                               b {{newVideos.length}}
                               | &nbsp;new videos
@@ -72,7 +83,7 @@
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
                         .column.is-6.is-flex-tablet(v-bind:class="{ 'is-3-widescreen': newMode, 'is-4-widescreen': !newMode }")
-                          VideoCard(:tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
+                          VideoCard(:newMode="newMode" :tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
     section.section
       .container
         .columns
@@ -87,6 +98,10 @@
 
 .field.is-grouped.r {
   justify-content: flex-end;
+}
+
+.has-text-lato {
+  font-family: Lato
 }
 
 header {
@@ -132,9 +147,6 @@ header {
   } 
 }
 
-#videos {
-
-}
 </style>
 <script>
 import { createFromAlgoliaCredentials } from 'vue-instantsearch'
@@ -168,16 +180,17 @@ const searchStore = window.fuseMode ?
     'c2655fa0f331ebf28c89f16ec8268565'
 );
 
-searchStore.queryParameters = { hitsPerPage : 21 }
-
-
-
-if (window.speaker) {
+if (window.speaker && !window.fuseMode) {
   searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
   searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
 }
 
+searchStore.queryParameters = { hitsPerPage : 21 }
+
 export default { 
+  props: {
+    speaker: { type: String, required: false }
+  },
   data: function() {
     return {
       newMode: window.fuseMode,
@@ -199,14 +212,26 @@ export default {
   },
   methods: {
     fetch() {
-      this.speaker = window.speaker;
-      this.newVideos = window.newVideos;
+      this.newVideos = window.newVideos
+      this.newMode = window.fuseMode
+
+      if (this.newMode) {
+        searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
+      }
+
     },
     showNewVideos: function() {
       let newOnly = this.newVideos.map(id => `objectID:${id}`).join(' OR ')
       this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
   },
-  components: { ActiveFilters, VideoCard, YearRange, Input, SpeakerPicker, TagPicker, ChannelPicker }
-};
+  components: { 
+    ActiveFilters, 
+    VideoCard, 
+    YearRange, 
+    Input, 
+    SpeakerPicker, 
+    TagPicker, 
+    ChannelPicker }
+}
 </script>

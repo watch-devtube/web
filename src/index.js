@@ -25,8 +25,8 @@ const router = new VueRouter({
   routes: [
     // { name: 'search', path: '/search', component: Search },
     { name: 'video', path: '/video/:id', component: Watch, props: true },
-    { name: 'speaker', path: '/@:id', component: Search, props: true },
-    { name: 'search', path: '/', component: Search },
+    { name: 'speaker', path: '/@:speaker', component: Search, props: true },
+    { name: 'search', path: '/', component: Search, props: true },
   ],
 })
 

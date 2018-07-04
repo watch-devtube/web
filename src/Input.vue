@@ -1,5 +1,5 @@
-<template>
-  <input v-model.lazy="query" v-debounce="300" />
+<template lang="pug">
+  input(v-model.lazy="query" v-debounce="300")
 </template>
 
 <script>

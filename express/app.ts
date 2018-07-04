@@ -107,7 +107,7 @@ async function proxy(req: Request, res: Response) {
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     res.render('index.html', {      
       title: title,
-      fuseMode: JSON.stringify(fuseMode),
+      fuseMode: fuseMode,
       newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
         { name: "description", content: description },
@@ -126,6 +126,7 @@ async function proxy(req: Request, res: Response) {
     res.render('index.html', {
       title: title,
       speaker: `"${speaker}"`,
+      fuseMode: fuseMode,
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
@@ -154,13 +155,15 @@ async function proxy(req: Request, res: Response) {
     res.status(200).send(speakers)
   } else if (req.path.startsWith("/search") && fuseMode) {
 
-    let q = req.body.requests[0].params.query
-    let p = req.body.requests[0].params.page
+
+    let q = req.body.query || req.body.requests[0].params.query
+    let p = req.body.page || req.body.requests[0].params.page
+    let r = req.body.refinement || req.body.requests[0].params.refinement
 
     console.time(`Query ${q}`)
     let maxHitsPerPage = 21
     let maxHitsPerQuery = maxHitsPerPage * 10
-    let hits = fastr.search(q, p, maxHitsPerPage, maxHitsPerQuery)
+    let hits = fastr.search(q, r, p, maxHitsPerPage, maxHitsPerQuery)
     let hitsPerPage = hits.slice(0, maxHitsPerPage)
     console.timeEnd(`Query ${q}`)
     res.status(200).send(
@@ -173,20 +176,6 @@ async function proxy(req: Request, res: Response) {
             "nbPages": Math.floor(hits.length / maxHitsPerPage),
             "hitsPerPage": maxHitsPerPage,
             "processingTimeMS": 2,
-            "facets": {
-              "tags": {
-                "career": 2,
-                "craftsmanship": 2,
-                ".net": 1
-              },
-              "channelTitle": {
-                "Agile Lietuva": 1,
-                "I T.A.K.E. Unconference": 1
-              },
-              "speaker.name": {
-                "Eduards Sizovs": 2
-              }
-            },
             "exhaustiveFacetsCount": true,
             "exhaustiveNbHits": true,
             "query": q,
@@ -203,6 +192,7 @@ async function proxy(req: Request, res: Response) {
       videoCache.set(objectID, video)
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
+        fuseMode: fuseMode,
         preloadedEntity: JSON.stringify(video),
         meta: [
           { name: 'description', content: video.description },
