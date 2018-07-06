@@ -4,8 +4,46 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 06 Jul 2018 11:59:38 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Jul 2018 12:10:04 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Coding Challenge #3: The Snake Game]]></title>
+            <description><![CDATA[In this 10 Minute Coding Challenge, I attempt to code a p5.js version of the Snake Game.
+
+Send me your 10 minute coding challenge!
+
+Contact: http://twitter.com/shiffman
+
+To see the debugging process: https://www.youtube.com/watch?v=yUO2bWfBgN8#t=39m00s
+
+Source Code For This Challenge: 
+p5.js: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_03_Snake_game_p5.js
+Processing: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_03_Snake_game
+
+p5.js: https://p5js.org/
+
+Wikipedia page for the Snake Game: https://en.wikipedia.org/wiki/Snake_(video_game)
+
+For More 10 Minute Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
+            <link>https://dev.tube/video/AaGK-fj-BAM</link>
+            <guid isPermaLink="true">https://dev.tube/video/AaGK-fj-BAM</guid>
+            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #4: Purple Rain in Processing]]></title>
+            <description><![CDATA[In this viewer submitted Coding Challenge, I attempt to code a Purple Rain Simulator in Processing.
+
+http://thecodingtrain.com/CodingChallenges/004-purplerain.html
+
+Contact: http://twitter.com/shiffman
+
+Processing: https://processing.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
+            <link>https://dev.tube/video/KkyIDI6rQJI</link>
+            <guid isPermaLink="true">https://dev.tube/video/KkyIDI6rQJI</guid>
+            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Coding Challenge #31: Flappy Bird]]></title>
             <description><![CDATA[In this Coding Challenge, I attempt to program in JavaScript (using the p5.js framework) a clone of the game Flappy Bird.
@@ -34,6 +72,56 @@ http://amara.org/v/VR4Z/]]></description>
             <link>https://dev.tube/video/cXgA1d_E-jY</link>
             <guid isPermaLink="true">https://dev.tube/video/cXgA1d_E-jY</guid>
             <pubDate>Fri, 06 Jul 2018 11:56:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #11: 3D Terrain Generation with Perlin Noise in Processing]]></title>
+            <description><![CDATA[In this Coding Challenge, I create a 3D procedural terrain using Perlin Noise and the beginShape() function in Processing.
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Send me your coding challenges!
+
+Contact: https://twitter.com/shiffman
+
+Nature of Code class on Kadenze: https://www.kadenze.com/courses/the-nature-of-code/info
+
+My Perlin Noise video: https://www.youtube.com/watch?v=8ZEMLCnn8v0
+beginShape() reference: https://processing.org/reference/beginShape_.html
+noise() reference: https://processing.org/reference/noise_.html
+
+Source Code for this Challenge:
+Processing: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_011_PerlinNoiseTerrain
+p5.js: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_011_PerlinNoiseTerrain_p5.js
+
+Processing: https://processing.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
+            <link>https://dev.tube/video/IKB1hWWedMk</link>
+            <guid isPermaLink="true">https://dev.tube/video/IKB1hWWedMk</guid>
+            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #1: Starfield in Processing]]></title>
+            <description><![CDATA[This is the first in a new series of videos.  In this video I attempt to program a "star field" or "warp speed" visualization in Processing.  
+
+Send me your 10 minute coding challenge!
+
+http://twitter.com/shiffman
+
+Source Code:
+Processing: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_01_StarField
+p5.js: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_01_StarField_p5.js
+
+The code I wrote in the video was inspired by this example: 
+
+http://cs.brynmawr.edu/gxk2013/examples/transformations/starfield/
+
+Help us caption & translate this video!
+
+http://amara.org/v/Qbsv/]]></description>
+            <link>https://dev.tube/video/17WoOqgXsRM</link>
+            <guid isPermaLink="true">https://dev.tube/video/17WoOqgXsRM</guid>
+            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Python Tutorial | Python Tutorial for Beginners | Python Training | Edureka]]></title>
@@ -160,6 +248,29 @@ http://amara.org/v/HCxe/]]></description>
             <link>https://dev.tube/video/8j0UDiN7my4</link>
             <guid isPermaLink="true">https://dev.tube/video/8j0UDiN7my4</guid>
             <pubDate>Fri, 06 Jul 2018 11:54:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #5: Space Invaders in JavaScript with p5.js]]></title>
+            <description><![CDATA[In this viewer submitted Coding Challenge, I take on the task of coding a Space Invaders game to play in browser in JavaScript/HTML and the p5.js library.
+
+Send me your Coding Challenge ideas!
+
+Contact: http://twitter.com/shiffman
+
+Source Code For This Challenge:
+p5.js:  https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_05_Space_invaders_p5.js
+Processing:  https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_05_Space_invaders
+
+p5.js: https://p5js.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/Qbs6/]]></description>
+            <link>https://dev.tube/video/biN3v3ef-Y0</link>
+            <guid isPermaLink="true">https://dev.tube/video/biN3v3ef-Y0</guid>
+            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Coding Challenge #86: Cube Wave by Bees and Bombs]]></title>
@@ -297,6 +408,37 @@ Joga Rao, Principal Data Architect at AEMO says: “I am a Customer at Edureka. 
             <link>https://dev.tube/video/IT1X42D1KeA</link>
             <guid isPermaLink="true">https://dev.tube/video/IT1X42D1KeA</guid>
             <pubDate>Fri, 06 Jul 2018 11:58:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[15.1: What is Node.js? - Twitter Bot Tutorial]]></title>
+            <description><![CDATA[This video covers the basics of node.js.   What is node.js?  What is server-side programming?  What might you use it for and how do you get started?  Basic unix commands and working with terminal are covered.
+
+Darius Kazemi Eyeo talk: https://vimeo.com/112289364
+Allison Parrish twitter bot tutorial: http://air.decontextualize.com/twitterbot/
+NY Magazine on bots: http://nymag.com/following/2015/11/12-weirdest-funniest-smartest-twitter-bots.html
+
+All examples: https://github.com/shiffman/Video-Lesson-Materials
+
+Contact: https://twitter.com/shiffman
+
+Next video:
+https://youtu.be/s70-Vsud9Vk
+
+Learn JavaScript basics: 
+https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Learn Processing basics:
+https://www.youtube.com/user/shiffman/playlists?sort=dd&shelf_id=2&view=50
+
+More about data and APIs:
+https://www.youtube.com/playlist?list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r
+
+Help us caption & translate this video!
+
+http://amara.org/v/Qbts/]]></description>
+            <link>https://dev.tube/video/RF5_MPSNAtU</link>
+            <guid isPermaLink="true">https://dev.tube/video/RF5_MPSNAtU</guid>
+            <pubDate>Fri, 06 Jul 2018 12:00:32 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[What is Git | What is GitHub | Git Tutorial | GitHub Tutorial | Devops Tutorial | Edureka]]></title>
@@ -501,6 +643,35 @@ http://amara.org/v/7hHs/]]></description>
             <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[Coding Challenge #2: Menger Sponge Fractal]]></title>
+            <description><![CDATA[In this 10 Minute Coding Challenge, I attempt to code the Menger Sponge (fractals) using Processing.
+
+Send me your 10 minute coding challenge!
+
+Contact: http://twitter.com/shiffman
+
+Prequel where I sort some of this out: https://youtu.be/Md5LIDW0RyY?t=2738 
+
+Code for this challenge: 
+https://github.com/CodingTrain/website/tree/master/CodingChallenges
+
+Processing: https://processing.org/
+Wikipedia page of the Menger Sponge: https://en.wikipedia.org/wiki/Menger_sponge
+
+Processing topics covered:
+P3D: https://processing.org/tutorials/p3d/
+ArrayList: https://processing.org/reference/ArrayList.html
+
+To learn more about fractals using Processing: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bXUJvjnMWGU5SmjhI-OXef
+
+Help us caption & translate this video!
+
+http://amara.org/v/Qbsl/]]></description>
+            <link>https://dev.tube/video/LG8ZK-rRkXo</link>
+            <guid isPermaLink="true">https://dev.tube/video/LG8ZK-rRkXo</guid>
+            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Guest Tutorial #4: Matrix Digital Rain in p5.js with Emily Xie]]></title>
             <description><![CDATA[In this guest tutorial, Emily Xie uses the p5.js library to recreate the digital rain effect from the movie The Matrix.
 
@@ -574,248 +745,6 @@ http://amara.org/v/8Ho5/]]></description>
             <link>https://dev.tube/video/XJ7HLz9VYz0</link>
             <guid isPermaLink="true">https://dev.tube/video/XJ7HLz9VYz0</guid>
             <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #29: Smart Rockets in p5.js]]></title>
-            <description><![CDATA[In this (very long) Coding Challenge, I implement a genetic algorithm from scratch and create "smart rockets" (based on a simulation by Jer Thorp).  The rockets evolve the "best" path to a target, moving around obstacles.
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Jer Thorp's Smart Rockets:
-http://www.blprnt.com/smartrockets/
-
-Contact: https://twitter.com/shiffman
-
-Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Genetic Algorithm videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/TSyw/]]></description>
-            <link>https://dev.tube/video/bGz7mv2vD6g</link>
-            <guid isPermaLink="true">https://dev.tube/video/bGz7mv2vD6g</guid>
-            <pubDate>Fri, 06 Jul 2018 11:56:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #71: Minesweeper]]></title>
-            <description><![CDATA[In this challenge, I attempt to code the classic game Minesweeper in JavaScript with the p5.js library. This video builds on some previous tutorials related to the Prototypes and multi-dimensional arrays in JavaScript.
-
-Link to the code: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_71_minesweeper
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-To buy Coding Train merchandise: https://codingtrain.storenvy.com
-To Support the Processing Foundation: https://processingfoundation.org/support
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Contact: 
-Twitter: https://twitter.com/shiffman
-The Coding Train website: http://thecodingtrain.com/
-
-Links discussed in this video:
-Minesweeper on Wikipedia: https://en.wikipedia.org/wiki/Minesweeper_(video_game)
-Minesweeper suggestion on GitHub: https://github.com/CodingTrain/Rainbow-Topics/issues/164
-Flood fill on Wikipedia: https://en.wikipedia.org/wiki/Flood_fill
-
-Related tutorials:
-2D Arrays in JavaScript: https://youtu.be/OTNpiLUSiB4
-Prototypes in JavaScript: https://youtu.be/hS_WqkyUah8
-
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Classic Video Games: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aRpfixWba8ZF6tJnZy5Mfw
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Help us caption & translate this video!
-
-http://amara.org/v/7E3o/]]></description>
-            <link>https://dev.tube/video/LFU5ZlrR21E</link>
-            <guid isPermaLink="true">https://dev.tube/video/LFU5ZlrR21E</guid>
-            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #24: Perlin Noise Flow Field]]></title>
-            <description><![CDATA[In this Coding Challenge, I use Perlin noise to create a two-dimensional flow field with the p5.js library
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-Send me your questions and coding challenges!
-Contact: https://twitter.com/shiffman
-
-p5.js noise() reference: https://p5js.org/reference/#/p5/noise
-
-p5.js: https://p5js.org/
-Processing: https://processing.org/
-
-Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-For More Perlin Noise videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/QbrZ/]]></description>
-            <link>https://dev.tube/video/BjoM9oKOAKY</link>
-            <guid isPermaLink="true">https://dev.tube/video/BjoM9oKOAKY</guid>
-            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge 51.1: A* Pathfinding Algorithm - Part 1]]></title>
-            <description><![CDATA[In this Coding Challenge, I attempt an implementation of the A* pathfinding algorithm to find the optimal path between two points in a 2D grid.  I begin by explaining the mechanics of how the algorithm works, look at pseudo-code, and then write the algorithm in JavaScript using the p5.js library for rendering.
-
-Part 2 focuses on adding obstacles (walls) to the grid as well as functionality for moving diagonally.
-.
-In Part 3, I look at ways to improve the visual design and invite you to put your own spin on it.
-
-Part 2: https://youtu.be/EaZxUCWAjb0
-Part 3: https://youtu.be/jwRT4PCT6RU
-
-Online demo: https://codingtrain.github.io/AStar/
-Code: https://github.com/CodingTrain/AStar
-
-To see the whole unedited version of this challenge: https://www.youtube.com/watch?v=S4yQYiAECnM&t=34m50s
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Contact: https://twitter.com/shiffman
- 
-A* Algorithm on Wikipedia: https://en.wikipedia.org/wiki/A*_search_algorithm
-Artificial Intelligence: A Modern Approach: http://aima.cs.berkeley.edu/
-My Maze Generation Coding Challenge: https://www.youtube.com/watch?v=HyK_Q5rrcr4
-
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Help us caption & translate this video!
-
-http://amara.org/v/2el5/]]></description>
-            <link>https://dev.tube/video/aKYlikFAV4k</link>
-            <guid isPermaLink="true">https://dev.tube/video/aKYlikFAV4k</guid>
-            <pubDate>Fri, 06 Jul 2018 11:56:23 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #27: Fireworks!]]></title>
-            <description><![CDATA[In this 4th of July themed Coding Challenge, I build an HTML5 canvas Fireworks simulation from scratch using the p5.js JavaScript library. O I also show how to use Processing to create 3D Fireworks.  This code is based off of my Nature of Code particle system examples.
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-Send me your questions and coding challenges!
-
-Contact: https://twitter.com/shiffman
-
-Links discussed in this video:
-Pixel Pyros by Seb Lee-Delisle: http://seb.ly/work/pixelpyros/
-peasycam website: http://mrfeinberg.com/peasycam/
-
-Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/QbrK/]]></description>
-            <link>https://dev.tube/video/CKeyIbT3vXI</link>
-            <guid isPermaLink="true">https://dev.tube/video/CKeyIbT3vXI</guid>
-            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #75: Wikipedia API]]></title>
-            <description><![CDATA[In this coding challenge, I attempt to make a "Wikipedia web crawler" in JavaScript. It randomly crawls from topic to topic on Wikipedia using the API and the p5.js library. 
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-To buy Coding Train merchandise: https://codingtrain.storenvy.com
-To Support the Processing Foundation: https://processingfoundation.org/support
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Contact: 
-Twitter: https://twitter.com/shiffman
-The Coding Train website: http://thecodingtrain.com/
-
-Links discussed in this video:
-Wikipedia API Help: https://www.mediawiki.org/wiki/API:Main_page
-My Video on Regular Expressions: https://youtu.be/7DG3kCDx53c
-
-
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Programming with Text videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Help us caption & translate this video!
-
-http://amara.org/v/arKb/]]></description>
-            <link>https://dev.tube/video/RPz75gcHj18</link>
-            <guid isPermaLink="true">https://dev.tube/video/RPz75gcHj18</guid>
-            <pubDate>Fri, 06 Jul 2018 11:55:37 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Live Stream #70: Coding Challenges: Asteroids and Pixel Sorting]]></title>
-            <description><![CDATA[In this Live Stream, I take on two Coding Challenges. First, I make a version of the classic Atari game Asteroids using JavaScript and HTML5 canvas with the p5.js library.  I then implement "Pixel Sorting" in Processing (Java). I sort the pixels of an image by brightness and hue.
-
-8:45 - Short Q&A
-22:58 - Coding Challenge: Asteroids with p5.js
-1:56:17 - Coding Challenge: Pixel Sorting in Processing
-2:25:00 - Conclusion/Q&A
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Contact: https://twitter.com/shiffman
-
-Links discussed in this video:
-Asteroids on Wikipedia: https://en.wikipedia.org/wiki/Asteroids_(video_game)
-Mike Bostock's page on Visualizing Algorithms: https://bost.ocks.org/mike/algorithms/
-My Trigonometry and Polar Coordinates video: https://youtu.be/znOBmOrtz_M
-Sirajology's channel: https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A
-Kittens Song: https://soundcloud.com/lostghbear/lostghbear-podopleloff-kittens-feat-dan-shiffman
-This Dot Song on Soundcloud: https://soundcloud.com/kristianpedersen/this-dot-feat-daniel-shiffman?in=kristianpedersen/sets/coding-rainbow-remixes
-
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-Asteroids Code: https://github.com/CodingTrain/Asteroids
-Asteroids Game: https://codingrainbow.github.io/Asteroids/
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Live Streams: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bxnFR6no70vlxxuxDEzflz
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/72pW/]]></description>
-            <link>https://dev.tube/video/VFnF87-JNtY</link>
-            <guid isPermaLink="true">https://dev.tube/video/VFnF87-JNtY</guid>
-            <pubDate>Fri, 06 Jul 2018 11:56:23 GMT</pubDate>
         </item>
     </channel>
 </rss>
