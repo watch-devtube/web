@@ -30,7 +30,8 @@
     "lunr": "^2.3.0",
     "mustache-express": "^1.2.6",
     "serverless-google-cloudfunctions": "^1.1.0",
-    "serverless-plugin-typescript": "^1.1.5"
+    "serverless-plugin-typescript": "^1.1.5",
+    "thenby": "^1.2.6"
   },
   "devDependencies": {
     "@types/node": "^10.0.3"

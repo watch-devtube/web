@@ -1702,6 +1702,10 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
+thenby@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/thenby/-/thenby-1.2.6.tgz#96a685699d5a1e9cb0a11762293ae621d886bb0f"
+
 through@~2.3.4:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"

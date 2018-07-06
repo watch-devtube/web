@@ -27,9 +27,7 @@
                     span {{slot.item.name.charAt(0) + '. ' + slot.item.name.split(' ')[1]}}
                 h1.title Channels
                 ExpandableTags(:items="channels" :limit="15" :route="routeToChannel")
-                  template(slot-scope="slot") 
-                    i.fab.fa-youtube
-                    | &nbsp;{{slot.item.title | truncate(15)}}
+                  template(slot-scope="slot") {{slot.item.title | truncate(11)}}
               .column.is-one-quarter.is-hidden-touch(v-else)
                 .columns(v-if="newVideos.length && !newOnly")
                   .column
