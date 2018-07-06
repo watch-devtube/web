@@ -17,7 +17,7 @@ export default class Fastr {
   tags: Set<string>
   speakers: any
   channels: any
-  byRank: any
+  byProperty: any
 
   constructor(docsHome: String) {
 
@@ -44,16 +44,16 @@ export default class Fastr {
     this.speakers = speakers
     this.videos = videos
 
-    let byRank = (it, that) => {
+    let byProperty = (it, that, property) => {
       let left = that as any
       let right = it as any
-
-      if (left.featured && !right.featured) return 1;
-      if (right.featured && !left.featured) return -1;
-
-      return left.satisfaction - right.satisfaction
+      if (typeof left[property] === 'boolean') {
+        return (left[property] === right[property]) ? 0 : left[property] ? 1 : -1
+      }
+      return left[property] - right[property]
     }
-    this.byRank = byRank
+
+    this.byProperty = byProperty
 
     let docLoader = () => {
       let walkSync = (dir, filelist = []) => {
@@ -118,14 +118,14 @@ export default class Fastr {
     return this.speakers.chain().simplesort('name').data()
   }
 
-  search(query: string, refinement = {}, page: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
+  search(query: string, refinement = {}, sortOrder: string, page: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
     // if there is fuzzy query string provided, then search in Loki
     if (!query) {
       let descending = true
       return this.videos
         .chain()
         .find(refinement)
-        .compoundsort([['featured', descending], ['satisfaction', descending]])
+        .simplesort(sortOrder, descending)
         .offset(page * maxHitsPerPage)
         .limit(maxHitsPerQuery)
         .data()
@@ -133,17 +133,17 @@ export default class Fastr {
 
     // if fuzzy query string provided, then search in Lunr AND Loki
     if (query) {
-      let queryHits = this.searchInLunr(query, page, maxHitsPerPage, maxHitsPerQuery)
+      let queryHits = this.searchInLunr(query, sortOrder, page, maxHitsPerPage, maxHitsPerQuery)
       return queryHits
     }    
   }
 
-  private searchInLunr(query: string, page: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
+  private searchInLunr(query: string, sortOrder: string, page: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
     let hits = this.lunr.search(query)
     let hitsTotal = hits.length
     return hits
       .map(hit => this.videos.by("objectID", hit.ref))
-      .sort(this.byRank)
+      .sort((it, that) => this.byProperty(it, that, sortOrder))
       .slice(page * maxHitsPerPage, page * maxHitsPerPage + maxHitsPerQuery)
   }
 

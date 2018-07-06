@@ -2,17 +2,14 @@
   ais-index(:search-store="searchStore" index-name="videos")
     header
       .container
-        nav.level
+        nav.level(style="min-height: 80px")
           .level-left
             .level-item
               a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
-          .level-item.has-text-centered(v-if="newMode")
-              Input(v-bind:class="{ 'is-invisible': speaker }" placeholder="Search for videos...")
-              router-link.has-text-white(v-if="speaker" :to="{ name: 'search' }") 
-                i.fas.fa-arrow-circle-left 
-                |  back to search
-          .level-item.has-text-centered(v-else)
+          .level-item.has-text-centered(v-if="!newMode")
               Input(placeholder="Search for videos...")
+          .level-item.has-text-centered(v-else)
+              Input(v-if="!speaker && !tag && !channel" placeholder="Search for videos...")
           .level-right.has-text-lato
             .level-item.links.is-size-10
               a.has-text-white(href="https://devternity.com" target="_blank")
@@ -21,8 +18,19 @@
     section.section
           .container
             .columns
-
-              .column.is-one-quarter.is-hidden-touch(v-if="!newMode")
+              .column.is-one-quarter(v-if="newMode")
+                h1.title Tags
+                ExpandableTags(:items="tags" :limit="20" :route="routeToTag")
+                h1.title Speakers
+                ExpandableTags(:items="speakers" :limit="15" :route="routeToSpeaker")
+                  template(slot-scope="slot")
+                    span {{slot.item.name.charAt(0) + '. ' + slot.item.name.split(' ')[1]}}
+                h1.title Channels
+                ExpandableTags(:items="channels" :limit="15" :route="routeToChannel")
+                  template(slot-scope="slot") 
+                    i.fab.fa-youtube
+                    | &nbsp;{{slot.item.title | truncate(15)}}
+              .column.is-one-quarter.is-hidden-touch(v-else)
                 .columns(v-if="newVideos.length && !newOnly")
                   .column
                     .content
@@ -50,24 +58,29 @@
                 .columns
                   .column
                     .columns
-                      .column(v-if="newMode")
-                        .field.is-grouped.is-grouped-multiline
-                        .control
-                          .tags.has-addons(v-if="speaker")
-                            .tag.is-link.is-lowercase @{{speaker}}
-                            router-link.tag.is-delete(:to="{ name: 'search' }")
-                      .column(v-else)
+                      .column(v-if="!newMode")
                         ActiveFilters(:speaker="speaker")
+                      .column(v-else)
+                        .control(v-if="speaker")
+                          .tags.has-addons
+                            .tag.is-link.is-lowercase videos by @{{speaker}}
+                            router-link.tag.is-delete(:to="{ name: 'search' }")
+                        .control(v-if="tag")
+                          .tags.has-addons
+                            .tag.is-link
+                              span.is-capitalized {{tag}} 
+                              span.is-lowercase &nbsp;videos
+                            router-link.tag.is-delete(:to="{ name: 'search' }")
+                        .control(v-if="channel")
+                          .tags.has-addons
+                            .tag.is-link
+                              span.is-capitalized {{channel}} 
+                              span.is-lowercase &nbsp;videos
+                            router-link.tag.is-delete(:to="{ name: 'search' }")
                       .column
-                        .field.is-grouped.r(v-if="newMode")
+                        .field.is-grouped-multiline.is-grouped.is-grouped-right(v-if="newMode")
                           .control
-                            a.button.is-info.is-small.is-outlined(v-if="!newOnly && newVideos.length && !speaker" v-on:click="showNewVideos()") 
-                              | Show&nbsp;
-                              b {{newVideos.length}}
-                              | &nbsp;new videos
-                          TagPicker
-                          SpeakerPicker
-                          ChannelPicker
+                            Sorting
                     ais-no-results
                       template(slot-scope="props")
                         //- .notification(v-if="props.query")
@@ -82,7 +95,7 @@
                           p Sorry, search is not available now. We're working on the solution.
                     ais-results#videos.columns.is-multiline
                       template(slot-scope="{ result }")
-                        .column.is-6.is-flex-tablet(v-bind:class="{ 'is-3-widescreen': newMode, 'is-4-widescreen': !newMode }")
+                        .column.is-6.is-flex-tablet.is-4-widescreen
                           VideoCard(:newMode="newMode" :tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
     section.section
       .container
@@ -95,10 +108,6 @@
              ais-pagination.pagination(:class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
 </template>
 <style lang="scss">
-
-.field.is-grouped.r {
-  justify-content: flex-end;
-}
 
 .has-text-lato {
   font-family: Lato
@@ -153,11 +162,10 @@ import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import { createFromAlgoliaClient } from 'vue-instantsearch'
 
 import VideoCard from './VideoCard.vue'
+import Sorting from './Sorting.vue'
 import ActiveFilters from './ActiveFilters.vue'
-import SpeakerPicker from './SpeakerPicker.vue'
-import ChannelPicker from './ChannelPicker.vue'
-import TagPicker from './TagPicker.vue'
 import YearRange from './YearRange.vue'
+import ExpandableTags from './ExpandableTags.vue'
 import Input from './Input.vue'
 
 const fuseSearchClient = {
@@ -185,14 +193,23 @@ if (window.speaker && !window.fuseMode) {
   searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
 }
 
-searchStore.queryParameters = { hitsPerPage : 21 }
+searchStore.queryParameters = {
+  hitsPerPage : 21
+}
+
 
 export default { 
   props: {
-    speaker: { type: String, required: false }
+    showNew: { type: Boolean, required: false, default: false },
+    speaker: { type: String, required: false },
+    channel: { type: String, required: false },
+    tag: { type: String, required: false }
   },
   data: function() {
     return {
+      tagsCollapsed: true,
+      speakersCollapsed: true,
+      channelsCollapsed: true,
       newMode: window.fuseMode,
       newVideos: window.newVideos,
       searchStore
@@ -208,16 +225,48 @@ export default {
     newOnly() {
       return this.searchStore.algoliaHelper.state.filters && 
         this.searchStore.algoliaHelper.state.filters.includes('objectID')
+    },
+    tags() {
+      return window.featured.tags
+    },
+    speakers() {
+      return window.featured.speakers
+    },
+    channels() {
+      return window.featured.channels
     }
   },
   methods: {
+    routeToTag(item) {
+      return { name: 'tag', params: { tag: item } }
+    },
+    routeToSpeaker(item) {
+      return { name: 'speaker', params: { speaker: item.twitter } }
+    },
+    routeToChannel(item) {
+      return { name: 'channel', params: { channel: item.title } }
+    },
     fetch() {
       this.newVideos = window.newVideos
       this.newMode = window.fuseMode
 
+
+      this.searchStore.stop()
+
       if (this.newMode) {
+        searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || 'featured' }
         searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
+
+        if (this.tag) {
+          searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
+        }
+        if (this.channel) {
+          searchStore.queryParameters = { refinement: { 'channelTitle' : this.channel } }
+        }
       }
+
+      this.searchStore.start()
+      this.searchStore.refresh()
 
     },
     showNewVideos: function() {
@@ -226,12 +275,12 @@ export default {
     }
   },
   components: { 
+    ExpandableTags,
     ActiveFilters, 
     VideoCard, 
     YearRange, 
-    Input, 
-    SpeakerPicker, 
-    TagPicker, 
-    ChannelPicker }
+    Sorting,
+    Input
+  }
 }
 </script>

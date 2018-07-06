@@ -28,6 +28,7 @@ html(lang='en')
       window.newVideos = {{& newVideos}}{{^newVideos}}[]{{/newVideos}}
       window.speaker = {{& speaker}}{{^speaker}}undefined{{/speaker}}
       window.fuseMode = {{& fuseMode}}{{^fuseMode}}false{{/fuseMode}}
+      window.featured = {{& featured}}{{^featured}}undefined{{/featured}}
     script(type='text/javascript').
       (function (d, w, c) {
       (w[c] = w[c] || []).push(function() {
@@ -76,7 +77,7 @@ html(lang='en')
           a(href="https://twitter.com/WatchDevTube" target="_blank"): i.fab.fa-twitter
         hr
         p.is-size-7 
-          | We use cookies to improve your UX (resuming video from the last played position). To inspect and block cookies use 
+          | We use cookies to improve your UX (sorting preference, resuming video from the last played position). To inspect and block cookies use 
           a(href="//ghostery.com") Ghostery
           |  on your browser.      
     script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b327a9f719db15f")

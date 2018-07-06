@@ -100,6 +100,20 @@ let fastr = fuseMode ? new Fastr(fuseDir) : undefined
 // Application logic
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+let featuredOrUndefined = () => {
+  if (!fuseMode) {
+    return undefined
+  }
+  let tags = fastr.searchTags()
+  let channels = fastr.searchChannels()
+  let speakers = fastr.searchSpeakers()
+  return JSON.stringify({
+    tags: tags,
+    channels: channels,
+    speakers: speakers
+  })
+}
+
 async function proxy(req: Request, res: Response) {
   console.log(`REQUEST PATH: ${req.path}`)
   if (!req.path || req.path == '/') {
@@ -108,6 +122,7 @@ async function proxy(req: Request, res: Response) {
     res.render('index.html', {      
       title: title,
       fuseMode: fuseMode,
+      featured: featuredOrUndefined(),
       newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
         { name: "description", content: description },
@@ -125,6 +140,7 @@ async function proxy(req: Request, res: Response) {
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     res.render('index.html', {
       title: title,
+      featured: featuredOrUndefined(),
       speaker: `"${speaker}"`,
       fuseMode: fuseMode,
       meta: [
@@ -137,33 +153,37 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
-  } else if (req.path.startsWith("/tags") && fuseMode) {
-    console.time(`Tags lookup`)
-    let tags = fastr.searchTags()
-    console.timeEnd(`Tags lookup`)
-    res.status(200).send(tags)
-  } else if (req.path.startsWith("/channels") && fuseMode) {
-    console.time(`Channels lookup`)
-    let tags = fastr.searchChannels()
-    console.timeEnd(`Channels lookup`)
-    res.status(200).send(tags)    
-  } else if (req.path.startsWith("/speakers") && fuseMode) {
-
-    console.time(`Speakers lookup`)
-    let speakers = fastr.searchSpeakers()
-    console.timeEnd(`Speakers lookup`)
-    res.status(200).send(speakers)
+  } else if (req.path.startsWith("/tag/")) {
+    let tag = req.path.split("/tag/")[1]
+    let title = `DevTube - Videos by topic @${tag}`
+    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+    res.render('index.html', {
+      title: title,
+      featured: featuredOrUndefined(),
+      fuseMode: fuseMode,
+      meta: [
+        { name: "description", content: description },
+        { name: "og:title", content: title },
+        { name: "og:description", content: description },
+        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
+      ]
+    })    
   } else if (req.path.startsWith("/search") && fuseMode) {
-
 
     let q = req.body.query || req.body.requests[0].params.query
     let p = req.body.page || req.body.requests[0].params.page
     let r = req.body.refinement || req.body.requests[0].params.refinement
+    let s = req.body.sortOrder || req.body.requests[0].params.sortOrder
+
+    console.log(s)
 
     console.time(`Query ${q}`)
     let maxHitsPerPage = 21
     let maxHitsPerQuery = maxHitsPerPage * 10
-    let hits = fastr.search(q, r, p, maxHitsPerPage, maxHitsPerQuery)
+    let hits = fastr.search(q, r, s, p, maxHitsPerPage, maxHitsPerQuery)
     let hitsPerPage = hits.slice(0, maxHitsPerPage)
     console.timeEnd(`Query ${q}`)
     res.status(200).send(
@@ -193,6 +213,7 @@ async function proxy(req: Request, res: Response) {
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
         fuseMode: fuseMode,
+        featured: featuredOrUndefined(),
         preloadedEntity: JSON.stringify(video),
         meta: [
           { name: 'description', content: video.description },
