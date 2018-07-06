@@ -4,7 +4,818 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 06 Jul 2018 03:22:46 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Jul 2018 11:59:38 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Coding Challenge #31: Flappy Bird]]></title>
+            <description><![CDATA[In this Coding Challenge, I attempt to program in JavaScript (using the p5.js framework) a clone of the game Flappy Bird.
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: https://twitter.com/shiffman
+
+Links discussed in this video:
+Flappy Bird on Wikipedia: https://en.wikipedia.org/wiki/Flappy_Bird
+
+Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+For More p5.js videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Help us caption & translate this video!
+
+http://amara.org/v/VR4Z/]]></description>
+            <link>https://dev.tube/video/cXgA1d_E-jY</link>
+            <guid isPermaLink="true">https://dev.tube/video/cXgA1d_E-jY</guid>
+            <pubDate>Fri, 06 Jul 2018 11:56:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Python Tutorial | Python Tutorial for Beginners | Python Training | Edureka]]></title>
+            <description><![CDATA[( Python Training : https://www.edureka.co/python )
+This Edureka Python tutorial (Python Tutorial Blog: https://goo.gl/wd28Zr) will help you in understanding the various fundamentals of Python programming with examples in detail . 
+Check out our Python Training Playlist: https://goo.gl/Na1p9G
+
+This Python tutorial video helps you to learn following topics:
+
+0:58 - Introduction to Python
+2:27. Who uses Python
+3:46 . Features of Python 
+10:34 . Operators in Python
+34:48. Datatypes in Python
+1:09:30. Flow Control
+1:34:18 . Functions in Python
+1:40:11. File Handling in Python
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka
+
+#Python #Pythontutorial #Pythononlinetraining #Pythonforbeginners
+
+How it Works?
+1. This is a 5 Week Instructor led Online Course,40 hours of assignment and 20 hours of project work
+2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+3. At the end of the training you will be working on a real time project for which we will provide you a Grade and a Verifiable Certificate!
+
+- - - - - - - - - - - - - - - - -
+
+About the Course
+
+Edureka's Python Online Certification Training will make you an expert in Python programming. It will also help you learn Python the Big data way with integration of Machine learning, Pig, Hive and Web Scraping through beautiful soup. During our Python Certification training, our instructors will help you:
+
+1. Master the Basic and Advanced Concepts of Python
+2. Understand Python Scripts on UNIX/Windows, Python Editors and IDEs
+3. Master the Concepts of Sequences and File operations
+4. Learn how to use and create functions, sorting different elements, Lambda function, error handling techniques and Regular expressions ans using modules in Python
+5. Gain expertise in machine learning using Python and build a Real Life Machine Learning application
+6. Understand the supervised and unsupervised learning and concepts of Scikit-Learn
+7. Master the concepts of MapReduce in Hadoop
+8. Learn to write Complex MapReduce programs
+9. Understand what is PIG and HIVE, Streaming feature in Hadoop, MapReduce job running with Python 
+10. Implementing a PIG UDF in Python, Writing a HIVE UDF in Python, Pydoop and/Or MRjob Basics
+11. Master the concepts of Web scraping in Python
+12. Work on a Real Life Project on Big Data Analytics using Python and gain Hands on Project Experience
+- - - - - - - - - - - - - - - - - - -
+
+Why learn Python?
+
+Programmers love Python because of how fast and easy it is to use. Python cuts development time in half with its simple to read syntax and easy compilation feature. Debugging your programs is a breeze in Python with its built in debugger. Using Python makes Programmers more productive and their programs ultimately better. Python continues to be a favorite option for data scientists who use it for building and using Machine learning applications and other scientific computations.
+Python runs on Windows, Linux/Unix, Mac OS and has been ported to Java and .NET virtual machines. Python is free to use, even for the commercial products, because of its OSI-approved open source license. 
+Python has evolved as the most preferred Language for Data Analytics and the increasing search trends on python also indicates that Python is the next "Big Thing" and a must for Professionals in the Data Analytics domain. 
+
+For more information, please write back to us at sales@edureka.co
+Call us at US: 1844 230 6362(toll free) or India: +91-90660 20867]]></description>
+            <link>https://dev.tube/video/N0lxfilGfak</link>
+            <guid isPermaLink="true">https://dev.tube/video/N0lxfilGfak</guid>
+            <pubDate>Fri, 06 Jul 2018 11:58:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #14: Fractal Trees - Recursive]]></title>
+            <description><![CDATA[In this coding challenge, I'm going to show you how to create a fractal tree with a recursive algorithm in p5.js.
+This is the first part of a series on algorithmic botany.
+
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+
+Send me your questions and coding challenges!
+
+Contact: https://twitter.com/shiffman
+
+
+Links discussed in this video:
+Nature of Code class on Kadenze: https://www.kadenze.com/courses/the-nature-of-code/info
+Algorithmic Botany: http://algorithmicbotany.org/
+
+
+Source Code for the Video Lessons: https://github.com/shiffman/Video-Lesson-Materials
+
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+
+For More Algorithmic Botany Videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bxNsa_3SfCPyF9Md9XvXhR
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/QbsH/]]></description>
+            <link>https://dev.tube/video/0jjeOYMjmDU</link>
+            <guid isPermaLink="true">https://dev.tube/video/0jjeOYMjmDU</guid>
+            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[1.1: Introduction - p5.js Tutorial]]></title>
+            <description><![CDATA[In this video, I talk about p5.js.  What is it? What can you do with it? Where did it come from? What is its relationship with Processing? p5.js is both a library for JavaScript and a beginner-friendly editor where you can build creative computational projects in the browser. It can be used for art, data visualization, and websites alongside other tools like HTML5, CSS and JavaScript.
+
+Next video:https://youtu.be/D1ELEeIs0j8?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Contact: https://twitter.com/shiffman
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Link to code on Github: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: http://p5js.org
+Processing: http://processing.org
+Processing Foundation: https://processingfoundation.org/
+
+For More p5.js Basics Videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Help us caption & translate this video!
+
+http://amara.org/v/HCxe/]]></description>
+            <link>https://dev.tube/video/8j0UDiN7my4</link>
+            <guid isPermaLink="true">https://dev.tube/video/8j0UDiN7my4</guid>
+            <pubDate>Fri, 06 Jul 2018 11:54:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #86: Cube Wave by Bees and Bombs]]></title>
+            <description><![CDATA[In this coding challenge, I attempt recreate a 3D @beesandbombs GIF with p5.js and the WebGL renderer.
+
+GIF: https://twitter.com/beesandbombs/status/940639806522085376
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+To buy Coding Train merchandise: https://codingtrain.storenvy.com
+To Support the Processing Foundation: https://processingfoundation.org/support
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: 
+Twitter: https://twitter.com/shiffman
+The Coding Train website: http://thecodingtrain.com/ 
+
+Links discussed in this video:
+p5.js reference: https://p5js.org/reference/
+Bees and Bombs: https://beesandbombs.tumblr.com/
+
+Videos discussed in this video:
+Simple Harmonic Motion: https://youtu.be/GvwPwIUSYqE
+WebGL playlist: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bPhi8sS1hHJ77n3zRO9FR_
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For an Introduction to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
+            <link>https://dev.tube/video/H81Tdrmz2LA</link>
+            <guid isPermaLink="true">https://dev.tube/video/H81Tdrmz2LA</guid>
+            <pubDate>Fri, 06 Jul 2018 11:54:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #93: Double Pendulum]]></title>
+            <description><![CDATA[In this coding challenge, I simulate a "double pendulum" in Processing (Java).
+
+🔗  Physics Lab Double Pendulum: https://www.myphysicslab.com/pendulum/double-pendulum-en.html
+
+🎥  Single pendulum video: https://youtu.be/9iaEqGOh5WM
+
+🚂 The Coding Train website: http://thecodingtrain.com/ 
+💖 Support this channel on Patreon: https://patreon.com/codingtrain
+🛒 To buy Coding Train merchandise: https://codingtrain.storenvy.com
+📚 Book recommendations: https://www.amazon.com/shop/thecodingtrain 
+
+💻  https://github.com/CodingTrain/Rainbow-Code
+
+🎥  For an Introduction to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥  For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+🔗  https://p5js.org/
+🔗  https://processing.org]]></description>
+            <link>https://dev.tube/video/uWzPe_S-RVE</link>
+            <guid isPermaLink="true">https://dev.tube/video/uWzPe_S-RVE</guid>
+            <pubDate>Fri, 06 Jul 2018 11:55:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AWS Tutorial For Beginners | AWS Certified Solutions Architect | AWS Training | Edureka]]></title>
+            <description><![CDATA[( AWS Architect Certification Training - https://www.edureka.co/cloudcomputing )
+This AWS Tutorial Video ( Amazon AWS Blog Series: https://goo.gl/qQwZLz ) will give you an introduction to AWS and its domains. Later it will explain in detail about the AWS Services with an interesting hands-on. This AWS tutorial is ideal for those who want to become AWS Certified Solutions Architect.
+
+Amazon AWS Video Tutorial Playlist https://goo.gl/9fQX6J
+
+In this AWS training video, you will understand :
+
+1.What is Cloud?
+2.What is AWS?
+3.Different Domains in AWS
+4.AWS Pricing
+5.Migrate Your Application to AWS Infrastructure
+6.Use case
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka
+
+#awstraining #cloudcomputing #awstutorial
+
+How it Works?
+1. This is a 5 Week Instructor led Online Course.
+2. Course consists of 30 hours of online classes, 30 hours of assignment, 20 hours of project
+3. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+4. You will get Lifetime Access to the recordings in the LMS.
+5. At the end of the training you will have to complete the project based on which we will provide you a Verifiable Certificate!
+
+- - - - - - - - - - - - - -
+About the Course
+
+AWS Architect Certification Training from Edureka is designed to provide in depth knowledge about Amazon AWS architectural principles and its components. The sessions will be conducted by Industry practitioners who will train you to leverage AWS services to make the AWS cloud infrastructure scalable, reliable, and highly available. This course is completely aligned to AWS Architect Certification - Associate Level exam conducted by Amazon Web Services.
+
+During this AWS Architect Online training, you'll learn:
+1. AWS Architecture and different models of Cloud Computing 
+2. Compute Services: Amazon EC2, Auto Scaling and Load Balancing, AWS Lambda, Elastic Beanstalk
+3. Amazon Storage Services : EBS, S3 AWS, Glacier, CloudFront, Snowball, Storage Gateway
+4. Database Services: RDS, DynamoDB, ElastiCache, RedShift
+5. Security and Identity Services: IAM, KMS
+6. Networking Services: Amazon VPC, Route 53, Direct Connect
+7. Management Tools: CloudTrail, CloudWatch, CloudFormation, OpsWorks, Trusty Advisor
+8. Application Services: SES, SNS, SQS
+
+Course Objectives
+
+On completion of the AWS Architect Certification training, learner will be able to:
+1. Design and deploy scalable, highly available, and fault tolerant systems on AWS
+2. Understand lift and shift of an existing on-premises application to AWS
+3. Ingress and egress of data to and from AWS
+4. Identifying appropriate use of AWS architectural best practices
+5. Estimating AWS costs and identifying cost control mechanisms
+
+Who should go for this course?
+
+This course is designed for students and IT professionals who want to pursue a career in Cloud Computing. The course is a best fit for:
+1. Professionals interested in managing highly-available and fault-tolerant enterprise and web-scale software deployments.
+2. Professionals who want Project Experience in migrating and deploying cloud based solutions.
+3. DevOps professionals.
+
+Pre-requisites
+
+There are no specific prerequisites for this course. Any professional who has an understanding of IT Service Management can join this training. There is no programming knowledge needed and no prior AWS experience required.
+
+Please write back to us at sales@edureka.co or call us at +91 88808 62004 for more information.
+
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka
+
+Customer Reviews:
+
+Joga Rao, Principal Data Architect at AEMO says: “I am a Customer at Edureka. I attended the AWS Architect Certification Training, I found the training to be very informative. The course content was excellent, just what I was after. The trainer was very knowledgeable. I found him to be very patient, he listened and answered everyone's questions. I especially liked the way he repeated and summarized the previous day's leanings at the start of each new day. I also liked his interactive style of training. Edureka demonstrated the highest standard of professionalism in delivering the course content and their support to me in helping complete the project has been exceptional. Thanks Edureka! ”]]></description>
+            <link>https://dev.tube/video/IT1X42D1KeA</link>
+            <guid isPermaLink="true">https://dev.tube/video/IT1X42D1KeA</guid>
+            <pubDate>Fri, 06 Jul 2018 11:58:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What is Git | What is GitHub | Git Tutorial | GitHub Tutorial | Devops Tutorial | Edureka]]></title>
+            <description><![CDATA[***** DevOps Training : https://www.edureka.co/devops *****
+This DevOps Tutorial on what is Git & what is GitHub ( Git Blog series: https://goo.gl/XS1Vux ) will let you know all about Version Control System & Version Control Tools like Git. You will learn all the Git commands to create repositories on your local machine & GitHub, commit changes, push & pull files. Also you will get your hands on with some advanced operations in Git like branching, merging, rebasing etc.
+
+1:40     Version Control introduction
+4:53     Why version Control
+12:51   Version Control Tools
+15:18   Git & GitHub
+21:56   Case Study: Dominion enterprises
+25:32   What is Git
+28:25   Features of Git
+41:48    What is a Repository
+44:24   Git Operations and Commands
+ 
+Check our complete DevOps playlist here: http://goo.gl/O2vo13
+DevOps Tutorial Blog Series: https://goo.gl/P0zAfF
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka
+
+#Git #GitHub #DevOpsTools #DevOpsTraining #DevOpsTutorial #DevOpsGit #Git #GitHub #GitTutorial #GitTutorialforBeginners #GitRebase #GitAdd #GitBranching #GitMerge #GitBash #GitCommit #GitClone #GitCommands #GitCheckout #GitConfig 
+
+
+How it Works?
+1. This is a 4 Week Instructor led Online Course.
+2. Course consists of 24 hours of online classes, 25 hours of assignment, 20 hours of project
+3. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+4. You will get Lifetime Access to the recordings in the LMS.
+5. At the end of the training you will have to complete the project based on which we will provide you a Verifiable Certificate!
+
+- - - - - - - - - - - - - - 
+
+About the Course
+Edureka’s DevOps online training is designed to help you master key tools of Devops lifecycle like Docker, Puppet, Jenkins, Nagios, GIT, Ansible, SaltStack and Chef used by a DevOps Engineer for automating multiple steps in SDLC. During this course, our expert DevOps instructors will help you:
+
+1. Understand the concepts and necessities of DevOps
+2. Understand the need for DevOps and the day-to-day real-life problems it resolves
+3. Learn installation and configuration of common infrastructure servers like Apache, and Nginx for the Enterprise
+4. Learn popular DevOps tools like Jenkins, Puppet, Chef, Ansible, SaltStack, Nagios and GIT
+5. Implement automated system update, installations and deployments 
+6. Learn Virtualization Concepts 
+7. Configuration deployment and packaging, continuous integration using GIT
+8. Fine tune Performance and set-up basic Security for Infrastructure 
+9. Manage server operations using Code which is popularly known as Infrastructure as a Code
+10. Understand the need for and concepts of Monitoring and Logging. 
+
+Along with the above mentioned topics, to help you master the most popular DevOps tools, you will also receive 3 additional self-paced courses including presentations, class recordings, assignments, solutions for the following tools:
+
+1: Ansible - Covers Introduction, Setup & Configuration, Ansible Playbooks, 37 Ansible Modules, Different Roles and Command Line usage. 2: Chef - Covers Introduction, Building the Cook Book, Node Object & Search, Data-bags, Chef environment, Roles, Deploying Nodes in Production and using the Open Source Chef Server.
+
+3: Puppet - Covers Puppet Infrastructure & run-cycle, the Puppet Language, Environment defining Nodes and Modules, Provisioning a Web Server and Executing Modules Against A Puppet Master.
+
+- - - - - - - - - - - - - - 
+
+Who should go for this course?
+DevOps practitioners are among the highest paid IT professionals today, and the market demand for them is growing rapidly. With emergence of new job roles around DevOps philosophy, anyone aspiring to get into these new roles, can take up this DevOps course. Some of these roles are:
+
+1. DevOps Architect
+2. Automation Engineer
+3. Software Tester
+4. Security Engineer
+5. Integration Specialist
+6. Release Manager
+
+- - - - - - - - - - - - - - 
+
+Please write back to us at sales@edureka.co or call us at +91 88808 62004 for more information. 
+
+Customer Reviews:
+
+Ankur Kashyap, DevOps, Build & Release says: “I was enrolled into Devops training from Edureka On a professionalism, they provide a great presentation on the topic that helps to understand the indepth of Devops technology. Good knowledgeable staff, provide recorded sessions with life time warranty. Also technical team is really helpful if you stuck in some demo sessions. Keep it up !! ”]]></description>
+            <link>https://dev.tube/video/xuB1Id2Wxak</link>
+            <guid isPermaLink="true">https://dev.tube/video/xuB1Id2Wxak</guid>
+            <pubDate>Fri, 06 Jul 2018 11:57:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #12: The Lorenz Attractor in Processing]]></title>
+            <description><![CDATA[In this Coding Challenge, I show you how to visualization the Lorenz Attractor in Processing (Java).
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+
+Send me your coding challenges!
+
+Contact: https://twitter.com/shiffman
+
+Nature of Code class on Kadenze: https://www.kadenze.com/courses/the-nature-of-code/info
+
+Lorenz System on Wikipedia: https://en.wikipedia.org/wiki/Lorenz_system
+Paul Bourke's website on Lorenz Attractor: http://paulbourke.net/fractals/lorenz/
+beginShape() reference: https://processing.org/reference/beginShape_.html
+peasycam: http://mrfeinberg.com/peasycam/
+
+What is a differential equation?
+http://www.myphysicslab.com/what_diff_eq.html
+
+Source Code for this challenge:
+https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_12_LorenzAttractor 
+
+Processing: https://processing.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/QbsO/]]></description>
+            <link>https://dev.tube/video/f0lkz2gSsIk</link>
+            <guid isPermaLink="true">https://dev.tube/video/f0lkz2gSsIk</guid>
+            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #74: Clock with p5.js]]></title>
+            <description><![CDATA[In this coding challenge, I attempt to program a clock in HTML5 canvas with the p5.js library. 
+
+This challenge was inspired by John Maeda's "12 o'clocks" and Golan Levin's assignment on the subject in his 60212 Interactivity & Computation class (http://cmuems.com/2016/60212/lectures/lecture-09-09b-clocks/maedas-clocks/)
+
+Submit links to your clocks!
+https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_74_Clock
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+To buy Coding Train merchandise: https://codingtrain.storenvy.com
+To Support the Processing Foundation: https://processingfoundation.org/support
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: 
+Twitter: https://twitter.com/shiffman
+The Coding Train website: http://thecodingtrain.com/
+
+Links discussed in this video:
+Golan Levin's notes on MAEDA’S 12 O’CLOCKS and assignment: http://cmuems.com/2016/60212/lectures/lecture-09-09b-clocks/maedas-clocks/
+http://cmuems.com/2016/60212/lectures/lecture-09-09b-clocks/
+http://cmuems.com/2016/60212/deliverables/deliverables-02/
+Alca's Clock Collection: https://codepen.io/collection/DqRNLQ/
+ICM-2017 Syllabus: https://github.com/ITPNYU/ICM-2017
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Programming with Text videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Help us caption & translate this video!
+
+http://amara.org/v/adRW/]]></description>
+            <link>https://dev.tube/video/E4RyStef-gY</link>
+            <guid isPermaLink="true">https://dev.tube/video/E4RyStef-gY</guid>
+            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[10.2: Neural Networks: Perceptron Part 1 - The Nature of Code]]></title>
+            <description><![CDATA[In this video, I continue my machine learning series and build a simple Perceptron in Processing (Java).
+
+Perceptron Part 2: https://youtu.be/DGxIcDjPzac
+
+This video is part of Chapter 10 of The Nature of Code (http://natureofcode.com/book/chapter-10-neural-networks/)
+
+This video is also part of session 4 of my Spring 2017 ITP "Intelligence and Learning" course (https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks)
+
+Simple Perceptron code examples: 
+p5.js: https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp10_nn/NOC_10_01_Perceptron
+Processing: https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp10_nn/NOC_10_01_SimplePerceptron
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+To buy Coding Train merchandise: https://codingtrain.storenvy.com
+To donate to the Processing Foundation: https://processingfoundation.org/
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: 
+Twitter: https://twitter.com/shiffman
+The Coding Train website: http://thecodingtrain.com/
+
+Links discussed in this video:
+Session 4 of Intelligence and Learning: https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks
+Perceptron on Wikipedia: https://en.wikipedia.org/wiki/Perceptron
+Frank Rosenblatt's paper on the Perceptron: http://www.ling.upenn.edu/courses/cogs501/Rosenblatt1958.pdf
+My Gradient Descent video: https://youtu.be/L-Lsfu4ab74
+
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+For More Intelligence and Learning: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YJ3XfHhT2Mm4Y5I99nrIKX
+
+Help us caption & translate this video!
+
+http://amara.org/v/7hHs/]]></description>
+            <link>https://dev.tube/video/ntKn5TPHHAk</link>
+            <guid isPermaLink="true">https://dev.tube/video/ntKn5TPHHAk</guid>
+            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Guest Tutorial #4: Matrix Digital Rain in p5.js with Emily Xie]]></title>
+            <description><![CDATA[In this guest tutorial, Emily Xie uses the p5.js library to recreate the digital rain effect from the movie The Matrix.
+
+Emily Xie is a software developer and creative coder. She's passionate about coding education, having taught through various conference workshops and via organizations like Girl Develop It (https://www.girldevelopit.com/) and Pioneer Works (https://pioneerworks.org/). Currently, Emily lives in New York and works at Squarespace.
+
+Project:
+Matrix repository: https://github.com/emilyxxie/green_rain
+The Matrix project, deployed: http://xie-emily.com/generative_art/green_rain.html
+
+Personal:
+Website: http://xie-emily.com
+Twitter: https://twitter.com/emilyxxie
+Github account: https://github.com/emilyxxie
+
+p5.js: https://p5js.org/
+
+For more Guest Tutorials and Interviews: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bYBG4PsCJpsvMka3boE9pR
+For more Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/72of/]]></description>
+            <link>https://dev.tube/video/S1TQCi9axzg</link>
+            <guid isPermaLink="true">https://dev.tube/video/S1TQCi9axzg</guid>
+            <pubDate>Fri, 06 Jul 2018 11:53:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[10.1: Introduction to Neural Networks - The Nature of Code]]></title>
+            <description><![CDATA[Welcome to Chapter 10 of The Nature of Code: Neural Networks.
+(http://natureofcode.com/book/chapter-10-neural-networks/) 
+
+In this video, I  provide a brief introduction neural networks and an overview of topics in upcoming videos.
+
+Next video (Perceptron): https://youtu.be/ntKn5TPHHAk 
+
+This video is also part of session 4 of my Spring 2017 ITP "Intelligence and Learning" course (https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks)
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+To buy Coding Train merchandise: https://codingtrain.storenvy.com
+To donate to the Processing Foundation: https://processingfoundation.org/
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: 
+Twitter: https://twitter.com/shiffman
+The Coding Train website: http://thecodingtrain.com/
+
+Links discussed in this video:
+The Nature of Code: http://natureofcode.com/
+Session 4 of Intelligence and Learning: https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks
+Perceptron on Wikipedia: https://en.wikipedia.org/wiki/Perceptron
+My Simple Artificial Neural Network JavaScript Library: https://github.com/shiffman/Neural-Network-p5
+
+Books discussed in this video: 
+Tariq Rashid's Make Your Own Neural Network: http://amzn.to/2tcVeFS
+Marvin Minsky's Perceptrons: http://amzn.to/2u8Jv8f
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+
+The Nature of Code playlist: https://www.youtube.com/user/shiffman/playlists?view_as=subscriber&shelf_id=6&view=50&sort=dd
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+For More Intelligence and Learning: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YJ3XfHhT2Mm4Y5I99nrIKX
+
+Help us caption & translate this video!
+
+http://amara.org/v/8Ho5/]]></description>
+            <link>https://dev.tube/video/XJ7HLz9VYz0</link>
+            <guid isPermaLink="true">https://dev.tube/video/XJ7HLz9VYz0</guid>
+            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #29: Smart Rockets in p5.js]]></title>
+            <description><![CDATA[In this (very long) Coding Challenge, I implement a genetic algorithm from scratch and create "smart rockets" (based on a simulation by Jer Thorp).  The rockets evolve the "best" path to a target, moving around obstacles.
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Jer Thorp's Smart Rockets:
+http://www.blprnt.com/smartrockets/
+
+Contact: https://twitter.com/shiffman
+
+Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Genetic Algorithm videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/TSyw/]]></description>
+            <link>https://dev.tube/video/bGz7mv2vD6g</link>
+            <guid isPermaLink="true">https://dev.tube/video/bGz7mv2vD6g</guid>
+            <pubDate>Fri, 06 Jul 2018 11:56:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #71: Minesweeper]]></title>
+            <description><![CDATA[In this challenge, I attempt to code the classic game Minesweeper in JavaScript with the p5.js library. This video builds on some previous tutorials related to the Prototypes and multi-dimensional arrays in JavaScript.
+
+Link to the code: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_71_minesweeper
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+To buy Coding Train merchandise: https://codingtrain.storenvy.com
+To Support the Processing Foundation: https://processingfoundation.org/support
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: 
+Twitter: https://twitter.com/shiffman
+The Coding Train website: http://thecodingtrain.com/
+
+Links discussed in this video:
+Minesweeper on Wikipedia: https://en.wikipedia.org/wiki/Minesweeper_(video_game)
+Minesweeper suggestion on GitHub: https://github.com/CodingTrain/Rainbow-Topics/issues/164
+Flood fill on Wikipedia: https://en.wikipedia.org/wiki/Flood_fill
+
+Related tutorials:
+2D Arrays in JavaScript: https://youtu.be/OTNpiLUSiB4
+Prototypes in JavaScript: https://youtu.be/hS_WqkyUah8
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Classic Video Games: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aRpfixWba8ZF6tJnZy5Mfw
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Help us caption & translate this video!
+
+http://amara.org/v/7E3o/]]></description>
+            <link>https://dev.tube/video/LFU5ZlrR21E</link>
+            <guid isPermaLink="true">https://dev.tube/video/LFU5ZlrR21E</guid>
+            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #24: Perlin Noise Flow Field]]></title>
+            <description><![CDATA[In this Coding Challenge, I use Perlin noise to create a two-dimensional flow field with the p5.js library
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Send me your questions and coding challenges!
+Contact: https://twitter.com/shiffman
+
+p5.js noise() reference: https://p5js.org/reference/#/p5/noise
+
+p5.js: https://p5js.org/
+Processing: https://processing.org/
+
+Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+For More Perlin Noise videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/QbrZ/]]></description>
+            <link>https://dev.tube/video/BjoM9oKOAKY</link>
+            <guid isPermaLink="true">https://dev.tube/video/BjoM9oKOAKY</guid>
+            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge 51.1: A* Pathfinding Algorithm - Part 1]]></title>
+            <description><![CDATA[In this Coding Challenge, I attempt an implementation of the A* pathfinding algorithm to find the optimal path between two points in a 2D grid.  I begin by explaining the mechanics of how the algorithm works, look at pseudo-code, and then write the algorithm in JavaScript using the p5.js library for rendering.
+
+Part 2 focuses on adding obstacles (walls) to the grid as well as functionality for moving diagonally.
+.
+In Part 3, I look at ways to improve the visual design and invite you to put your own spin on it.
+
+Part 2: https://youtu.be/EaZxUCWAjb0
+Part 3: https://youtu.be/jwRT4PCT6RU
+
+Online demo: https://codingtrain.github.io/AStar/
+Code: https://github.com/CodingTrain/AStar
+
+To see the whole unedited version of this challenge: https://www.youtube.com/watch?v=S4yQYiAECnM&t=34m50s
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: https://twitter.com/shiffman
+ 
+A* Algorithm on Wikipedia: https://en.wikipedia.org/wiki/A*_search_algorithm
+Artificial Intelligence: A Modern Approach: http://aima.cs.berkeley.edu/
+My Maze Generation Coding Challenge: https://www.youtube.com/watch?v=HyK_Q5rrcr4
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Help us caption & translate this video!
+
+http://amara.org/v/2el5/]]></description>
+            <link>https://dev.tube/video/aKYlikFAV4k</link>
+            <guid isPermaLink="true">https://dev.tube/video/aKYlikFAV4k</guid>
+            <pubDate>Fri, 06 Jul 2018 11:56:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #27: Fireworks!]]></title>
+            <description><![CDATA[In this 4th of July themed Coding Challenge, I build an HTML5 canvas Fireworks simulation from scratch using the p5.js JavaScript library. O I also show how to use Processing to create 3D Fireworks.  This code is based off of my Nature of Code particle system examples.
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Send me your questions and coding challenges!
+
+Contact: https://twitter.com/shiffman
+
+Links discussed in this video:
+Pixel Pyros by Seb Lee-Delisle: http://seb.ly/work/pixelpyros/
+peasycam website: http://mrfeinberg.com/peasycam/
+
+Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/QbrK/]]></description>
+            <link>https://dev.tube/video/CKeyIbT3vXI</link>
+            <guid isPermaLink="true">https://dev.tube/video/CKeyIbT3vXI</guid>
+            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #75: Wikipedia API]]></title>
+            <description><![CDATA[In this coding challenge, I attempt to make a "Wikipedia web crawler" in JavaScript. It randomly crawls from topic to topic on Wikipedia using the API and the p5.js library. 
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+To buy Coding Train merchandise: https://codingtrain.storenvy.com
+To Support the Processing Foundation: https://processingfoundation.org/support
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: 
+Twitter: https://twitter.com/shiffman
+The Coding Train website: http://thecodingtrain.com/
+
+Links discussed in this video:
+Wikipedia API Help: https://www.mediawiki.org/wiki/API:Main_page
+My Video on Regular Expressions: https://youtu.be/7DG3kCDx53c
+
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Programming with Text videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+
+Help us caption & translate this video!
+
+http://amara.org/v/arKb/]]></description>
+            <link>https://dev.tube/video/RPz75gcHj18</link>
+            <guid isPermaLink="true">https://dev.tube/video/RPz75gcHj18</guid>
+            <pubDate>Fri, 06 Jul 2018 11:55:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Live Stream #70: Coding Challenges: Asteroids and Pixel Sorting]]></title>
+            <description><![CDATA[In this Live Stream, I take on two Coding Challenges. First, I make a version of the classic Atari game Asteroids using JavaScript and HTML5 canvas with the p5.js library.  I then implement "Pixel Sorting" in Processing (Java). I sort the pixels of an image by brightness and hue.
+
+8:45 - Short Q&A
+22:58 - Coding Challenge: Asteroids with p5.js
+1:56:17 - Coding Challenge: Pixel Sorting in Processing
+2:25:00 - Conclusion/Q&A
+
+Support this channel on Patreon: https://patreon.com/codingtrain
+
+Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+
+Contact: https://twitter.com/shiffman
+
+Links discussed in this video:
+Asteroids on Wikipedia: https://en.wikipedia.org/wiki/Asteroids_(video_game)
+Mike Bostock's page on Visualizing Algorithms: https://bost.ocks.org/mike/algorithms/
+My Trigonometry and Polar Coordinates video: https://youtu.be/znOBmOrtz_M
+Sirajology's channel: https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A
+Kittens Song: https://soundcloud.com/lostghbear/lostghbear-podopleloff-kittens-feat-dan-shiffman
+This Dot Song on Soundcloud: https://soundcloud.com/kristianpedersen/this-dot-feat-daniel-shiffman?in=kristianpedersen/sets/coding-rainbow-remixes
+
+Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+
+Asteroids Code: https://github.com/CodingTrain/Asteroids
+Asteroids Game: https://codingrainbow.github.io/Asteroids/
+
+p5.js: https://p5js.org/
+Processing: https://processing.org
+
+For More Live Streams: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bxnFR6no70vlxxuxDEzflz
+For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+Help us caption & translate this video!
+
+http://amara.org/v/72pW/]]></description>
+            <link>https://dev.tube/video/VFnF87-JNtY</link>
+            <guid isPermaLink="true">https://dev.tube/video/VFnF87-JNtY</guid>
+            <pubDate>Fri, 06 Jul 2018 11:56:23 GMT</pubDate>
+        </item>
     </channel>
 </rss>

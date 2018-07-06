@@ -13,6 +13,10 @@
             "id": "UCaGHGAZiSwb8if6yfBF4NLA"
         },
         {
+            "title": "The Coding Train",
+            "id": "UCvjgXvBlbQiydffZU7m1_aw"
+        },
+        {
             "title": "GDC",
             "id": "UC0JB7TSe49lg56u6qH8y_MQ"
         },
@@ -45,6 +49,10 @@
             "id": "UCs_tLP3AiwYKwdUHpltJPuA"
         },
         {
+            "title": "edureka!",
+            "id": "UCkw4JCwteGrDHIsyIIKo4tQ"
+        },
+        {
             "title": "InfoQ",
             "id": "UCkQX1tChV7Z7l1LFF4L9j_g"
         },
@@ -71,6 +79,10 @@
         {
             "title": "NDC Conferences",
             "id": "UCTdw38Cw6jcm0atBPA39a0Q"
+        },
+        {
+            "title": "freeCodeCamp",
+            "id": "UC8butISFwT-Wl7EV0hUK0BQ"
         },
         {
             "title": "Strange Loop",
@@ -185,6 +197,10 @@
             "id": "UCmM3eCpmWKLJj2PDW_jdGkg"
         },
         {
+            "title": "DEVCLUB.EU",
+            "id": "UCLq7vcHtwDtx4m9ZUrgxEBA"
+        },
+        {
             "title": "PyCon Canada",
             "id": "UCclkPrurwUP_ajqi3vDTNDg"
         },
@@ -223,6 +239,10 @@
         {
             "title": "Cloud Foundry",
             "id": "UC0ZYS0Y7b5oiVLvxGf4magw"
+        },
+        {
+            "title": "GoRails",
+            "id": "UCIQmhQxCvLHRr3Beku77tww"
         },
         {
             "title": "ElixirConf",
