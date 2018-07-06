@@ -4,13 +4,6 @@ import * as Lunr from 'lunr'
 import * as Loki from 'lokijs'
 import {firstBy} from "thenby"
 
-// 1) don't forget to update docs with wildcard support, field:search, title:foo* bar
-// A B means A or B
-// +foo +bar means 
-
-// 2) multi-word tags :(
-// 3) f#, c++
-
 export default class Fastr {
 
   lunr: Lunr
@@ -68,10 +61,13 @@ export default class Fastr {
     let docsLoaded = docLoader() 
 
     this.lunr = Lunr(function () {
+
+      this.pipeline.remove(Lunr.trimmer)
+
       this.ref('objectID')
       this.field('title')
       this.field('speaker', { extractor: (doc) => doc.speaker ? doc.speaker.name : doc.speaker })
-      this.field('tags')
+      this.field('tags', { extractor: (doc) => doc.tags ? doc.tags.join(' ') : doc.tags })
       this.field('channelTitle')
 
       docsLoaded.forEach(video => {
@@ -130,7 +126,6 @@ export default class Fastr {
   private searchInLunr(query: string, sortProperty: string, page: number, maxHitsPerPage: number, maxHitsPerQuery: number) {
     let hits = this.lunr.search(query)
     let hitsTotal = hits.length
-    let sortPropertyDesc = `-${sortProperty}`
     return hits
       .map(hit => this.videos.by("objectID", hit.ref))
       .sort(firstBy(sortProperty, -1))
