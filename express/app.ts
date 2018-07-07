@@ -173,33 +173,28 @@ async function proxy(req: Request, res: Response) {
     })    
   } else if (req.path.startsWith("/search") && fuseMode) {
 
-    let q = req.body.query || req.body.requests[0].params.query
-    let p = req.body.page || req.body.requests[0].params.page
-    let r = req.body.refinement || req.body.requests[0].params.refinement
-    let s = req.body.sortOrder || req.body.requests[0].params.sortOrder
+    let { query, page, refinement, sortOrder } = req.body.requests[0].params
 
-    console.log(s)
-
-    console.time(`Query ${q}`)
+    console.time(`Query ${query}`)
     let maxHitsPerPage = 21
-    let maxHitsPerQuery = maxHitsPerPage * 10
-    let hits = fastr.search(q, r, s, p, maxHitsPerPage, maxHitsPerQuery)
-    let hitsPerPage = hits.slice(0, maxHitsPerPage)
-    console.timeEnd(`Query ${q}`)
+    let hitsAll = fastr.search(query, refinement, sortOrder)
+
+    let from = page * maxHitsPerPage
+    let to = from + maxHitsPerPage
+
+    let hitsPage = hitsAll.slice(from, to)
+    let nbPages = Math.ceil(hitsAll.length / maxHitsPerPage)
+
+    console.timeEnd(`Query ${query}`)
     res.status(200).send(
       {
         "results": [
           {
-            "hits": hitsPerPage,
-            "nbHits": hits.length,
-            "page": p,
-            "nbPages": Math.floor(hits.length / maxHitsPerPage),
-            "hitsPerPage": maxHitsPerPage,
-            "processingTimeMS": 2,
-            "exhaustiveFacetsCount": true,
-            "exhaustiveNbHits": true,
-            "query": q,
-            "index": "videos"
+            "hits": hitsPage,
+            "page": page,
+            "nbHits": hitsAll.length,
+            "nbPages": nbPages,
+            "hitsPerPage": maxHitsPerPage
           }
         ]
       }

@@ -51,7 +51,7 @@ export default {
       videoId: { type: String, required: true },
       channel: { type: String, required: true },
       speakerTwitter: { type: String, required: false, default: '' },
-      tags: { required: false, default: [] }
+      tags: { required: false, default: function() { return [] } }
     },  
     data: function() {
       return {

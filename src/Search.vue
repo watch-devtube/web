@@ -252,8 +252,19 @@ export default {
       this.searchStore.stop()
 
       if (this.newMode) {
+        // ## start 
+        // when seach query is present, tag clicking must reset it
+        searchStore.query = undefined 
+        // ## end
+
+        searchStore.queryParameters = { refinement : undefined }
+
         searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || 'featured' }
-        searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
+
+
+        if (this.speaker) {
+          searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
+        }
 
         if (this.tag) {
           searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
