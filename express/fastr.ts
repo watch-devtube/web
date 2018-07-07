@@ -91,8 +91,16 @@ export default class Fastr {
     })    
   }
 
+  stripMetadata(loki_rec) {
+    const clean_rec = Object.assign({}, loki_rec)
+    delete clean_rec['meta']
+    delete clean_rec['$loki']
+    return clean_rec
+  }
+
+
   searchChannels() {
-    return this.channels.chain().simplesort('title').data()
+    return this.channels.chain().simplesort('title').data().map(this.stripMetadata)
   }
 
   searchTags() {
@@ -100,7 +108,7 @@ export default class Fastr {
   }
 
   searchSpeakers() {
-    return this.speakers.chain().simplesort('name').data()
+    return this.speakers.chain().simplesort('name').data().map(this.stripMetadata)
   }
 
   search(query: string, refinement = {}, sortProperty: string) {
