@@ -80,7 +80,7 @@ export default class Fastr {
           channels.insert({
             id: video.channelId,
             title: video.channelTitle
-          })  
+          } as any)
         }
 
         if (video.tags) {
