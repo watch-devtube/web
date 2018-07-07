@@ -59,9 +59,9 @@
         var index = client.initIndex('videos');
         return index.search({
           filters: query,
-          hitsPerPage: 3,
+          hitsPerPage: 15,
           sumOrFiltersScores: true,
-        }).then(it => shuffle(it.hits))
+        }).then(it => shuffle(it.hits).slice(0, 3))
       }
     },
     components: { VideoCard }
