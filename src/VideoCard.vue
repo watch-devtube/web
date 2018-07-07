@@ -8,15 +8,23 @@
             .is-overlay
             p.ttl.is-capitalized.is-size-7 {{title}}
       .card-content
-          .media(v-if="speaker")
+          .media(v-if="speaker && !newMode")
               .media-left
                   figure.image.is-48x48
-                    a(v-if="!newMode" :href="'/@' + speaker.twitter"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
-                    router-link.has-text-white(v-else :to="{ name: 'speaker', params: { speaker : speaker.twitter} }"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+                    a(:href="'/@' + speaker.twitter"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .media-content
                 p.title.is-6: a.has-text-black(:href="'/@' + speaker.twitter") {{speaker.name}}
                 p.subtitle.is-7 
                   a.has-text-black(:href="'/@' + speaker.twitter") @{{speaker.twitter}} 
+                  a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
+          .media(v-if="speaker && newMode")
+              .media-left
+                  figure.image.is-48x48
+                    router-link.has-text-white(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+              .media-content
+                p.title.is-6: router-link.has-text-black(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") {{speaker.name}}
+                p.subtitle.is-7 
+                  router-link.has-text-black(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") @{{speaker.twitter}} 
                   a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
           nav.level.is-mobile
             .level-item.has-text-centered
@@ -34,7 +42,7 @@
             .level-item.has-text-centered
               div                
                 p.heading.is-capitalized Recorded
-                p.title.is-size-7 {{recordingDate | published}}
+                p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
 </template>
 <style lang="scss">

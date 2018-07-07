@@ -20,11 +20,19 @@
     mixins: [Component],
     methods: {
       refineTag(tag) {
-        this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('tags', tag)
+        if (window.fuseMode) {
+          this.$router.push({ name: 'tag', params: { tag: tag } })
+        } else {
+          this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('tags', tag)
+        }
       },
       refineChannel(channel) {
-        this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('channelTitle', channel)
-      }
+        if (window.fuseMode) {
+          this.$router.push({ name: 'channel', params: { channel: channel } } )
+        } else {
+          this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('channelTitle', channel)
+        }
     }
   }
+}
 </script>
