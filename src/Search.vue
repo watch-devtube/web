@@ -19,15 +19,16 @@
           .container
             .columns
               .column.is-one-quarter(v-if="newMode")
-                h1.title Tags
-                ExpandableTags(:items="tags" :limit="20" :route="routeToTag")
-                h1.title Speakers
-                ExpandableTags(:items="speakers" :limit="15" :route="routeToSpeaker")
-                  template(slot-scope="slot")
-                    span {{slot.item.name.charAt(0) + '. ' + slot.item.name.split(' ')[1]}}
-                h1.title Channels
-                ExpandableTags(:items="channels" :limit="15" :route="routeToChannel")
-                  template(slot-scope="slot") {{slot.item.title | truncate(11)}}
+                p.buttons.is-right
+                  router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel" :to="{ name: 'search' }")
+                    span {{speaker || tag || channel}}
+                    span.icon.is-small: i.fas.fa-times
+                  ExpandableTags(icon="fas fa-hashtag" title="Tags" :items="tags" :limit="20" :route="routeToTag")
+                  ExpandableTags(icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="15" :route="routeToSpeaker")
+                    template(slot-scope="slot")
+                      span {{slot.item.name.charAt(0) + '. ' + slot.item.name.split(' ')[1]}}
+                  ExpandableTags(icon="fab fa-youtube" title="Channels" :items="channels" :limit="15" :route="routeToChannel")
+                    template(slot-scope="slot") {{slot.item.title | truncate(11)}}
               .column.is-one-quarter.is-hidden-touch(v-else)
                 .columns(v-if="newVideos.length && !newOnly")
                   .column
@@ -58,23 +59,10 @@
                     .columns
                       .column(v-if="!newMode")
                         ActiveFilters(:speaker="speaker")
-                      .column(v-else)
-                        .control(v-if="speaker")
-                          .tags.has-addons
-                            .tag.is-link.is-lowercase videos by @{{speaker}}
-                            router-link.tag.is-delete(:to="{ name: 'search' }")
-                        .control(v-if="tag")
-                          .tags.has-addons
-                            .tag.is-link
-                              span.is-capitalized {{tag}} 
-                              span.is-lowercase &nbsp;videos
-                            router-link.tag.is-delete(:to="{ name: 'search' }")
-                        .control(v-if="channel")
-                          .tags.has-addons
-                            .tag.is-link
-                              span.is-capitalized {{channel}} 
-                              span.is-lowercase &nbsp;videos
-                            router-link.tag.is-delete(:to="{ name: 'search' }")
+                      .column.is-hidden-mobile(v-else)
+                        router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'search' }")
+                          span {{speaker || tag || channel}}
+                          span.icon.is-small: i.fas.fa-times
                       .column
                         .field.is-grouped-multiline.is-grouped.is-grouped-right(v-if="newMode")
                           .control
