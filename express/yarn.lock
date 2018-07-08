@@ -812,6 +812,16 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
+"devtube-commons@https://github.com/watch-devtube/commons/releases/download/201807080957/devtube-commons-v0.1.0.tgz":
+  version "0.1.0"
+  resolved "https://github.com/watch-devtube/commons/releases/download/201807080957/devtube-commons-v0.1.0.tgz#3599cbaf08c8ca887e72770dcb9808ed3c019e59"
+  dependencies:
+    dnscache "^1.0.1"
+    lodash "^4.17.4"
+    lokijs "^1.5.5"
+    lunr "^2.3.0"
+    thenby "^1.2.6"
+
 dir-glob@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-2.0.0.tgz#0b205d2b6aef98238ca286598a8204d29d0a0034"

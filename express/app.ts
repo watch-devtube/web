@@ -1,13 +1,11 @@
 
-import { Request, Response } from 'express'
-
 import * as fs from 'fs'
 import * as path from 'path'
 import * as lru from 'lru-cache'
-import * as dns from 'dns'
-import * as dnscache from 'dnscache'
 import * as algolia from 'algoliasearch'
-import Fastr from './fastr'
+
+import { Request, Response } from 'express'
+import { Fastr, dnsCache, Logger } from 'devtube-commons'
 
 // Configuration settings
 const algoliaAppId = 'DR90AOGGE9'
@@ -15,8 +13,7 @@ const algoliaApiKey = 'c2655fa0f331ebf28c89f16ec8268565'
 const algoliaIndexName = 'videos'
 const videoCacheSize = 500
 const videoCacheTTL = 1000 * 60 * 60 
-
-
+Logger.enabled = true
 
 // Configure video cache
 let videoCache = lru({ 
@@ -25,37 +22,7 @@ let videoCache = lru({
 })
 
 // Configure DNS cache
-let dnsCache = dnscache({
-  enable: true,
-  ttl: 300,
-  cachesize: 1000
-})
-let dnsNames = [ 
-  'www.github.com', 
-  'github.com', 
-  'api.github.com', 
-  'www.googleapis.com', 
-  'www.google.com', 
-  'googleapis.com',
-  'www.googleapis.com',  
-  'www.algolia.com',
-  'algolia.com',  
-  `${algoliaAppId}.algolia.net`,
-  `${algoliaAppId}-dsn.algolia.net`,
-  `${algoliaAppId}-1.algolianet.com`,
-  `${algoliaAppId}-2.algolianet.com`,
-  `${algoliaAppId}-3.algolianet.com`  
-]
-dnsNames.forEach(dnsName => {
-  dnsCache.lookup(dnsName, (err, result) => {
-    if (err) {
-      console.error(`${dnsName}: ${JSON.stringify(err)}`)
-    } else {
-      console.log(`${dnsName}: ${JSON.stringify(result)}`)
-    }    
-  })  
-})
-
+dnsCache()
 
 // Configure Express application dependencies
 let express = require('express')
@@ -84,12 +51,9 @@ app.set('view engine', 'mustache')
 app.set('view cache', !devMode)
 app.set('views', path.join(__dirname, staticDir))
 
-
-
 // Preload static data
 let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
 let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
-
 
 // EXPERIMENTAL FUSE.JS MODE
 let fuseMode = process.env.FUSE_MODE
