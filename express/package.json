@@ -16,7 +16,7 @@
     "@types/lodash": "^4.14.109",
     "@types/lru-cache": "4.1.1",
     "@types/request": "ts2.9",
-    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201807081000/devtube-commons-v0.1.0.tgz",
+    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201807081331/devtube-commons-v0.1.0.tgz",
     "algoliasearch": "^3.27.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
