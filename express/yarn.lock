@@ -812,9 +812,9 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
-"devtube-commons@https://github.com/watch-devtube/commons/releases/download/201807080957/devtube-commons-v0.1.0.tgz":
+"devtube-commons@https://github.com/watch-devtube/commons/releases/download/201807081331/devtube-commons-v0.1.0.tgz":
   version "0.1.0"
-  resolved "https://github.com/watch-devtube/commons/releases/download/201807080957/devtube-commons-v0.1.0.tgz#3599cbaf08c8ca887e72770dcb9808ed3c019e59"
+  resolved "https://github.com/watch-devtube/commons/releases/download/201807081331/devtube-commons-v0.1.0.tgz#f07eded10d26b790ee2d48410c9370a751c8a281"
   dependencies:
     dnscache "^1.0.1"
     lodash "^4.17.4"
