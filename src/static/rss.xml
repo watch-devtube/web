@@ -4,747 +4,410 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 08 Jul 2018 03:22:50 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Jul 2018 03:23:16 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Coding Challenge #3: The Snake Game]]></title>
-            <description><![CDATA[In this 10 Minute Coding Challenge, I attempt to code a p5.js version of the Snake Game.
+            <title><![CDATA[How We Created Mark of the Ninja Without (Totally) Losing Our Minds]]></title>
+            <description><![CDATA[In this 2013 GDC talk, Klei's Jeff Agala & Jamie Cheng discuss how the Mark of the Ninja team grew and arose to meet the game's unique development challenges, delivered a great game, and did it without destroying themselves. 
 
-Send me your 10 minute coding challenge!
+Register for GDC: http://ubm.io/2gk5KTU
 
-Contact: http://twitter.com/shiffman
+Join the GDC mailing list: http://www.gdconf.com/subscribe
 
-To see the debugging process: https://www.youtube.com/watch?v=yUO2bWfBgN8#t=39m00s
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
 
-Source Code For This Challenge: 
-p5.js: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_03_Snake_game_p5.js
-Processing: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_03_Snake_game
-
-p5.js: https://p5js.org/
-
-Wikipedia page for the Snake Game: https://en.wikipedia.org/wiki/Snake_(video_game)
-
-For More 10 Minute Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
-            <link>https://dev.tube/video/AaGK-fj-BAM</link>
-            <guid isPermaLink="true">https://dev.tube/video/AaGK-fj-BAM</guid>
-            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/A7ejh3YUbac</link>
+            <guid isPermaLink="true">https://dev.tube/video/A7ejh3YUbac</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:03 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Coding Challenge #4: Purple Rain in Processing]]></title>
-            <description><![CDATA[In this viewer submitted Coding Challenge, I attempt to code a Purple Rain Simulator in Processing.
+            <title><![CDATA[Networking and FutureBuilder- The Boring Flutter Development Show, Ep. 3]]></title>
+            <description><![CDATA[In this episode, Andrew and Matt pick up the app (a Hacker News reader) where Andrew and Filip left off. With built_value now in the app, they can add all the other properties to their article object. Their goal is to deserialize the Hacker News API with this object and pull all fields of information into their app.
 
-http://thecodingtrain.com/CodingChallenges/004-purplerain.html
+Let us know your thoughts and requests for future episodes in the comments below or on Twitter using #BoringShow.
 
-Contact: http://twitter.com/shiffman
+Get started with Flutter → https://flutter.io
+Try a Flutter codelab → https://goo.gl/d3fHPo 
+Join the conversation → https://goo.gl/68oUnb 
 
-Processing: https://processing.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
-            <link>https://dev.tube/video/KkyIDI6rQJI</link>
-            <guid isPermaLink="true">https://dev.tube/video/KkyIDI6rQJI</guid>
-            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
+Subscribe to the Google Developers channel → http://goo.gl/mQyv5L]]></description>
+            <link>https://dev.tube/video/rfagvy5xCW0</link>
+            <guid isPermaLink="true">https://dev.tube/video/rfagvy5xCW0</guid>
+            <pubDate>Sun, 08 Jul 2018 01:26:18 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Coding Challenge #31: Flappy Bird]]></title>
-            <description><![CDATA[In this Coding Challenge, I attempt to program in JavaScript (using the p5.js framework) a clone of the game Flappy Bird.
+            <title><![CDATA[7.6: TensorFlow.js Color Classifier: Training Data Tensors (inputs)]]></title>
+            <description><![CDATA[In this video, I convert the data from the JSON file to tensors focusing on the inputs first.
 
-Support this channel on Patreon: https://patreon.com/codingtrain
+Next Video: https://youtu.be/Gql-LxoGvXA
 
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+🔗 Crowdsource Color Data: https://github.com/CodingTrain/CrowdSourceColorData
+🔗 TensorFlow.js: https://js.tensorflow.org/
+🔗 ml5.js: https://ml5js.org
+🔗 Making your own dataset: https://ml5js.org/docs/data-overview
 
-Contact: https://twitter.com/shiffman
+🎥 TensorFlow.js playlist: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YIeVA3dNxbR9PYj4wV31oQ
 
-Links discussed in this video:
-Flappy Bird on Wikipedia: https://en.wikipedia.org/wiki/Flappy_Bird
-
-Source Code for the Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-For More p5.js videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Help us caption & translate this video!
-
-http://amara.org/v/VR4Z/]]></description>
-            <link>https://dev.tube/video/cXgA1d_E-jY</link>
-            <guid isPermaLink="true">https://dev.tube/video/cXgA1d_E-jY</guid>
-            <pubDate>Fri, 06 Jul 2018 11:56:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #11: 3D Terrain Generation with Perlin Noise in Processing]]></title>
-            <description><![CDATA[In this Coding Challenge, I create a 3D procedural terrain using Perlin Noise and the beginShape() function in Processing.
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-Send me your coding challenges!
-
-Contact: https://twitter.com/shiffman
-
-Nature of Code class on Kadenze: https://www.kadenze.com/courses/the-nature-of-code/info
-
-My Perlin Noise video: https://www.youtube.com/watch?v=8ZEMLCnn8v0
-beginShape() reference: https://processing.org/reference/beginShape_.html
-noise() reference: https://processing.org/reference/noise_.html
-
-Source Code for this Challenge:
-Processing: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_011_PerlinNoiseTerrain
-p5.js: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_011_PerlinNoiseTerrain_p5.js
-
-Processing: https://processing.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
-            <link>https://dev.tube/video/IKB1hWWedMk</link>
-            <guid isPermaLink="true">https://dev.tube/video/IKB1hWWedMk</guid>
-            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #1: Starfield in Processing]]></title>
-            <description><![CDATA[This is the first in a new series of videos.  In this video I attempt to program a "star field" or "warp speed" visualization in Processing.  
-
-Send me your 10 minute coding challenge!
-
-http://twitter.com/shiffman
-
-Source Code:
-Processing: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_01_StarField
-p5.js: https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_01_StarField_p5.js
-
-The code I wrote in the video was inspired by this example: 
-
-http://cs.brynmawr.edu/gxk2013/examples/transformations/starfield/
-
-Help us caption & translate this video!
-
-http://amara.org/v/Qbsv/]]></description>
-            <link>https://dev.tube/video/17WoOqgXsRM</link>
-            <guid isPermaLink="true">https://dev.tube/video/17WoOqgXsRM</guid>
-            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Python Tutorial | Python Tutorial for Beginners | Python Training | Edureka]]></title>
-            <description><![CDATA[( Python Training : https://www.edureka.co/python )
-This Edureka Python tutorial (Python Tutorial Blog: https://goo.gl/wd28Zr) will help you in understanding the various fundamentals of Python programming with examples in detail . 
-Check out our Python Training Playlist: https://goo.gl/Na1p9G
-
-This Python tutorial video helps you to learn following topics:
-
-0:58 - Introduction to Python
-2:27. Who uses Python
-3:46 . Features of Python 
-10:34 . Operators in Python
-34:48. Datatypes in Python
-1:09:30. Flow Control
-1:34:18 . Functions in Python
-1:40:11. File Handling in Python
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka
-
-#Python #Pythontutorial #Pythononlinetraining #Pythonforbeginners
-
-How it Works?
-1. This is a 5 Week Instructor led Online Course,40 hours of assignment and 20 hours of project work
-2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-3. At the end of the training you will be working on a real time project for which we will provide you a Grade and a Verifiable Certificate!
-
-- - - - - - - - - - - - - - - - -
-
-About the Course
-
-Edureka's Python Online Certification Training will make you an expert in Python programming. It will also help you learn Python the Big data way with integration of Machine learning, Pig, Hive and Web Scraping through beautiful soup. During our Python Certification training, our instructors will help you:
-
-1. Master the Basic and Advanced Concepts of Python
-2. Understand Python Scripts on UNIX/Windows, Python Editors and IDEs
-3. Master the Concepts of Sequences and File operations
-4. Learn how to use and create functions, sorting different elements, Lambda function, error handling techniques and Regular expressions ans using modules in Python
-5. Gain expertise in machine learning using Python and build a Real Life Machine Learning application
-6. Understand the supervised and unsupervised learning and concepts of Scikit-Learn
-7. Master the concepts of MapReduce in Hadoop
-8. Learn to write Complex MapReduce programs
-9. Understand what is PIG and HIVE, Streaming feature in Hadoop, MapReduce job running with Python 
-10. Implementing a PIG UDF in Python, Writing a HIVE UDF in Python, Pydoop and/Or MRjob Basics
-11. Master the concepts of Web scraping in Python
-12. Work on a Real Life Project on Big Data Analytics using Python and gain Hands on Project Experience
-- - - - - - - - - - - - - - - - - - -
-
-Why learn Python?
-
-Programmers love Python because of how fast and easy it is to use. Python cuts development time in half with its simple to read syntax and easy compilation feature. Debugging your programs is a breeze in Python with its built in debugger. Using Python makes Programmers more productive and their programs ultimately better. Python continues to be a favorite option for data scientists who use it for building and using Machine learning applications and other scientific computations.
-Python runs on Windows, Linux/Unix, Mac OS and has been ported to Java and .NET virtual machines. Python is free to use, even for the commercial products, because of its OSI-approved open source license. 
-Python has evolved as the most preferred Language for Data Analytics and the increasing search trends on python also indicates that Python is the next "Big Thing" and a must for Professionals in the Data Analytics domain. 
-
-For more information, please write back to us at sales@edureka.co
-Call us at US: 1844 230 6362(toll free) or India: +91-90660 20867]]></description>
-            <link>https://dev.tube/video/N0lxfilGfak</link>
-            <guid isPermaLink="true">https://dev.tube/video/N0lxfilGfak</guid>
-            <pubDate>Fri, 06 Jul 2018 11:58:08 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #14: Fractal Trees - Recursive]]></title>
-            <description><![CDATA[In this coding challenge, I'm going to show you how to create a fractal tree with a recursive algorithm in p5.js.
-This is the first part of a series on algorithmic botany.
-
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-
-Send me your questions and coding challenges!
-
-Contact: https://twitter.com/shiffman
-
-
-Links discussed in this video:
-Nature of Code class on Kadenze: https://www.kadenze.com/courses/the-nature-of-code/info
-Algorithmic Botany: http://algorithmicbotany.org/
-
-
-Source Code for the Video Lessons: https://github.com/shiffman/Video-Lesson-Materials
-
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-
-For More Algorithmic Botany Videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bxNsa_3SfCPyF9Md9XvXhR
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/QbsH/]]></description>
-            <link>https://dev.tube/video/0jjeOYMjmDU</link>
-            <guid isPermaLink="true">https://dev.tube/video/0jjeOYMjmDU</guid>
-            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[1.1: Introduction - p5.js Tutorial]]></title>
-            <description><![CDATA[In this video, I talk about p5.js.  What is it? What can you do with it? Where did it come from? What is its relationship with Processing? p5.js is both a library for JavaScript and a beginner-friendly editor where you can build creative computational projects in the browser. It can be used for art, data visualization, and websites alongside other tools like HTML5, CSS and JavaScript.
-
-Next video:https://youtu.be/D1ELEeIs0j8?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-
-Contact: https://twitter.com/shiffman
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Link to code on Github: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: http://p5js.org
-Processing: http://processing.org
-Processing Foundation: https://processingfoundation.org/
-
-For More p5.js Basics Videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Help us caption & translate this video!
-
-http://amara.org/v/HCxe/]]></description>
-            <link>https://dev.tube/video/8j0UDiN7my4</link>
-            <guid isPermaLink="true">https://dev.tube/video/8j0UDiN7my4</guid>
-            <pubDate>Fri, 06 Jul 2018 11:54:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #5: Space Invaders in JavaScript with p5.js]]></title>
-            <description><![CDATA[In this viewer submitted Coding Challenge, I take on the task of coding a Space Invaders game to play in browser in JavaScript/HTML and the p5.js library.
-
-Send me your Coding Challenge ideas!
-
-Contact: http://twitter.com/shiffman
-
-Source Code For This Challenge:
-p5.js:  https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_05_Space_invaders_p5.js
-Processing:  https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_05_Space_invaders
-
-p5.js: https://p5js.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/Qbs6/]]></description>
-            <link>https://dev.tube/video/biN3v3ef-Y0</link>
-            <guid isPermaLink="true">https://dev.tube/video/biN3v3ef-Y0</guid>
-            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #86: Cube Wave by Bees and Bombs]]></title>
-            <description><![CDATA[In this coding challenge, I attempt recreate a 3D @beesandbombs GIF with p5.js and the WebGL renderer.
-
-GIF: https://twitter.com/beesandbombs/status/940639806522085376
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-To buy Coding Train merchandise: https://codingtrain.storenvy.com
-To Support the Processing Foundation: https://processingfoundation.org/support
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Contact: 
-Twitter: https://twitter.com/shiffman
-The Coding Train website: http://thecodingtrain.com/ 
-
-Links discussed in this video:
-p5.js reference: https://p5js.org/reference/
-Bees and Bombs: https://beesandbombs.tumblr.com/
-
-Videos discussed in this video:
-Simple Harmonic Motion: https://youtu.be/GvwPwIUSYqE
-WebGL playlist: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bPhi8sS1hHJ77n3zRO9FR_
-
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For an Introduction to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH]]></description>
-            <link>https://dev.tube/video/H81Tdrmz2LA</link>
-            <guid isPermaLink="true">https://dev.tube/video/H81Tdrmz2LA</guid>
-            <pubDate>Fri, 06 Jul 2018 11:54:32 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #93: Double Pendulum]]></title>
-            <description><![CDATA[In this coding challenge, I simulate a "double pendulum" in Processing (Java).
-
-🔗  Physics Lab Double Pendulum: https://www.myphysicslab.com/pendulum/double-pendulum-en.html
-
-🎥  Single pendulum video: https://youtu.be/9iaEqGOh5WM
-
-🚂 The Coding Train website: http://thecodingtrain.com/ 
-💖 Support this channel on Patreon: https://patreon.com/codingtrain
-🛒 To buy Coding Train merchandise: https://codingtrain.storenvy.com
+🚂 Website: http://thecodingtrain.com/ 
+💖 Patreon: https://patreon.com/codingtrain
+🛒 Store: https://codingtrain.storenvy.com
 📚 Book recommendations: https://www.amazon.com/shop/thecodingtrain 
 
-💻  https://github.com/CodingTrain/Rainbow-Code
+💻  https://github.com/CodingTrain/website
 
-🎥  For an Introduction to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥  For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+🎥  Intro to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
 
 🔗  https://p5js.org/
 🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/uWzPe_S-RVE</link>
-            <guid isPermaLink="true">https://dev.tube/video/uWzPe_S-RVE</guid>
-            <pubDate>Fri, 06 Jul 2018 11:55:56 GMT</pubDate>
+            <link>https://dev.tube/video/rw_LVFpIzJg</link>
+            <guid isPermaLink="true">https://dev.tube/video/rw_LVFpIzJg</guid>
+            <pubDate>Sun, 08 Jul 2018 01:26:32 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[AWS Tutorial For Beginners | AWS Certified Solutions Architect | AWS Training | Edureka]]></title>
-            <description><![CDATA[( AWS Architect Certification Training - https://www.edureka.co/cloudcomputing )
-This AWS Tutorial Video ( Amazon AWS Blog Series: https://goo.gl/qQwZLz ) will give you an introduction to AWS and its domains. Later it will explain in detail about the AWS Services with an interesting hands-on. This AWS tutorial is ideal for those who want to become AWS Certified Solutions Architect.
+            <title><![CDATA[Functional Programming: Type Systems]]></title>
+            <description><![CDATA[What comes to your mind when you hear the word "type"? Do you think of an integer or string? Do you think of an object type from your favorite OOP language? Do you think about never ending religious debates regarding static vs dynamic types? Do you realize that these things hardly scratch the surface of what it means to be a "type"? Be prepared to understand types on a whole new level. 
 
-Amazon AWS Video Tutorial Playlist https://goo.gl/9fQX6J
+In this talk, we will explore type systems. What is a type system? Why are type systems important? How have type systems been influenced by functional programming, category theory, and type theory? We will talk about variance, polymorphisms, higher-kinded types, existential types, algebraic data types, and type classes. 
 
-In this AWS training video, you will understand :
+We will scratch the surface of type theory and learn how logic systems have influenced programming language design.
 
-1.What is Cloud?
-2.What is AWS?
-3.Different Domains in AWS
-4.AWS Pricing
-5.Migrate Your Application to AWS Infrastructure
-6.Use case
+EVENT:
 
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka
+Techlahoma Events 2018
 
-#awstraining #cloudcomputing #awstutorial
+SPEAKER:
 
-How it Works?
-1. This is a 5 Week Instructor led Online Course.
-2. Course consists of 30 hours of online classes, 30 hours of assignment, 20 hours of project
-3. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-4. You will get Lifetime Access to the recordings in the LMS.
-5. At the end of the training you will have to complete the project based on which we will provide you a Verifiable Certificate!
+Jordan Parmer
 
-- - - - - - - - - - - - - -
-About the Course
+PERMISSIONS:
 
-AWS Architect Certification Training from Edureka is designed to provide in depth knowledge about Amazon AWS architectural principles and its components. The sessions will be conducted by Industry practitioners who will train you to leverage AWS services to make the AWS cloud infrastructure scalable, reliable, and highly available. This course is completely aligned to AWS Architect Certification - Associate Level exam conducted by Amazon Web Services.
+Techlahoma Events Organizer as well as Jordan Parmer provided Coding Tech with the permissions to republish this video.
 
-During this AWS Architect Online training, you'll learn:
-1. AWS Architecture and different models of Cloud Computing 
-2. Compute Services: Amazon EC2, Auto Scaling and Load Balancing, AWS Lambda, Elastic Beanstalk
-3. Amazon Storage Services : EBS, S3 AWS, Glacier, CloudFront, Snowball, Storage Gateway
-4. Database Services: RDS, DynamoDB, ElastiCache, RedShift
-5. Security and Identity Services: IAM, KMS
-6. Networking Services: Amazon VPC, Route 53, Direct Connect
-7. Management Tools: CloudTrail, CloudWatch, CloudFormation, OpsWorks, Trusty Advisor
-8. Application Services: SES, SNS, SQS
+CREDITS:
 
-Course Objectives
-
-On completion of the AWS Architect Certification training, learner will be able to:
-1. Design and deploy scalable, highly available, and fault tolerant systems on AWS
-2. Understand lift and shift of an existing on-premises application to AWS
-3. Ingress and egress of data to and from AWS
-4. Identifying appropriate use of AWS architectural best practices
-5. Estimating AWS costs and identifying cost control mechanisms
-
-Who should go for this course?
-
-This course is designed for students and IT professionals who want to pursue a career in Cloud Computing. The course is a best fit for:
-1. Professionals interested in managing highly-available and fault-tolerant enterprise and web-scale software deployments.
-2. Professionals who want Project Experience in migrating and deploying cloud based solutions.
-3. DevOps professionals.
-
-Pre-requisites
-
-There are no specific prerequisites for this course. Any professional who has an understanding of IT Service Management can join this training. There is no programming knowledge needed and no prior AWS experience required.
-
-Please write back to us at sales@edureka.co or call us at +91 88808 62004 for more information.
-
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka
-
-Customer Reviews:
-
-Joga Rao, Principal Data Architect at AEMO says: “I am a Customer at Edureka. I attended the AWS Architect Certification Training, I found the training to be very informative. The course content was excellent, just what I was after. The trainer was very knowledgeable. I found him to be very patient, he listened and answered everyone's questions. I especially liked the way he repeated and summarized the previous day's leanings at the start of each new day. I also liked his interactive style of training. Edureka demonstrated the highest standard of professionalism in delivering the course content and their support to me in helping complete the project has been exceptional. Thanks Edureka! ”]]></description>
-            <link>https://dev.tube/video/IT1X42D1KeA</link>
-            <guid isPermaLink="true">https://dev.tube/video/IT1X42D1KeA</guid>
-            <pubDate>Fri, 06 Jul 2018 11:58:08 GMT</pubDate>
+Original video source: https://www.youtube.com/watch?v=jsGhJ2pKKYY]]></description>
+            <link>https://dev.tube/video/hy1wjkcIBCU</link>
+            <guid isPermaLink="true">https://dev.tube/video/hy1wjkcIBCU</guid>
+            <pubDate>Sun, 08 Jul 2018 01:24:25 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[15.1: What is Node.js? - Twitter Bot Tutorial]]></title>
-            <description><![CDATA[This video covers the basics of node.js.   What is node.js?  What is server-side programming?  What might you use it for and how do you get started?  Basic unix commands and working with terminal are covered.
+            <title><![CDATA[Øredev 2016 - Jimmy Bogard - SOLID Architecture in Slices not Layers]]></title>
+            <description><![CDATA[Want to watch more videos about Methodology? Click here: https://vimeo.com/album/4414351
 
-Darius Kazemi Eyeo talk: https://vimeo.com/112289364
-Allison Parrish twitter bot tutorial: http://air.decontextualize.com/twitterbot/
-NY Magazine on bots: http://nymag.com/following/2015/11/12-weirdest-funniest-smartest-twitter-bots.html
+For too long we've lived under the tyranny of n-tier architectures. Building systems with complicated abstractions, needless indirection and more mocks in our tests than a comedy special. But there is a better way - thinking in terms of architectures of vertical slices instead horizontal layers. Once we embrace slices over layers, we open ourselves to a new, simpler architecture, changing how we build, organize and deploy systems.
 
-All examples: https://github.com/shiffman/Video-Lesson-Materials
+Read more: oredev.org/2016/sessions/solid-architecture-in-slices-not-layers 
 
-Contact: https://twitter.com/shiffman
-
-Next video:
-https://youtu.be/s70-Vsud9Vk
-
-Learn JavaScript basics: 
-https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Learn Processing basics:
-https://www.youtube.com/user/shiffman/playlists?sort=dd&shelf_id=2&view=50
-
-More about data and APIs:
-https://www.youtube.com/playlist?list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r
-
-Help us caption & translate this video!
-
-http://amara.org/v/Qbts/]]></description>
-            <link>https://dev.tube/video/RF5_MPSNAtU</link>
-            <guid isPermaLink="true">https://dev.tube/video/RF5_MPSNAtU</guid>
-            <pubDate>Fri, 06 Jul 2018 12:00:32 GMT</pubDate>
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/wTd-VcJCs_M</link>
+            <guid isPermaLink="true">https://dev.tube/video/wTd-VcJCs_M</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:29 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[What is Git | What is GitHub | Git Tutorial | GitHub Tutorial | Devops Tutorial | Edureka]]></title>
-            <description><![CDATA[***** DevOps Training : https://www.edureka.co/devops *****
-This DevOps Tutorial on what is Git & what is GitHub ( Git Blog series: https://goo.gl/XS1Vux ) will let you know all about Version Control System & Version Control Tools like Git. You will learn all the Git commands to create repositories on your local machine & GitHub, commit changes, push & pull files. Also you will get your hands on with some advanced operations in Git like branching, merging, rebasing etc.
+            <title><![CDATA[Øredev 2015 - Christopher Batey - DYNAMO: the paper that changed the database world]]></title>
+            <description><![CDATA[Want to know more about Database? Click here: https://vimeo.com/album/4414343
 
-1:40     Version Control introduction
-4:53     Why version Control
-12:51   Version Control Tools
-15:18   Git & GitHub
-21:56   Case Study: Dominion enterprises
-25:32   What is Git
-28:25   Features of Git
-41:48    What is a Repository
-44:24   Git Operations and Commands
- 
-Check our complete DevOps playlist here: http://goo.gl/O2vo13
-DevOps Tutorial Blog Series: https://goo.gl/P0zAfF
+Want to roll out a database active active over multiple datacenters? Want to be able to do rolling upgrades and software releases without downtime? How about scale to millions of durable writes a second with single digit millisecond response times.;These requirements really cut down your database choices, and any database you’re considering are probably heavily influenced by Amazon’s 2007 paper: Dynamo: Amazon’s Highly Available Key-value Store. ;In this talk we’ll go through the main parts of Dynamo and discuss them in the context of how Apache Cassandra has implemented them. We’ll cover:; Consistent hashing; Strategies for replication; Working out distributed state with Gossip; Recovering from failure with Hinted handoff and Anti-entropy repair;We’ll also talk about why picking a masterless architecture, and trading availability and partition tolerance for consistency really can lead to a linearly scalable database. 
 
-Subscribe to our channel to get video updates. Hit the subscribe button above.
+Read more: http://oredev.org/2015/sessions/dynamo-the-paper-that-changed-the-database-world 
 
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka
-
-#Git #GitHub #DevOpsTools #DevOpsTraining #DevOpsTutorial #DevOpsGit #Git #GitHub #GitTutorial #GitTutorialforBeginners #GitRebase #GitAdd #GitBranching #GitMerge #GitBash #GitCommit #GitClone #GitCommands #GitCheckout #GitConfig 
-
-
-How it Works?
-1. This is a 4 Week Instructor led Online Course.
-2. Course consists of 24 hours of online classes, 25 hours of assignment, 20 hours of project
-3. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-4. You will get Lifetime Access to the recordings in the LMS.
-5. At the end of the training you will have to complete the project based on which we will provide you a Verifiable Certificate!
-
-- - - - - - - - - - - - - - 
-
-About the Course
-Edureka’s DevOps online training is designed to help you master key tools of Devops lifecycle like Docker, Puppet, Jenkins, Nagios, GIT, Ansible, SaltStack and Chef used by a DevOps Engineer for automating multiple steps in SDLC. During this course, our expert DevOps instructors will help you:
-
-1. Understand the concepts and necessities of DevOps
-2. Understand the need for DevOps and the day-to-day real-life problems it resolves
-3. Learn installation and configuration of common infrastructure servers like Apache, and Nginx for the Enterprise
-4. Learn popular DevOps tools like Jenkins, Puppet, Chef, Ansible, SaltStack, Nagios and GIT
-5. Implement automated system update, installations and deployments 
-6. Learn Virtualization Concepts 
-7. Configuration deployment and packaging, continuous integration using GIT
-8. Fine tune Performance and set-up basic Security for Infrastructure 
-9. Manage server operations using Code which is popularly known as Infrastructure as a Code
-10. Understand the need for and concepts of Monitoring and Logging. 
-
-Along with the above mentioned topics, to help you master the most popular DevOps tools, you will also receive 3 additional self-paced courses including presentations, class recordings, assignments, solutions for the following tools:
-
-1: Ansible - Covers Introduction, Setup & Configuration, Ansible Playbooks, 37 Ansible Modules, Different Roles and Command Line usage. 2: Chef - Covers Introduction, Building the Cook Book, Node Object & Search, Data-bags, Chef environment, Roles, Deploying Nodes in Production and using the Open Source Chef Server.
-
-3: Puppet - Covers Puppet Infrastructure & run-cycle, the Puppet Language, Environment defining Nodes and Modules, Provisioning a Web Server and Executing Modules Against A Puppet Master.
-
-- - - - - - - - - - - - - - 
-
-Who should go for this course?
-DevOps practitioners are among the highest paid IT professionals today, and the market demand for them is growing rapidly. With emergence of new job roles around DevOps philosophy, anyone aspiring to get into these new roles, can take up this DevOps course. Some of these roles are:
-
-1. DevOps Architect
-2. Automation Engineer
-3. Software Tester
-4. Security Engineer
-5. Integration Specialist
-6. Release Manager
-
-- - - - - - - - - - - - - - 
-
-Please write back to us at sales@edureka.co or call us at +91 88808 62004 for more information. 
-
-Customer Reviews:
-
-Ankur Kashyap, DevOps, Build & Release says: “I was enrolled into Devops training from Edureka On a professionalism, they provide a great presentation on the topic that helps to understand the indepth of Devops technology. Good knowledgeable staff, provide recorded sessions with life time warranty. Also technical team is really helpful if you stuck in some demo sessions. Keep it up !! ”]]></description>
-            <link>https://dev.tube/video/xuB1Id2Wxak</link>
-            <guid isPermaLink="true">https://dev.tube/video/xuB1Id2Wxak</guid>
-            <pubDate>Fri, 06 Jul 2018 11:57:56 GMT</pubDate>
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/hMt9yFp0JKM</link>
+            <guid isPermaLink="true">https://dev.tube/video/hMt9yFp0JKM</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:29 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Coding Challenge #12: The Lorenz Attractor in Processing]]></title>
-            <description><![CDATA[In this Coding Challenge, I show you how to visualization the Lorenz Attractor in Processing (Java).
+            <title><![CDATA[Øredev 2016 - Charles Marcus - "The Present and Possible Future of Quantum Computing"]]></title>
+            <description><![CDATA[I will review the state of quantum computing research, focusing on leading technologies and approaches. One approach in particular, topological quantum computing, is poised at the forefront of physics. This approach aims to create a new kind of delocalized state in a condensed matter system, the so-called Majorana zero mode, that will allow quantum information to be manipulated by braiding particles around one another. The state has been found. Can it be braided?
 
-Support this channel on Patreon: https://patreon.com/codingtrain
+Read more: oredev.org/2016/sessions/the-present-and-possible-future-of-quantum-computing
 
-
-Send me your coding challenges!
-
-Contact: https://twitter.com/shiffman
-
-Nature of Code class on Kadenze: https://www.kadenze.com/courses/the-nature-of-code/info
-
-Lorenz System on Wikipedia: https://en.wikipedia.org/wiki/Lorenz_system
-Paul Bourke's website on Lorenz Attractor: http://paulbourke.net/fractals/lorenz/
-beginShape() reference: https://processing.org/reference/beginShape_.html
-peasycam: http://mrfeinberg.com/peasycam/
-
-What is a differential equation?
-http://www.myphysicslab.com/what_diff_eq.html
-
-Source Code for this challenge:
-https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_12_LorenzAttractor 
-
-Processing: https://processing.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/QbsO/]]></description>
-            <link>https://dev.tube/video/f0lkz2gSsIk</link>
-            <guid isPermaLink="true">https://dev.tube/video/f0lkz2gSsIk</guid>
-            <pubDate>Fri, 06 Jul 2018 11:57:18 GMT</pubDate>
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/eamF9CnVuPs</link>
+            <guid isPermaLink="true">https://dev.tube/video/eamF9CnVuPs</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:29 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Coding Challenge #74: Clock with p5.js]]></title>
-            <description><![CDATA[In this coding challenge, I attempt to program a clock in HTML5 canvas with the p5.js library. 
+            <title><![CDATA[Testing Node.js with Mocha]]></title>
+            <description><![CDATA[A thorough introduction to the Mocha test framework by the maintainer of Mocha, and how to use it to test your Node.js applications.
 
-This challenge was inspired by John Maeda's "12 o'clocks" and Golan Levin's assignment on the subject in his 60212 Interactivity & Computation class (http://cmuems.com/2016/60212/lectures/lecture-09-09b-clocks/maedas-clocks/)
+Talk by Christopher Hiller - given at PDXNode.
 
-Submit links to your clocks!
-https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_74_Clock
+🐦Chris on Twitter: @b0neskull
 
-Support this channel on Patreon: https://patreon.com/codingtrain
-To buy Coding Train merchandise: https://codingtrain.storenvy.com
-To Support the Processing Foundation: https://processingfoundation.org/support
+🐦PDXNode onTwitter: @pdxnode
 
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+freeCodeCamp is not associated with this talk. We're just excited to share it with a wider audience!
 
-Contact: 
-Twitter: https://twitter.com/shiffman
-The Coding Train website: http://thecodingtrain.com/
+--
 
-Links discussed in this video:
-Golan Levin's notes on MAEDA’S 12 O’CLOCKS and assignment: http://cmuems.com/2016/60212/lectures/lecture-09-09b-clocks/maedas-clocks/
-http://cmuems.com/2016/60212/lectures/lecture-09-09b-clocks/
-http://cmuems.com/2016/60212/deliverables/deliverables-02/
-Alca's Clock Collection: https://codepen.io/collection/DqRNLQ/
-ICM-2017 Syllabus: https://github.com/ITPNYU/ICM-2017
+Learn to code for free and get a developer job: https://www.freecodecamp.org
 
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+Read hundreds of articles on programming: https://medium.freecodecamp.org
 
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Programming with Text videos: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-For an Intro to Programming using p5.js: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-
-Help us caption & translate this video!
-
-http://amara.org/v/adRW/]]></description>
-            <link>https://dev.tube/video/E4RyStef-gY</link>
-            <guid isPermaLink="true">https://dev.tube/video/E4RyStef-gY</guid>
-            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/Bs68k6xfR3E</link>
+            <guid isPermaLink="true">https://dev.tube/video/Bs68k6xfR3E</guid>
+            <pubDate>Sun, 08 Jul 2018 01:24:19 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[10.2: Neural Networks: Perceptron Part 1 - The Nature of Code]]></title>
-            <description><![CDATA[In this video, I continue my machine learning series and build a simple Perceptron in Processing (Java).
+            <title><![CDATA[Øredev 2016 - Kaushik Gopal - "Learning Rx by example"]]></title>
+            <description><![CDATA[Rx (Reactive extensions) is a powerful API for Asynchronous programming. It has a steep learning curve. Surprisingly though, the easiest way to grasp the concepts is by examples. So in this talk, we'll look at just 3 examples. These are marginally complex requirements that most developers would run into these days. We dissect the problem using Rx and try to come up with elegant and simple solutions to an otherwise complicated problem.
+Kaushik Gopal
+Read more: oredev.org/2016/sessions/leveraging-rxjava-for-android-by-example
 
-Perceptron Part 2: https://youtu.be/DGxIcDjPzac
-
-This video is part of Chapter 10 of The Nature of Code (http://natureofcode.com/book/chapter-10-neural-networks/)
-
-This video is also part of session 4 of my Spring 2017 ITP "Intelligence and Learning" course (https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks)
-
-Simple Perceptron code examples: 
-p5.js: https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp10_nn/NOC_10_01_Perceptron
-Processing: https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp10_nn/NOC_10_01_SimplePerceptron
-
-Support this channel on Patreon: https://patreon.com/codingtrain
-To buy Coding Train merchandise: https://codingtrain.storenvy.com
-To donate to the Processing Foundation: https://processingfoundation.org/
-
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
-
-Contact: 
-Twitter: https://twitter.com/shiffman
-The Coding Train website: http://thecodingtrain.com/
-
-Links discussed in this video:
-Session 4 of Intelligence and Learning: https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks
-Perceptron on Wikipedia: https://en.wikipedia.org/wiki/Perceptron
-Frank Rosenblatt's paper on the Perceptron: http://www.ling.upenn.edu/courses/cogs501/Rosenblatt1958.pdf
-My Gradient Descent video: https://youtu.be/L-Lsfu4ab74
-
-
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
-
-p5.js: https://p5js.org/
-Processing: https://processing.org
-
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-For More Intelligence and Learning: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YJ3XfHhT2Mm4Y5I99nrIKX
-
-Help us caption & translate this video!
-
-http://amara.org/v/7hHs/]]></description>
-            <link>https://dev.tube/video/ntKn5TPHHAk</link>
-            <guid isPermaLink="true">https://dev.tube/video/ntKn5TPHHAk</guid>
-            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/JMRxz5Nov-I</link>
+            <guid isPermaLink="true">https://dev.tube/video/JMRxz5Nov-I</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:29 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Coding Challenge #2: Menger Sponge Fractal]]></title>
-            <description><![CDATA[In this 10 Minute Coding Challenge, I attempt to code the Menger Sponge (fractals) using Processing.
+            <title><![CDATA[WordPress Plugin Editing Part 2  (P5D83) - Live Coding with Jesse]]></title>
+            <description><![CDATA[Project 5 Day 83: Today we will continue to work on creating a way for the wpGraphQL plugin to get data from our custom fields.
 
-Send me your 10 minute coding challenge!
+See a professional front-end developer at work. Unscripted. Mistakes included.
 
-Contact: http://twitter.com/shiffman
+Next.js 5: https://zeit.co/blog/next5
 
-Prequel where I sort some of this out: https://youtu.be/Md5LIDW0RyY?t=2738 
+Project Repo: https://github.com/fus-marcom/franciscan-react
 
-Code for this challenge: 
-https://github.com/CodingTrain/website/tree/master/CodingChallenges
+React: https://facebook.github.io/react/
 
-Processing: https://processing.org/
-Wikipedia page of the Menger Sponge: https://en.wikipedia.org/wiki/Menger_sponge
+Gitter: https://gitter.im/LiveCodingwithJesseFreeCodeCamp/
 
-Processing topics covered:
-P3D: https://processing.org/tutorials/p3d/
-ArrayList: https://processing.org/reference/ArrayList.html
+Twitter: https://twitter.com/JesseRWeigel
+Youtube: https://www.youtube.com/c/JesseWeigel29 
+Instagram: https://www.instagram.com/jesse.weigel/
 
-To learn more about fractals using Processing: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bXUJvjnMWGU5SmjhI-OXef
+Code Editor: Visual Studio Code
+VS Code Theme: Seti
+Terminal: https://www.iterm2.com/
+Project Management: https://trello.com
 
-Help us caption & translate this video!
+-
 
-http://amara.org/v/Qbsl/]]></description>
-            <link>https://dev.tube/video/LG8ZK-rRkXo</link>
-            <guid isPermaLink="true">https://dev.tube/video/LG8ZK-rRkXo</guid>
-            <pubDate>Fri, 06 Jul 2018 11:59:22 GMT</pubDate>
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/sdD7cl2Y-2s</link>
+            <guid isPermaLink="true">https://dev.tube/video/sdD7cl2Y-2s</guid>
+            <pubDate>Sun, 08 Jul 2018 01:24:19 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Guest Tutorial #4: Matrix Digital Rain in p5.js with Emily Xie]]></title>
-            <description><![CDATA[In this guest tutorial, Emily Xie uses the p5.js library to recreate the digital rain effect from the movie The Matrix.
+            <title><![CDATA[Øredev 2016 - Jimmy Bogard - Avoiding Microservice Megadisaster]]></title>
+            <description><![CDATA[Want to learn more about .NET? Click here: https://vimeo.com/album/4413645
 
-Emily Xie is a software developer and creative coder. She's passionate about coding education, having taught through various conference workshops and via organizations like Girl Develop It (https://www.girldevelopit.com/) and Pioneer Works (https://pioneerworks.org/). Currently, Emily lives in New York and works at Squarespace.
+You've spent months re-architecting your monolith into the new microservices vision. Everyone gathers around to flip the switch. You navigate to the first page...and nothing happens. Refresh...still nothing. The site is so slow, it won't respond for minutes. What happened?
+In this session, I'll walk through a post-mortem of a real-life microservice disaster. I'll show the modeling, development and production problems we found, and how we slowly morphed the new distributed monolith into our final picture of sanity. While we can't prevent project failures, we can at least identify problems early on in our design so that our final product results in a clean, robust distributed system.
 
-Project:
-Matrix repository: https://github.com/emilyxxie/green_rain
-The Matrix project, deployed: http://xie-emily.com/generative_art/green_rain.html
+Read more: oredev.org/2016/sessions/avoiding-microservice-megadisasters
 
-Personal:
-Website: http://xie-emily.com
-Twitter: https://twitter.com/emilyxxie
-Github account: https://github.com/emilyxxie
-
-p5.js: https://p5js.org/
-
-For more Guest Tutorials and Interviews: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bYBG4PsCJpsvMka3boE9pR
-For more Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-Help us caption & translate this video!
-
-http://amara.org/v/72of/]]></description>
-            <link>https://dev.tube/video/S1TQCi9axzg</link>
-            <guid isPermaLink="true">https://dev.tube/video/S1TQCi9axzg</guid>
-            <pubDate>Fri, 06 Jul 2018 11:53:37 GMT</pubDate>
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/OQLZ5EH-rHQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/OQLZ5EH-rHQ</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[10.1: Introduction to Neural Networks - The Nature of Code]]></title>
-            <description><![CDATA[Welcome to Chapter 10 of The Nature of Code: Neural Networks.
-(http://natureofcode.com/book/chapter-10-neural-networks/) 
+            <title><![CDATA[Øredev 2017 - Bartosz Milewski - The Earth is Flat: Exploring the Limits of Science]]></title>
+            <description><![CDATA[The scientific method has been extremely successful, leading to exponential growth in our understanding of the Universe. But in real life no exponential can go forever. We will either explain everything in one grand unified theory, or we'll hit the wall. We hope for the former, but have to be prepared for the latter.
 
-In this video, I  provide a brief introduction neural networks and an overview of topics in upcoming videos.
+So far "understanding" meant decomposing complex systems into simpler components. That's what math is good for, and category theory in particular. That's how we write programs. But there is a new way of dealing with problems by training neural networks. Does that lead to "understanding" though? Is AI the killer of the scientific method?
 
-Next video (Perceptron): https://youtu.be/ntKn5TPHHAk 
+Key takeaways
+I will try to maximally confuse and humble you.
+You will start doubting your most basic assumptions.
+You might get some new insights into the interplay between the human mind and the Universe.
 
-This video is also part of session 4 of my Spring 2017 ITP "Intelligence and Learning" course (https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks)
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/HnnyiNKpWR8</link>
+            <guid isPermaLink="true">https://dev.tube/video/HnnyiNKpWR8</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Øredev 2017 - Christina Lee - Advanced Kotlin]]></title>
+            <description><![CDATA[This session will use code to examine and explain some advanced Kotlin topics, including the type system, generics, and inlining lambda optimizations. Attendees can expect to hear both the theory and practice of each concept, using code to demonstrate what is made possible by these features.
 
-Support this channel on Patreon: https://patreon.com/codingtrain
-To buy Coding Train merchandise: https://codingtrain.storenvy.com
-To donate to the Processing Foundation: https://processingfoundation.org/
+Key takeaways
+How the Kotlin type system is organized and implemented.
+What generics are and how to use them.
+When to use optimizations like `inline`
 
-Send me your questions and coding challenges!: https://github.com/CodingTrain/Rainbow-Topics
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/B1UfltiA6jQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/B1UfltiA6jQ</guid>
+            <pubDate>Sun, 08 Jul 2018 01:22:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Julian Togelius - Can computers become intelligent through playing games?]]></title>
+            <description><![CDATA[Meet with Julian Togelius - an Associate Professor in the Department of Computer Science and Engineering at New York University... and one of our keynote speakers!
 
-Contact: 
-Twitter: https://twitter.com/shiffman
-The Coding Train website: http://thecodingtrain.com/
+Our conference host Ben Ward had a quick chat with Julian to hear about his work on all aspects of computational intelligence and games and on selected topics in evolutionary computation and evolutionary reinforcement learning. Julian is going to talk about what AI is and how videogames are essential for achieving it, and also tell us about how AI methods can revolutionize game development.
 
-Links discussed in this video:
-The Nature of Code: http://natureofcode.com/
-Session 4 of Intelligence and Learning: https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week4-neural-networks
-Perceptron on Wikipedia: https://en.wikipedia.org/wiki/Perceptron
-My Simple Artificial Neural Network JavaScript Library: https://github.com/shiffman/Neural-Network-p5
+Read more: oredev.org/2017/line-up/julian-togelius
 
-Books discussed in this video: 
-Tariq Rashid's Make Your Own Neural Network: http://amzn.to/2tcVeFS
-Marvin Minsky's Perceptrons: http://amzn.to/2u8Jv8f
+Twitter: @togelius
+Website: www.julian.togelius.com
 
-Source Code for the all Video Lessons: https://github.com/CodingTrain/Rainbow-Code
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/Xwd7nahyduQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/Xwd7nahyduQ</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Øredev 2017 - Noah Falstein - Lucasfilm Games and the rise of LucasArts]]></title>
+            <description><![CDATA[Noah was the 7th employee at Lucasfilm Games, and came on before their first titles were published. He will relate stories of what it was like to work on early titles like Rescue on Fractalus, Indiana Jones and the Last Crusade, The Secret of Monkey Island, and more. He'll discuss details of what it was like to code for 1 mhz processors and fit a game into 48K (or even 2K!) of total storage, and relate anecdotes of early LucasArts experiences.
 
-p5.js: https://p5js.org/
-Processing: https://processing.org
+Key takeaways
+What it was like to work at Skywalker Ranch with George Lucas and Steven Spielberg in the early days of video games on Star Wars and Indiana Jones titles
+Inside stories of early days of game development and coding in the era of 1 Mhz processors and 300 baud modems
+Background on groundbreaking interactive storytelling
 
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/2YeWTXTwchw</link>
+            <guid isPermaLink="true">https://dev.tube/video/2YeWTXTwchw</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Linda Liukas - Let's make the world of technology more colourful!]]></title>
+            <description><![CDATA[Meet with Linda Liukas - a children's book author, a programmer, an illustrator... and one of our keynote speakers!
 
-The Nature of Code playlist: https://www.youtube.com/user/shiffman/playlists?view_as=subscriber&shelf_id=6&view=50&sort=dd
-For More Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-For More Intelligence and Learning: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YJ3XfHhT2Mm4Y5I99nrIKX
+Our conference host Ben Ward had a quick chat with Linda Liukas to hear about her ambition to try to make the world of technology more approachable, more colourful and more whimsical for the next generation of programmers! 
 
-Help us caption & translate this video!
+Read more: http://oredev.org/2017/line-up/linda-liukas
 
-http://amara.org/v/8Ho5/]]></description>
-            <link>https://dev.tube/video/XJ7HLz9VYz0</link>
-            <guid isPermaLink="true">https://dev.tube/video/XJ7HLz9VYz0</guid>
-            <pubDate>Fri, 06 Jul 2018 11:52:47 GMT</pubDate>
+Twitter: https://twitter.com/lindaliukas
+Website: http://lindaliukas.com
+
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/YtkVX43jSyQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/YtkVX43jSyQ</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Øredev 2017 - Rene Shulte - HoloLens 301: Advanced Mixed Reality Development and Best Practices]]></title>
+            <description><![CDATA[The year 2017 is the year of Mixed Reality (MR) with devices like the Microsoft HoloLens which are turning science fiction movie technology into reality.
+
+Through live code demos, you will leave this session understanding advanced development topics like Hand Proximity Interactions to create even more compelling HoloLens applications. Rene will demonstrate some of the apps he and his team worked on since 2015, and share how they were able to overcome challenges. 
+
+His best practices and recommendations will help you avoid pit falls, and show you how to take your own Mixed Reality apps to the next level.
+
+Key takeaways
+Why Mixed Reality is not just Augmented Reality.
+How to write advanced HoloLens apps.
+How to be more efficient while developing Mixed Reality apps with Unity.
+What Rene's team has learned developing for the HoloLens since 2015.
+
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/wBIDl7pkDmA</link>
+            <guid isPermaLink="true">https://dev.tube/video/wBIDl7pkDmA</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Øredev 2017 - Gustaf Nilsson Kotte - Micro­service Websites]]></title>
+            <description><![CDATA[How can we build websites with scalable development (autonomous teams), great end-user performance and high future evolvability?
+
+With this talk, I want to show you that server-side transclusion – in particular Edge Side Includes – is a great integration technique for the above goals. Teams can produce pages and/or fragments, and fragments in turn depend on resource fragments for styles and (possibly) scripts. But how should teams agree on common dependencies and what would the existence of common dependencies mean to evolvability and performance?
+
+Examples will be from the mobile web project IKEA M2.
+
+Key takeaways
+The benefits of microservices apply to the frontend as well.
+The constraints are bit different though since part of the runtime is a diverse set of end-user devices.
+Edge Side Includes is a highly underrated technology for web frontend integration.
+
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/j2ynHColelw</link>
+            <guid isPermaLink="true">https://dev.tube/video/j2ynHColelw</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Øredev 2016 - Johan Öbrink - Why Promising Nothing Delivers More and Planing Always Fails]]></title>
+            <description><![CDATA[Want to learn more about Agile? Click here: https://vimeo.com/album/4413663
+
+Why do so many IT projects fail? And what can we do about it?
+Most companies and organisations know (or at least have heard) that they should work in a more agile manner. But it's generally a hard sell to the people in charge. This talk dissects the agile practices from an economic standpoint, showing that it actually makes business sense even if the project itself was to fail.
+By adjusting the metrics from what is easily measured to what actually matters, we can create the correct incentives for producing real value. But, as it turns out, implementing the steps necessary for making IT truly profitable also has profound implications for some of the tools and practices we tend to take for granted.
+
+Read more: oredev.org/2016/sessions/why-promising-nothing-delivers-more-and-planning-always-fails
+
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/sPcj5o7F6Gg</link>
+            <guid isPermaLink="true">https://dev.tube/video/sPcj5o7F6Gg</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Øredev 2015 - Jake Wharton - Advancing android development with the kotlin language]]></title>
+            <description><![CDATA[Want to know more about Language? Click here: https://vimeo.com/album/4414341
+
+Using Kotlin for Android development has grown in popularity over the last year. Even to those who are not currently using it, the value proposition of the language immediately resonates. There already are a lot of introductory talks to the language and its extensions for use on Android. This talk will cover advancing the usage and design patterns of the language for Android development to solve larger problems. While the content is targeted at mobile development, there will be value for all Java developers interested in Kotlin.
+Prior knowledge or use of Kotlin is not required to attend this talk. Some concepts of the language will be used without introduction but they are intuitive and/or quickly learned. Even if you don't fully understand every language concept on which each example is built, the resulting functionality will be clear.
+
+Read more: http://oredev.org/2015/sessions/advancing-android-development-with-the-kotlin-language 
+
+Connect with us!
+Twitter: https://twitter.com/oredev
+Facebook: https://facebook.com/oredev
+Instagram: https://instagram.com/oredev
+Vimeo: https://vimeo.com/oredev]]></description>
+            <link>https://dev.tube/video/llUnQNbkEGg</link>
+            <guid isPermaLink="true">https://dev.tube/video/llUnQNbkEGg</guid>
+            <pubDate>Sun, 08 Jul 2018 01:23:28 GMT</pubDate>
         </item>
     </channel>
 </rss>
