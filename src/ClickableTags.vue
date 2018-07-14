@@ -20,14 +20,14 @@
     mixins: [Component],
     methods: {
       refineTag(tag) {
-        if (window.fuseMode) {
+        if (window.fastrMode) {
           this.$router.push({ name: 'tag', params: { tag: tag } })
         } else {
           this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('tags', tag)
         }
       },
       refineChannel(channel) {
-        if (window.fuseMode) {
+        if (window.fastrMode) {
           this.$router.push({ name: 'channel', params: { channel: channel } } )
         } else {
           this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('channelTitle', channel)

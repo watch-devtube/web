@@ -167,14 +167,14 @@ const fuseSearchClient = {
   addAlgoliaAgent(agent) {}
 };
 
-const searchStore = window.fuseMode ? 
+const searchStore = window.fastrMode ? 
   createFromAlgoliaClient(fuseSearchClient) : 
   createFromAlgoliaCredentials(
     'DR90AOGGE9',
     'c2655fa0f331ebf28c89f16ec8268565'
 );
 
-if (window.speaker && !window.fuseMode) {
+if (window.speaker && !window.fastrMode) {
   searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
   searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
 }
@@ -196,7 +196,7 @@ export default {
       tagsCollapsed: true,
       speakersCollapsed: true,
       channelsCollapsed: true,
-      newMode: window.fuseMode,
+      newMode: window.fastrMode,
       newVideos: window.newVideos,
       searchStore
     };
@@ -234,7 +234,7 @@ export default {
     },
     fetch() {
       this.newVideos = window.newVideos
-      this.newMode = window.fuseMode
+      this.newMode = window.fastrMode
 
 
       this.searchStore.stop()

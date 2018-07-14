@@ -17,7 +17,7 @@
     },
     computed: {
       newMode() {
-        return window.fuseMode
+        return window.fastrMode
       }
     },    
     asyncComputed: {

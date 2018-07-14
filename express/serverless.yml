@@ -31,3 +31,9 @@ functions:
     handler: proxy
     events:
       - http: path
+  proxy2:
+    handler: proxy
+    include:
+      - data/*.json
+    events:
+      - http: path

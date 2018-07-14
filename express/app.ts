@@ -55,17 +55,17 @@ app.set('views', path.join(__dirname, staticDir))
 let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
 let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
 
-// EXPERIMENTAL FUSE.JS MODE
-let fuseMode = process.env.FUSE_MODE
-let fuseDir = `${__dirname}/backup`
-let fastr = fuseMode ? new Fastr(fuseDir) : undefined
+// EXPERIMENTAL FASTR MODE
+let fastrDir = `${__dirname}/data`
+let fastrMode = fs.existsSync(fastrDir) && fs.statSync(fastrDir).isDirectory()
+let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : undefined
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Application logic
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let featuredOrUndefined = () => {
-  if (!fuseMode) {
+  if (!fastrMode) {
     return undefined
   }
   let tags = fastr.searchTags()
@@ -85,7 +85,7 @@ async function proxy(req: Request, res: Response) {
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     res.render('index.html', {      
       title: title,
-      fuseMode: fuseMode,
+      fastrMode: fastrMode,
       featured: featuredOrUndefined(),
       newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
@@ -106,7 +106,7 @@ async function proxy(req: Request, res: Response) {
       title: title,
       featured: featuredOrUndefined(),
       speaker: `"${speaker}"`,
-      fuseMode: fuseMode,
+      fastrMode: fastrMode,
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
@@ -124,7 +124,7 @@ async function proxy(req: Request, res: Response) {
     res.render('index.html', {
       title: title,
       featured: featuredOrUndefined(),
-      fuseMode: fuseMode,
+      fastrMode: fastrMode,
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
@@ -135,7 +135,7 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })    
-  } else if (req.path.startsWith("/search") && fuseMode) {
+  } else if (req.path.startsWith("/search") && fastrMode) {
 
     let { query, page, refinement, sortOrder } = req.body.requests[0].params
 
@@ -171,7 +171,7 @@ async function proxy(req: Request, res: Response) {
       videoCache.set(objectID, video)
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
-        fuseMode: fuseMode,
+        fastrMode: fastrMode,
         featured: featuredOrUndefined(),
         preloadedEntity: JSON.stringify(video),
         meta: [
