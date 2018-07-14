@@ -37,6 +37,7 @@ script:
 - gsutil cp gs://dev-tube-index/*.json ./data
 - serverless package
 - unzip -l .serverless/devtube-proxy.zip
+- unzip -l .serverless/proxy2.zip
 - serverless deploy
 notifications:
   slack:
