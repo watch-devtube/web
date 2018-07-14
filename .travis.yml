@@ -13,6 +13,8 @@ script:
 - cd express
 - yarn
 - yarn compile
+- mkdir ./data
+- gsutil cp gs://dev-tube-index/*.json ./data
 - serverless package
 - unzip -l .serverless/devtube-proxy.zip
 - serverless deploy
