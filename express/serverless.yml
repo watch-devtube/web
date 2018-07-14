@@ -15,7 +15,6 @@ plugins:
   - serverless-plugin-typescript
 
 package:
-  individually: true
   exclude:
     - node_modules/**
     - .gitignore
@@ -36,6 +35,7 @@ functions:
   proxy2:
     handler: proxy
     package:
+      individually: true
       include:
         - data/*.json
     events:
