@@ -33,10 +33,10 @@ functions:
     events:
       - http: path
   proxy2:
-    handler: proxy
+    handler: proxy2
     package:
       individually: true
       include:
-        - data/*.json
+        - "data/*.json"
     events:
       - http: path
