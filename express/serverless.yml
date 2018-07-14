@@ -15,12 +15,14 @@ plugins:
   - serverless-plugin-typescript
 
 package:
+  individually: true
   exclude:
     - node_modules/**
     - .gitignore
     - .git/**
     - yarn*
     - service_key.json
+    - data/*.json
   include:
     - ../dist/**
     - ../sitemap.xml
@@ -33,7 +35,8 @@ functions:
       - http: path
   proxy2:
     handler: proxy
-    include:
-      - data/*.json
+    package:
+      include:
+        - data/*.json
     events:
       - http: path

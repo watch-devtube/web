@@ -2,3 +2,4 @@
 service_key.json
 .serverless/
 dist/
+/data
