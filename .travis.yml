@@ -4,16 +4,25 @@ branches:
   - master
 cache:
   directories:
-    - "$HOME/google-cloud-sdk/"
+    - $HOME/gcloud/
     - node_modules
     - express/node_modules
-group: deprecated-2017Q2    
+env:
+    - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json 
 before_install:
 - openssl aes-256-cbc -K $encrypted_97a0b4bf9e4a_key -iv $encrypted_97a0b4bf9e4a_iv -in express/service_key.json.enc -out express/service_key.json -d
-- gcloud version || true
-- if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
-- source /home/travis/google-cloud-sdk/path.bash.inc
-- gcloud version
+- if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
+    mkdir -p $HOME/gcloud &&
+    wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=$HOME/gcloud &&
+    cd $HOME/gcloud &&
+    tar xzf google-cloud-sdk.tar.gz &&
+    printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh &&
+    cd $TRAVIS_BUILD_DIR;
+  fi
+- gcloud -q components update
+- if [ -a express/service_key.json ]; then
+    gcloud -q auth activate-service-account --key-file express/service_key.json;
+  fi
 - npm i serverless -g
 - npm i typescript -g
 script:
