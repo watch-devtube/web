@@ -8,7 +8,9 @@ cache:
     - node_modules
     - express/node_modules
 env:
-    - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json 
+    - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin 
+    - GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json 
+    - SLS_DEBUG=1
 before_install:
 - openssl aes-256-cbc -K $encrypted_97a0b4bf9e4a_key -iv $encrypted_97a0b4bf9e4a_iv -in express/service_key.json.enc -out express/service_key.json -d
 - if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
@@ -26,6 +28,8 @@ before_install:
 - npm i serverless -g
 - npm i typescript -g
 script:
+- serverless version
+- tsc --version
 - yarn
 - yarn build
 - cd express
