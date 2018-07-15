@@ -59,6 +59,9 @@ let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v
 let fastrDir = `${__dirname}/data`
 let fastrMode = fs.existsSync(fastrDir) && fs.statSync(fastrDir).isDirectory()
 let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : undefined
+Logger.info('---- APPLICATION STARTED ----')
+Logger.info(`---- FASTR MODE: ${fastrMode} ----`)
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Application logic
@@ -79,7 +82,7 @@ let featuredOrUndefined = () => {
 }
 
 async function proxy(req: Request, res: Response) {
-  console.log(`REQUEST PATH: ${req.path}`)
+  Logger.info(`REQUEST PATH: ${req.path}`)
   if (!req.path || req.path == '/') {
     let title = 'DevTube - The best developer videos in one place'
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
@@ -99,9 +102,14 @@ async function proxy(req: Request, res: Response) {
       ]
     })
   } else if (req.path.startsWith("/@")) {
+
     let speaker = req.path.split("/@")[1]
+
+    Logger.info(`SPEAKER REQUEST: ${speaker}`)
+
     let title = `DevTube - Videos by @${speaker}`
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+
     res.render('index.html', {
       title: title,
       featured: featuredOrUndefined(),
@@ -117,10 +125,16 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
+
   } else if (req.path.startsWith("/tag/")) {
+
     let tag = req.path.split("/tag/")[1]
+
+    Logger.info(`TAG REQUEST: ${tag}`)
+
     let title = `DevTube - Videos by topic @${tag}`
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+    
     res.render('index.html', {
       title: title,
       featured: featuredOrUndefined(),
@@ -135,7 +149,10 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })    
+
   } else if (req.path.startsWith("/search") && fastrMode) {
+
+    Logger.info(`SEARCH REQUEST: ${JSON.stringify(req.body.requests[0].params)}`)
 
     let { query, page, refinement, sortOrder } = req.body.requests[0].params
 
@@ -165,7 +182,7 @@ async function proxy(req: Request, res: Response) {
      )
   } else if (req.path.startsWith('/video/')) {
     let objectID = req.path.split('/')[2]
-    console.log(`VIDEO REQUEST: ${objectID}`)
+    Logger.info(`VIDEO REQUEST: ${objectID}`)
     try {
       let video = videoCache.has(objectID) ? videoCache.get(objectID) : await index.getObject(objectID) as any
       videoCache.set(objectID, video)
