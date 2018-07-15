@@ -42,7 +42,7 @@ script:
 - rm -rf .serverless
 - rm -rf .build
 - mv serverless.2.yml serverless.yml
-- serverless deploy --function proxy2
+- serverless deploy
 notifications:
   slack:
     secure: RlPU/MveCOFlOT5LCWxkTNQ6dZsjyiESIaxBUUYzH2opz8pe7RyUyFBr972IaJq3MQpHXfRQ3ctgrwaThX23KBKC9Gtl4u0bHt9BiWV9nTv0ZvqkHINN5Fomb5QHCEKAmfeuOuKWR/yMVAIZ/VAKMkWqcYwzz4/7neRUkcBXAy8IvAY+QDJj6MlN7/VXnpS4z3c/yAQOpeCecqdXs5CgxrGAVdx9yJKgmGxwS/xs18UZ68B/bKbFirM714o0+I/P7O0VwLsaW5bwgho0jzj8cA66R9VNg7JEHaHxzJUHgia51JJB5YIXoyU20IQc1uVHeT0UptqM0VRKfG25zGmDq+shfd9hxD3i+6B+TeHoRNbBKiv3PM3VCpiydysNlrjFYmNVab8BeHbAONy8dltX/oEQsAa8VQrTSw7ex0pUOHJPbjbQgxrBRMjem+HOM2du1zCytz/PIeCB8AEtXZc9GwIkNdr9g+pPlYbD/FqJ7y65roMuDWLuAVZBbwm9znmHohNYQzfz2lJkxwYHxfqSgVz5ccDfcNaDrli1FFdCPNEVnFNL93SXMZQ43kyYfr3G0jMsHkQT4GD9r78CaPknJVLbAg8avDM4Q+6HMfVNoQkSf5Uc0idzrM3oNBMqFd5Lrsw3QxI/KFf7LVUog3YRAsayNjwUGDVuxwhOH5Iky5o=
