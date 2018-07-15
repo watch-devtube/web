@@ -6,7 +6,7 @@ provider:
   project: dev-tube
   credentials: service_key.json
   memorySize: 512
-  timeout: 540s
+  timeout: 30s
 
 plugins:
   - serverless-google-cloudfunctions
