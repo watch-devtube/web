@@ -7,8 +7,6 @@ provider:
   credentials: service_key.json
   memorySize: 512
   timeout: 540s
-  labels:
-    application: DevTube Proxy
 
 plugins:
   - serverless-google-cloudfunctions
