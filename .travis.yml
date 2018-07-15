@@ -26,22 +26,29 @@ before_install:
 - npm i serverless -g
 - npm i typescript -g
 script:
+# compile vue app
 - serverless version
 - tsc --version
 - yarn
 - yarn build
+# compile express app
 - cd express
 - yarn
 - yarn compile
-- mkdir ./data
-- gsutil cp gs://dev-tube-index/*.json ./data
+# deploy proxy
 - serverless package
 - unzip -l .serverless/devtube-proxy.zip
 - serverless deploy
+# get data 
+- mkdir ./data
+- gsutil cp gs://dev-tube-index/*.json ./data
+# deploy proxy with data
 - rm -rf serverless.yml
 - rm -rf .serverless
 - rm -rf .build
 - mv serverless.2.yml serverless.yml
+- serverless package
+- unzip -l .serverless/devtube-proxy-with-data.zip
 - serverless deploy
 notifications:
   slack:
