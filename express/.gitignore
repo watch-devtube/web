@@ -3,4 +3,4 @@ service_key.json
 .serverless/
 .build/
 dist/
-/data
+data/

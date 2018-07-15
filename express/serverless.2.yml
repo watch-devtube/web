@@ -20,14 +20,14 @@ package:
     - ".gitignore"
     - "yarn*"
     - "service_key.json"
-    - "data/*.json"
   include:
+    - "data/*.json"
     - "../dist/**"
     - "../sitemap.xml"
     - "*.js"
 
 functions:
-  proxy:
-    handler: proxy
+  proxy2:
+    handler: proxy2
     events:
       - http: path
