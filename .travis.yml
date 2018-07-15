@@ -39,8 +39,6 @@ script:
 - unzip -l .serverless/devtube-proxy.zip
 - serverless deploy
 - rm -rf serverless.yml
-- rm -rf .serverless
-- rm -rf .build
 - mv serverless.2.yml serverless.yml
 - serverless deploy --function proxy2
 notifications:
