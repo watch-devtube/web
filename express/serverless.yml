@@ -8,7 +8,7 @@ provider:
   memorySize: 512
   timeout: 540s
   labels:
-    application: DevTube Proxy
+    application: DevTube
 
 plugins:
   - serverless-google-cloudfunctions
