@@ -5,7 +5,7 @@ provider:
   runtime: nodejs
   project: dev-tube
   credentials: service_key.json
-  memorySize: 512
+  memorySize: 2048
   timeout: 540s
 
 plugins:
