@@ -1,4 +1,4 @@
-service: devtube-proxy
+service: devtube-proxy-with-data
 
 provider:
   name: google
@@ -15,7 +15,6 @@ plugins:
   - serverless-plugin-typescript
 
 package:
-  artifact: devtube-proxy-with-data.zip
   exclude:
     - "node_modules/**"
     - ".gitignore"
