@@ -61,6 +61,10 @@
             "name": "Jez Humble"
         },
         {
+            "twitter": "alex_frantic",
+            "name": "Alex Kotliarskyi"
+        },
+        {
             "twitter": "tastapod",
             "name": "Dan North"
         },
@@ -79,6 +83,10 @@
         {
             "twitter": "jonskeet",
             "name": "Jon Skeet"
+        },
+        {
+            "twitter": "krambertech",
+            "name": "Kateryna Porshnieva"
         },
         {
             "twitter": "stolinski",
@@ -117,8 +125,16 @@
             "name": "Gene Kim"
         },
         {
+            "twitter": "roman01la",
+            "name": "Roman Liutikov"
+        },
+        {
             "twitter": "Pterolex",
             "name": "Alexey Zaslavsky"
+        },
+        {
+            "twitter": "yanivef",
+            "name": "Yaniv Efraim"
         },
         {
             "twitter": "nicolefv",
@@ -133,8 +149,20 @@
             "name": "Philipp Krenn"
         },
         {
+            "twitter": "yavorsky_",
+            "name": "Art Yavorsky"
+        },
+        {
+            "twitter": "NikkitaFTW",
+            "name": "Sara Vieira"
+        },
+        {
             "twitter": "edith_h",
             "name": "Edith Harbaugh"
+        },
+        {
+            "twitter": "ranyitz",
+            "name": "Ran Yitzhaki"
         },
         {
             "twitter": "HannahFoxwell",
