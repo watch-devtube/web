@@ -15,6 +15,7 @@ plugins:
   - serverless-plugin-typescript
 
 package:
+  artifact: devtube-proxy-with-data.zip
   exclude:
     - "node_modules/**"
     - ".gitignore"
