@@ -26,7 +26,7 @@
                   ExpandableTags(icon="fas fa-hashtag" title="Tags" :items="tags" :limit="20" :route="routeToTag")
                   ExpandableTags(icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="15" :route="routeToSpeaker")
                     template(slot-scope="slot")
-                      span {{slot.item.name.charAt(0) + '. ' + slot.item.name.split(' ')[1]}}
+                      span {{slot.item.name}}
                   ExpandableTags(icon="fab fa-youtube" title="Channels" :items="channels" :limit="15" :route="routeToChannel")
                     template(slot-scope="slot") {{slot.item.title | truncate(11)}}
               .column.is-one-quarter.is-hidden-touch(v-else)
@@ -61,7 +61,8 @@
                         ActiveFilters(:speaker="speaker")
                       .column.is-hidden-mobile(v-else)
                         router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'search' }")
-                          span {{speaker || tag || channel}}
+                          span.is-capitalized(v-if="tag || channel") {{tag || channel}}
+                          span.is-lowercased(v-if="speaker") @{{speaker}}
                           span.icon.is-small: i.fas.fa-times
                       .column
                         .field.is-grouped-multiline.is-grouped.is-grouped-right(v-if="newMode")
