@@ -4,3 +4,4 @@ service_key.json
 .build/
 dist/
 data/
+data.zip

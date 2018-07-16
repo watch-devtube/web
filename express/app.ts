@@ -52,29 +52,33 @@ app.set('view cache', !devMode)
 app.set('views', path.join(__dirname, staticDir))
 
 // Preload static data
+console.time('New videos parsing')
 let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
 let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
+console.timeEnd('New videos parsing')
 
 // EXPERIMENTAL FASTR MODE
+console.time('Fastr indexing')
 let fastrDir = `${__dirname}/data`
 let fastrMode = fs.existsSync(fastrDir) && fs.statSync(fastrDir).isDirectory()
 let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : undefined
-let lastChecked = (new Date().getTime()) / 1000
-let bucket = new GoogleBucket('dev-tube-index')
-async function reloadDataIfNeeded() {
-  if (fastrMode) {
-    let currentTime = (new Date().getTime()) / 1000
-    if (currentTime - lastChecked > 300) {
-      console.time("Started reloading")
-      fastr.reload({
-        lokiData: await bucket.get('loki.json'), 
-        lunrData: await bucket.get('lunr.json')
-      })
-      lastChecked = (new Date().getTime()) / 1000
-      console.time("Reloaded")
-    }
-  }
-}
+console.timeEnd('Fastr indexing')
+// let lastChecked = (new Date().getTime()) / 1000
+// let bucket = new GoogleBucket('dev-tube-index')
+// async function reloadDataIfNeeded() {
+//   if (fastrMode) {
+//     let currentTime = (new Date().getTime()) / 1000
+//     if (currentTime - lastChecked > 300) {
+//       console.time("Started reloading")
+//       fastr.reload({
+//         lokiData: await bucket.get('loki.json'), 
+//         lunrData: await bucket.get('lunr.json')
+//       })
+//       lastChecked = (new Date().getTime()) / 1000
+//       console.time("Reloaded")
+//     }
+//   }
+// }
 
 Logger.info('---- APPLICATION STARTED ----')
 Logger.info(`---- FASTR MODE: ${fastrMode} ----`)
@@ -102,7 +106,7 @@ async function proxy(req: Request, res: Response) {
   
   Logger.info(`REQUEST PATH: ${req.path}`)
   
-  reloadDataIfNeeded()
+  // reloadDataIfNeeded()
 
   if (!req.path || req.path == '/') {
 
