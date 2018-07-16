@@ -4,7 +4,7 @@
       span.icon.is-small
         i(v-bind:class="classObject")
     .modal(v-bind:class="{'is-active': !collapsed}")
-      .modal-background
+      .modal-background(@click="collapsed = !collapsed")
       .modal-content
         .tags
           a.tag.is-info.is-capitalized(v-for="item in items" @click="navigate(item)")
@@ -24,6 +24,9 @@
             slot(v-bind:item="item") {{item}}
           a.tag(@click="collapsed = true"): b show less
 </template>
+<style lang="scss">
+  .modal-content { overflow: visible; .modal-card-body { overflow: visible; } }
+</style>
 <script>
   export default {    
     computed: {
