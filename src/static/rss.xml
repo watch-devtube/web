@@ -4,7 +4,7 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 15 Jul 2018 03:23:37 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Jul 2018 03:22:50 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Java 8 Language Capabilities, What's in it for you?]]></title>
