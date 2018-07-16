@@ -62,15 +62,17 @@ let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : und
 let lastChecked = (new Date().getTime()) / 1000
 let bucket = new GoogleBucket('dev-tube-index')
 async function reloadDataIfNeeded() {
-  let currentTime = (new Date().getTime()) / 1000
-  if (currentTime -lastChecked > 300) {
-    console.time("Started reloading")
-    fastr.reload({
-      lokiData: await bucket.get('loki.json'), 
-      lunrData: await bucket.get('lunr.json')
-    })
-    lastChecked = (new Date().getTime()) / 1000
-    console.time("Reloaded")
+  if (fastrMode) {
+    let currentTime = (new Date().getTime()) / 1000
+    if (currentTime - lastChecked > 300) {
+      console.time("Started reloading")
+      fastr.reload({
+        lokiData: await bucket.get('loki.json'), 
+        lunrData: await bucket.get('lunr.json')
+      })
+      lastChecked = (new Date().getTime()) / 1000
+      console.time("Reloaded")
+    }
   }
 }
 
