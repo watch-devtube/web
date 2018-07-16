@@ -5,7 +5,7 @@ import * as lru from 'lru-cache'
 import * as algolia from 'algoliasearch'
 
 import { Request, Response } from 'express'
-import { Fastr, dnsCache, Logger } from 'devtube-commons'
+import { Fastr, dnsCache, Logger, GoogleBucket } from 'devtube-commons'
 
 // Configuration settings
 const algoliaAppId = 'DR90AOGGE9'
@@ -59,6 +59,21 @@ let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v
 let fastrDir = `${__dirname}/data`
 let fastrMode = fs.existsSync(fastrDir) && fs.statSync(fastrDir).isDirectory()
 let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : undefined
+let lastChecked = (new Date().getTime()) / 1000
+let bucket = new GoogleBucket('dev-tube-index')
+async function reloadDataIfNeeded() {
+  let currentTime = (new Date().getTime()) / 1000
+  if (currentTime -lastChecked > 300) {
+    console.time("Started reloading")
+    fastr.reload({
+      lokiData: await bucket.get('loki.json'), 
+      lunrData: await bucket.get('lunr.json')
+    })
+    lastChecked = (new Date().getTime()) / 1000
+    console.time("Reloaded")
+  }
+}
+
 Logger.info('---- APPLICATION STARTED ----')
 Logger.info(`---- FASTR MODE: ${fastrMode} ----`)
 
@@ -82,10 +97,16 @@ let featuredOrUndefined = () => {
 }
 
 async function proxy(req: Request, res: Response) {
+  
   Logger.info(`REQUEST PATH: ${req.path}`)
+  
+  reloadDataIfNeeded()
+
   if (!req.path || req.path == '/') {
+
     let title = 'DevTube - The best developer videos in one place'
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+
     res.render('index.html', {      
       title: title,
       fastrMode: fastrMode,
@@ -101,6 +122,7 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
+
   } else if (req.path.startsWith("/@")) {
 
     let speaker = req.path.split("/@")[1]
@@ -157,16 +179,16 @@ async function proxy(req: Request, res: Response) {
     let { query, page, refinement, sortOrder } = req.body.requests[0].params
 
     console.time(`Query ${query}`)
+
     let maxHitsPerPage = 21
     let hitsAll = fastr.search(query, refinement, sortOrder)
-
     let from = page * maxHitsPerPage
     let to = from + maxHitsPerPage
-
     let hitsPage = hitsAll.slice(from, to)
     let nbPages = Math.ceil(hitsAll.length / maxHitsPerPage)
 
     console.timeEnd(`Query ${query}`)
+
     res.status(200).send(
       {
         "results": [
@@ -179,10 +201,14 @@ async function proxy(req: Request, res: Response) {
           }
         ]
       }
-     )
+    )
+
   } else if (req.path.startsWith('/video/')) {
+
     let objectID = req.path.split('/')[2]
+    
     Logger.info(`VIDEO REQUEST: ${objectID}`)
+    
     try {
       let video = videoCache.has(objectID) ? videoCache.get(objectID) : await index.getObject(objectID) as any
       videoCache.set(objectID, video)
@@ -205,16 +231,15 @@ async function proxy(req: Request, res: Response) {
       if (e.statusCode && e.statusCode == 404) {
         res.status(404).send('Not found')
       } else {
-        console.error(e) 
-
+        Logger.error(e) 
         res.render('index.html', {
           title: `Error at Dev.Tube`,
           serverSideError: JSON.stringify(
             { message: 'Sorry, but the video is not available now. We\'re working on the solution.' })
         })
-
       }
     }
+
   } else {
     if (fs.existsSync('.' + req.path)) {
       res.sendFile('.' + req.path)
