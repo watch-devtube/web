@@ -19,16 +19,19 @@
           .container
             .columns
               .column.is-one-quarter(v-if="newMode")
-                p.buttons.is-right
+                p.buttons
                   router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel" :to="{ name: 'search' }")
                     span {{speaker || tag || channel}}
                     span.icon.is-small: i.fas.fa-times
-                  ExpandableTags(icon="fas fa-hashtag" title="Tags" :items="tags" :limit="20" :route="routeToTag")
-                  ExpandableTags(icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="15" :route="routeToSpeaker")
+
+                  ExpandableTags(icon="fas fa-hashtag" title="Tags" :items="tags" :limit="10" :route="routeToTag")
+                    template(slot-scope="slot") {{slot.item.tag}}
+                  ExpandableTags(icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="10" :route="routeToSpeaker")
                     template(slot-scope="slot")
                       span {{slot.item.name}}
-                  ExpandableTags(icon="fab fa-youtube" title="Channels" :items="channels" :limit="15" :route="routeToChannel")
-                    template(slot-scope="slot") {{slot.item.title | truncate(11)}}
+                  ExpandableTags(icon="fab fa-youtube" title="Channels" :items="channels" :limit="10" :route="routeToChannel")
+                    template(slot-scope="slot") {{slot.item.title}}
+
               .column.is-one-quarter.is-hidden-touch(v-else)
                 .columns(v-if="newVideos.length && !newOnly")
                   .column
@@ -225,7 +228,7 @@ export default {
   },
   methods: {
     routeToTag(item) {
-      return { name: 'tag', params: { tag: item } }
+      return { name: 'tag', params: { tag: item.tag } }
     },
     routeToSpeaker(item) {
       return { name: 'speaker', params: { speaker: item.twitter } }

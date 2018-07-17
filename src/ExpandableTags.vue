@@ -1,36 +1,44 @@
 <template lang="pug">
   .expandable-tags
-    a.button.is-small.is-hidden-tablet(@click="collapsed = false")
-      span.icon.is-small
-        i(v-bind:class="classObject")
+
+    a.popupIconVisibleOnlyOnMobile.button.is-small.is-hidden-tablet(@click="collapsed = false")
+      span.icon.is-small: i(v-bind:class="fontAwesome")
+
     .modal(v-bind:class="{'is-active': !collapsed}")
       .modal-background(@click="collapsed = !collapsed")
       .modal-content
-        .tags
-          a.tag.is-info.is-capitalized(v-for="item in items" @click="navigate(item)")
-            slot(v-bind:item="item") {{item}}
+        .field.is-grouped.is-grouped-multiline
+          .control(v-for="item in items")
+            .tags.has-addons
+              a.tag.is-dark.is-capitalized(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
+              a.is-black.tag(@click="navigate(item)") {{item.videoCount}}
       .modal-close.is-large(aria-label="close" @click="collapsed = !collapsed")
+
     .is-hidden-mobile
       p
         h2.subtitle
-          i(v-bind:class="classObject")
+          i(v-bind:class="fontAwesome")
           |  {{title}}
-        .tags(v-if="collapsed")
-          a.tag.is-capitalized(v-for="item in items.slice(0, limit)" @click="navigate(item)")
-              slot(v-bind:item="item") {{item}}
-          a.tag(@click="collapsed = false"): b ...
-        .tags(v-else)
-          a.tag.is-capitalized(v-for="item in items" @click="navigate(item)")
-            slot(v-bind:item="item") {{item}}
-          a.tag(@click="collapsed = true"): b show less
+        .tags.has-addons.is-marginless(v-for="item in items.slice(0, limit)")
+          a.tag.is-white.is-capitalized(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
+          a.tag(@click="navigate(item)") {{item.videoCount}}
+        .tags.has-addons.is-marginless
+          a.tag.is-white.is-capitalized(@click="collapsed = !collapsed") More
+          a.tag(@click="collapsed = !collapsed") ...
 </template>
 <style lang="scss">
-  .modal-content { overflow: visible; .modal-card-body { overflow: visible; } }
+  .expandable-tags {
+    margin-bottom: 20px
+  }
+
+  .collapsedScreen .has-addons {
+    margin-bottom: 0
+  }
 </style>
 <script>
   export default {    
     computed: {
-      classObject: function () {
+      fontAwesome: function () {
         return this.icon
       }
     },

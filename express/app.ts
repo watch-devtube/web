@@ -91,7 +91,7 @@ let featuredOrUndefined = () => {
   let channels = fastr.listChannels()
   let speakers = fastr.listSpeakers()
   return JSON.stringify({
-    tags: tags.map(t => t.tag),
+    tags: tags,
     channels: channels,
     speakers: speakers
   })
