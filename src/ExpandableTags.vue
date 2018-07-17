@@ -17,8 +17,9 @@
     .is-hidden-mobile
       p
         h2.subtitle
-          i(v-bind:class="fontAwesome")
-          |  {{title}}
+          a.has-text-black(@click="collapsed = false") 
+            i(v-bind:class="fontAwesome")
+            |  {{title}}
         .tags.has-addons.is-marginless(v-for="item in items.slice(0, limit)")
           a.tag.is-white.is-capitalized(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
           a.tag(@click="navigate(item)") {{item.videoCount}}
