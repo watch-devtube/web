@@ -15,7 +15,7 @@
     "@types/lodash": "^4.14.109",
     "@types/lru-cache": "^4.1.1",
     "@types/request": "^2.47.1",
-    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201807171038/devtube-commons-v0.1.0.tgz",
+    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201807171101/devtube-commons-v0.1.0.tgz",
     "algoliasearch": "^3.27.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",

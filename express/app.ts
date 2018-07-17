@@ -60,7 +60,7 @@ app.set('view engine', 'mustache')
 app.set('view cache', !devMode)
 app.set('views', path.join(__dirname, staticDir))
 
-console.time('Init')
+console.timeEnd('Init')
 
 // Preload static data
 console.time('New videos parsing')
