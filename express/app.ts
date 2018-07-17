@@ -1,4 +1,7 @@
 
+
+console.time('Application start')
+
 import * as fs from 'fs'
 import * as path from 'path'
 import * as lru from 'lru-cache'
@@ -92,15 +95,17 @@ let featuredOrUndefined = () => {
   if (!fastrMode) {
     return undefined
   }
-  let tags = fastr.searchTags()
-  let channels = fastr.searchChannels()
-  let speakers = fastr.searchSpeakers()
+  let tags = fastr.listTags()
+  let channels = fastr.listChannels()
+  let speakers = fastr.listSpeakers()
   return JSON.stringify({
     tags: tags.map(t => t.tag),
     channels: channels,
     speakers: speakers
   })
 }
+
+console.timeEnd('Application start')
 
 async function proxy(req: Request, res: Response) {
   
