@@ -1,9 +1,5 @@
 <template lang="pug">
   .expandable-tags
-
-    a.popupIconVisibleOnlyOnMobile.button.is-small.is-hidden-tablet(@click="collapsed = false")
-      span.icon.is-small: i(v-bind:class="fontAwesome")
-
     .modal(v-bind:class="{'is-active': !collapsed}")
       .modal-background(@click="collapsed = !collapsed")
       .modal-content
@@ -51,6 +47,9 @@
       items: { type: Array, required: true }
     },
     methods: {
+      expand: function() {
+        this.collapsed = false
+      },
       navigate: function(item) {
         this.collapsed = true
         this.$router.push(this.route(item))

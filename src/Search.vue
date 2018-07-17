@@ -23,13 +23,18 @@
                   router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel" :to="{ name: 'search' }")
                     span {{speaker || tag || channel}}
                     span.icon.is-small: i.fas.fa-times
+                  a.button.is-small.is-hidden-tablet(@click="$refs.tagPicker.expand()"): span.icon.is-small: i.fas.fa-hashtag
+                  a.button.is-small.is-hidden-tablet(@click="$refs.speakerPicker.expand()"): span.icon.is-small: i.far.fa-user-circle
+                  a.button.is-small.is-hidden-tablet(@click="$refs.channelPicker.expand()"): span.icon.is-small: i.fab.fa-youtube
 
-                  ExpandableTags(icon="fas fa-hashtag" title="Tags" :items="tags" :limit="10" :route="routeToTag")
+                ExpandableTags(ref="tagPicker" icon="fas fa-hashtag" title="Tags" :items="tags" :limit="10" :route="routeToTag")
                     template(slot-scope="slot") {{slot.item.tag}}
-                  ExpandableTags(icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="10" :route="routeToSpeaker")
+
+                ExpandableTags(ref="speakerPicker" icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="10" :route="routeToSpeaker")
                     template(slot-scope="slot")
                       span {{slot.item.name}}
-                  ExpandableTags(icon="fab fa-youtube" title="Channels" :items="channels" :limit="10" :route="routeToChannel")
+
+                ExpandableTags(ref="channelPicker" icon="fab fa-youtube" title="Channels" :items="channels" :limit="10" :route="routeToChannel")
                     template(slot-scope="slot") {{slot.item.title}}
 
               .column.is-one-quarter.is-hidden-touch(v-else)
