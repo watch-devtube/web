@@ -101,6 +101,8 @@ console.timeEnd('Application start')
 
 async function proxy(req: Request, res: Response) {
   
+  let directLink = ['/channel/', '/tag/'].find(it => req.path.startsWith(it))
+
   Logger.info(`REQUEST PATH: ${req.path}`)
 
   if (!req.path || req.path == '/') {
@@ -149,13 +151,13 @@ async function proxy(req: Request, res: Response) {
       ]
     })
 
-  } else if (req.path.startsWith("/tag/")) {
+  } else if (directLink) {
 
-    let tag = req.path.split("/tag/")[1]
+    let param = req.path.split(directLink)[1]
 
-    Logger.info(`TAG REQUEST: ${tag}`)
+    Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
 
-    let title = `DevTube - Videos by topic @${tag}`
+    let title = `DevTube - Videos by ${param}`
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     
     res.render('index.html', {
