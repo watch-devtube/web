@@ -2,13 +2,19 @@
 
 console.time('Application start')
 
+console.time('Imports')
+
 import * as fs from 'fs'
 import * as path from 'path'
 import * as lru from 'lru-cache'
 import * as algolia from 'algoliasearch'
 
 import { Request, Response } from 'express'
-import { Fastr, dnsCache, Logger, GoogleBucket } from 'devtube-commons'
+import { Fastr, dnsCache, Logger } from 'devtube-commons'
+
+console.timeEnd('Imports')
+
+console.time('Init')
 
 // Configuration settings
 const algoliaAppId = 'DR90AOGGE9'
@@ -54,6 +60,8 @@ app.set('view engine', 'mustache')
 app.set('view cache', !devMode)
 app.set('views', path.join(__dirname, staticDir))
 
+console.time('Init')
+
 // Preload static data
 console.time('New videos parsing')
 let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
@@ -66,22 +74,6 @@ let fastrDir = `${__dirname}/data`
 let fastrMode = fs.existsSync(fastrDir) && fs.statSync(fastrDir).isDirectory()
 let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : undefined
 console.timeEnd('Fastr indexing')
-// let lastChecked = (new Date().getTime()) / 1000
-// let bucket = new GoogleBucket('dev-tube-index')
-// async function reloadDataIfNeeded() {
-//   if (fastrMode) {
-//     let currentTime = (new Date().getTime()) / 1000
-//     if (currentTime - lastChecked > 300) {
-//       console.time("Started reloading")
-//       fastr.reload({
-//         lokiData: await bucket.get('loki.json'), 
-//         lunrData: await bucket.get('lunr.json')
-//       })
-//       lastChecked = (new Date().getTime()) / 1000
-//       console.time("Reloaded")
-//     }
-//   }
-// }
 
 Logger.info('---- APPLICATION STARTED ----')
 Logger.info(`---- FASTR MODE: ${fastrMode} ----`)
@@ -110,8 +102,6 @@ console.timeEnd('Application start')
 async function proxy(req: Request, res: Response) {
   
   Logger.info(`REQUEST PATH: ${req.path}`)
-  
-  // reloadDataIfNeeded()
 
   if (!req.path || req.path == '/') {
 
