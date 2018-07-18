@@ -66,8 +66,8 @@
                       a.has-text-black(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}} 
                       a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
             .tags
-              span.tag.is-capitalized(v-for="tag in video.tags") {{tag}}
-              span.tag.is-capitalized 
+              a.tag.is-capitalized(v-for="tag in video.tags" @click="refineTag(tag)") {{tag}}
+              a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
                 i.fab.fa-youtube 
                 | &nbsp; {{video.channelTitle}}
               a.tag.clickable.is-capitalized(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank"): i.fas.fa-edit
@@ -176,6 +176,12 @@
       },
       toggleWidth: function() {
         this.isFullWidth = !this.isFullWidth;
+      },
+      refineTag: function (tag) {
+        this.$router.push({ name: 'tag', params: { tag: tag } })
+      },
+      refineChannel: function (channel) {
+        this.$router.push({ name: 'channel', params: { channel: channel } } )
       }
     },
     props: ['id'],
