@@ -103,6 +103,9 @@ async function proxy(req: Request, res: Response) {
   
   let directLink = ['/channel/', '/tag/'].find(it => req.path.startsWith(it))
 
+  let cookies = req.get('Cookie')
+  let nightMode = cookies && cookies.includes("nightMode")
+
   Logger.info(`REQUEST PATH: ${req.path}`)
 
   if (!req.path || req.path == '/') {
@@ -113,6 +116,7 @@ async function proxy(req: Request, res: Response) {
     res.render('index.html', {      
       title: title,
       fastrMode: fastrMode,
+      nightMode: nightMode,
       featured: featuredOrUndefined(),
       newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
@@ -137,6 +141,7 @@ async function proxy(req: Request, res: Response) {
 
     res.render('index.html', {
       title: title,
+      nightMode: nightMode,
       featured: featuredOrUndefined(),
       speaker: `"${speaker}"`,
       fastrMode: fastrMode,
@@ -162,6 +167,7 @@ async function proxy(req: Request, res: Response) {
     
     res.render('index.html', {
       title: title,
+      nightMode: nightMode,
       featured: featuredOrUndefined(),
       fastrMode: fastrMode,
       meta: [
@@ -218,6 +224,7 @@ async function proxy(req: Request, res: Response) {
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
         fastrMode: fastrMode,
+        nightMode: nightMode,
         featured: featuredOrUndefined(),
         preloadedEntity: JSON.stringify(video),
         meta: [

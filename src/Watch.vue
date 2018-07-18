@@ -48,24 +48,24 @@
         .column
           .content
             h1 {{video.title}}
-            .box.is-paddingless.is-shadowless
-              .media(v-if="video.speaker && video.speaker.twitter")
-                  .media-left.has-text-left
-                      figure.image.is-48x48.is-marginless
-                        img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
-                  .media-content
-                    p.title.is-4 {{video.speaker.name}}
-                    p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
-              .media(v-else)
-                  .media-left.has-text-left
-                      figure.image.is-48x48.is-marginless
-                        img.avatar(src="/unknown.png")
-                  .media-content
-                    p.title.is-4 Know the speaker?
-                    p.subtitle.is-6
-                      a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                        i.fas.fa-heart
-                        |  contribute
+            .media(v-if="video.speaker && video.speaker.twitter")
+                .media-left.has-text-left
+                    figure.image.is-48x48.is-marginless
+                      img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
+                .media-content
+                  p.title.is-4 {{video.speaker.name}}
+                  p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
+            .media(v-else)
+                .media-left.has-text-left
+                    figure.image.is-48x48.is-marginless
+                      img.avatar(src="/unknown.png")
+                .media-content
+                  p.title.is-4 Know the speaker?
+                  p.subtitle.is-6
+                    a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                      i.fas.fa-heart
+                      |  contribute
+            .media
             .tags
               a.tag.is-capitalized(v-for="tag in video.tags" @click="refineTag(tag)") {{tag}}
               a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")

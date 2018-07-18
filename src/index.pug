@@ -7,8 +7,37 @@ html(lang='en')
     meta(http-equiv='x-ua-compatible' content='ie=edge')
     meta(name='keywords' content='')
     meta(name='robots' content='index,follow')
+
+    |     {{#nightMode}}
+    link(rel='stylesheet' href='https://jenil.github.io/bulmaswatch/superhero/bulmaswatch.min.css')
+    style.
+      .pagination-link, .pagination-next, .pagination-previous {
+        color: #8694a4;
+      }
+      .tags.has-addons .tag.is-white {
+        background-color: #1a2531;
+        color: #f5f5f5;
+      }
+
+      .auth0-badge {
+        background-repeat: no-repeat;
+        background-size: 150px 50px;
+        background-position: center;
+        height: 50px;
+        background-image: url('//cdn.auth0.com/oss/badges/a0-badge-dark.png')
+      }
+    |     {{/nightMode}}
+    |     {{^nightMode}}
     link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
-    //- link(rel='stylesheet' href='https://jenil.github.io/bulmaswatch/superhero/bulmaswatch.min.css')
+    style.
+      .auth0-badge {
+        background-repeat: no-repeat;
+        background-size: 150px 50px;
+        background-position: center;
+        height: 50px;
+        background-image: url('//cdn.auth0.com/oss/badges/a0-badge-light.png')
+      }
+    |     {{/nightMode}}
     link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato')
     link(rel='shortcut icon' href='/favicon.png')
     link(rel='icon' href='/favicon.png')
@@ -77,8 +106,9 @@ html(lang='en')
          a(href="//twitter.com/WatchDevTube" target="_blank") Twitter
          |  — Contribute on 
          a(href="//github.com/watch-devtube" target="_blank") GitHub
-        p
-          a(width="150" height="50" href="//auth0.com/?utm_source=oss&utm_medium=gp&utm_campaign=oss" target="_blank" alt="Single Sign On & Token Based Authentication - Auth0"): img(width="150" height="50" alt="JWT Auth for open source projects" src="//cdn.auth0.com/oss/badges/a0-badge-light.png")
+        br
+        .columns.is-centered
+          a.column.auth0-badge(target="_blank" href="//auth0.com/?utm_source=oss&utm_medium=gp&utm_campaign=oss")
     
         hr
         p.is-size-7 
