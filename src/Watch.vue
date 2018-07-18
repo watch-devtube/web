@@ -54,25 +54,36 @@
         .column
           .content
             h1 {{video.title}}
-            .box.is-paddingless.is-shadowless(v-if="video.speaker && video.speaker.twitter")
-              .media
+            .box.is-paddingless.is-shadowless
+              .media(v-if="video.speaker && video.speaker.twitter")
                   .media-left.has-text-left
                       figure.image.is-48x48.is-marginless
-                        a.has-text-black(:href="'/@' + video.speaker.twitter")
-                          img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
+                        img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
                   .media-content
-                    p.title.is-4: a.has-text-black(:href="'/@' + video.speaker.twitter") {{video.speaker.name}}
+                    p.title.is-4 {{video.speaker.name}}
+                    p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
+              .media(v-else)
+                  .media-left.has-text-left
+                      figure.image.is-48x48.is-marginless
+                        img.avatar(src="/unknown.png")
+                  .media-content
+                    p.title.is-4 Know the speaker?
                     p.subtitle.is-6
-                      a.has-text-black(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}} 
-                      a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
+                      a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                        i.fas.fa-heart
+                        |  contribute
             .tags
               a.tag.is-capitalized(v-for="tag in video.tags" @click="refineTag(tag)") {{tag}}
               a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
                 i.fab.fa-youtube 
                 | &nbsp; {{video.channelTitle}}
-              a.tag.clickable.is-capitalized(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank"): i.fas.fa-edit
             p {{video.description}}
-            .addthis_inline_share_toolbox
+            .contribute(v-if="video.speaker")
+              p
+                | Wrong data? 
+                a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                  i.fas.fa-heart
+                  |  contribute
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       .comments

@@ -17,15 +17,24 @@
                 p.subtitle.is-7 
                   a.has-text-black(:href="'/@' + speaker.twitter") @{{speaker.twitter}} 
                   a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
-          .media(v-if="speaker && newMode")
+          .media(v-if="newMode && speaker")
               .media-left
                   figure.image.is-48x48
-                    router-link.has-text-white(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+                    img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .media-content
-                p.title.is-6: router-link.has-text-black(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") {{speaker.name}}
+                p.title.is-6 {{speaker.name}}
                 p.subtitle.is-7 
-                  router-link.has-text-black(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") @{{speaker.twitter}} 
-                  a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
+                  router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") @{{speaker.twitter}} 
+          .media(v-if="newMode && !speaker")
+              .media-left
+                figure.image.is-48x48
+                  img.avatar(src="/unknown.png")
+              .media-content(v-if="!speaker")
+                p.title.is-6 Know the speaker?
+                p.subtitle.is-7
+                  a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
+                    i.fas.fa-heart
+                    |  contribute
           nav.level.is-mobile
             .level-item.has-text-centered
               div
@@ -44,6 +53,12 @@
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
+          .contribute(v-if="speaker")
+            p.subtitle.is-7
+              | Wrong data? 
+              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
+                i.fas.fa-heart
+                |  contribute
 </template>
 <style lang="scss">
   .card {
