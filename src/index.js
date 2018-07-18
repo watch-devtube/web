@@ -4,6 +4,7 @@ import VueCookie from 'vue-cookie'
 import VueDisqus from 'vue-disqus'
 import AsyncComputed from 'vue-async-computed'
 import InstantSearch from 'vue-instantsearch'
+import VueProgressBar from 'vue-progressbar'
 
 import App from './App.vue'
 import Watch from './Watch.vue'
@@ -15,6 +16,11 @@ Vue.use(VueCookie)
 Vue.use(VueRouter)
 Vue.use(VueDisqus)
 Vue.use(AsyncComputed)
+Vue.use(VueProgressBar, {
+  color: 'rgb(143, 255, 199)',
+  failedColor: 'red',
+  height: '2px'
+})
 
 Vue.filter('flatten', flatten)
 Vue.filter('views', views)
@@ -35,7 +41,7 @@ const router = new VueRouter({
 
 // eslint-disable-next-line no-new
 new Vue({
-  el: '#app',
+  el: '#vue',
   render: h => h(App),
   router,
 })

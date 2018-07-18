@@ -1,3 +1,5 @@
-<template>
-  <router-view></router-view>
+<template lang="pug">
+  #app
+    router-view
+    vue-progress-bar
 </template>

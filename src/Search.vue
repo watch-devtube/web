@@ -76,22 +76,25 @@
                         .field.is-grouped-multiline.is-grouped.is-grouped-right(v-if="newMode")
                           .control
                             Sorting
-                    ais-no-results
-                      template(slot-scope="props")
-                        //- .notification(v-if="props.query")
-                        .notification
-                          h1.title
-                            i.far.fa-times-circle 
-                            |  No videos matching your query
-                          a.button(href="https://github.com/watch-devtube/contrib" target="_blank")
-                            span.icon: i.fab.fa-github
-                            span Contribute
-                        //- .notification.is-danger(v-if="!props.query") 
-                          p Sorry, search is not available now. We're working on the solution.
-                    ais-results#videos.columns.is-multiline
-                      template(slot-scope="{ result }")
-                        .column.is-6.is-flex-tablet.is-4-widescreen
-                          VideoCard(:newMode="newMode" :tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
+                    .loading(v-if="loading")
+                      .notification
+                        p
+                          | Searching for the best tech videos 👨🏻‍💻...
+                          br
+                          br
+                          | We're working on reducing Cloud Function cold start time.
+                    .loaded(v-else)
+                      ais-no-results
+                        template(slot-scope="props")
+                          .notification
+                            p
+                              | No videos matching your query. Please 
+                              a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
+                              | .
+                      ais-results#videos.columns.is-multiline
+                        template(slot-scope="{ result }")
+                          .column.is-6.is-flex-tablet.is-4-widescreen
+                            VideoCard(:newMode="newMode" :tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
     section.section
       .container
         .columns
@@ -163,36 +166,6 @@ import YearRange from './YearRange.vue'
 import ExpandableTags from './ExpandableTags.vue'
 import Input from './Input.vue'
 
-const fuseSearchClient = {
-  search(requests) {
-    return fetch('/search', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ requests }),
-    }).then(res => res.json());
-  },
-  addAlgoliaAgent(agent) {}
-};
-
-const searchStore = window.fastrMode ? 
-  createFromAlgoliaClient(fuseSearchClient) : 
-  createFromAlgoliaCredentials(
-    'DR90AOGGE9',
-    'c2655fa0f331ebf28c89f16ec8268565'
-);
-
-if (window.speaker && !window.fastrMode) {
-  searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
-  searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
-}
-
-searchStore.queryParameters = {
-  hitsPerPage : 21
-}
-
-
 export default { 
   props: {
     showNew: { type: Boolean, required: false, default: false },
@@ -202,18 +175,58 @@ export default {
   },
   data: function() {
     return {
+      loading: false,
       tagsCollapsed: true,
       speakersCollapsed: true,
       channelsCollapsed: true,
       newMode: window.fastrMode,
-      newVideos: window.newVideos,
-      searchStore
+      newVideos: window.newVideos
     };
   },
   watch: {
     '$route': 'fetch'
   },  
   created() {
+    let that = this
+
+    let fastr = {
+      search(requests) {
+        that.$Progress.start()
+        that.loading = true
+        return fetch('/search', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ requests }),
+        }).then(res => {
+          let json = res.json()
+          that.$Progress.finish()
+          that.loading = false
+          return json
+        })
+      },
+      addAlgoliaAgent(agent) {}
+    };
+
+    let searchStore = window.fastrMode ?
+      createFromAlgoliaClient(fastr) :
+      createFromAlgoliaCredentials(
+        'DR90AOGGE9',
+        'c2655fa0f331ebf28c89f16ec8268565'
+    );
+
+    if (window.speaker && !window.fastrMode) {
+      searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
+      searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
+    }
+
+    searchStore.queryParameters = {
+      hitsPerPage : 21
+    }
+
+    this.searchStore = searchStore
+
     this.fetch()
   },
   computed: {
@@ -251,23 +264,23 @@ export default {
       if (this.newMode) {
         // ## start 
         // when seach query is present, tag clicking must reset it
-        searchStore.query = undefined 
+        this.searchStore.query = undefined
         // ## end
 
-        searchStore.queryParameters = { refinement : undefined }
+        this.searchStore.queryParameters = { refinement : undefined }
 
-        searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || 'featured' }
+        this.searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || 'featured' }
 
 
         if (this.speaker) {
-          searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
+          this.searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
         }
 
         if (this.tag) {
-          searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
+          this.searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
         }
         if (this.channel) {
-          searchStore.queryParameters = { refinement: { 'channelTitle' : this.channel } }
+          this.searchStore.queryParameters = { refinement: { 'channelTitle' : this.channel } }
         }
       }
 
