@@ -71,7 +71,7 @@ console.timeEnd('New videos parsing')
 // EXPERIMENTAL FASTR MODE
 console.time('Fastr indexing')
 let fastrDir = `${__dirname}/data`
-let fastrMode = false
+let fastrMode = fs.existsSync(fastrDir) && fs.statSync(fastrDir).isDirectory()
 let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : undefined
 console.timeEnd('Fastr indexing')
 
