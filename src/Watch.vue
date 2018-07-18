@@ -9,7 +9,10 @@
         .level-item.has-text-centered
         .level-right
           .level-item.is-size-10
-            p: a.has-text-white(href="/") Back to search  
+            p
+              a.has-text-white(href="/") Back to search
+              | &nbsp;&nbsp;
+              NightMode
   section.section.body
     .container(v-if="errors.length > 0")
       .columns
@@ -147,6 +150,8 @@
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
   import MessageWidget from './MessageWidget.vue'
+  import NightMode from './NightMode.vue'
+
   export default {
     data: function() {
       return {
@@ -190,7 +195,7 @@
       }
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget }
+    components: { RelatedVideos, MessageWidget, NightMode }
   }
 
 </script>

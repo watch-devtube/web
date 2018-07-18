@@ -15,6 +15,8 @@
               a.has-text-white(href="https://devternity.com" target="_blank")
                 span inspired by  
                 strong DevTernity
+              | &nbsp;&nbsp;
+              NightMode
     section.section
           .container
             .columns
@@ -122,7 +124,7 @@ header {
     }
   }
 
-  .links a {
+  a {
     color: white;
   }
 
@@ -164,6 +166,7 @@ import Sorting from './Sorting.vue'
 import ActiveFilters from './ActiveFilters.vue'
 import YearRange from './YearRange.vue'
 import ExpandableTags from './ExpandableTags.vue'
+import NightMode from './NightMode.vue'
 import Input from './Input.vue'
 
 export default { 
@@ -295,6 +298,7 @@ export default {
   },
   components: { 
     ExpandableTags,
+    NightMode,
     ActiveFilters, 
     VideoCard, 
     YearRange, 
