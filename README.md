@@ -4,9 +4,14 @@
 
 > Hi! I am Dev.Tube – the place where developer videos live.
 
-This web app comprises of `Vue` client app and a slim `node` server app, through which the client app is served.
+## Search Tips 
+- `node await` videos that match `node` OR `await`
+- `+node +await` means `node` AND `await`
+- `nod*` videos that start with `nod`
 
 ## How to run the app locally?
+
+This web app comprises of `Vue` client app and a slim `node` server app, through which the client app is served.
 
 ``` bash
 # make sure yarn is installed
