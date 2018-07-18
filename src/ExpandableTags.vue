@@ -13,7 +13,7 @@
     .is-hidden-mobile
       p
         h2.subtitle
-          a.has-text-black(@click="collapsed = false") 
+          a(@click="collapsed = false") 
             i(v-bind:class="fontAwesome")
             |  {{title}}
         .tags.has-addons.is-marginless(v-for="item in items.slice(0, limit)")

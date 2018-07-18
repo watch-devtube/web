@@ -8,14 +8,8 @@
             a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
         .level-item.has-text-centered
         .level-right
-          .level-item.is-size-4
-            .buttons
-              a.button.is-info.is-outlined(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                span.icon: i.fab.fa-github
-                span Edit info   
-              a.button.is-info.is-outlined(href="/") 
-                span.icon: i.fas.fa-arrow-circle-left
-                span Back to search  
+          .level-item.is-size-10
+            p: a.has-text-white(href="/") Back to search  
   section.section.body
     .container(v-if="errors.length > 0")
       .columns
