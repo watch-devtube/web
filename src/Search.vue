@@ -269,7 +269,7 @@ export default {
 
         this.searchStore.queryParameters = { refinement : undefined }
 
-        this.searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || 'featured' }
+        this.searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || '-featured' }
 
 
         if (this.speaker) {
