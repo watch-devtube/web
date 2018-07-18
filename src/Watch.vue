@@ -77,10 +77,15 @@
             p {{video.description}}
             .contribute(v-if="video.speaker")
               p
-                | Wrong data? 
+                | Liked the video? 
+                a(:href="'https://twitter.com/intent/tweet?text=Thanks @' + video.speaker.twitter + ' for ' + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=devtube,' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',').replace(/\\s/g,'') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank") 
+                  i.fab.fa-twitter
+                  |  tweet
+                |  — Wrong data? 
                 a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
                   i.fas.fa-heart
                   |  contribute
+
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       .comments
