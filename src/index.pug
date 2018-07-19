@@ -18,25 +18,9 @@ html(lang='en')
         background-color: #1a2531;
         color: #f5f5f5;
       }
-
-      .auth0-badge {
-        background-repeat: no-repeat;
-        background-size: 150px 50px;
-        background-position: center;
-        height: 50px;
-        background-image: url('//cdn.auth0.com/oss/badges/a0-badge-dark.png')
-      }
     |     {{/nightMode}}
     |     {{^nightMode}}
     link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
-    style.
-      .auth0-badge {
-        background-repeat: no-repeat;
-        background-size: 150px 50px;
-        background-position: center;
-        height: 50px;
-        background-image: url('//cdn.auth0.com/oss/badges/a0-badge-light.png')
-      }
     |     {{/nightMode}}
     link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato')
     link(rel='shortcut icon' href='/favicon.png')
@@ -106,14 +90,17 @@ html(lang='en')
          a(href="//twitter.com/WatchDevTube" target="_blank") Twitter
          |  — Contribute on 
          a(href="//github.com/watch-devtube" target="_blank") GitHub
-        br
-        .columns.is-centered
-          a.column.auth0-badge(target="_blank" href="//auth0.com/?utm_source=oss&utm_medium=gp&utm_campaign=oss")
-    
+        p
+          a(target="_blank" href="//auth0.com/?utm_source=oss&utm_medium=gp&utm_campaign=oss")
+            |     {{#nightMode}}
+            img(width="69" height="23" src="/auth0-dark.svg" srcset="/auth0-dark.svg")
+            |     {{/nightMode}}
+            |     {{^nightMode}}
+            img(width="69" height="23" src="/auth0-light.svg" srcset="/auth0-light.svg")
+            |     {{/nightMode}}
         hr
         p.is-size-7 
           | We use cookies to improve your UX (sorting preference, night mode, resuming video from the last played position). To inspect and block cookies use 
           a(href="//ghostery.com") Ghostery
           |  on your browser.      
-    script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b327a9f719db15f")
     script(defer='', src='//use.fontawesome.com/releases/v5.0.10/js/all.js')
