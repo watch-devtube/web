@@ -4,7 +4,7 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 19 Jul 2018 03:23:09 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 21 Jul 2018 03:23:21 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
     </channel>
 </rss>
