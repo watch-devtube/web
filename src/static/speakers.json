@@ -41,6 +41,10 @@
             "name": "Martin Fowler"
         },
         {
+            "twitter": "mpjme",
+            "name": "Mattias P Johansson"
+        },
+        {
             "twitter": "martin_gorner",
             "name": "Martin Görner"
         },
@@ -65,12 +69,12 @@
             "name": "Alex Kotliarskyi"
         },
         {
-            "twitter": "tastapod",
-            "name": "Dan North"
+            "twitter": "rasmus",
+            "name": "Rasmus Lerdorf"
         },
         {
-            "twitter": "mpjme",
-            "name": "Mattias Petter Johansson"
+            "twitter": "tastapod",
+            "name": "Dan North"
         },
         {
             "twitter": "wesbos",
