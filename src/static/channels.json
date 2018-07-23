@@ -177,12 +177,12 @@
             "id": "UC9ZNrGdT2aAdrNbX78lbNlQ"
         },
         {
-            "title": "Engineers.SG",
-            "id": "UCjRZr5HQKHVKP3SZdX8y8Qw"
-        },
-        {
             "title": "JetBrainsTV",
             "id": "UCGp4UBwpTNegd_4nCpuBcow"
+        },
+        {
+            "title": "Engineers.SG",
+            "id": "UCjRZr5HQKHVKP3SZdX8y8Qw"
         },
         {
             "title": "Erlang Solutions",
@@ -317,6 +317,10 @@
             "id": "UCP6WJ2itKT-TQoxMUnzxpWQ"
         },
         {
+            "title": "keyframers",
+            "id": "UCtmYk7H-NNYLEe_LgBRYomA"
+        },
+        {
             "title": "NG-Poland.pl",
             "id": "UC55UiwMH_7PVcKrkriXSHuw"
         },
@@ -391,6 +395,10 @@
         {
             "title": "I T.A.K.E. Unconference",
             "id": "UC9Fz4NzvzA5tlGohpS3-ndg"
+        },
+        {
+            "title": "DevFest Baltics",
+            "id": "UCNGL7gGX1uIxxdJ3w4CLfaQ"
         },
         {
             "title": "CODEMOBILE",

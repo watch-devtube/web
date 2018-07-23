@@ -4,20 +4,31 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 23 Jul 2018 03:22:45 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Jul 2018 17:17:39 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[7.12: TensorFlow.js Color Classifier: Prediction]]></title>
-            <description><![CDATA[The moment we've all been waiting for! In this video, I'm using my trained Color Classifier to classify a given color in one of 9 categories.
+            <title><![CDATA[Live Stream #146: Recamán's Sequence + ml5 Image Classifier]]></title>
+            <description><![CDATA[Exploring Recamán's Sequence in p5.js + starting to explore the ml5.js library.
 
-🔗 Community Repo: https://github.com/CodingTrain/ColorClassifer-TensorFlow.js
-🔗 Final Code: https://github.com/CodingTrain/website/tree/master/Courses/intelligence_learning/session7/07_12_color_classifier
+35:37 - Recamán's Sequence
+1:27:05 - Sound Experiments with Recamán's Sequence
+2:28:25 - ml5 Image Classifier
 
-🔗 Crowdsource Color Data: https://github.com/CodingTrain/CrowdSourceColorData
+🔗 Recamán's Sequence on MathWorld: http://mathworld.wolfram.com/RecamansSequence.html
 🔗 TensorFlow.js: https://js.tensorflow.org/
 🔗 ml5.js: https://ml5js.org
+🔗 Nature of Code: https://natureofcode.com/
+🔗 OEIS: http://oeis.org/
+🔗 Bernardo Recamán Santos on Wikipedia: https://es.wikipedia.org/wiki/Bernardo_Recam%C3%A1n_Santos
+🔗 ml5 on Adjacent: https://itp.nyu.edu/adjacent/issue-3/ml5-friendly-open-source-machine-learning-library-for-the-web/
+🔗 MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications: https://arxiv.org/abs/1704.04861
 
+🎥 Recamán's Sequence by Numberphile: https://youtu.be/FGC5TdIiT9U
+🎥 TensorFlow.js Color Classifier: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bmMRCIoTi72aNWHo7epX4L
 🎥 TensorFlow.js playlist: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YIeVA3dNxbR9PYj4wV31oQ
+🎥 pcomp on Vimeo: https://vimeo.com/channels/pcomp
+🎥 ADSR Envelope with p5.js: https://youtu.be/wUSva_BnedA
+🎥 Sound Synthesis with p5.js: https://youtu.be/Bk8rLzzSink
 
 🚂 Website: http://thecodingtrain.com/ 
 💖 Patreon: https://patreon.com/codingtrain
@@ -26,18 +37,19 @@
 
 💻  https://github.com/CodingTrain/website
 
-🎥  Intro to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+🎥  For an Introduction to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥  To watch archived Live Streams: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bxnFR6no70vlxxuxDEzflz
+🎥  For more Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
 
 🔗  https://p5js.org/
 🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/lz2L-sT8bG0</link>
-            <guid isPermaLink="true">https://dev.tube/video/lz2L-sT8bG0</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:48 GMT</pubDate>
+            <link>https://dev.tube/video/XXwjcxMOA8s</link>
+            <guid isPermaLink="true">https://dev.tube/video/XXwjcxMOA8s</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:05 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Intensely Practical Tips for Growing an Indie Studio]]></title>
-            <description><![CDATA[In this 2018 GDC session, Weather Factory's Alexis Kennedy presents a talk about the lessons learned building Failbetter Games, and the lessons taken into a second studio founding, focusing on war stories and practical advice.
+            <title><![CDATA[Obsessive-Compulsive Development: Retro/Grade Postmortem]]></title>
+            <description><![CDATA[In this 2013 GDC session, 24 Caret Games'  Matt Gilgenbach talks about the development of Retro/Grade and his new and healthier approach to indie game development.
 
 Register for GDC: http://ubm.io/2gk5KTU
 
@@ -46,543 +58,585 @@ Join the GDC mailing list: http://www.gdconf.com/subscribe
 Follow GDC on Twitter: https://twitter.com/Official_GDC 
 
 GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/MDYh2mnDCIM</link>
-            <guid isPermaLink="true">https://dev.tube/video/MDYh2mnDCIM</guid>
-            <pubDate>Sat, 21 Jul 2018 07:54:50 GMT</pubDate>
+            <link>https://dev.tube/video/63UOLVP4dYk</link>
+            <guid isPermaLink="true">https://dev.tube/video/63UOLVP4dYk</guid>
+            <pubDate>Mon, 23 Jul 2018 12:06:45 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[7.11: TensorFlow.js Color Classifier: Animating Loss]]></title>
-            <description><![CDATA[In this video, I cover tf.nextFrame() in combination with p5.js draw() to animate during the model training process.
+            <title><![CDATA[@keyframers 1.0.0 | Flipping Fluent | Live streamed collaborative animation coding]]></title>
+            <description><![CDATA[The @keyframers (http://twitter.com/keyframers) premier, where David Khourshid and Stephen Shaw live code an animation. This week's episode: Flipping Fluent, we work with transitioning state smoothly utilizing Flipping ( https://github.com/davidkpiano/flipping )
 
-🎥 Next Video: https://youtu.be/lz2L-sT8bG0
+Watch live at https://www.twitch.tv/keyframers
 
-🔗 Crowdsource Color Data: https://github.com/CodingTrain/CrowdSourceColorData
-🔗 TensorFlow.js: https://js.tensorflow.org/
-🔗 ml5.js: https://ml5js.org
+Shownotes: 
+* Animation Inspiration: https://dribbble.com/shots/3511459-Fluent-Design-Email-app-Loading
+* Flipping https://github.com/davidkpiano/flipping
+* Final code: https://codepen.io/shshaw/pen/jzePyB
+* Animation at Work Slack: http://slack.animationatwork.com
 
-🎥 TensorFlow.js playlist: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YIeVA3dNxbR9PYj4wV31oQ
-🎥 async/await: https://youtu.be/XO77Fib9tSI
-
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Book recommendations: https://www.amazon.com/shop/thecodingtrain 
-
-💻  https://github.com/CodingTrain/website
-
-🎥  Intro to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/GQCKDjg2Z7w</link>
-            <guid isPermaLink="true">https://dev.tube/video/GQCKDjg2Z7w</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:48 GMT</pubDate>
+Skip around!
+2:10 Animation reveal
+4:40 Start coding
+1:41:50 Overview
+2:02:10 Animation at Work Shoutout]]></description>
+            <link>https://dev.tube/video/-zLiw1GeEGo</link>
+            <guid isPermaLink="true">https://dev.tube/video/-zLiw1GeEGo</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[7.10: TensorFlow.js Color Classifier: Training the Model]]></title>
-            <description><![CDATA[In this video, I train the color classifier using model.fit().
+            <title><![CDATA[Oceanic Overlays | CSS-only carousel | @keyframers 1.7.0 | Collaborative coding live stream]]></title>
+            <description><![CDATA[This week, David Khourshid and Stephen Shaw save the oceans using only CSS! Follow along as they toggle, slide and clip to create an inspiring page design. Streamed live on May 24, 2018. 
 
-🎥 Next Video: https://youtu.be/GQCKDjg2Z7w
+Shownotes: 
 
-🔗 Crowdsource Color Data: https://github.com/CodingTrain/CrowdSourceColorData
-🔗 TensorFlow.js: https://js.tensorflow.org/
-🔗 ml5.js: https://ml5js.org
+* Animation Inspiration: 
+https://dribbble.com/shots/4592180-Save-The-Oceans-Website
+* Final code: https://codepen.io/shshaw/pen/RyzaYY/
 
-🎥 TensorFlow.js playlist: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YIeVA3dNxbR9PYj4wV31oQ
-🎥 ES6 Promises: https://youtu.be/QO4NXhWo_NM
+Skip around:
+2:20 Showcase
+6:35 Animation overview
+10:38 Start coding
+49:00 Puns
+1:41:00 Keyflections
 
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Book recommendations: https://www.amazon.com/shop/thecodingtrain 
 
-💻  https://github.com/CodingTrain/website
+Additional Resources:
 
-🎥  Intro to Programming: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+* CSS Mask animation https://codepen.io/shshaw/pen/NMeXoN
+* Encroachment (CSS-only) https://codepen.io/shshaw/pen/OZGMKq/
+* Overriding Default Button Styles https://css-tricks.com/overriding-default-button-styles/
+* CSS-only Colorful Calendar Concept https://codepen.io/davidkpiano/pen/xwyVXO
 
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/SyEZ5Yo2ec8</link>
-            <guid isPermaLink="true">https://dev.tube/video/SyEZ5Yo2ec8</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:48 GMT</pubDate>
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Spread the word! A Tweet about @keyframers is worth a thousand chars.
+* Follow & Subscribe on Twitch and join the live streams at http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers !
+
+Topics covered:
+
+* Checkbox toggles
+* CSS Variables
+* background-clip: text]]></description>
+            <link>https://dev.tube/video/kd_zuEYCDck</link>
+            <guid isPermaLink="true">https://dev.tube/video/kd_zuEYCDck</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Repopulating the Earth: Character Production on Horizon Zero Dawn]]></title>
-            <description><![CDATA[In this 2018 GDC talk, Guerrilla Games' Daniel Calvert discusses how the company approached the challenges of making characters for Horizon Zero Dawn, with honest reflection on the team's successes and mistakes.
+            <title><![CDATA[Top 10 Reasons to Learn Cybersecurity | Why Cybersecurity is Important | Edureka]]></title>
+            <description><![CDATA[** Cybersecurity Online Training: https://www.edureka.co/cybersecurity-certification-training **
+This Edureka video talks about the Top 10 Reasons to Learn Cybersecurity and what makes the Cybersecurity a lucrative career choice. Watch it now!!
 
-Register for GDC: http://ubm.io/2gk5KTU
+Cybersecurity Training Playlist: https://bit.ly/2NqcTQV
 
-Join the GDC mailing list: http://www.gdconf.com/subscribe
+Subscribe to our channel to get video updates. Hit the subscribe button above.
 
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
+-------------------------------------------
 
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/2QRCwY382ck</link>
-            <guid isPermaLink="true">https://dev.tube/video/2QRCwY382ck</guid>
-            <pubDate>Sat, 21 Jul 2018 07:54:50 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Physics for Game Programmers; Continuous Collision]]></title>
-            <description><![CDATA[In this 2013 GDC session, Blizzard Entertainment's Erin Catto explores how to solve collision problems in game programming. 
+About Edureka Cyber Security Training
 
-Register for GDC: http://ubm.io/2gk5KTU
+Cybersecurity is the combination of processes, practices, and technologies designed to protect networks, computers, programs, data and information from attack, damage or unauthorized access.
 
-Join the GDC mailing list: http://www.gdconf.com/subscribe
+Edureka’s Cybersecurity Certification Course will help you in learning about the basic concepts of Cybersecurity along with the methodologies that must be practiced ensuring information security of an organization. Starting from the Ground level Security Essentials, this course will lead you through Cryptography, Computer Networks & Security, Application Security, Data & Endpoint Security, idAM (Identity & Access Management), Cloud Security, Cyber-Attacks and various security practices for businesses.
 
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
+------------------------------------------------
 
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/7_nKOET6zwI</link>
-            <guid isPermaLink="true">https://dev.tube/video/7_nKOET6zwI</guid>
-            <pubDate>Sat, 21 Jul 2018 07:54:50 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Progressive Web Apps and the Internet of Things]]></title>
-            <description><![CDATA[The gap of what the web can do versus what must be done in a native application is really small these days.
+Why Learn Cyber Security?
 
-I'd like to show that progressive web apps (offline support, push notifications, manifest, etc) are just the beginning. We can leverage newer hardware and networking APIs to build all sorts of Internet of Things types of applications.
+Cybersecurity is the gathering of advances that procedures and practices expected to ensure systems, PCs, projects and information from assault, harm or unapproved get to. In a processing setting, security incorporates both cybersecurity and physical security, it is imperative since cyberattackers can without much of a stretch take and obliterate the profoundly grouped data of governments, defense offices and banks for which the results are huge so it is essential to have an appropriate innovation which an avoid digital wrongdoings.
 
-This could possibly connect some of the dots for attendees that have ideas for software they'd like to build, but not necessarily understand just how far the web has come.
+---------------------------------------------------
 
-I would briefly touch on PWAs in general, then move on to transport streams (sockets, p2p, etc) and how they enable communication, then move onto hardware APIs (bluetooth, USB, MIDI, etc) and how we can use the browser and isomorphic libraries (noble, johnny-five, etc) to tie things together.
+Objectives of Edureka Cyber Security Course
 
-Luis Montes is the founder and CEO of Iced Development. He brings 18 years of medical, manufacturing, and financial enterprise software experience. Iced Development is a Phoenix based web and IoT company focused on providing services around the latest innovations. It was founded on a desire to advance the open web, and driven by continual excitement for ever-evolving technologies.
+This course is designed to cover a holistic & a wide variety of foundational topics of the cybersecurity domain which will be helpful to lead freshers as well as IT professional having 1 to 2 years of experience, into the next level of choice such as ethical hacking/ audit & compliance / GRC/ Security Architecture and so on
+This course focuses mainly on the basics concepts of Cyber Security
+In this course, we are going to deal with Ground level security essentials cryptography, computer networks & security, application security, data & endpoint security, idAM (identity & access management), cloud security, cyber-attacks and various security practices for businesses
+This course will be your first step towards learning Cyber Security
+--------------------------------------
 
-EVENT:
+Who Should go for this Training?
 
-Fullstack Fest 2017
+Anyone having the zeal to learn innovative technologies can take up this course. Especially, students and professionals aspiring to make a career in the Cybersecurity technology. However, Cybersecurity Certification Course is best suited for the below mentioned profiles:-
+Networking Professionals
+Linux Administrators
+-----------------------------------------------
 
-SPEAKER:
-
-Luis Montes
-
-PERMISSIONS:
-
-Original video was published with the Creative Commons Attribution license (reuse allowed).
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=i7xqKMiPK_0&t=201s]]></description>
-            <link>https://dev.tube/video/I1Tvl0bc2Lk</link>
-            <guid isPermaLink="true">https://dev.tube/video/I1Tvl0bc2Lk</guid>
-            <pubDate>Sat, 21 Jul 2018 07:53:53 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Creating a Landing Page with React  (P5D88) - Live Coding with Jesse]]></title>
-            <description><![CDATA[Project 5 Day 88: Today we will create a landing page for the Admissions department using React and MaterialUI.
-
-See a professional front-end developer at work. Unscripted. Mistakes included.
-
-Next.js 5: https://zeit.co/blog/next5
-
-Project Repo: https://github.com/fus-marcom/franciscan-react
-
-React: https://facebook.github.io/react/
-
-Gitter: https://gitter.im/LiveCodingwithJesseFreeCodeCamp/
-
-Twitter: https://twitter.com/JesseRWeigel
-Youtube: https://www.youtube.com/c/JesseWeigel29 
-Instagram: https://www.instagram.com/jesse.weigel/
-
-Code Editor: Visual Studio Code
-VS Code Theme: Seti
-Terminal: https://www.iterm2.com/
-Project Management: https://trello.com
-
--
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/WV4ViZ2q0Mk</link>
-            <guid isPermaLink="true">https://dev.tube/video/WV4ViZ2q0Mk</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[GraphQL in Python and Django]]></title>
-            <description><![CDATA[In this talk, I’ll talk about GraphQL, a data query language created by Facebook as an alternative to the widely used REST. I’ll list the key differences between the twos and pros and cons of GraphQL over a “traditional” REST API. 
-
-I’ll tell why GraphQL has been created, what problems does it solve and how to create GraphQL APIs with Python with an additional follow up on how to use it with Django, one of the most popular web framework. If we have enough time I’ll touch on advanced topics like authentication, caching, security and real-time. 
-
-Takeaway: the objective of the talk is to have an introduction on GraphQL, understand why and when to use it and, finally, how to use it Python.
-
-EVENT:
-
-DjangoCon Europe 2018
-
-SPEAKER:
-
-Patrick Arminio
-
-PERMISSIONS:
-
-Original video was published with the Creative Commons Attribution license (reuse allowed).
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=ix_DSdxgoK0]]></description>
-            <link>https://dev.tube/video/vnlPU0HgSbQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/vnlPU0HgSbQ</guid>
-            <pubDate>Sat, 21 Jul 2018 07:53:53 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Quincy Larson interviews Jon Sonmez]]></title>
-            <description><![CDATA[Interview starts at 4:13.
-
-John Sonmez from Simple Programmer is interviewed by freeCodeCamp founder Quincy Larson.
-
-🔗John's YouTube channel: https://www.youtube.com/channel/UCFxdcuY-S6yjZGq_2cjilHg
-
-🔗John's blog: https://simpleprogrammer.com/
-
-🔗John's book: https://www.amazon.com/Complete-Software-Developers-Career-Guide-ebook/dp/B073X6GNJ1
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/Z2ihjKIt-5Y</link>
-            <guid isPermaLink="true">https://dev.tube/video/Z2ihjKIt-5Y</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Learn to use CodePen from a co-founder of CodePen]]></title>
-            <description><![CDATA[Chis Coyier, who co-founded CodePen, demonstrates how to use CodePen and shares some little-known tricks.
-
-CodePen is a social development environment that allows you to write code in the browser, and see the results of it as you build. 
-
-🔗https://codepen.io/
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/vb9uYBtqmeM</link>
-            <guid isPermaLink="true">https://dev.tube/video/vb9uYBtqmeM</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Technical Debt and Streams/BLoC - The Boring Flutter Development Show, Ep. 4]]></title>
-            <description><![CDATA[In this episode, Filip and Matt start by erasing some of the technical debt that the Hacker News reader app accumulated in the past 3 episodes. They remove the new keyword everywhere, delete unused files, and re-enable unit tests.
-
-Then they set out to tackle state management and separation of concerns between view logic and business logic. They choose to follow the BLoC pattern, using Streams and ReactiveX (rxdart).
-
-With that in place, they implement a new feature: ability to switch between the listing of top and new stories.
-
-Let us know your thoughts and requests for future episodes in the comments below or on Twitter using #BoringShow.
-
-Get started with Flutter → https://flutter.io
-Try a Flutter codelab → https://goo.gl/d3fHPo 
-Join the conversation → https://goo.gl/68oUnb 
-
-Subscribe to the Google Developers channel → http://goo.gl/mQyv5L]]></description>
-            <link>https://dev.tube/video/fahC3ky_zW0</link>
-            <guid isPermaLink="true">https://dev.tube/video/fahC3ky_zW0</guid>
-            <pubDate>Sat, 21 Jul 2018 07:53:57 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How to boost your web development efficiency]]></title>
-            <description><![CDATA[Tips for improving your web development efficiency. Topics include: 
--using git hooks for autoformatting HTML, CSS, JS and TS
--how to remove unused css in your production bundle
--how to speed up your terminal usage
--and even more tricks!
-
-🔗 Slides : http://slides.com/chimpcmder/how-to-boost-your-web-development-efficiency#/
-
-Talk by Markus Hatvan at the April 2018 Angular Vienna meetup.
-
-Recorded by Pusher.com. Check them out if you want awesome real-time tools, and subscribe to the their YouTube channel for more talks!
-
-Pusher's channel: https://www.youtube.com/channel/UCoyqucxoFXDFnh3khD0rjUg
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/_AaJmzmxHyg</link>
-            <guid isPermaLink="true">https://dev.tube/video/_AaJmzmxHyg</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How to Build a Remote Team for Better Happiness]]></title>
-            <description><![CDATA[In this 2016 GDC session, Fox Cub's Ian Wang shares lessons learned from building a 30 person team that spans 12 countries and explains how the right mix of technology and culture will let your team enjoy better work happiness and personal happiness.
-
-Register for GDC: http://ubm.io/2gk5KTU
-
-Join the GDC mailing list: http://www.gdconf.com/subscribe
-
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/ZopWgi_qFpM</link>
-            <guid isPermaLink="true">https://dev.tube/video/ZopWgi_qFpM</guid>
-            <pubDate>Sat, 21 Jul 2018 07:54:50 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[IoT Technology Tutorial | IoT Technology Stack | IoT Project Hands-On | Edureka]]></title>
-            <description><![CDATA[** Edureka IoT Training : https://www.edureka.co/iot-certification-training **
-This Edureka tutorial video on "Iot Technology" will help you grasp the outline of Internet of Things, and let you relate to how it is revolutionizing the world today. This IoT tutorial helps you learn the following topics: 
-
-1. Vision of IoT 
-2. “Things” in IoT 
-3. IoT Technology Stack 
-4. IoT Ecosystem 
-5. IoT Demo – Media Center using Raspberry Pi
-6. Prospects & Scopes
-
-Subscribe to our channel to get video updates. Hit the subscribe button above. 
-
-#IoT #iotforbeginners #IoTtutorial #iotTechnology #InternetOfThings #RaspberryPi3 #Whatisiot #iotonlinetraining #IoTProject #Edureka 
-
--------------------------- 
-
-About our IoT Training
- 
-IoT Certification Training is designed by industry experts to make you a Certified IoT Developer. Edureka IoT training covers: 
-Understanding of IoT architecture and IoT Decision Framework 
-Configure Raspberry Pi, Understand Sensors, Actuators & get started with python on Raspberry Pi 
-Program Sensors (Sense-HAT board), Face Detection and reorganization using OpenCV-Python 
-Understand various IoT Networking Protocols which are mainly used to develop communication solutions
-Getting started with Cloud and Azure IoT Hub, demonstration of Azure IoT Hub APIs 
-Architect an End-to-End Solution using Raspberry Pi, Sense HAT, and Azure 
-Perform Data Analytics on the collected sensor data, use prediction algorithms to get useful insights 
-IoT challenges, business solutions, research scope and current development, Alexa Voice Bot on Raspberry Pi 
-
--------------------------- 
-
-Who should go for this IoT Training? 
-
-This IoT Certification Training on Azure is for all the professionals who are passionate about work with IoT devices and want to go ahead and make their career as an IoT Developer. It is best suited for individuals who are: 
-Software Developers who are venturing into IoT space 
-Solution Architects 
-Technical Architects 
-Students who seek IoT knowledge 
-Business Executives and Managers who want to understand the essentials of IoT 
-
-------------------- 
-
-Why Learn IoT? 
-
-Internet of Things is considered as the next big technology revolution after invention of the Internet. It is supposed to make tremendous impacts on lives and may possibly lead to the betterment of millions of lives throughout the world. According to Cisco, over 50 million devices are expected to be connected to IoT by 2020. 
-Healthcare, Logistics, Aviation, Education, Information Technology name any thing and IoT will become an integral part of all these verticals. Internet of Things is believed to bring about the singularity which will ultimately converge into becoming the Internet of Everything. IoT has, therefore, become a leading interest of technologists globally and is perceived to be the NEXT BIG THING in IT industry. Learning IoT will not only provide you a career boost but you will also be able to gain insights on how technology has affected the world and will continue to do so in the coming decades. 
-
-For more information, please write back to us at sales@edureka.co 
-Call us at US: +18336900808 (Toll Free) or India: +918861301699 
-
-Facebook: https://www.facebook.com/edurekaIN/ 
-Twitter: https://twitter.com/edurekain 
-LinkedIn: https://www.linkedin.com/company/edureka 
-
-Customer Review: 
-Michael Harkins, System Architect, Hortonworks says: “The courses are top rate. The best part is live instruction, with playback. But my favourite feature is viewing a previous class. Also, they are always there to answer questions, and prompt when you open an issue if you are having any trouble. Added bonus ~ you get lifetime access to the course you took!!! ~ This is the killer education app... I've taken two courses, and I'm taking two more.”]]></description>
-            <link>https://dev.tube/video/Rj1HkFIEZ-U</link>
-            <guid isPermaLink="true">https://dev.tube/video/Rj1HkFIEZ-U</guid>
-            <pubDate>Sat, 21 Jul 2018 07:54:52 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Creating a Landing Page with React Part 2  (P5D89) - Live Coding with Jesse]]></title>
-            <description><![CDATA[Project 5 Day 89: Today we will continue to create a landing page for the Admissions department using React and MaterialUI.
-
-See a professional front-end developer at work. Unscripted. Mistakes included.
-
-Next.js 5: https://zeit.co/blog/next5
-
-Project Repo: https://github.com/fus-marcom/franciscan-react
-
-React: https://facebook.github.io/react/
-
-Gitter: https://gitter.im/LiveCodingwithJesseFreeCodeCamp/
-
-Twitter: https://twitter.com/JesseRWeigel
-Youtube: https://www.youtube.com/c/JesseWeigel29 
-Instagram: https://www.instagram.com/jesse.weigel/
-
-Code Editor: Visual Studio Code
-VS Code Theme: Seti
-Terminal: https://www.iterm2.com/
-Project Management: https://trello.com
-
--
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/YB1g2Fa3D80</link>
-            <guid isPermaLink="true">https://dev.tube/video/YB1g2Fa3D80</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Logic for Programmers: Propositional Logic]]></title>
-            <description><![CDATA[Logic is the foundation of all computer programming. In this video you will learn about propositional logic.
-
-🔗Homework: http://www.codingcommanders.com/logic.php 
-
-More videos in this series coming soon!
-
-🔗Check out the Coding Commanders YouTube channel: https://www.youtube.com/codingcommanders
-
-🐦Commander Candy on Twitter: https://twitter.com/codingCommander
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/s16xd9XyDnY</link>
-            <guid isPermaLink="true">https://dev.tube/video/s16xd9XyDnY</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Do not walk away from Complexity, Run - Venkat Subramaniam]]></title>
-            <description><![CDATA[We constantly hear that change should be affordable and cost effective. True, but, in reality, that's easily said than done. Complexity makes change hard. We can't shy away from the hard problems posed by domains and business needs. So, how can we solve complicated problems without getting dragged into the quagmire of what appears to be an inevitable complexity? In this keynote, an award winning author and software practitioner will share experiences and observations from working on multiple software projects, about what leads to complexities, the traps developers and organizations fall into, and what we can do to effectively deal with these common, recurring issues we see across domains and products.]]></description>
-            <link>https://dev.tube/video/nZcLHkORdHE</link>
-            <guid isPermaLink="true">https://dev.tube/video/nZcLHkORdHE</guid>
-            <pubDate>Sat, 21 Jul 2018 07:54:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CI CD Pipeline Using Jenkins | Continuous Integration and Deployment | DevOps Tutorial | Edureka]]></title>
-            <description><![CDATA[** DevOps Training : https://www.edureka.co/devops **
-This CI CD Pipeline video explains the concepts of Continuous Integration, Continuous Delivery & Deployment, its benefits and its Tools. Below are the topics covered in the video:
-
-1.    What is DevOps
-2.    What are CI and CD?
-3.    Pipelines: What are they?
-4.    Continuous Delivery and Continuous Deployment
-5.    Role of Jenkins
-6.    Role of Docker
-7.   Hands-On – Creating CI CD Pipeline Using Jenkins and Docker
-
-Check our complete DevOps playlist here (includes all the videos mentioned in the video): http://goo.gl/O2vo13
+ Please write back to us at sales@edureka.co or Call us at US: +18336900808 (Toll Free) or India: +918861301699
 
 Facebook: https://www.facebook.com/edurekaIN/
 Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka
-
-#DevOpsTutorial #Jenkins #Docker #GitReabse #CICD
-
-How it Works?
-
-1. This is a 5 Week Instructor led Online Course.
-
-2. Course consists of 24 hours of online classes, 25 hours of assignment, 20 hours of project
-
-3. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-
-4. You will get Lifetime Access to the recordings in the LMS.
-
-5. At the end of the training you will have to complete the project based on which we will provide you a Verifiable Certificate!
-
-- - - - - - - - - - - - - -
-
-About the Course
-
-Edureka’s DevOps online training is designed to help you master key tools of Devops lifecycle like Docker, Puppet, Jenkins, Nagios, GIT, Ansible, Salt Stack and Chef used by a DevOps Engineer for automating multiple steps in SDLC. During this course, our expert DevOps instructors will help you:
-
-1. Understand the concepts and necessities of DevOps
-
-2. Understand the need for DevOps and the day-to-day real-life problems it resolves
-
-3. Learn installation and configuration of common infrastructure servers like Apache, and Nginx for the Enterprise
-
-4. Learn popular DevOps tools like Jenkins, Puppet, Chef, Ansible, Salt Stack, Nagios and GIT
-
-5. Implement automated system update, installations and deployments
-
-6. Learn Virtualization Concepts
-
-7. Configuration deployment and packaging, continuous integration using GIT
-
-8. Fine tune Performance and set-up basic Security for Infrastructure
-
-9. Manage server operations using Code which is popularly known as Infrastructure as a Code
-
-10. Understand the need for and concepts of Monitoring and Logging.
-
-Along with the above-mentioned topics, to help you master the most popular DevOps tools, you will also receive 3 additional self-paced courses including presentations, class recordings, assignments, solutions for the following tools:
-
-1: Ansible - Covers Introduction, Setup & Configuration, Ansible Playbooks, 37 Ansible Modules, Different Roles and Command Line usage. 
-
-2: Chef - Covers Introduction, Building the Cook Book, Node Object & Search, Data-bags, Chef environment, Roles, Deploying Nodes in Production and using the Open Source Chef Server.
-
-3: Puppet - Covers Puppet Infrastructure & run-cycle, the Puppet Language, Environment defining Nodes and Modules, provisioning a Web Server and Executing Modules Against A Puppet Master.
-
-- - - - - - - - - - - - - -
-
-Who should go for this course?
-
-DevOps practitioners are among the highest paid IT professionals today, and the market demand for them is growing rapidly. With emergence of new job roles around DevOps philosophy, anyone aspiring to get into these new roles, can take up this DevOps course. Some of these roles are:
-
-1. DevOps Architect
-
-2. Automation Engineer
-
-3. Software Tester
-
-4. Security Engineer
-
-5. Integration Specialist
-
-6. Release Manager
-
-- - - - - - - - - - - - - -
-
-Project Work
-
-1. Host a dummy webpage using Apache Web Server.
-
-2. Write shell script which reports:
-
-a) Various system configurations related to the user and the OS.
-
-b) Data related to load on the server.
-
-c) Top 5 processes with maximum number of threads.
-
-d) Sort the services by memory
-
-3. Install Nagios on a VM node for monitoring the various parameter of the VM.
-
-For any query, Call us at US: +18336900808 (Toll Free) or India: +918861301699 , Or, write back to us at sales@edureka.co]]></description>
-            <link>https://dev.tube/video/m0a2CzgLNsc</link>
-            <guid isPermaLink="true">https://dev.tube/video/m0a2CzgLNsc</guid>
-            <pubDate>Sat, 21 Jul 2018 07:54:52 GMT</pubDate>
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/ZLyFt6BdxD4</link>
+            <guid isPermaLink="true">https://dev.tube/video/ZLyFt6BdxD4</guid>
+            <pubDate>Mon, 23 Jul 2018 13:58:39 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#FiveThings About npm {S:01 E:23}]]></title>
-            <description><![CDATA[npm install five-things! This week Elijah Manor is back to bring you Five Things that you might not know about npm. Tired of answering questions when you do npm init? Ever lose track of what scripts you have in your package.json? Still installing things globally? You might not have to do any of these things anymore with these npm tips and tricks.
+            <title><![CDATA[Movable Mountains  | @keyframers 1.12.0 | Parallax scroll animation live collaborative coding]]></title>
+            <description><![CDATA[David Khourshid and Stephen Shaw do an early stream recreating a beautiful parallax scroll effect using primarily CSS with a few JS augmentations.
 
-npx: https://www.npmjs.com/package/npx
-npm-check: https://www.npmjs.com/package/npm-check
-Version Lens VS Code Extension: https://cda.ms/zf
-link-status: https://www.npmjs.com/package/link-status
+(Audio is a bit quieter than usual with more ambient noise, but it's still an action packed stream. Enjoy!)
 
-Learn more at https://aka.ms/5things-azure
-To watch more episodes go to https://aka.ms/FiveThingsPlaylist
-Follow Hosts https://twitter.com/John_Papa and https://twitter.com/burkeholland on Twitter
+⏰ Streamed live on June 21, 2018.
+📺 Video: https://youtu.be/vatBdNK-OiQ
+💡 Inspiration: https://dribbble.com/shots/4726786-Discovery-Tours-Parallax-Header-Scroll
+💻 Code: https://cdpn.io/pen/PaRJWm/
 
-Create a Free Account (Azure): https://aka.ms/azft-oss]]></description>
-            <link>https://dev.tube/video/tRhPaWdFNro</link>
-            <guid isPermaLink="true">https://dev.tube/video/tRhPaWdFNro</guid>
-            <pubDate>Sat, 21 Jul 2018 07:57:53 GMT</pubDate>
+Skip around:
+0:30 Animation overview
+4:00 Start coding
+44:20 Keyflections
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* CSS-only Parallax
+* CSS Variables
+* Animated Cropping with scale]]></description>
+            <link>https://dev.tube/video/vatBdNK-OiQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/vatBdNK-OiQ</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS-only loading animations LIGHTNING ROUND| @keyframers 1.9.0]]></title>
+            <description><![CDATA[The video isn't buffering, we're just building loaders! David Khourshid and Stephen Shaw tackle a variety of different loader animations using only CSS. Some are spectacular, some are... spectacular failures. All of them will surely delight! Streamed live on June 7, 2018. 
+
+Final Code Collection: https://codepen.io/collection/nevLNZ/
+
+Impatient Loader by Steve G 
+02:00 
+https://codepen.io/steveg3003/details/pKNjZE/
+
+1.9.0 | Evitare loader
+05:10
+Animation: https://dribbble.com/shots/4268258-Evitare-loader
+Code: https://codepen.io/shshaw/pen/yEVJaY
+
+1.9.1 | Clock Loader 
+48:10
+Animation: https://dribbble.com/shots/4434643-Clock-Loader-Interaction
+Code: https://codepen.io/shshaw/pen/GGNNgW
+
+1.9.2 | Simple Loading - Boxes
+01:08:50
+Animation: https://dribbble.com/shots/4358464-Simple-Loading-Boxes
+Code: https://codepen.io/shshaw/pen/vryyZm
+
+1.9.3 | Solar Eclipse
+01:21:13
+Animation: https://dribbble.com/shots/1982200-Solar-Eclipse
+Code: https://codepen.io/shshaw/pen/WyoozY
+
+1.9.4 | Loading spinner
+01:39:35
+Animation: https://dribbble.com/shots/4645074-Loading-spinner
+Code: https://codepen.io/shshaw/pen/Wyoomm
+
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* CSS Variables
+* CSS Animations
+* 3D Transforms
+* SVG stroke-dasharray / stroke-dashoffset animation
+* transform-origin
+* Staggering]]></description>
+            <link>https://dev.tube/video/XqWsvQxKNac</link>
+            <guid isPermaLink="true">https://dev.tube/video/XqWsvQxKNac</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ Gliding Gallery | Simple Image Slider Transitions | @keyframers 1.15.0]]></title>
+            <description><![CDATA[David Khourshid and Stephen Shaw build a Gliding Gallery, a simple image slider with big transitions.
+
+* ⏰ Streamed live on July 16, 2018 at https://twitch.tv/keyframers
+* 💡 Inspiration: https://dribbble.com/shots/4830195-Team-profile-transitions
+* 📺 Video: https://youtu.be/DbwdbNi_QUk
+* 💻 Code: https://cdpn.io/pen/pZyWPd
+
+Skip around:
+2:22 Thanks to some contributors
+5:30 Animation overview
+8:30 Start coding
+1:02:23 Keyflections
+
+Additional Resources:
+
+* Flipping https://github.com/davidkpiano/flipping
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* Image sliders
+* Layering content
+* CSS Transitions
+* tabindex]]></description>
+            <link>https://dev.tube/video/DbwdbNi_QUk</link>
+            <guid isPermaLink="true">https://dev.tube/video/DbwdbNi_QUk</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS-only Calendar Conundrum  | @keyframers 1.11.0 | Collaborative Coding Live Stream]]></title>
+            <description><![CDATA[Challenge Accepted! 
+
+David Khourshid and Stephen Shaw rise to the challenge raised on Twitter, recreating an amazing, if not improbable calender UI interaction using CSS only. Will they succeed or fail? Watch to find out!
+
+Streamed live on June 18, 2018.
+
+Shownotes: 
+* Twitter Threads: https://twitter.com/jevakallio/status/934805883552501766 https://twitter.com/swyx/status/1008739405069209603
+* Animation Inspiration: https://dribbble.com/shots/2189703-calendar-motion
+* Final code: https://codepen.io/shshaw/pen/pKpwWN/
+
+Skip around:
+0:30 Animation overview
+7:00 Start coding
+1:46:20 Keyflections
+2:00:00 Q&A
+
+Additional Resources:
+
+* Dash Documentation App: https://kapeli.com/dash
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* CSS Variables
+* CSS Transitions
+* Frameworks
+* CSS Only State Management]]></description>
+            <link>https://dev.tube/video/_8OMGE87e2Q</link>
+            <guid isPermaLink="true">https://dev.tube/video/_8OMGE87e2Q</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bike Blender | App UI with CSS & JS | @keyframers 1.8.0 | Collaborative coding live steam]]></title>
+            <description><![CDATA[This week, David Khourshid and Stephen Shaw make a Bicycle App animation using mostly CSS and some dubious JavaScript. Streamed live on May 31, 2018. 
+
+Shownotes: 
+
+* Animation Inspiration: 
+https://dribbble.com/shots/4640269-Bike-Sharing-App-Animation-Renting-and-Data-Dashboard
+* Final code: https://codepen.io/shshaw/pen/ZRGBao/
+
+
+Skip around:
+1:14 Showcase
+6:46 Animation overview
+9:45 Start coding
+40:30 Bike Puns!
+1:54:50 Keyflections
+
+Additional Resources:
+
+* xstate https://github.com/davidkpiano/xstate
+* SplittingImage Hover Gallery https://codepen.io/shshaw/pen/RyOPzb
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* CSS Variables
+* Staggering]]></description>
+            <link>https://dev.tube/video/Wt5ENQj9FCQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/Wt5ENQj9FCQ</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Antonio Leiva - Yo Dawg! I heard you like Kotlin (DevFest Baltics)]]></title>
+            <description><![CDATA[Kotlin is the new official language to develop Android Apps, and it can be used almost everywhere. But did you know you could write a complete App without using other language rather than Kotlin? It can substitute Java in your code, XML in your views and Groovy in your Gradle files.
+
+More information about awesome conference: https://devfest.gdg.lv]]></description>
+            <link>https://dev.tube/video/W1kA-rYCf5Y</link>
+            <guid isPermaLink="true">https://dev.tube/video/W1kA-rYCf5Y</guid>
+            <pubDate>Mon, 23 Jul 2018 12:05:39 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Krzysztof Zabłocki - Metaprogramming in Swift (DevFest Baltics)]]></title>
+            <description><![CDATA[Lets take a look at recently released Sourcery and how it can be applied in variety of different use-cases to make development more powerful and enjoyable, while at the same time limiting amount of human mistakes.
+
+More information about awesome conference: https://devfest.gdg.lv]]></description>
+            <link>https://dev.tube/video/NISkw-N9Y9k</link>
+            <guid isPermaLink="true">https://dev.tube/video/NISkw-N9Y9k</guid>
+            <pubDate>Mon, 23 Jul 2018 12:05:39 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ Payment Picker, Part 1 | Apple Pay Interaction Redesign with HTML+CSS+JS | @keyframers 1.14.0]]></title>
+            <description><![CDATA[David Khourshid and Stephen Shaw put together a pretty payment picker from scratch. 
+
+Part 1 of 2. Part 2 streaming live next week!
+
+* ⏰ Streamed live on July 5, 2018 at https://twitch.tv/keyframers
+* 💡 Inspiration: https://dribbble.com/shots/4788422-ApplePay-Redesigned
+* 📺 Video: https://youtu.be/XWL60VQeR4o
+* 💻 Code: https://cdpn.io/pen/ERBPmZ
+
+Skip around:
+1:30 What's different?
+3:00 Animation overview
+6:35 Start coding
+1:35:45 Keyflections
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* CSS Variables
+* CSS Grid vs Flexbox
+* data attributes
+* Simple state machines]]></description>
+            <link>https://dev.tube/video/XWL60VQeR4o</link>
+            <guid isPermaLink="true">https://dev.tube/video/XWL60VQeR4o</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mega Menu  | CSS-based menu transition | @keyframers 1.13.0]]></title>
+            <description><![CDATA[David Khourshid and Stephen Shaw mold a magnificent mega menu with terrific text transitions powered by the super small Splitting script.
+
+⏰ Streamed live on June 29, 2018.
+💡 Inspiration: https://dribbble.com/shots/2885617-Tubik-Studio-Architecture-Firm
+📺 Video: https://youtu.be/edSVBJGFPrU
+💻 Code: https://cdpn.io/pen/oyJVxq/
+
+Skip around:
+1:56 David K Piano Man
+3:26 Animation overview
+6:55 Introduction to Splitting
+10:35 Start coding
+1:47:54 Keyflections
+
+Additional Resources:
+
+* DavidK 🎹https://www.instagram.com/p/Bki_TjhFjFR/
+* Splitting 🍌CSS var text effects https://github.com/shshaw/Splitting
+* Animating perspective-origin https://codepen.io/shshaw/pen/NgZVZg
+* Wes Bos' CSS Grid video course: https://cssgrid.io/
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* Menu Transitions
+* Simple Sliders
+* CSS Vars
+* Text animations]]></description>
+            <link>https://dev.tube/video/edSVBJGFPrU</link>
+            <guid isPermaLink="true">https://dev.tube/video/edSVBJGFPrU</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[@keyframers 1.3.0 | Snowy Scenes | Live streamed collaborative animation coding]]></title>
+            <description><![CDATA[David Khourshid and Stephen Shaw live code this week's animation: Snowy Scenes!
+
+Shownotes: 
+* Animation Inspiration: https://dribbble.com/shots/4485088-Website-for-an-Extreme-Travel-Agency
+* Final code: https://codepen.io/shshaw/pen/BxLbqO/
+* Videos from https://coverr.co/
+
+Skip around:
+1:25 Ken Wheeler
+2:45 Animation overview
+5:10 Start coding
+1:28:16 Keyflections
+
+Special thanks to David Khourshid for live coding at 3:30 am in Finland!
+
+Like what we're doing? Support us on Patreon so we can keep live coding awesome animations! https://patreon.com/keyframers]]></description>
+            <link>https://dev.tube/video/lA4sqcZhPx4</link>
+            <guid isPermaLink="true">https://dev.tube/video/lA4sqcZhPx4</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[@keyframers 1.2.0 | Reactive Animations with RxJS talk for CodePen Houston by David Khourshid]]></title>
+            <description><![CDATA[This week's @keyframers episode featured David Khourshid  giving a short talk and live coding demonstration at CodePen Houston on Reactive Animations with RxJS followed by a Q&A.
+
+Sponsored by ELL Creative ( http://ellcreative.com ), a creative marketing and advertising agency in Houston, TX.
+
+Final CodePen: https://codepen.io/shshaw/pen/pVvmJo/
+
+Show Notes:
+* David Khourshid http://twitter.com/davidkpiano
+* @keyframers http://twitch.tv/keyframers
+* CodePen Demo: https://codepen.io/shshaw/pen/pVvmJo/
+* RxJS http://reactivex.io/rxjs
+* React Animated https://facebook.github.io/react-native/docs/animated.html]]></description>
+            <link>https://dev.tube/video/H7FEK6geguM</link>
+            <guid isPermaLink="true">https://dev.tube/video/H7FEK6geguM</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[@keyframers 1.4.0 | Expanding Environments | Live streamed collaborative animation coding]]></title>
+            <description><![CDATA[David Khourshid and Stephen Shaw slide some more layers in this week's @keyframers stream, Expanding Environments.
+
+Shownotes: 
+* Animation Inspiration: https://dribbble.com/shots/4506212-S-I-B-A-R
+* Final code: https://codepen.io/shshaw/pen/vjJEby/
+
+Skip around:
+0:39 Thanks for your support
+2:04 Animation overview
+4:59 Start coding
+27:27 Full Width Panel Expansion https://codepen.io/shshaw/pen/pWwrmM?editors=1100
+28:40 CSS-Only Sliding Panels https://codepen.io/shshaw/pen/akXzzE?editors=1100
+53:40 David Leaves
+1:41:28 Keyflections
+1:43:45 Framework Q&A
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Spread the word! A Tweet is worth a thousand chars.
+* Follow & Subscribe on Twitch and join the live streams at http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers !]]></description>
+            <link>https://dev.tube/video/YjiHf3RE4o4</link>
+            <guid isPermaLink="true">https://dev.tube/video/YjiHf3RE4o4</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[@keyframers 1.6.0 | Mouse to the Metal ]]></title>
+            <description><![CDATA[This week, David Khourshid and Stephen Shaw put the mouse to the metal as they recreate one of the most challenging animations yet, streamed live on May 17, 2018. 
+
+Can you beat 70 MPPS? Post in the comments!
+
+Shownotes: 
+
+* Animation Inspiration: 
+https://dribbble.com/shots/4572982-Luxury-speedometer-for-cluster-design
+* Final code: https://codepen.io/shshaw/pen/VxVmww/
+
+Skip around:
+2:50 Animation overview
+5:50 Start coding
+18:58 First Twitch bits! 
+2:08:10 Keyflections
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Spread the word! A Tweet about @keyframers is worth a thousand chars.
+* Follow & Subscribe on Twitch and join the live streams at http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers !
+
+Topics covered:
+
+* RXjs https://github.com/ReactiveX/rxjs
+* CSS Variables
+* Radial Gradients
+* background-clip]]></description>
+            <link>https://dev.tube/video/SJu3igAsVco</link>
+            <guid isPermaLink="true">https://dev.tube/video/SJu3igAsVco</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[@keyframers 1.1.0 | Sliced Slides | Live streamed collaborative animation coding]]></title>
+            <description><![CDATA[David Khourshid and Stephen Shaw live code this week's animation: Sliced Slides. We'll be using the sliding layers technique and a microlibrary called SplittingImage (https://github.com/shshaw/SplittingImage).
+
+Apologies for the stream quality this week. There were some technical issues we're working through that will hopefully be resolved for next week. Audio quality remains great throughout fortunately!
+
+Shownotes: 
+* Animation Inspiration: https://dribbble.com/shots/4122652-Gallery-Page-Transition
+* SplittingImage: https://github.com/shshaw/SplittingImage
+* Final code: https://codepen.io/shshaw/pen/EEqxWV
+
+Skip around:
+2:34 Animation overview
+5:40 Start coding
+36:00 SplittingImage
+1:32:43 Overview]]></description>
+            <link>https://dev.tube/video/qIsRBfo1TRI</link>
+            <guid isPermaLink="true">https://dev.tube/video/qIsRBfo1TRI</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Soccer Scroller!  Live coding a scrolling text effect in RxJS | @keyframers 1.10.0]]></title>
+            <description><![CDATA[(Apologies for the audio issue at the beginning, we resolve it around 1:15)
+
+GOOOOOOOOOOOAL!
+David Khourshid and Stephen Shaw put on their shin guards & lace up their cleats to recreate some animations from the beautiful soccerpattern.com 
+
+
+Shownotes: 
+
+* Animation Inspiration: http://soccerpattern.com
+* Final code: https://codepen.io/shshaw/pen/dKzLxJ/
+
+Skip around:
+2:15 Q&A
+7:20 Animation overview
+9:28 Start coding
+1:46:20 Keyflections
+2:00:00 Accessibility
+
+Additional Resources:
+
+* RxJS https://github.com/ReactiveX/rxjs
+* Animated Intro to RxJS https://css-tricks.com/animated-intro-rxjs/
+* Reactive Animations with RxJs talk by David Khourshid at CodePen Houston https://www.youtube.com/watch?v=H7FEK6geguM
+* Understanding the Almighty Reducer https://css-tricks.com/understanding-the-almighty-reducer
+* Animation Tip: LERP https://codepen.io/rachsmith/post/animation-tip-lerp
+* SVG Encoded for background-image https://codepen.io/shshaw/full/rrOZQQ
+* Probably Don't Base64 SVG https://css-tricks.com/probably-dont-base64-svg/
+* Introduction to Reduced Motion Media Query https://css-tricks.com/introduction-reduced-motion-media-query/
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & Subscribe on YouTube
+* Follow & Tweet us at twitter.com/keyframers.
+* Join the live streams & Subscribe on Twitch http://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* CSS Variables
+* RxJS
+* Scroll Tracking
+* Pattern Animation
+* Psuedo Elements]]></description>
+            <link>https://dev.tube/video/odpRttttBdE</link>
+            <guid isPermaLink="true">https://dev.tube/video/odpRttttBdE</guid>
+            <pubDate>Mon, 23 Jul 2018 14:00:38 GMT</pubDate>
         </item>
     </channel>
 </rss>

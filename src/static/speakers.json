@@ -65,6 +65,10 @@
             "name": "Martin Görner"
         },
         {
+            "twitter": "rasmus",
+            "name": "Rasmus Lerdorf"
+        },
+        {
             "twitter": "shanselman",
             "name": "Scott Hanselman"
         },
@@ -89,12 +93,12 @@
             "name": "Alex Kotliarskyi"
         },
         {
-            "twitter": "rasmus",
-            "name": "Rasmus Lerdorf"
-        },
-        {
             "twitter": "tastapod",
             "name": "Dan North"
+        },
+        {
+            "twitter": "relizarov",
+            "name": "Roman Elizarov"
         },
         {
             "twitter": "wesbos",
@@ -111,10 +115,6 @@
         {
             "twitter": "krambertech",
             "name": "Kateryna Porshnieva"
-        },
-        {
-            "twitter": "relizarov",
-            "name": "Roman Elizarov"
         },
         {
             "twitter": "stolinski",
