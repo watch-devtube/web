@@ -2,9 +2,8 @@
   .card
       .card-image
         a(:href="'/video' + '/' + id")
-          .image
-            img(:src="'//img.youtube.com/vi/' + id + '/hqdefault.jpg'")
-            i.is-size-3.fab.fa-youtube.watch.has-text-light
+          .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
+            i.is-size-3.fab.fa-youtube.watch
             .is-overlay
             p.ttl.is-capitalized.is-size-7 {{title}}
       .card-content
@@ -71,18 +70,22 @@
       border-radius: 50%
     }
 
+
     div.image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background-size: cover;
+      position: relative;
 
         .watch {
-          z-index: 1;
-          position: absolute;
-          right: 5px;
-          top: 5px;
+          color: white;
+          opacity: 0.5;
           transition: 0.4s ease;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          height: 30%;
+          width: 50%;
+          margin: -15% 0 0 -25%;
         }
 
         div.is-overlay {
@@ -91,6 +94,7 @@
         }
 
     .ttl {
+        text-align: left;
         position: absolute;
         bottom: 20px;
         width: 90%;
@@ -113,11 +117,9 @@
   }
 
   .card:hover {
-
     box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
-
     .watch {
-      color: #4988cb !important;
+      opacity: 1 !important;
     }
   } 
 </style>
