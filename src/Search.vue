@@ -77,7 +77,7 @@
                       .column
                         .field.is-grouped-multiline.is-grouped.is-grouped-right(v-if="newMode")
                           .control
-                            Sorting
+                            Sorting(:newCount="newVideos.length")
                     .loading(v-if="loading")
                       .notification
                         p
