@@ -75,16 +75,14 @@
                 i.fab.fa-youtube 
                 | &nbsp; {{video.channelTitle}}
             p {{video.description}}
-            .contribute(v-if="video.speaker")
-              p
-                | Liked the video? 
-                a(:href="'https://twitter.com/intent/tweet?text=Thanks @' + video.speaker.twitter + ' for ' + encodeURIComponent(video.title) + '&via=WatchDevTube&hashtags=devtube,' + video.channelTitle.split(' ')[0] + ',' + (video.tags ? video.tags.join(',').replace(/\\s/g,'') : '') + '&url=https://dev.tube/video/' + video.objectID" target="_blank") 
-                  i.fab.fa-twitter
-                  |  tweet
-                |  — Wrong data? 
-                a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                  i.fas.fa-heart
-                  |  contribute
+            p
+              | Enjoyed the video?
+              ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
+            p(v-if="video.speaker")
+              | Wrong data? 
+              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                i.fas.fa-heart
+                |  contribute
 
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
@@ -156,6 +154,7 @@
   import RelatedVideos from './RelatedVideos.vue'
   import MessageWidget from './MessageWidget.vue'
   import NightMode from './NightMode.vue'
+  import ShareVideo from './ShareVideo.vue'
 
   export default {
     data: function() {
@@ -200,7 +199,7 @@
       }
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget, NightMode }
+    components: { RelatedVideos, MessageWidget, NightMode, ShareVideo }
   }
 
 </script>
