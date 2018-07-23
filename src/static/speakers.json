@@ -33,8 +33,24 @@
             "name": "Kevlin Henney"
         },
         {
+            "twitter": "shiffman",
+            "name": "Daniel Shiffman"
+        },
+        {
+            "twitter": "kinucakes",
+            "name": "Mariel Kinuko Cartwright"
+        },
+        {
+            "twitter": "Mick_Gordon",
+            "name": "Mick Gordon"
+        },
+        {
             "twitter": "philip_roberts",
             "name": "Philip Roberts"
+        },
+        {
+            "twitter": "mor10",
+            "name": "Morten Rand-Hendriksen"
         },
         {
             "twitter": "martinfowler",
@@ -59,6 +75,10 @@
         {
             "twitter": "sandimetz",
             "name": "Sandi Metz"
+        },
+        {
+            "twitter": "dhh",
+            "name": "David Heinemeier Hansson"
         },
         {
             "twitter": "jezhumble",
@@ -93,8 +113,16 @@
             "name": "Kateryna Porshnieva"
         },
         {
+            "twitter": "relizarov",
+            "name": "Roman Elizarov"
+        },
+        {
             "twitter": "stolinski",
             "name": "Scott Tolinski"
+        },
+        {
+            "twitter": "sveta_isakova",
+            "name": "Svetlana Isakova"
         },
         {
             "twitter": "unclebobmartin",
@@ -159,6 +187,10 @@
         {
             "twitter": "yavorsky_",
             "name": "Art Yavorsky"
+        },
+        {
+            "twitter": "mpproch",
+            "name": "Maciek Próchniak"
         },
         {
             "twitter": "NikkitaFTW",
