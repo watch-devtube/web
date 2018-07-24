@@ -4,7 +4,7 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 23 Jul 2018 17:17:39 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Jul 2018 03:23:19 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Live Stream #146: Recamán's Sequence + ml5 Image Classifier]]></title>
