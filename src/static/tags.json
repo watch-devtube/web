@@ -27,16 +27,16 @@
         "mobile",
         "android",
         "ml",
-        "testing",
         "unix",
         "bigdata",
-        "java",
+        "testing",
         "distributed systems",
         "tensorflow",
         "aws",
         "php",
         ".net",
         "performance",
+        "java",
         "cloud",
         "devops",
         "security",
@@ -71,6 +71,7 @@
         "redis",
         "kanban",
         "management",
-        "bdd"
+        "bdd",
+        "assistant"
     ]
 }

@@ -73,6 +73,10 @@
             "name": "Scott Hanselman"
         },
         {
+            "twitter": "unclebobmartin",
+            "name": "Robert C. Martin"
+        },
+        {
             "twitter": "samnewman",
             "name": "Sam Newman"
         },
@@ -123,10 +127,6 @@
         {
             "twitter": "sveta_isakova",
             "name": "Svetlana Isakova"
-        },
-        {
-            "twitter": "unclebobmartin",
-            "name": "Uncle Bob"
         },
         {
             "twitter": "hintjens",
@@ -203,6 +203,10 @@
         {
             "twitter": "ranyitz",
             "name": "Ran Yitzhaki"
+        },
+        {
+            "twitter": "jocranford",
+            "name": "Jo Cranford"
         },
         {
             "twitter": "HannahFoxwell",
