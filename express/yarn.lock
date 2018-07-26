@@ -775,9 +775,9 @@ detect-libc@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
 
-"devtube-commons@https://github.com/watch-devtube/commons/releases/download/201807180931/devtube-commons-v0.1.0.tgz":
+"devtube-commons@https://github.com/watch-devtube/commons/releases/download/201807261456/devtube-commons-v0.1.0.tgz":
   version "0.1.0"
-  resolved "https://github.com/watch-devtube/commons/releases/download/201807180931/devtube-commons-v0.1.0.tgz#8a0385974c5ab7e929e1038bfc11922d51bf9335"
+  resolved "https://github.com/watch-devtube/commons/releases/download/201807261456/devtube-commons-v0.1.0.tgz#18b59e7253b255a11a9717f7fb721f53dbe8a91e"
   dependencies:
     "@google-cloud/pubsub" "^0.18.0"
     "@google-cloud/storage" "^1.7.0"
