@@ -10,7 +10,7 @@
               a.is-black.tag(v-if="item.videoCount" @click="navigate(item)") {{item.videoCount}}  
               a.is-black.tag(v-else @click="navigate(item)") 
                 | {{item.videos.total}}  
-                span(v-if="item.videos.new > 0") &nbsp; {{item.videos.new}}
+                span(v-if="item.videos.new > 0") &nbsp; +{{item.videos.new}}
       .modal-close.is-large(aria-label="close" @click="collapsed = !collapsed")
 
     .is-hidden-mobile
