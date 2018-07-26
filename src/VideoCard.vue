@@ -125,6 +125,8 @@
 </style>
 <script>
   import Tags from './Tags.vue'
+  import dayjs from 'dayjs'
+
   export default {
     props: { 
       newMode: { type: Boolean, required: true },
@@ -151,7 +153,10 @@
     },
     computed: {
       isNew() {
-        return window.newVideos.find(it => it === this.id)
+        let today = dayjs()
+        let videoCreated = dayjs(this.creationDate * 1000)
+        let videoAgeInDays = today.diff(videoCreated, 'days')
+        return videoAgeInDays <= 7
       }
     },
     methods: {
