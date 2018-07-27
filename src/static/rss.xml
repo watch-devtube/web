@@ -4,7 +4,462 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 26 Jul 2018 03:22:49 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Jul 2018 04:29:20 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Coding Challenge #110.1: Recamán's Sequence - Part 1]]></title>
+            <description><![CDATA[In this coding challenge, I visualize Recamán's Sequence using the p5.js library.
+
+🎥 Part 2: https://youtu.be/pYnaBQgnARQ
+
+🔗 http://thecodingtrain.com/CodingChallenges/110.1-recaman-sequence
+
+🔗 MathWorld: http://mathworld.wolfram.com/RecamansSequence.html
+🔗 OEIS: http://oeis.org/
+🔗 Bernardo Recamán Santos: https://es.wikipedia.org/wiki/Bernardo_Recam%C3%A1n_Santos
+
+🎥 Recamán's Sequence by Numberphile: https://youtu.be/FGC5TdIiT9U
+
+🚂 Website: http://thecodingtrain.com/ 
+💖 Patreon: https://patreon.com/codingtrain
+🛒 Store: https://codingtrain.storenvy.com
+📚 Books: https://www.amazon.com/shop/thecodingtrain 
+
+🎥 Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+🔗  https://p5js.org/
+🔗  https://processing.org]]></description>
+            <link>https://dev.tube/video/DhFZfzOvNTU</link>
+            <guid isPermaLink="true">https://dev.tube/video/DhFZfzOvNTU</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #110.2: Recamán's Sequence - Part 2 (Audio)]]></title>
+            <description><![CDATA[For a follow-up challenge, I use Recamán's Sequence to generate a series of musical tones using p5.js sound.
+
+🎥 Part 1: https://youtu.be/DhFZfzOvNTU
+
+🔗 http://thecodingtrain.com/CodingChallenges/110.2-recaman-sequence
+
+🔗 Recamán's Sequence on MathWorld: http://mathworld.wolfram.com/RecamansSequence.html
+🔗 OEIS: http://oeis.org/
+🔗 Bernardo Recamán Santos on Wikipedia: https://es.wikipedia.org/wiki/Bernardo_Recam%C3%A1n_Santos
+
+🎥 Recamán's Sequence by Numberphile: https://youtu.be/FGC5TdIiT9U
+🎥 Recamán's Sequence by Dale Gerdemann: https://youtu.be/h3qEigSSuF0
+🎥 ADSR Envelope with p5.js: https://youtu.be/wUSva_BnedA
+🎥 Sound Synthesis with p5.js: https://youtu.be/Bk8rLzzSink
+
+🚂 Website: http://thecodingtrain.com/ 
+💖 Patreon: https://patreon.com/codingtrain
+🛒 Store: https://codingtrain.storenvy.com
+📚 Books: https://www.amazon.com/shop/thecodingtrain 
+
+🎥 Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+🔗  https://p5js.org/
+🔗  https://processing.org]]></description>
+            <link>https://dev.tube/video/pYnaBQgnARQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/pYnaBQgnARQ</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Making the World Give a Damn About Your Game in 2018]]></title>
+            <description><![CDATA[In this 2018 GDC talk, No More Robots' Mike Rose discusses what currently works (and what doesn't) when attempting to sell a game in 2018.
+
+Register for GDC: http://ubm.io/2gk5KTU
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/IWRu3RRqQmY</link>
+            <guid isPermaLink="true">https://dev.tube/video/IWRu3RRqQmY</guid>
+            <pubDate>Fri, 27 Jul 2018 01:29:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How Decision Trees Work]]></title>
+            <description><![CDATA[Decision trees are powerful and surprisingly straightforward. Here's how they are grown.
+
+Code: https://github.com/brohrer/brohrer.github.io/blob/master/code/decision_tree.py
+
+Slides: https://docs.google.com/presentation/d/1fyGhGxdGcwt_eg-xjlMKiVxstLhw42XfGz3wftSzRjc/edit?usp=sharing
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=9w16p4QmkAI]]></description>
+            <link>https://dev.tube/video/9TiezQ7Gb3M</link>
+            <guid isPermaLink="true">https://dev.tube/video/9TiezQ7Gb3M</guid>
+            <pubDate>Fri, 27 Jul 2018 01:25:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Learn Redux In One Video - Redux / React Tutorial]]></title>
+            <description><![CDATA[Learn Redux with React in one video with this tutorial!
+
+Redux can improve developing projects based on React, making them much more flexible to future changes.
+
+
+⭐️Contents ⭐️
+
+1) 00:00 - Topics
+2) 00:14 - 2 Redux highlights
+3) 01:06 - Store, actions, and reducers
+4) 01:28 - Installation/setup
+5) 02:32 - Create the store
+6) 03:34 - Dispatch an action
+7) 04:05 - Update the store with the reducer
+8) 05:11 - A more real-world store/reducer
+9) 07:01 - Setting an initial state
+10) 07:34 - Using Redux Devtools
+11) 10:23 - Using Provider make the store available to the app
+12) 10:52 - Redux file structure/organization
+13) 12:38 - Connecting components to the store
+14) 12:50 - mapStateToprops
+15) 14:10 - mapActionsToProps
+16) 17:57 - Using passed props in mapStateToProps
+17) 19:21 - Passed props and bindActionCreators in mapActionsToProps
+18) 20:36 - mergeProps
+19) 21:33 - API requests with redux-thunk middleware
+20) 26:28 - SUCCESS, ERROR, and REQUEST actions for API requests
+21) 27:32 - Using reselect for organization and performance
+22) 30:02 - Smart vs. dumb components
+
+🔗Tutorial made by Learn Coding Tutorials. Check out their channel: https://www.youtube.com/channel/UC8Szh5ZJeGFBWyqKyTCVPpA
+
+🐦Twitter: https://twitter.com/learncodingtuts
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/9fHQI-dt7QU</link>
+            <guid isPermaLink="true">https://dev.tube/video/9fHQI-dt7QU</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Gulp Task Automation for Beginners]]></title>
+            <description><![CDATA[You will learn how automate all your web development tasks with Gulp. In this video we will be compiling Sass files to CSS and then minifying the CSS for production.
+
+🔗Install node: https://nodejs.org
+🔗Install Gulp: https://gulpjs.com/
+
+Install Gulp Packages:
+🔗Sass: https://www.npmjs.com/package/gulp-sass
+🔗Css uglify: https://www.npmjs.com/package/gulp-uglifycss
+
+🎶Music by: Nicolai Heidlas Music - With you
+https://soundcloud.com/nicolai-heidlas
+
+⭐️Tutorial from iEatWebsites. Check out their channel for more great tutorials: https://www.youtube.com/channel/UC0o60y3FtVy3M93JcDFVreA
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/LYbt50dhTko</link>
+            <guid isPermaLink="true">https://dev.tube/video/LYbt50dhTko</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Command Line Crash Course]]></title>
+            <description><![CDATA[Learn the command line, its magic, and how to master this amazing interface.
+
+Talk by Robert Axelsen (@robaxelsen) at the FreeCodeCamp Vienna June 2018 meetup.
+
+Recorded by Pusher.com.
+
+Pusher's channel: https://www.youtube.com/channel/UCoyqucxoFXDFnh3khD0rjUg
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/yz7nYlnXLfE</link>
+            <guid isPermaLink="true">https://dev.tube/video/yz7nYlnXLfE</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Top 10 Applications of Machine Learning | Machine Learning Application Examples | Edureka]]></title>
+            <description><![CDATA[** Machine Learning Training with Python: https://www.edureka.co/python **
+This "Top 10 Applications of Machine Learning" video will give you an idea of how vast the machine learning is and how commonly you are using it in your day to day life. 
+
+Check out our playlist for more videos: http://bit.ly/2taym8X
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+#MachineLearningApplications #MachineLearningUsingPython #MachineLearningTraining
+
+How it Works?
+1. This is a 5 Week Instructor led Online Course,40 hours of assignment and 20 hours of project work
+2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+3. At the end of the training you will be working on a real-time project for which we will provide you a Grade and a Verifiable Certificate!
+
+- - - - - - - - - - - - - - - - -
+About the Course
+
+Edureka’s Machine Learning Course using Python is designed to make you grab the concepts of Machine Learning. The Machine Learning training will provide deep understanding of Machine Learning and its mechanism. As a Data Scientist, you will be learning the importance of Machine Learning and its implementation in python programming language. Furthermore, you will be taught Reinforcement Learning which in turn is an important aspect of Artificial Intelligence. You will be able to automate real life scenarios using Machine Learning Algorithms. Towards the end of the course, we will be discussing various practical use cases of Machine Learning in python programming language to enhance your learning experience.
+
+After completing this Machine Learning Certification Training using Python, you should be able to:
+Gain insight into the 'Roles' played by a Machine Learning Engineer
+Automate data analysis using python
+Describe Machine Learning
+Work with real-time data
+Learn tools and techniques for predictive modeling
+Discuss Machine Learning algorithms and their implementation
+Validate Machine Learning algorithms
+Explain Time Series and it’s related concepts
+Gain expertise to handle business in future, living the present
+
+- - - - - - - - - - - - - - - - - - -
+
+Why learn Machine Learning with Python?
+
+Data Science is a set of techniques that enable the computers to learn the desired behavior from data without explicitly being programmed. It employs techniques and theories drawn from many fields within the broad areas of mathematics, statistics, information science, and computer science. This course exposes you to different classes of machine learning algorithms like supervised, unsupervised and reinforcement algorithms. This course imparts you the necessary skills like data pre-processing, dimensional reduction, model evaluation and also exposes you to different machine learning algorithms like regression, clustering, decision trees, random forest, Naive Bayes and Q-Learning.
+
+For more information, please write back to us at sales@edureka.co
+Call us at US: +18336900808 (Toll Free) or India: +918861301699
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/ahRcGObyEZo</link>
+            <guid isPermaLink="true">https://dev.tube/video/ahRcGObyEZo</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How Your Systems Keep Running Day After Day - John Allspaw]]></title>
+            <description><![CDATA[How Your Systems Keep Running Day After Day: Resilience Engineering as DevOps
+
+John Allspaw, CTO/Researcher, Adaptive Capacity Labs 
+
+DOES17 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/xA5U85LSk0M</link>
+            <guid isPermaLink="true">https://dev.tube/video/xA5U85LSk0M</guid>
+            <pubDate>Fri, 27 Jul 2018 01:31:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Digital Transformation: Thriving Through the Transition - Jeffrey Snover, Microsoft]]></title>
+            <description><![CDATA[Jeffrey Snover, Technical Fellow and Chief Architect for Azure Storage & Cloud Edge, Microsoft
+
+Jeffrey Snover is a Technical Fellow and the Lead Architect for the Enterprise Cloud Group. Snover is the inventor of Windows PowerShell, an object-based distributed automation engine, scripting language, and command line shell. Snover joined Microsoft in 1999 as divisional architect for the Management and Services Division, providing technical direction across Microsoft’s management technologies and products. Snover has over 32 years of industry experience with a focus on management technologies and solutions. He was an architect in the office of the CTO at Tivoli and a development manager at NetView. He has worked also as a consulting engineer and development manager at DEC, where he led various network and systems management projects. Snover held 8 patents prior to joining Microsoft, and has registered 30 patents since. He is a frequent speaker at industry and research conferences on a variety of management and language topics.
+
+DOES18 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/nKyF8fzed0w</link>
+            <guid isPermaLink="true">https://dev.tube/video/nKyF8fzed0w</guid>
+            <pubDate>Fri, 27 Jul 2018 01:31:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Denial of Service Mitigation]]></title>
+            <description><![CDATA[In this 2018 GDC session, Valve's Fletcher Dunn presents a quick overview of denial-of-service attacks, standard solutions, and the unique challenges game developers face in preventing them. 
+
+Register for GDC: http://ubm.io/2gk5KTU
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/2CQ1sxPppV4</link>
+            <guid isPermaLink="true">https://dev.tube/video/2CQ1sxPppV4</guid>
+            <pubDate>Fri, 27 Jul 2018 01:29:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[C# 8 - Jon Skeet and Mads Torgersen]]></title>
+            <description><![CDATA[Just in case the stream of C# 7 point releases hasn't given you enough to think about, let's have a look at what might be in C# 8.
+Nullable reference types? Shapes? Extension everything? One thing's for sure: this talk won't be pinned down until it's being delivered...]]></description>
+            <link>https://dev.tube/video/gGUYUJmssYM</link>
+            <guid isPermaLink="true">https://dev.tube/video/gGUYUJmssYM</guid>
+            <pubDate>Fri, 27 Jul 2018 01:26:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2.5 Hour Symposium: Safety Culture, Lean, and DevOps]]></title>
+            <description><![CDATA[Dr. Sidney Dekker, Dr. Steven Spear, Dr. Richard Cook, John Willis and Gene Kim
+
+As aspiring students of both Lean and Safety Culture, John Willis and I (Gene Kim) observed that there seemed to be many commonalities between the two movements of Safety Culture and Lean: the need for psychological safety, a scientific method for improvement daily work, systems thinking, and so forth. However, instead of these movements seeing the other as mutually supportive bodies of knowledge, they seemed to view the other with suspicion or even in diametric opposition.  
+
+Over the last four years, John Willis and I (Gene Kim) have had the privilege of interacting with many of the most influential thinkers from these two movements. In 2017, John and I filmed a half-day panel with Dr. Richard Cook and Dr. Sidney Dekker from the Safety Culture movement, and Dr. Steven Spear from the Lean movement.
+
+As John will tell you, on the one hand it was amazing to see such an intellectual tour de force of argumentation, citing philosophy, physics, management and social sciences, medicine, ethics, economics, and even theology. On the other hand, it was at times a pretty stressful and wild ride, and at one point, John and I wondered whether we should have let this stay buried in the desert, so vehement was the discussion. 
+
+This full 2.5 hour dialogue was amazing to be part of, and listening to it always makes me feel smarter.  Certainly, by the end, it was clear that many principles and values span both Lean and safety culture.  
+
+After this session, we filmed the 30m panel that has already been posted — it was  in front of the entire conference, and is posted here:: https://www.youtube.com/watch?v=CFMJ3V4VakA.  I agree with my friend Charles Betz, who said, “This panel will go down in history as a watershed moment for the digital profession. Notable, in the fullest sense of the word.”]]></description>
+            <link>https://dev.tube/video/gtxtb9z_4FY</link>
+            <guid isPermaLink="true">https://dev.tube/video/gtxtb9z_4FY</guid>
+            <pubDate>Fri, 27 Jul 2018 01:32:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Agile Transformation at ING]]></title>
+            <description><![CDATA[The CIO of ING presents on the Agile DevOps transformation and their focus on IT talent. http://ITRevolution.com. This is his presentation at the DevOps Enterprise Summit in London 2016.
+
+
+Ron van Kemenade - Nothing Beats Engineering Talent…The AGILE Transformation at ING
+
+
+ING’s Global Chief Information Officer (CIO) Ron van Kemenade overseas over 10,000 IT staff members (including externals.) He’s responsible for all banking technology at ING. ING serves over 34 million customers globally - showing that Agile transformation is scalable to large organizations.
+
+
+Ron opened his presentation with the “We love IT” video highlighting ING’s milestones during the transition to DevOps. He goes on to explain that in order to serve ING’s mission of empowering people to stay a step ahead in life and business, their IT would need to change to serve that strategy.
+
+
+After attending the Google I/O, Ron van Kemenade returned inspired to transform IT at ING. He started with a small mobile development team.
+
+
+“If you want to make clear the impact of your change, you don’t put ten people in a row and all at the same time make a small step. Everybody moves at the same pace forward. So instead of that we asked one team to make a huge step forward. One meter in front of the other nine. Then everybody notices. And then you need to allow other teams to copy their behavior.
+
+
+By focusing on internal talent, ING has become more responsive to customer needs.
+
+
+Ron van Kemenade, CIO, ING Bank
+
+
+Share this video: https://www.youtube.com/watch?v=EKEaMeaiZOw&index=5&list=PLvk9Yh_MWYuzAfazAe6m8uE-_lVvshjX6
+
+Share your experience with DevOps or DOES16 in the comments below.
+
+DOES16 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/EKEaMeaiZOw</link>
+            <guid isPermaLink="true">https://dev.tube/video/EKEaMeaiZOw</guid>
+            <pubDate>Fri, 27 Jul 2018 01:32:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Game Outcomes Project: How Teamwork, Leadership and Culture Drive Results]]></title>
+            <description><![CDATA[In this 2016 GDC session, Mothership Entertainment's Paul Tozour gives a presentation of the Games Outcome Project, highlighting important data about the nature of game development workplaces. 
+
+Register for GDC: http://ubm.io/2gk5KTU
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/Mrr4lNF7-OU</link>
+            <guid isPermaLink="true">https://dev.tube/video/Mrr4lNF7-OU</guid>
+            <pubDate>Fri, 27 Jul 2018 01:29:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Making Work Visible: How to Unmask Capacity Killing WIP - Dominica DeGrandis]]></title>
+            <description><![CDATA[Making Work Visible: How to Unmask Capacity Killing WIP
+
+Dominica DeGrandis, Director, Learning & Development, Leankit
+
+Are you scrambling to meet deadlines only to find more requests piling up in your inbox? Hidden WIP is a major contributor to clogged value streams and overloaded employees, burdened with too many meetings and frustrating work routines. Making work visible highlights the problems leading to low productivity across the organization. In this talk, Dominica shares how to unmask the things that are killing your team’s capacity and their ability to optimize workflow.
+
+DOES17 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/KR7Y8IUgyyA</link>
+            <guid isPermaLink="true">https://dev.tube/video/KR7Y8IUgyyA</guid>
+            <pubDate>Fri, 27 Jul 2018 01:32:25 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Setting up MailChimp on WordPress with plugins (plus creating a MailChimp landing page)]]></title>
+            <description><![CDATA[Get tips for setting up MailChimp on Wordpress and creating a MailChimp landing page. 
+
+Learn more about this topic in the accompanying article: https://medium.freecodecamp.org/how-to-market-your-new-project-incorporate-design-create-a-landing-page-and-get-your-users-97812fd9dd4d
+
+Video from Jane Sorensen (@janerette).
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/BK9iHnkr9nM</link>
+            <guid isPermaLink="true">https://dev.tube/video/BK9iHnkr9nM</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Lambda Jam 2018 - Ryan Trinkle - Full-Stack Haskell, from Prototype to Production]]></title>
+            <description><![CDATA[Three years ago, I quit my job to bet everything on the proposition that Haskell could excel not just for specialized, high-assurance software, but for the kinds of software that millions of engineers work on every day. I had previously built backends with Haskell, with the wonderful experience of code that works reliably, a team that doesn't step on each others' toes, and an ease of refactoring that let us keep the codebase clean without risking regressions. But now, GHCJS and FRP had finally become reliable enough to trust in the real world. It was a game changer: Haskell could now build world-class graphical user interfaces, too, and deploy them as single page web apps — in theory.
+
+In practice, there were many obstacles along the way. However, I found that even with the need to blaze new trails from time to time, our overall pace was far faster than anything I had seen in the imperative tech stacks I'd worked with before. Strong types and pure values decreased bug counts and made code much more readable. Some former backend developers who had scrupulously avoided frontend development told me that they now enjoyed working on the frontend, too.
+
+Since then, I've worked with the community to continue building infrastructure to expand the areas where we can use Haskell to get real work done. Enabling mobile development required bug fixes to GHC, a rearchitected approach to cross-compilation in Nixpkgs, and bindings to native APIs. To scale up to larger projects, we've improved existing tools and created new tools that make developer workflows simpler, faster, and more discoverable. And to make Haskell app development more accessible to beginners and professionals without Haskell experience, we've made more and more functionality available out of the box.
+
+In this talk, I'll show you the tools that are available today and the challenges that lie ahead. I hope you'll come away with a broadened understanding of how Haskell can be applied in your own professional projects — and how the theory of functional programming can be a potent practical tool.
+
+Ryan Trinkle is a founding partner of Obsidian Systems, a software engineering consultancy that uses Haskell, Nix, and other functional tools to deliver better code faster and more predictably.  In 2015, he created Reflex, a Haskell-based functional reactive programming engine that now supports building desktop, web, and native mobile applications from a single codebase.  He has been a board member of Haskell.org since 2014 and was a founding member of the New York Haskell Users Group in 2012.  He holds degrees in law (J.D., Harvard '09) and computer science and computer systems engineering (B.S., Rensselaer Polytechnic Institute '05).
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/riJuXDIUMA0</link>
+            <guid isPermaLink="true">https://dev.tube/video/riJuXDIUMA0</guid>
+            <pubDate>Fri, 27 Jul 2018 01:28:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Simon Peyton Jones - Linear Haskell: practical linearity in a higher-order polymorphic language]]></title>
+            <link>https://dev.tube/video/t0mhvd3-60Y</link>
+            <guid isPermaLink="true">https://dev.tube/video/t0mhvd3-60Y</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Cybersecurity Interview Questions and Answers | CyberSecurity Interview Tips | Edureka]]></title>
+            <description><![CDATA[** Cybersecurity Training: https://www.edureka.co/cybersecurity-certification-training **
+This Edureka video on "Cybersecurity Interview Questions and Answers" consists of 50 questions from multiple cybersecurity domains which will help you in preparation of your interviews. Watch it now!!
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+About Edureka Cyber Security Training
+
+Cybersecurity is the combination of processes, practices, and technologies designed to protect networks, computers, programs, data and information from attack, damage or unauthorized access.
+
+Edureka’s Cybersecurity Certification Course will help you in learning about the basic concepts of Cybersecurity along with the methodologies that must be practiced ensuring the information security of an organization. Starting from the Ground level Security Essentials, this course will lead you through Cryptography, Computer Networks & Security, Application Security, Data & Endpoint Security, idAM (Identity & Access Management), Cloud Security, Cyber-Attacks and various security practices for businesses.
+
+------------------------------------------------
+
+Why Learn Cyber Security?
+
+Cybersecurity is the gathering of advances that procedures and practices expected to ensure systems, PCs, projects and information from assault, harm or unapproved get to. In a processing setting, security incorporates both cybersecurity and physical security, it is imperative since cyberattackers can without much of a stretch take and obliterate the profoundly grouped data of governments, defense offices and banks for which the results are huge so it is essential to have an appropriate innovation which an avoid digital wrongdoings.
+
+---------------------------------------------------
+
+Objectives of Edureka Cyber Security Course
+
+This course is designed to cover a holistic & a wide variety of foundational topics of the cybersecurity domain which will be helpful to lead freshers as well as IT professional having 1 to 2 years of experience, into the next level of choice such as ethical hacking/ audit & compliance / GRC/ Security Architecture and so on
+This course focuses mainly on the basics concepts of Cyber Security
+In this course, we are going to deal with Ground level security essentials cryptography, computer networks & security, application security, data & endpoint security, idAM (identity & access management), cloud security, cyber-attacks and various security practices for businesses
+This course will be your first step towards learning Cyber Security
+--------------------------------------
+
+Who Should go for this Training?
+
+Anyone having the zeal to learn innovative technologies can take up this course. Especially, students and professionals aspiring to make a career in the Cybersecurity technology. However, Cybersecurity Certification Course is best suited for the below-mentioned profiles:-
+Networking Professionals
+Linux Administrators
+-----------------------------------------------
+
+ Please write back to us at sales@edureka.co or Call us at US: +18336900808 (Toll Free) or India: +918861301699
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/otWst36CKyM</link>
+            <guid isPermaLink="true">https://dev.tube/video/otWst36CKyM</guid>
+            <pubDate>Fri, 27 Jul 2018 01:30:32 GMT</pubDate>
+        </item>
     </channel>
 </rss>

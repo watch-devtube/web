@@ -53,6 +53,10 @@
             "name": "Morten Rand-Hendriksen"
         },
         {
+            "twitter": "dontusethiscode",
+            "name": "James Powell"
+        },
+        {
             "twitter": "martinfowler",
             "name": "Martin Fowler"
         },
@@ -89,8 +93,16 @@
             "name": "David Heinemeier Hansson"
         },
         {
+            "twitter": "travisneilson",
+            "name": "Travis Neilson"
+        },
+        {
             "twitter": "jezhumble",
             "name": "Jez Humble"
+        },
+        {
+            "twitter": "carnesbeau",
+            "name": "Beau Carnes"
         },
         {
             "twitter": "alex_frantic",
@@ -137,6 +149,10 @@
             "name": "Felienne Hermans"
         },
         {
+            "twitter": "RealGeneKim",
+            "name": "Gene Kim"
+        },
+        {
             "twitter": "ethomson",
             "name": "Edward Thomson"
         },
@@ -149,16 +165,16 @@
             "name": "Nora Jones"
         },
         {
+            "twitter": "icooper",
+            "name": "Ian Cooper"
+        },
+        {
             "twitter": "kartar",
             "name": "James Turnbull"
         },
         {
             "twitter": "bridgetkromhout",
             "name": "Bridget Kromhout"
-        },
-        {
-            "twitter": "RealGeneKim",
-            "name": "Gene Kim"
         },
         {
             "twitter": "roman01la",
@@ -213,8 +229,8 @@
             "name": "Hannah Foxwell"
         },
         {
-            "twitter": "icooper",
-            "name": "Ian Cooper"
+            "twitter": "tnurkiewicz",
+            "name": "Tomasz Nurkiewicz"
         },
         {
             "twitter": "emmajanehw",

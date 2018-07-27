@@ -71,6 +71,10 @@
         "redis",
         "kanban",
         "management",
+        "rxjava",
+        "reactor",
+        "akka",
+        "reactive",
         "bdd",
         "assistant"
     ]
