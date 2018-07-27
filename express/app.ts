@@ -62,11 +62,6 @@ app.set('views', path.join(__dirname, staticDir))
 
 console.timeEnd('Init')
 
-// Preload data
-console.time('Contributors loading')
-let board = fs.readFileSync(`${__dirname}/data/board.json`, 'utf8')
-console.timeEnd('Contributors loading')
-
 // EXPERIMENTAL FASTR MODE
 console.time('Fastr indexing')
 let fastrDir = `${__dirname}/data`
@@ -128,6 +123,11 @@ async function proxy(req: Request, res: Response) {
       ]
     })
   } else if (req.path.startsWith("/contributors")) {
+
+    // Preload data
+    console.time('Contributors loading')
+    let board = fs.readFileSync(`${__dirname}/data/board.json`, 'utf8')
+    console.timeEnd('Contributors loading')
 
     let title = 'DevTube Contributors'
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
