@@ -6,9 +6,7 @@
           .level-left
             .level-item
               a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
-          .level-item.has-text-centered(v-if="!newMode")
-              Input(placeholder="Search for videos...")
-          .level-item.has-text-centered(v-else)
+          .level-item.has-text-centered
               Input(v-if="!speaker && !tag && !channel" placeholder="Search for videos...")
           .level-right.has-text-lato
             .level-item.links.is-size-10
@@ -20,7 +18,7 @@
     section.section
           .container
             .columns
-              .column.is-one-quarter(v-if="newMode")
+              .column.is-one-quarter
                 p.buttons
                   router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel" :to="{ name: 'search' }")
                     span {{speaker || tag || channel}}
@@ -38,38 +36,11 @@
 
                 ExpandableTags(ref="channelPicker" icon="fab fa-youtube" title="Channels" :items="channels" :limit="10" :route="routeToChannel")
                     template(slot-scope="slot") {{slot.item.title}}
-
-              .column.is-one-quarter.is-hidden-touch(v-else)
-                .columns(v-if="newVideos.length && !newOnly")
-                  .column
-                    .content
-                      p 
-                        b {{newVideos.length}} 
-                        | new videos since yesterday!
-                      a.button.is-info.is-outlined(v-on:click="showNewVideos()") Show me
-                .columns
-                  .column
-                    h1.title Tags
-                    ais-refinement-list.is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="tags" :sort-by="['count:desc', 'name:asc']")
-                .columns(v-if="!speaker")
-                  .column
-                    h1.title Speaker
-                    ais-refinement-list.is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="speaker.name" :sort-by="['count:desc', 'name:asc']")
-                .columns
-                  .column
-                    h1.title Channel
-                    ais-refinement-list.is-is-capitalized(:class-names="{'ais-refinement-list__count': 'tag'}" attribute-name="channelTitle" :sort-by="['count:desc', 'name:asc']")     
-                .columns
-                  .column
-                    h1.title Year
-                    YearRange
               .column
                 .columns
                   .column
                     .columns
-                      .column(v-if="!newMode")
-                        ActiveFilters(:speaker="speaker")
-                      .column.is-hidden-mobile(v-else)
+                      .column.is-hidden-mobile
                         router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'search' }")
                           span.is-capitalized(v-if="tag || channel") {{tag || channel}}
                           span.is-lowercased(v-if="speaker") @{{speaker}}
@@ -182,8 +153,7 @@ export default {
       tagsCollapsed: true,
       speakersCollapsed: true,
       channelsCollapsed: true,
-      newMode: window.fastrMode,
-      newVideos: window.newVideos
+      newMode: window.fastrMode
     };
   },
   watch: {
@@ -258,7 +228,6 @@ export default {
       return { name: 'channel', params: { channel: item.title } }
     },
     fetch() {
-      this.newVideos = window.newVideos
       this.newMode = window.fastrMode
 
 
@@ -290,10 +259,6 @@ export default {
       this.searchStore.start()
       this.searchStore.refresh()
 
-    },
-    showNewVideos: function() {
-      let newOnly = this.newVideos.map(id => `objectID:${id}`).join(' OR ')
-      this.searchStore.algoliaHelper.setQueryParameter('filters', `(${newOnly})`)
     }
   },
   components: { 

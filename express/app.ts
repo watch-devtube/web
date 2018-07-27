@@ -62,11 +62,10 @@ app.set('views', path.join(__dirname, staticDir))
 
 console.timeEnd('Init')
 
-// Preload static data
-console.time('New videos parsing')
-let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
-let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
-console.timeEnd('New videos parsing')
+// Preload data
+console.time('Contributors loading')
+let board = fs.readFileSync(`${__dirname}/data/board.json`, 'utf8')
+console.timeEnd('Contributors loading')
 
 // EXPERIMENTAL FASTR MODE
 console.time('Fastr indexing')
@@ -118,7 +117,6 @@ async function proxy(req: Request, res: Response) {
       fastrMode: fastrMode,
       nightMode: nightMode,
       featured: featuredOrUndefined(),
-      newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
@@ -129,6 +127,26 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
+  } else if (req.path.startsWith("/contributors")) {
+
+    let title = 'DevTube Contributors'
+    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+    let response = {
+      title: title,
+      fastrMode: fastrMode,
+      nightMode: nightMode,
+      board: board,
+      meta: [
+        { name: "description", content: description },
+        { name: "og:title", content: title },
+        { name: "og:description", content: description },
+        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
+      ]
+    }
+    res.render('index.html', response)
 
   } else if (req.path.startsWith("/@")) {
 

@@ -44,6 +44,7 @@ html(lang='en')
       window.preloadedEntity = {{& preloadedEntity}}{{^preloadedEntity}}undefined{{/preloadedEntity}}
       window.serverSideError = {{& serverSideError}}{{^serverSideError}}undefined{{/serverSideError}}
       window.newVideos = {{& newVideos}}{{^newVideos}}[]{{/newVideos}}
+      window.board = {{& board}}{{^board}}undefined{{/board}}
       window.speaker = {{& speaker}}{{^speaker}}undefined{{/speaker}}
       window.fastrMode = {{fastrMode}}
       window.featured = {{& featured}}{{^featured}}undefined{{/featured}}
@@ -77,12 +78,14 @@ html(lang='en')
     footer.footer(style="margin-top: 1em")
       .content.has-text-centered
         p 
-          | DevTube has been developed with 
-          i.far.fa-heart.has-text-danger
-          |  and care by Latvian software developers 
+          | DevTube has been developed by  
           a(href="https://twitter.com/codingandrey" target="_blank") @codingandrey
-          |  and 
+          |,  
           a(href="https://twitter.com/eduardsi" target="_blank") @eduardsi
+          |  and 
+          a(href="/contributors")
+            i.far.fa-heart.has-text-danger
+            | &nbsp;contributors
           | .
         p 
           | This product has been developed in spare time. Say thanks by sharing this work or following us on Twitter.
@@ -107,4 +110,4 @@ html(lang='en')
           | We use cookies to improve your UX (sorting preference, night mode, resuming video from the last played position). To inspect and block cookies use 
           a(href="//ghostery.com") Ghostery
           |  on your browser.      
-    script(defer='', src='//use.fontawesome.com/releases/v5.0.10/js/all.js')
+    script(defer='', src='//use.fontawesome.com/releases/v5.2.0/js/all.js')
