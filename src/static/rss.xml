@@ -4,462 +4,329 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 27 Jul 2018 04:29:20 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 28 Jul 2018 04:28:15 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Coding Challenge #110.1: Recamán's Sequence - Part 1]]></title>
-            <description><![CDATA[In this coding challenge, I visualize Recamán's Sequence using the p5.js library.
+            <title><![CDATA[The Yin and Yang of DevOps Transformation - Electric Cloud]]></title>
+            <description><![CDATA[The Yin and Yang of DevOps Transformation
 
-🎥 Part 2: https://youtu.be/pYnaBQgnARQ
+Steve Brodie, CEO, Electric Cloud
 
-🔗 http://thecodingtrain.com/CodingChallenges/110.1-recaman-sequence
-
-🔗 MathWorld: http://mathworld.wolfram.com/RecamansSequence.html
-🔗 OEIS: http://oeis.org/
-🔗 Bernardo Recamán Santos: https://es.wikipedia.org/wiki/Bernardo_Recam%C3%A1n_Santos
-
-🎥 Recamán's Sequence by Numberphile: https://youtu.be/FGC5TdIiT9U
-
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Books: https://www.amazon.com/shop/thecodingtrain 
-
-🎥 Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/DhFZfzOvNTU</link>
-            <guid isPermaLink="true">https://dev.tube/video/DhFZfzOvNTU</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:44 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #110.2: Recamán's Sequence - Part 2 (Audio)]]></title>
-            <description><![CDATA[For a follow-up challenge, I use Recamán's Sequence to generate a series of musical tones using p5.js sound.
-
-🎥 Part 1: https://youtu.be/DhFZfzOvNTU
-
-🔗 http://thecodingtrain.com/CodingChallenges/110.2-recaman-sequence
-
-🔗 Recamán's Sequence on MathWorld: http://mathworld.wolfram.com/RecamansSequence.html
-🔗 OEIS: http://oeis.org/
-🔗 Bernardo Recamán Santos on Wikipedia: https://es.wikipedia.org/wiki/Bernardo_Recam%C3%A1n_Santos
-
-🎥 Recamán's Sequence by Numberphile: https://youtu.be/FGC5TdIiT9U
-🎥 Recamán's Sequence by Dale Gerdemann: https://youtu.be/h3qEigSSuF0
-🎥 ADSR Envelope with p5.js: https://youtu.be/wUSva_BnedA
-🎥 Sound Synthesis with p5.js: https://youtu.be/Bk8rLzzSink
-
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Books: https://www.amazon.com/shop/thecodingtrain 
-
-🎥 Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/pYnaBQgnARQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/pYnaBQgnARQ</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:44 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Making the World Give a Damn About Your Game in 2018]]></title>
-            <description><![CDATA[In this 2018 GDC talk, No More Robots' Mike Rose discusses what currently works (and what doesn't) when attempting to sell a game in 2018.
-
-Register for GDC: http://ubm.io/2gk5KTU
-
-Join the GDC mailing list: http://www.gdconf.com/subscribe
-
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/IWRu3RRqQmY</link>
-            <guid isPermaLink="true">https://dev.tube/video/IWRu3RRqQmY</guid>
-            <pubDate>Fri, 27 Jul 2018 01:29:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How Decision Trees Work]]></title>
-            <description><![CDATA[Decision trees are powerful and surprisingly straightforward. Here's how they are grown.
-
-Code: https://github.com/brohrer/brohrer.github.io/blob/master/code/decision_tree.py
-
-Slides: https://docs.google.com/presentation/d/1fyGhGxdGcwt_eg-xjlMKiVxstLhw42XfGz3wftSzRjc/edit?usp=sharing
-
-PERMISSIONS:
-
-Original video was published with the Creative Commons Attribution license (reuse allowed).
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=9w16p4QmkAI]]></description>
-            <link>https://dev.tube/video/9TiezQ7Gb3M</link>
-            <guid isPermaLink="true">https://dev.tube/video/9TiezQ7Gb3M</guid>
-            <pubDate>Fri, 27 Jul 2018 01:25:56 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Learn Redux In One Video - Redux / React Tutorial]]></title>
-            <description><![CDATA[Learn Redux with React in one video with this tutorial!
-
-Redux can improve developing projects based on React, making them much more flexible to future changes.
-
-
-⭐️Contents ⭐️
-
-1) 00:00 - Topics
-2) 00:14 - 2 Redux highlights
-3) 01:06 - Store, actions, and reducers
-4) 01:28 - Installation/setup
-5) 02:32 - Create the store
-6) 03:34 - Dispatch an action
-7) 04:05 - Update the store with the reducer
-8) 05:11 - A more real-world store/reducer
-9) 07:01 - Setting an initial state
-10) 07:34 - Using Redux Devtools
-11) 10:23 - Using Provider make the store available to the app
-12) 10:52 - Redux file structure/organization
-13) 12:38 - Connecting components to the store
-14) 12:50 - mapStateToprops
-15) 14:10 - mapActionsToProps
-16) 17:57 - Using passed props in mapStateToProps
-17) 19:21 - Passed props and bindActionCreators in mapActionsToProps
-18) 20:36 - mergeProps
-19) 21:33 - API requests with redux-thunk middleware
-20) 26:28 - SUCCESS, ERROR, and REQUEST actions for API requests
-21) 27:32 - Using reselect for organization and performance
-22) 30:02 - Smart vs. dumb components
-
-🔗Tutorial made by Learn Coding Tutorials. Check out their channel: https://www.youtube.com/channel/UC8Szh5ZJeGFBWyqKyTCVPpA
-
-🐦Twitter: https://twitter.com/learncodingtuts
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/9fHQI-dt7QU</link>
-            <guid isPermaLink="true">https://dev.tube/video/9fHQI-dt7QU</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Gulp Task Automation for Beginners]]></title>
-            <description><![CDATA[You will learn how automate all your web development tasks with Gulp. In this video we will be compiling Sass files to CSS and then minifying the CSS for production.
-
-🔗Install node: https://nodejs.org
-🔗Install Gulp: https://gulpjs.com/
-
-Install Gulp Packages:
-🔗Sass: https://www.npmjs.com/package/gulp-sass
-🔗Css uglify: https://www.npmjs.com/package/gulp-uglifycss
-
-🎶Music by: Nicolai Heidlas Music - With you
-https://soundcloud.com/nicolai-heidlas
-
-⭐️Tutorial from iEatWebsites. Check out their channel for more great tutorials: https://www.youtube.com/channel/UC0o60y3FtVy3M93JcDFVreA
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/LYbt50dhTko</link>
-            <guid isPermaLink="true">https://dev.tube/video/LYbt50dhTko</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Command Line Crash Course]]></title>
-            <description><![CDATA[Learn the command line, its magic, and how to master this amazing interface.
-
-Talk by Robert Axelsen (@robaxelsen) at the FreeCodeCamp Vienna June 2018 meetup.
-
-Recorded by Pusher.com.
-
-Pusher's channel: https://www.youtube.com/channel/UCoyqucxoFXDFnh3khD0rjUg
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/yz7nYlnXLfE</link>
-            <guid isPermaLink="true">https://dev.tube/video/yz7nYlnXLfE</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Top 10 Applications of Machine Learning | Machine Learning Application Examples | Edureka]]></title>
-            <description><![CDATA[** Machine Learning Training with Python: https://www.edureka.co/python **
-This "Top 10 Applications of Machine Learning" video will give you an idea of how vast the machine learning is and how commonly you are using it in your day to day life. 
-
-Check out our playlist for more videos: http://bit.ly/2taym8X
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-#MachineLearningApplications #MachineLearningUsingPython #MachineLearningTraining
-
-How it Works?
-1. This is a 5 Week Instructor led Online Course,40 hours of assignment and 20 hours of project work
-2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-3. At the end of the training you will be working on a real-time project for which we will provide you a Grade and a Verifiable Certificate!
-
-- - - - - - - - - - - - - - - - -
-About the Course
-
-Edureka’s Machine Learning Course using Python is designed to make you grab the concepts of Machine Learning. The Machine Learning training will provide deep understanding of Machine Learning and its mechanism. As a Data Scientist, you will be learning the importance of Machine Learning and its implementation in python programming language. Furthermore, you will be taught Reinforcement Learning which in turn is an important aspect of Artificial Intelligence. You will be able to automate real life scenarios using Machine Learning Algorithms. Towards the end of the course, we will be discussing various practical use cases of Machine Learning in python programming language to enhance your learning experience.
-
-After completing this Machine Learning Certification Training using Python, you should be able to:
-Gain insight into the 'Roles' played by a Machine Learning Engineer
-Automate data analysis using python
-Describe Machine Learning
-Work with real-time data
-Learn tools and techniques for predictive modeling
-Discuss Machine Learning algorithms and their implementation
-Validate Machine Learning algorithms
-Explain Time Series and it’s related concepts
-Gain expertise to handle business in future, living the present
-
-- - - - - - - - - - - - - - - - - - -
-
-Why learn Machine Learning with Python?
-
-Data Science is a set of techniques that enable the computers to learn the desired behavior from data without explicitly being programmed. It employs techniques and theories drawn from many fields within the broad areas of mathematics, statistics, information science, and computer science. This course exposes you to different classes of machine learning algorithms like supervised, unsupervised and reinforcement algorithms. This course imparts you the necessary skills like data pre-processing, dimensional reduction, model evaluation and also exposes you to different machine learning algorithms like regression, clustering, decision trees, random forest, Naive Bayes and Q-Learning.
-
-For more information, please write back to us at sales@edureka.co
-Call us at US: +18336900808 (Toll Free) or India: +918861301699
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/ahRcGObyEZo</link>
-            <guid isPermaLink="true">https://dev.tube/video/ahRcGObyEZo</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:32 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How Your Systems Keep Running Day After Day - John Allspaw]]></title>
-            <description><![CDATA[How Your Systems Keep Running Day After Day: Resilience Engineering as DevOps
-
-John Allspaw, CTO/Researcher, Adaptive Capacity Labs 
-
-DOES17 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/xA5U85LSk0M</link>
-            <guid isPermaLink="true">https://dev.tube/video/xA5U85LSk0M</guid>
-            <pubDate>Fri, 27 Jul 2018 01:31:15 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Digital Transformation: Thriving Through the Transition - Jeffrey Snover, Microsoft]]></title>
-            <description><![CDATA[Jeffrey Snover, Technical Fellow and Chief Architect for Azure Storage & Cloud Edge, Microsoft
-
-Jeffrey Snover is a Technical Fellow and the Lead Architect for the Enterprise Cloud Group. Snover is the inventor of Windows PowerShell, an object-based distributed automation engine, scripting language, and command line shell. Snover joined Microsoft in 1999 as divisional architect for the Management and Services Division, providing technical direction across Microsoft’s management technologies and products. Snover has over 32 years of industry experience with a focus on management technologies and solutions. He was an architect in the office of the CTO at Tivoli and a development manager at NetView. He has worked also as a consulting engineer and development manager at DEC, where he led various network and systems management projects. Snover held 8 patents prior to joining Microsoft, and has registered 30 patents since. He is a frequent speaker at industry and research conferences on a variety of management and language topics.
-
-DOES18 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/nKyF8fzed0w</link>
-            <guid isPermaLink="true">https://dev.tube/video/nKyF8fzed0w</guid>
-            <pubDate>Fri, 27 Jul 2018 01:31:10 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Denial of Service Mitigation]]></title>
-            <description><![CDATA[In this 2018 GDC session, Valve's Fletcher Dunn presents a quick overview of denial-of-service attacks, standard solutions, and the unique challenges game developers face in preventing them. 
-
-Register for GDC: http://ubm.io/2gk5KTU
-
-Join the GDC mailing list: http://www.gdconf.com/subscribe
-
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/2CQ1sxPppV4</link>
-            <guid isPermaLink="true">https://dev.tube/video/2CQ1sxPppV4</guid>
-            <pubDate>Fri, 27 Jul 2018 01:29:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[C# 8 - Jon Skeet and Mads Torgersen]]></title>
-            <description><![CDATA[Just in case the stream of C# 7 point releases hasn't given you enough to think about, let's have a look at what might be in C# 8.
-Nullable reference types? Shapes? Extension everything? One thing's for sure: this talk won't be pinned down until it's being delivered...]]></description>
-            <link>https://dev.tube/video/gGUYUJmssYM</link>
-            <guid isPermaLink="true">https://dev.tube/video/gGUYUJmssYM</guid>
-            <pubDate>Fri, 27 Jul 2018 01:26:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[2.5 Hour Symposium: Safety Culture, Lean, and DevOps]]></title>
-            <description><![CDATA[Dr. Sidney Dekker, Dr. Steven Spear, Dr. Richard Cook, John Willis and Gene Kim
-
-As aspiring students of both Lean and Safety Culture, John Willis and I (Gene Kim) observed that there seemed to be many commonalities between the two movements of Safety Culture and Lean: the need for psychological safety, a scientific method for improvement daily work, systems thinking, and so forth. However, instead of these movements seeing the other as mutually supportive bodies of knowledge, they seemed to view the other with suspicion or even in diametric opposition.  
-
-Over the last four years, John Willis and I (Gene Kim) have had the privilege of interacting with many of the most influential thinkers from these two movements. In 2017, John and I filmed a half-day panel with Dr. Richard Cook and Dr. Sidney Dekker from the Safety Culture movement, and Dr. Steven Spear from the Lean movement.
-
-As John will tell you, on the one hand it was amazing to see such an intellectual tour de force of argumentation, citing philosophy, physics, management and social sciences, medicine, ethics, economics, and even theology. On the other hand, it was at times a pretty stressful and wild ride, and at one point, John and I wondered whether we should have let this stay buried in the desert, so vehement was the discussion. 
-
-This full 2.5 hour dialogue was amazing to be part of, and listening to it always makes me feel smarter.  Certainly, by the end, it was clear that many principles and values span both Lean and safety culture.  
-
-After this session, we filmed the 30m panel that has already been posted — it was  in front of the entire conference, and is posted here:: https://www.youtube.com/watch?v=CFMJ3V4VakA.  I agree with my friend Charles Betz, who said, “This panel will go down in history as a watershed moment for the digital profession. Notable, in the fullest sense of the word.”]]></description>
-            <link>https://dev.tube/video/gtxtb9z_4FY</link>
-            <guid isPermaLink="true">https://dev.tube/video/gtxtb9z_4FY</guid>
-            <pubDate>Fri, 27 Jul 2018 01:32:16 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[The Agile Transformation at ING]]></title>
-            <description><![CDATA[The CIO of ING presents on the Agile DevOps transformation and their focus on IT talent. http://ITRevolution.com. This is his presentation at the DevOps Enterprise Summit in London 2016.
-
-
-Ron van Kemenade - Nothing Beats Engineering Talent…The AGILE Transformation at ING
-
-
-ING’s Global Chief Information Officer (CIO) Ron van Kemenade overseas over 10,000 IT staff members (including externals.) He’s responsible for all banking technology at ING. ING serves over 34 million customers globally - showing that Agile transformation is scalable to large organizations.
-
-
-Ron opened his presentation with the “We love IT” video highlighting ING’s milestones during the transition to DevOps. He goes on to explain that in order to serve ING’s mission of empowering people to stay a step ahead in life and business, their IT would need to change to serve that strategy.
-
-
-After attending the Google I/O, Ron van Kemenade returned inspired to transform IT at ING. He started with a small mobile development team.
-
-
-“If you want to make clear the impact of your change, you don’t put ten people in a row and all at the same time make a small step. Everybody moves at the same pace forward. So instead of that we asked one team to make a huge step forward. One meter in front of the other nine. Then everybody notices. And then you need to allow other teams to copy their behavior.
-
-
-By focusing on internal talent, ING has become more responsive to customer needs.
-
-
-Ron van Kemenade, CIO, ING Bank
-
-
-Share this video: https://www.youtube.com/watch?v=EKEaMeaiZOw&index=5&list=PLvk9Yh_MWYuzAfazAe6m8uE-_lVvshjX6
-
-Share your experience with DevOps or DOES16 in the comments below.
+In Chinese philosophy, Yin and Yang represent seemingly opposing, yet complementary, elements that  must work in harmony to maintain balance and effectiveness. In today’s software economy, DevOps requires traditionally conflicting teams (Dev and Ops) to work in harmony to maintain stability while delivering continuous change. But delving deeper, we discover other significant DevOps dualities that must interact in harmony to form an effective dynamic system. This session will explore these DevOps dualities and elements and highlight ways organizations can empower DevOps teams by providing the necessary mindset, culture and technologies they need to flourish and accelerate the rate of software innovation they deliver to the world.
 
 DOES16 London
 DevOps Enterprise Summit
 https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/EKEaMeaiZOw</link>
-            <guid isPermaLink="true">https://dev.tube/video/EKEaMeaiZOw</guid>
-            <pubDate>Fri, 27 Jul 2018 01:32:20 GMT</pubDate>
+            <link>https://dev.tube/video/1AfhRPLoQPc</link>
+            <guid isPermaLink="true">https://dev.tube/video/1AfhRPLoQPc</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The Game Outcomes Project: How Teamwork, Leadership and Culture Drive Results]]></title>
-            <description><![CDATA[In this 2016 GDC session, Mothership Entertainment's Paul Tozour gives a presentation of the Games Outcome Project, highlighting important data about the nature of game development workplaces. 
+            <title><![CDATA[A Practical Discussion on Becoming Agile - IBM & Lloyds Banking Group]]></title>
+            <description><![CDATA[Innovate, Learn and Disrupt - A Practical Discussion on Becoming Agile
 
-Register for GDC: http://ubm.io/2gk5KTU
+Sanjeev Sharma, CTO, DevOps Technical Sales and Adoption, IBM Distinguished Engineer, IBM
+Mark Howell, Digital DevOps Lead, Lloyds Banking Group
 
-Join the GDC mailing list: http://www.gdconf.com/subscribe
+Description:
+Digital disruptors are forcing us to rethink the flow of value and how businesses operate. Today, success hinges on an ability to learn and rapidly evolve offerings based on feedback from clients and prospects alike. To achieve this dramatic level of agility, today’s businesses are adopting DevOps to collapse barriers between business leaders, developers and customers, enabling them to rapidly build and market new products, experiment with disruptive innovations, and continuously assess user feedback to align those innovations with expectations and demand. DevOps leads for Lloyds Banking Group, and Monitise PLC, in discussion with Sanjeev Sharma, IBM, will unpack what the “new normal” is for disruptive software delivery. Learn how to assess your own organization’s readiness for DevOps, and to identify the next steps to adopting its practices.
 
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/Mrr4lNF7-OU</link>
-            <guid isPermaLink="true">https://dev.tube/video/Mrr4lNF7-OU</guid>
-            <pubDate>Fri, 27 Jul 2018 01:29:18 GMT</pubDate>
+DOES16 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/45D3mkuzP8s</link>
+            <guid isPermaLink="true">https://dev.tube/video/45D3mkuzP8s</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Making Work Visible: How to Unmask Capacity Killing WIP - Dominica DeGrandis]]></title>
-            <description><![CDATA[Making Work Visible: How to Unmask Capacity Killing WIP
+            <title><![CDATA[Shifting Sand: How a Large DoD Project Moved Toward DevOps]]></title>
+            <description><![CDATA[Shifting Sand: How a Large DoD Project Moved Toward DevOps
 
-Dominica DeGrandis, Director, Learning & Development, Leankit
+Jeffery Payne, CEO, Coveros, Inc.
+Dan Gahafer, Program Manager (former), DISA forge.mil Program, DISA
 
-Are you scrambling to meet deadlines only to find more requests piling up in your inbox? Hidden WIP is a major contributor to clogged value streams and overloaded employees, burdened with too many meetings and frustrating work routines. Making work visible highlights the problems leading to low productivity across the organization. In this talk, Dominica shares how to unmask the things that are killing your team’s capacity and their ability to optimize workflow.
+DevOps within Federal Agencies can be difficult to achieve when disparate, competing companies are involved in various aspects of a large-scale project. This case study discusses how one such program was successfully moved toward DevOps using value stream analysis and logic. Lessons learned and pitfalls will be discussed as well as metrics used to measure successes. Topics tackled will not only include a discussion of how CI/CD was implemented but how security and compliance was integrated into the process.
+
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/6l7zeU1Le0M</link>
+            <guid isPermaLink="true">https://dev.tube/video/6l7zeU1Le0M</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Mainframe DevOps Team Saves the Day at Walmart]]></title>
+            <description><![CDATA[The Mainframe DevOps Team Saves the Day at Walmart
+
+Rosalind Radcliffe, Distinguished Engineer, Chief Architect for DevOps, IBM
+Rich Jackson, Principal Systems Engineer, Walmart Technology
+
+This session will discuss the success story from Walmart on how they built a set of services on the mainframe to provide capabilities at a large scale for their distributed teams, as well as discuss the transformation required for mainframe teams to achieve this success.
+
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/7Tcv9Jj6QmM</link>
+            <guid isPermaLink="true">https://dev.tube/video/7Tcv9Jj6QmM</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Top Technical Talent Programs - Adrian Cockcroft]]></title>
+            <description><![CDATA[Adrian Cockcroft, Formerly with Battery Ventures, Technology Fellow
+
+Adrian recently left Battery Ventures and joined Amazon Web Services as VP Cloud Architecture Strategy, but is not representing AWS in this talk.
+
+In the journey to DevOps many organizations complain that they don't have the right technical talent, and it;s clear that "getting out of the way of innovation" is necessary but not sufficient to hire and retain key people. Compensation and career path are also big factors.
+Many large organizations have some kind of Distinguished Engineer or Technical Fellow program, they take many forms, but their primary purpose is to provide a career path to help leverage and retain top technical talent as individual contributors. In this talk we will compare and contrast several example programs, and attempt to answer questions such as, "Should we do this too?", "What unintended consequences might occur?", "How many people should be in the program?", "How does this relate to DevOps?". In my own career I have been a Distinguished Engineer at Sun Microsystems and eBay, and a Technology Fellow at Battery Ventures. I've also reached out to people in similar positions elsewhere to gather more examples.
+
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/CSL-vNQW3SM</link>
+            <guid isPermaLink="true">https://dev.tube/video/CSL-vNQW3SM</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lessons from 50 Enterprise DevOps Transformations - Sendachi]]></title>
+            <description><![CDATA[Mr. Benjamin Wootton, Co-Founder, Sendachi
+
+Over the last few years, we have worked on over 50 DevOps transformations, in many instances with large, global, traditional enterprise organisations. 
+
+During this time, we have gained hard won experience in how to be successful in modernising organisations to DevOps—changing working practices, re-structuring organisations, and re-platforming legacy technology stacks to benefit from infrastructure as code and other DevOps practices. 
+
+In this talk we will talk about our experiences and hard won lessons of how to be successful with a DevOps transformation, with many real world case studies referenced.
+
+DOES16 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/JdLhnyoNHGk</link>
+            <guid isPermaLink="true">https://dev.tube/video/JdLhnyoNHGk</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Unilever DevOps Journey So Far: Finding the Speed to Innovate]]></title>
+            <description><![CDATA[The Unilever Journey So Far: Finding the Speed to Innovate with DevOps
+
+Kjersten Moody, VP Information & Analytics, Unilever
+Sarah Chong, DevOps Evangelist, Unilever
+
+Organisations are quickly discovering that they can test and launch digital products, tools and services faster, and at a lower cost by integrating their development and IT operations teams. This process has become a competitive advantage for many and Unilever has been working on capturing its full value potential. 
+
+In this short keynote speech Kjersten Moody, VP Information & Analytics and Sarah Chong, DevOps Evangelist will discuss the need to emphasize the sharing of information and processes across product-development and IT operations groups to enable the frequent release of small internal updates, alongside appropriate tooling and metrics for success. They will talk about how the journey started at Unilever, the change in culture required to have impact, success stories and what next with DevOps.
+
+DOES16 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/MbAZkkOwXl4</link>
+            <guid isPermaLink="true">https://dev.tube/video/MbAZkkOwXl4</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DevOps at Ordnance Survey: Turning the Dinosaur Into a Unicorn - Simon Parkes]]></title>
+            <description><![CDATA[DevOps at Ordnance Survey – Turning the Dinosaur Into a Unicorn
+
+Simon Parkes, Enterprise Infrastructure Architect, Ordnance Survey
+
+Description:
+This talk will demonstrate how a government organisation with 225 of history, specialist software systems comprised of monolithic COTS applications, and a large number of manual update and maintenance processes, adopted DevOps across the enterprise to create agility, fast delivery cycles and huge efficiencies with project delivery cycles.
+
+DOES16 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/_fQJvo5Xy10</link>
+            <guid isPermaLink="true">https://dev.tube/video/_fQJvo5Xy10</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Continuous Delivery in a Primeval Environment - Thomas Cook]]></title>
+            <description><![CDATA[Continuous Delivery in a Primeval Environment
+
+Lee Sexton, Head of DevOps, Thomas Cook
+
+Working the minds and souls of monolithic business, bringing new ways of working to a multitude of cultures and breaking the silos inside a silo.
+
+DOES16 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/inyXz8DA_Y8</link>
+            <guid isPermaLink="true">https://dev.tube/video/inyXz8DA_Y8</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Commonalities of Agile & DevOps Transformation for Conservative Organizations]]></title>
+            <description><![CDATA[Commonalities of Agile and DevOps Transformation for Large Conservative Organizations: Horses with dreams of becoming Unicorns
+
+Mrs. Robin Yeman, Agile / DevOps Coach, Lockheed Martin
+Suzette Johnson, Northrop Grumman Fellow Agile / DevOps Coach, Northrop Grumman
+
+In this presentation we look at the commonalities that we have experienced in our DevOps journey. While working for two large companies and helping teams implement a DevOps mindset we discovered similar approaches and techniques. From growing the team and the skills needed for this transition to looking at the larger organization as system in need of streamlining processes, we will share practices that have worked well for these teams and how to begin building a DevOps culture.
+
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/m5O9V6yz5FI</link>
+            <guid isPermaLink="true">https://dev.tube/video/m5O9V6yz5FI</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Communication Between Tribes: A Story of Silos, DevOps and Government]]></title>
+            <description><![CDATA[Communication Between Tribes: A Story of Silos, DevOps and Government
+
+Gareth Rushgrove, Senior Software Engineer, Puppet; previously UK GDS
+
+In any large organisation silos exist, protective of their domain and particular specialism. DevOps conversations often turn to how to break down those silos, to encourage multidisciplinary working and move from thinking about the requirements of the IT department or the security group to thinking about the needs of end users.
+
+This talk, based on my experience working across the UK Government as an early member of the Government Digital Service, will discuss:
+
+-How being able to speak the language of a specific discipline, be it information security or service management or software development, is the first step to breaking down barriers
+-The importance of understanding stereotypes (including of yourself) when it comes to communicating across silos
+-The problems caused when policy documentation becomes separated from the owner of that policy
+-The usefulness of software as a shared interface to a shared problem
+
+It’s often too easy when talking about silos to believe the answer is for one side to give in, for DevOps to succeed that you have to allow the IT group and the software group to fight until only one remains.
+
+This talk will hopefully talk about a better way forward.
+
+DOES16 London
+DevOps Enterprise Summit
+https://events.itrevolution.com/eur/]]></description>
+            <link>https://dev.tube/video/sK4Z618ZDQ4</link>
+            <guid isPermaLink="true">https://dev.tube/video/sK4Z618ZDQ4</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Starbucks Technology Transformation - Courtney Kissler]]></title>
+            <description><![CDATA[Starbucks Technology Transformation
+
+Courtney Kissler, Vice President of Retail Technology, Starbucks
+
+Courtney is the Vice President of Retail Technology at Starbucks. She’s accountable for the global POS and retail store technology experiences. Prior to Starbucks, Courtney spent 14 years at Nordstrom with her last role being the Vice President of E-Commerce and Store technologies where she drove a technological transformation essential for outpacing the demands of today’s Omnichannel consumers. She was accountable for program management, delivery, and support for all customer facing technologies including in-store, Web, and mobile touch points. Courtney joined Nordstrom as a security engineer in 2002 and held a variety of leadership roles across the technology organization. Courtney is a graduate of Eastern Washington University with a B.S. in Computer Information Systems and worked at two startups, CyberSafe and WorldStream Communications, prior to joining Nordstrom.
+
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/uImY8iWYWu8</link>
+            <guid isPermaLink="true">https://dev.tube/video/uImY8iWYWu8</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DevOps Transformation, Driving Culture Change - HPE]]></title>
+            <description><![CDATA[DevOps Transformation, Driving Culture Change
+
+Ruly Weisbach, Director of R&D, HPE
 
 DOES17 London
 DevOps Enterprise Summit
 https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/KR7Y8IUgyyA</link>
-            <guid isPermaLink="true">https://dev.tube/video/KR7Y8IUgyyA</guid>
-            <pubDate>Fri, 27 Jul 2018 01:32:25 GMT</pubDate>
+            <link>https://dev.tube/video/3-_gx3KLlIo</link>
+            <guid isPermaLink="true">https://dev.tube/video/3-_gx3KLlIo</guid>
+            <pubDate>Sat, 28 Jul 2018 01:31:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Setting up MailChimp on WordPress with plugins (plus creating a MailChimp landing page)]]></title>
-            <description><![CDATA[Get tips for setting up MailChimp on Wordpress and creating a MailChimp landing page. 
+            <title><![CDATA[The Inside-Out of Creating a DevOps Movement - Bluware Inc]]></title>
+            <description><![CDATA[The Inside-Out of Creating a DevOps Movement
 
-Learn more about this topic in the accompanying article: https://medium.freecodecamp.org/how-to-market-your-new-project-incorporate-design-create-a-landing-page-and-get-your-users-97812fd9dd4d
+Eddie Garcia, DevOps Practice Manager, Bluware Inc
 
-Video from Jane Sorensen (@janerette).
+You don't always have the luxury of a top down DevOps initiative, what is a non-conforming DevOps minded individual to do? Become a DevOps guerrilla and start a grassroots DevOps movement. The presentation will center around two cases Microsoft:Mac Office and a major Oil and Gas R&D department. In both of these situations there was resistance and non-technical obstacles to overcome and in the end change was brought from the bottom up. What is offered are techniques to use to build consensus and momentum for your very own grassroots DevOps movement.
 
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/BK9iHnkr9nM</link>
-            <guid isPermaLink="true">https://dev.tube/video/BK9iHnkr9nM</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:18 GMT</pubDate>
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/1GcFu5xzscc</link>
+            <guid isPermaLink="true">https://dev.tube/video/1GcFu5xzscc</guid>
+            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[YOW! Lambda Jam 2018 - Ryan Trinkle - Full-Stack Haskell, from Prototype to Production]]></title>
-            <description><![CDATA[Three years ago, I quit my job to bet everything on the proposition that Haskell could excel not just for specialized, high-assurance software, but for the kinds of software that millions of engineers work on every day. I had previously built backends with Haskell, with the wonderful experience of code that works reliably, a team that doesn't step on each others' toes, and an ease of refactoring that let us keep the codebase clean without risking regressions. But now, GHCJS and FRP had finally become reliable enough to trust in the real world. It was a game changer: Haskell could now build world-class graphical user interfaces, too, and deploy them as single page web apps — in theory.
-
-In practice, there were many obstacles along the way. However, I found that even with the need to blaze new trails from time to time, our overall pace was far faster than anything I had seen in the imperative tech stacks I'd worked with before. Strong types and pure values decreased bug counts and made code much more readable. Some former backend developers who had scrupulously avoided frontend development told me that they now enjoyed working on the frontend, too.
-
-Since then, I've worked with the community to continue building infrastructure to expand the areas where we can use Haskell to get real work done. Enabling mobile development required bug fixes to GHC, a rearchitected approach to cross-compilation in Nixpkgs, and bindings to native APIs. To scale up to larger projects, we've improved existing tools and created new tools that make developer workflows simpler, faster, and more discoverable. And to make Haskell app development more accessible to beginners and professionals without Haskell experience, we've made more and more functionality available out of the box.
-
-In this talk, I'll show you the tools that are available today and the challenges that lie ahead. I hope you'll come away with a broadened understanding of how Haskell can be applied in your own professional projects — and how the theory of functional programming can be a potent practical tool.
-
-Ryan Trinkle is a founding partner of Obsidian Systems, a software engineering consultancy that uses Haskell, Nix, and other functional tools to deliver better code faster and more predictably.  In 2015, he created Reflex, a Haskell-based functional reactive programming engine that now supports building desktop, web, and native mobile applications from a single codebase.  He has been a board member of Haskell.org since 2014 and was a founding member of the New York Haskell Users Group in 2012.  He holds degrees in law (J.D., Harvard '09) and computer science and computer systems engineering (B.S., Rensselaer Polytechnic Institute '05).
-
-For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
-            <link>https://dev.tube/video/riJuXDIUMA0</link>
-            <guid isPermaLink="true">https://dev.tube/video/riJuXDIUMA0</guid>
-            <pubDate>Fri, 27 Jul 2018 01:28:30 GMT</pubDate>
+            <title><![CDATA[Tactics for Influencing Executives and Middle Management - Leading Change]]></title>
+            <description><![CDATA[DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/49J__6GLy38</link>
+            <guid isPermaLink="true">https://dev.tube/video/49J__6GLy38</guid>
+            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Simon Peyton Jones - Linear Haskell: practical linearity in a higher-order polymorphic language]]></title>
-            <link>https://dev.tube/video/t0mhvd3-60Y</link>
-            <guid isPermaLink="true">https://dev.tube/video/t0mhvd3-60Y</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:35 GMT</pubDate>
+            <title><![CDATA[Compliance Help for the Agile Enterprise - Adobe]]></title>
+            <description><![CDATA[Compliance Help for the Agile Enterprise
+
+David Owczarek, Sr. Manager, Cloud Technology, Adobe Systems Incorporated
+
+Implementing controls for SOCII, PCI-DSS, HIPPA and other compliance standards is complex, detail-oriented work. Doing that in an enterprise with agile teams makes it even harder. This talk offers several conceptual frameworks for implementing agile controls. By looking at each control from four different perspectives: code, process, infrastructure, and evidence, concrete requirements for the solution rapidly emerge. Controls are also grouped by their frequency – continuous or periodic. Periodic controls are used to examine the consumption of people’s time in a 12 month, forward-looking view. Finally, three hard truths about compliance work provide an emotional framework.
+
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/5Fqo7MLSpnI</link>
+            <guid isPermaLink="true">https://dev.tube/video/5Fqo7MLSpnI</guid>
+            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Cybersecurity Interview Questions and Answers | CyberSecurity Interview Tips | Edureka]]></title>
-            <description><![CDATA[** Cybersecurity Training: https://www.edureka.co/cybersecurity-certification-training **
-This Edureka video on "Cybersecurity Interview Questions and Answers" consists of 50 questions from multiple cybersecurity domains which will help you in preparation of your interviews. Watch it now!!
+            <title><![CDATA[DevOps at New Zealand Ministry of Social Development - David Habershon]]></title>
+            <description><![CDATA[DevOps at New Zealand Ministry of Social Development
 
-Subscribe to our channel to get video updates. Hit the subscribe button above.
+David Habershon, Chief Information Officer at Ministry of Social Development, New Zealand
 
-About Edureka Cyber Security Training
+This is an experience story about a government organization learning to run very fast with a new DevOps program. It's a very large organization dealing with human services. The MSD has the third largest IT department in New Zealand.
 
-Cybersecurity is the combination of processes, practices, and technologies designed to protect networks, computers, programs, data and information from attack, damage or unauthorized access.
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/7B4auX_xME0</link>
+            <guid isPermaLink="true">https://dev.tube/video/7B4auX_xME0</guid>
+            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Continuous Monitoring in DevOps for Large Health Care - UHG/Optum]]></title>
+            <description><![CDATA[Continuous Monitoring in DevOps for Large Health Care
 
-Edureka’s Cybersecurity Certification Course will help you in learning about the basic concepts of Cybersecurity along with the methodologies that must be practiced ensuring the information security of an organization. Starting from the Ground level Security Essentials, this course will lead you through Cryptography, Computer Networks & Security, Application Security, Data & Endpoint Security, idAM (Identity & Access Management), Cloud Security, Cyber-Attacks and various security practices for businesses.
+Professor Phil Lerner, Distinguished Engineer, UHG/Optum
 
-------------------------------------------------
+Security has become a stakeholder in the new DevOps as a rugged partner to the teams. As we evaluate new tools, their interconnectivity, isolation, sandbox and enablement for the DevOps community we have developed a conceptual security architecture that would allow DevOps to move at the rapid delivery pace they are used to while security will become a transparent set of controls and part of the fabric or control plane of the tools suites we choose to enable to transform the DevOps experience. This presentation will cover those advanced technical topics with a strong focus on cyber security in DevOps.
 
-Why Learn Cyber Security?
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/9zsXQqIPoVE</link>
+            <guid isPermaLink="true">https://dev.tube/video/9zsXQqIPoVE</guid>
+            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[When IT Closes the Deal - Equifax]]></title>
+            <description><![CDATA[When IT Closes the Deal
 
-Cybersecurity is the gathering of advances that procedures and practices expected to ensure systems, PCs, projects and information from assault, harm or unapproved get to. In a processing setting, security incorporates both cybersecurity and physical security, it is imperative since cyberattackers can without much of a stretch take and obliterate the profoundly grouped data of governments, defense offices and banks for which the results are huge so it is essential to have an appropriate innovation which an avoid digital wrongdoings.
+Brandon Holcomb, VP Technology, Global Platforms at Equifax, Equifax Inc.
+Andy Cooper, SVP, Technology, Global Platform Services, Equifax Inc.
 
----------------------------------------------------
+Description:
+Equifax powers the financial future of individuals and organizations around the world. Using the combined strength of unique trusted data, technology and innovative analytics, Equifax has grown from a consumer credit company into a leading provider of insights and knowledge that helps its customers make informed decisions.
 
-Objectives of Edureka Cyber Security Course
+Delivering on that trust requires both business and technical operations excellence. Faced with the growing challenges of the modern marketplace, the Equifax IT organization embarked on a top-to-bottom cultural and technical transformation. This presentation will outline how the Equifax IT team has taken steps towards transforming itself into a nimble, efficient and internally-capable organization. Topics will include key management lessons learned, budget realignment, creating partnerships across organizational boundaries and strategic projects to focus the organization’s transformation efforts. The early results? IT is no longer viewed as a liability to the business, instead IT is now an asset – a strategic partner that is actively helping to close deals.
 
-This course is designed to cover a holistic & a wide variety of foundational topics of the cybersecurity domain which will be helpful to lead freshers as well as IT professional having 1 to 2 years of experience, into the next level of choice such as ethical hacking/ audit & compliance / GRC/ Security Architecture and so on
-This course focuses mainly on the basics concepts of Cyber Security
-In this course, we are going to deal with Ground level security essentials cryptography, computer networks & security, application security, data & endpoint security, idAM (identity & access management), cloud security, cyber-attacks and various security practices for businesses
-This course will be your first step towards learning Cyber Security
---------------------------------------
+DOES16 San Francisco
+DevOps Enterprise Summit
+https://events.itrevolution.com/us/]]></description>
+            <link>https://dev.tube/video/PdJkny2HVVQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/PdJkny2HVVQ</guid>
+            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Adopting DevOps @ Scale: Lessons Learned at NBCUniversal, Kaiser Permanente, GitHub and IBM]]></title>
+            <description><![CDATA[Adopting DevOps @ Scale: Lessons Learned at NBCUniversal, Kaiser Permanente, GitHub and IBM
 
-Who Should go for this Training?
+Sanjeev Sharma, CTO, DevOps Technical Evangelist, IBM Distinguished Engineer, IBM
+John Comas, Manager of Platform DevOps, NBCUniversal
+Raghunath Raman, Director, Digital APIs & Integration Delivery, Kaiser Permanente
+Aziz Shamin, Solutions Engineering Manager, GitHub
 
-Anyone having the zeal to learn innovative technologies can take up this course. Especially, students and professionals aspiring to make a career in the Cybersecurity technology. However, Cybersecurity Certification Course is best suited for the below-mentioned profiles:-
-Networking Professionals
-Linux Administrators
------------------------------------------------
+IBM Sponsor Track talk: 
+DevOps is evolving into a major enabler of business innovation. Done well it can drive digital transformation at an enterprise level. But crossing the chasm from successful DevOps pilots with two-pizza teams to enterprise adoption remains a challenge. Join DevOps for Dummies author Sanjeev Sharma as he hosts a discussion with DevOps pros from enterprises that are successfully achieving scale as they unpack the "new normal" for disruptive software delivery. NBCUniversal is accelerating creativity and engineering effectiveness while improving collaboration and connectivity with increased security. Kaiser Permanente is managing the cultural, process and technology challenges of multi-speed IT. GitHub builds software that millions of developers and thousands of businesses use to collaborate on code and build better software, faster. And IBM has embarked on a DevOps transformation that has engaged over 10,000 developers already -- and in the process become one of the world's largest users of GitHub Enterprise. You'll learn how to assess your own organization’s readiness for scaling DevOps, and to identify next steps. Please join us!
 
- Please write back to us at sales@edureka.co or Call us at US: +18336900808 (Toll Free) or India: +918861301699
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/otWst36CKyM</link>
-            <guid isPermaLink="true">https://dev.tube/video/otWst36CKyM</guid>
-            <pubDate>Fri, 27 Jul 2018 01:30:32 GMT</pubDate>
+www.itrevolution.net
+DevOps Enterprise Summit San Francisco 2016]]></description>
+            <link>https://dev.tube/video/TmAY9iqKKnM</link>
+            <guid isPermaLink="true">https://dev.tube/video/TmAY9iqKKnM</guid>
+            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
         </item>
     </channel>
 </rss>
