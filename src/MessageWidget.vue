@@ -72,7 +72,7 @@ export default {
 
         let textForMatching = `${this.videoId}/${this.channel}/@${this.speakerTwitter}/${this.tags.map(tag => '#' + tag + '#')}`
 
-        axios.get(`https://raw.githubusercontent.com/watch-devtube/ads/master/ads.json?r=${Math.random()}`
+        axios.get(`//raw.githubusercontent.com/watch-devtube/messages/master/messages.json?r=${Math.random()}`
         ).then(response => {
           this.ad = response.data.reverse().find(it => new RegExp(it.pattern, 'i').test(textForMatching))
         }).catch(error => {
