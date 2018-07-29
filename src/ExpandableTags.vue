@@ -7,8 +7,7 @@
           .control(v-for="item in items")
             .tags.has-addons
               a.tag.is-dark.is-capitalized(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
-              a.is-black.tag(v-if="item.videoCount" @click="navigate(item)") {{item.videoCount}}  
-              a.is-black.tag(v-else @click="navigate(item)") 
+              a.is-black.tag(@click="navigate(item)") 
                 | {{item.videos.total}}  
                 span(v-if="item.videos.new > 0") &nbsp; +{{item.videos.new}}
       .modal-close.is-large(aria-label="close" @click="collapsed = !collapsed")
@@ -21,8 +20,7 @@
             |  {{title}}
         .tags.has-addons.is-marginless(v-for="item in items.slice(0, limit)")
           a.tag.is-white.is-capitalized(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
-          a.tag(v-if="item.videoCount" @click="navigate(item)") {{item.videoCount}}
-          a.tag(v-else @click="navigate(item)") 
+          a.tag(@click="navigate(item)") 
             | {{item.videos.total}}
             span(v-if="item.videos.new > 0") &nbsp; +{{item.videos.new}} new
         .tags.has-addons.is-marginless

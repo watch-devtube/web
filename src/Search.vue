@@ -35,7 +35,7 @@
                       span {{slot.item.name}}
 
                 ExpandableTags(ref="channelPicker" icon="fab fa-youtube" title="Channels" :items="channels" :limit="10" :route="routeToChannel")
-                    template(slot-scope="slot") {{slot.item.title}}
+                    template(slot-scope="slot") {{slot.item.title | truncate(25)}}
               .column
                 .columns
                   .column
