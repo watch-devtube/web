@@ -109,6 +109,10 @@
             "name": "Alex Kotliarskyi"
         },
         {
+            "twitter": "stilkov",
+            "name": "Stefan Tilkov"
+        },
+        {
             "twitter": "tastapod",
             "name": "Dan North"
         },
@@ -121,6 +125,10 @@
             "name": "Wes Bos"
         },
         {
+            "twitter": "gojkoadzic",
+            "name": "Gojko Adzic"
+        },
+        {
             "twitter": "trisha_gee",
             "name": "Trisha Gee"
         },
@@ -131,6 +139,14 @@
         {
             "twitter": "krambertech",
             "name": "Kateryna Porshnieva"
+        },
+        {
+            "twitter": "troyhunt",
+            "name": "Troy Hunt"
+        },
+        {
+            "twitter": "adrianco",
+            "name": "Adrian Cockcroft"
         },
         {
             "twitter": "stolinski",
@@ -175,6 +191,10 @@
         {
             "twitter": "bridgetkromhout",
             "name": "Bridget Kromhout"
+        },
+        {
+            "twitter": "dylanbeattie",
+            "name": "Dylan Beattie"
         },
         {
             "twitter": "roman01la",

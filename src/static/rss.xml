@@ -4,329 +4,248 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 28 Jul 2018 04:28:15 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 29 Jul 2018 04:33:20 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[The Yin and Yang of DevOps Transformation - Electric Cloud]]></title>
-            <description><![CDATA[The Yin and Yang of DevOps Transformation
-
-Steve Brodie, CEO, Electric Cloud
-
-In Chinese philosophy, Yin and Yang represent seemingly opposing, yet complementary, elements that  must work in harmony to maintain balance and effectiveness. In today’s software economy, DevOps requires traditionally conflicting teams (Dev and Ops) to work in harmony to maintain stability while delivering continuous change. But delving deeper, we discover other significant DevOps dualities that must interact in harmony to form an effective dynamic system. This session will explore these DevOps dualities and elements and highlight ways organizations can empower DevOps teams by providing the necessary mindset, culture and technologies they need to flourish and accelerate the rate of software innovation they deliver to the world.
-
-DOES16 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/1AfhRPLoQPc</link>
-            <guid isPermaLink="true">https://dev.tube/video/1AfhRPLoQPc</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+            <title><![CDATA[microPython for ESP32]]></title>
+            <description><![CDATA[Nick Moore
+http://linux.conf.au/schedule/presentation/202/
+Python is small. Micro even.]]></description>
+            <link>https://dev.tube/video/-MrqCmq3Z5k</link>
+            <guid isPermaLink="true">https://dev.tube/video/-MrqCmq3Z5k</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[A Practical Discussion on Becoming Agile - IBM & Lloyds Banking Group]]></title>
-            <description><![CDATA[Innovate, Learn and Disrupt - A Practical Discussion on Becoming Agile
+            <title><![CDATA[Running production workloads in a programmable infrastructure]]></title>
+            <description><![CDATA[Alejandro Tesch
+http://linux.conf.au/schedule/presentation/165/
+Infrastructure as Code is a hot topic today, however several IT managers and System Administrators often fail to see the benefits that it can provide to their day to day operations.
 
-Sanjeev Sharma, CTO, DevOps Technical Sales and Adoption, IBM Distinguished Engineer, IBM
-Mark Howell, Digital DevOps Lead, Lloyds Banking Group
+In this mini-conf session we will go in depth into two use cases that can leverage on OpenStack to address common operation challenges.
 
-Description:
-Digital disruptors are forcing us to rethink the flow of value and how businesses operate. Today, success hinges on an ability to learn and rapidly evolve offerings based on feedback from clients and prospects alike. To achieve this dramatic level of agility, today’s businesses are adopting DevOps to collapse barriers between business leaders, developers and customers, enabling them to rapidly build and market new products, experiment with disruptive innovations, and continuously assess user feedback to align those innovations with expectations and demand. DevOps leads for Lloyds Banking Group, and Monitise PLC, in discussion with Sanjeev Sharma, IBM, will unpack what the “new normal” is for disruptive software delivery. Learn how to assess your own organization’s readiness for DevOps, and to identify the next steps to adopting its practices.
+1) We will demo how to leverage HEAT and Ansible to automate the deployment of a two-tier load balanced environment within seconds that will host your enterprise applications.  We will showcase as well the autoscaling capabilities by overloading our web farm until we hit the CPU threshold that will spawn another tomcat server.
 
-DOES16 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/45D3mkuzP8s</link>
-            <guid isPermaLink="true">https://dev.tube/video/45D3mkuzP8s</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+2) "Data Cloning as a Service" will demonstrate how to automate the cloning of a 24 x 7 Mission critical Oracle database without impacting the end users.
+
+Ansible is used to place an enterprise database in backup mode, take a snapshot of the volume containing the Database, clone the cinder volume and get it transferred to a development tenant who will automatically start a clone of the database for testing and QA.]]></description>
+            <link>https://dev.tube/video/2Gu_rPxuQyQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/2Gu_rPxuQyQ</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Shifting Sand: How a Large DoD Project Moved Toward DevOps]]></title>
-            <description><![CDATA[Shifting Sand: How a Large DoD Project Moved Toward DevOps
+            <title><![CDATA[Lightweight inventory management with Pallet Jack]]></title>
+            <description><![CDATA[Karl-Johan Karlsson
+http://linux.conf.au/schedule/presentation/114/
+Inventory management for systems administrators is crucial for day-to-day operations. When installing a new machine, its MAC address needs to be registered with the DHCP server. While it runs, the configuration management system needs to know what role it has so it can install the correct software. When it breaks, you need to know which rack and switch port to find it in, its serial number and when its service contract expires.
 
-Jeffery Payne, CEO, Coveros, Inc.
-Dan Gahafer, Program Manager (former), DISA forge.mil Program, DISA
+We present [Pallet Jack](https://github.com/saab-simc-admin/palletjack), a systems administrator-friendly inventory database.
 
-DevOps within Federal Agencies can be difficult to achieve when disparate, competing companies are involved in various aspects of a large-scale project. This case study discusses how one such program was successfully moved toward DevOps using value stream analysis and logic. Lessons learned and pitfalls will be discussed as well as metrics used to measure successes. Topics tackled will not only include a discussion of how CI/CD was implemented but how security and compliance was integrated into the process.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/6l7zeU1Le0M</link>
-            <guid isPermaLink="true">https://dev.tube/video/6l7zeU1Le0M</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+Its back-end store consists of a directory tree with YAML fragments, which means you can insert, version and extract information using standard text processing tools. Inheritance and automatic text processing eliminates the need to store duplicated information. Finally, a simple but powerful Ruby library helps with generating configuration files from the database.]]></description>
+            <link>https://dev.tube/video/4oq4ursOnlw</link>
+            <guid isPermaLink="true">https://dev.tube/video/4oq4ursOnlw</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The Mainframe DevOps Team Saves the Day at Walmart]]></title>
-            <description><![CDATA[The Mainframe DevOps Team Saves the Day at Walmart
+            <title><![CDATA[The Sound of Silencing]]></title>
+            <description><![CDATA[Julien Goodwin
+http://linux.conf.au/schedule/presentation/164/
+Having automatic monitoring alerting us when there's problems with our systems
+is a core part of ensuring reliable systems, however this can lead to alert
+fatigue.
 
-Rosalind Radcliffe, Distinguished Engineer, Chief Architect for DevOps, IBM
-Rich Jackson, Principal Systems Engineer, Walmart Technology
-
-This session will discuss the success story from Walmart on how they built a set of services on the mainframe to provide capabilities at a large scale for their distributed teams, as well as discuss the transformation required for mainframe teams to achieve this success.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/7Tcv9Jj6QmM</link>
-            <guid isPermaLink="true">https://dev.tube/video/7Tcv9Jj6QmM</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+This talk will cover using silencing, grouping and ihibition to reduce alert
+load, and improve the signal to noise ratio of remaining alerts.]]></description>
+            <link>https://dev.tube/video/9n2K0PnBKys</link>
+            <guid isPermaLink="true">https://dev.tube/video/9n2K0PnBKys</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Top Technical Talent Programs - Adrian Cockcroft]]></title>
-            <description><![CDATA[Adrian Cockcroft, Formerly with Battery Ventures, Technology Fellow
-
-Adrian recently left Battery Ventures and joined Amazon Web Services as VP Cloud Architecture Strategy, but is not representing AWS in this talk.
-
-In the journey to DevOps many organizations complain that they don't have the right technical talent, and it;s clear that "getting out of the way of innovation" is necessary but not sufficient to hire and retain key people. Compensation and career path are also big factors.
-Many large organizations have some kind of Distinguished Engineer or Technical Fellow program, they take many forms, but their primary purpose is to provide a career path to help leverage and retain top technical talent as individual contributors. In this talk we will compare and contrast several example programs, and attempt to answer questions such as, "Should we do this too?", "What unintended consequences might occur?", "How many people should be in the program?", "How does this relate to DevOps?". In my own career I have been a Distinguished Engineer at Sun Microsystems and eBay, and a Technology Fellow at Battery Ventures. I've also reached out to people in similar positions elsewhere to gather more examples.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/CSL-vNQW3SM</link>
-            <guid isPermaLink="true">https://dev.tube/video/CSL-vNQW3SM</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+            <title><![CDATA[QA in the Open]]></title>
+            <description><![CDATA[Matthew Treinish
+http://linux.conf.au/schedule/presentation/156/
+One common misconception about a lot of Open Source projects is that the quality is variable and/or is of a secondary concern. This is supported to a certain degree by a lot of projects which do minimal testing upstream and rely on downstream consumers to do more thorough testing. But, there is no reason that an open project can not also do QA in the open as part of the community. While the term QA will likely evoke a plethora of negative emotions from anyone who has worked in a corporate development environment, there can be real benefits to having a dedicated QA effort on an open source project. It enables transparency in how testing is done, lets anyone contribute and collaborate, and can signal to users the stability of a project. This talk will use OpenStack as an case study to explore how an open source project can do QA in an open manner and the potential benefits it can provide.]]></description>
+            <link>https://dev.tube/video/ARV1OuBYYUE</link>
+            <guid isPermaLink="true">https://dev.tube/video/ARV1OuBYYUE</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Lessons from 50 Enterprise DevOps Transformations - Sendachi]]></title>
-            <description><![CDATA[Mr. Benjamin Wootton, Co-Founder, Sendachi
+            <title><![CDATA[A Beautiful Build: Releasing Linux Source Correctly]]></title>
+            <description><![CDATA[Bradley M. Kuhn
+http://linux.conf.au/schedule/presentation/171/
+Most embedded computing products run Linux.  However, obtaining the complete, corresponding source code (CCS), which Linux's license (the GNU GPL) requires, can prove difficult.  The license dictates certain technical requirements; verification of a source code release for license compliance therefore requires technical analysis.  After years of reviewing many source releases for embedded Linux products, the speaker discovered (finally!) an excellent example of CCS, which not only meets the requirements of the GPL, but also enables and encourages users to take advantage of their rights to modify and install new versions of the software on their device.
 
-Over the last few years, we have worked on over 50 DevOps transformations, in many instances with large, global, traditional enterprise organisations. 
-
-During this time, we have gained hard won experience in how to be successful in modernising organisations to DevOps—changing working practices, re-structuring organisations, and re-platforming legacy technology stacks to benefit from infrastructure as code and other DevOps practices. 
-
-In this talk we will talk about our experiences and hard won lessons of how to be successful with a DevOps transformation, with many real world case studies referenced.
-
-DOES16 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/JdLhnyoNHGk</link>
-            <guid isPermaLink="true">https://dev.tube/video/JdLhnyoNHGk</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+This talk briefly discusses the components of the router's source release, and then explains the aspects of the source release that made it particularly outstanding.  The talk proposes methods to achieve similar compliance successes on embedded products, suggests procedures for increasing the "tinkerer" userbase by improving beyond even what this excellent example provided, and gives insight into and perspective on compliance engineering analysis that occurs during GPL enforcement work.]]></description>
+            <link>https://dev.tube/video/C6HDJThJjyw</link>
+            <guid isPermaLink="true">https://dev.tube/video/C6HDJThJjyw</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The Unilever DevOps Journey So Far: Finding the Speed to Innovate]]></title>
-            <description><![CDATA[The Unilever Journey So Far: Finding the Speed to Innovate with DevOps
-
-Kjersten Moody, VP Information & Analytics, Unilever
-Sarah Chong, DevOps Evangelist, Unilever
-
-Organisations are quickly discovering that they can test and launch digital products, tools and services faster, and at a lower cost by integrating their development and IT operations teams. This process has become a competitive advantage for many and Unilever has been working on capturing its full value potential. 
-
-In this short keynote speech Kjersten Moody, VP Information & Analytics and Sarah Chong, DevOps Evangelist will discuss the need to emphasize the sharing of information and processes across product-development and IT operations groups to enable the frequent release of small internal updates, alongside appropriate tooling and metrics for success. They will talk about how the journey started at Unilever, the change in culture required to have impact, success stories and what next with DevOps.
-
-DOES16 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/MbAZkkOwXl4</link>
-            <guid isPermaLink="true">https://dev.tube/video/MbAZkkOwXl4</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+            <title><![CDATA[Community Leadership Summit Summary]]></title>
+            <description><![CDATA[VM and group leaders]]></description>
+            <link>https://dev.tube/video/GXITFkxslhU</link>
+            <guid isPermaLink="true">https://dev.tube/video/GXITFkxslhU</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[DevOps at Ordnance Survey: Turning the Dinosaur Into a Unicorn - Simon Parkes]]></title>
-            <description><![CDATA[DevOps at Ordnance Survey – Turning the Dinosaur Into a Unicorn
-
-Simon Parkes, Enterprise Infrastructure Architect, Ordnance Survey
-
-Description:
-This talk will demonstrate how a government organisation with 225 of history, specialist software systems comprised of monolithic COTS applications, and a large number of manual update and maintenance processes, adopted DevOps across the enterprise to create agility, fast delivery cycles and huge efficiencies with project delivery cycles.
-
-DOES16 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/_fQJvo5Xy10</link>
-            <guid isPermaLink="true">https://dev.tube/video/_fQJvo5Xy10</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+            <title><![CDATA[Multiplayer gaming and distributed state]]></title>
+            <description><![CDATA[Caskey L. Dickson
+http://linux.conf.au/schedule/presentation/197/
+The hardest thing about writing games (after gamplay, mechanics, ux, marketing and paying the bills) is managing the game state as viewed by all users.  This talk will cover the principles of distributed shared state, strategies such as frequent state regeneration, change validation and how your choice of connectivity and latency profiles change the user experience.]]></description>
+            <link>https://dev.tube/video/LQTaknsCI0I</link>
+            <guid isPermaLink="true">https://dev.tube/video/LQTaknsCI0I</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Continuous Delivery in a Primeval Environment - Thomas Cook]]></title>
-            <description><![CDATA[Continuous Delivery in a Primeval Environment
-
-Lee Sexton, Head of DevOps, Thomas Cook
-
-Working the minds and souls of monolithic business, bringing new ways of working to a multitude of cultures and breaking the silos inside a silo.
-
-DOES16 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/inyXz8DA_Y8</link>
-            <guid isPermaLink="true">https://dev.tube/video/inyXz8DA_Y8</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+            <title><![CDATA[Interface citizen scientists with government.]]></title>
+            <description><![CDATA[Johan Codinha
+http://linux.conf.au/schedule/presentation/148/
+The victorian biodiversity is facing constant danger, from bush fires to  pest and weeds just to name few. To protect the different ecosystem from natural and human disaster the government needs data !
+I am going to walk you thru the history of biodiversity data collection in Victoria ( it's a young country so it's gonna be a short walk ), from hundreds of government employee surveying the countryside in the 80's to 2016 where we rely almost exclusively on citizen scientists to provide accurate data.
+Then we will have a look at tools of the past, present and future for collecting biodiversity data and what is the role of standards and open software.
+Government agencies are taking land management decision based on biodiversity databases, we will have a look at how the data is beeing verified and what are the potential security risks.]]></description>
+            <link>https://dev.tube/video/OXGr4KlQ05E</link>
+            <guid isPermaLink="true">https://dev.tube/video/OXGr4KlQ05E</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Commonalities of Agile & DevOps Transformation for Conservative Organizations]]></title>
-            <description><![CDATA[Commonalities of Agile and DevOps Transformation for Large Conservative Organizations: Horses with dreams of becoming Unicorns
-
-Mrs. Robin Yeman, Agile / DevOps Coach, Lockheed Martin
-Suzette Johnson, Northrop Grumman Fellow Agile / DevOps Coach, Northrop Grumman
-
-In this presentation we look at the commonalities that we have experienced in our DevOps journey. While working for two large companies and helping teams implement a DevOps mindset we discovered similar approaches and techniques. From growing the team and the skills needed for this transition to looking at the larger organization as system in need of streamlining processes, we will share practices that have worked well for these teams and how to begin building a DevOps culture.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/m5O9V6yz5FI</link>
-            <guid isPermaLink="true">https://dev.tube/video/m5O9V6yz5FI</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+            <title><![CDATA[Opening & Welcome]]></title>
+            <description><![CDATA[Chris Neugebauer / Karen Sandler]]></description>
+            <link>https://dev.tube/video/Sc7NKOCjugo</link>
+            <guid isPermaLink="true">https://dev.tube/video/Sc7NKOCjugo</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Communication Between Tribes: A Story of Silos, DevOps and Government]]></title>
-            <description><![CDATA[Communication Between Tribes: A Story of Silos, DevOps and Government
+            <title><![CDATA[Almost Open - Just close the door behind you]]></title>
+            <description><![CDATA[Steven Ellis
+http://linux.conf.au/schedule/presentation/147/
+We are potentially at an interesting tipping point in the future of Free and Open Source software as more of our interactions are managed by services rather than applications. Does Open Source have a future or are we pivoting towards a services based ecosystem where the best we can hope for is some degree of Open Standards? These open standards have no specific entity tasked with defining each of them, yet every day we hear about Open Hardware, Open Government, Open APIs.
 
-Gareth Rushgrove, Senior Software Engineer, Puppet; previously UK GDS
+What does Open mean within the ecosystem you operate within, and how can we continue to be a catalyst for the journey and grow the Open Source movement when so many closed outcomes are being produced from the Open Source ecosystem?
 
-In any large organisation silos exist, protective of their domain and particular specialism. DevOps conversations often turn to how to break down those silos, to encourage multidisciplinary working and move from thinking about the requirements of the IT department or the security group to thinking about the needs of end users.
-
-This talk, based on my experience working across the UK Government as an early member of the Government Digital Service, will discuss:
-
--How being able to speak the language of a specific discipline, be it information security or service management or software development, is the first step to breaking down barriers
--The importance of understanding stereotypes (including of yourself) when it comes to communicating across silos
--The problems caused when policy documentation becomes separated from the owner of that policy
--The usefulness of software as a shared interface to a shared problem
-
-It’s often too easy when talking about silos to believe the answer is for one side to give in, for DevOps to succeed that you have to allow the IT group and the software group to fight until only one remains.
-
-This talk will hopefully talk about a better way forward.
-
-DOES16 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/sK4Z618ZDQ4</link>
-            <guid isPermaLink="true">https://dev.tube/video/sK4Z618ZDQ4</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+This is a collaborative session to look unpack the issue and formulate some actions that can be used by the attendees within their communities, businesses and organisations.]]></description>
+            <link>https://dev.tube/video/ceYMBBiVfCE</link>
+            <guid isPermaLink="true">https://dev.tube/video/ceYMBBiVfCE</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Starbucks Technology Transformation - Courtney Kissler]]></title>
-            <description><![CDATA[Starbucks Technology Transformation
-
-Courtney Kissler, Vice President of Retail Technology, Starbucks
-
-Courtney is the Vice President of Retail Technology at Starbucks. She’s accountable for the global POS and retail store technology experiences. Prior to Starbucks, Courtney spent 14 years at Nordstrom with her last role being the Vice President of E-Commerce and Store technologies where she drove a technological transformation essential for outpacing the demands of today’s Omnichannel consumers. She was accountable for program management, delivery, and support for all customer facing technologies including in-store, Web, and mobile touch points. Courtney joined Nordstrom as a security engineer in 2002 and held a variety of leadership roles across the technology organization. Courtney is a graduate of Eastern Washington University with a B.S. in Computer Information Systems and worked at two startups, CyberSafe and WorldStream Communications, prior to joining Nordstrom.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/uImY8iWYWu8</link>
-            <guid isPermaLink="true">https://dev.tube/video/uImY8iWYWu8</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:42 GMT</pubDate>
+            <title><![CDATA[ESP32 development example using IoTuz]]></title>
+            <description><![CDATA[Andy Gelme
+http://linux.conf.au/schedule/presentation/203/
+Developing for IoTuz on ESP32 with an example.]]></description>
+            <link>https://dev.tube/video/dugl8N6wZSA</link>
+            <guid isPermaLink="true">https://dev.tube/video/dugl8N6wZSA</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[DevOps Transformation, Driving Culture Change - HPE]]></title>
-            <description><![CDATA[DevOps Transformation, Driving Culture Change
+            <title><![CDATA[Sparse warnings]]></title>
+            <description><![CDATA[Daniel Axtens
+http://linux.conf.au/schedule/presentation/132/
+`sparse` is a semantic parser for C, and is one of the static analysis tools avaliable to kernel devs.
 
-Ruly Weisbach, Director of R&D, HPE
+Sparse is a powerful tool with good integration into the kernel build system. However, we suffer from warning overload - there are too many sparse warnings to spot the serious issues amongst the trivial. This makes it difficult to use, both for developers and maintainers.
 
-DOES17 London
-DevOps Enterprise Summit
-https://events.itrevolution.com/eur/]]></description>
-            <link>https://dev.tube/video/3-_gx3KLlIo</link>
-            <guid isPermaLink="true">https://dev.tube/video/3-_gx3KLlIo</guid>
-            <pubDate>Sat, 28 Jul 2018 01:31:26 GMT</pubDate>
+In hopes of making sparse more useful, I've been slowly chipping away at the sparse warnings in `arch/powerpc` over the last year.
+
+This talk covers:
+ * my experience doing this - what I've learned about the kernel and sparse
+ * some stats and pretty pictures about the state of sparse warnings
+ * where to from here - how to make sparse a useful part of the kernel dev workflow
+ * tooling to make sparse more useful - assuming I manage to get it written before the talk!
+
+**Are you interested in kernel development and not sure where or how to start? This talk will cover how fixing sparse warnings can be used as a path into kernel development.**]]></description>
+            <link>https://dev.tube/video/hmCukzpevUc</link>
+            <guid isPermaLink="true">https://dev.tube/video/hmCukzpevUc</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The Inside-Out of Creating a DevOps Movement - Bluware Inc]]></title>
-            <description><![CDATA[The Inside-Out of Creating a DevOps Movement
+            <title><![CDATA[Preventing Deserialization attacks in Java applications]]></title>
+            <description><![CDATA[Jason Shepherd
+http://linux.conf.au/schedule/presentation/163/
+Recent research by [Chris Frohoff and Gabriel Lawrence has exposed gadget chains](https://frohoff.github.io/appseccali-marshalling-pickles/) in various libraries that allow code to be executed during object deserialization in Java. They've done some excellent research, including [publishing some code](https://github.com/frohoff/ysoserial/) that allows anyone to serialize a malicious payload that when deserialized runs the operating system command of their choice, as the user which started the Java Virtual Machine (JVM). The vulnerabilities are not with the gadget chains themselves but with the code that deserializes them.
 
-Eddie Garcia, DevOps Practice Manager, Bluware Inc
+There are couple of ways in which this type of attack on the JVM can be mitigated:
 
-You don't always have the luxury of a top down DevOps initiative, what is a non-conforming DevOps minded individual to do? Become a DevOps guerrilla and start a grassroots DevOps movement. The presentation will center around two cases Microsoft:Mac Office and a major Oil and Gas R&D department. In both of these situations there was resistance and non-technical obstacles to overcome and in the end change was brought from the bottom up. What is offered are techniques to use to build consensus and momentum for your very own grassroots DevOps movement.
+* not deserializing untrusted objects;
+* not having the classes used in the 'gadget chain' in the classpath;
+* running the JVM as a non-root operating system user, with reduced privileges;
+* egress filtering not allowing any outbound traffic other than that matching a connection for which the firewall already has an existing state table entry.
 
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/1GcFu5xzscc</link>
-            <guid isPermaLink="true">https://dev.tube/video/1GcFu5xzscc</guid>
-            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+In this talk we'll explore each of these in detail, using JBoss EAP as a example of how these mitigations can be introduced.]]></description>
+            <link>https://dev.tube/video/nNIuaAf8jII</link>
+            <guid isPermaLink="true">https://dev.tube/video/nNIuaAf8jII</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Tactics for Influencing Executives and Middle Management - Leading Change]]></title>
-            <description><![CDATA[DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/49J__6GLy38</link>
-            <guid isPermaLink="true">https://dev.tube/video/49J__6GLy38</guid>
-            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+            <title><![CDATA[Kernel-bypass networking for fun and profit]]></title>
+            <description><![CDATA[Matthew Chapman
+http://linux.conf.au/schedule/presentation/134/
+In the quest for ever lower networking latencies, there are a growing number of kernel-bypass TCP/IP stacks available from various network card vendors: for example Exablaze's exasock, Solarflare's OpenOnload, Mellanox's VMA, Myricom's DBL and Chelsio's WireDirect.  All of these use the LD\_PRELOAD mechanism to hijack AF\_INET socket calls and direct them to a library and ultimately the network adapter.  Some are entirely implemented in userspace, while others have in-kernel support components that allow more graceful connection handling across processes.  In this talk I will discuss the how and why of these stacks, with a particular focus on the exasock stack developed by my team at Exablaze.]]></description>
+            <link>https://dev.tube/video/noqSZorzooc</link>
+            <guid isPermaLink="true">https://dev.tube/video/noqSZorzooc</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Compliance Help for the Agile Enterprise - Adobe]]></title>
-            <description><![CDATA[Compliance Help for the Agile Enterprise
-
-David Owczarek, Sr. Manager, Cloud Technology, Adobe Systems Incorporated
-
-Implementing controls for SOCII, PCI-DSS, HIPPA and other compliance standards is complex, detail-oriented work. Doing that in an enterprise with agile teams makes it even harder. This talk offers several conceptual frameworks for implementing agile controls. By looking at each control from four different perspectives: code, process, infrastructure, and evidence, concrete requirements for the solution rapidly emerge. Controls are also grouped by their frequency – continuous or periodic. Periodic controls are used to examine the consumption of people’s time in a 12 month, forward-looking view. Finally, three hard truths about compliance work provide an emotional framework.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/5Fqo7MLSpnI</link>
-            <guid isPermaLink="true">https://dev.tube/video/5Fqo7MLSpnI</guid>
-            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+            <title><![CDATA[Human-Driven Development]]></title>
+            <description><![CDATA[aurynn shaw
+http://linux.conf.au/schedule/presentation/127/
+Modern software development is a complex process, and a sometimes difficult team sport. In this talk, aurynn covers the failure modes inherent in current software development, the ways these failure modes are endemic within the broader open source and free software community, and how we can start moving ourselves toward a more sustainable, inclusive developmental style.]]></description>
+            <link>https://dev.tube/video/qcBol_s410k</link>
+            <guid isPermaLink="true">https://dev.tube/video/qcBol_s410k</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[DevOps at New Zealand Ministry of Social Development - David Habershon]]></title>
-            <description><![CDATA[DevOps at New Zealand Ministry of Social Development
+            <title><![CDATA[Discovering edge cases with property-based testing.]]></title>
+            <description><![CDATA[Svetlana Filimonova
+http://linux.conf.au/schedule/presentation/153/
+Property-based testing is a popular concept in the world of functional programming. QuickCheck in Haskell is an iconic framework supporting this testing approach. Today we can find testing libraries supporting PBT in any main-stream languages, inlcuding Scala, JavaScript, Ruby, Python, Java etc.
 
-David Habershon, Chief Information Officer at Ministry of Social Development, New Zealand
+Generated input is obviously constrained by the type of parameters accepted as an input for the code. However the range of this input covers large amount of edge cares, the cases you didn't even know existed in your application. Discovering these cases on early stages of your development process brings quite a big support for 'building quality in' instead of ensuring the quality after an application has been created. As any other automated tests, PBT tests are a part of your continuous integration pipeline, which gives quite a big coverage for regression testing as well. It provides essential feeling of confidence in changing the product as much as required.
 
-This is an experience story about a government organization learning to run very fast with a new DevOps program. It's a very large organization dealing with human services. The MSD has the third largest IT department in New Zealand.
+In this talk I will present pbt concept and my experience of adopting it on a couple of projects I've been engaged too. I will give an introduction into this practice and some pros and cons, so hopefully it will give you a good idea on when and 
+why would you want to use it.
 
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/7B4auX_xME0</link>
-            <guid isPermaLink="true">https://dev.tube/video/7B4auX_xME0</guid>
-            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+Target Audience: testers/developers, people ensuring quality.]]></description>
+            <link>https://dev.tube/video/sGIDDIIjlOg</link>
+            <guid isPermaLink="true">https://dev.tube/video/sGIDDIIjlOg</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Continuous Monitoring in DevOps for Large Health Care - UHG/Optum]]></title>
-            <description><![CDATA[Continuous Monitoring in DevOps for Large Health Care
+            <title><![CDATA[U 2 can U2F]]></title>
+            <description><![CDATA[Rob N ★
+http://linux.conf.au/schedule/presentation/160/
+Universal-second factor devices are the new hotness in the two-factor login world. Sleek, sophisticated and secure, they combine high-quality crypto with an even-your-dog-could-use-it one-touch interface to produce a smooth and pleasant login experience.
 
-Professor Phil Lerner, Distinguished Engineer, UHG/Optum
+U2F devices are built on public-key crypto, where the device signs challenges produced by the server. They have many interesting features, including a certificate to identify the device provider, and mechanisms to detect cloned devices and know if the user is actually present when the device is activated. The way they generate key pairs is also quite clever, allowing for devices with no on-board storage at all.
 
-Security has become a stakeholder in the new DevOps as a rugged partner to the teams. As we evaluate new tools, their interconnectivity, isolation, sandbox and enablement for the DevOps community we have developed a conceptual security architecture that would allow DevOps to move at the rapid delivery pace they are used to while security will become a transparent set of controls and part of the fabric or control plane of the tools suites we choose to enable to transform the DevOps experience. This presentation will cover those advanced technical topics with a strong focus on cyber security in DevOps.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/9zsXQqIPoVE</link>
-            <guid isPermaLink="true">https://dev.tube/video/9zsXQqIPoVE</guid>
-            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+In this talk I'll tell you what U2F is, why it's important, how it works and how to implement it in your service or application. I'll also have some devices to give away to help you get started with this fascinating two-factor technology.]]></description>
+            <link>https://dev.tube/video/vv11XMG5UJg</link>
+            <guid isPermaLink="true">https://dev.tube/video/vv11XMG5UJg</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[When IT Closes the Deal - Equifax]]></title>
-            <description><![CDATA[When IT Closes the Deal
-
-Brandon Holcomb, VP Technology, Global Platforms at Equifax, Equifax Inc.
-Andy Cooper, SVP, Technology, Global Platform Services, Equifax Inc.
-
-Description:
-Equifax powers the financial future of individuals and organizations around the world. Using the combined strength of unique trusted data, technology and innovative analytics, Equifax has grown from a consumer credit company into a leading provider of insights and knowledge that helps its customers make informed decisions.
-
-Delivering on that trust requires both business and technical operations excellence. Faced with the growing challenges of the modern marketplace, the Equifax IT organization embarked on a top-to-bottom cultural and technical transformation. This presentation will outline how the Equifax IT team has taken steps towards transforming itself into a nimble, efficient and internally-capable organization. Topics will include key management lessons learned, budget realignment, creating partnerships across organizational boundaries and strategic projects to focus the organization’s transformation efforts. The early results? IT is no longer viewed as a liability to the business, instead IT is now an asset – a strategic partner that is actively helping to close deals.
-
-DOES16 San Francisco
-DevOps Enterprise Summit
-https://events.itrevolution.com/us/]]></description>
-            <link>https://dev.tube/video/PdJkny2HVVQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/PdJkny2HVVQ</guid>
-            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+            <title><![CDATA[Every Game Should Have An API Like Destiny]]></title>
+            <description><![CDATA[Richard Deveraux
+http://linux.conf.au/schedule/presentation/196/
+As a game developer, you should always be looking for ways to engage your players inside and outside your game. If your game is popular, you might even find you have some players with programming experience and want to do more with your game. Implementing an API is one way you can empower these players to create cool applications that can enhance your game in ways you may not have even thought of or have the resources for and it is one of the more unique aspects of large games such as Destiny where it has allowed the game to evolve well beyond what was possible by Bungie alone. As the lead contributor to the [Unofficial BungieNetPlatform API Documentation](http://destinydevs.github.io/BungieNetPlatform/) I can give you a list of tips and suggestions on ways you can enhance your game through the creation of APIs and show you some of the amazing tools the Destiny Developer Community have been able to create because these APIs exist.]]></description>
+            <link>https://dev.tube/video/vxtjvec3lME</link>
+            <guid isPermaLink="true">https://dev.tube/video/vxtjvec3lME</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Adopting DevOps @ Scale: Lessons Learned at NBCUniversal, Kaiser Permanente, GitHub and IBM]]></title>
-            <description><![CDATA[Adopting DevOps @ Scale: Lessons Learned at NBCUniversal, Kaiser Permanente, GitHub and IBM
+            <title><![CDATA[Reproducible Builds for a Better Future]]></title>
+            <description><![CDATA[Valerie Young
+http://linux.conf.au/schedule/presentation/41/
+Many free software projects (Tor, Debian, Fedora and more) have dedicated a great deal of time and effort toward the reproducible builds goal: anyone can download the source code and generate identical binaries. This technical goal has a massive impact on delivering free software's promised freedoms. Our vision:
 
-Sanjeev Sharma, CTO, DevOps Technical Evangelist, IBM Distinguished Engineer, IBM
-John Comas, Manager of Platform DevOps, NBCUniversal
-Raghunath Raman, Director, Digital APIs & Integration Delivery, Kaiser Permanente
-Aziz Shamin, Solutions Engineering Manager, GitHub
+1. Anyone can verify that the binary program they are running came from the source code they separately downloaded.
+2. Anyone can reliably modify their software without fear it will not build on their system.
 
-IBM Sponsor Track talk: 
-DevOps is evolving into a major enabler of business innovation. Done well it can drive digital transformation at an enterprise level. But crossing the chasm from successful DevOps pilots with two-pizza teams to enterprise adoption remains a challenge. Join DevOps for Dummies author Sanjeev Sharma as he hosts a discussion with DevOps pros from enterprises that are successfully achieving scale as they unpack the "new normal" for disruptive software delivery. NBCUniversal is accelerating creativity and engineering effectiveness while improving collaboration and connectivity with increased security. Kaiser Permanente is managing the cultural, process and technology challenges of multi-speed IT. GitHub builds software that millions of developers and thousands of businesses use to collaborate on code and build better software, faster. And IBM has embarked on a DevOps transformation that has engaged over 10,000 developers already -- and in the process become one of the world's largest users of GitHub Enterprise. You'll learn how to assess your own organization’s readiness for scaling DevOps, and to identify next steps. Please join us!
+This talk will begin with the story of the Tor browser bundle becoming entirely reproducible. You will learn how the technical success of Tor inspired the Debian project's ongoing efforts, resulting in an 85% reproducible operating system so far, and other parallel efforts. After laying down this technical and historical background, the talk will focus on concrete ways that achieving reproducible builds will change our relationship with software in the future. 
 
-www.itrevolution.net
-DevOps Enterprise Summit San Francisco 2016]]></description>
-            <link>https://dev.tube/video/TmAY9iqKKnM</link>
-            <guid isPermaLink="true">https://dev.tube/video/TmAY9iqKKnM</guid>
-            <pubDate>Sat, 28 Jul 2018 01:30:37 GMT</pubDate>
+The intended audience is anyone who cares about free software, no matter your technical experience.]]></description>
+            <link>https://dev.tube/video/-nMVfmZL8zk</link>
+            <guid isPermaLink="true">https://dev.tube/video/-nMVfmZL8zk</guid>
+            <pubDate>Sun, 29 Jul 2018 01:32:35 GMT</pubDate>
         </item>
     </channel>
 </rss>
