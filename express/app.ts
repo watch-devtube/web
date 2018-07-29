@@ -272,7 +272,7 @@ async function proxy(req: Request, res: Response) {
     if (fs.existsSync('.' + req.path)) {
       res.sendFile('.' + req.path)
     } else {
-      res.status(404).send()
+      res.status(404).send('not found')
     }
   }
 }
