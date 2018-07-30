@@ -4,8 +4,152 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 29 Jul 2018 04:33:20 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 30 Jul 2018 11:53:16 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Cinematic Games Are Dead! Long Live Cinematic Games!]]></title>
+            <description><![CDATA[In this 2015 GDC session, Fiction Control's Matthew Weise explains how clever uses of art, interface and UX can make an experience "cinematic" without ever having a single camera cut, and make players walk away feeling like they visited a movie like it was a place. 
+
+Register for GDC: http://ubm.io/2gk5KTU
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/82z_sZRl93M</link>
+            <guid isPermaLink="true">https://dev.tube/video/82z_sZRl93M</guid>
+            <pubDate>Mon, 30 Jul 2018 01:29:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Lambda Jam 2018 - Brian McKenna - Teaching functional programming at Atlassian]]></title>
+            <description><![CDATA[My team works on Atlassian Marketplace, a project which started 10 years ago and uses Scala, Haskell and Nix. The Marketplace code uses concepts such as applicative functors, monad transformers and lenses. People joining the team mostly learned concepts as they needed to, through experimentation and asking questions.
+
+Last year we started hosting functional programming classes for more fundamental and broad understanding. We've been using the Data61 (formerly NICTA) Functional Programming Course with a lot of success. This talk will describe how we teach FP, what we've learned about teaching FP and the challenges we face.
+
+Brian's specialties: Functional programming, Haskell, PureScript, Idris, Agda, Scala, JavaScript, Emacs, Git
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/4DNwH6lNo1w</link>
+            <guid isPermaLink="true">https://dev.tube/video/4DNwH6lNo1w</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Data 2018 - Gala Camacho - Place Activity During the 2018 Gold Coast Commonwealth Games]]></title>
+            <description><![CDATA[Why do people choose to live in one neighbourhood over another? Every day government makes decisions that can change the way a neighbourhood operates and feels. Understanding the impact that these decisions have is convoluted and hard to measure.
+
+In April, the Gold Coast held the 2018 Commonwealth Games. These events, usually advertised as urban renewal or regeneration projects, have a lasting impact on the neighbourhoods where they take place. Usually, there is a strong push to predic the impact of the games through economic assessments and surveys, however, once the games are happening, is that impact tracked? Sometimes, further economic assessments are produced years after the event which evaluate whether the impact was as expected. Can we do better?
+
+Social data can provide us with more timely evidence of whether the event is activating the economy as expected, or maybe highlight issues that can be resolved.
+
+Using social media data we will explore Facebook places data during and after the games, ultimately generating a dashboard to help us visualise change by giving us the ability to filter and aggregate the data. We will manage the data using Python’s Pandas, generate quick visualisations using Plotly, and finish off by spinning up a dashboard using Plotly’s Dash.
+
+Gala is a mathematician and programmer using data analytics to improve the way we understand cities. With a diverse background in secondary education, volunteering, optimisation and all-things data, Gala is enthusiastic to find solutions to interesting problems and innovative ways to visualise data.
+
+At Neighbourlytics, Gala investigates what information can be extracted from urban data sources to define and visualise the unique local identity of a neighbourhood.
+
+Gala is driven to positively impact her community through her skills and her voice. As such, she is involved with multiple organisations aimed at making the world (but particularly, the tech-world) a better place for women.
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/aK70iMtvMuA</link>
+            <guid isPermaLink="true">https://dev.tube/video/aK70iMtvMuA</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ruby After 25 Years by the Creator of Ruby]]></title>
+            <description><![CDATA[Two things are apparent when watching Yukihiro “Matz” Matsumoto, creator of Ruby programming language, talk on the stage. First, that he will do anything he can to enable Ruby to survive and thrive and, second, that he’s thoroughly enjoying himself doing what he does. He’s passionate about Ruby and its community and his outlook is quite simple: Programming is fun, he’s had fun for the last 25 years making Ruby and at the age of 52 now, he hopes that he’ll get to spend the next 25 years having as much fun working on the language he dreamt up and wrote down in – a now lost – notebook, at the age of 17.
+
+EVENT:
+
+Engineering.SG Meetup 2018
+
+SPEAKER:
+
+Yukihiro Matsumoto (Matz), creator of Ruby
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=gTNC26BtRFc]]></description>
+            <link>https://dev.tube/video/jqnVaYUcjCo</link>
+            <guid isPermaLink="true">https://dev.tube/video/jqnVaYUcjCo</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[JuniorDevSG Developer's Gym with ThoughtWorks (Session 2) - JuniorDevSG]]></title>
+            <description><![CDATA[Speaker: Gordon Guo
+
+Event Page: https://www.meetup.com/Junior-Developers-Singapore/events/252530990/
+
+Produced by Engineers.SG
+Recorded by: Michael Cheng
+
+Help us caption & translate this video!
+
+https://amara.org/v/k64T/]]></description>
+            <link>https://dev.tube/video/3l_qYu0-fSU</link>
+            <guid isPermaLink="true">https://dev.tube/video/3l_qYu0-fSU</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[TechLadies Pre-Bootcamp Workshop 2018 (Session 2) - TechLadies]]></title>
+            <description><![CDATA[Speaker: Sahil Bajaj, ThoughtWorks
+
+Slides: https://www.dropbox.com/s/81t2dj7rngpepkn/techladies%20-%20intro%20to%20js%20and%20react.pdf?dl=0
+
+Instructions: https://github.com/TechLadies/bootcamp-4-technical-task/blob/master/setup-guide.md
+
+Event Page: https://www.eventbrite.sg/e/techladies-bootcamp-4-pre-bootcamp-workshops-tickets-47615313685#
+
+Produced by Engineers.SG
+Recorded by: Michael Cheng
+
+Help us caption & translate this video!
+
+https://amara.org/v/k61G/]]></description>
+            <link>https://dev.tube/video/NpMZp1bfvlg</link>
+            <guid isPermaLink="true">https://dev.tube/video/NpMZp1bfvlg</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[TechLadies Pre-Bootcamp Workshop 2018 (Session 3) - TechLadies]]></title>
+            <description><![CDATA[Speaker: Tan Jun Qi, ThoughtWorks
+
+Workshop Material: https://github.com/TechLadies/react-express-mongo-prebootcamp-workshop-3-2018
+
+Event Page: https://www.eventbrite.sg/e/techladies-bootcamp-4-pre-bootcamp-workshops-tickets-47615313685#
+
+Produced by Engineers.SG
+Recorded by:
+
+Help us caption & translate this video!
+
+https://amara.org/v/k62f/]]></description>
+            <link>https://dev.tube/video/PXVwRNU-z8U</link>
+            <guid isPermaLink="true">https://dev.tube/video/PXVwRNU-z8U</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[JuniorDevSG Developer's Gym (Session 3) - JuniorDevSG]]></title>
+            <description><![CDATA[Speaker: Reuben Tan
+
+Material: https://github.com/CoderKungfu/intro-to-docker-workshop
+
+Event Page: https://www.meetup.com/Junior-Developers-Singapore/events/253082881/
+
+Produced by Engineers.SG
+Recorded by: Michael Cheng
+
+Help us caption & translate this video!
+
+https://amara.org/v/k67B/]]></description>
+            <link>https://dev.tube/video/kEO4eoQOJns</link>
+            <guid isPermaLink="true">https://dev.tube/video/kEO4eoQOJns</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[microPython for ESP32]]></title>
             <description><![CDATA[Nick Moore
@@ -135,117 +279,6 @@ Developing for IoTuz on ESP32 with an example.]]></description>
             <link>https://dev.tube/video/dugl8N6wZSA</link>
             <guid isPermaLink="true">https://dev.tube/video/dugl8N6wZSA</guid>
             <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Sparse warnings]]></title>
-            <description><![CDATA[Daniel Axtens
-http://linux.conf.au/schedule/presentation/132/
-`sparse` is a semantic parser for C, and is one of the static analysis tools avaliable to kernel devs.
-
-Sparse is a powerful tool with good integration into the kernel build system. However, we suffer from warning overload - there are too many sparse warnings to spot the serious issues amongst the trivial. This makes it difficult to use, both for developers and maintainers.
-
-In hopes of making sparse more useful, I've been slowly chipping away at the sparse warnings in `arch/powerpc` over the last year.
-
-This talk covers:
- * my experience doing this - what I've learned about the kernel and sparse
- * some stats and pretty pictures about the state of sparse warnings
- * where to from here - how to make sparse a useful part of the kernel dev workflow
- * tooling to make sparse more useful - assuming I manage to get it written before the talk!
-
-**Are you interested in kernel development and not sure where or how to start? This talk will cover how fixing sparse warnings can be used as a path into kernel development.**]]></description>
-            <link>https://dev.tube/video/hmCukzpevUc</link>
-            <guid isPermaLink="true">https://dev.tube/video/hmCukzpevUc</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Preventing Deserialization attacks in Java applications]]></title>
-            <description><![CDATA[Jason Shepherd
-http://linux.conf.au/schedule/presentation/163/
-Recent research by [Chris Frohoff and Gabriel Lawrence has exposed gadget chains](https://frohoff.github.io/appseccali-marshalling-pickles/) in various libraries that allow code to be executed during object deserialization in Java. They've done some excellent research, including [publishing some code](https://github.com/frohoff/ysoserial/) that allows anyone to serialize a malicious payload that when deserialized runs the operating system command of their choice, as the user which started the Java Virtual Machine (JVM). The vulnerabilities are not with the gadget chains themselves but with the code that deserializes them.
-
-There are couple of ways in which this type of attack on the JVM can be mitigated:
-
-* not deserializing untrusted objects;
-* not having the classes used in the 'gadget chain' in the classpath;
-* running the JVM as a non-root operating system user, with reduced privileges;
-* egress filtering not allowing any outbound traffic other than that matching a connection for which the firewall already has an existing state table entry.
-
-In this talk we'll explore each of these in detail, using JBoss EAP as a example of how these mitigations can be introduced.]]></description>
-            <link>https://dev.tube/video/nNIuaAf8jII</link>
-            <guid isPermaLink="true">https://dev.tube/video/nNIuaAf8jII</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Kernel-bypass networking for fun and profit]]></title>
-            <description><![CDATA[Matthew Chapman
-http://linux.conf.au/schedule/presentation/134/
-In the quest for ever lower networking latencies, there are a growing number of kernel-bypass TCP/IP stacks available from various network card vendors: for example Exablaze's exasock, Solarflare's OpenOnload, Mellanox's VMA, Myricom's DBL and Chelsio's WireDirect.  All of these use the LD\_PRELOAD mechanism to hijack AF\_INET socket calls and direct them to a library and ultimately the network adapter.  Some are entirely implemented in userspace, while others have in-kernel support components that allow more graceful connection handling across processes.  In this talk I will discuss the how and why of these stacks, with a particular focus on the exasock stack developed by my team at Exablaze.]]></description>
-            <link>https://dev.tube/video/noqSZorzooc</link>
-            <guid isPermaLink="true">https://dev.tube/video/noqSZorzooc</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Human-Driven Development]]></title>
-            <description><![CDATA[aurynn shaw
-http://linux.conf.au/schedule/presentation/127/
-Modern software development is a complex process, and a sometimes difficult team sport. In this talk, aurynn covers the failure modes inherent in current software development, the ways these failure modes are endemic within the broader open source and free software community, and how we can start moving ourselves toward a more sustainable, inclusive developmental style.]]></description>
-            <link>https://dev.tube/video/qcBol_s410k</link>
-            <guid isPermaLink="true">https://dev.tube/video/qcBol_s410k</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Discovering edge cases with property-based testing.]]></title>
-            <description><![CDATA[Svetlana Filimonova
-http://linux.conf.au/schedule/presentation/153/
-Property-based testing is a popular concept in the world of functional programming. QuickCheck in Haskell is an iconic framework supporting this testing approach. Today we can find testing libraries supporting PBT in any main-stream languages, inlcuding Scala, JavaScript, Ruby, Python, Java etc.
-
-Generated input is obviously constrained by the type of parameters accepted as an input for the code. However the range of this input covers large amount of edge cares, the cases you didn't even know existed in your application. Discovering these cases on early stages of your development process brings quite a big support for 'building quality in' instead of ensuring the quality after an application has been created. As any other automated tests, PBT tests are a part of your continuous integration pipeline, which gives quite a big coverage for regression testing as well. It provides essential feeling of confidence in changing the product as much as required.
-
-In this talk I will present pbt concept and my experience of adopting it on a couple of projects I've been engaged too. I will give an introduction into this practice and some pros and cons, so hopefully it will give you a good idea on when and 
-why would you want to use it.
-
-Target Audience: testers/developers, people ensuring quality.]]></description>
-            <link>https://dev.tube/video/sGIDDIIjlOg</link>
-            <guid isPermaLink="true">https://dev.tube/video/sGIDDIIjlOg</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[U 2 can U2F]]></title>
-            <description><![CDATA[Rob N ★
-http://linux.conf.au/schedule/presentation/160/
-Universal-second factor devices are the new hotness in the two-factor login world. Sleek, sophisticated and secure, they combine high-quality crypto with an even-your-dog-could-use-it one-touch interface to produce a smooth and pleasant login experience.
-
-U2F devices are built on public-key crypto, where the device signs challenges produced by the server. They have many interesting features, including a certificate to identify the device provider, and mechanisms to detect cloned devices and know if the user is actually present when the device is activated. The way they generate key pairs is also quite clever, allowing for devices with no on-board storage at all.
-
-In this talk I'll tell you what U2F is, why it's important, how it works and how to implement it in your service or application. I'll also have some devices to give away to help you get started with this fascinating two-factor technology.]]></description>
-            <link>https://dev.tube/video/vv11XMG5UJg</link>
-            <guid isPermaLink="true">https://dev.tube/video/vv11XMG5UJg</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Every Game Should Have An API Like Destiny]]></title>
-            <description><![CDATA[Richard Deveraux
-http://linux.conf.au/schedule/presentation/196/
-As a game developer, you should always be looking for ways to engage your players inside and outside your game. If your game is popular, you might even find you have some players with programming experience and want to do more with your game. Implementing an API is one way you can empower these players to create cool applications that can enhance your game in ways you may not have even thought of or have the resources for and it is one of the more unique aspects of large games such as Destiny where it has allowed the game to evolve well beyond what was possible by Bungie alone. As the lead contributor to the [Unofficial BungieNetPlatform API Documentation](http://destinydevs.github.io/BungieNetPlatform/) I can give you a list of tips and suggestions on ways you can enhance your game through the creation of APIs and show you some of the amazing tools the Destiny Developer Community have been able to create because these APIs exist.]]></description>
-            <link>https://dev.tube/video/vxtjvec3lME</link>
-            <guid isPermaLink="true">https://dev.tube/video/vxtjvec3lME</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Reproducible Builds for a Better Future]]></title>
-            <description><![CDATA[Valerie Young
-http://linux.conf.au/schedule/presentation/41/
-Many free software projects (Tor, Debian, Fedora and more) have dedicated a great deal of time and effort toward the reproducible builds goal: anyone can download the source code and generate identical binaries. This technical goal has a massive impact on delivering free software's promised freedoms. Our vision:
-
-1. Anyone can verify that the binary program they are running came from the source code they separately downloaded.
-2. Anyone can reliably modify their software without fear it will not build on their system.
-
-This talk will begin with the story of the Tor browser bundle becoming entirely reproducible. You will learn how the technical success of Tor inspired the Debian project's ongoing efforts, resulting in an 85% reproducible operating system so far, and other parallel efforts. After laying down this technical and historical background, the talk will focus on concrete ways that achieving reproducible builds will change our relationship with software in the future. 
-
-The intended audience is anyone who cares about free software, no matter your technical experience.]]></description>
-            <link>https://dev.tube/video/-nMVfmZL8zk</link>
-            <guid isPermaLink="true">https://dev.tube/video/-nMVfmZL8zk</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:35 GMT</pubDate>
         </item>
     </channel>
 </rss>

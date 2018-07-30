@@ -101,6 +101,10 @@
             "name": "Jez Humble"
         },
         {
+            "twitter": "mrsimonstone",
+            "name": "Simon Stone"
+        },
+        {
             "twitter": "carnesbeau",
             "name": "Beau Carnes"
         },
@@ -115,6 +119,10 @@
         {
             "twitter": "tastapod",
             "name": "Dan North"
+        },
+        {
+            "twitter": "joelkatz",
+            "name": "David Schwartz"
         },
         {
             "twitter": "relizarov",
@@ -255,6 +263,10 @@
         {
             "twitter": "emmajanehw",
             "name": "Emma Jane Hogbin Westby"
+        },
+        {
+            "twitter": "landro",
+            "name": "Stefan Magnus Landrø"
         }
     ]
 }
