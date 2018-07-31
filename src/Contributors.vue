@@ -21,6 +21,12 @@
         p 
           | Let's build the best tech video hub together. 
           a(href="https://github.com/watch-devtube/contrib" target="_blank") Contributing is simple!
+        p 
+          i.far.fa-heart.has-text-danger
+          |   5000 karma points – we'll thank you on Twitter
+        p 
+          i.far.fa-heart.has-text-danger
+          |   10000 karma points — you can make any good video featured on the front page for a week.
       .columns.is-multiline.is-mobile
         .column.is-3-widescreen.is-4-tablet(v-for="contributor in contributors" v-if="contributor.name")
           .card
