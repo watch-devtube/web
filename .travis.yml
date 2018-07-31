@@ -35,18 +35,10 @@ script:
 - cd express
 - yarn
 - yarn compile
-# deploy proxy
-- serverless package
-- unzip -l .serverless/devtube-proxy.zip
-- serverless deploy
 # get data 
 - mkdir ./data
 - gsutil cp gs://dev-tube-index/*.json ./data
 # deploy proxy with data
-- rm -rf serverless.yml
-- rm -rf .serverless
-- rm -rf .build
-- mv serverless.2.yml serverless.yml
 - serverless package
 - unzip -l .serverless/devtube-proxy-with-data.zip
 - serverless deploy
