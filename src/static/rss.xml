@@ -4,8 +4,383 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 30 Jul 2018 11:53:16 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 31 Jul 2018 04:33:35 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[YOW! Data 2018 - Tim Garnsey - Respecting privacy]]></title>
+            <description><![CDATA[Safely handling data that contains sensitive or private information about people is a multi-million dollar problem at many companies. It adds time into the data engineering process, it can cost a lot in software licenses for specialised tools, and brings a range of reputational and legal risks.
+
+Recent advances in deep learning have prompted an interesting way to attack this problem. By fitting a certain class of model on a source data set that contains sensitive information, we can produce a generator that outputs a supply of synthetic "look alike" data. This output data will preserve many of the statistical relationships between fields as the source does, and offers mathematical guarantees around the identifiability of individuals in the source data set.
+
+This talk will provide an overview of the approach and show how it can speed data engineering effort and reduce risk.
+
+Tim is a Director at Verge Labs, a new type of AI company focused on the applied side of machine learning. At Verge Tim sifts through the daily firehose of theoretical research and builds a curated library of techniques and utilities ready to be switched on at companies today. 
+ 
+Prior to this Tim spent six years absorbed in machine learning and data related roles in financial services tech companies including Atlassian, Spaceship and Airtasker. 
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/hUIBKk2r6UE</link>
+            <guid isPermaLink="true">https://dev.tube/video/hUIBKk2r6UE</guid>
+            <pubDate>Tue, 31 Jul 2018 01:28:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Lambda Jam 2018 - George Wilson - Lessons From the Design and Implementation of a CSV Library]]></title>
+            <description><![CDATA[From CSV, to JSON, to YAML, DER, and the dreaded XML, many programmers are dealing with data formats all day. In statically-typed languages like Haskell, we can get a great benefit by imposing a rigid structure of types on the data we consume from these formats. We call this process of imposing structure on data "decoding".
+
+Decoding libraries are available in many languages and for many formats. This talk explores the design decisions behind a new Haskell library, sv, which decodes CSV and similar formats such as PSV. sv addresses what we perceived as problems with other libraries. We will discuss the benefits and drawbacks of the interesting or noteworthy choices made in sv's philosophy and design, and make recommendations as to how these lessons could be applied to other formats.
+
+George is an enthusiastic programmer working at the Queensland Functional Programming Lab within Data61/CSIRO. George loves working with and speaking about Functional Programming, usually in Haskell. George is also a co-organiser of the Brisbane Functional Programming Group, and a member of the Haskell.org committee.
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/zP-DgjIcCho</link>
+            <guid isPermaLink="true">https://dev.tube/video/zP-DgjIcCho</guid>
+            <pubDate>Tue, 31 Jul 2018 01:28:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[EBF onboarder for Microsoft Intune - Endpoint Zone 1807]]></title>
+            <description><![CDATA[Coming up in the show we'll be taking a look at how you migrate to Microsoft 365 and Microsoft Intune and we'll take a deep dive into an amazing tool; EBF onboarder for Microsoft Intune.
+ 
+[T02:06] - Millions of devices are migrating to Microsoft 365
+[T07:00] - Understand how you consolidate your security with Microsoft 365
+[T08:50] - How many users are using EMS?
+[T10:00] - Nico shows us EBF on boarder for Intune
+[T15:12] - EBF on boarder demo
+[T21:30] - Looking at some of the top deploying customer trends for Intune]]></description>
+            <link>https://dev.tube/video/BuV9Ntszwb8</link>
+            <guid isPermaLink="true">https://dev.tube/video/BuV9Ntszwb8</guid>
+            <pubDate>Tue, 31 Jul 2018 01:28:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #111: Animated Sprites]]></title>
+            <description><![CDATA[In this coding challenge, I load a sprite sheet and create multiple animated sprites with the p5.js library. #animation #spritesheet #p5js #codingchallenge
+
+💻 http://thecodingtrain.com/CodingChallenges/111-animated-sprite
+
+🔗 Horse Sprite Sheet: https://opengameart.org/content/2d-platformer-art-assets-from-horse-of-spring
+🔗 Sprite (computer graphics): https://en.wikipedia.org/wiki/Sprite_(computer_graphics)
+
+🎥 Guest Tutorial 6: The Modulo Operator with Golan Levin: https://youtu.be/r5Iy3v1co0A
+
+🚂 Website: http://thecodingtrain.com/ 
+💖 Patreon: https://patreon.com/codingtrain
+🛒 Store: https://codingtrain.storenvy.com
+📚 Books: https://www.amazon.com/shop/thecodingtrain 
+
+🎥  Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥  Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+🔗  https://p5js.org/
+🔗  https://processing.org]]></description>
+            <link>https://dev.tube/video/3noMeuufLZY</link>
+            <guid isPermaLink="true">https://dev.tube/video/3noMeuufLZY</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:55 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AWS CloudFront | Creating Amazon CloudFront Distribution | AWS Training | Edureka]]></title>
+            <description><![CDATA[** AWS Architect Certification Training: https://www.edureka.co/cloudcomputing
+This Edureka "AWS CloudFront” video will introduce you to the fundamentals of AWS CloudFront and also explain various Content Delivery concepts. Following is the list of content covered in this session:
+
+1. What Is AWS?
+2. Need For AWS CloudFront
+3. What Is AWS CloudFront?
+4. How Content Gets Delivered?
+5. AWS CloudFront Applications
+6. Demo- AWS CloudFront Distribution
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Check out our AWS Playlist: https://goo.gl/8qrfKU
+
+ #AWSTutorial #GettingStartedWithAWS #AWSCertification #AWSTraining #AWSDomains #AWSClouFront #WhatIsAWS? #ContentDeliveryNetwork, AWS Domains, Compute, Storage, Database, Data Transfer #Messaging #Free Tier #Flexibility #AWSScalability #CloudComputing #EdgeLocations #Flexibility #AvailabilityZones #IntroductionToAmazonWebServices  #edureka
+
+-----------------------------------------------------------------
+
+How it Works?
+
+1. This is a 5 Weeks Instructor led Online Course, 30 hours of assignment and 20 hours of project work.
+
+
+2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+
+3. At the end of the training you will be working on a real time project for which we will provide you a Grade and a Verifiable Certificate!
+
+--------------------------------------------------------------------
+
+About The Course
+
+AWS holds 69% of the global market share in the cloud computing market. Irrespective of the size of an organization, everyone has started to adopt the cloud services in one way or the other, and AWS is the major player among the Cloud services industry.
+
+AWS Certification Training from Edureka is designed to provide in depth knowledge about AWS architectural principles and its services.
+
+----------------------------------------------------------------------
+
+What are the objectives of our AWS Architect Certification Training?
+
+During this AWS Architect Training, you’ll learn:
+
+·         AWS Architecture and different models of Cloud Computing
+
+·         Compute Services: AWS EC2, Auto Scaling and Load Balancing, AWS Lambda, Elastic Beanstalk
+
+·         Storage Services : AWS EBS, AWS S3, AWS Glacier, AWS CloudFront, AWS Snowball, Storage Gateway
+
+·         Database Services: AWS RDS, AWS DynamoDB, ElastiCache, AWS RedShift
+
+·         Security and Identity Services: IAM, KMS
+
+·         Networking Services: Amazon VPC, Route 53, Direct Connect
+
+·         Management Tools: AWS CloudTrail, AWS CloudWatch, CloudFormation, OpsWorks, Trusty Advisor
+
+·         Application Services: SES, SNS, SQS
+
+-----------------------------------------------------------------------
+
+What are the skills that you will be learning with our AWS Architect Certification Training?
+
+AWS Architect Certification is designed by industry experts to make you a certified AWS Solutions Architect. It will polish your skills by offering you comprehensive knowledge on Cloud computing. On the completion of the AWS Architect Training, learner will be able to:
+
+·         Design and deploy scalable, highly available, and fault tolerant systems on AWS
+
+·         Understand lift and shift of an existing on-premises application to AWS
+
+·         Ingress and egress of data to and from AWS
+
+·         Identify the appropriate AWS service based on data, compute, database, or security requirements
+
+·         Identify the appropriate use of AWS architectural best practices
+
+·         Estimate AWS costs and identifying cost control mechanisms
+
+-----------------------------------------------------------------------------------------------------------
+
+Who should go for this AWS Architect Certification Training?
+
+This AWS Certification Training is designed for the IT professionals who want to pursue a career in Cloud Computing and become AWS Certified Solutions Architect. Our AWS Architect Certification Training helps you to grab this opportunity and accelerate your career. It is best suited for:
+
+·         Professionals who want Project Experience in migrating and deploying AWS solutions
+
+·         Professionals with IT Infrastructure background
+
+·         Professionals with Virtualisation experience
+
+·         DevOps professionals
+
+·         Professionals with understanding of application, server, and network security and compliance
+
+---------------------------------------------------------------------------------------------------------
+
+Cognizant, Dell, KPMG, Hitachi, Wipro, Avanade, Annik Inc., Brillio and over 45,000 MNCs across 185 countries use Power BI
+
+For more information, please write back to us at sales@edureka.co
+Call us at US: +18336900808 (Toll Free) or India: +918861301699
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/sQNONcj0cvc</link>
+            <guid isPermaLink="true">https://dev.tube/video/sQNONcj0cvc</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Arduino vs Raspberry Pi | Which Board to Choose for IoT Projects | IoT Devices | Edureka]]></title>
+            <description><![CDATA[** Edureka IoT Training: https://www.edureka.co/iot-certification-training **
+Looking for the right kind of development boards for your IoT projects? It obviously boils down to either the Raspberry Pi or the Arduino. Now, while both might look very similar, but they’re actually very different. They’re both designed for separate utilities and are used under different circumstances. So, it is very important to know when to use which to get the best out of your projects while keeping the entire system energy-efficient and minimal. I’ve explained how the electronic control provided by both these popular boards differ and pointed out their key differences so that you understand which one of these single board systems are better suited to the needs of your projects. 
+
+Subscribe to our channel to get video updates. Hit the subscribe button above. 
+
+#IoT #AdruinoVsRaspberryPi #IoTtutorial #RaspberryPi #Arduino #IoTboards #DevelopmentBoards #InternetOfThings #iotonlinetraining #Edureka 
+
+-------------------------- 
+
+About our IoT Training 
+
+IoT Certification Training is designed by industry experts to make you a Certified IoT Developer. Edureka IoT training covers: 
+Understanding of IoT architecture and IoT Decision Framework 
+Configure Raspberry Pi, Understand Sensors, Actuators & get started with python on Raspberry Pi 
+Program Sensors (Sense-HAT board), Face Detection and reorganization using OpenCV-Python 
+Understand various IoT Networking Protocols which are mainly used to develop communication solutions
+Getting started with Cloud and Azure IoT Hub, demonstration of Azure IoT Hub APIs 
+Architect an End-to-End Solution using Raspberry Pi, Sense HAT, and Azure 
+Perform Data Analytics on the collected sensor data, use prediction algorithms to get useful insights 
+IoT challenges, business solutions, research scope and current development, Alexa Voice Bot on Raspberry Pi 
+
+-------------------------- 
+
+Who should go for this IoT Training? 
+
+This IoT Certification Training on Azure is for all the professionals who are passionate about work with IoT devices and want to go ahead and make their career as an IoT Developer. It is best suited for individuals who are: 
+Software Developers who are venturing into IoT space 
+Solution Architects 
+Technical Architects 
+Students who seek IoT knowledge 
+Business Executives and Managers who want to understand the essentials of IoT 
+
+------------------- 
+
+Why Learn IoT? 
+Internet of Things is considered as the next big technology revolution after invention of the Internet. It is supposed to make tremendous impacts on lives and may possibly lead to the betterment of millions of lives throughout the world. According to Cisco, over 50 million devices are expected to be connected to IoT by 2020. 
+Healthcare, Logistics, Aviation, Education, Information Technology name any thing and IoT will become an integral part of all these verticals. Internet of Things is believed to bring about the singularity which will ultimately converge into becoming the Internet of Everything. IoT has, therefore, become a leading interest of technologists globally and is perceived to be the NEXT BIG THING in IT industry. Learning IoT will not only provide you a career boost but you will also be able to gain insights on how technology has affected the world and will continue to do so in the coming decades. 
+
+For more information, please write back to us at sales@edureka.co 
+Call us at US: +18336900808 (Toll Free) or India: +918861301699 
+Facebook: https://www.facebook.com/edurekaIN/ 
+Twitter: https://twitter.com/edurekain 
+LinkedIn: https://www.linkedin.com/company/edureka 
+
+Customer Review: 
+Michael Harkins, System Architect, Hortonworks says: “The courses are top rate. The best part is live instruction, with playback. But my favourite feature is viewing a previous class. Also, they are always there to answer questions, and prompt when you open an issue if you are having any trouble. Added bonus ~ you get lifetime access to the course you took!!! ~ This is the killer education app... I've taken two courses, and I'm taking two more.”]]></description>
+            <link>https://dev.tube/video/vrQOv40SyDE</link>
+            <guid isPermaLink="true">https://dev.tube/video/vrQOv40SyDE</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to hack a Node app]]></title>
+            <description><![CDATA[Thought hacking was hard? It’s not! It’s easy and in this talk you'll see how to hack a Node.js app. We’ll investigate a series of hacking stories and break them down step-by-step to see exactly how they did it. By the end you’ll walk away a little bit more scared and a lot more prepared with some great practices you can apply immediately to your own applications.
+
+Talk by Asim Hussain.
+
+Video recorded at the GDG DevFest Ukraine - the biggest conference about Google technologies in Central and Eastern Europe.
+Learn about the conference at https://devfest.gdg.org.ua/
+More recordings at http://bit.ly/devfestua-channel
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/mhv87mU2M4o</link>
+            <guid isPermaLink="true">https://dev.tube/video/mhv87mU2M4o</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Don't Break the Chain: Maintaining Productivity on Your 19th Game]]></title>
+            <description><![CDATA[In this 2018 GDC talk, developer Jason Rohrer presents tested techniques he's used over the past 12 years, working alone, to ship 18 games.
+
+Register for GDC: http://ubm.io/2gk5KTU
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/mIPmjnsCPR4</link>
+            <guid isPermaLink="true">https://dev.tube/video/mIPmjnsCPR4</guid>
+            <pubDate>Mon, 30 Jul 2018 19:46:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Protecting Encryption Keys with Azure Key Vault - Stephen Haunts]]></title>
+            <description><![CDATA[In a world where we are putting our companies data in the cloud, the protection of that data against a data breach has never been more important. In this talk I will show you how to setup and use the Microsoft Azure Key vault to protect your encryption keys and secrets like passwords and connection strings. Azure Key Vault uses the power of Hardware Security Modules (HSM's) to protect your secrets and make sure your solutions are as secure as they can be when working in regulated industries like healthcare, financial and insurance.
+As well as showing you how to setup and configure the vault, I will show you how to code against it and various different patterns for security in a cloud base multi tenant environment. I will cover topics like:
+
+• Setup Azure key Vault
+• Authorize your application to access the vault with AzureAD
+• Accessing the vault from your applications
+• Using the Vault to wrap local encryption keys for performance
+• Encrypting connection strings as Key Vault secrets to get flexible database routing in the cloud
+• Audit logging for compliance
+
+Once this talk is finished you will walk away with everything you need to start using Azure Key Vault today.]]></description>
+            <link>https://dev.tube/video/WIgUmnwKdas</link>
+            <guid isPermaLink="true">https://dev.tube/video/WIgUmnwKdas</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Wait, you can do that with JavaScript…!? - Opher Vishnia]]></title>
+            <description><![CDATA[In 98’ I made my first webpage, which leveraged JavaScript to annoy visitors with blinking text animations. In 2017 I developed a film entirely in JS, which debuted in the Tribeca Film Festival.
+You can do so much with the browser today: Procedural art, interactive VR, physical simulation, real-time multiplayer games - and that’s just the tip of the iceberg. In this talk I want to take you a step further beyond sites and Web Apps. Perhaps your next project could push the envelope of the web as we know it?]]></description>
+            <link>https://dev.tube/video/ZuKbjvz-Tog</link>
+            <guid isPermaLink="true">https://dev.tube/video/ZuKbjvz-Tog</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Higher order functions for ordinary C++ developers - Björn Fahller]]></title>
+            <description><![CDATA[Higher order functions, i.e. functions that accept functions as parameters, or return functions, are not used much by C++ developers, except for the occasional call to standard algorithms.
+This session will show some simple techniques for writing your own, that will lift the level of abstraction in your programs, making code easier to read while reducing code duplication, and maintaining performance.]]></description>
+            <link>https://dev.tube/video/kcBlSmo3Xlk</link>
+            <guid isPermaLink="true">https://dev.tube/video/kcBlSmo3Xlk</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[An Opinionated Approach to ASP.NET Core - Scott Allen]]></title>
+            <description><![CDATA[Improve the architecture, design, and code inside your ASP.NET Core applications with an opinionated approach to ASP.NET Core.
+In this talk, we’ll look at strategies for organizing projects, solutions, files and folders. We'll also look at data access alternatives, see some tips for writing unit and integrations tests, and think differently about the MVC design pattern.]]></description>
+            <link>https://dev.tube/video/qxb62AErRWw</link>
+            <guid isPermaLink="true">https://dev.tube/video/qxb62AErRWw</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[IoT In Action - Powering Energy Efficiency with Azure IoT]]></title>
+            <description><![CDATA[Curious about how Microsoft is leading the smart energy and digital transformation initiatives with Azure IoT?
+Get a sneak peek at the upcoming Microsoft’s IoT In Action Smart Energy Webinar during which you will learn how the energy industry benefits from a myriad of IoT use cases, both on the consumer level and the industrial level. 
+
+Tune in to watch the webinar live on July 31, 2018 10:00a.m. PST / 11:00a.m. CET / 1:00p.m. SGT : https://aka.ms/IoTInAction/EnergyEfficiency
+
+Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
+            <link>https://dev.tube/video/M1ybjDTnAw4</link>
+            <guid isPermaLink="true">https://dev.tube/video/M1ybjDTnAw4</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Demystifying AI]]></title>
+            <description><![CDATA[This session is a primer to introduce the concepts of deep learning with a specific focus on computer vision. It covers concepts including CNN’s (Convolutional Neural Networks), deep learning and transfer learning. It was created as an introduction for people getting started with machine learning and specifically deep learning to explain some of the commonly used terms and introduce some of the popular approaches to solving computer vision challenges.
+
+Resources: 
+
+- azure.github.io/LearnAI-Bootcamp/
+
+- deeplearning.ai
+
+- datacamp.com/courses/deep-learning-in-python
+
+- edx.org/course/introduction-python-data-science-microsoft-dat208x-8
+
+- docs.microsoft.com/en-us/azure/machine-learning/data-science--virtual-machine/dsvm-deep-learning-ai-frameworks
+
+- gallery.cortanaintelligence.com/Tutorial/Cognitive-Toolkit-Tutorial--Getting-Started
+
+- gallery.cortanaintelligence.com/Project/MNIST-using-TensorFlow
+
+- docs.microsoft.com/en-us/azure/batch-ai/overview]]></description>
+            <link>https://dev.tube/video/k-K3g4FKS_c</link>
+            <guid isPermaLink="true">https://dev.tube/video/k-K3g4FKS_c</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[PWA and Offline Development]]></title>
+            <description><![CDATA[There is a lot of talk about Progressive Web Apps at the moment. It is a hot topic in the JavaScript community.
+In this talk, we will briefly explore what a PWA is and how to build one. We will look at the benefits of PWA's and more importantly their limitations.
+We then look a bit deeper at the technologies behind PWA's such as Service Workers, in particular we will look at the mechanics behind Service Workers, and how they will affect your back-end builds.
+Finally, we will look at offline development, the offline first life-cycle and the tools and technologies needed to start building offline applications. Comparing offline storage mechanisms, and their limitations.
+This talk is great for anyone building web-based applications, in any language, or anyone wanting to learn more about PWA's and offline development
+
+EVENT:
+
+the Dutch PHP Conference in 2018
+
+SPEAKER:
+
+Mike Oram
+
+PERMISSSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=uZrEYJ_DKQc]]></description>
+            <link>https://dev.tube/video/dlvevNPxHd8</link>
+            <guid isPermaLink="true">https://dev.tube/video/dlvevNPxHd8</guid>
+            <pubDate>Mon, 30 Jul 2018 19:41:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Road To ATS London - Sublime Skinz' Andrew Buckman Discusses Opportunities in Mobile]]></title>
+            <link>https://dev.tube/video/z6gc7eD73OI</link>
+            <guid isPermaLink="true">https://dev.tube/video/z6gc7eD73OI</guid>
+            <pubDate>Mon, 30 Jul 2018 19:39:10 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Cinematic Games Are Dead! Long Live Cinematic Games!]]></title>
             <description><![CDATA[In this 2015 GDC session, Fiction Control's Matthew Weise explains how clever uses of art, interface and UX can make an experience "cinematic" without ever having a single camera cut, and make players walk away feeling like they visited a movie like it was a place. 
@@ -77,208 +452,6 @@ Original video source: https://www.youtube.com/watch?v=gTNC26BtRFc]]></descripti
             <link>https://dev.tube/video/jqnVaYUcjCo</link>
             <guid isPermaLink="true">https://dev.tube/video/jqnVaYUcjCo</guid>
             <pubDate>Mon, 30 Jul 2018 01:26:30 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[JuniorDevSG Developer's Gym with ThoughtWorks (Session 2) - JuniorDevSG]]></title>
-            <description><![CDATA[Speaker: Gordon Guo
-
-Event Page: https://www.meetup.com/Junior-Developers-Singapore/events/252530990/
-
-Produced by Engineers.SG
-Recorded by: Michael Cheng
-
-Help us caption & translate this video!
-
-https://amara.org/v/k64T/]]></description>
-            <link>https://dev.tube/video/3l_qYu0-fSU</link>
-            <guid isPermaLink="true">https://dev.tube/video/3l_qYu0-fSU</guid>
-            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[TechLadies Pre-Bootcamp Workshop 2018 (Session 2) - TechLadies]]></title>
-            <description><![CDATA[Speaker: Sahil Bajaj, ThoughtWorks
-
-Slides: https://www.dropbox.com/s/81t2dj7rngpepkn/techladies%20-%20intro%20to%20js%20and%20react.pdf?dl=0
-
-Instructions: https://github.com/TechLadies/bootcamp-4-technical-task/blob/master/setup-guide.md
-
-Event Page: https://www.eventbrite.sg/e/techladies-bootcamp-4-pre-bootcamp-workshops-tickets-47615313685#
-
-Produced by Engineers.SG
-Recorded by: Michael Cheng
-
-Help us caption & translate this video!
-
-https://amara.org/v/k61G/]]></description>
-            <link>https://dev.tube/video/NpMZp1bfvlg</link>
-            <guid isPermaLink="true">https://dev.tube/video/NpMZp1bfvlg</guid>
-            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[TechLadies Pre-Bootcamp Workshop 2018 (Session 3) - TechLadies]]></title>
-            <description><![CDATA[Speaker: Tan Jun Qi, ThoughtWorks
-
-Workshop Material: https://github.com/TechLadies/react-express-mongo-prebootcamp-workshop-3-2018
-
-Event Page: https://www.eventbrite.sg/e/techladies-bootcamp-4-pre-bootcamp-workshops-tickets-47615313685#
-
-Produced by Engineers.SG
-Recorded by:
-
-Help us caption & translate this video!
-
-https://amara.org/v/k62f/]]></description>
-            <link>https://dev.tube/video/PXVwRNU-z8U</link>
-            <guid isPermaLink="true">https://dev.tube/video/PXVwRNU-z8U</guid>
-            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[JuniorDevSG Developer's Gym (Session 3) - JuniorDevSG]]></title>
-            <description><![CDATA[Speaker: Reuben Tan
-
-Material: https://github.com/CoderKungfu/intro-to-docker-workshop
-
-Event Page: https://www.meetup.com/Junior-Developers-Singapore/events/253082881/
-
-Produced by Engineers.SG
-Recorded by: Michael Cheng
-
-Help us caption & translate this video!
-
-https://amara.org/v/k67B/]]></description>
-            <link>https://dev.tube/video/kEO4eoQOJns</link>
-            <guid isPermaLink="true">https://dev.tube/video/kEO4eoQOJns</guid>
-            <pubDate>Mon, 30 Jul 2018 01:26:26 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[microPython for ESP32]]></title>
-            <description><![CDATA[Nick Moore
-http://linux.conf.au/schedule/presentation/202/
-Python is small. Micro even.]]></description>
-            <link>https://dev.tube/video/-MrqCmq3Z5k</link>
-            <guid isPermaLink="true">https://dev.tube/video/-MrqCmq3Z5k</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Running production workloads in a programmable infrastructure]]></title>
-            <description><![CDATA[Alejandro Tesch
-http://linux.conf.au/schedule/presentation/165/
-Infrastructure as Code is a hot topic today, however several IT managers and System Administrators often fail to see the benefits that it can provide to their day to day operations.
-
-In this mini-conf session we will go in depth into two use cases that can leverage on OpenStack to address common operation challenges.
-
-1) We will demo how to leverage HEAT and Ansible to automate the deployment of a two-tier load balanced environment within seconds that will host your enterprise applications.  We will showcase as well the autoscaling capabilities by overloading our web farm until we hit the CPU threshold that will spawn another tomcat server.
-
-2) "Data Cloning as a Service" will demonstrate how to automate the cloning of a 24 x 7 Mission critical Oracle database without impacting the end users.
-
-Ansible is used to place an enterprise database in backup mode, take a snapshot of the volume containing the Database, clone the cinder volume and get it transferred to a development tenant who will automatically start a clone of the database for testing and QA.]]></description>
-            <link>https://dev.tube/video/2Gu_rPxuQyQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/2Gu_rPxuQyQ</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Lightweight inventory management with Pallet Jack]]></title>
-            <description><![CDATA[Karl-Johan Karlsson
-http://linux.conf.au/schedule/presentation/114/
-Inventory management for systems administrators is crucial for day-to-day operations. When installing a new machine, its MAC address needs to be registered with the DHCP server. While it runs, the configuration management system needs to know what role it has so it can install the correct software. When it breaks, you need to know which rack and switch port to find it in, its serial number and when its service contract expires.
-
-We present [Pallet Jack](https://github.com/saab-simc-admin/palletjack), a systems administrator-friendly inventory database.
-
-Its back-end store consists of a directory tree with YAML fragments, which means you can insert, version and extract information using standard text processing tools. Inheritance and automatic text processing eliminates the need to store duplicated information. Finally, a simple but powerful Ruby library helps with generating configuration files from the database.]]></description>
-            <link>https://dev.tube/video/4oq4ursOnlw</link>
-            <guid isPermaLink="true">https://dev.tube/video/4oq4ursOnlw</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[The Sound of Silencing]]></title>
-            <description><![CDATA[Julien Goodwin
-http://linux.conf.au/schedule/presentation/164/
-Having automatic monitoring alerting us when there's problems with our systems
-is a core part of ensuring reliable systems, however this can lead to alert
-fatigue.
-
-This talk will cover using silencing, grouping and ihibition to reduce alert
-load, and improve the signal to noise ratio of remaining alerts.]]></description>
-            <link>https://dev.tube/video/9n2K0PnBKys</link>
-            <guid isPermaLink="true">https://dev.tube/video/9n2K0PnBKys</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[QA in the Open]]></title>
-            <description><![CDATA[Matthew Treinish
-http://linux.conf.au/schedule/presentation/156/
-One common misconception about a lot of Open Source projects is that the quality is variable and/or is of a secondary concern. This is supported to a certain degree by a lot of projects which do minimal testing upstream and rely on downstream consumers to do more thorough testing. But, there is no reason that an open project can not also do QA in the open as part of the community. While the term QA will likely evoke a plethora of negative emotions from anyone who has worked in a corporate development environment, there can be real benefits to having a dedicated QA effort on an open source project. It enables transparency in how testing is done, lets anyone contribute and collaborate, and can signal to users the stability of a project. This talk will use OpenStack as an case study to explore how an open source project can do QA in an open manner and the potential benefits it can provide.]]></description>
-            <link>https://dev.tube/video/ARV1OuBYYUE</link>
-            <guid isPermaLink="true">https://dev.tube/video/ARV1OuBYYUE</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[A Beautiful Build: Releasing Linux Source Correctly]]></title>
-            <description><![CDATA[Bradley M. Kuhn
-http://linux.conf.au/schedule/presentation/171/
-Most embedded computing products run Linux.  However, obtaining the complete, corresponding source code (CCS), which Linux's license (the GNU GPL) requires, can prove difficult.  The license dictates certain technical requirements; verification of a source code release for license compliance therefore requires technical analysis.  After years of reviewing many source releases for embedded Linux products, the speaker discovered (finally!) an excellent example of CCS, which not only meets the requirements of the GPL, but also enables and encourages users to take advantage of their rights to modify and install new versions of the software on their device.
-
-This talk briefly discusses the components of the router's source release, and then explains the aspects of the source release that made it particularly outstanding.  The talk proposes methods to achieve similar compliance successes on embedded products, suggests procedures for increasing the "tinkerer" userbase by improving beyond even what this excellent example provided, and gives insight into and perspective on compliance engineering analysis that occurs during GPL enforcement work.]]></description>
-            <link>https://dev.tube/video/C6HDJThJjyw</link>
-            <guid isPermaLink="true">https://dev.tube/video/C6HDJThJjyw</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Community Leadership Summit Summary]]></title>
-            <description><![CDATA[VM and group leaders]]></description>
-            <link>https://dev.tube/video/GXITFkxslhU</link>
-            <guid isPermaLink="true">https://dev.tube/video/GXITFkxslhU</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Multiplayer gaming and distributed state]]></title>
-            <description><![CDATA[Caskey L. Dickson
-http://linux.conf.au/schedule/presentation/197/
-The hardest thing about writing games (after gamplay, mechanics, ux, marketing and paying the bills) is managing the game state as viewed by all users.  This talk will cover the principles of distributed shared state, strategies such as frequent state regeneration, change validation and how your choice of connectivity and latency profiles change the user experience.]]></description>
-            <link>https://dev.tube/video/LQTaknsCI0I</link>
-            <guid isPermaLink="true">https://dev.tube/video/LQTaknsCI0I</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Interface citizen scientists with government.]]></title>
-            <description><![CDATA[Johan Codinha
-http://linux.conf.au/schedule/presentation/148/
-The victorian biodiversity is facing constant danger, from bush fires to  pest and weeds just to name few. To protect the different ecosystem from natural and human disaster the government needs data !
-I am going to walk you thru the history of biodiversity data collection in Victoria ( it's a young country so it's gonna be a short walk ), from hundreds of government employee surveying the countryside in the 80's to 2016 where we rely almost exclusively on citizen scientists to provide accurate data.
-Then we will have a look at tools of the past, present and future for collecting biodiversity data and what is the role of standards and open software.
-Government agencies are taking land management decision based on biodiversity databases, we will have a look at how the data is beeing verified and what are the potential security risks.]]></description>
-            <link>https://dev.tube/video/OXGr4KlQ05E</link>
-            <guid isPermaLink="true">https://dev.tube/video/OXGr4KlQ05E</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Opening & Welcome]]></title>
-            <description><![CDATA[Chris Neugebauer / Karen Sandler]]></description>
-            <link>https://dev.tube/video/Sc7NKOCjugo</link>
-            <guid isPermaLink="true">https://dev.tube/video/Sc7NKOCjugo</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Almost Open - Just close the door behind you]]></title>
-            <description><![CDATA[Steven Ellis
-http://linux.conf.au/schedule/presentation/147/
-We are potentially at an interesting tipping point in the future of Free and Open Source software as more of our interactions are managed by services rather than applications. Does Open Source have a future or are we pivoting towards a services based ecosystem where the best we can hope for is some degree of Open Standards? These open standards have no specific entity tasked with defining each of them, yet every day we hear about Open Hardware, Open Government, Open APIs.
-
-What does Open mean within the ecosystem you operate within, and how can we continue to be a catalyst for the journey and grow the Open Source movement when so many closed outcomes are being produced from the Open Source ecosystem?
-
-This is a collaborative session to look unpack the issue and formulate some actions that can be used by the attendees within their communities, businesses and organisations.]]></description>
-            <link>https://dev.tube/video/ceYMBBiVfCE</link>
-            <guid isPermaLink="true">https://dev.tube/video/ceYMBBiVfCE</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[ESP32 development example using IoTuz]]></title>
-            <description><![CDATA[Andy Gelme
-http://linux.conf.au/schedule/presentation/203/
-Developing for IoTuz on ESP32 with an example.]]></description>
-            <link>https://dev.tube/video/dugl8N6wZSA</link>
-            <guid isPermaLink="true">https://dev.tube/video/dugl8N6wZSA</guid>
-            <pubDate>Sun, 29 Jul 2018 01:32:43 GMT</pubDate>
         </item>
     </channel>
 </rss>
