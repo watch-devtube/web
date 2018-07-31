@@ -1,10 +1,9 @@
 <template lang="pug">
-  .card
+  .card(style="height: 100%;")
       .card-image
         a(:href="'/video' + '/' + id")
-          .image
-            img(:src="'//img.youtube.com/vi/' + id + '/hqdefault.jpg'")
-            i.is-size-3.fab.fa-youtube.watch.has-text-light
+          .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
+            i.is-size-3.fab.fa-youtube.watch
             .is-overlay
             p.ttl.is-capitalized.is-size-7 {{title}}
       .card-content
@@ -17,15 +16,24 @@
                 p.subtitle.is-7 
                   a.has-text-black(:href="'/@' + speaker.twitter") @{{speaker.twitter}} 
                   a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
-          .media(v-if="speaker && newMode")
+          .media(v-if="newMode && speaker")
               .media-left
                   figure.image.is-48x48
-                    router-link.has-text-white(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+                    img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .media-content
-                p.title.is-6: router-link.has-text-black(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") {{speaker.name}}
+                p.title.is-6 {{speaker.name}}
                 p.subtitle.is-7 
-                  router-link.has-text-black(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") @{{speaker.twitter}} 
-                  a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
+                  router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") @{{speaker.twitter}} 
+          .media(v-if="newMode && !speaker")
+              .media-left
+                figure.image.is-48x48
+                  img.avatar(src="/unknown.png")
+              .media-content(v-if="!speaker")
+                p.title.is-6 Know the speaker?
+                p.subtitle.is-7
+                  a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
+                    i.fas.fa-heart
+                    |  contribute
           nav.level.is-mobile
             .level-item.has-text-centered
               div
@@ -44,6 +52,12 @@
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
+          .contribute(v-if="speaker")
+            p.subtitle.is-7
+              | Wrong data? 
+              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
+                i.fas.fa-heart
+                |  contribute
 </template>
 <style lang="scss">
   .card {
@@ -56,18 +70,22 @@
       border-radius: 50%
     }
 
+
     div.image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background-size: cover;
+      position: relative;
 
         .watch {
-          z-index: 1;
-          position: absolute;
-          right: 5px;
-          top: 5px;
+          color: white;
+          opacity: 0.5;
           transition: 0.4s ease;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          height: 30%;
+          width: 50%;
+          margin: -15% 0 0 -25%;
         }
 
         div.is-overlay {
@@ -76,6 +94,7 @@
         }
 
     .ttl {
+        text-align: left;
         position: absolute;
         bottom: 20px;
         width: 90%;
@@ -98,16 +117,16 @@
   }
 
   .card:hover {
-
     box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
-
     .watch {
-      color: #4988cb !important;
+      opacity: 1 !important;
     }
   } 
 </style>
 <script>
   import Tags from './Tags.vue'
+  import dayjs from 'dayjs'
+
   export default {
     props: { 
       newMode: { type: Boolean, required: true },
@@ -134,7 +153,10 @@
     },
     computed: {
       isNew() {
-        return window.newVideos.find(it => it === this.id)
+        let today = dayjs()
+        let videoCreated = dayjs(this.creationDate * 1000)
+        let videoAgeInDays = today.diff(videoCreated, 'days')
+        return videoAgeInDays <= 7
       }
     },
     methods: {

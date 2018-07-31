@@ -4,45 +4,62 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 16 Jul 2018 03:22:50 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 31 Jul 2018 04:33:35 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Java 8 Language Capabilities, What's in it for you?]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2014.
-Speaker: Venkat Subramaniam
-No Slides at speaker request
-There is a good amount of excitement about the new version of Java. The big evolution of course is the lambda expressions. In this presentation we will dive into the language features in Java 8, take a look at some of their nuances, and look at ways to put them to good use. In addition to looking at lambdas we will also dive into the Streams capabilities and also some of the features in Java 8 that make all these possible.
+            <title><![CDATA[YOW! Data 2018 - Tim Garnsey - Respecting privacy]]></title>
+            <description><![CDATA[Safely handling data that contains sensitive or private information about people is a multi-million dollar problem at many companies. It adds time into the data engineering process, it can cost a lot in software licenses for specialised tools, and brings a range of reputational and legal risks.
 
-TIMES
-September 11, 2014
-10:30 AM - 12:00 PM
-Dallas Ballroom E-F
-SCHEDULE]]></description>
-            <link>https://dev.tube/video/j9nj5dTo54Q</link>
-            <guid isPermaLink="true">https://dev.tube/video/j9nj5dTo54Q</guid>
-            <pubDate>Sun, 15 Jul 2018 01:29:22 GMT</pubDate>
+Recent advances in deep learning have prompted an interesting way to attack this problem. By fitting a certain class of model on a source data set that contains sensitive information, we can produce a generator that outputs a supply of synthetic "look alike" data. This output data will preserve many of the statistical relationships between fields as the source does, and offers mathematical guarantees around the identifiability of individuals in the source data set.
+
+This talk will provide an overview of the approach and show how it can speed data engineering effort and reduce risk.
+
+Tim is a Director at Verge Labs, a new type of AI company focused on the applied side of machine learning. At Verge Tim sifts through the daily firehose of theoretical research and builds a curated library of techniques and utilities ready to be switched on at companies today. 
+ 
+Prior to this Tim spent six years absorbed in machine learning and data related roles in financial services tech companies including Atlassian, Spaceship and Airtasker. 
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/hUIBKk2r6UE</link>
+            <guid isPermaLink="true">https://dev.tube/video/hUIBKk2r6UE</guid>
+            <pubDate>Tue, 31 Jul 2018 01:28:32 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Hadoop - Just the Basics for Big Data Rookies]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2013 in Santa Clara, CA
-Speaker: Adam Shook
-This session assumes absolutely no knowledge of Apache Hadoop and will provide a complete introduction to all the major aspects of the Hadoop ecosystem of projects and tools. If you are looking to get up to speed on Hadoop, trying to work out what all the Big Data fuss is about, or just interested in brushing up your understanding of MapReduce, then this is the session for you. We will cover all the basics with detailed discussion about HDFS, MapReduce, YARN (MRv2), and a broad overview of the Hadoop ecosystem including Hive, Pig, HBase, ZooKeeper and more.]]></description>
-            <link>https://dev.tube/video/xYnS9PQRXTg</link>
-            <guid isPermaLink="true">https://dev.tube/video/xYnS9PQRXTg</guid>
-            <pubDate>Sun, 15 Jul 2018 01:32:32 GMT</pubDate>
+            <title><![CDATA[YOW! Lambda Jam 2018 - George Wilson - Lessons From the Design and Implementation of a CSV Library]]></title>
+            <description><![CDATA[From CSV, to JSON, to YAML, DER, and the dreaded XML, many programmers are dealing with data formats all day. In statically-typed languages like Haskell, we can get a great benefit by imposing a rigid structure of types on the data we consume from these formats. We call this process of imposing structure on data "decoding".
+
+Decoding libraries are available in many languages and for many formats. This talk explores the design decisions behind a new Haskell library, sv, which decodes CSV and similar formats such as PSV. sv addresses what we perceived as problems with other libraries. We will discuss the benefits and drawbacks of the interesting or noteworthy choices made in sv's philosophy and design, and make recommendations as to how these lessons could be applied to other formats.
+
+George is an enthusiastic programmer working at the Queensland Functional Programming Lab within Data61/CSIRO. George loves working with and speaking about Functional Programming, usually in Haskell. George is also a co-organiser of the Brisbane Functional Programming Group, and a member of the Haskell.org committee.
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/zP-DgjIcCho</link>
+            <guid isPermaLink="true">https://dev.tube/video/zP-DgjIcCho</guid>
+            <pubDate>Tue, 31 Jul 2018 01:28:32 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Coding Challenge #109: Visualizing 500,000 Subscribers]]></title>
-            <description><![CDATA[Celebrating the 500,000 subscribers milestone, I create a map visualization of Coding Train subscriber locations around the world!
+            <title><![CDATA[EBF onboarder for Microsoft Intune - Endpoint Zone 1807]]></title>
+            <description><![CDATA[Coming up in the show we'll be taking a look at how you migrate to Microsoft 365 and Microsoft Intune and we'll take a deep dive into an amazing tool; EBF onboarder for Microsoft Intune.
+ 
+[T02:06] - Millions of devices are migrating to Microsoft 365
+[T07:00] - Understand how you consolidate your security with Microsoft 365
+[T08:50] - How many users are using EMS?
+[T10:00] - Nico shows us EBF on boarder for Intune
+[T15:12] - EBF on boarder demo
+[T21:30] - Looking at some of the top deploying customer trends for Intune]]></description>
+            <link>https://dev.tube/video/BuV9Ntszwb8</link>
+            <guid isPermaLink="true">https://dev.tube/video/BuV9Ntszwb8</guid>
+            <pubDate>Tue, 31 Jul 2018 01:28:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coding Challenge #111: Animated Sprites]]></title>
+            <description><![CDATA[In this coding challenge, I load a sprite sheet and create multiple animated sprites with the p5.js library. #animation #spritesheet #p5js #codingchallenge
 
-🔗 http://thecodingtrain.com/CodingChallenges/109-subscribers-map
-🔗 https://github.com/CodingTrain/500k-Subscriber-Map
-🔗 https://codingtrain.github.io/500k-Subscriber-Map
+💻 http://thecodingtrain.com/CodingChallenges/111-animated-sprite
 
-🔗 Mappa.js Simple Map: https://mappa.js.org/docs/simple-map.html
-🔗 Maps, Maps, Maps! By Cristobal Valenzuela: https://medium.com/processing-foundation/maps-maps-maps-f0914218c87b
-🔗 Countries latitude and longitude: https://gist.github.com/sindresorhus/1341699
-🔗 Leaflet: https://leafletjs.com/
+🔗 Horse Sprite Sheet: https://opengameart.org/content/2d-platformer-art-assets-from-horse-of-spring
+🔗 Sprite (computer graphics): https://en.wikipedia.org/wiki/Sprite_(computer_graphics)
+
+🎥 Guest Tutorial 6: The Modulo Operator with Golan Levin: https://youtu.be/r5Iy3v1co0A
 
 🚂 Website: http://thecodingtrain.com/ 
 💖 Patreon: https://patreon.com/codingtrain
@@ -54,142 +71,178 @@ This session assumes absolutely no knowledge of Apache Hadoop and will provide a
 
 🔗  https://p5js.org/
 🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/Ae73YY_GAU8</link>
-            <guid isPermaLink="true">https://dev.tube/video/Ae73YY_GAU8</guid>
-            <pubDate>Sun, 15 Jul 2018 01:31:02 GMT</pubDate>
+            <link>https://dev.tube/video/3noMeuufLZY</link>
+            <guid isPermaLink="true">https://dev.tube/video/3noMeuufLZY</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:55 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[REST-Ful API Design]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2013 in Santa Clara, CA.
-Speaker: Ben Hale
-As data-driven applications become more widespread, the services that provide the data are becoming more critical. Most commonly these data services are exposed via REST-ful APIs. This session describes what exactly makes a service REST-ful, how to implement a REST-ful API using Spring, and how to test that API.
+            <title><![CDATA[AWS CloudFront | Creating Amazon CloudFront Distribution | AWS Training | Edureka]]></title>
+            <description><![CDATA[** AWS Architect Certification Training: https://www.edureka.co/cloudcomputing
+This Edureka "AWS CloudFront” video will introduce you to the fundamentals of AWS CloudFront and also explain various Content Delivery concepts. Following is the list of content covered in this session:
 
-Learn more about REST on http://www.spring.io
-at
-http://projects.spring.io/spring-framework/ (spring MVC's REST controller)
-http://projects.spring.io/spring-hateoas/ (Hypermedia Support)]]></description>
-            <link>https://dev.tube/video/oG2rotiGr90</link>
-            <guid isPermaLink="true">https://dev.tube/video/oG2rotiGr90</guid>
-            <pubDate>Sun, 15 Jul 2018 01:33:36 GMT</pubDate>
+1. What Is AWS?
+2. Need For AWS CloudFront
+3. What Is AWS CloudFront?
+4. How Content Gets Delivered?
+5. AWS CloudFront Applications
+6. Demo- AWS CloudFront Distribution
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Check out our AWS Playlist: https://goo.gl/8qrfKU
+
+ #AWSTutorial #GettingStartedWithAWS #AWSCertification #AWSTraining #AWSDomains #AWSClouFront #WhatIsAWS? #ContentDeliveryNetwork, AWS Domains, Compute, Storage, Database, Data Transfer #Messaging #Free Tier #Flexibility #AWSScalability #CloudComputing #EdgeLocations #Flexibility #AvailabilityZones #IntroductionToAmazonWebServices  #edureka
+
+-----------------------------------------------------------------
+
+How it Works?
+
+1. This is a 5 Weeks Instructor led Online Course, 30 hours of assignment and 20 hours of project work.
+
+
+2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+
+3. At the end of the training you will be working on a real time project for which we will provide you a Grade and a Verifiable Certificate!
+
+--------------------------------------------------------------------
+
+About The Course
+
+AWS holds 69% of the global market share in the cloud computing market. Irrespective of the size of an organization, everyone has started to adopt the cloud services in one way or the other, and AWS is the major player among the Cloud services industry.
+
+AWS Certification Training from Edureka is designed to provide in depth knowledge about AWS architectural principles and its services.
+
+----------------------------------------------------------------------
+
+What are the objectives of our AWS Architect Certification Training?
+
+During this AWS Architect Training, you’ll learn:
+
+·         AWS Architecture and different models of Cloud Computing
+
+·         Compute Services: AWS EC2, Auto Scaling and Load Balancing, AWS Lambda, Elastic Beanstalk
+
+·         Storage Services : AWS EBS, AWS S3, AWS Glacier, AWS CloudFront, AWS Snowball, Storage Gateway
+
+·         Database Services: AWS RDS, AWS DynamoDB, ElastiCache, AWS RedShift
+
+·         Security and Identity Services: IAM, KMS
+
+·         Networking Services: Amazon VPC, Route 53, Direct Connect
+
+·         Management Tools: AWS CloudTrail, AWS CloudWatch, CloudFormation, OpsWorks, Trusty Advisor
+
+·         Application Services: SES, SNS, SQS
+
+-----------------------------------------------------------------------
+
+What are the skills that you will be learning with our AWS Architect Certification Training?
+
+AWS Architect Certification is designed by industry experts to make you a certified AWS Solutions Architect. It will polish your skills by offering you comprehensive knowledge on Cloud computing. On the completion of the AWS Architect Training, learner will be able to:
+
+·         Design and deploy scalable, highly available, and fault tolerant systems on AWS
+
+·         Understand lift and shift of an existing on-premises application to AWS
+
+·         Ingress and egress of data to and from AWS
+
+·         Identify the appropriate AWS service based on data, compute, database, or security requirements
+
+·         Identify the appropriate use of AWS architectural best practices
+
+·         Estimate AWS costs and identifying cost control mechanisms
+
+-----------------------------------------------------------------------------------------------------------
+
+Who should go for this AWS Architect Certification Training?
+
+This AWS Certification Training is designed for the IT professionals who want to pursue a career in Cloud Computing and become AWS Certified Solutions Architect. Our AWS Architect Certification Training helps you to grab this opportunity and accelerate your career. It is best suited for:
+
+·         Professionals who want Project Experience in migrating and deploying AWS solutions
+
+·         Professionals with IT Infrastructure background
+
+·         Professionals with Virtualisation experience
+
+·         DevOps professionals
+
+·         Professionals with understanding of application, server, and network security and compliance
+
+---------------------------------------------------------------------------------------------------------
+
+Cognizant, Dell, KPMG, Hitachi, Wipro, Avanade, Annik Inc., Brillio and over 45,000 MNCs across 185 countries use Power BI
+
+For more information, please write back to us at sales@edureka.co
+Call us at US: +18336900808 (Toll Free) or India: +918861301699
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/sQNONcj0cvc</link>
+            <guid isPermaLink="true">https://dev.tube/video/sQNONcj0cvc</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:47 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Understanding Java Garbage Collection and what you can do about it]]></title>
-            <description><![CDATA[Recorded at SpringOne 2GX 2012.
-Speaker: Gil Tene, Azul Systems
-Garbage Collection is an integral part of application behavior on Java platforms, yet it is often misunderstood. As such, it is important for Java developers to understand the actions you can take in selecting and tuning collector mechanisms, as well as in your application architecture choices. In this session, Gil Tene (CTO, Azul Systems) will review and classify the various garbage collectors and collection techniques available in JVMs today. Following a quick overview of common garbage collection techniques including generational, parallel, stop-the-world, incremental, concurrent and mostly-concurrent algorithms, we will define terms and metrics common to all collectors. We will classify each major JVM collector's mechanisms and characteristics and discuss the tradeoffs involved in balancing requirements for responsiveness, throughput, space, and available memory across varying scale levels. We will conclude with some pitfalls, common misconceptions, and "myths" around garbage collection behavior, as well as examples of how some good choices can result in impressive application behavior.]]></description>
-            <link>https://dev.tube/video/we_enrM7TSY</link>
-            <guid isPermaLink="true">https://dev.tube/video/we_enrM7TSY</guid>
-            <pubDate>Sun, 15 Jul 2018 01:33:36 GMT</pubDate>
+            <title><![CDATA[Arduino vs Raspberry Pi | Which Board to Choose for IoT Projects | IoT Devices | Edureka]]></title>
+            <description><![CDATA[** Edureka IoT Training: https://www.edureka.co/iot-certification-training **
+Looking for the right kind of development boards for your IoT projects? It obviously boils down to either the Raspberry Pi or the Arduino. Now, while both might look very similar, but they’re actually very different. They’re both designed for separate utilities and are used under different circumstances. So, it is very important to know when to use which to get the best out of your projects while keeping the entire system energy-efficient and minimal. I’ve explained how the electronic control provided by both these popular boards differ and pointed out their key differences so that you understand which one of these single board systems are better suited to the needs of your projects. 
+
+Subscribe to our channel to get video updates. Hit the subscribe button above. 
+
+#IoT #AdruinoVsRaspberryPi #IoTtutorial #RaspberryPi #Arduino #IoTboards #DevelopmentBoards #InternetOfThings #iotonlinetraining #Edureka 
+
+-------------------------- 
+
+About our IoT Training 
+
+IoT Certification Training is designed by industry experts to make you a Certified IoT Developer. Edureka IoT training covers: 
+Understanding of IoT architecture and IoT Decision Framework 
+Configure Raspberry Pi, Understand Sensors, Actuators & get started with python on Raspberry Pi 
+Program Sensors (Sense-HAT board), Face Detection and reorganization using OpenCV-Python 
+Understand various IoT Networking Protocols which are mainly used to develop communication solutions
+Getting started with Cloud and Azure IoT Hub, demonstration of Azure IoT Hub APIs 
+Architect an End-to-End Solution using Raspberry Pi, Sense HAT, and Azure 
+Perform Data Analytics on the collected sensor data, use prediction algorithms to get useful insights 
+IoT challenges, business solutions, research scope and current development, Alexa Voice Bot on Raspberry Pi 
+
+-------------------------- 
+
+Who should go for this IoT Training? 
+
+This IoT Certification Training on Azure is for all the professionals who are passionate about work with IoT devices and want to go ahead and make their career as an IoT Developer. It is best suited for individuals who are: 
+Software Developers who are venturing into IoT space 
+Solution Architects 
+Technical Architects 
+Students who seek IoT knowledge 
+Business Executives and Managers who want to understand the essentials of IoT 
+
+------------------- 
+
+Why Learn IoT? 
+Internet of Things is considered as the next big technology revolution after invention of the Internet. It is supposed to make tremendous impacts on lives and may possibly lead to the betterment of millions of lives throughout the world. According to Cisco, over 50 million devices are expected to be connected to IoT by 2020. 
+Healthcare, Logistics, Aviation, Education, Information Technology name any thing and IoT will become an integral part of all these verticals. Internet of Things is believed to bring about the singularity which will ultimately converge into becoming the Internet of Everything. IoT has, therefore, become a leading interest of technologists globally and is perceived to be the NEXT BIG THING in IT industry. Learning IoT will not only provide you a career boost but you will also be able to gain insights on how technology has affected the world and will continue to do so in the coming decades. 
+
+For more information, please write back to us at sales@edureka.co 
+Call us at US: +18336900808 (Toll Free) or India: +918861301699 
+Facebook: https://www.facebook.com/edurekaIN/ 
+Twitter: https://twitter.com/edurekain 
+LinkedIn: https://www.linkedin.com/company/edureka 
+
+Customer Review: 
+Michael Harkins, System Architect, Hortonworks says: “The courses are top rate. The best part is live instruction, with playback. But my favourite feature is viewing a previous class. Also, they are always there to answer questions, and prompt when you open an issue if you are having any trouble. Added bonus ~ you get lifetime access to the course you took!!! ~ This is the killer education app... I've taken two courses, and I'm taking two more.”]]></description>
+            <link>https://dev.tube/video/vrQOv40SyDE</link>
+            <guid isPermaLink="true">https://dev.tube/video/vrQOv40SyDE</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:47 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Developing microservices with aggregates - Chris Richardson]]></title>
-            <description><![CDATA[Recorded at SpringOne Platform 2016.
-Slides: http://www.slideshare.net/SpringCentral/developing-microservices-with-aggregates
+            <title><![CDATA[How to hack a Node app]]></title>
+            <description><![CDATA[Thought hacking was hard? It’s not! It’s easy and in this talk you'll see how to hack a Node.js app. We’ll investigate a series of hacking stories and break them down step-by-step to see exactly how they did it. By the end you’ll walk away a little bit more scared and a lot more prepared with some great practices you can apply immediately to your own applications.
 
-The Domain Model pattern is a great way to develop complex business logic.
+Talk by Asim Hussain.
 
-Unfortunately, a typical domain model is a tangled, birds nest of classes.
-
-It can’t be decomposed into microservices.
-
-Moreover, business logic often relies on ACID transactions to maintain consistency.
-
-Fortunately, there is a solution to this problem: aggregates.
-
-An aggregate is an often overlooked modeling concept from the must read book Domain Driven Design.
-
-In this talk you will learn how aggregates enable you to develop business logic for the modern world of microservices and NoSQL.
-
-We will describe how to use aggregates to design modular business logic that can be partitioned into microservices. You will learn how aggregates enable you to use eventual consistency instead of ACID.
-
-We will describe the design of a microservice that is built using aggregates, and Spring Cloud.]]></description>
-            <link>https://dev.tube/video/7kX3fs0pWwc</link>
-            <guid isPermaLink="true">https://dev.tube/video/7kX3fs0pWwc</guid>
-            <pubDate>Sun, 15 Jul 2018 01:28:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Developing Real-Time Data Pipelines with Apache Kafka]]></title>
-            <description><![CDATA[Speaker: Joe Stein
-Big Data Track
-Slides: http://www.slideshare.net/SpringCentral/developing-realtime-data-pipelines-with-apache-kafka-53201942
-Developing Real-Time Data Pipelines with Apache Kafka http://kafka.apache.org/ is an introduction for developers about why and how to use Apache Kafka. Apache Kafka is a publish-subscribe messaging system rethought of as a distributed commit log. Kafka is designed to allow a single cluster to serve as the central data backbone. A single Kafka broker can handle hundreds of megabytes of reads and writes per second from thousands of clients. It can be elastically and transparently expanded without downtime. Data streams are partitioned and spread over a cluster of machines to allow data streams larger than the capability of any single machine and to allow clusters of coordinated consumers. Messages are persisted on disk and replicated within the cluster to prevent data loss. Each broker can handle terabytes of messages. For the Spring user, Spring Integration Kafka and Spring XD provide integration with Apache Kafka.]]></description>
-            <link>https://dev.tube/video/GRPLRONVDWY</link>
-            <guid isPermaLink="true">https://dev.tube/video/GRPLRONVDWY</guid>
-            <pubDate>Sun, 15 Jul 2018 01:29:56 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Why care how your tools work?]]></title>
-            <description><![CDATA[🔗 Devlifts - fitness company solely focused on developers (sponsored)
-https://devlifts.io (use coupon code "funfunfunction" for 20% off)
-
-🔗 (Patrons only) Official discussion topic for this episode on the Fun Fun Forum:
-https://www.funfunforum.com/t/why-care-how-your-tools-work/5340
-
-🔗 Support the show by becoming a Patreon
-https://www.youtube.com/watch?v=trP9q703x0o
-
-🔗 Neural Network from scratch episode
-https://youtu.be/o98qlvrcqiU
-
-🔗 Playlist: MPJ's musings
-https://www.youtube.com/playlist?list=PL0zVEGEvSaeGmPpG8tAaqSmf3k56LPwiF
-
-🔗  mpj on Twitter
-https://twitter.com/mpjme
-
-🔗  Help translate the show to your language
-http://www.youtube.com/timedtext_cs_panel?tab=2&c=UCO1cgjhGzsSYb1rsB4bFe4Q
-
-Programming is constantly changing, and in order to adapt to a constantly changing landscape, we need to constantly learn, and in order to constantly learn we need to be motivated to learn, we need to be excited, we need to be interested, and in order to be excited about something, you need to know why it is important.]]></description>
-            <link>https://dev.tube/video/i_HA1JPz7X4</link>
-            <guid isPermaLink="true">https://dev.tube/video/i_HA1JPz7X4</guid>
-            <pubDate>Sun, 15 Jul 2018 01:30:31 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Learn Python - Full Course for Beginners]]></title>
-            <description><![CDATA[This course will give you a full introduction into all of the core concepts in python. Follow along with the videos and you'll be a python programmer in no time!
-
-⭐️ Contents ⭐
-⌨️ (0:00) Introduction
-⌨️ (1:45) Installing Python & PyCharm
-⌨️ (6:40) Setup & Hello World
-⌨️ (10:23) Drawing a Shape
-⌨️ (15:06) Variables & Data Types
-⌨️ (27:03) Working With Strings
-⌨️ (38:18) Working With Numbers
-⌨️ (48:26) Getting Input From Users
-⌨️ (52:37) Building a Basic Calculator
-⌨️ (58:27) Mad Libs Game
-⌨️ (1:03:10) Lists
-⌨️ (1:10:44) List Functions
-⌨️ (1:18:57) Tuples
-⌨️ (1:24:15) Functions
-⌨️ (1:34:11) Return Statement
-⌨️ (1:40:06) If Statements
-⌨️ (1:54:07) If Statements & Comparisons
-⌨️ (2:00:37) Building a better Calculator
-⌨️ (2:07:17) Dictionaries
-⌨️ (2:14:13) While Loop
-⌨️ (2:20:21) Building a Guessing Game
-⌨️ (2:32:44) For Loops
-⌨️ (2:41:20) Exponent Function
-⌨️ (2:47:13) 2D Lists & Nested Loops
-⌨️ (2:52:41) Building a Translator
-⌨️ (3:00:18) Comments
-⌨️ (3:04:17) Try / Except
-⌨️ (3:12:41) Reading Files
-⌨️ (3:21:26) Writing to Files
-⌨️ (3:28:13) Modules & Pip
-⌨️ (3:43:56) Classes & Objects
-⌨️ (3:57:37) Building a Multiple Choice Quiz
-⌨️ (4:08:28) Object Functions
-⌨️ (4:12:37) Inheritance
-⌨️ (4:20:43) Python Interpreter
-
-
-Course developed by Giraffe Academy. Check out their YouTube channel for more great programming courses: https://www.youtube.com/channel/UCvmINlrza7JHB1zkIOuXEbw
-
-🔗The Giraffe Academy website: http://www.giraffeacademy.com/
+Video recorded at the GDG DevFest Ukraine - the biggest conference about Google technologies in Central and Eastern Europe.
+Learn about the conference at https://devfest.gdg.org.ua/
+More recordings at http://bit.ly/devfestua-channel
 
 --
 
@@ -198,138 +251,207 @@ Learn to code for free and get a developer job: https://www.freecodecamp.org
 Read hundreds of articles on programming: https://medium.freecodecamp.org
 
 And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/rfscVS0vtbw</link>
-            <guid isPermaLink="true">https://dev.tube/video/rfscVS0vtbw</guid>
-            <pubDate>Sun, 15 Jul 2018 01:30:33 GMT</pubDate>
+            <link>https://dev.tube/video/mhv87mU2M4o</link>
+            <guid isPermaLink="true">https://dev.tube/video/mhv87mU2M4o</guid>
+            <pubDate>Mon, 30 Jul 2018 19:47:34 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[From 0 to Spring Security 4.0]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2014.
-Speaker: Rob Winch
-Slides: http://www.slideshare.net/SpringCentral/spring-security0to40-41084141
-Core Spring Track
-Spring Security is a framework that focuses on providing both authentication and authorization to Java applications. Like all Spring projects, the real power of Spring Security is found in how easily it can be extended to meet custom requirements. In this presentation Rob will start with an insecure application and incrementally Spring Security 4 to demonstrate how easily you can secure your application. Throughout the presentation, new features found in Spring Security 4 will be highlighted. Whether you are new to Spring Security or are wanting to learn what is new in Spring Security 4, this presentation is a must!]]></description>
-            <link>https://dev.tube/video/TjlDbIIJBi8</link>
-            <guid isPermaLink="true">https://dev.tube/video/TjlDbIIJBi8</guid>
-            <pubDate>Sun, 15 Jul 2018 01:28:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Getting Started with Spring Cloud]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2015
-Speakers: Dr. Dave Syer, Josh Long
-Slides: http://www.slideshare.net/SpringCentral/getting-started-with-spring-cloud
-Spring Cloud 1.0 is here! It offers a powerful way to create and consume microservices. As you introduce new services, you introduce integration problems: services can be shaky, they can disappear and - as they're often exposed over HTTP - they require a bit more footwork than in-process method invocations. In this webinar, we'll focus specifically on how Spring Cloud integrates service registration (e.g. Eureka), declarative REST clients (with Netflix's Feign), reactive programming and the circuit breaker pattern with Hystrix to support easy, robust service-to-service invocations, and messaging microservices with Spring Cloud Stream. This is a deep dive on how to make connect and consume microservices, and is a natural next step after the introduction to building microservices with Spring Boot.]]></description>
-            <link>https://dev.tube/video/cCEvFDhe3os</link>
-            <guid isPermaLink="true">https://dev.tube/video/cCEvFDhe3os</guid>
-            <pubDate>Sun, 15 Jul 2018 01:28:52 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Building microservices with event sourcing and CQRS]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2015.
-Speaker: Michael Ploed
-Cloud Native Track
-Slides: http://www.slideshare.net/SpringCentral/building-microservices-with-event-sourcing-and-cqrs-53211567
-CQRS and Event Sourcing are two architectural patterns that have become very popular through the rise of cloud architectures and No-SQL databases. Both work very well together and take a different take at the handling and storage of data compared to the "classic enterprise approach". CQRS splits your application in a read- and a write-part whereas through Event Sourcing the state of your data is represented by sequences of events. This talk introduces both patterns and shows how applications leveraging CQRS and Event Sourcing can be implemented with the Spring Ecosystem.The talk will have slides and live demos.]]></description>
-            <link>https://dev.tube/video/A0goyZ9F4bg</link>
-            <guid isPermaLink="true">https://dev.tube/video/A0goyZ9F4bg</guid>
-            <pubDate>Sun, 15 Jul 2018 01:28:52 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Transforming Code to Java 8]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2015.
-Speaker:  Dr. Venkat Subramaniam
-The new facilities in Java 8 is about the change the way we write code. Our code will become more expressive and concise. But, exactly how?]]></description>
-            <link>https://dev.tube/video/wk3WLaR2V2U</link>
-            <guid isPermaLink="true">https://dev.tube/video/wk3WLaR2V2U</guid>
-            <pubDate>Sun, 15 Jul 2018 01:28:52 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Getting Started with Spring Security 3.1]]></title>
-            <description><![CDATA[Recorded at SpringOne 2GX 2012 in Washington, DC
-Speaker: Rob Winch
-Spring Security is a framework that focuses on providing both authentication and authorization to Java applications. Like all Spring projects, the real power of Spring Security is found in how easily it can be extended to meet custom requirements. In this presentation Rob will incrementally apply Spring Security to an existing application to demonstrate how it can meet your authentication and authorization needs. It will also answer many of the common "how to" questions that are found on the forums. This will ensure that you can not only secure your application quickly, but ensure you understand Spring Security well enough to extend it to meet your custom requirements.
-Get the code!
-https://github.com/rwinch/getting-started-springsecurity-31]]></description>
-            <link>https://dev.tube/video/k32KqrckLEE</link>
-            <guid isPermaLink="true">https://dev.tube/video/k32KqrckLEE</guid>
-            <pubDate>Sun, 15 Jul 2018 01:25:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Cloud Native Java - Josh Long]]></title>
-            <description><![CDATA[Recorded at SpringOne Platform 2016.
-Slides: http://www.slideshare.net/SpringCentral/cloud-native-java
+            <title><![CDATA[Don't Break the Chain: Maintaining Productivity on Your 19th Game]]></title>
+            <description><![CDATA[In this 2018 GDC talk, developer Jason Rohrer presents tested techniques he's used over the past 12 years, working alone, to ship 18 games.
 
-"It is not necessary to change. Survival is not mandatory.” -W. Edwards Deming
+Register for GDC: http://ubm.io/2gk5KTU
 
-Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It’s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage. Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget “devops,” cloud-based services and platforms (like Cloud Foundry) automate operations work and break down the need for ITIL tickets and change management boards. But velocity, for velocity’s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we’ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.]]></description>
-            <link>https://dev.tube/video/5q8B6lYhFvE</link>
-            <guid isPermaLink="true">https://dev.tube/video/5q8B6lYhFvE</guid>
-            <pubDate>Sun, 15 Jul 2018 01:29:56 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Getting Started with Grails - Part 1]]></title>
-            <description><![CDATA[This is the first of a series of introductory screencasts showing you how to develop an application with the Grails web framework. It takes you through the process of creating a simple domain model and generating a basic CRUD user interface for the model through Grails' scaffolding.
+Join the GDC mailing list: http://www.gdconf.com/subscribe
 
-The source code for the sample application developed in this series can be found on GitHub: https://github.com/grails-samples/grails-pomodoro]]></description>
-            <link>https://dev.tube/video/PXHxo43hn34</link>
-            <guid isPermaLink="true">https://dev.tube/video/PXHxo43hn34</guid>
-            <pubDate>Sun, 15 Jul 2018 01:26:55 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Designing a REST-ful API using Spring 3]]></title>
-            <description><![CDATA[Recorded at SpringOne 2GX 2012 in Washington, DC
-Speaker: Ben Hale
-In the course of creating VAS, we did a lot of work to design a useful REST API. REST is generally a very loose collection of principals that can be interpreted in many ways, so this talk would describe a more concrete idea of what a REST-ful API should look like.  In addition, the implementation of this API was done with many of the new features in Spring 3 and are a good demonstration of the power it provides.]]></description>
-            <link>https://dev.tube/video/wylViAqNiRA</link>
-            <guid isPermaLink="true">https://dev.tube/video/wylViAqNiRA</guid>
-            <pubDate>Sun, 15 Jul 2018 01:25:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[From Zero to Hero with Spring WebSocket]]></title>
-            <description><![CDATA[Recorded at SpringOne2GX 2015
-Presenter: Sergi Almar
-Web /Javascript Track
-Slides: http://www.slideshare.net/SpringCentral/from-zero-to-hero-with-spring-websocket
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
 
-Real-time has changed the way we interact with the web, we demand information in real-time. Join Sergi Almar in this presentation to learn how to progressively enhance your traditional Spring MVC application with real-time functionalities for a more interactive and engaging user experience. Starting by adding server push notifications with Server-sent Events (supported in the new Spring 4.2) we will move to a bidirectional messaging communication style with WebSockets. Going real-time couldn't be easier with Spring! We will also see the challenges and considerations to take into account when scaling our WebSocket application and deploy it to Cloud Foundry.]]></description>
-            <link>https://dev.tube/video/nxakp15CACY</link>
-            <guid isPermaLink="true">https://dev.tube/video/nxakp15CACY</guid>
-            <pubDate>Sun, 15 Jul 2018 01:29:56 GMT</pubDate>
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/mIPmjnsCPR4</link>
+            <guid isPermaLink="true">https://dev.tube/video/mIPmjnsCPR4</guid>
+            <pubDate>Mon, 30 Jul 2018 19:46:42 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Understanding Python Bytecode]]></title>
-            <description><![CDATA[At some point every Python programmer sees Python bytecode files -- they're those '.pyc' files Python likes to leave behind after it runs. But have you ever wondered what's really going on in those files? Well, wonder no more! In this talk you'll learn what Python bytecode is and how it's used to execute your code, as well as how to decipher and read it, and how to reason about bytecode to understand the performance of your Python code.
+            <title><![CDATA[Protecting Encryption Keys with Azure Key Vault - Stephen Haunts]]></title>
+            <description><![CDATA[In a world where we are putting our companies data in the cloud, the protection of that data against a data breach has never been more important. In this talk I will show you how to setup and use the Microsoft Azure Key vault to protect your encryption keys and secrets like passwords and connection strings. Azure Key Vault uses the power of Hardware Security Modules (HSM's) to protect your secrets and make sure your solutions are as secure as they can be when working in regulated industries like healthcare, financial and insurance.
+As well as showing you how to setup and configure the vault, I will show you how to code against it and various different patterns for security in a cloud base multi tenant environment. I will cover topics like:
+
+• Setup Azure key Vault
+• Authorize your application to access the vault with AzureAD
+• Accessing the vault from your applications
+• Using the Vault to wrap local encryption keys for performance
+• Encrypting connection strings as Key Vault secrets to get flexible database routing in the cloud
+• Audit logging for compliance
+
+Once this talk is finished you will walk away with everything you need to start using Azure Key Vault today.]]></description>
+            <link>https://dev.tube/video/WIgUmnwKdas</link>
+            <guid isPermaLink="true">https://dev.tube/video/WIgUmnwKdas</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Wait, you can do that with JavaScript…!? - Opher Vishnia]]></title>
+            <description><![CDATA[In 98’ I made my first webpage, which leveraged JavaScript to annoy visitors with blinking text animations. In 2017 I developed a film entirely in JS, which debuted in the Tribeca Film Festival.
+You can do so much with the browser today: Procedural art, interactive VR, physical simulation, real-time multiplayer games - and that’s just the tip of the iceberg. In this talk I want to take you a step further beyond sites and Web Apps. Perhaps your next project could push the envelope of the web as we know it?]]></description>
+            <link>https://dev.tube/video/ZuKbjvz-Tog</link>
+            <guid isPermaLink="true">https://dev.tube/video/ZuKbjvz-Tog</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Higher order functions for ordinary C++ developers - Björn Fahller]]></title>
+            <description><![CDATA[Higher order functions, i.e. functions that accept functions as parameters, or return functions, are not used much by C++ developers, except for the occasional call to standard algorithms.
+This session will show some simple techniques for writing your own, that will lift the level of abstraction in your programs, making code easier to read while reducing code duplication, and maintaining performance.]]></description>
+            <link>https://dev.tube/video/kcBlSmo3Xlk</link>
+            <guid isPermaLink="true">https://dev.tube/video/kcBlSmo3Xlk</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[An Opinionated Approach to ASP.NET Core - Scott Allen]]></title>
+            <description><![CDATA[Improve the architecture, design, and code inside your ASP.NET Core applications with an opinionated approach to ASP.NET Core.
+In this talk, we’ll look at strategies for organizing projects, solutions, files and folders. We'll also look at data access alternatives, see some tips for writing unit and integrations tests, and think differently about the MVC design pattern.]]></description>
+            <link>https://dev.tube/video/qxb62AErRWw</link>
+            <guid isPermaLink="true">https://dev.tube/video/qxb62AErRWw</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[IoT In Action - Powering Energy Efficiency with Azure IoT]]></title>
+            <description><![CDATA[Curious about how Microsoft is leading the smart energy and digital transformation initiatives with Azure IoT?
+Get a sneak peek at the upcoming Microsoft’s IoT In Action Smart Energy Webinar during which you will learn how the energy industry benefits from a myriad of IoT use cases, both on the consumer level and the industrial level. 
+
+Tune in to watch the webinar live on July 31, 2018 10:00a.m. PST / 11:00a.m. CET / 1:00p.m. SGT : https://aka.ms/IoTInAction/EnergyEfficiency
+
+Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
+            <link>https://dev.tube/video/M1ybjDTnAw4</link>
+            <guid isPermaLink="true">https://dev.tube/video/M1ybjDTnAw4</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Demystifying AI]]></title>
+            <description><![CDATA[This session is a primer to introduce the concepts of deep learning with a specific focus on computer vision. It covers concepts including CNN’s (Convolutional Neural Networks), deep learning and transfer learning. It was created as an introduction for people getting started with machine learning and specifically deep learning to explain some of the commonly used terms and introduce some of the popular approaches to solving computer vision challenges.
+
+Resources: 
+
+- azure.github.io/LearnAI-Bootcamp/
+
+- deeplearning.ai
+
+- datacamp.com/courses/deep-learning-in-python
+
+- edx.org/course/introduction-python-data-science-microsoft-dat208x-8
+
+- docs.microsoft.com/en-us/azure/machine-learning/data-science--virtual-machine/dsvm-deep-learning-ai-frameworks
+
+- gallery.cortanaintelligence.com/Tutorial/Cognitive-Toolkit-Tutorial--Getting-Started
+
+- gallery.cortanaintelligence.com/Project/MNIST-using-TensorFlow
+
+- docs.microsoft.com/en-us/azure/batch-ai/overview]]></description>
+            <link>https://dev.tube/video/k-K3g4FKS_c</link>
+            <guid isPermaLink="true">https://dev.tube/video/k-K3g4FKS_c</guid>
+            <pubDate>Mon, 30 Jul 2018 19:45:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[PWA and Offline Development]]></title>
+            <description><![CDATA[There is a lot of talk about Progressive Web Apps at the moment. It is a hot topic in the JavaScript community.
+In this talk, we will briefly explore what a PWA is and how to build one. We will look at the benefits of PWA's and more importantly their limitations.
+We then look a bit deeper at the technologies behind PWA's such as Service Workers, in particular we will look at the mechanics behind Service Workers, and how they will affect your back-end builds.
+Finally, we will look at offline development, the offline first life-cycle and the tools and technologies needed to start building offline applications. Comparing offline storage mechanisms, and their limitations.
+This talk is great for anyone building web-based applications, in any language, or anyone wanting to learn more about PWA's and offline development
 
 EVENT:
 
-PyCon 2018
+the Dutch PHP Conference in 2018
 
 SPEAKER:
 
-James Bennett 
+Mike Oram
 
-PERMISSIONS:
+PERMISSSIONS:
 
-PyCon Organizer provided Coding Tech with the permission to republish this video.
+Original video was published with the Creative Commons Attribution license (reuse allowed).
 
 CREDITS:
 
-Original video source: https://www.youtube.com/watch?v=cSSpnq362Bk]]></description>
-            <link>https://dev.tube/video/weBXlLF6an8</link>
-            <guid isPermaLink="true">https://dev.tube/video/weBXlLF6an8</guid>
-            <pubDate>Sun, 15 Jul 2018 01:27:05 GMT</pubDate>
+Original video source: https://www.youtube.com/watch?v=uZrEYJ_DKQc]]></description>
+            <link>https://dev.tube/video/dlvevNPxHd8</link>
+            <guid isPermaLink="true">https://dev.tube/video/dlvevNPxHd8</guid>
+            <pubDate>Mon, 30 Jul 2018 19:41:28 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[From Zero to Hero with Spring Boot - Brian Clozel]]></title>
-            <description><![CDATA[Creating a new Spring application? Spring Boot is the best starting point and your shortest path to production.
+            <title><![CDATA[Road To ATS London - Sublime Skinz' Andrew Buckman Discusses Opportunities in Mobile]]></title>
+            <link>https://dev.tube/video/z6gc7eD73OI</link>
+            <guid isPermaLink="true">https://dev.tube/video/z6gc7eD73OI</guid>
+            <pubDate>Mon, 30 Jul 2018 19:39:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Cinematic Games Are Dead! Long Live Cinematic Games!]]></title>
+            <description><![CDATA[In this 2015 GDC session, Fiction Control's Matthew Weise explains how clever uses of art, interface and UX can make an experience "cinematic" without ever having a single camera cut, and make players walk away feeling like they visited a movie like it was a place. 
 
-During this live-coding session, we will see how Spring Boot can help us build web applications that leverage the Spring ecosystem. From tests to production-ready features, you'll get the full Boot experience.
+Register for GDC: http://ubm.io/2gk5KTU
 
-Brian Clozel, Spring Team Member, Pivotal
-Filmed at SpringOne Platform 2017]]></description>
-            <link>https://dev.tube/video/aA4tfBGY6jY</link>
-            <guid isPermaLink="true">https://dev.tube/video/aA4tfBGY6jY</guid>
-            <pubDate>Sun, 15 Jul 2018 01:29:46 GMT</pubDate>
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/82z_sZRl93M</link>
+            <guid isPermaLink="true">https://dev.tube/video/82z_sZRl93M</guid>
+            <pubDate>Mon, 30 Jul 2018 01:29:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Lambda Jam 2018 - Brian McKenna - Teaching functional programming at Atlassian]]></title>
+            <description><![CDATA[My team works on Atlassian Marketplace, a project which started 10 years ago and uses Scala, Haskell and Nix. The Marketplace code uses concepts such as applicative functors, monad transformers and lenses. People joining the team mostly learned concepts as they needed to, through experimentation and asking questions.
+
+Last year we started hosting functional programming classes for more fundamental and broad understanding. We've been using the Data61 (formerly NICTA) Functional Programming Course with a lot of success. This talk will describe how we teach FP, what we've learned about teaching FP and the challenges we face.
+
+Brian's specialties: Functional programming, Haskell, PureScript, Idris, Agda, Scala, JavaScript, Emacs, Git
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/4DNwH6lNo1w</link>
+            <guid isPermaLink="true">https://dev.tube/video/4DNwH6lNo1w</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Data 2018 - Gala Camacho - Place Activity During the 2018 Gold Coast Commonwealth Games]]></title>
+            <description><![CDATA[Why do people choose to live in one neighbourhood over another? Every day government makes decisions that can change the way a neighbourhood operates and feels. Understanding the impact that these decisions have is convoluted and hard to measure.
+
+In April, the Gold Coast held the 2018 Commonwealth Games. These events, usually advertised as urban renewal or regeneration projects, have a lasting impact on the neighbourhoods where they take place. Usually, there is a strong push to predic the impact of the games through economic assessments and surveys, however, once the games are happening, is that impact tracked? Sometimes, further economic assessments are produced years after the event which evaluate whether the impact was as expected. Can we do better?
+
+Social data can provide us with more timely evidence of whether the event is activating the economy as expected, or maybe highlight issues that can be resolved.
+
+Using social media data we will explore Facebook places data during and after the games, ultimately generating a dashboard to help us visualise change by giving us the ability to filter and aggregate the data. We will manage the data using Python’s Pandas, generate quick visualisations using Plotly, and finish off by spinning up a dashboard using Plotly’s Dash.
+
+Gala is a mathematician and programmer using data analytics to improve the way we understand cities. With a diverse background in secondary education, volunteering, optimisation and all-things data, Gala is enthusiastic to find solutions to interesting problems and innovative ways to visualise data.
+
+At Neighbourlytics, Gala investigates what information can be extracted from urban data sources to define and visualise the unique local identity of a neighbourhood.
+
+Gala is driven to positively impact her community through her skills and her voice. As such, she is involved with multiple organisations aimed at making the world (but particularly, the tech-world) a better place for women.
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/aK70iMtvMuA</link>
+            <guid isPermaLink="true">https://dev.tube/video/aK70iMtvMuA</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ruby After 25 Years by the Creator of Ruby]]></title>
+            <description><![CDATA[Two things are apparent when watching Yukihiro “Matz” Matsumoto, creator of Ruby programming language, talk on the stage. First, that he will do anything he can to enable Ruby to survive and thrive and, second, that he’s thoroughly enjoying himself doing what he does. He’s passionate about Ruby and its community and his outlook is quite simple: Programming is fun, he’s had fun for the last 25 years making Ruby and at the age of 52 now, he hopes that he’ll get to spend the next 25 years having as much fun working on the language he dreamt up and wrote down in – a now lost – notebook, at the age of 17.
+
+EVENT:
+
+Engineering.SG Meetup 2018
+
+SPEAKER:
+
+Yukihiro Matsumoto (Matz), creator of Ruby
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=gTNC26BtRFc]]></description>
+            <link>https://dev.tube/video/jqnVaYUcjCo</link>
+            <guid isPermaLink="true">https://dev.tube/video/jqnVaYUcjCo</guid>
+            <pubDate>Mon, 30 Jul 2018 01:26:30 GMT</pubDate>
         </item>
     </channel>
 </rss>

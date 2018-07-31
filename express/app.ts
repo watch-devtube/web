@@ -62,12 +62,6 @@ app.set('views', path.join(__dirname, staticDir))
 
 console.timeEnd('Init')
 
-// Preload static data
-console.time('New videos parsing')
-let newVideos = JSON.parse(fs.readFileSync(path.join(__dirname, staticDir) + '/latest.json', 'utf8')).videos
-let newVideosSinceYesterday = newVideos.filter(v => v.ageInDays <= 1).map(v => v.videoId)
-console.timeEnd('New videos parsing')
-
 // EXPERIMENTAL FASTR MODE
 console.time('Fastr indexing')
 let fastrDir = `${__dirname}/data`
@@ -103,6 +97,9 @@ async function proxy(req: Request, res: Response) {
   
   let directLink = ['/channel/', '/tag/'].find(it => req.path.startsWith(it))
 
+  let cookies = req.get('Cookie')
+  let nightMode = cookies && cookies.includes("nightMode")
+
   Logger.info(`REQUEST PATH: ${req.path}`)
 
   if (!req.path || req.path == '/') {
@@ -113,8 +110,8 @@ async function proxy(req: Request, res: Response) {
     res.render('index.html', {      
       title: title,
       fastrMode: fastrMode,
+      nightMode: nightMode,
       featured: featuredOrUndefined(),
-      newVideos: JSON.stringify(newVideosSinceYesterday),
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
@@ -125,6 +122,31 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
+  } else if (req.path.startsWith("/contributors")) {
+
+    // Preload data
+    console.time('Contributors loading')
+    let board = fs.readFileSync(`${__dirname}/data/board.json`, 'utf8')
+    console.timeEnd('Contributors loading')
+
+    let title = 'DevTube Contributors'
+    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+    let response = {
+      title: title,
+      fastrMode: fastrMode,
+      nightMode: nightMode,
+      board: board,
+      meta: [
+        { name: "description", content: description },
+        { name: "og:title", content: title },
+        { name: "og:description", content: description },
+        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
+      ]
+    }
+    res.render('index.html', response)
 
   } else if (req.path.startsWith("/@")) {
 
@@ -137,6 +159,7 @@ async function proxy(req: Request, res: Response) {
 
     res.render('index.html', {
       title: title,
+      nightMode: nightMode,
       featured: featuredOrUndefined(),
       speaker: `"${speaker}"`,
       fastrMode: fastrMode,
@@ -162,6 +185,7 @@ async function proxy(req: Request, res: Response) {
     
     res.render('index.html', {
       title: title,
+      nightMode: nightMode,
       featured: featuredOrUndefined(),
       fastrMode: fastrMode,
       meta: [
@@ -218,6 +242,7 @@ async function proxy(req: Request, res: Response) {
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
         fastrMode: fastrMode,
+        nightMode: nightMode,
         featured: featuredOrUndefined(),
         preloadedEntity: JSON.stringify(video),
         meta: [
@@ -247,7 +272,7 @@ async function proxy(req: Request, res: Response) {
     if (fs.existsSync('.' + req.path)) {
       res.sendFile('.' + req.path)
     } else {
-      res.status(404).send()
+      res.status(404).send('not found')
     }
   }
 }

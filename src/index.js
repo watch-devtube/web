@@ -4,10 +4,12 @@ import VueCookie from 'vue-cookie'
 import VueDisqus from 'vue-disqus'
 import AsyncComputed from 'vue-async-computed'
 import InstantSearch from 'vue-instantsearch'
+import VueProgressBar from 'vue-progressbar'
 
 import App from './App.vue'
 import Watch from './Watch.vue'
 import Search from './Search.vue'
+import Contributors from './Contributors.vue'
 import { flatten, views, duration, truncate, published } from './helpers/filters'
 
 Vue.use(InstantSearch)
@@ -15,6 +17,11 @@ Vue.use(VueCookie)
 Vue.use(VueRouter)
 Vue.use(VueDisqus)
 Vue.use(AsyncComputed)
+Vue.use(VueProgressBar, {
+  color: 'rgb(143, 255, 199)',
+  failedColor: 'red',
+  height: '2px'
+})
 
 Vue.filter('flatten', flatten)
 Vue.filter('views', views)
@@ -25,6 +32,7 @@ Vue.filter('published', published)
 const router = new VueRouter({
   mode: 'history',
   routes: [
+    { name: 'contributors', path: '/contributors', component: Contributors },
     { name: 'video', path: '/video/:id', component: Watch, props: true },
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },
@@ -35,7 +43,7 @@ const router = new VueRouter({
 
 // eslint-disable-next-line no-new
 new Vue({
-  el: '#app',
+  el: '#vue',
   render: h => h(App),
   router,
 })

@@ -33,20 +33,52 @@
             "name": "Kevlin Henney"
         },
         {
+            "twitter": "shiffman",
+            "name": "Daniel Shiffman"
+        },
+        {
+            "twitter": "kinucakes",
+            "name": "Mariel Kinuko Cartwright"
+        },
+        {
+            "twitter": "Mick_Gordon",
+            "name": "Mick Gordon"
+        },
+        {
             "twitter": "philip_roberts",
             "name": "Philip Roberts"
+        },
+        {
+            "twitter": "mor10",
+            "name": "Morten Rand-Hendriksen"
+        },
+        {
+            "twitter": "dontusethiscode",
+            "name": "James Powell"
         },
         {
             "twitter": "martinfowler",
             "name": "Martin Fowler"
         },
         {
+            "twitter": "mpjme",
+            "name": "Mattias P Johansson"
+        },
+        {
             "twitter": "martin_gorner",
             "name": "Martin Görner"
         },
         {
+            "twitter": "rasmus",
+            "name": "Rasmus Lerdorf"
+        },
+        {
             "twitter": "shanselman",
             "name": "Scott Hanselman"
+        },
+        {
+            "twitter": "unclebobmartin",
+            "name": "Robert C. Martin"
         },
         {
             "twitter": "samnewman",
@@ -57,24 +89,52 @@
             "name": "Sandi Metz"
         },
         {
+            "twitter": "dhh",
+            "name": "David Heinemeier Hansson"
+        },
+        {
+            "twitter": "travisneilson",
+            "name": "Travis Neilson"
+        },
+        {
             "twitter": "jezhumble",
             "name": "Jez Humble"
+        },
+        {
+            "twitter": "mrsimonstone",
+            "name": "Simon Stone"
+        },
+        {
+            "twitter": "carnesbeau",
+            "name": "Beau Carnes"
         },
         {
             "twitter": "alex_frantic",
             "name": "Alex Kotliarskyi"
         },
         {
+            "twitter": "stilkov",
+            "name": "Stefan Tilkov"
+        },
+        {
             "twitter": "tastapod",
             "name": "Dan North"
         },
         {
-            "twitter": "mpjme",
-            "name": "Mattias Petter Johansson"
+            "twitter": "joelkatz",
+            "name": "David Schwartz"
+        },
+        {
+            "twitter": "relizarov",
+            "name": "Roman Elizarov"
         },
         {
             "twitter": "wesbos",
             "name": "Wes Bos"
+        },
+        {
+            "twitter": "gojkoadzic",
+            "name": "Gojko Adzic"
         },
         {
             "twitter": "trisha_gee",
@@ -89,16 +149,32 @@
             "name": "Kateryna Porshnieva"
         },
         {
+            "twitter": "troyhunt",
+            "name": "Troy Hunt"
+        },
+        {
+            "twitter": "adrianco",
+            "name": "Adrian Cockcroft"
+        },
+        {
             "twitter": "stolinski",
             "name": "Scott Tolinski"
         },
         {
-            "twitter": "unclebobmartin",
-            "name": "Uncle Bob"
+            "twitter": "sveta_isakova",
+            "name": "Svetlana Isakova"
         },
         {
             "twitter": "hintjens",
             "name": "Pieter Hintjens"
+        },
+        {
+            "twitter": "Felienne",
+            "name": "Felienne Hermans"
+        },
+        {
+            "twitter": "RealGeneKim",
+            "name": "Gene Kim"
         },
         {
             "twitter": "ethomson",
@@ -113,6 +189,10 @@
             "name": "Nora Jones"
         },
         {
+            "twitter": "icooper",
+            "name": "Ian Cooper"
+        },
+        {
             "twitter": "kartar",
             "name": "James Turnbull"
         },
@@ -121,8 +201,8 @@
             "name": "Bridget Kromhout"
         },
         {
-            "twitter": "RealGeneKim",
-            "name": "Gene Kim"
+            "twitter": "dylanbeattie",
+            "name": "Dylan Beattie"
         },
         {
             "twitter": "roman01la",
@@ -153,6 +233,10 @@
             "name": "Art Yavorsky"
         },
         {
+            "twitter": "mpproch",
+            "name": "Maciek Próchniak"
+        },
+        {
             "twitter": "NikkitaFTW",
             "name": "Sara Vieira"
         },
@@ -165,16 +249,28 @@
             "name": "Ran Yitzhaki"
         },
         {
+            "twitter": "jocranford",
+            "name": "Jo Cranford"
+        },
+        {
             "twitter": "HannahFoxwell",
             "name": "Hannah Foxwell"
         },
         {
-            "twitter": "icooper",
-            "name": "Ian Cooper"
+            "twitter": "tnurkiewicz",
+            "name": "Tomasz Nurkiewicz"
         },
         {
             "twitter": "emmajanehw",
             "name": "Emma Jane Hogbin Westby"
+        },
+        {
+            "twitter": "landro",
+            "name": "Stefan Magnus Landrø"
+        },
+        {
+            "twitter": "perpetumdesign",
+            "name": "Pavel Lahoda"
         }
     ]
 }

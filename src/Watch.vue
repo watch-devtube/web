@@ -8,14 +8,11 @@
             a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
         .level-item.has-text-centered
         .level-right
-          .level-item.is-size-4
-            .buttons
-              a.button.is-info.is-outlined(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                span.icon: i.fab.fa-github
-                span Edit info   
-              a.button.is-info.is-outlined(href="/") 
-                span.icon: i.fas.fa-arrow-circle-left
-                span Back to search  
+          .level-item.is-size-10
+            p
+              a.has-text-white(href="/") Back to search
+              | &nbsp;&nbsp;
+              NightMode
   section.section.body
     .container(v-if="errors.length > 0")
       .columns
@@ -54,25 +51,39 @@
         .column
           .content
             h1 {{video.title}}
-            .box.is-paddingless.is-shadowless(v-if="video.speaker && video.speaker.twitter")
-              .media
-                  .media-left.has-text-left
-                      figure.image.is-48x48.is-marginless
-                        a.has-text-black(:href="'/@' + video.speaker.twitter")
-                          img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
-                  .media-content
-                    p.title.is-4: a.has-text-black(:href="'/@' + video.speaker.twitter") {{video.speaker.name}}
-                    p.subtitle.is-6
-                      a.has-text-black(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}} 
-                      a.has-text-black(:href="'https://twitter.com/' + video.speaker.twitter"): i.fab.fa-twitter
+            .media(v-if="video.speaker && video.speaker.twitter")
+                .media-left.has-text-left
+                    figure.image.is-48x48.is-marginless
+                      img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
+                .media-content
+                  p.title.is-4 {{video.speaker.name}}
+                  p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
+            .media(v-else)
+                .media-left.has-text-left
+                    figure.image.is-48x48.is-marginless
+                      img.avatar(src="/unknown.png")
+                .media-content
+                  p.title.is-4 Know the speaker?
+                  p.subtitle.is-6
+                    a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                      i.fas.fa-heart
+                      |  contribute
+            .media
             .tags
-              span.tag.is-capitalized(v-for="tag in video.tags") {{tag}}
-              span.tag.is-capitalized 
+              a.tag.is-capitalized(v-for="tag in video.tags" @click="refineTag(tag)") {{tag}}
+              a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
                 i.fab.fa-youtube 
                 | &nbsp; {{video.channelTitle}}
-              a.tag.clickable.is-capitalized(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank"): i.fas.fa-edit
             p {{video.description}}
-            .addthis_inline_share_toolbox
+            p
+              | Enjoyed the video?
+              ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
+            p(v-if="video.speaker")
+              | Wrong data? 
+              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                i.fas.fa-heart
+                |  contribute
+
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       .comments
@@ -142,6 +153,9 @@
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
   import MessageWidget from './MessageWidget.vue'
+  import NightMode from './NightMode.vue'
+  import ShareVideo from './ShareVideo.vue'
+
   export default {
     data: function() {
       return {
@@ -176,10 +190,16 @@
       },
       toggleWidth: function() {
         this.isFullWidth = !this.isFullWidth;
+      },
+      refineTag: function (tag) {
+        this.$router.push({ name: 'tag', params: { tag: tag } })
+      },
+      refineChannel: function (channel) {
+        this.$router.push({ name: 'channel', params: { channel: channel } } )
       }
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget }
+    components: { RelatedVideos, MessageWidget, NightMode, ShareVideo }
   }
 
 </script>
