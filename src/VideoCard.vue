@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card(style="height: 100%;")
+  .card(style="height: 100%; width:100%;")
       .card-image
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
