@@ -8,7 +8,7 @@ const sameFlatten = arr =>
 export const flatten = it => !it ? it : sameFlatten(it)
 
 const makeKilo = it => it < 100000
-  ? Math.round(it / 1000) + '.' + (it % 1000).toString().charAt(0)
+  ? Math.round(it / 1000) + '.' + (it % 1000).toString().padStart(3, "0").charAt(0)
   : Math.round(it / 1000)
 
 export const views = it => it && it >= 1000
