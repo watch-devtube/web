@@ -11,8 +11,6 @@
           .level-item.is-size-10
             p
               a.has-text-white(href="/") Back to search
-              | &nbsp;&nbsp;
-              NightMode
   section.section.body
     .container(v-if="errors.length > 0")
       .columns
