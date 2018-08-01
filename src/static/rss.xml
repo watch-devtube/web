@@ -4,8 +4,108 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 31 Jul 2018 04:33:35 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Aug 2018 04:31:03 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[ClojureScript - It's not just the language - Christian Johansen]]></title>
+            <description><![CDATA[ClojureScript is a functional programming language (a Lisp, to be specific) that can be used to develop web frontends and node.js apps in lieu of JavaScript. I'd say it's currently the best way to develop web frontends, but the language is only one part of it.
+The development environment that's grown up around it is what truly makes it shine, whether it's hot reload with Figwheel, instant evaluation of any piece of code in the context of your app state in a REPl, a la carte typing with clojure.spec, or the client-side database Datascript. We'll also take a look at how ClojureScript forces you to write code in a physically completely different way and why that's a good thing along with some of the most useful language features. Buckle up!]]></description>
+            <link>https://dev.tube/video/1YqnaUXcSl8</link>
+            <guid isPermaLink="true">https://dev.tube/video/1YqnaUXcSl8</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lightning Talks - What's in a name? - Meg Gotshall]]></title>
+            <description><![CDATA[Phil Karlton famously pointed out that one of the only two hard things in Computer Science is naming things. While many of us dismiss naming as Programming 101 material, the names we choose can have a major impact on the cost (and sanity) of future development.
+
+Drawing on over a decade of API development, this lightning talk attempts to put a dent in one of the industry's most difficult and long-lived challenges -- in just ten minutes!
+
+In addition to real-world (and sometimes embarrassing) examples of what NOT to do, this talk includes tips and suggestions for finding names that stand the test of time.]]></description>
+            <link>https://dev.tube/video/2ADqzROC05I</link>
+            <guid isPermaLink="true">https://dev.tube/video/2ADqzROC05I</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Frontend Development 2018 - What's in your stack? - Stefan Judis]]></title>
+            <description><![CDATA[Frontend and JavaScript technologies are moving fast. So fast that it's always hard to keep track of all the new things that are coming up.
+This talk will show new tools, workflows, ways to develop and give advice on how to stay up to date.]]></description>
+            <link>https://dev.tube/video/88K8oO_dYbI</link>
+            <guid isPermaLink="true">https://dev.tube/video/88K8oO_dYbI</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lightning Talks: PWA - A Farewell To Apps - Andreas Ahlgren]]></title>
+            <description><![CDATA[This lightingtalk will be a bit different. There will be a few slides but most of the action will take place on the mobile devices of the audience. Even though Progressive Web Apps were really hot last year, and even futher back, now is an excellent time to dive into them if you havn't before. New tools, such as CSS Grid and Lighthouse for Chrome makes web based apps rivaling native ones is now both fun and easy. We will explore why they are important, why you should care and exactly how much cool stuff the web can achieve on mobile devices.]]></description>
+            <link>https://dev.tube/video/IUBi3wupRp8</link>
+            <guid isPermaLink="true">https://dev.tube/video/IUBi3wupRp8</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lightning Talks - The Power of Inclusion - Dennie Declercq]]></title>
+            <description><![CDATA[A session about accessible software for people with a disability. 
+As developer you can develop apps, to help people with a disability. It's a sector that is not often covered by developers. But with a little set of developer skills you can make lives better.
+First of all we start with the description of the field of people with a disability, which disabilities are there? What are the problems?
+After this I describe how people with disabilities are threaten in the past and today.
+Then I describe how software can help inclusion. I talk you about inclusive design and develop patterns.
+I end with slides how people in normal work situations can benefit of the power of persons with different kind of disabilities.]]></description>
+            <link>https://dev.tube/video/Iv3px26XKl8</link>
+            <guid isPermaLink="true">https://dev.tube/video/Iv3px26XKl8</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The IoT Requires Upgradable Security - Lars Lydersen]]></title>
+            <description><![CDATA[The Internet of Things (IoT) allows us to optimize and improve most aspects of modern life at an unprecedented scale. As billions of IoT devices unleash billions of dollars in economic value, the tremendous potential of the IoT is also attracting malicious adversaries and attackers.
+To achieve secure IoT devices and thwart attacks, it is necessary to ensure upgradability across all IoT end nodes. The longevity of IoT devices, combined with rapid advances in knowledge and tools used by adversaries, makes it infeasible to design devices that will remain sufficiently secure at any security level for their lifetime. Therefore, for devices to remain secure, it is necessary to ensure that their security is upgradable via software updates.]]></description>
+            <link>https://dev.tube/video/OexK0f4dOlQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/OexK0f4dOlQ</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lightning Talks: Tell me the money! How I made my bank talk to me by way of PSD2 - Anders Breivik]]></title>
+            <description><![CDATA[Do you miss your personal bank teller? Me neither, but sometimes I wish I could hear a friendly voice tell me my account is not empty (yet). Thanks to The Payment Services Directive II, PSD2 among friends, and a bit of code, now I can. In this talk I will show I made my favourite voice commanded personal assistant integrate with my bank and talk to me.]]></description>
+            <link>https://dev.tube/video/fZWx8whOz10</link>
+            <guid isPermaLink="true">https://dev.tube/video/fZWx8whOz10</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Succeeding with Xamarin - Filip Ekberg]]></title>
+            <description><![CDATA[Building mobile apps is hard work, getting code shared across the different platforms is even harder. Honestly, I’m lazy and I don’t want to repeat myself so I do whatever I can to only write code once, and have it work everywhere.
+If you’re like me and want to optimize your time and be more efficient building mobile apps, join this session where we’ll explore some good, and bad, practices to get code shared across different mobile platforms when using C#.]]></description>
+            <link>https://dev.tube/video/gDO1YdNBkl4</link>
+            <guid isPermaLink="true">https://dev.tube/video/gDO1YdNBkl4</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A Failed Project and the Technical Architecture That Saved It - Dominic Robinson]]></title>
+            <description><![CDATA[Lightning Talks: 
+When a company embarks on a transformation project a lot of promises are made. What happens when those promises fail to be delivered isn't pretty. After over two years of work the transformation project had stalled, the project director had quit and suppliers had come and gone, leaving a barely working product that with a fraction of the needed functionality.]]></description>
+            <link>https://dev.tube/video/hUBYxZIB-FU</link>
+            <guid isPermaLink="true">https://dev.tube/video/hUBYxZIB-FU</guid>
+            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[IPONWEB Research: The Rise of the Programmatic Media Agency]]></title>
+            <link>https://dev.tube/video/tuJ92E1KC2A</link>
+            <guid isPermaLink="true">https://dev.tube/video/tuJ92E1KC2A</guid>
+            <pubDate>Tue, 31 Jul 2018 09:48:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What One Should Know About Spark MLlib]]></title>
+            <description><![CDATA[The goal of Spark MLlib is make practical machine learning scalable and easy. In addition to providing a set of common learning algorithms such as classification, regression, clustering, and collaborative filtering, it also provides a set of tools to help with building maintainable Machine Learning pipelines. Hien Luu dives into the concepts, details of these tools as well as the benefits they provide.
+
+Hien Luu is an engineering manager at LinkedIn. 
+
+This video was recorded at QCon.ai 2018: https://bit.ly/2piRtLl 
+
+The next QCon is in San Francisco, Nov 5-7, 2018. Check out the tracks and speakers: https://bit.ly/2uYyHLb. Save $100 by using the discount code “INFOQSF18”  
+
+More videos from QCon.ai 2018 on InfoQ:  https://bit.ly/2rNAT8z
+ 
+The InfoQ Architects' Newsletter is your monthly guide to all the topics, technologies and techniques that every professional or aspiring software architect needs to know about. Over 200,000 software architects, team leads, CTOs are subscribed to it. Sign up here: https://bit.ly/2KqYfrs]]></description>
+            <link>https://dev.tube/video/DBxcua0Vmvk</link>
+            <guid isPermaLink="true">https://dev.tube/video/DBxcua0Vmvk</guid>
+            <pubDate>Tue, 31 Jul 2018 06:27:38 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[YOW! Data 2018 - Tim Garnsey - Respecting privacy]]></title>
             <description><![CDATA[Safely handling data that contains sensitive or private information about people is a multi-million dollar problem at many companies. It adds time into the data engineering process, it can cost a lot in software licenses for specialised tools, and brings a range of reputational and legal risks.
@@ -286,172 +386,6 @@ Once this talk is finished you will walk away with everything you need to start 
             <link>https://dev.tube/video/WIgUmnwKdas</link>
             <guid isPermaLink="true">https://dev.tube/video/WIgUmnwKdas</guid>
             <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Wait, you can do that with JavaScript…!? - Opher Vishnia]]></title>
-            <description><![CDATA[In 98’ I made my first webpage, which leveraged JavaScript to annoy visitors with blinking text animations. In 2017 I developed a film entirely in JS, which debuted in the Tribeca Film Festival.
-You can do so much with the browser today: Procedural art, interactive VR, physical simulation, real-time multiplayer games - and that’s just the tip of the iceberg. In this talk I want to take you a step further beyond sites and Web Apps. Perhaps your next project could push the envelope of the web as we know it?]]></description>
-            <link>https://dev.tube/video/ZuKbjvz-Tog</link>
-            <guid isPermaLink="true">https://dev.tube/video/ZuKbjvz-Tog</guid>
-            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Higher order functions for ordinary C++ developers - Björn Fahller]]></title>
-            <description><![CDATA[Higher order functions, i.e. functions that accept functions as parameters, or return functions, are not used much by C++ developers, except for the occasional call to standard algorithms.
-This session will show some simple techniques for writing your own, that will lift the level of abstraction in your programs, making code easier to read while reducing code duplication, and maintaining performance.]]></description>
-            <link>https://dev.tube/video/kcBlSmo3Xlk</link>
-            <guid isPermaLink="true">https://dev.tube/video/kcBlSmo3Xlk</guid>
-            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[An Opinionated Approach to ASP.NET Core - Scott Allen]]></title>
-            <description><![CDATA[Improve the architecture, design, and code inside your ASP.NET Core applications with an opinionated approach to ASP.NET Core.
-In this talk, we’ll look at strategies for organizing projects, solutions, files and folders. We'll also look at data access alternatives, see some tips for writing unit and integrations tests, and think differently about the MVC design pattern.]]></description>
-            <link>https://dev.tube/video/qxb62AErRWw</link>
-            <guid isPermaLink="true">https://dev.tube/video/qxb62AErRWw</guid>
-            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[IoT In Action - Powering Energy Efficiency with Azure IoT]]></title>
-            <description><![CDATA[Curious about how Microsoft is leading the smart energy and digital transformation initiatives with Azure IoT?
-Get a sneak peek at the upcoming Microsoft’s IoT In Action Smart Energy Webinar during which you will learn how the energy industry benefits from a myriad of IoT use cases, both on the consumer level and the industrial level. 
-
-Tune in to watch the webinar live on July 31, 2018 10:00a.m. PST / 11:00a.m. CET / 1:00p.m. SGT : https://aka.ms/IoTInAction/EnergyEfficiency
-
-Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
-            <link>https://dev.tube/video/M1ybjDTnAw4</link>
-            <guid isPermaLink="true">https://dev.tube/video/M1ybjDTnAw4</guid>
-            <pubDate>Mon, 30 Jul 2018 19:45:24 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Demystifying AI]]></title>
-            <description><![CDATA[This session is a primer to introduce the concepts of deep learning with a specific focus on computer vision. It covers concepts including CNN’s (Convolutional Neural Networks), deep learning and transfer learning. It was created as an introduction for people getting started with machine learning and specifically deep learning to explain some of the commonly used terms and introduce some of the popular approaches to solving computer vision challenges.
-
-Resources: 
-
-- azure.github.io/LearnAI-Bootcamp/
-
-- deeplearning.ai
-
-- datacamp.com/courses/deep-learning-in-python
-
-- edx.org/course/introduction-python-data-science-microsoft-dat208x-8
-
-- docs.microsoft.com/en-us/azure/machine-learning/data-science--virtual-machine/dsvm-deep-learning-ai-frameworks
-
-- gallery.cortanaintelligence.com/Tutorial/Cognitive-Toolkit-Tutorial--Getting-Started
-
-- gallery.cortanaintelligence.com/Project/MNIST-using-TensorFlow
-
-- docs.microsoft.com/en-us/azure/batch-ai/overview]]></description>
-            <link>https://dev.tube/video/k-K3g4FKS_c</link>
-            <guid isPermaLink="true">https://dev.tube/video/k-K3g4FKS_c</guid>
-            <pubDate>Mon, 30 Jul 2018 19:45:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[PWA and Offline Development]]></title>
-            <description><![CDATA[There is a lot of talk about Progressive Web Apps at the moment. It is a hot topic in the JavaScript community.
-In this talk, we will briefly explore what a PWA is and how to build one. We will look at the benefits of PWA's and more importantly their limitations.
-We then look a bit deeper at the technologies behind PWA's such as Service Workers, in particular we will look at the mechanics behind Service Workers, and how they will affect your back-end builds.
-Finally, we will look at offline development, the offline first life-cycle and the tools and technologies needed to start building offline applications. Comparing offline storage mechanisms, and their limitations.
-This talk is great for anyone building web-based applications, in any language, or anyone wanting to learn more about PWA's and offline development
-
-EVENT:
-
-the Dutch PHP Conference in 2018
-
-SPEAKER:
-
-Mike Oram
-
-PERMISSSIONS:
-
-Original video was published with the Creative Commons Attribution license (reuse allowed).
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=uZrEYJ_DKQc]]></description>
-            <link>https://dev.tube/video/dlvevNPxHd8</link>
-            <guid isPermaLink="true">https://dev.tube/video/dlvevNPxHd8</guid>
-            <pubDate>Mon, 30 Jul 2018 19:41:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Road To ATS London - Sublime Skinz' Andrew Buckman Discusses Opportunities in Mobile]]></title>
-            <link>https://dev.tube/video/z6gc7eD73OI</link>
-            <guid isPermaLink="true">https://dev.tube/video/z6gc7eD73OI</guid>
-            <pubDate>Mon, 30 Jul 2018 19:39:10 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Cinematic Games Are Dead! Long Live Cinematic Games!]]></title>
-            <description><![CDATA[In this 2015 GDC session, Fiction Control's Matthew Weise explains how clever uses of art, interface and UX can make an experience "cinematic" without ever having a single camera cut, and make players walk away feeling like they visited a movie like it was a place. 
-
-Register for GDC: http://ubm.io/2gk5KTU
-
-Join the GDC mailing list: http://www.gdconf.com/subscribe
-
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/82z_sZRl93M</link>
-            <guid isPermaLink="true">https://dev.tube/video/82z_sZRl93M</guid>
-            <pubDate>Mon, 30 Jul 2018 01:29:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[YOW! Lambda Jam 2018 - Brian McKenna - Teaching functional programming at Atlassian]]></title>
-            <description><![CDATA[My team works on Atlassian Marketplace, a project which started 10 years ago and uses Scala, Haskell and Nix. The Marketplace code uses concepts such as applicative functors, monad transformers and lenses. People joining the team mostly learned concepts as they needed to, through experimentation and asking questions.
-
-Last year we started hosting functional programming classes for more fundamental and broad understanding. We've been using the Data61 (formerly NICTA) Functional Programming Course with a lot of success. This talk will describe how we teach FP, what we've learned about teaching FP and the challenges we face.
-
-Brian's specialties: Functional programming, Haskell, PureScript, Idris, Agda, Scala, JavaScript, Emacs, Git
-
-For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
-            <link>https://dev.tube/video/4DNwH6lNo1w</link>
-            <guid isPermaLink="true">https://dev.tube/video/4DNwH6lNo1w</guid>
-            <pubDate>Mon, 30 Jul 2018 01:26:34 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[YOW! Data 2018 - Gala Camacho - Place Activity During the 2018 Gold Coast Commonwealth Games]]></title>
-            <description><![CDATA[Why do people choose to live in one neighbourhood over another? Every day government makes decisions that can change the way a neighbourhood operates and feels. Understanding the impact that these decisions have is convoluted and hard to measure.
-
-In April, the Gold Coast held the 2018 Commonwealth Games. These events, usually advertised as urban renewal or regeneration projects, have a lasting impact on the neighbourhoods where they take place. Usually, there is a strong push to predic the impact of the games through economic assessments and surveys, however, once the games are happening, is that impact tracked? Sometimes, further economic assessments are produced years after the event which evaluate whether the impact was as expected. Can we do better?
-
-Social data can provide us with more timely evidence of whether the event is activating the economy as expected, or maybe highlight issues that can be resolved.
-
-Using social media data we will explore Facebook places data during and after the games, ultimately generating a dashboard to help us visualise change by giving us the ability to filter and aggregate the data. We will manage the data using Python’s Pandas, generate quick visualisations using Plotly, and finish off by spinning up a dashboard using Plotly’s Dash.
-
-Gala is a mathematician and programmer using data analytics to improve the way we understand cities. With a diverse background in secondary education, volunteering, optimisation and all-things data, Gala is enthusiastic to find solutions to interesting problems and innovative ways to visualise data.
-
-At Neighbourlytics, Gala investigates what information can be extracted from urban data sources to define and visualise the unique local identity of a neighbourhood.
-
-Gala is driven to positively impact her community through her skills and her voice. As such, she is involved with multiple organisations aimed at making the world (but particularly, the tech-world) a better place for women.
-
-For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
-            <link>https://dev.tube/video/aK70iMtvMuA</link>
-            <guid isPermaLink="true">https://dev.tube/video/aK70iMtvMuA</guid>
-            <pubDate>Mon, 30 Jul 2018 01:26:34 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Ruby After 25 Years by the Creator of Ruby]]></title>
-            <description><![CDATA[Two things are apparent when watching Yukihiro “Matz” Matsumoto, creator of Ruby programming language, talk on the stage. First, that he will do anything he can to enable Ruby to survive and thrive and, second, that he’s thoroughly enjoying himself doing what he does. He’s passionate about Ruby and its community and his outlook is quite simple: Programming is fun, he’s had fun for the last 25 years making Ruby and at the age of 52 now, he hopes that he’ll get to spend the next 25 years having as much fun working on the language he dreamt up and wrote down in – a now lost – notebook, at the age of 17.
-
-EVENT:
-
-Engineering.SG Meetup 2018
-
-SPEAKER:
-
-Yukihiro Matsumoto (Matz), creator of Ruby
-
-PERMISSIONS:
-
-Original video was published with the Creative Commons Attribution license (reuse allowed).
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=gTNC26BtRFc]]></description>
-            <link>https://dev.tube/video/jqnVaYUcjCo</link>
-            <guid isPermaLink="true">https://dev.tube/video/jqnVaYUcjCo</guid>
-            <pubDate>Mon, 30 Jul 2018 01:26:30 GMT</pubDate>
         </item>
     </channel>
 </rss>
