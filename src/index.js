@@ -37,7 +37,7 @@ const router = new VueRouter({
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },
     { name: 'tag', path: '/tag/:tag', component: Search, props: true },
-    { name: 'search', path: '/', component: Search, props: (route) => ({ showNew: route.query.showNew }) },
+    { name: 'search', path: '/', component: Search, props: (route) => ({ query: route.query.q }) },
   ],
 })
 

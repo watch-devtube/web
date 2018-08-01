@@ -1,6 +1,10 @@
 <template lang="pug">
   .card(style="height: 100%; width:100%;")
       .card-image
+        // a(@click="markWatched(id)")
+          span.watched.fa-stack.fa-2x
+            i.far.fa-eye.fa-stack-1x.fa-xs
+            i.fas.fa-check.fa-stack-1x.fa-xs(data-fa-transform="shrink-8 up-7 right-7")
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             i.is-size-3.fab.fa-youtube.watch
@@ -60,11 +64,24 @@
                 |  contribute
 </template>
 <style lang="scss">
-  .card {
-    transition: 0.4s ease;
-  }
 
   .card {
+
+    position: relative;
+    transition: 0.4s ease;
+
+    .watched {
+      height: 1em;
+      z-index: 29;
+      right: -10px;
+      top: 3px;
+      color: white;
+      position: absolute;
+    }
+
+    .watched:hover {
+        color: #4988cb;
+    }    
 
     .avatar {
       border-radius: 50%
@@ -73,7 +90,6 @@
 
     div.image {
       background-size: cover;
-      position: relative;
 
         .watch {
           color: white;
@@ -109,9 +125,6 @@
 
   }
 
-  .card:not(.verified) {
-  }
-
   .card em {
     color: #ec0047;
   }
@@ -126,6 +139,9 @@
 <script>
   import Tags from './Tags.vue'
   import dayjs from 'dayjs'
+  import AuthService from './helpers/AuthService'
+  let { login } = new AuthService()
+
 
   export default {
     props: { 
@@ -160,6 +176,9 @@
       }
     },
     methods: {
+      markWatched: function(videoId) {
+        login()
+      },
       watch: function(videoId) {
         this.$router.push({
           name: 'watch',

@@ -28,10 +28,6 @@
           a.tag(@click="collapsed = !collapsed") ...
 </template>
 <style lang="scss">
-  .expandable-tags {
-    margin-bottom: 20px
-  }
-
   .collapsedScreen .has-addons {
     margin-bottom: 0
   }

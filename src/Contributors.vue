@@ -14,8 +14,6 @@
               a.has-text-white(href="https://devternity.com" target="_blank")
                 span inspired by  
                 strong DevTernity
-              | &nbsp;&nbsp;
-              NightMode  
     .section.container
       .content
         p 

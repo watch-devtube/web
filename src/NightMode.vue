@@ -1,5 +1,7 @@
 <template lang="pug">
-  a.has-text-white(@click="toggle()")
+  a.navbar-item.is-size-7(@click="toggle()")
+    | Night mode 
+    | &nbsp;
     i.fas.fa-moon(v-if="nightMode")
     i.far.fa-moon(v-else)
 </template>

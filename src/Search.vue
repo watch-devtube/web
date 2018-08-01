@@ -1,21 +1,10 @@
 <template lang="pug">
   ais-index(:search-store="searchStore" index-name="videos")
     header
-      .container
-        nav.level(style="min-height: 80px")
-          .level-left
-            .level-item
-              a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
-          .level-item.has-text-centered
-              Input(v-if="!speaker && !tag && !channel" placeholder="Search for videos...")
-          .level-right.has-text-lato
-            .level-item.links.is-size-10
-              a.has-text-white(href="https://devternity.com" target="_blank")
-                span inspired by  
-                strong DevTernity
-              | &nbsp;&nbsp;
-              NightMode
-    section.section
+      .container    
+        NavBar
+          Sorting
+    section.section(style="margin-top: 20px")
           .container
             .columns
               .column.is-one-quarter
@@ -45,10 +34,6 @@
                           span.is-capitalized(v-if="tag || channel") {{tag || channel}}
                           span.is-lowercased(v-if="speaker") @{{speaker}}
                           span.icon.is-small: i.fas.fa-times
-                      .column
-                        .field.is-grouped-multiline.is-grouped.is-grouped-right(v-if="newMode")
-                          .control
-                            Sorting
                     .loading(v-if="loading")
                       .notification
                         p
@@ -80,42 +65,6 @@
 </template>
 <style lang="scss">
 
-.has-text-lato {
-  font-family: Lato
-}
-
-header {
-  background-color: #343d46;
-  padding: 30px;
-
-  @media only screen and (max-width: 768px) {
-    .logo {
-      width: 70px;
-      margin-bottom: 10px;
-    }
-  }
-
-  a {
-    color: white;
-  }
-
-  input {
-    -webkit-appearance: none;
-    outline: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 100;
-    background-color: #343d46;
-    padding: 16px 26px 16px 52px;
-    border: 1px solid #6498cf;
-    border-radius: 3px;
-  }
-}
-
-  input::placeholder{
-    color: #fff;
-  }
-
 .paging  {
   .pagination-list {
     justify-content: center;
@@ -133,16 +82,15 @@ import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import { createFromAlgoliaClient } from 'vue-instantsearch'
 
 import VideoCard from './VideoCard.vue'
+import NavBar from './NavBar.vue'
 import Sorting from './Sorting.vue'
 import ActiveFilters from './ActiveFilters.vue'
 import YearRange from './YearRange.vue'
 import ExpandableTags from './ExpandableTags.vue'
-import NightMode from './NightMode.vue'
-import Input from './Input.vue'
 
 export default { 
   props: {
-    showNew: { type: Boolean, required: false, default: false },
+    query: { type: String, default: '' },
     speaker: { type: String, required: false },
     channel: { type: String, required: false },
     tag: { type: String, required: false }
@@ -157,7 +105,7 @@ export default {
     };
   },
   watch: {
-    '$route': 'fetch'
+    '$route': 'fetch' 
   },  
   created() {
     let that = this
@@ -189,11 +137,6 @@ export default {
         'c2655fa0f331ebf28c89f16ec8268565'
     );
 
-    if (window.speaker && !window.fastrMode) {
-      searchStore.queryParameters = { disjunctiveFacets: ['speaker.twitter'] };
-      searchStore.algoliaHelper.addDisjunctiveFacetRefinement('speaker.twitter', window.speaker)
-    }
-
     searchStore.queryParameters = {
       hitsPerPage : 21
     }
@@ -203,10 +146,6 @@ export default {
     this.fetch()
   },
   computed: {
-    newOnly() {
-      return this.searchStore.algoliaHelper.state.filters && 
-        this.searchStore.algoliaHelper.state.filters.includes('objectID')
-    },
     tags() {
       return window.featured.tags
     },
@@ -233,42 +172,39 @@ export default {
 
       this.searchStore.stop()
 
-      if (this.newMode) {
-        // ## start 
-        // when seach query is present, tag clicking must reset it
-        this.searchStore.query = undefined
-        // ## end
+      // ## start 
+      // when seach query is present, tag clicking must reset it
+      this.searchStore.query = this.query
+      // ## end
 
-        this.searchStore.queryParameters = { refinement : undefined }
+      this.searchStore.queryParameters = { refinement : undefined }
 
-        this.searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || '-featured' }
+      this.searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || '-featured' }
 
 
-        if (this.speaker) {
-          this.searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
-        }
-
-        if (this.tag) {
-          this.searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
-        }
-        if (this.channel) {
-          this.searchStore.queryParameters = { refinement: { 'channelTitle' : this.channel } }
-        }
+      if (this.speaker) {
+        this.searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
       }
+
+      if (this.tag) {
+        this.searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
+      }
+      if (this.channel) {
+        this.searchStore.queryParameters = { refinement: { 'channelTitle' : this.channel } }
+      }
+
 
       this.searchStore.start()
       this.searchStore.refresh()
-
     }
   },
   components: { 
     ExpandableTags,
-    NightMode,
     ActiveFilters, 
     VideoCard, 
     YearRange, 
     Sorting,
-    Input
+    NavBar
   }
 }
 </script>

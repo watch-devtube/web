@@ -1,5 +1,5 @@
 <template lang="pug">
-  input(v-model.lazy="query" v-debounce="300")
+  input(ref="query" v-model.lazy="query" v-debounce="300")
 </template>
 
 <script>
@@ -17,11 +17,13 @@ export default {
   computed: {
     query: {
       get() {
-        return this.searchStore.query
+        return this.$route.query.q
       },
       set(value) {
-        this.searchStore.query = value
-        this.$emit('query', value)
+        this.$router.push({
+          name: 'search',
+          query: { q: value }
+        })
       }
     }
   }

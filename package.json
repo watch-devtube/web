@@ -9,9 +9,10 @@
     "build": "cross-env webpack --progress --hide-modules --mode=production"
   },
   "dependencies": {
-    "auth0-js": "^9.7.3",
+    "auth0-lock": "^11.8.1",
     "axios": "^0.18.0",
     "dayjs": "^1.5.16",
+    "jwt-decode": "^2.2.0",
     "v-debounce": "^0.1.2",
     "vue": "^2.2.1",
     "vue-async-computed": "^3.3.1",
