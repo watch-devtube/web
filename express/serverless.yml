@@ -1,16 +1,10 @@
 service: devtube-proxy-with-data
 
 provider:
-  name: google
-  runtime: nodejs
-  project: dev-tube
-  credentials: service_key.json
+  name: aws
+  runtime: nodejs6.10
   memorySize: 2048
   timeout: 30s
-
-plugins:
-  - serverless-google-cloudfunctions
-  - serverless-plugin-typescript
 
 package:
   exclude:
@@ -26,6 +20,6 @@ package:
 
 functions:
   proxy2:
-    handler: proxy2
+    handler: handler.proxy2
     events:
-      - http: path
+      - http: GET proxy2
