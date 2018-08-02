@@ -4,345 +4,15 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 01 Aug 2018 04:31:03 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 02 Aug 2018 04:30:29 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[ClojureScript - It's not just the language - Christian Johansen]]></title>
-            <description><![CDATA[ClojureScript is a functional programming language (a Lisp, to be specific) that can be used to develop web frontends and node.js apps in lieu of JavaScript. I'd say it's currently the best way to develop web frontends, but the language is only one part of it.
-The development environment that's grown up around it is what truly makes it shine, whether it's hot reload with Figwheel, instant evaluation of any piece of code in the context of your app state in a REPl, a la carte typing with clojure.spec, or the client-side database Datascript. We'll also take a look at how ClojureScript forces you to write code in a physically completely different way and why that's a good thing along with some of the most useful language features. Buckle up!]]></description>
-            <link>https://dev.tube/video/1YqnaUXcSl8</link>
-            <guid isPermaLink="true">https://dev.tube/video/1YqnaUXcSl8</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Lightning Talks - What's in a name? - Meg Gotshall]]></title>
-            <description><![CDATA[Phil Karlton famously pointed out that one of the only two hard things in Computer Science is naming things. While many of us dismiss naming as Programming 101 material, the names we choose can have a major impact on the cost (and sanity) of future development.
+            <title><![CDATA[Build a Calculator with Vue.js]]></title>
+            <description><![CDATA[In this tutorial, you will learn to use Vue.js to create a basic calculator component inside a web browser.
 
-Drawing on over a decade of API development, this lightning talk attempts to put a dent in one of the industry's most difficult and long-lived challenges -- in just ten minutes!
+💻Code: https://github.com/codyseibert/vue-calculator
 
-In addition to real-world (and sometimes embarrassing) examples of what NOT to do, this talk includes tips and suggestions for finding names that stand the test of time.]]></description>
-            <link>https://dev.tube/video/2ADqzROC05I</link>
-            <guid isPermaLink="true">https://dev.tube/video/2ADqzROC05I</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Frontend Development 2018 - What's in your stack? - Stefan Judis]]></title>
-            <description><![CDATA[Frontend and JavaScript technologies are moving fast. So fast that it's always hard to keep track of all the new things that are coming up.
-This talk will show new tools, workflows, ways to develop and give advice on how to stay up to date.]]></description>
-            <link>https://dev.tube/video/88K8oO_dYbI</link>
-            <guid isPermaLink="true">https://dev.tube/video/88K8oO_dYbI</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Lightning Talks: PWA - A Farewell To Apps - Andreas Ahlgren]]></title>
-            <description><![CDATA[This lightingtalk will be a bit different. There will be a few slides but most of the action will take place on the mobile devices of the audience. Even though Progressive Web Apps were really hot last year, and even futher back, now is an excellent time to dive into them if you havn't before. New tools, such as CSS Grid and Lighthouse for Chrome makes web based apps rivaling native ones is now both fun and easy. We will explore why they are important, why you should care and exactly how much cool stuff the web can achieve on mobile devices.]]></description>
-            <link>https://dev.tube/video/IUBi3wupRp8</link>
-            <guid isPermaLink="true">https://dev.tube/video/IUBi3wupRp8</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Lightning Talks - The Power of Inclusion - Dennie Declercq]]></title>
-            <description><![CDATA[A session about accessible software for people with a disability. 
-As developer you can develop apps, to help people with a disability. It's a sector that is not often covered by developers. But with a little set of developer skills you can make lives better.
-First of all we start with the description of the field of people with a disability, which disabilities are there? What are the problems?
-After this I describe how people with disabilities are threaten in the past and today.
-Then I describe how software can help inclusion. I talk you about inclusive design and develop patterns.
-I end with slides how people in normal work situations can benefit of the power of persons with different kind of disabilities.]]></description>
-            <link>https://dev.tube/video/Iv3px26XKl8</link>
-            <guid isPermaLink="true">https://dev.tube/video/Iv3px26XKl8</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[The IoT Requires Upgradable Security - Lars Lydersen]]></title>
-            <description><![CDATA[The Internet of Things (IoT) allows us to optimize and improve most aspects of modern life at an unprecedented scale. As billions of IoT devices unleash billions of dollars in economic value, the tremendous potential of the IoT is also attracting malicious adversaries and attackers.
-To achieve secure IoT devices and thwart attacks, it is necessary to ensure upgradability across all IoT end nodes. The longevity of IoT devices, combined with rapid advances in knowledge and tools used by adversaries, makes it infeasible to design devices that will remain sufficiently secure at any security level for their lifetime. Therefore, for devices to remain secure, it is necessary to ensure that their security is upgradable via software updates.]]></description>
-            <link>https://dev.tube/video/OexK0f4dOlQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/OexK0f4dOlQ</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Lightning Talks: Tell me the money! How I made my bank talk to me by way of PSD2 - Anders Breivik]]></title>
-            <description><![CDATA[Do you miss your personal bank teller? Me neither, but sometimes I wish I could hear a friendly voice tell me my account is not empty (yet). Thanks to The Payment Services Directive II, PSD2 among friends, and a bit of code, now I can. In this talk I will show I made my favourite voice commanded personal assistant integrate with my bank and talk to me.]]></description>
-            <link>https://dev.tube/video/fZWx8whOz10</link>
-            <guid isPermaLink="true">https://dev.tube/video/fZWx8whOz10</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Succeeding with Xamarin - Filip Ekberg]]></title>
-            <description><![CDATA[Building mobile apps is hard work, getting code shared across the different platforms is even harder. Honestly, I’m lazy and I don’t want to repeat myself so I do whatever I can to only write code once, and have it work everywhere.
-If you’re like me and want to optimize your time and be more efficient building mobile apps, join this session where we’ll explore some good, and bad, practices to get code shared across different mobile platforms when using C#.]]></description>
-            <link>https://dev.tube/video/gDO1YdNBkl4</link>
-            <guid isPermaLink="true">https://dev.tube/video/gDO1YdNBkl4</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[A Failed Project and the Technical Architecture That Saved It - Dominic Robinson]]></title>
-            <description><![CDATA[Lightning Talks: 
-When a company embarks on a transformation project a lot of promises are made. What happens when those promises fail to be delivered isn't pretty. After over two years of work the transformation project had stalled, the project director had quit and suppliers had come and gone, leaving a barely working product that with a fraction of the needed functionality.]]></description>
-            <link>https://dev.tube/video/hUBYxZIB-FU</link>
-            <guid isPermaLink="true">https://dev.tube/video/hUBYxZIB-FU</guid>
-            <pubDate>Tue, 31 Jul 2018 09:56:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[IPONWEB Research: The Rise of the Programmatic Media Agency]]></title>
-            <link>https://dev.tube/video/tuJ92E1KC2A</link>
-            <guid isPermaLink="true">https://dev.tube/video/tuJ92E1KC2A</guid>
-            <pubDate>Tue, 31 Jul 2018 09:48:57 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[What One Should Know About Spark MLlib]]></title>
-            <description><![CDATA[The goal of Spark MLlib is make practical machine learning scalable and easy. In addition to providing a set of common learning algorithms such as classification, regression, clustering, and collaborative filtering, it also provides a set of tools to help with building maintainable Machine Learning pipelines. Hien Luu dives into the concepts, details of these tools as well as the benefits they provide.
-
-Hien Luu is an engineering manager at LinkedIn. 
-
-This video was recorded at QCon.ai 2018: https://bit.ly/2piRtLl 
-
-The next QCon is in San Francisco, Nov 5-7, 2018. Check out the tracks and speakers: https://bit.ly/2uYyHLb. Save $100 by using the discount code “INFOQSF18”  
-
-More videos from QCon.ai 2018 on InfoQ:  https://bit.ly/2rNAT8z
- 
-The InfoQ Architects' Newsletter is your monthly guide to all the topics, technologies and techniques that every professional or aspiring software architect needs to know about. Over 200,000 software architects, team leads, CTOs are subscribed to it. Sign up here: https://bit.ly/2KqYfrs]]></description>
-            <link>https://dev.tube/video/DBxcua0Vmvk</link>
-            <guid isPermaLink="true">https://dev.tube/video/DBxcua0Vmvk</guid>
-            <pubDate>Tue, 31 Jul 2018 06:27:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[YOW! Data 2018 - Tim Garnsey - Respecting privacy]]></title>
-            <description><![CDATA[Safely handling data that contains sensitive or private information about people is a multi-million dollar problem at many companies. It adds time into the data engineering process, it can cost a lot in software licenses for specialised tools, and brings a range of reputational and legal risks.
-
-Recent advances in deep learning have prompted an interesting way to attack this problem. By fitting a certain class of model on a source data set that contains sensitive information, we can produce a generator that outputs a supply of synthetic "look alike" data. This output data will preserve many of the statistical relationships between fields as the source does, and offers mathematical guarantees around the identifiability of individuals in the source data set.
-
-This talk will provide an overview of the approach and show how it can speed data engineering effort and reduce risk.
-
-Tim is a Director at Verge Labs, a new type of AI company focused on the applied side of machine learning. At Verge Tim sifts through the daily firehose of theoretical research and builds a curated library of techniques and utilities ready to be switched on at companies today. 
- 
-Prior to this Tim spent six years absorbed in machine learning and data related roles in financial services tech companies including Atlassian, Spaceship and Airtasker. 
-
-For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
-            <link>https://dev.tube/video/hUIBKk2r6UE</link>
-            <guid isPermaLink="true">https://dev.tube/video/hUIBKk2r6UE</guid>
-            <pubDate>Tue, 31 Jul 2018 01:28:32 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[YOW! Lambda Jam 2018 - George Wilson - Lessons From the Design and Implementation of a CSV Library]]></title>
-            <description><![CDATA[From CSV, to JSON, to YAML, DER, and the dreaded XML, many programmers are dealing with data formats all day. In statically-typed languages like Haskell, we can get a great benefit by imposing a rigid structure of types on the data we consume from these formats. We call this process of imposing structure on data "decoding".
-
-Decoding libraries are available in many languages and for many formats. This talk explores the design decisions behind a new Haskell library, sv, which decodes CSV and similar formats such as PSV. sv addresses what we perceived as problems with other libraries. We will discuss the benefits and drawbacks of the interesting or noteworthy choices made in sv's philosophy and design, and make recommendations as to how these lessons could be applied to other formats.
-
-George is an enthusiastic programmer working at the Queensland Functional Programming Lab within Data61/CSIRO. George loves working with and speaking about Functional Programming, usually in Haskell. George is also a co-organiser of the Brisbane Functional Programming Group, and a member of the Haskell.org committee.
-
-For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
-            <link>https://dev.tube/video/zP-DgjIcCho</link>
-            <guid isPermaLink="true">https://dev.tube/video/zP-DgjIcCho</guid>
-            <pubDate>Tue, 31 Jul 2018 01:28:32 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[EBF onboarder for Microsoft Intune - Endpoint Zone 1807]]></title>
-            <description><![CDATA[Coming up in the show we'll be taking a look at how you migrate to Microsoft 365 and Microsoft Intune and we'll take a deep dive into an amazing tool; EBF onboarder for Microsoft Intune.
- 
-[T02:06] - Millions of devices are migrating to Microsoft 365
-[T07:00] - Understand how you consolidate your security with Microsoft 365
-[T08:50] - How many users are using EMS?
-[T10:00] - Nico shows us EBF on boarder for Intune
-[T15:12] - EBF on boarder demo
-[T21:30] - Looking at some of the top deploying customer trends for Intune]]></description>
-            <link>https://dev.tube/video/BuV9Ntszwb8</link>
-            <guid isPermaLink="true">https://dev.tube/video/BuV9Ntszwb8</guid>
-            <pubDate>Tue, 31 Jul 2018 01:28:30 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Coding Challenge #111: Animated Sprites]]></title>
-            <description><![CDATA[In this coding challenge, I load a sprite sheet and create multiple animated sprites with the p5.js library. #animation #spritesheet #p5js #codingchallenge
-
-💻 http://thecodingtrain.com/CodingChallenges/111-animated-sprite
-
-🔗 Horse Sprite Sheet: https://opengameart.org/content/2d-platformer-art-assets-from-horse-of-spring
-🔗 Sprite (computer graphics): https://en.wikipedia.org/wiki/Sprite_(computer_graphics)
-
-🎥 Guest Tutorial 6: The Modulo Operator with Golan Levin: https://youtu.be/r5Iy3v1co0A
-
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Books: https://www.amazon.com/shop/thecodingtrain 
-
-🎥  Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥  Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/3noMeuufLZY</link>
-            <guid isPermaLink="true">https://dev.tube/video/3noMeuufLZY</guid>
-            <pubDate>Mon, 30 Jul 2018 19:47:55 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[AWS CloudFront | Creating Amazon CloudFront Distribution | AWS Training | Edureka]]></title>
-            <description><![CDATA[** AWS Architect Certification Training: https://www.edureka.co/cloudcomputing
-This Edureka "AWS CloudFront” video will introduce you to the fundamentals of AWS CloudFront and also explain various Content Delivery concepts. Following is the list of content covered in this session:
-
-1. What Is AWS?
-2. Need For AWS CloudFront
-3. What Is AWS CloudFront?
-4. How Content Gets Delivered?
-5. AWS CloudFront Applications
-6. Demo- AWS CloudFront Distribution
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-Check out our AWS Playlist: https://goo.gl/8qrfKU
-
- #AWSTutorial #GettingStartedWithAWS #AWSCertification #AWSTraining #AWSDomains #AWSClouFront #WhatIsAWS? #ContentDeliveryNetwork, AWS Domains, Compute, Storage, Database, Data Transfer #Messaging #Free Tier #Flexibility #AWSScalability #CloudComputing #EdgeLocations #Flexibility #AvailabilityZones #IntroductionToAmazonWebServices  #edureka
-
------------------------------------------------------------------
-
-How it Works?
-
-1. This is a 5 Weeks Instructor led Online Course, 30 hours of assignment and 20 hours of project work.
-
-
-2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-
-3. At the end of the training you will be working on a real time project for which we will provide you a Grade and a Verifiable Certificate!
-
---------------------------------------------------------------------
-
-About The Course
-
-AWS holds 69% of the global market share in the cloud computing market. Irrespective of the size of an organization, everyone has started to adopt the cloud services in one way or the other, and AWS is the major player among the Cloud services industry.
-
-AWS Certification Training from Edureka is designed to provide in depth knowledge about AWS architectural principles and its services.
-
-----------------------------------------------------------------------
-
-What are the objectives of our AWS Architect Certification Training?
-
-During this AWS Architect Training, you’ll learn:
-
-·         AWS Architecture and different models of Cloud Computing
-
-·         Compute Services: AWS EC2, Auto Scaling and Load Balancing, AWS Lambda, Elastic Beanstalk
-
-·         Storage Services : AWS EBS, AWS S3, AWS Glacier, AWS CloudFront, AWS Snowball, Storage Gateway
-
-·         Database Services: AWS RDS, AWS DynamoDB, ElastiCache, AWS RedShift
-
-·         Security and Identity Services: IAM, KMS
-
-·         Networking Services: Amazon VPC, Route 53, Direct Connect
-
-·         Management Tools: AWS CloudTrail, AWS CloudWatch, CloudFormation, OpsWorks, Trusty Advisor
-
-·         Application Services: SES, SNS, SQS
-
------------------------------------------------------------------------
-
-What are the skills that you will be learning with our AWS Architect Certification Training?
-
-AWS Architect Certification is designed by industry experts to make you a certified AWS Solutions Architect. It will polish your skills by offering you comprehensive knowledge on Cloud computing. On the completion of the AWS Architect Training, learner will be able to:
-
-·         Design and deploy scalable, highly available, and fault tolerant systems on AWS
-
-·         Understand lift and shift of an existing on-premises application to AWS
-
-·         Ingress and egress of data to and from AWS
-
-·         Identify the appropriate AWS service based on data, compute, database, or security requirements
-
-·         Identify the appropriate use of AWS architectural best practices
-
-·         Estimate AWS costs and identifying cost control mechanisms
-
------------------------------------------------------------------------------------------------------------
-
-Who should go for this AWS Architect Certification Training?
-
-This AWS Certification Training is designed for the IT professionals who want to pursue a career in Cloud Computing and become AWS Certified Solutions Architect. Our AWS Architect Certification Training helps you to grab this opportunity and accelerate your career. It is best suited for:
-
-·         Professionals who want Project Experience in migrating and deploying AWS solutions
-
-·         Professionals with IT Infrastructure background
-
-·         Professionals with Virtualisation experience
-
-·         DevOps professionals
-
-·         Professionals with understanding of application, server, and network security and compliance
-
----------------------------------------------------------------------------------------------------------
-
-Cognizant, Dell, KPMG, Hitachi, Wipro, Avanade, Annik Inc., Brillio and over 45,000 MNCs across 185 countries use Power BI
-
-For more information, please write back to us at sales@edureka.co
-Call us at US: +18336900808 (Toll Free) or India: +918861301699
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/sQNONcj0cvc</link>
-            <guid isPermaLink="true">https://dev.tube/video/sQNONcj0cvc</guid>
-            <pubDate>Mon, 30 Jul 2018 19:47:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Arduino vs Raspberry Pi | Which Board to Choose for IoT Projects | IoT Devices | Edureka]]></title>
-            <description><![CDATA[** Edureka IoT Training: https://www.edureka.co/iot-certification-training **
-Looking for the right kind of development boards for your IoT projects? It obviously boils down to either the Raspberry Pi or the Arduino. Now, while both might look very similar, but they’re actually very different. They’re both designed for separate utilities and are used under different circumstances. So, it is very important to know when to use which to get the best out of your projects while keeping the entire system energy-efficient and minimal. I’ve explained how the electronic control provided by both these popular boards differ and pointed out their key differences so that you understand which one of these single board systems are better suited to the needs of your projects. 
-
-Subscribe to our channel to get video updates. Hit the subscribe button above. 
-
-#IoT #AdruinoVsRaspberryPi #IoTtutorial #RaspberryPi #Arduino #IoTboards #DevelopmentBoards #InternetOfThings #iotonlinetraining #Edureka 
-
--------------------------- 
-
-About our IoT Training 
-
-IoT Certification Training is designed by industry experts to make you a Certified IoT Developer. Edureka IoT training covers: 
-Understanding of IoT architecture and IoT Decision Framework 
-Configure Raspberry Pi, Understand Sensors, Actuators & get started with python on Raspberry Pi 
-Program Sensors (Sense-HAT board), Face Detection and reorganization using OpenCV-Python 
-Understand various IoT Networking Protocols which are mainly used to develop communication solutions
-Getting started with Cloud and Azure IoT Hub, demonstration of Azure IoT Hub APIs 
-Architect an End-to-End Solution using Raspberry Pi, Sense HAT, and Azure 
-Perform Data Analytics on the collected sensor data, use prediction algorithms to get useful insights 
-IoT challenges, business solutions, research scope and current development, Alexa Voice Bot on Raspberry Pi 
-
--------------------------- 
-
-Who should go for this IoT Training? 
-
-This IoT Certification Training on Azure is for all the professionals who are passionate about work with IoT devices and want to go ahead and make their career as an IoT Developer. It is best suited for individuals who are: 
-Software Developers who are venturing into IoT space 
-Solution Architects 
-Technical Architects 
-Students who seek IoT knowledge 
-Business Executives and Managers who want to understand the essentials of IoT 
-
-------------------- 
-
-Why Learn IoT? 
-Internet of Things is considered as the next big technology revolution after invention of the Internet. It is supposed to make tremendous impacts on lives and may possibly lead to the betterment of millions of lives throughout the world. According to Cisco, over 50 million devices are expected to be connected to IoT by 2020. 
-Healthcare, Logistics, Aviation, Education, Information Technology name any thing and IoT will become an integral part of all these verticals. Internet of Things is believed to bring about the singularity which will ultimately converge into becoming the Internet of Everything. IoT has, therefore, become a leading interest of technologists globally and is perceived to be the NEXT BIG THING in IT industry. Learning IoT will not only provide you a career boost but you will also be able to gain insights on how technology has affected the world and will continue to do so in the coming decades. 
-
-For more information, please write back to us at sales@edureka.co 
-Call us at US: +18336900808 (Toll Free) or India: +918861301699 
-Facebook: https://www.facebook.com/edurekaIN/ 
-Twitter: https://twitter.com/edurekain 
-LinkedIn: https://www.linkedin.com/company/edureka 
-
-Customer Review: 
-Michael Harkins, System Architect, Hortonworks says: “The courses are top rate. The best part is live instruction, with playback. But my favourite feature is viewing a previous class. Also, they are always there to answer questions, and prompt when you open an issue if you are having any trouble. Added bonus ~ you get lifetime access to the course you took!!! ~ This is the killer education app... I've taken two courses, and I'm taking two more.”]]></description>
-            <link>https://dev.tube/video/vrQOv40SyDE</link>
-            <guid isPermaLink="true">https://dev.tube/video/vrQOv40SyDE</guid>
-            <pubDate>Mon, 30 Jul 2018 19:47:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How to hack a Node app]]></title>
-            <description><![CDATA[Thought hacking was hard? It’s not! It’s easy and in this talk you'll see how to hack a Node.js app. We’ll investigate a series of hacking stories and break them down step-by-step to see exactly how they did it. By the end you’ll walk away a little bit more scared and a lot more prepared with some great practices you can apply immediately to your own applications.
-
-Talk by Asim Hussain.
-
-Video recorded at the GDG DevFest Ukraine - the biggest conference about Google technologies in Central and Eastern Europe.
-Learn about the conference at https://devfest.gdg.org.ua/
-More recordings at http://bit.ly/devfestua-channel
+🔗Check out Cody Seibert's main channel: https://www.youtube.com/channel/UCsrVDPJBYeXItETFHG0qzyw
 
 --
 
@@ -351,13 +21,13 @@ Learn to code for free and get a developer job: https://www.freecodecamp.org
 Read hundreds of articles on programming: https://medium.freecodecamp.org
 
 And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/mhv87mU2M4o</link>
-            <guid isPermaLink="true">https://dev.tube/video/mhv87mU2M4o</guid>
-            <pubDate>Mon, 30 Jul 2018 19:47:34 GMT</pubDate>
+            <link>https://dev.tube/video/m1_ih43p24s</link>
+            <guid isPermaLink="true">https://dev.tube/video/m1_ih43p24s</guid>
+            <pubDate>Thu, 02 Aug 2018 01:31:21 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Don't Break the Chain: Maintaining Productivity on Your 19th Game]]></title>
-            <description><![CDATA[In this 2018 GDC talk, developer Jason Rohrer presents tested techniques he's used over the past 12 years, working alone, to ship 18 games.
+            <title><![CDATA[The 2018 Indie Soapbox]]></title>
+            <description><![CDATA[In this 2018 batch of microtalks, developers Justin Ma, Rosa Carbo-Mascarell, Adriel Wallick, Davey Wreden, Johanna Pirker, Danny Baranowsky, Frank Lantz, Ethan Redd, Claris Cyarron & Dee Del Rosario take the stage to share what's on their minds in the world of indie game development. 
 
 Register for GDC: http://ubm.io/2gk5KTU
 
@@ -366,26 +36,308 @@ Join the GDC mailing list: http://www.gdconf.com/subscribe
 Follow GDC on Twitter: https://twitter.com/Official_GDC 
 
 GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/mIPmjnsCPR4</link>
-            <guid isPermaLink="true">https://dev.tube/video/mIPmjnsCPR4</guid>
-            <pubDate>Mon, 30 Jul 2018 19:46:42 GMT</pubDate>
+            <link>https://dev.tube/video/CJwLNpJWHpw</link>
+            <guid isPermaLink="true">https://dev.tube/video/CJwLNpJWHpw</guid>
+            <pubDate>Thu, 02 Aug 2018 01:30:22 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Protecting Encryption Keys with Azure Key Vault - Stephen Haunts]]></title>
-            <description><![CDATA[In a world where we are putting our companies data in the cloud, the protection of that data against a data breach has never been more important. In this talk I will show you how to setup and use the Microsoft Azure Key vault to protect your encryption keys and secrets like passwords and connection strings. Azure Key Vault uses the power of Hardware Security Modules (HSM's) to protect your secrets and make sure your solutions are as secure as they can be when working in regulated industries like healthcare, financial and insurance.
-As well as showing you how to setup and configure the vault, I will show you how to code against it and various different patterns for security in a cloud base multi tenant environment. I will cover topics like:
+            <title><![CDATA[How to scare a fish (school) - Andrej Warkentin]]></title>
+            <description><![CDATA[PyData Berlin 2018 
 
-• Setup Azure key Vault
-• Authorize your application to access the vault with AzureAD
-• Accessing the vault from your applications
-• Using the Vault to wrap local encryption keys for performance
-• Encrypting connection strings as Key Vault secrets to get flexible database routing in the cloud
-• Audit logging for compliance
+Did you ever try to scare a fish by tapping on the glass of an aquarium? What happens in the fish brain if you do that? What would happen in a fish school? In my project I tried to answer these questions via computational modelling and I will tell you how packages such as numba, pypet, and matplotlib allowed me to efficiently simulate the model and visualize results in a reproducible way.
 
-Once this talk is finished you will walk away with everything you need to start using Azure Key Vault today.]]></description>
-            <link>https://dev.tube/video/WIgUmnwKdas</link>
-            <guid isPermaLink="true">https://dev.tube/video/WIgUmnwKdas</guid>
-            <pubDate>Mon, 30 Jul 2018 19:45:28 GMT</pubDate>
+Slides: https://github.com/awakenting/master-thesis/blob/master/pydata_2018_presentation_slides.pdf
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/1mDL5PGnDLc</link>
+            <guid isPermaLink="true">https://dev.tube/video/1mDL5PGnDLc</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Python in Medicine: analysing data from mechanical... - Gusztav Belteki]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+I would like to show how I have been using Python and its data science tools to interpret large datasets retrieved from modern equipment used in neonatal intensive care, mechanical ventilators and patient monitors. I also would like to talk about my journey to Python: why it is important for professionals without computational background to learn coding and how I think it is the easiest to do it.
+
+Slides: https://www.dropbox.com/s/wwfkbfd28rm8hoi/Pydata_Berlin_2018.pptx?dl=0
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/BZbGyQqQIe8</link>
+            <guid isPermaLink="true">https://dev.tube/video/BZbGyQqQIe8</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Five things I learned from turning research papers into industry prototypes - Ellen König]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+As data scientists, building on published research allows us to stay on the cutting edge and not reinvent the wheel. However, in most cases, this transfer is not trivial. My talk will provide you with a five-step workflow that has made this transfer easier for me.
+
+Slides: https://speakerdeck.com/ellenkoenig/pydata-bln-2018-five-things-i-learned-while-prototyping-ml-papers
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/CdQJUqS-t4c</link>
+            <guid isPermaLink="true">https://dev.tube/video/CdQJUqS-t4c</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AI in Healthcare - David Higgins]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+I will discuss machine learning as it is applied to healthcare. The particular focus of my talk is on the limitations of pure machine learning approaches when it comes to biological systems. I will compare this with pure mathematical model-based approaches, which on the one hand appear more suitable but ultimately have their own attendant set of problems. I will finish up with hybrid approaches.
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/D5BJXPfY4RQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/D5BJXPfY4RQ</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tricks, tips and topics in Text Analysis - Bhargav Srinivasa Desikan]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+There is an abundance of easily mineable text data (Whatsapp, twitter, and even our own e-mails!), and we have no excuse to not analyse it. In this workshop, we will learn some tips and tricks to deal with messy text data, before moving on to some lesser looked at text analysis techniques, such as text summarisation, working with distance metrics, and an old personal favorite - topic models.
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/M8HAp1-Uzao</link>
+            <guid isPermaLink="true">https://dev.tube/video/M8HAp1-Uzao</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[When to go deep in Computer Vision... and how - Irina Vidal Migallón]]></title>
+            <description><![CDATA[PyData Berlin 2018 
+
+We're in a transitional time where it is not always clear whether (Deep) Neural Networks are the best way to solve a given problem - even in Computer Vision. This talk discusses practical steps, tools and practices that can help you make that decision and follow through.
+
+Slides: https://drive.google.com/open?id=1SDH8JSK4GW45RdDhUhR2b_mc-AxqeWuL 
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/MfMYsZ_QUpk</link>
+            <guid isPermaLink="true">https://dev.tube/video/MfMYsZ_QUpk</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Spatial Data Analysis With Python - Dillon R  Gardner, PhD]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+The explosion of geolocation sensors and spatial data has unlocked a wealth of potential for visualization and analytics. This talk provides an introduction to how to work with spatial data using the excellent python tooling.
+
+Slides: https://github.com/dillongardner/PyDataSpatialAnalysis/
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/eHRggqAvczE</link>
+            <guid isPermaLink="true">https://dev.tube/video/eHRggqAvczE</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Interfacing R and Python - Andrew Collier]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+Interfacing R and Python using the reticulate package.
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/pjDGB9i7kyI</link>
+            <guid isPermaLink="true">https://dev.tube/video/pjDGB9i7kyI</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Face of Nanomaterials: Insightful Classification Using Deep Learning - Angelo Ziletti]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+Artificial intelligence is emerging as a new paradigm in materials science. This talk describes how physical intuition and (insightful) machine learning can solve the complicated task of structure recognition in materials at the nanoscale.
+
+Slides: https://www.slideshare.net/PyData/the-face-of-nanomaterials-insightful-classification-using-deep-learning-angelo-ziletti
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/r7O0-J1t4H0</link>
+            <guid isPermaLink="true">https://dev.tube/video/r7O0-J1t4H0</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Python Unittesting for Ethereum Smart Contracts or how not to create your own Crypto - Robert Meyer]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+Ethereum is a Turing complete Blockchain. Instead of just processing transactions like Bitcoin, the Ethereum Virtual Machine can run programs. There is one catch regarding any code that is deployed: Fixing errors is almost impossible. Hence, testing becomes incredibly important. The beauty of Unittesting in Ethereum? You can do it in Python and I will show you how.
+
+Slides: https://github.com/SmokinCaterpillar/Snowballs
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/sVxT11xJuC4</link>
+            <guid isPermaLink="true">https://dev.tube/video/sVxT11xJuC4</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Extending Pandas using Apache Arrow and Numba - Uwe L  Korn]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+With the latest release of Pandas the ability to extend it with custom dtypes was introduced. Using Apache Arrow as the in-memory storage and Numba for fast, vectorized computations on these memory regions, it is possible to extend Pandas in pure Python while achieving the same performance of the built-in types. In the talk we implement a native string type as an example.
+
+Slides: https://pydata.org/berlin2018/proposals/124/
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/tvmX8YAFK80</link>
+            <guid isPermaLink="true">https://dev.tube/video/tvmX8YAFK80</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Object detection to Instance segmentation: Learn to apply several algorithms...- Sujatha Subramanian]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+In the recent times, several meta-algorithms in deep learning have opened up the possibility to use Computer Vision in various applications. Particularly in the field of Object detection, Semantic Segmentation and Instance Segmentation there has been a steady improvement in algorithms like Faster R-CNN, SSD, YOLO, MASK-RCNN. When to apply what and how to leverage those in real-world applications?
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/yt1RSUw0YO4</link>
+            <guid isPermaLink="true">https://dev.tube/video/yt1RSUw0YO4</guid>
+            <pubDate>Thu, 02 Aug 2018 01:29:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#FiveThings About CSS {S:01 E:25}]]></title>
+            <description><![CDATA[CSS – either you love it or you hate. Or sometimes both. This week Burke sits down with CSS aficionado Aimee Knight to bring you Five useful tips for working with CSS.
+
+Aimee Knight on Twitter: https://twitter.com/Aimee_Knight
+CSS Isn’t Black Magic: https://medium.freecodecamp.org/its-not-dark-magic-pulling-back-the-curtains-from-your-stylesheets-c8d677fa21b2
+CSS Stacking Context (how z-index works): https://tiffanybbrown.com/2015/09/css-stacking-contexts-wtf/index.html
+CSS Object Model: https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model
+
+Learn more at https://aka.ms/5things-azure
+To watch more episodes go to https://aka.ms/FiveThingsPlaylist
+Follow Hosts https://twitter.com/John_Papa and https://twitter.com/burkeholland on Twitter
+
+Create a Free Account (Azure): https://aka.ms/azft-oss]]></description>
+            <link>https://dev.tube/video/-c0blZ6AmQE</link>
+            <guid isPermaLink="true">https://dev.tube/video/-c0blZ6AmQE</guid>
+            <pubDate>Thu, 02 Aug 2018 01:28:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Data 2018 - Hercules Konstantopoulos - Consequences of not being awesome at plots]]></title>
+            <description><![CDATA[“Hey boss, we made a totally rad deep learning algorithm! It trawls through the internet and literally tells the future!”
+
+“Yeah, cool. But do you have a plot I can show the board?”
+
+Data visualisation is the capstone of data science. As businesses collate massive and disparate data streams, and as algorithms become more complex, communicating results has become more important and more challenging than even before. We need to to start placing as much importance on accessible visualisation as we do on database architecture or algorithm design.
+
+In this talk I will present some core visualisation principles that I have developed over 15 years of experience visualising (literally) astronomical datasets, carbon emissions, behavioural analytics, even the odd basketball game. These can be employed by any data scientist to help their data tell the right story to the right people.
+
+Growing up by the mountains of Northern Greece, Hercules Konstantopoulos developed a fascination with the night sky and all its intrigue. After a career as a researcher in astrophysics that spanned ten years and four continents, he became drawn to addressing a greater variety of data-related problems. Data science ensued with work on sustainability and energy management, and now a spot as Sr Data Scientist at Atlassian, Sydney’s most acclaimed home-grown tech shop. There he focusses on converting support tickets and behavioural data into product strategy and business direction, and on creating informative and accessible data visualisation. 
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/5Bd3rPPWw0I</link>
+            <guid isPermaLink="true">https://dev.tube/video/5Bd3rPPWw0I</guid>
+            <pubDate>Thu, 02 Aug 2018 01:28:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[YOW! Lambda Jam 2018 - Mark Hopkins -All of Basic Category Theory]]></title>
+            <description><![CDATA[Join me for a scenic adventure tour through the magical land of category theory, stopping off at all the major sights.
+
+We'll learn the basic notions that form the conceptual backbone of category theory, and how they all fit together.
+
+Category theory has made deep inroads into computer science theory, but in this talk we'll be focused on computer science practice. We'll explore the advantages category theory brings to programming in terms of
+
+1.providing alternate representations for types
+2.  classifying solutions, or
+3. simply providing a clarifying viewpoint and helping to organise our thinking.
+
+In addition this should provide you with the right framework for further exploring category theory, should you so wish.
+
+Mark has a PhD in algebra, writes Haskell at a bank, and loves functional programming.
+
+For more on YOW! Conference, visit http://www.yowconference.com.au]]></description>
+            <link>https://dev.tube/video/9u1q3lH7VbE</link>
+            <guid isPermaLink="true">https://dev.tube/video/9u1q3lH7VbE</guid>
+            <pubDate>Thu, 02 Aug 2018 01:28:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Launch Jupyter to the Cloud: an example of using Docker and Terraform - Cheuk Ting Ho]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+There are lots of reasons using a cloud service is favorable, but how to make sure consistency between development and deployment? With Docker, we can "ship" the project to different platforms in the same environment. Going one step further we can also create the cloud infrastructure as code with Terraform. As an example, we will deploy a Jupyter notebook on Google Cloud Platform using both tools.
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/-Q8gp7rr10U</link>
+            <guid isPermaLink="true">https://dev.tube/video/-Q8gp7rr10U</guid>
+            <pubDate>Thu, 02 Aug 2018 01:28:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[All that likelihood with PyMC3 - Junpeng Lao]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+The likelihood is a central concept in Bayesian computation. In this tutorial, we will learn about what is the likelihood function and how do we use it for inference. Using PyMC3, I will demonstrate how to get the likelihood from a model, how does it connect to inference using NUTS or Variational approximation, and some practical usage of the model likelihood to perform model comparisons.
+
+Slides: https://github.com/junpenglao/All-that-likelihood-with-PyMC3/tree/pydata_Berlin
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/0_oonRc7Sn8</link>
+            <guid isPermaLink="true">https://dev.tube/video/0_oonRc7Sn8</guid>
+            <pubDate>Thu, 02 Aug 2018 01:28:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ctparse: a practical parser for natural language time expressions... - Dr  Sebastian Mika]]></title>
+            <description><![CDATA[PyData Berlin 2018
+
+Parsing natural language time expressions into structured data is challenging. Whilst there are quite a few tools, many are either too simplistic or problematic in a python setup. ctparse is a pure python library (MIT-License) build on straight forward concepts, allowing to parse complex expressions efficiently and can easily be adjusted for domain specific use cases.
+---
+www.pydata.org
+
+PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R. 
+
+PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases.]]></description>
+            <link>https://dev.tube/video/1By9HIOfM-o</link>
+            <guid isPermaLink="true">https://dev.tube/video/1By9HIOfM-o</guid>
+            <pubDate>Thu, 02 Aug 2018 01:28:12 GMT</pubDate>
         </item>
     </channel>
 </rss>
