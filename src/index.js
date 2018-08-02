@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
+
 import VueRouter from 'vue-router'
 import VueCookie from 'vue-cookie'
 import VueDisqus from 'vue-disqus'
@@ -12,6 +14,7 @@ import Search from './Search.vue'
 import Contributors from './Contributors.vue'
 import { flatten, views, duration, truncate, published } from './helpers/filters'
 
+Vue.use(Vuex)
 Vue.use(InstantSearch)
 Vue.use(VueCookie)
 Vue.use(VueRouter)
