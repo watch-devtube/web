@@ -16,7 +16,9 @@ import Watch from './Watch.vue'
 import Search from './Search.vue'
 import Contributors from './Contributors.vue'
 import { flatten, views, duration, truncate, published } from './helpers/filters'
+
 import auth from './auth'
+import videos from './videos'
 
 Vue.use(Vuex)
 Vue.use(InstantSearch)
@@ -44,14 +46,14 @@ const router = new VueRouter({
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },
     { name: 'tag', path: '/tag/:tag', component: Search, props: true },
-    { name: 'search', path: '/', component: Search, props: (route) => ({ query: route.query.q }) },
+    { name: 'search', path: '/', component: Search, props: (route) => ({ query: route.query.q, showMyWatched: (route.query.w === 'true') }) },
   ],
 })
 
 import createPersistedState from "vuex-persistedstate"
 const store = new Vuex.Store({
   modules: {
-    auth
+    auth, videos
   },
   strict: true,
   plugins:[createPersistedState()]

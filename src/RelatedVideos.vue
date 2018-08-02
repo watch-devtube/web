@@ -19,7 +19,7 @@
       newMode() {
         return window.fastrMode
       }
-    },    
+    },
     asyncComputed: {
       hits() {
         

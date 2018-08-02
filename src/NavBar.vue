@@ -16,10 +16,14 @@
       .navbar-start
         slot
       .navbar-end
-        a.navbar-item.is-size-7(v-if="auth.user" @click="logout()") 
-          img(:src="auth.user.picture" style="height: 36px; border-radius: 50%")
-          | &nbsp; Sign out
-        a.navbar-item.is-size-7(v-else @click="login()") Sign in {{auth.user}}
+        a.navbar-item.is-hoverable.is-size-7(v-if="auth.user") 
+          img(:src="auth.user.picture" style="height: 36px; border-radius: 50%; border: 1px solid white")
+          | &nbsp;&nbsp;
+          i.fas.fa-ellipsis-v
+          .navbar-dropdown.is-boxed.is-size-7
+            a.navbar-item.is-size-7(@click="showWatched()") Watched videos
+            a.navbar-item(@click="logout(); hide()") Logout
+        a.navbar-item.is-size-7(v-else @click="login(); hide()") Log in {{auth.user}}
         a.is-size-7.navbar-item(v-if="auth.error"): span {{auth.error}}
         NightMode
         | &nbsp; &nbsp;  
@@ -75,6 +79,13 @@ header {
       },
       home() {
         window.location = "/"
+      },
+      showWatched() {
+        this.$router.push({
+          name: 'search',
+          query: { w: 'true' }
+        });
+        this.hide();
       },
       ...mapActions('auth', [ 'login', 'logout' ])
     },

@@ -1,8 +1,8 @@
 <template lang="pug">
-  .card(style="height: 100%; width:100%;")
+  .card(style="height: 100%; width:100%")
       .card-image
-        // a(@click="markWatched(id)")
-          span.watched.fa-stack.fa-2x
+        a(@click="toggleWatched(id)")
+          span.watched.fa-stack.fa-2x(v-bind:class="{ 'has-text-link': isWatched(id) }")
             i.far.fa-eye.fa-stack-1x.fa-xs
             i.fas.fa-check.fa-stack-1x.fa-xs(data-fa-transform="shrink-8 up-7 right-7")
         a(:href="'/video' + '/' + id")
@@ -139,6 +139,7 @@
 <script>
   import Tags from './Tags.vue'
   import dayjs from 'dayjs'
+  import { mapState, mapActions, mapGetters } from 'vuex'
 
   export default {
     props: { 
@@ -170,18 +171,18 @@
         let videoCreated = dayjs(this.creationDate * 1000)
         let videoAgeInDays = today.diff(videoCreated, 'days')
         return videoAgeInDays <= 7
-      }
+      },
+      ...mapState([ 'videos' ]),
+      ...mapGetters('videos', ['isWatched'])      
     },
     methods: {
-      markWatched: function(videoId) {
-        
-      },
       watch: function(videoId) {
         this.$router.push({
           name: 'watch',
           params: { id: videoId }
         });
-      }
+      },
+      ...mapActions('videos', [ 'toggleWatched' ])
     },    
     components: { Tags }
   };

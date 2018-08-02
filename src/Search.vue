@@ -15,7 +15,7 @@
                   a.button.is-small.is-hidden-tablet(@click="$refs.tagPicker.expand()"): span.icon.is-small: i.fas.fa-hashtag
                   a.button.is-small.is-hidden-tablet(@click="$refs.speakerPicker.expand()"): span.icon.is-small: i.far.fa-user-circle
                   a.button.is-small.is-hidden-tablet(@click="$refs.channelPicker.expand()"): span.icon.is-small: i.fab.fa-youtube
-
+  
                 ExpandableTags(ref="tagPicker" icon="fas fa-hashtag" title="Tags" :items="tags" :limit="10" :route="routeToTag")
                     template(slot-scope="slot") {{slot.item.tag}}
 
@@ -30,9 +30,10 @@
                   .column
                     .columns
                       .column.is-hidden-mobile
-                        router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'search' }")
+                        router-link.button.is-small.is-outlined(v-if="speaker || tag || channel || showMyWatched" :to="{ name: 'search' }")
                           span.is-capitalized(v-if="tag || channel") {{tag || channel}}
                           span.is-lowercased(v-if="speaker") @{{speaker}}
+                          span.is-lowercased(v-if="showMyWatched") Watched
                           span.icon.is-small: i.fas.fa-times
                     .loading(v-if="loading")
                       .notification
@@ -80,6 +81,7 @@
 <script>
 import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import { createFromAlgoliaClient } from 'vue-instantsearch'
+import { mapState, mapGetters } from 'vuex'
 
 import VideoCard from './VideoCard.vue'
 import NavBar from './NavBar.vue'
@@ -91,6 +93,7 @@ import ExpandableTags from './ExpandableTags.vue'
 export default { 
   props: {
     query: { type: String, default: '' },
+    showMyWatched: { type: Boolean, default: false },
     speaker: { type: String, required: false },
     channel: { type: String, required: false },
     tag: { type: String, required: false }
@@ -154,7 +157,9 @@ export default {
     },
     channels() {
       return window.featured.channels
-    }
+    },
+    ...mapState([ 'videos' ]),
+    ...mapGetters('videos', ['watchedIds'])
   },
   methods: {
     routeToTag(item) {
@@ -181,6 +186,14 @@ export default {
 
       this.searchStore.queryParameters = { sortOrder: this.$cookie.get('sortBy') || '-featured' }
 
+      let watchedVideoIds = this.watchedIds
+
+      if (this.showMyWatched) {
+        this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: watchedVideoIds } } }
+        this.searchStore.queryParameters = { watched: [] }
+      } else {
+        this.searchStore.queryParameters = { watched: watchedVideoIds }
+      }
 
       if (this.speaker) {
         this.searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
