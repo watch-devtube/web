@@ -16,9 +16,11 @@
       .navbar-start
         slot
       .navbar-end
-        // a.navbar-item.is-size-7
-          img(src="http://avatars.io/twitter/eduardsi" style="height: 36px; border-radius: 50%")
-          | &nbsp; Sign out  
+        a.navbar-item.is-size-7(v-if="auth.user" @click="logout()") 
+          img(:src="auth.user.picture" style="height: 36px; border-radius: 50%")
+          | &nbsp; Sign out
+        a.navbar-item.is-size-7(v-else @click="login()") Sign in {{auth.user}}
+        a.is-size-7.navbar-item(v-if="auth.error"): span {{auth.error}}
         NightMode
         | &nbsp; &nbsp;  
 </template>
@@ -53,7 +55,11 @@ header {
 <script>
   import Input from './Input.vue'
   import NightMode from './NightMode.vue'
+  import { mapState, mapActions } from 'vuex'
+
+
   export default {
+    computed: mapState([ 'auth' ]),
     data: function() {
       return {
         active: false
@@ -69,7 +75,8 @@ header {
       },
       home() {
         window.location = "/"
-      }
+      },
+      ...mapActions('auth', [ 'login', 'logout' ])
     },
     components: { Input, NightMode }  
   }

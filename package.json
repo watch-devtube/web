@@ -11,6 +11,7 @@
   "dependencies": {
     "auth0-lock": "^11.8.1",
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "dayjs": "^1.5.16",
     "jwt-decode": "^2.2.0",
     "v-debounce": "^0.1.2",
@@ -23,12 +24,14 @@
     "vue-meta": "^1.5.0",
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-latest": "^6.0.0",
     "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.1.3",

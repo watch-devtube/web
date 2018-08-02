@@ -4,5 +4,5 @@
       "es2015": { "modules": false }
     }]
   ],
-  "plugins": ["syntax-dynamic-import"]
+  "plugins": ["syntax-dynamic-import", "babel-plugin-transform-object-rest-spread"]
 }

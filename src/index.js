@@ -1,3 +1,5 @@
+import "babel-polyfill"
+
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -8,11 +10,13 @@ import AsyncComputed from 'vue-async-computed'
 import InstantSearch from 'vue-instantsearch'
 import VueProgressBar from 'vue-progressbar'
 
+
 import App from './App.vue'
 import Watch from './Watch.vue'
 import Search from './Search.vue'
 import Contributors from './Contributors.vue'
 import { flatten, views, duration, truncate, published } from './helpers/filters'
+import auth from './auth'
 
 Vue.use(Vuex)
 Vue.use(InstantSearch)
@@ -44,9 +48,19 @@ const router = new VueRouter({
   ],
 })
 
+import createPersistedState from "vuex-persistedstate"
+const store = new Vuex.Store({
+  modules: {
+    auth
+  },
+  strict: true,
+  plugins:[createPersistedState()]
+})
+
 // eslint-disable-next-line no-new
 new Vue({
   el: '#vue',
+  store,
   render: h => h(App),
   router,
 })

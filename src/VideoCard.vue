@@ -139,9 +139,6 @@
 <script>
   import Tags from './Tags.vue'
   import dayjs from 'dayjs'
-  import AuthService from './helpers/AuthService'
-  let { login } = new AuthService()
-
 
   export default {
     props: { 
@@ -177,7 +174,7 @@
     },
     methods: {
       markWatched: function(videoId) {
-        login()
+        
       },
       watch: function(videoId) {
         this.$router.push({
