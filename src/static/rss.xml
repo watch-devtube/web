@@ -4,8 +4,249 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 03 Aug 2018 04:33:58 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 04 Aug 2018 04:29:49 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[AWS Cloud Computing Architecture | AWS Certification | AWS Tutorial For Beginners | Edureka]]></title>
+            <description><![CDATA[This Edureka "AWS Cloud Computing Architecture ” video will introduce you to the nitty-gritties of Architecting a Solution with AWS and also explains the various AWS Design Principles.
+
+Check out our AWS Playlist: https://goo.gl/8qrfKU
+
+PHPZipFile: https://aws.amazon.com/getting-started/tutorials/launch-an-app/
+
+Putty: https://www.putty.org/
+
+
+Following topics are covered in this session:
+
+1. Cloud and AWS
+2. Why Move To Cloud?
+3. Design Principles
+4. Demo: Architecting Cloud Solution
+ 
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+ #AWSTutorial #AWSCloudComputingArchitecture #AWSCertification #AWSTraining #AWSDomains #AWSEC2 #WhatIsAWS? #ContentDeliveryNetwork, #AWSDesignPrinciples Compute, Storage, Database, Data Transfer #Messaging #FreeTier #Flexibility #AWSScalability #CloudComputing #EdgeLocations #Flexibility #AvailabilityZones #IntroductionToAmazonWebServices  #edureka
+
+-----------------------------------------------------------------
+
+How it Works?
+
+
+1. This is a 5 Weeks Instructor led Online Course, 30 hours of assignment and 20 hours of project work.
+
+
+2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+
+3. At the end of the training you will be working on a real time project for which we will provide you a Grade and a Verifiable Certificate!
+
+--------------------------------------------------------------------
+
+About The Course
+
+ 
+AWS holds 69% of the global market share in the cloud computing market. Irrespective of the size of an organization, everyone has started to adopt the cloud services in one way or the other, and AWS is the major player among the Cloud services industry.
+
+AWS Certification Training from Edureka is designed to provide in depth knowledge about AWS architectural principles and its services.
+
+----------------------------------------------------------------------
+
+What are the objectives of our AWS Architect Certification Training?
+
+ During this AWS Architect Training, you’ll learn:
+
+1. AWS Architecture and different models of Cloud Computing
+2. Compute Services: AWS EC2, Auto Scaling and Load Balancing, AWS Lambda, Elastic Beanstalk
+3. Storage Services : AWS EBS, AWS S3, AWS Glacier, AWS CloudFront, AWS Snowball, Storage Gateway
+4. Database Services: AWS RDS, AWS DynamoDB, ElastiCache, AWS RedShift
+5. Security and Identity Services: IAM, KMS
+6. Networking Services: Amazon VPC, Route 53, Direct Connect
+7. Management Tools: AWS CloudTrail, AWS CloudWatch, CloudFormation, OpsWorks, Trusty Advisor
+8. Application Services: SES, SNS, SQS
+
+-----------------------------------------------------------------------
+
+What are the skills that you will be learning with our AWS Architect Certification Training?
+
+ 
+ On the completion of the AWS Architect Training, learner will be able to:
+
+1. Design and deploy scalable, highly available, and fault tolerant systems on AWS
+2. Understand lift and shift of an existing on-premises application to AWS
+3. Ingress and egress of data to and from AWS
+4. Identify the appropriate AWS service based on data, compute, database, or security requirements
+5. Identify the appropriate use of AWS architectural best practices
+6. Estimate AWS costs and identifying cost control mechanisms
+
+-----------------------------------------------------------------------------------------------------------
+
+Who should go for this AWS Architect Certification Training?
+
+ 
+
+This AWS Certification Training is designed for the IT professionals who want to pursue a career in Cloud Computing and become AWS Certified Solutions Architect. Our AWS Architect Certification Training helps you to grab this opportunity and accelerate your career. It is best suited for:
+
+1. Professionals who want Project Experience in migrating and deploying AWS solutions
+2. Professionals with IT Infrastructure background
+3. Professionals with Virtualisation experience
+4. DevOps professionals
+5. Professionals with understanding of application, server, and network security and compliance
+
+---------------------------------------------------------------------------------------------------------
+
+Cognizant, Dell, KPMG, Hitachi, Wipro, Avanade, Annik Inc., Brillio and over 45,000 MNCs across 185 countries use Power BI
+
+For more information, please write back to us at sales@edureka.co
+
+Call us at US: 1855 818 0063(toll free) or India: +91 90191 17772 
+
+
+Website: https://www.edureka.co/cloudcomputing
+
+Facebook: https://www.facebook.com/edurekaIN/
+
+Twitter: https://twitter.com/edurekain
+
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/i5SoCF-4beI</link>
+            <guid isPermaLink="true">https://dev.tube/video/i5SoCF-4beI</guid>
+            <pubDate>Sat, 04 Aug 2018 01:32:03 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Network Service Mesh WG Meeting - 2018-08-03]]></title>
+            <link>https://dev.tube/video/GdocN_l7ZUA</link>
+            <guid isPermaLink="true">https://dev.tube/video/GdocN_l7ZUA</guid>
+            <pubDate>Sat, 04 Aug 2018 01:31:27 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[OpenTracing Monthly Call - 2018-08-03]]></title>
+            <link>https://dev.tube/video/lmtIwjzaUMk</link>
+            <guid isPermaLink="true">https://dev.tube/video/lmtIwjzaUMk</guid>
+            <pubDate>Sat, 04 Aug 2018 01:31:27 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rayman Reinvented]]></title>
+            <description><![CDATA[In this 2013 GDC session, Ubisoft's Anais Dusautois & Christophe Villez offer a behind-the-scenes look at the art-focused process of redesigning Rayman. 
+
+Register for GDC: http://ubm.io/2gk5KTU
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/p-8eNkUCvnw</link>
+            <guid isPermaLink="true">https://dev.tube/video/p-8eNkUCvnw</guid>
+            <pubDate>Sat, 04 Aug 2018 01:30:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[[Uber Open Source] Distributing Uber's ML Platform with an Operator Framework -- Mingshi Wang]]></title>
+            <description><![CDATA[During a June 2018 Open Source Meetup at our Seattle office, senior software engineer Mingshi Wang discusses how we leveraged operator frameworks to scale Michelangelo, our machine learning-as-a-service platform.]]></description>
+            <link>https://dev.tube/video/0RVPGULAbYg</link>
+            <guid isPermaLink="true">https://dev.tube/video/0RVPGULAbYg</guid>
+            <pubDate>Sat, 04 Aug 2018 01:28:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[[Uber Open Source] Profile Spark Applications at Scale -- Bo Yang]]></title>
+            <description><![CDATA[During a June 2018 Open Source Meetup at our Seattle office, senior software engineer Bo Yang discusses how Uber's open source JVM Profiler enables us to profile Spark applications at scale across our microservices.]]></description>
+            <link>https://dev.tube/video/fCTdbX-mG2I</link>
+            <guid isPermaLink="true">https://dev.tube/video/fCTdbX-mG2I</guid>
+            <pubDate>Sat, 04 Aug 2018 01:28:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[[Uber Open Source] LogX: Creating Log Observability in Hadoop Workloads at Uber -- Nan Zhu]]></title>
+            <description><![CDATA[During a June 2018 Open Source Meetup at our Seattle office, software engineer Nan Zhu discusses how Uber developed LogX, a tool that persists and analyzes logs, to enhance observability in our Hadoop ecosystem.]]></description>
+            <link>https://dev.tube/video/o0ZrPZPlq6U</link>
+            <guid isPermaLink="true">https://dev.tube/video/o0ZrPZPlq6U</guid>
+            <pubDate>Sat, 04 Aug 2018 01:28:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My Journey with PHPUnit on Drupal 7 - The Singapore PHP User Group Meetup]]></title>
+            <description><![CDATA[Speaker: Ken Chua
+
+Event Page: https://www.meetup.com/sgphpug/events/252472670/
+
+Produced by Engineers.SG
+Recorded by: Michael Cheng
+
+Help us caption & translate this video!
+
+https://amara.org/v/kbSQ/]]></description>
+            <link>https://dev.tube/video/8adEoW1TesQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/8adEoW1TesQ</guid>
+            <pubDate>Sat, 04 Aug 2018 01:27:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Journey as a Freelance Web Developer - The Singapore PHP User Group Meetup]]></title>
+            <description><![CDATA[Speaker: Zion Ng
+
+Event Page: https://www.meetup.com/sgphpug/events/252472670/
+
+Produced by Engineers.SG
+Recorded by: Michael Cheng
+
+Help us caption & translate this video!
+
+https://amara.org/v/kbSR/]]></description>
+            <link>https://dev.tube/video/dtX5ig-YBSg</link>
+            <guid isPermaLink="true">https://dev.tube/video/dtX5ig-YBSg</guid>
+            <pubDate>Sat, 04 Aug 2018 01:27:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Web Animations APIs]]></title>
+            <description><![CDATA[Animation is back in the web development tool chest! We know of declarative CSS Animations and Transitions and fully featured JavaScript animation libraries like GreenSock, but there's another option: the Web Animation API! In this talk Rachel Nabors will take you on a magical journey with Alice from Wonderland to show you how this new API is used to run the CSS Animations in your browser and how you can use it to generate and manipulate animations in your project. Colorful, interactive, useful fun for all disciplines.
+
+EVENT:
+
+AmsterdamJS Hot Summer Edition 2018
+
+SPEAKER:
+
+Rachel Nabors
+
+PERMISSIONS:
+
+AmsterdamJS Organizer provided Coding Tech with the permission to republish this video.
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=PZCgLaOXxFw]]></description>
+            <link>https://dev.tube/video/AGiTmjFHs8M</link>
+            <guid isPermaLink="true">https://dev.tube/video/AGiTmjFHs8M</guid>
+            <pubDate>Sat, 04 Aug 2018 01:23:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[WRITING BOTS FOR GITHUB]]></title>
+            <description><![CDATA[My talk is going to be about Probot — GitHub's framework for creating bots. A bot built with Probot is a NodeJS application that handles GitHub's events. Probot allows us to automate and improve GitHub workflow, extend it with tools that we love as far as we wish.
+
+In my talk, I will show what Probot can do right now and how you can create your own bot.
+
+EVENT:
+
+You Gotta Love Frontend Kyiv 2018
+
+SPEAKER:
+
+Denys Dovhan
+
+PERMISSIONS:
+
+YGLF Conference Organizer provided Coding Tech with the permission to republish this video.
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=AGY0tgyL9Yo]]></description>
+            <link>https://dev.tube/video/cMenLkK8Ulc</link>
+            <guid isPermaLink="true">https://dev.tube/video/cMenLkK8Ulc</guid>
+            <pubDate>Sat, 04 Aug 2018 01:23:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Road To ATS London 2018 - The Service Model Part 2: Transparency and Changing the Narrative]]></title>
+            <link>https://dev.tube/video/65LG0L7IDkQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/65LG0L7IDkQ</guid>
+            <pubDate>Sat, 04 Aug 2018 01:22:58 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Advanced Controls for Xamarin.iOS with Syncfusion | The Xamarin Show]]></title>
             <description><![CDATA[This week, James is joined by friend of the show Aaron Melamed, Product Solutions Specialist at Syncfusion. Aaron walks us how Essential Studio for Xamarin enabled developers to take advantage of beautiful controls in their Xamarin.iOS apps. Aaron shows off some of the latest and greatest controls that Syncfusion has to offer including their new Kanban board and Diagram for data visualization.
@@ -32,38 +273,7 @@ Xamarin University Self-Guided: https://university.xamarin.com/self-guided
 Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
             <link>https://dev.tube/video/ndgkjK33udw</link>
             <guid isPermaLink="true">https://dev.tube/video/ndgkjK33udw</guid>
-            <pubDate>Fri, 03 Aug 2018 01:36:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Learning Functional Programming | Erlang Solutions Webinar]]></title>
-            <description><![CDATA[Erlang Solutions is joined by respected author, researcher and teacher Simon Thompson who is a Professor of Logic and Computation at the University of Kent.
-
-Here he shares valuable insights into how to learn functional programming, which will be suitable for both beginners and experienced programmers.
-
-WEBINAR LIVE DATE: Wednesday 25 May 2018 | 17:30 CEST / 16:30 BST / 11:30 EDT / 08:30 PDT 
-
- ——————————————————————— 
-
-SPEAKER CONTACT DETAILS 
-
-SIMON THOMPSON - Simon Thompson shares insights about how to learn functional programming, based on his experience of teaching functional programming in Miranda, Haskell, Erlang and OCaml to beginners and experienced programmers over the last thirty years!
-
-He is a researcher, author and teacher, based at the University of Kent. Simon's research has covered many aspects of functional programming, including verification, tool building and testing for Erlang, Haskell and OCaml. He is a published author on type theory, Haskell and Erlang, and run a MOOC on Erlang for FutureLearn.
-
-Twitter: https://twitter.com/thompson_si
-
- ——————————————————————— 
-
- COMPANY CONTACT DETAILS 
-
- ERLANG SOLUTIONS 
- - Website: https://www.erlang-solutions.com 
- - Twitter: https://www.twitter.com/ErlangSolutions 
- - LinkedIn: http://www.linkedin.com/company/erlan… 
- - GitHub: https://github.com/esl]]></description>
-            <link>https://dev.tube/video/Xatsd3U8boY</link>
-            <guid isPermaLink="true">https://dev.tube/video/Xatsd3U8boY</guid>
-            <pubDate>Fri, 03 Aug 2018 01:34:43 GMT</pubDate>
+            <pubDate>Fri, 03 Aug 2018 01:35:32 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[HDInsight: Fast Interactive Queries with Hive on LLAP]]></title>
@@ -116,6 +326,37 @@ Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
             <link>https://dev.tube/video/xdZFn4iBbXE</link>
             <guid isPermaLink="true">https://dev.tube/video/xdZFn4iBbXE</guid>
             <pubDate>Fri, 03 Aug 2018 01:34:19 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Learning Functional Programming | Erlang Solutions Webinar]]></title>
+            <description><![CDATA[Erlang Solutions is joined by respected author, researcher and teacher Simon Thompson who is a Professor of Logic and Computation at the University of Kent.
+
+Here he shares valuable insights into how to learn functional programming, which will be suitable for both beginners and experienced programmers.
+
+WEBINAR LIVE DATE: Wednesday 25 May 2018 | 17:30 CEST / 16:30 BST / 11:30 EDT / 08:30 PDT 
+
+ ——————————————————————— 
+
+SPEAKER CONTACT DETAILS 
+
+SIMON THOMPSON - Simon Thompson shares insights about how to learn functional programming, based on his experience of teaching functional programming in Miranda, Haskell, Erlang and OCaml to beginners and experienced programmers over the last thirty years!
+
+He is a researcher, author and teacher, based at the University of Kent. Simon's research has covered many aspects of functional programming, including verification, tool building and testing for Erlang, Haskell and OCaml. He is a published author on type theory, Haskell and Erlang, and run a MOOC on Erlang for FutureLearn.
+
+Twitter: https://twitter.com/thompson_si
+
+ ——————————————————————— 
+
+ COMPANY CONTACT DETAILS 
+
+ ERLANG SOLUTIONS 
+ - Website: https://www.erlang-solutions.com 
+ - Twitter: https://www.twitter.com/ErlangSolutions 
+ - LinkedIn: http://www.linkedin.com/company/erlan… 
+ - GitHub: https://github.com/esl]]></description>
+            <link>https://dev.tube/video/Xatsd3U8boY</link>
+            <guid isPermaLink="true">https://dev.tube/video/Xatsd3U8boY</guid>
+            <pubDate>Fri, 03 Aug 2018 01:33:50 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[ml5.js: Webcam Image Classification]]></title>
@@ -197,146 +438,6 @@ LinkedIn: https://www.linkedin.com/company/edureka]]></description>
             <link>https://dev.tube/video/_QtSB0Old_Q</link>
             <guid isPermaLink="true">https://dev.tube/video/_QtSB0Old_Q</guid>
             <pubDate>Fri, 03 Aug 2018 01:33:30 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Developing for the rest of the world]]></title>
-            <description><![CDATA[Many businesses are looking for growth outside the United States and Europe. To capture these new markets dedicated engineering effort will be required. This talk will provide tips for developing apps intended for an international audience.
-
-Talk by Eric Frohnhoefer.
-
-Video recorded at the GDG DevFest Ukraine - the biggest conference about Google technologies in Central and Eastern Europe.
-Learn about the conference at https://devfest.gdg.org.ua/
-More recordings at http://bit.ly/devfestua-channel
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/5JWgw_Umbow</link>
-            <guid isPermaLink="true">https://dev.tube/video/5JWgw_Umbow</guid>
-            <pubDate>Fri, 03 Aug 2018 01:33:29 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Game Design Case Studies - One Designer | One Game | One System]]></title>
-            <description><![CDATA[In this 2015 set of GDC microtalks, game designers, Dan Cassar, Bennett Foddy, Tanya Short, introduced by Eric Zimmerman, dissect one system from each of their games to better highlight each of their game design processes. 
-
-Register for GDC: http://ubm.io/2gk5KTU
-
-Join the GDC mailing list: http://www.gdconf.com/subscribe
-
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/5UdVNmbIClM</link>
-            <guid isPermaLink="true">https://dev.tube/video/5UdVNmbIClM</guid>
-            <pubDate>Fri, 03 Aug 2018 01:33:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CNCF Serverless WG - 2018-08-02]]></title>
-            <link>https://dev.tube/video/LHHJpiMrz5I</link>
-            <guid isPermaLink="true">https://dev.tube/video/LHHJpiMrz5I</guid>
-            <pubDate>Fri, 03 Aug 2018 01:33:14 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[C++: Be type-safe - The journey of determining the number of elements in an array - Andreas Fertig]]></title>
-            <description><![CDATA[Have you ever accidentally determined the size of a pointer instead of the number of elements in an array and spent hours debugging? You want to avoid this in the future? Then you should visit my presentation.
-Type safety is one of the most valuable things we have in programming. A strongly typed system helps us write more robust code and detect errors at compile time. A quality that we definitely want in critical systems. The type system of C++ is great for this! However, there are some tasks that are often ignoring the type system. For example, determine the number of elements in an array. For years, an excellent way to give yourself or others a headache.
-
-The C++ Standards since C++11 offer us new valuable elements such as constexpr. This functionality allows us to perform calculations at compile time. That's exactly what we need for our type-safe implementation to get the number of elements in an array.
-
-In this talk I will show you how to implement such a feature. Spoiler alert: It is harder than you might expect!]]></description>
-            <link>https://dev.tube/video/7uAwFRQkzyA</link>
-            <guid isPermaLink="true">https://dev.tube/video/7uAwFRQkzyA</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Prototyping products for the Internet of Things using JavaScript - Markus Tacker]]></title>
-            <description><![CDATA[In 2018 we will see a big change in the IoT landscape: based on LTE-m devices can connect to the internet over long distances and will be running off batteries for years.
-Learn about the principles and protocols involved and how to leverage JavaScript down to the hardware to build your own solution.]]></description>
-            <link>https://dev.tube/video/K6meY5raRoQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/K6meY5raRoQ</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Despagghetifying code with NDepend - Jim Pelletier]]></title>
-            <description><![CDATA[So you’ve been left with a huge bowl of spaghetti bolognese, also known as legacy code. You know you need to break it up to make it more maintainable and more workable. You’re sure there are some good places to make your cuts, but every time you pull on a code thread you end up with more spaghetti code!
-NDepend can help with this.
-
-In this talk I will show you how to use NDepend to effectively visualise your code, find the seams and break down that giant monolith into manageable pieces. And I will show you the kind of improvements my team at Page Up have been able to make with these techniques]]></description>
-            <link>https://dev.tube/video/L-z4kdgccas</link>
-            <guid isPermaLink="true">https://dev.tube/video/L-z4kdgccas</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Billions of Sensors - The UX Beyond the Screen - Niklas Norin]]></title>
-            <description><![CDATA[Why did we design an Integrated Circuit, IC, in-house from scratch and what made us design our own wireless protocol instead of using [insert buzzword here]?
-We often hear that the number of connected devices will reach into the tens of billions within just a few years. If you take a moment and try to imagine the type of sensor solution, from the actual sensor to the API, that can drive such a tremendous growth, what would it look like?
-
-While Cloud Processing and Cloud Storage with built-in extreme scalability is increasingly a commodity, extremely scalable sensor solutions are not. In this talk, I will explore the concrete architectural and design decision, from hardware to API, that we have made to create a scalable sensor solution. To drive my point home, I will briefly touch on everything from graphs of power consumption to wireless network topologies as well as running Docker on embedded devices.
-
-All of these complex design decisions and compromises need to be made to pave the way for a simple and intuitive user experience outside the screen.]]></description>
-            <link>https://dev.tube/video/TD9GZ5HSEmA</link>
-            <guid isPermaLink="true">https://dev.tube/video/TD9GZ5HSEmA</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Reverse Engineering a Bluetooth Lightbulb - Jesse Phelps]]></title>
-            <description><![CDATA[I recently made build lights for the company I work for and my home office. They integrate with TeamCity and indicate when a build is running and success/failure of all the tests.
-In this session, we will reverse engineer a bluetooth light bulb’s protocol, learn how to have an Intel Edison communicate with the bulb, and by the end you too will know how to make your own build lights! Please note that this talk will be highly technical. We will be discussing low level details of bluetooth communication, protocol analysis with Wireshark, sniffing bluetooth packets, etc.]]></description>
-            <link>https://dev.tube/video/a19juaN01E8</link>
-            <guid isPermaLink="true">https://dev.tube/video/a19juaN01E8</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Enough string_view to hang ourselves - Victor Ciura]]></title>
-            <description><![CDATA[Wouldn’t it be nice if we had a standard C++ type to represent strings ? Oh, wait... we do: std::string. Wouldn’t it be nice if we could use that standard type throughout our whole application/project ? Well… we can’t ! Unless we’re writing a console app or a service.
-But, if we’re writing an app with GUI or interacting with modern OS APIs, chances are that we’ll need to deal with at least one other non-standard C++ string type. Depending on the platform and project, it may be CString from MFC or ATL, Platform::String from WinRT, QString from Qt, wxString from wxWidgets, etc. Oh, let’s not forget our old friend `const char*`, better yet `const wchar_t*` for the C family of APIs…
-So we ended up with two string types in our codebase. OK, that’s manageable: we stick with std::string for all platform independent code and convert back-and-forth to the other XString when interacting with system APIs or GUI code. We’ll make some unnecessary copies when crossing this bridge and we’ll end up with some funny looking functions juggling two types of strings; but that’s glue code, anyway… right?
-It’s a good plan... until our project grows and we accumulate lots of string utilities and algorithms. Do we restrict those algorithmic goodies to std::string ? Do we fallback on the common denominator `const char*` and lose the type/memory safety of our C++ type ? Is C++17 std::string_view the answer to all our string problems ?
-We’ll try to explore our options, together, with a case study on a 15 year old Windows application: Advanced Installer (www.advancedinstaller.com) - an actively developed C++ project, modernized to C++17, thanks to clang-tidy and “Clang Power Tools” (www.clangpowertools.com).]]></description>
-            <link>https://dev.tube/video/xC0yn8r3PTQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/xC0yn8r3PTQ</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[♫ These are a few of my favourite (Android) Things ♫ - Marcos Placona]]></title>
-            <description><![CDATA[Android Things lets you build professional, mass-market products on a trusted platform without previous knowledge of embedded systems. It is estimated that by 2020 there will be 50 billion connected things.
-But what does it take to get started with Android Things and be able to say you’re truly working with the Internet of Things? How can you learn this platform and get ahead of the IoT revolution using your existing Android skills?
-
-In this session, we will explore what Android Things is and how you can get started building IoT applications with your existing Android knowledge.
-
-We will then build a real-life Android Things application using a Raspberry Pi 3 and Android Studio, the IDE you already use and love.]]></description>
-            <link>https://dev.tube/video/xw6uyxJ3SKY</link>
-            <guid isPermaLink="true">https://dev.tube/video/xw6uyxJ3SKY</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Web Application Security Trends - Christian Wentz]]></title>
-            <description><![CDATA[Every web developer should know about typical attacks such as SQL Injection, Cross-Site Request Forgery, or Cross-Site Scripting. And even though those risks still exist, the bad guys worked on finding new twists to old attacks, or even find new kinds of vulnerabilities on a web site.
-In this session, we will show and discuss several of those new vectors, including attacks against Angular applications, Clickjacking, abusing external links, XSS via file uploads, and a few more. Technology never stops to evolve, so it's crucial to stay on top of current developments.]]></description>
-            <link>https://dev.tube/video/yayptECOtr8</link>
-            <guid isPermaLink="true">https://dev.tube/video/yayptECOtr8</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:38 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Very Large Datasets with the GPU Data Frame]]></title>
-            <description><![CDATA[Veda Shankar explains how the GDF technology works, shows how it is enabling a diverse set of GPU workloads, and demonstrates how to use a Jupyter Notebook to take advantage of it. He demonstrates on a very large dataset how to manage a full Machine Learning Pipeline with minimal data exchange overhead between MapD’s SQL engine and H2O’s generalized linear model library (GLM).
-
-Veda Shankar is a Developer Advocate at MapD working actively to assist the user community to take advantage of MapD’s open source analytics platform. 
-
-This video was recorded at QCon.ai 2018: https://bit.ly/2piRtLl 
-
-The next QCon is in San Francisco, Nov 5-7, 2018. Check out the tracks and speakers: https://bit.ly/2uYyHLb. Save $100 by using the discount code “INFOQSF18”  
-
-More videos from QCon.ai 2018 on InfoQ:  https://bit.ly/2rNAT8z 
-
-The InfoQ Architects' Newsletter is your monthly guide to all the topics, technologies and techniques that every professional or aspiring software architect needs to know about. Over 200,000 software architects, team leads, CTOs are subscribed to it. Sign up here: https://bit.ly/2KqYfrs]]></description>
-            <link>https://dev.tube/video/qeMMwnlbfUQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/qeMMwnlbfUQ</guid>
-            <pubDate>Fri, 03 Aug 2018 01:32:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
