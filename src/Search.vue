@@ -59,7 +59,6 @@
         .container
           .columns
             .column.has-text-right
-              a(v-if="!newMode" href="https://www.algolia.com" target="_blank"): img(src="/search-by-algolia.png" srcset="/search-by-algolia.svg")
               br
               br
               nav.paging(role="navigation" aria-label="pagination")
