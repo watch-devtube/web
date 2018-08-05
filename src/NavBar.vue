@@ -23,7 +23,7 @@
           .navbar-dropdown.is-boxed.is-size-7
             a.navbar-item.is-size-7(@click="showWatched()") 
               | Watched videos ({{watchedCount}})
-            a.navbar-item(@click="signOut(); home()") Logout
+            a.navbar-item(@click="signOut()") Logout
 
         a.navbar-item.is-hoverable.is-size-7(v-else) Log in
           .navbar-dropdown.is-boxed.is-size-7

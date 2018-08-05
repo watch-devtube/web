@@ -26,9 +26,9 @@ let actions = {
   setError ({commit}, payload) {
     commit('setError', payload)
   },  
-  signOut({commit}) {
+  signOut() {
     firebase.auth().signOut()
-    commit('setUser', null)
+    location.reload()
   },
   autoSignIn ({commit}, payload) {
     if (payload) {
@@ -60,13 +60,13 @@ let actions = {
             uid: user.uid
           }
           commit('setUser', newUser)
-          // window.location.href = "/";
+          location.reload()
         }
       )
       .catch(
         error => {
           commit('setError', error)
-          console.log(error)
+          commit("notify/error", { error: error }, { root: true })
         }
       )
   }

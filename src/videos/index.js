@@ -15,7 +15,7 @@ let actions = {
           commit("notify/error", { error: error }, { root: true })
         })
     } else {
-      commit('noLoading')
+      commit('init', { watched: [] })
     }
   },
   toggleWatched({commit, state, rootState}, videoId) {

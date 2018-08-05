@@ -196,6 +196,7 @@ export default {
       this.searchStore.queryParameters = { refinement : undefined }
 
       let watchedVideoIds = this.watchedIds
+      console.log(watchedVideoIds)
       if (this.showMyWatched) {
         this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: watchedVideoIds } } }
         this.searchStore.queryParameters = { watched: [] }
