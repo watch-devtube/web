@@ -10,8 +10,8 @@
               .columns
                 .column.is-one-quarter
                   p.buttons
-                    router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel" :to="{ name: 'search' }")
-                      span {{speaker || tag || channel}}
+                    router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel || showMyWatched" :to="{ name: 'search' }")
+                      span {{speaker || tag || channel || (showMyWatched ? 'Watched' : '')}}
                       span.icon.is-small: i.fas.fa-times
                     a.button.is-small.is-hidden-tablet(@click="$refs.tagPicker.expand()"): span.icon.is-small: i.fas.fa-hashtag
                     a.button.is-small.is-hidden-tablet(@click="$refs.speakerPicker.expand()"): span.icon.is-small: i.far.fa-user-circle
