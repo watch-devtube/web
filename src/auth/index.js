@@ -60,7 +60,7 @@ let actions = {
             uid: user.uid
           }
           commit('setUser', newUser)
-          window.location.href = "/";
+          // window.location.href = "/";
         }
       )
       .catch(
