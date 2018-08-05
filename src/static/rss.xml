@@ -4,8 +4,58 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 04 Aug 2018 04:29:49 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Aug 2018 04:33:39 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Python Django Framework - Full Course for Beginners]]></title>
+            <description><![CDATA[Learn the Python Django framework with this free full course. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+
+In this tutorial, we will build a full MVC app using the Django official docs as a guide.
+
+⭐️Contents ⭐️
+⌨️(0:00) Part 1
+⌨️(25:09) Part 2
+⌨️(1:06:49) Part 3
+⌨️(1:45:25) Part 4
+⌨️(2:26:33) Part 5
+⌨️(3:18:00) Part 6
+
+This tutorial was developed by the Clever Programmer. Check out the Clever Programmer YouTube channel for more great tutorials: https://www.youtube.com/c/CleverProgrammer
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/cI3FOYIMSYE</link>
+            <guid isPermaLink="true">https://dev.tube/video/cI3FOYIMSYE</guid>
+            <pubDate>Sun, 05 Aug 2018 01:34:01 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Creating an Arabic Programming Language]]></title>
+            <description><![CDATA[Inspired by Ramsey Nasser’s Arabic programming language Qalb, a functional, Lisp-style language, I created Noor, an Algol-based, imperative Arabic programming language. Arabic is my first language, and I wouldn’t have learned to program had I not moved to the US and learned English. I created Noor with the intention of it being a language for middle schoolers and high schoolers. In this talk I’ll share what I learned about creating an Arabic programming language and how Arabic text really works on your computer.
+
+EVENT:
+
+!!Con 2018
+
+SPEAKER:
+
+Ahmed Abdalla
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=eCxqAr7LjW8]]></description>
+            <link>https://dev.tube/video/dkO8cdwf6v8</link>
+            <guid isPermaLink="true">https://dev.tube/video/dkO8cdwf6v8</guid>
+            <pubDate>Sun, 05 Aug 2018 01:27:12 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[AWS Cloud Computing Architecture | AWS Certification | AWS Tutorial For Beginners | Edureka]]></title>
             <description><![CDATA[This Edureka "AWS Cloud Computing Architecture ” video will introduce you to the nitty-gritties of Architecting a Solution with AWS and also explains the various AWS Design Principles.
@@ -357,87 +407,6 @@ Twitter: https://twitter.com/thompson_si
             <link>https://dev.tube/video/Xatsd3U8boY</link>
             <guid isPermaLink="true">https://dev.tube/video/Xatsd3U8boY</guid>
             <pubDate>Fri, 03 Aug 2018 01:33:50 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[ml5.js: Webcam Image Classification]]></title>
-            <description><![CDATA[In this video, I discuss image classification with MobileNet using real-time video. #machinelearning #mobilenet #imageclassification #ml5 #p5js #webcam
-
-🔗 code: https://github.com/CodingTrain/website/tree/master/Courses/beginner_ml5
-
-🔗 ml5.js: https://ml5js.org
-🔗 MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications: https://arxiv.org/abs/1704.04861
-🔗 Image-Net: image-net.org/index
-
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Books: https://www.amazon.com/shop/thecodingtrain 
-
-🎥  Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥  Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/D9BoBSkLvFo</link>
-            <guid isPermaLink="true">https://dev.tube/video/D9BoBSkLvFo</guid>
-            <pubDate>Fri, 03 Aug 2018 01:33:43 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Cybersecurity Tutorial | Demo On Man In The Middle Attack | Cybersecurity Training | Edureka]]></title>
-            <description><![CDATA[** Cyber Security Course: https://www.edureka.co/cybersecurity-certification-training **
-This "Cybersecurity tutorial" video presented by edureka gives an indepth information about the Cyber Security world and talks about its basic concepts. Below are the topics covered in this tutorial:
-
-1. Packet structure
-2. Network architecutre
-3. Addressing
-4. IP/MAC
-5. Firewalls
-6. Symetric Cryptography
-7. Public key Cryptography
-
-Cybersecurity Training Playlist: https://bit.ly/2NqcTQV
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-------------------------------------------------
-
-About Edureka Cyber Security Training
-
-Cybersecurity is the combination of processes, practices, and technologies designed to protect networks, computers, programs, data and information from attack, damage or unauthorized access.
-
-Edureka’s Cybersecurity Certification Course will help you in learning about the basic concepts of Cybersecurity along with the methodologies that must be practiced ensuring information security of an organization. Starting from the Ground level Security Essentials, this course will lead you through Cryptography, Computer Networks & Security, Application Security, Data & Endpoint Security, idAM (Identity & Access Management), Cloud Security, Cyber-Attacks and various security practices for businesses.
-
-------------------------------------------------
-
-Why Learn Cyber Security?
-
-Cybersecurity is the gathering of advances that procedures and practices expected to ensure systems, PCs, projects and information from assault, harm or unapproved get to. In a processing setting, security incorporates both cybersecurity and physical security, it is imperative since cyberattackers can without much of a stretch take and obliterate the profoundly grouped data of governments, defense offices and banks for which the results are huge so it is essential to have an appropriate innovation which an avoid digital wrongdoings.
-
----------------------------------------------------
-
-Objectives of Edureka Cyber Security Course
-
-This course is designed to cover a holistic & a wide variety of foundational topics of the cybersecurity domain which will be helpful to lead freshers as well as IT professional having 1 to 2 years of experience, into the next level of choice such as ethical hacking/ audit & compliance / GRC/ Security Architecture and so on
-This course focuses mainly on the basics concepts of Cyber Security
-In this course, we are going to deal with Ground level security essentials cryptography, computer networks & security, application security, data & endpoint security, idAM (identity & access management), cloud security, cyber-attacks and various security practices for businesses
-This course will be your first step towards learning Cyber Security
---------------------------------------
-
-Who Should go for this Training?
-
-Anyone having the zeal to learn innovative technologies can take up this course. Especially, students and professionals aspiring to make a career in the Cybersecurity technology. However, Cybersecurity Certification Course is best suited for the below mentioned profiles:-
-Networking Professionals
-Linux Administrators
------------------------------------------------
-
- Please write back to us at sales@edureka.co or Call us at US: +18336900808 (Toll Free) or India: +918861301699
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/_QtSB0Old_Q</link>
-            <guid isPermaLink="true">https://dev.tube/video/_QtSB0Old_Q</guid>
-            <pubDate>Fri, 03 Aug 2018 01:33:30 GMT</pubDate>
         </item>
     </channel>
 </rss>
