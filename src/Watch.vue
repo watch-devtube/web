@@ -14,6 +14,13 @@
         .column.is-one-half(v-bind:class="{ active: isFullWidth }")
           .card
             .card-image
+              a(@click="toggleWatched(id)" v-if="auth.user")
+                font-awesome-layers.watched(v-if="isWatched(id)")
+                  font-awesome-icon.fa-stack-1x(icon="eye")
+                  font-awesome-icon.fa-stack-1x(icon="times" transform="shrink-8 up-7 right-7")
+                font-awesome-layers.watched(v-else)
+                  font-awesome-icon.fa-stack-1x(icon="eye")
+                  font-awesome-icon.fa-stack-1x(icon="check" transform="shrink-8 up-7 right-7")               
               .videoWrapper
                 iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
             .card-content
@@ -142,6 +149,7 @@
   import NightMode from './NightMode.vue'
   import ShareVideo from './ShareVideo.vue'
   import NavBar from './NavBar.vue'
+  import { mapState, mapActions, mapGetters } from 'vuex'
 
   export default {
     data: function() {
@@ -156,6 +164,10 @@
     },
     watch: {
       '$route': 'fetch'
+    },
+    computed: {
+      ...mapState([ 'videos', 'auth' ]),
+      ...mapGetters('videos', ['isWatched'])
     },
     methods: {
       fetch() {
@@ -185,7 +197,8 @@
       },
       refineChannel: function (channel) {
         this.$router.push({ name: 'channel', params: { channel: channel } } )
-      }
+      },
+      ...mapActions('videos', [ 'toggleWatched' ])
     },
     props: ['id'],
     components: { RelatedVideos, MessageWidget, NightMode, ShareVideo, NavBar }
