@@ -9,10 +9,13 @@
     "build": "cross-env webpack --progress --hide-modules --mode=production"
   },
   "dependencies": {
-    "auth0-lock": "^11.8.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@fortawesome/vue-fontawesome": "^0.1.1",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "dayjs": "^1.5.16",
+    "firebase": "^5.3.1",
     "jwt-decode": "^2.2.0",
     "v-debounce": "^0.1.2",
     "vue": "^2.2.1",
@@ -22,6 +25,7 @@
     "vue-disqus": "^3.0.3",
     "vue-instantsearch": "1.4.0",
     "vue-meta": "^1.5.0",
+    "vue-notification": "^1.3.12",
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",

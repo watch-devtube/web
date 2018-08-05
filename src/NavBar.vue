@@ -1,5 +1,5 @@
 <template lang="pug">
-  nav.navbar.is-fixed-top.is-dark
+  nav.navbar.is-fixed-top.is-dark(role="navigation" aria-label="main navigation")
     .navbar-brand(style="margin-left: -.75rem")
       .navbar-item
         | &nbsp;&nbsp;&nbsp;
@@ -16,15 +16,19 @@
       .navbar-start
         slot
       .navbar-end
-        a.navbar-item.is-hoverable.is-size-7(v-if="auth.user") 
-          img(:src="auth.user.picture" style="height: 36px; border-radius: 50%; border: 1px solid white")
-          | &nbsp;&nbsp;
-          i.fas.fa-ellipsis-v
+        a.navbar-item.is-hoverable.is-size-7(v-if="auth.user")
+          img.is-hidden-touch(:src="auth.user.photoUrl" style="height: 36px; border-radius: 50%; border: 1px solid white; margin-right: 1em")
+          font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
+          span.is-hidden-desktop {{auth.user.name}}
           .navbar-dropdown.is-boxed.is-size-7
-            a.navbar-item.is-size-7(@click="showWatched()") Watched videos
-            a.navbar-item(@click="logout(); hide()") Logout
-        a.navbar-item.is-size-7(v-else @click="login(); hide()") Log in {{auth.user}}
-        a.is-size-7.navbar-item(v-if="auth.error"): span {{auth.error}}
+            a.navbar-item.is-size-7(@click="showWatched()") 
+              | Watched videos ({{watchedCount}})
+            a.navbar-item(@click="signOut(); home()") Logout
+
+        a.navbar-item.is-hoverable.is-size-7(v-else) Log in
+          .navbar-dropdown.is-boxed.is-size-7
+            a.navbar-item.is-size-7(@click="signIn('github'); hide()") via Github
+            a.navbar-item.is-size-7(@click="signIn('google'); hide()") via Google
         NightMode
         | &nbsp; &nbsp;  
 </template>
@@ -59,11 +63,15 @@ header {
 <script>
   import Input from './Input.vue'
   import NightMode from './NightMode.vue'
-  import { mapState, mapActions } from 'vuex'
+
+  import { mapState, mapActions, mapGetters } from 'vuex'
 
 
   export default {
-    computed: mapState([ 'auth' ]),
+    computed: {
+      ...mapState([ 'auth' ]),
+      ...mapGetters('videos', [ 'watchedCount' ])
+    },
     data: function() {
       return {
         active: false
@@ -87,7 +95,7 @@ header {
         });
         this.hide();
       },
-      ...mapActions('auth', [ 'login', 'logout' ])
+      ...mapActions('auth', [ 'signOut', 'signIn']),
     },
     components: { Input, NightMode }  
   }

@@ -1,0 +1,9 @@
+{
+  "projectId": "watchdevtube",
+  "apiKey": "AIzaSyBZlhdlE6DXLNSQjgIuWGbbEChdY2l7a2w",
+  "authDomain": "watchdevtube.firebaseapp.com",
+  "databaseURL": "https://watchdevtube.firebaseio.com",
+  "storageBucket": "watchdevtube.appspot.com",
+  "messagingSenderId": "1055537839218"
+
+}

@@ -3,12 +3,10 @@
 </template>
 
 <script>
-import { Component } from 'vue-instantsearch'
 import debounce from 'v-debounce'
 
 export default {
   directives: { debounce },
-  mixins: [Component],
   data() {
     return {
       blockClassName: 'ais-input'

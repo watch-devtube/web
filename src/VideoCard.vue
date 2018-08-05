@@ -1,10 +1,13 @@
 <template lang="pug">
-  .card(style="height: 100%; width:100%")
+  .card(style="height: 100%; width:100%" v-if="visible")
       .card-image
-        a(@click="toggleWatched(id)")
-          span.watched.fa-stack.fa-2x(v-bind:class="{ 'has-text-link': isWatched(id) }")
-            i.far.fa-eye.fa-stack-1x.fa-xs
-            i.fas.fa-check.fa-stack-1x.fa-xs(data-fa-transform="shrink-8 up-7 right-7")
+        a(@click="toggleWatched(id); hide()" v-if="auth.user")
+          font-awesome-layers.watched(v-if="isWatched(id)")
+            font-awesome-icon.fa-stack-1x(icon="eye")
+            font-awesome-icon.fa-stack-1x(icon="times" transform="shrink-8 up-7 right-7")
+          font-awesome-layers.watched(v-else)
+            font-awesome-icon.fa-stack-1x(icon="eye")
+            font-awesome-icon.fa-stack-1x(icon="check" transform="shrink-8 up-7 right-7")            
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             i.is-size-3.fab.fa-youtube.watch
@@ -73,8 +76,8 @@
     .watched {
       height: 1em;
       z-index: 29;
-      right: -10px;
-      top: 3px;
+      right: 6px;
+      top: 5px;
       color: white;
       position: absolute;
     }
@@ -165,6 +168,11 @@
         }        
       }
     },
+    data: function() {
+      return {
+        visible: true
+      }
+    },
     computed: {
       isNew() {
         let today = dayjs()
@@ -172,10 +180,13 @@
         let videoAgeInDays = today.diff(videoCreated, 'days')
         return videoAgeInDays <= 7
       },
-      ...mapState([ 'videos' ]),
-      ...mapGetters('videos', ['isWatched'])      
+      ...mapState([ 'videos', 'auth' ]),
+      ...mapGetters('videos', ['isWatched']),
     },
     methods: {
+      hide() {
+        this.visible = false
+      },
       watch: function(videoId) {
         this.$router.push({
           name: 'watch',
