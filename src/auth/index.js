@@ -63,8 +63,10 @@ let actions = {
           location.reload()
         }
       )
-      .catch(
-        error => {
+      .catch(error => {
+          if (error.code == "auth/popup-closed-by-user") {
+            return
+          }
           commit('setError', error)
           commit("notify/error", { error: error }, { root: true })
         }

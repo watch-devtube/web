@@ -17,7 +17,7 @@
         slot
       .navbar-end
         a.navbar-item.is-hoverable.is-size-7(v-if="auth.user")
-          img.is-hidden-touch(:src="auth.user.photoUrl" style="height: 36px; border-radius: 50%; border: 1px solid white; margin-right: 1em")
+          .face.is-hidden-touch(:style="'background-image: url(' + auth.user.photoUrl + ')'")
           font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
           span.is-hidden-desktop {{auth.user.name}}
           .navbar-dropdown.is-boxed.is-size-7
@@ -44,6 +44,17 @@ header {
     border: 1px solid #6498cf;
     border-radius: 3px;
   }  
+
+  .face {
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 0.5em;
+  }
 
   input::placeholder{
     color: #fff;
