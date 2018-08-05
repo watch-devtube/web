@@ -12,7 +12,8 @@
 <script>
   import algolia from 'algoliasearch'
   import VideoCard from './VideoCard.vue'
-  
+  import { mapState, mapGetters } from 'vuex'
+
   export default {
     props: {
       videoId: { type: String },
@@ -23,11 +24,14 @@
     computed: {
       newMode() {
         return window.fastrMode
-      }
+      },
+      ...mapGetters('videos', ['watchedIds'])
     },
     asyncComputed: {
       hits() {
         
+        let watchedIds = this.watchedIds
+
         if (!this.videoId) {
           return []
         }
@@ -43,14 +47,14 @@
         let noTwitter = !this.speakerTwitter || 0 === this.speakerTwitter.length
 
 
+        let skipWatched = watchedIds.length 
+          ? ' AND ' + watchedIds.map(it => `(NOT objectID:${it})`).join(" AND ") 
+          : ""
+
         let query = noTags && noTwitter 
-          ? `NOT objectID:${this.videoId} AND (channelTitle:'${this.channel}')`
-          : `NOT objectID:${this.videoId} AND (speaker.twitter:${this.speakerTwitter ? this.speakerTwitter : 'WHATEVER'} ${tags})`
+          ? `NOT objectID:${this.videoId} ${skipWatched} AND (channelTitle:'${this.channel}')`
+          : `NOT objectID:${this.videoId} ${skipWatched} AND (speaker.twitter:${this.speakerTwitter ? this.speakerTwitter : 'WHATEVER'} ${tags})`
  
-
-        if (noTags || noTwitter) {
-
-        }
 
         let shuffle = (a) => {
           for (let i = a.length - 1; i > 0; i--) {
@@ -66,7 +70,9 @@
           filters: query,
           hitsPerPage: 15,
           sumOrFiltersScores: true,
-        }).then(it => shuffle(it.hits).slice(0, 3))
+        })
+        .then(it => it.hits)
+        .then(it => shuffle(it).slice(0, 3))
       }
     },
     components: { VideoCard }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  .divaa
+  .searchContainer
     header
       .container    
         NavBar

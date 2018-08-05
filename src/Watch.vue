@@ -1,16 +1,8 @@
 <template lang="pug">
 .watch
   header
-    .container
-      nav.level
-        .level-left
-          .level-item
-            a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
-        .level-item.has-text-centered
-        .level-right
-          .level-item.is-size-10
-            p
-              a.has-text-white(href="/") Back to search
+    .container    
+      NavBar
   section.section.body
     .container(v-if="errors.length > 0")
       .columns
@@ -88,10 +80,6 @@
         vue-disqus(shortname="dev-tube" :identifier="id" :url="'https://dev.tube/video/' + id")
 </template>
 <style scoped lang="scss">
-  body {
-
-  }
-
   header {
     background-color: #343d46;
     padding: 10px;
@@ -153,6 +141,7 @@
   import MessageWidget from './MessageWidget.vue'
   import NightMode from './NightMode.vue'
   import ShareVideo from './ShareVideo.vue'
+  import NavBar from './NavBar.vue'
 
   export default {
     data: function() {
@@ -175,12 +164,14 @@
           this.errors.push(window.serverSideError.message)  
         } else if (window.preloadedEntity) {
           this.video = window.preloadedEntity
+          this.$Progress.finish()
         } else {
           axios.get(`https://DR90AOGGE9-dsn.algolia.net/1/indexes/videos/${this.id}`, {
               headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',
               'X-Algolia-API-Key': 'c2655fa0f331ebf28c89f16ec8268565' }
           }).then(response => {
             this.video = response.data
+            this.$Progress.finish()
           }).catch(error => {
             this.errors.push(error)
           })   
@@ -197,7 +188,7 @@
       }
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget, NightMode, ShareVideo }
+    components: { RelatedVideos, MessageWidget, NightMode, ShareVideo, NavBar }
   }
 
 </script>
