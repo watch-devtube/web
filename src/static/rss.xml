@@ -4,8 +4,85 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 05 Aug 2018 04:33:39 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Aug 2018 04:30:34 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Kubernetes Networking | Kubernetes Services, Pods & Ingress Networks | Kubernetes Training | Edureka]]></title>
+            <description><![CDATA[** Kubernetes Certification Training: https://www.edureka.co/kubernetes-certification **
+This Edureka video on "Kubernetes Networking" will give you an introduction to popular DevOps tool - Kubernetes, and will deep dive into Kubernetes Networking concepts. The following topics are covered in this training session:
+
+1. What is Kubernetes?
+2. Kubernetes Cluster
+3. Pods, Services & Ingress Networks
+4. Case Study of Wealth Wizards
+5. Hands-On
+
+DevOps Tutorial Blog Series: https://goo.gl/P0zAfF
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka
+
+#Kubernetes #DevOps
+
+How it Works?
+1. This is a 5 Week Instructor led Online Course.
+2. Course consists of 30 hours of online classes, 20 hours of assignment, 20 hours of project
+3. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+4. You will get Lifetime Access to the recordings in the LMS.
+5. At the end of the training you will have to complete the project based on which we will provide you a Verifiable Certificate!
+
+- - - - - - - - - - - - - - 
+
+About the Course
+
+Edureka's Kubernetes Certification Training introduces you with the advantages provided by containers over the virtual machines. 
+
+You will understand why we need an orchestration tool for containers. You will also get to know the boundaries of Kubernetes – what it does and what is it not supposed to do. 
+
+You will also understand the inherent architecture of Kubernetes – master components, node components and the addons provided by it. The course will start off with learning the basic components of Kubernetes like Node, Pod, Deployment, Services, APIs etc and then teach you to create a local cluster using Ubuntu VMs. 
+
+You will also learn to deploy stateful and stateless apps on the cluster. Finally, you will learn, how to expose these apps outside of the kubernetes cluster and will also get to know how to scale their apps either manually or using auto scaling. Learn the best security practices that must be followed during this container and cluster orchestration.
+
+- - - - - - - - - - - - - - 
+
+Who should go for this course?
+
+There is a huge shift in Devops from virtualization to containerization. Docker has been the buzzword in the technology sphere, in the recent past to ship applications as containers. 
+
+A research states that there are already 10,000 companies who have adopted containers for taking their application to production and there are already 185 million containers on use in the world. The rate of adoption of Docker is increasing by 40% every year. Now that Docker has become the most integral part of a production environment, various organizations are now looking out for tools that can help them effectively manage and orchestrate their containers. 
+
+Here is when industries started adopting a Google open sourced tool called Kubernetes for effectively managing the containers.
+
+- - - - - - - - - - - - - - 
+
+Please write back to us at sales@edureka.co or 
+Call us at US: +18336900808 (Toll Free) or India: +918861301699]]></description>
+            <link>https://dev.tube/video/OaXWwBLqugk</link>
+            <guid isPermaLink="true">https://dev.tube/video/OaXWwBLqugk</guid>
+            <pubDate>Mon, 06 Aug 2018 01:34:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Interactive Visualizations in JupyterLab and PixiJS]]></title>
+            <description><![CDATA[The Jupyter ecosystem already comes with popular libraries for creating interactive charts such as Bokeh and Plotly. But in some situations, we need access to a lower level API to draw custom shapes (triangles, circles, squares). The purpose of this presentation is to go through examples of custom JupyterLab extension using Jupyter Widgets and a JavaScript library called Pixi.js.
+
+EVENT:
+
+PyData Berlin 2018
+
+SPEAKER:
+
+Jeremy Tuloup
+
+PERMISSIONS:
+
+PyData provided Coding Tech with the permission to republish this video.]]></description>
+            <link>https://dev.tube/video/B5_7ps-JdxY</link>
+            <guid isPermaLink="true">https://dev.tube/video/B5_7ps-JdxY</guid>
+            <pubDate>Mon, 06 Aug 2018 01:25:32 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Python Django Framework - Full Course for Beginners]]></title>
             <description><![CDATA[Learn the Python Django framework with this free full course. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
@@ -366,47 +443,6 @@ Original Channel 9 Post: https://channel9.msdn.com/Blogs/TheChannel9Team/Jason-Z
             <link>https://dev.tube/video/uWJ6SCEf5Hw</link>
             <guid isPermaLink="true">https://dev.tube/video/uWJ6SCEf5Hw</guid>
             <pubDate>Fri, 03 Aug 2018 01:34:19 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Azure IoT Inception and Vision]]></title>
-            <description><![CDATA[Sam George, Partner Director for Azure IoT Program Management, tells us all about Azure IoT inception and vision. 
-
-Learn more about Azure IoT: https://aka.ms/iotschool
-Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
-            <link>https://dev.tube/video/xdZFn4iBbXE</link>
-            <guid isPermaLink="true">https://dev.tube/video/xdZFn4iBbXE</guid>
-            <pubDate>Fri, 03 Aug 2018 01:34:19 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Learning Functional Programming | Erlang Solutions Webinar]]></title>
-            <description><![CDATA[Erlang Solutions is joined by respected author, researcher and teacher Simon Thompson who is a Professor of Logic and Computation at the University of Kent.
-
-Here he shares valuable insights into how to learn functional programming, which will be suitable for both beginners and experienced programmers.
-
-WEBINAR LIVE DATE: Wednesday 25 May 2018 | 17:30 CEST / 16:30 BST / 11:30 EDT / 08:30 PDT 
-
- ——————————————————————— 
-
-SPEAKER CONTACT DETAILS 
-
-SIMON THOMPSON - Simon Thompson shares insights about how to learn functional programming, based on his experience of teaching functional programming in Miranda, Haskell, Erlang and OCaml to beginners and experienced programmers over the last thirty years!
-
-He is a researcher, author and teacher, based at the University of Kent. Simon's research has covered many aspects of functional programming, including verification, tool building and testing for Erlang, Haskell and OCaml. He is a published author on type theory, Haskell and Erlang, and run a MOOC on Erlang for FutureLearn.
-
-Twitter: https://twitter.com/thompson_si
-
- ——————————————————————— 
-
- COMPANY CONTACT DETAILS 
-
- ERLANG SOLUTIONS 
- - Website: https://www.erlang-solutions.com 
- - Twitter: https://www.twitter.com/ErlangSolutions 
- - LinkedIn: http://www.linkedin.com/company/erlan… 
- - GitHub: https://github.com/esl]]></description>
-            <link>https://dev.tube/video/Xatsd3U8boY</link>
-            <guid isPermaLink="true">https://dev.tube/video/Xatsd3U8boY</guid>
-            <pubDate>Fri, 03 Aug 2018 01:33:50 GMT</pubDate>
         </item>
     </channel>
 </rss>
