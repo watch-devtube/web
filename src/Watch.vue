@@ -15,10 +15,10 @@
           .card
             .card-image
               a(@click="toggleWatched(id)" v-if="auth.user")
-                font-awesome-layers.watched(v-if="isWatched(id)")
+                font-awesome-layers.fa-3x.watched(v-if="isWatched(id)" title="Remove from watched")
                   font-awesome-icon.fa-stack-1x(icon="eye")
                   font-awesome-icon.fa-stack-1x(icon="times" transform="shrink-8 up-7 right-7")
-                font-awesome-layers.watched(v-else)
+                font-awesome-layers.fa-3x.watched(v-else title="Mark watched")
                   font-awesome-icon.fa-stack-1x(icon="eye")
                   font-awesome-icon.fa-stack-1x(icon="check" transform="shrink-8 up-7 right-7")               
               .videoWrapper
