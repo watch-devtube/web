@@ -4,445 +4,238 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 06 Aug 2018 04:30:34 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Aug 2018 19:00:51 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Kubernetes Networking | Kubernetes Services, Pods & Ingress Networks | Kubernetes Training | Edureka]]></title>
-            <description><![CDATA[** Kubernetes Certification Training: https://www.edureka.co/kubernetes-certification **
-This Edureka video on "Kubernetes Networking" will give you an introduction to popular DevOps tool - Kubernetes, and will deep dive into Kubernetes Networking concepts. The following topics are covered in this training session:
+            <title><![CDATA[The Future of Event-driven Microservices with Spring Cloud Stream - Kenny Bastani @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-1. What is Kubernetes?
-2. Kubernetes Cluster
-3. Pods, Services & Ingress Networks
-4. Case Study of Wealth Wizards
-5. Hands-On
+When you’re building microservices, managing state becomes a distributed systems problem. Instead of being able to manage state as transactions inside the boundaries of a single monolithic application, a microservice must be able to manage consistency by using transactions that are distributed across a network of many different applications and databases.
 
-DevOps Tutorial Blog Series: https://goo.gl/P0zAfF
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka
-
-#Kubernetes #DevOps
-
-How it Works?
-1. This is a 5 Week Instructor led Online Course.
-2. Course consists of 30 hours of online classes, 20 hours of assignment, 20 hours of project
-3. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-4. You will get Lifetime Access to the recordings in the LMS.
-5. At the end of the training you will have to complete the project based on which we will provide you a Verifiable Certificate!
-
-- - - - - - - - - - - - - - 
-
-About the Course
-
-Edureka's Kubernetes Certification Training introduces you with the advantages provided by containers over the virtual machines. 
-
-You will understand why we need an orchestration tool for containers. You will also get to know the boundaries of Kubernetes – what it does and what is it not supposed to do. 
-
-You will also understand the inherent architecture of Kubernetes – master components, node components and the addons provided by it. The course will start off with learning the basic components of Kubernetes like Node, Pod, Deployment, Services, APIs etc and then teach you to create a local cluster using Ubuntu VMs. 
-
-You will also learn to deploy stateful and stateless apps on the cluster. Finally, you will learn, how to expose these apps outside of the kubernetes cluster and will also get to know how to scale their apps either manually or using auto scaling. Learn the best security practices that must be followed during this container and cluster orchestration.
-
-- - - - - - - - - - - - - - 
-
-Who should go for this course?
-
-There is a huge shift in Devops from virtualization to containerization. Docker has been the buzzword in the technology sphere, in the recent past to ship applications as containers. 
-
-A research states that there are already 10,000 companies who have adopted containers for taking their application to production and there are already 185 million containers on use in the world. The rate of adoption of Docker is increasing by 40% every year. Now that Docker has become the most integral part of a production environment, various organizations are now looking out for tools that can help them effectively manage and orchestrate their containers. 
-
-Here is when industries started adopting a Google open sourced tool called Kubernetes for effectively managing the containers.
-
-- - - - - - - - - - - - - - 
-
-Please write back to us at sales@edureka.co or 
-Call us at US: +18336900808 (Toll Free) or India: +918861301699]]></description>
-            <link>https://dev.tube/video/OaXWwBLqugk</link>
-            <guid isPermaLink="true">https://dev.tube/video/OaXWwBLqugk</guid>
-            <pubDate>Mon, 06 Aug 2018 01:34:10 GMT</pubDate>
+Event-driven architectures are a key component of solving data consistency issues in microservices. This session explores the problems of data consistency in microservices and the various event-driven practices that include CQRS and Event Sourcing. We will look at how these popular practices are implemented using Spring Boot and Spring Cloud Stream.]]></description>
+            <link>https://dev.tube/video/0C7J7hFv_pk</link>
+            <guid isPermaLink="true">https://dev.tube/video/0C7J7hFv_pk</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Interactive Visualizations in JupyterLab and PixiJS]]></title>
-            <description><![CDATA[The Jupyter ecosystem already comes with popular libraries for creating interactive charts such as Bokeh and Plotly. But in some situations, we need access to a lower level API to draw custom shapes (triangles, circles, squares). The purpose of this presentation is to go through examples of custom JupyterLab extension using Jupyter Widgets and a JavaScript library called Pixi.js.
+            <title><![CDATA[RAML - Specification to manage the API lifecycle - Fátima Casaú @ Spring I/O 2016]]></title>
+            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
 
-EVENT:
-
-PyData Berlin 2018
-
-SPEAKER:
-
-Jeremy Tuloup
-
-PERMISSIONS:
-
-PyData provided Coding Tech with the permission to republish this video.]]></description>
-            <link>https://dev.tube/video/B5_7ps-JdxY</link>
-            <guid isPermaLink="true">https://dev.tube/video/B5_7ps-JdxY</guid>
-            <pubDate>Mon, 06 Aug 2018 01:25:32 GMT</pubDate>
+RESTful API Modeling Language (RAML), is a specification that looks like YAML and makes easy to manage the API lifecycle. In short, in this talk, I show the features of RAML and how to integrate in a Spring Boot project]]></description>
+            <link>https://dev.tube/video/1AlLiBfylh8</link>
+            <guid isPermaLink="true">https://dev.tube/video/1AlLiBfylh8</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Python Django Framework - Full Course for Beginners]]></title>
-            <description><![CDATA[Learn the Python Django framework with this free full course. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+            <title><![CDATA[DDD Strategic Design with Spring Boot - Michael Plöd @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-In this tutorial, we will build a full MVC app using the Django official docs as a guide.
+Slides: https://speakerdeck.com/mploed/ddd-strategic-design-with-spring-boot-examples
 
-⭐️Contents ⭐️
-⌨️(0:00) Part 1
-⌨️(25:09) Part 2
-⌨️(1:06:49) Part 3
-⌨️(1:45:25) Part 4
-⌨️(2:26:33) Part 5
-⌨️(3:18:00) Part 6
+One of the most precious parts of Domain Driven Design are the concepts of Strategic Design. These concepts include the Bounded Context, the Context Map and the patterns that are being documented in the Context Map.
 
-This tutorial was developed by the Clever Programmer. Check out the Clever Programmer YouTube channel for more great tutorials: https://www.youtube.com/c/CleverProgrammer
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/cI3FOYIMSYE</link>
-            <guid isPermaLink="true">https://dev.tube/video/cI3FOYIMSYE</guid>
-            <pubDate>Sun, 05 Aug 2018 01:34:01 GMT</pubDate>
+This talk explains all of the topics mentioned above as well as practical usage scenarios such as migrating a monolithic landscape to Microservices. In order to get hands-on I will also demonstrate the concepts surrounding Strategic Design with an application landscape of various Spring Boot Applications.]]></description>
+            <link>https://dev.tube/video/2hMf5EwNOWE</link>
+            <guid isPermaLink="true">https://dev.tube/video/2hMf5EwNOWE</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Creating an Arabic Programming Language]]></title>
-            <description><![CDATA[Inspired by Ramsey Nasser’s Arabic programming language Qalb, a functional, Lisp-style language, I created Noor, an Algol-based, imperative Arabic programming language. Arabic is my first language, and I wouldn’t have learned to program had I not moved to the US and learned English. I created Noor with the intention of it being a language for middle schoolers and high schoolers. In this talk I’ll share what I learned about creating an Arabic programming language and how Arabic text really works on your computer.
+            <title><![CDATA[Database centric applications with Spring Boot and jOOQ - Michael Simons @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-EVENT:
+GitHub repo: https://github.com/michael-simons/bootiful-databases
 
-!!Con 2018
+jOOQ is one of several quite different technologies to access relational data from Java based applications.
 
-SPEAKER:
+jOOQ is short for "Java object oriented querying" and describes a query builder framework that takes a look at your database schema, independent wether you use an Open Source database like PostgreSQL or an commercial product like Oracle Database., and provides you with a domain specific language (DSL) for generating statements.
 
-Ahmed Abdalla
+jOOQs goal is explicitly not to shield the user from SQL but providing a type safe way to use it.
 
-PERMISSIONS:
+Learn in this session who you can facilitate the "magic" of Spring Boot to provide jOOQ with needed resources and then use it to publish advanced analytic queries as HTTP apis.
 
-Original video was published with the Creative Commons Attribution license (reuse allowed).
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=eCxqAr7LjW8]]></description>
-            <link>https://dev.tube/video/dkO8cdwf6v8</link>
-            <guid isPermaLink="true">https://dev.tube/video/dkO8cdwf6v8</guid>
-            <pubDate>Sun, 05 Aug 2018 01:27:12 GMT</pubDate>
+Along the way you learn how automatic database migrations help you to do continuous delivery even with database centric applications.]]></description>
+            <link>https://dev.tube/video/4pwTd6NEuN0</link>
+            <guid isPermaLink="true">https://dev.tube/video/4pwTd6NEuN0</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[AWS Cloud Computing Architecture | AWS Certification | AWS Tutorial For Beginners | Edureka]]></title>
-            <description><![CDATA[This Edureka "AWS Cloud Computing Architecture ” video will introduce you to the nitty-gritties of Architecting a Solution with AWS and also explains the various AWS Design Principles.
-
-Check out our AWS Playlist: https://goo.gl/8qrfKU
-
-PHPZipFile: https://aws.amazon.com/getting-started/tutorials/launch-an-app/
-
-Putty: https://www.putty.org/
-
-
-Following topics are covered in this session:
-
-1. Cloud and AWS
-2. Why Move To Cloud?
-3. Design Principles
-4. Demo: Architecting Cloud Solution
- 
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
- #AWSTutorial #AWSCloudComputingArchitecture #AWSCertification #AWSTraining #AWSDomains #AWSEC2 #WhatIsAWS? #ContentDeliveryNetwork, #AWSDesignPrinciples Compute, Storage, Database, Data Transfer #Messaging #FreeTier #Flexibility #AWSScalability #CloudComputing #EdgeLocations #Flexibility #AvailabilityZones #IntroductionToAmazonWebServices  #edureka
-
------------------------------------------------------------------
-
-How it Works?
-
-
-1. This is a 5 Weeks Instructor led Online Course, 30 hours of assignment and 20 hours of project work.
-
-
-2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-
-3. At the end of the training you will be working on a real time project for which we will provide you a Grade and a Verifiable Certificate!
-
---------------------------------------------------------------------
-
-About The Course
-
- 
-AWS holds 69% of the global market share in the cloud computing market. Irrespective of the size of an organization, everyone has started to adopt the cloud services in one way or the other, and AWS is the major player among the Cloud services industry.
-
-AWS Certification Training from Edureka is designed to provide in depth knowledge about AWS architectural principles and its services.
-
-----------------------------------------------------------------------
-
-What are the objectives of our AWS Architect Certification Training?
-
- During this AWS Architect Training, you’ll learn:
-
-1. AWS Architecture and different models of Cloud Computing
-2. Compute Services: AWS EC2, Auto Scaling and Load Balancing, AWS Lambda, Elastic Beanstalk
-3. Storage Services : AWS EBS, AWS S3, AWS Glacier, AWS CloudFront, AWS Snowball, Storage Gateway
-4. Database Services: AWS RDS, AWS DynamoDB, ElastiCache, AWS RedShift
-5. Security and Identity Services: IAM, KMS
-6. Networking Services: Amazon VPC, Route 53, Direct Connect
-7. Management Tools: AWS CloudTrail, AWS CloudWatch, CloudFormation, OpsWorks, Trusty Advisor
-8. Application Services: SES, SNS, SQS
-
------------------------------------------------------------------------
-
-What are the skills that you will be learning with our AWS Architect Certification Training?
-
- 
- On the completion of the AWS Architect Training, learner will be able to:
-
-1. Design and deploy scalable, highly available, and fault tolerant systems on AWS
-2. Understand lift and shift of an existing on-premises application to AWS
-3. Ingress and egress of data to and from AWS
-4. Identify the appropriate AWS service based on data, compute, database, or security requirements
-5. Identify the appropriate use of AWS architectural best practices
-6. Estimate AWS costs and identifying cost control mechanisms
-
------------------------------------------------------------------------------------------------------------
-
-Who should go for this AWS Architect Certification Training?
-
- 
-
-This AWS Certification Training is designed for the IT professionals who want to pursue a career in Cloud Computing and become AWS Certified Solutions Architect. Our AWS Architect Certification Training helps you to grab this opportunity and accelerate your career. It is best suited for:
-
-1. Professionals who want Project Experience in migrating and deploying AWS solutions
-2. Professionals with IT Infrastructure background
-3. Professionals with Virtualisation experience
-4. DevOps professionals
-5. Professionals with understanding of application, server, and network security and compliance
-
----------------------------------------------------------------------------------------------------------
-
-Cognizant, Dell, KPMG, Hitachi, Wipro, Avanade, Annik Inc., Brillio and over 45,000 MNCs across 185 countries use Power BI
-
-For more information, please write back to us at sales@edureka.co
-
-Call us at US: 1855 818 0063(toll free) or India: +91 90191 17772 
-
-
-Website: https://www.edureka.co/cloudcomputing
-
-Facebook: https://www.facebook.com/edurekaIN/
-
-Twitter: https://twitter.com/edurekain
-
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/i5SoCF-4beI</link>
-            <guid isPermaLink="true">https://dev.tube/video/i5SoCF-4beI</guid>
-            <pubDate>Sat, 04 Aug 2018 01:32:03 GMT</pubDate>
+            <title><![CDATA[KEYNOTE - From Spring Framework 4.3 to 5.0 - Juergen Hoeller, Stéphane Nicoll and Phil Webb]]></title>
+            <description><![CDATA[The Spring team is currently working towards not one but two new generations of the framework: 4.3, scheduled for GA at the end of May... and 5.0, scheduled for early 2017. This keynote presents Spring Framework 4.3 with a focus on its developer experience, featuring live demos with the closely aligned Spring Boot 1.4. In the second part, we'll be introducing the infrastructure themes for next year's Spring Framework 5.0: JDK 9, HTTP/2, and reactive architectures.]]></description>
+            <link>https://dev.tube/video/4svNgwAJyK0</link>
+            <guid isPermaLink="true">https://dev.tube/video/4svNgwAJyK0</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Network Service Mesh WG Meeting - 2018-08-03]]></title>
-            <link>https://dev.tube/video/GdocN_l7ZUA</link>
-            <guid isPermaLink="true">https://dev.tube/video/GdocN_l7ZUA</guid>
-            <pubDate>Sat, 04 Aug 2018 01:31:27 GMT</pubDate>
+            <title><![CDATA[Architecture Deep Dive in Spring Security - Joe Grandja @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+
+This talk will provide an Architectural Overview of Spring Security with a focus on Authentication and Authorization. The main goal is to empower users with a deeper knowledge of how Spring Security works “under the covers”. This talk will also demo various Authentication and Authorization scenarios.]]></description>
+            <link>https://dev.tube/video/8rnOsF3RVQc</link>
+            <guid isPermaLink="true">https://dev.tube/video/8rnOsF3RVQc</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[OpenTracing Monthly Call - 2018-08-03]]></title>
-            <link>https://dev.tube/video/lmtIwjzaUMk</link>
-            <guid isPermaLink="true">https://dev.tube/video/lmtIwjzaUMk</guid>
-            <pubDate>Sat, 04 Aug 2018 01:31:27 GMT</pubDate>
+            <title><![CDATA[KEYNOTE - Designing Applications: The Reactive Way - Rossen Stoyanchev and Stephane Maldini]]></title>
+            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
+
+Over the past year the Spring Framework and Reactor teams have been busy working on support for reactive programming models. Reactor 2.5 is in milestone phases with great momentum behind it. Spring Framework 5 M1 is just around the corner. In this keynote we'll take on you a journey to help you understand the major paradigm shift that's taking place and what it means for the way we write and scale applications.]]></description>
+            <link>https://dev.tube/video/APk2dMdXqzI</link>
+            <guid isPermaLink="true">https://dev.tube/video/APk2dMdXqzI</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Rayman Reinvented]]></title>
-            <description><![CDATA[In this 2013 GDC session, Ubisoft's Anais Dusautois & Christophe Villez offer a behind-the-scenes look at the art-focused process of redesigning Rayman. 
+            <title><![CDATA[The Spring ecosystem in 50 minutes - Jeroen Sterken @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-Register for GDC: http://ubm.io/2gk5KTU
+Slides: https://www.slideshare.net/JeroenSterken1/the-spring-ecosystem-in-50-min
 
-Join the GDC mailing list: http://www.gdconf.com/subscribe
+There are currently over 20 main projects, most of them containing multiple subprojects. Do you know each one of them? Probably not.
 
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/p-8eNkUCvnw</link>
-            <guid isPermaLink="true">https://dev.tube/video/p-8eNkUCvnw</guid>
-            <pubDate>Sat, 04 Aug 2018 01:30:51 GMT</pubDate>
+In this session we have only 1 main goal, taking a bird’s-eye view on all of them. I know, this will get challenging, but afterwards you’ll hopefully discover those projects that you never thought existed. Let’s dive in!]]></description>
+            <link>https://dev.tube/video/AnTViprbdp0</link>
+            <guid isPermaLink="true">https://dev.tube/video/AnTViprbdp0</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[[Uber Open Source] Distributing Uber's ML Platform with an Operator Framework -- Mingshi Wang]]></title>
-            <description><![CDATA[During a June 2018 Open Source Meetup at our Seattle office, senior software engineer Mingshi Wang discusses how we leveraged operator frameworks to scale Michelangelo, our machine learning-as-a-service platform.]]></description>
-            <link>https://dev.tube/video/0RVPGULAbYg</link>
-            <guid isPermaLink="true">https://dev.tube/video/0RVPGULAbYg</guid>
-            <pubDate>Sat, 04 Aug 2018 01:28:58 GMT</pubDate>
+            <title><![CDATA[Extending Spring Data - Petar Tahchiev @ Spring I/O 2016]]></title>
+            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
+
+This talk will focus on some particular features of spring-data. It will outline the problems we had to overcome while building the administrative interface for the nemesis e-commerce platform. Our administrative interface is a javascript application that talks to our spring-data-rest enabled platform. We will cover topics like, JPA alternative domain types, querydsl, projections and json schema.]]></description>
+            <link>https://dev.tube/video/Ar8WIcD7pz4</link>
+            <guid isPermaLink="true">https://dev.tube/video/Ar8WIcD7pz4</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[[Uber Open Source] Profile Spark Applications at Scale -- Bo Yang]]></title>
-            <description><![CDATA[During a June 2018 Open Source Meetup at our Seattle office, senior software engineer Bo Yang discusses how Uber's open source JVM Profiler enables us to profile Spark applications at scale across our microservices.]]></description>
-            <link>https://dev.tube/video/fCTdbX-mG2I</link>
-            <guid isPermaLink="true">https://dev.tube/video/fCTdbX-mG2I</guid>
-            <pubDate>Sat, 04 Aug 2018 01:28:58 GMT</pubDate>
+            <title><![CDATA[Data Processing With Microservices - Michael Minella @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+
+GitHub repo: https://github.com/mminella/data-microservices
+
+When the word “microservice” comes up, many thoughts go directly to REST endpoints powering websites. However, applying the 12 factor concepts to batch and integration style workloads can provide immense benefits. In this talk, we will walk through creating data microservices for both streaming applications (integration) via Spring Cloud Stream as well as short lived microservices via Spring Cloud Task. We’ll finish by looking at how Spring Cloud DataFlow can be used to orchestrate these microservices into useful applications. A general knowledge of Spring and Spring Boot will be useful for this talk.]]></description>
+            <link>https://dev.tube/video/COzkPkHZMG8</link>
+            <guid isPermaLink="true">https://dev.tube/video/COzkPkHZMG8</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[[Uber Open Source] LogX: Creating Log Observability in Hadoop Workloads at Uber -- Nan Zhu]]></title>
-            <description><![CDATA[During a June 2018 Open Source Meetup at our Seattle office, software engineer Nan Zhu discusses how Uber developed LogX, a tool that persists and analyzes logs, to enhance observability in our Hadoop ecosystem.]]></description>
-            <link>https://dev.tube/video/o0ZrPZPlq6U</link>
-            <guid isPermaLink="true">https://dev.tube/video/o0ZrPZPlq6U</guid>
-            <pubDate>Sat, 04 Aug 2018 01:28:58 GMT</pubDate>
+            <title><![CDATA[Cloud-native streaming and event-driven microservices - Marius Bogoevici @ Spring I/O 2016]]></title>
+            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
+
+The future of scalable data processing is event-driven microservices! They provide a powerful paradigm that solves issues typically associated with distributed applications, such as availability, data consistency, or communication complexity, and allows the creation of sophisticated and extensible data processing pipelines, bridging the gap between the big data and more traditional enterprise integration world.
+
+Building on the ease of development and deployment provided by Spring Boot, the cloud native capabilities of Spring Cloud, and the messaging model and integration patterns of Spring Integration, the Spring Cloud Stream project provides a simple and powerful framework for event-driven microservices. It defines primitives and abstractions specifically addressing the needs of both event-driven integration, as well as data streaming. For addressing the complexity of deployment, at a higher level of abstraction, Spring Cloud Data Flow is an integrated orchestration layer that provides a highly productive experience for deploying and managing sophisticated data pipelines consisting of standalone microservices. A pluggable runtime SPI allows Spring Cloud Data Flow to coordinate these applications across a variety of distributed runtime platforms such as Apache YARN, Cloud Foundry, Kubernetes, or Apache Mesos. We will demonstrate how to easily create complex data processing pipelines that bridge the world of big data and enterprise integration together, by building Spring Cloud Stream applications from the ground up, and, in the end, how to orchestrate them with Spring Cloud Data Flow.]]></description>
+            <link>https://dev.tube/video/FT9_WR4i28o</link>
+            <guid isPermaLink="true">https://dev.tube/video/FT9_WR4i28o</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[My Journey with PHPUnit on Drupal 7 - The Singapore PHP User Group Meetup]]></title>
-            <description><![CDATA[Speaker: Ken Chua
+            <title><![CDATA[Testing for Unicorns - Alex Soto @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-Event Page: https://www.meetup.com/sgphpug/events/252472670/
+Slides: https://www.slideshare.net/asotobu/testing-for-unicorns-77069262
 
-Produced by Engineers.SG
-Recorded by: Michael Cheng
+One of the most important benefits of automated testing is to ensure a fast and safe code refactoring to evolve our system architecture. The main problem is how to write tests that are easy to write, easy to follow and not time consuming during development nor execution time.
 
-Help us caption & translate this video!
-
-https://amara.org/v/kbSQ/]]></description>
-            <link>https://dev.tube/video/8adEoW1TesQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/8adEoW1TesQ</guid>
-            <pubDate>Sat, 04 Aug 2018 01:27:42 GMT</pubDate>
+In this session, we are going to explore some powerful Java testing libraries that will help you write better (unit) tests focusing on the main Unicorns architecture challenges such as validating microservices endpoints, remote calls to other microservices or just asynchronous/reactive code.]]></description>
+            <link>https://dev.tube/video/GpQ1Nwyimkg</link>
+            <guid isPermaLink="true">https://dev.tube/video/GpQ1Nwyimkg</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Journey as a Freelance Web Developer - The Singapore PHP User Group Meetup]]></title>
-            <description><![CDATA[Speaker: Zion Ng
+            <title><![CDATA[Front Ends for Back End Developers - Matt Raible @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-Event Page: https://www.meetup.com/sgphpug/events/252472670/
+Slides: https://www.slideshare.net/mraible/front-ends-for-back-end-developers-spring-io-2017
 
-Produced by Engineers.SG
-Recorded by: Michael Cheng
-
-Help us caption & translate this video!
-
-https://amara.org/v/kbSR/]]></description>
-            <link>https://dev.tube/video/dtX5ig-YBSg</link>
-            <guid isPermaLink="true">https://dev.tube/video/dtX5ig-YBSg</guid>
-            <pubDate>Sat, 04 Aug 2018 01:27:42 GMT</pubDate>
+Are you a backend developer that’s being pushed into front end development? Are you frustrated with all JavaScript frameworks and build tools you have to learn to be a good UI developer? If so, this session is for you! We’ll explore the tools of the trade for fronted development (npm, yarn, Gulp, Webpack, Yeoman) and learn the basics of HTML, CSS, and JavaScript. We’ll dive into the intricacies of Bootstrap, Material Design, ES6, and TypeScript. Finally, after getting you up to speed with all this new tech, we’ll show how it can all be found and integrated through the fine and dandy JHipster project.]]></description>
+            <link>https://dev.tube/video/HnX09pdxEQI</link>
+            <guid isPermaLink="true">https://dev.tube/video/HnX09pdxEQI</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Web Animations APIs]]></title>
-            <description><![CDATA[Animation is back in the web development tool chest! We know of declarative CSS Animations and Transitions and fully featured JavaScript animation libraries like GreenSock, but there's another option: the Web Animation API! In this talk Rachel Nabors will take you on a magical journey with Alice from Wonderland to show you how this new API is used to run the CSS Animations in your browser and how you can use it to generate and manipulate animations in your project. Colorful, interactive, useful fun for all disciplines.
+            <title><![CDATA[Container orchestration on Apache Mesos - DC/OS for Spring Boot devs - Johannes Unterstein]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-EVENT:
+Slides: https://docs.google.com/presentation/d/1tRWUJnGCGMbYjB11koaOukgzD-zNB8MaimeoFPJ2_JQ/edit
 
-AmsterdamJS Hot Summer Edition 2018
-
-SPEAKER:
-
-Rachel Nabors
-
-PERMISSIONS:
-
-AmsterdamJS Organizer provided Coding Tech with the permission to republish this video.
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=PZCgLaOXxFw]]></description>
-            <link>https://dev.tube/video/AGiTmjFHs8M</link>
-            <guid isPermaLink="true">https://dev.tube/video/AGiTmjFHs8M</guid>
-            <pubDate>Sat, 04 Aug 2018 01:23:58 GMT</pubDate>
+In the era of Docker, big data and microservices it is really important to distribute your applications reasonable across your cluster and keep a good overview of all of your running applications. Because of this, cluster management software like Apache Mesos and DC/OS are very important and popular. In this session we will implement a java based service using spring boot and will start him locally and with docker-compose. Then we will deploy our service to DC/OS and see how easy it is to scale, upgrade, monitor and do other fancy stuff. And the best thing for the demo: We will have a nice UI and super cool CLI.]]></description>
+            <link>https://dev.tube/video/JM_WcsUN5fs</link>
+            <guid isPermaLink="true">https://dev.tube/video/JM_WcsUN5fs</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[WRITING BOTS FOR GITHUB]]></title>
-            <description><![CDATA[My talk is going to be about Probot — GitHub's framework for creating bots. A bot built with Probot is a NodeJS application that handles GitHub's events. Probot allows us to automate and improve GitHub workflow, extend it with tools that we love as far as we wish.
+            <title><![CDATA[Awesome Tools to Level Up Your Spring Cloud Architecture - Andreas Evers @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-In my talk, I will show what Probot can do right now and how you can create your own bot.
+Slides: https://speakerdeck.com/andreasevers/awesome-tools-to-level-up-your-spring-cloud-architecture-1
 
-EVENT:
+Getting up and running with Spring Cloud is a breeze. But once the initial setup is done, it needs to be complemented with an ecosystem that can cope with the extra operational complexity and quality concerns. While running Spring Cloud in production for years, we have integrated some interesting tools for documentation, operations and testing.
 
-You Gotta Love Frontend Kyiv 2018
+During this talk you will see a demo of an integrated platform based on Spring Cloud, including tools like Spring Cloud Contract, wiremock, saboteur, ELK, Spinnaker, Spring Boot Admin and more. One of these tools is a dashboard for visualising Spring Cloud microservice architecture, which has recently been open sourced.
 
-SPEAKER:
-
-Denys Dovhan
-
-PERMISSIONS:
-
-YGLF Conference Organizer provided Coding Tech with the permission to republish this video.
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=AGY0tgyL9Yo]]></description>
-            <link>https://dev.tube/video/cMenLkK8Ulc</link>
-            <guid isPermaLink="true">https://dev.tube/video/cMenLkK8Ulc</guid>
-            <pubDate>Sat, 04 Aug 2018 01:23:58 GMT</pubDate>
+Documenting, testing, troubleshooting, and monitoring highly distributed systems in microservice architectures is hard. Finding quality, complementary tools in the wilds of open source can be even harder. Join this talk for a pragmatic look at taming some of the challenges of running microservices in production.]]></description>
+            <link>https://dev.tube/video/JzgBkodsFsM</link>
+            <guid isPermaLink="true">https://dev.tube/video/JzgBkodsFsM</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Road To ATS London 2018 - The Service Model Part 2: Transparency and Changing the Narrative]]></title>
-            <link>https://dev.tube/video/65LG0L7IDkQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/65LG0L7IDkQ</guid>
-            <pubDate>Sat, 04 Aug 2018 01:22:58 GMT</pubDate>
+            <title><![CDATA[Experiences from using discovery services in a microservice landscape - Magnus Larsson @ Spring I/O]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+
+One of the most important components in a microservice landscape is the discovery service. During the last few years a large number of alternatives for service discovery have evolved, specifically in the area of container infrastructures.
+
+This presentation will, based on my experiences, go through some of the alternatives. The presentation will cover discovery service components in Netflix OSS, Docker Swarm, Amazon ECS and Google Kubernetes. We will also cover how to use Spring Cloud to write microservices that are independent of the selected discovery service, i.e. that can be used with any of the alternatives without requiring modifications of the code.]]></description>
+            <link>https://dev.tube/video/LkIOSKd5zew</link>
+            <guid isPermaLink="true">https://dev.tube/video/LkIOSKd5zew</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Advanced Controls for Xamarin.iOS with Syncfusion | The Xamarin Show]]></title>
-            <description><![CDATA[This week, James is joined by friend of the show Aaron Melamed, Product Solutions Specialist at Syncfusion. Aaron walks us how Essential Studio for Xamarin enabled developers to take advantage of beautiful controls in their Xamarin.iOS apps. Aaron shows off some of the latest and greatest controls that Syncfusion has to offer including their new Kanban board and Diagram for data visualization.
+            <title><![CDATA[40 Tips & Tricks for Spring in IntelliJ IDEA -  Yann Cébron & Stéphane Nicoll @ Spring I/O 2016]]></title>
+            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
 
-Xamarin Show viewers can get 20% off the Essential Studio for Xamarin with coupon code: XAMARINSHOW
+IDEs can be powerful, but hard to learn. Some features are hidden or simply not well known.
 
-Show Links:
+Let’s end this dilemma and make you more productive and efficient when working on Spring applications.
+Learn how to navigate, edit and perform refactorings across a variety of common Spring technologies.  
 
-Syncfusion: Essential Studio for Xamarin: https://www.syncfusion.com/products/xamarin
-
-Find James on Twitter: http://twitter.com/jamesmontemagno 
-GitHub: http://github.com/jamesmontemagno
-Blog: https://montemagno.com
-and his weekly development podcast Merge Conflict: http://www.mergeconflict.fm
-
-Never Miss an Episode: https://twitter.com/thexamarinshow
-
-Useful Links:
-Xamarin Developer Center: https://developer.xamarin.com/
-Xamarin Blog: http://blog.xamarin.com/
-Xamarin and Azure: https://www.xamarin.com/azure
-Mobile DevOps: https://www.xamarin.com/mobile-devops
-Xamarin University Self-Guided: https://university.xamarin.com/self-guided
-Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
-            <link>https://dev.tube/video/ndgkjK33udw</link>
-            <guid isPermaLink="true">https://dev.tube/video/ndgkjK33udw</guid>
-            <pubDate>Fri, 03 Aug 2018 01:35:32 GMT</pubDate>
+You’ll leave this session with a whole stack of power tricks - right from the developers working on it.]]></description>
+            <link>https://dev.tube/video/OfdERvmIJXc</link>
+            <guid isPermaLink="true">https://dev.tube/video/OfdERvmIJXc</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[HDInsight: Fast Interactive Queries with Hive on LLAP]]></title>
-            <description><![CDATA[Murali Krishnaprasad joins Lara Rubbelke to discuss Interactive Query (also called Hive LLAP, or Low Latency Analytical Processing, or Live Long and Process), which is an Azure HDInsight cluster type. Interactive Query supports in-memory caching, which makes Hive queries super-fast and interactive. See how to use HDInsight Interactive Query to analyze extremely large datasets (~100TB) in common file formats such as ORC and CSV using common BI/SQL tools including Zeppelin notebooks and VS Code.
+            <title><![CDATA[Spring Boot and Cloud for Legacy Applications - Marten Deinum @ Spring I/O 2016]]></title>
+            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
 
-For more information, see:
+Spring Boot as well as the Spring Cloud projects are very neat and powerful technologies. But how easy are they to apply to existing application and how can they help improve existing applications.
 
-+ Use Interactive Query with HDInsight (docs) https://aka.ms/azfr/458/01
-+ HDInsight overview https://aka.ms/azfr/458/02
-+ HDInsight pricing details https://aka.ms/azfr/458/03
-+ Create a free account (Azure) https://aka.ms/azfr/458/free]]></description>
-            <link>https://dev.tube/video/RbBuaiJ8qLM</link>
-            <guid isPermaLink="true">https://dev.tube/video/RbBuaiJ8qLM</guid>
-            <pubDate>Fri, 03 Aug 2018 01:34:19 GMT</pubDate>
+In this talk we will take a look at a legacy application and introduce Spring Boot and some of the Spring Cloud technologies to it.]]></description>
+            <link>https://dev.tube/video/Q_WIvCsY6G0</link>
+            <guid isPermaLink="true">https://dev.tube/video/Q_WIvCsY6G0</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Execute Jars and Python scripts on Azure Databricks using Data Factory]]></title>
-            <description><![CDATA[Gaurav Malhotra joins Lara Rubbelke to discuss how you can operationalize Jars and Python scripts running on Azure Databricks as an activity step in a Data Factory pipeline.
+            <title><![CDATA[Cloud Native Java - Josh Long @ Spring I/O 2016]]></title>
+            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
 
-For more information:
+"It is not necessary to change. Survival is not mandatory." -W. Edwards Deming
 
-+ Transform data by running a Jar activity in Azure Databricks docs https://aka.ms/azfr/459/01
-+ Transform data by running a Python activity in Azure Databricks docs https://aka.ms/azfr/459/02
-+ Azure Databricks overview https://aka.ms/azfr/459/03
-+ Azure Data Factory overview https://aka.ms/azfr/459/04
-+ Create a free account (Azure) https://aka.ms/azfr/459/free]]></description>
-            <link>https://dev.tube/video/WTiNiiSN2iQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/WTiNiiSN2iQ</guid>
-            <pubDate>Fri, 03 Aug 2018 01:34:19 GMT</pubDate>
+Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It’s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage.
+
+Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget “devops,” cloud-based services and platforms (like Cloud Foundry) automate operations work and break down the need for ITIL tickets and change management boards.
+
+But velocity, for velocity’s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we’ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.]]></description>
+            <link>https://dev.tube/video/R4s4z7fTEH4</link>
+            <guid isPermaLink="true">https://dev.tube/video/R4s4z7fTEH4</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#TBTch9 Tour of the .NET CLR team]]></title>
-            <description><![CDATA[Originally published: November 17, 2004
+            <title><![CDATA[Deep Learning with DeepLearning4J and Spring Boot - Artur Garcia & Dimas Cabré @ Spring I/O 2017]]></title>
+            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
 
-Jason Zander invited Charles Torre to meet the .NET Common Language Runtime team.
-
-Don't know what this team does? Well, the .NET CLR is at the center of all .NET applications. So, if you're writing .NET apps, you are using this team's work.
-
-Original Channel 9 Post: https://channel9.msdn.com/Blogs/TheChannel9Team/Jason-Zander-Tour-of-the-NET-CLR-team]]></description>
-            <link>https://dev.tube/video/uWJ6SCEf5Hw</link>
-            <guid isPermaLink="true">https://dev.tube/video/uWJ6SCEf5Hw</guid>
-            <pubDate>Fri, 03 Aug 2018 01:34:19 GMT</pubDate>
+We'll start with a review on recent advances in Deep Learning. Then we'll present DeepLearning4J (the first commercial-grade, open-source, distributed deep-learning library written for Java) and explore how it covers topics explained in the initial review. We'll then present a Spring Boot application with some functionality run by a Neural Network. Finally we'll explore the possibilities of implementing a Supervised Learning System using Spring Boot Actuator, which will lead to a trained monitoring system that can be interacted with actuator endpoints.]]></description>
+            <link>https://dev.tube/video/RlL9MNT-R3k</link>
+            <guid isPermaLink="true">https://dev.tube/video/RlL9MNT-R3k</guid>
+            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
         </item>
     </channel>
 </rss>
