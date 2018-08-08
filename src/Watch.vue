@@ -14,13 +14,8 @@
         .column.is-one-half(v-bind:class="{ active: isFullWidth }")
           .card
             .card-image
+              VideoToggles(:videoId="id")
               a(@click="toggleWatched(id)" v-if="auth.user")
-                font-awesome-layers.fa-3x.watched(v-if="isWatched(id)" title="Remove from watched")
-                  font-awesome-icon.fa-stack-1x(icon="eye")
-                  font-awesome-icon.fa-stack-1x(icon="times" transform="shrink-8 up-7 right-7")
-                font-awesome-layers.fa-3x.watched(v-else title="Mark watched")
-                  font-awesome-icon.fa-stack-1x(icon="eye")
-                  font-awesome-icon.fa-stack-1x(icon="check" transform="shrink-8 up-7 right-7")               
               .videoWrapper
                 iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
             .card-content
@@ -146,6 +141,7 @@
   import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
   import MessageWidget from './MessageWidget.vue'
+  import VideoToggles from './VideoToggles.vue'
   import NightMode from './NightMode.vue'
   import ShareVideo from './ShareVideo.vue'
   import NavBar from './NavBar.vue'
@@ -201,7 +197,7 @@
       ...mapActions('videos', [ 'toggleWatched' ])
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget, NightMode, ShareVideo, NavBar }
+    components: { RelatedVideos, MessageWidget, NightMode, ShareVideo, NavBar, VideoToggles}
   }
 
 </script>

@@ -23,6 +23,8 @@
           .navbar-dropdown.is-boxed.is-size-7
             a.navbar-item.is-size-7(@click="showWatched()") 
               | Watched videos ({{watchedCount}})
+            a.navbar-item.is-size-7(@click="showFavorites()") 
+              | Favorites ({{favoriteCount}})
             a.navbar-item(@click="signOut()") Logout
 
         a.navbar-item.is-hoverable.is-size-7(v-else) Log in
@@ -81,7 +83,7 @@ header {
   export default {
     computed: {
       ...mapState([ 'auth' ]),
-      ...mapGetters('videos', [ 'watchedCount' ])
+      ...mapGetters('videos', [ 'watchedCount', 'favoriteCount' ])
     },
     data: function() {
       return {
@@ -103,6 +105,13 @@ header {
         this.$router.push({
           name: 'search',
           query: { w: 'true' }
+        });
+        this.hide();
+      },
+      showFavorites() {
+        this.$router.push({
+          name: 'search',
+          query: { f: 'true' }
         });
         this.hide();
       },

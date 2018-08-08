@@ -18,12 +18,19 @@ html(lang='en')
         background-color: #1a2531;
         color: #f5f5f5;
       }
+
+      .notification.overrideVueNotificationsIssue {
+        background-color: #2b3e50;
+      }
     |     {{/nightMode}}
     |     {{^nightMode}}
     link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
     style.
       body, button, input, select, textarea {
         font-family: "Lato","Helvetica Neue", "Helvetica", Arial, "sans-serif"
+      }
+      .notification.overrideVueNotificationsIssue {
+        background-color: #f5f5f5;
       }
     |     {{/nightMode}}
     link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato')

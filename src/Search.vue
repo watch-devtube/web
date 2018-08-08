@@ -10,8 +10,8 @@
               .columns
                 .column.is-one-quarter
                   p.buttons
-                    router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel || showMyWatched" :to="{ name: 'search' }")
-                      span {{speaker || tag || channel || (showMyWatched ? 'Watched' : '')}}
+                    router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel || showMyWatched || showFavorites" :to="{ name: 'search' }")
+                      span {{speaker || tag || channel || (showMyWatched ? 'Watched' : '') || (showFavorites ? 'Favorites' : '')}}
                       span.icon.is-small: i.fas.fa-times
                     a.button.is-small.is-hidden-tablet(@click="$refs.tagPicker.expand()"): span.icon.is-small: i.fas.fa-hashtag
                     a.button.is-small.is-hidden-tablet(@click="$refs.speakerPicker.expand()"): span.icon.is-small: i.far.fa-user-circle
@@ -31,13 +31,14 @@
                     .column
                       .columns
                         .column.is-hidden-mobile
-                          router-link.button.is-small.is-outlined(v-if="speaker || tag || channel || showMyWatched" :to="{ name: 'search' }")
+                          router-link.button.is-small.is-outlined(v-if="speaker || tag || channel || showMyWatched || showFavorites" :to="{ name: 'search' }")
                             span.is-capitalized(v-if="tag || channel") {{tag || channel}}
                             span.is-lowercased(v-if="speaker") @{{speaker}}
                             span.is-lowercased(v-if="showMyWatched") Watched
+                            span.is-lowercased(v-if="showFavorites") Favorites
                             span.icon.is-small: i.fas.fa-times
                       .loading(v-if="loading")
-                        .notification
+                        .notification.overrideVueNotificationsIssue
                           p
                             | Searching for the best tech videos 👨🏻‍💻...
                             br
@@ -46,7 +47,7 @@
                       .loaded(v-else)
                         ais-no-results
                           template(slot-scope="props")
-                            .notification
+                            .notification.overrideVueNotificationsIssue
                               p
                                 | No videos matching your query. Please 
                                 a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
@@ -54,7 +55,20 @@
                         ais-results#videos.columns.is-multiline
                           template(slot-scope="{ result }")
                             .column.is-6.is-flex-tablet.is-4-widescreen.shrinkIfEmpty
-                              VideoCard(:newMode="newMode" :tags="result.tags" :featured="result.featured" :tagsClickable="true" :speaker="result.speaker" :creationDate="result.creationDate" :recordingDate="result.recordingDate" :duration="result.duration" :views="result.views" :satisfaction="result.satisfaction" :title="result.title" :id="result.objectID" :channel="result.channelTitle")
+                              VideoCard(
+                                :newMode="newMode" 
+                                :tags="result.tags" 
+                                :featured="result.featured" 
+                                :tagsClickable="true" 
+                                :speaker="result.speaker" 
+                                :creationDate="result.creationDate" 
+                                :recordingDate="result.recordingDate" 
+                                :duration="result.duration" 
+                                :views="result.views" 
+                                :satisfaction="result.satisfaction" 
+                                :title="result.title" 
+                                :id="result.objectID" 
+                                :channel="result.channelTitle")
       section.section
         .container
           .columns
@@ -98,6 +112,7 @@ export default {
   props: {
     q: { type: String, default: '' },
     showMyWatched: { type: Boolean, default: false },
+    showFavorites: { type: Boolean, default: false },
     speaker: { type: String, required: false },
     channel: { type: String, required: false },
     tag: { type: String, required: false }
@@ -165,7 +180,7 @@ export default {
       return window.featured.channels
     },
     ...mapState([ 'videos', 'query' ]),
-    ...mapGetters('videos', ['watchedIds']),
+    ...mapGetters('videos', ['watchedIds', 'favoriteIds']),
     ...mapGetters('loading', ['completed'])
   },
   methods: {
@@ -195,11 +210,17 @@ export default {
       this.searchStore.queryParameters = { refinement : undefined }
 
       let watchedVideoIds = this.watchedIds
+      let favoriteVideoIds = this.favoriteIds
       if (this.showMyWatched) {
         this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: watchedVideoIds } } }
         this.searchStore.queryParameters = { watched: [] }
       } else {
         this.searchStore.queryParameters = { watched: watchedVideoIds }
+      }
+
+      if (this.showFavorites) {
+        this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: favoriteVideoIds } } }
+        this.searchStore.queryParameters = { watched: [] }
       }
 
       if (this.speaker) {

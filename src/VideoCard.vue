@@ -1,13 +1,7 @@
 <template lang="pug">
   .card(style="height: 100%; width:100%" v-if="visible")
       .card-image
-        a(@click="toggleWatched(id); hide()" v-if="auth.user")
-          font-awesome-layers.fa-2x.watched(v-if="isWatched(id)" title="Remove from watched")
-            font-awesome-icon.fa-stack-1x(icon="eye")
-            font-awesome-icon.fa-stack-1x(icon="times" transform="shrink-8 up-7 right-7")
-          font-awesome-layers.fa-2x.watched(v-else title="Mark watched")
-            font-awesome-icon.fa-stack-1x(icon="eye")
-            font-awesome-icon.fa-stack-1x(icon="check" transform="shrink-8 up-7 right-7")            
+        VideoToggles(:videoId="id" :onWatched="hide")
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             i.is-size-3.fab.fa-youtube.watch
@@ -71,20 +65,8 @@
   .card {
 
     position: relative;
-    transition: 0.4s ease;
+    transition: 0.4s ease;  
 
-    .watched {
-      height: 1em;
-      z-index: 29;
-      right: 6px;
-      top: 5px;
-      color: white;
-      position: absolute;
-    }
-
-    .watched:hover {
-        color: #4988cb;
-    }    
 
     .avatar {
       border-radius: 50%
@@ -141,6 +123,7 @@
 </style>
 <script>
   import Tags from './Tags.vue'
+  import VideoToggles from './VideoToggles.vue'
   import dayjs from 'dayjs'
   import { mapState, mapActions, mapGetters } from 'vuex'
 
@@ -180,11 +163,10 @@
         let videoAgeInDays = today.diff(videoCreated, 'days')
         return videoAgeInDays <= 7
       },
-      ...mapState([ 'videos', 'auth' ]),
       ...mapGetters('videos', ['isWatched']),
     },
     methods: {
-      hide() {
+      hide: function() {
         this.visible = false
       },
       watch: function(videoId) {
@@ -193,8 +175,7 @@
           params: { id: videoId }
         });
       },
-      ...mapActions('videos', [ 'toggleWatched' ])
     },    
-    components: { Tags }
+    components: { Tags, VideoToggles }
   };
 </script>
