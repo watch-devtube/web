@@ -4,238 +4,300 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 07 Aug 2018 19:00:51 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 08 Aug 2018 04:30:33 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[The Future of Event-driven Microservices with Spring Cloud Stream - Kenny Bastani @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
-
-When you’re building microservices, managing state becomes a distributed systems problem. Instead of being able to manage state as transactions inside the boundaries of a single monolithic application, a microservice must be able to manage consistency by using transactions that are distributed across a network of many different applications and databases.
-
-Event-driven architectures are a key component of solving data consistency issues in microservices. This session explores the problems of data consistency in microservices and the various event-driven practices that include CQRS and Event Sourcing. We will look at how these popular practices are implemented using Spring Boot and Spring Cloud Stream.]]></description>
-            <link>https://dev.tube/video/0C7J7hFv_pk</link>
-            <guid isPermaLink="true">https://dev.tube/video/0C7J7hFv_pk</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[Holden Karau and Cheburashka interview at JOTB2018]]></title>
+            <description><![CDATA[Interview with Holden Karau during J On The Beach 2018, Málaga, Spain.]]></description>
+            <link>https://dev.tube/video/-WHc01dJlAw</link>
+            <guid isPermaLink="true">https://dev.tube/video/-WHc01dJlAw</guid>
+            <pubDate>Wed, 08 Aug 2018 01:34:16 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[RAML - Specification to manage the API lifecycle - Fátima Casaú @ Spring I/O 2016]]></title>
-            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
+            <title><![CDATA[Playing well together: Big data beyond the JVM with Spark and friends - Strata SJ 2018]]></title>
+            <description><![CDATA[Many of the recent big data systems, like Hadoop, Spark, and Kafka, are written primarily in JVM languages. At the same time, there is a wealth of tools for data science and data analytics that exist outside of the JVM. Holden Karau and Rachel Warren explore the state of the current big data ecosystem and explain how to best work with it in non-JVM languages. While much of the focus will be on Python + Spark, the talk will also include interesting anecdotes about how these lessons apply to other systems (including Kafka).
 
-RESTful API Modeling Language (RAML), is a specification that looks like YAML and makes easy to manage the API lifecycle. In short, in this talk, I show the features of RAML and how to integrate in a Spring Boot project]]></description>
-            <link>https://dev.tube/video/1AlLiBfylh8</link>
-            <guid isPermaLink="true">https://dev.tube/video/1AlLiBfylh8</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+Holden and Rachel detail how to bridge the gap using PySpark and discuss other solutions like Kafka Streams as well. They also outline the challenges of pure Python solutions like dask. Holden and Rachel start with the current architecture of PySpark and its evolution. They then turn to the future, covering Arrow-accelerated interchange for Python functions, how to expose Python machine learning models into Spark, and how to use systems like Spark to accelerate training of traditional Python models. They also dive into what other similar systems are doing as well as what the options are for (almost) completely ignoring the JVM in the big data space.
+
+Python users will learn how to more effectively use systems like Spark and understand how the design is changing. JVM developers will gain an understanding of how to Python code from data scientist and Python developers while avoiding the traditional trap of needing to rewrite everything.]]></description>
+            <link>https://dev.tube/video/fNtyDpWOA2k</link>
+            <guid isPermaLink="true">https://dev.tube/video/fNtyDpWOA2k</guid>
+            <pubDate>Wed, 08 Aug 2018 01:34:16 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[DDD Strategic Design with Spring Boot - Michael Plöd @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+            <title><![CDATA[Beyond Shuffling: Scaling Apache Spark by Holden Karau]]></title>
+            <description><![CDATA[This video was recorded at Scala Days Berlin 2016
+Follow us on Twitter @ScalaDays or visit our website for more information http://scaladays.org 
 
-Slides: https://speakerdeck.com/mploed/ddd-strategic-design-with-spring-boot-examples
-
-One of the most precious parts of Domain Driven Design are the concepts of Strategic Design. These concepts include the Bounded Context, the Context Map and the patterns that are being documented in the Context Map.
-
-This talk explains all of the topics mentioned above as well as practical usage scenarios such as migrating a monolithic landscape to Microservices. In order to get hands-on I will also demonstrate the concepts surrounding Strategic Design with an application landscape of various Spring Boot Applications.]]></description>
-            <link>https://dev.tube/video/2hMf5EwNOWE</link>
-            <guid isPermaLink="true">https://dev.tube/video/2hMf5EwNOWE</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+Abstract:
+This session will cover our & community experiences scaling Spark jobs to large datasets and the resulting best practices along with code snippets to illustrate.
+ 
+The planned topics are:
+* Using Spark counters for performance investigation
+* Spark collects a large number of statistics about our code, but how often do we really look at them? We will cover how to investigate performance issues and figure out where to best spend our time using both counters and the UI.
+* Working with Key/Value Data
+* Replacing groupByKey for awesomeness
+groupByKey makes it too easy to accidently collect individual records which are too large to process. We will talk about how to replace it in different common cases with more memory efficient operations.
+* Effective caching & checkpointing
+* Being able to reuse previously computed RDDs without recomputing can substantially reduce execution time. Choosing when to cache, checkpoint, or what storage level to use can have a huge performance impact.
+* Considerations for noisy clusters
+* Functional transformations with Spark Datasets
+*How to have the some of benefits of Spark’s DataFrames while still having the ability to work with arbitrary Scala code]]></description>
+            <link>https://dev.tube/video/0KGGa9qX9nw</link>
+            <guid isPermaLink="true">https://dev.tube/video/0KGGa9qX9nw</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Database centric applications with Spring Boot and jOOQ - Michael Simons @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
-
-GitHub repo: https://github.com/michael-simons/bootiful-databases
-
-jOOQ is one of several quite different technologies to access relational data from Java based applications.
-
-jOOQ is short for "Java object oriented querying" and describes a query builder framework that takes a look at your database schema, independent wether you use an Open Source database like PostgreSQL or an commercial product like Oracle Database., and provides you with a domain specific language (DSL) for generating statements.
-
-jOOQs goal is explicitly not to shield the user from SQL but providing a type safe way to use it.
-
-Learn in this session who you can facilitate the "magic" of Spring Boot to provide jOOQ with needed resources and then use it to publish advanced analytic queries as HTTP apis.
-
-Along the way you learn how automatic database migrations help you to do continuous delivery even with database centric applications.]]></description>
-            <link>https://dev.tube/video/4pwTd6NEuN0</link>
-            <guid isPermaLink="true">https://dev.tube/video/4pwTd6NEuN0</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[OSCON 2016 - Getting started contributing to Apache Spark by Holden Karau (IBM)]]></title>
+            <description><![CDATA[Apache Spark is one of the most popular tools for big data and with 400+ open pull requests as of this writing, very active in terms of development as well. With such a large volume of contributions, it can be hard to know how to begin contributing yourself. Holden Karau offers a developer-focused head start, walking you through how to find good issues, formatting code, finding reviewers, and what to expect in the code review process. Holden also explores alternatives to contributing to Apache Spark directly (such as creating packages).]]></description>
+            <link>https://dev.tube/video/2SC8BkKILXc</link>
+            <guid isPermaLink="true">https://dev.tube/video/2SC8BkKILXc</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[KEYNOTE - From Spring Framework 4.3 to 5.0 - Juergen Hoeller, Stéphane Nicoll and Phil Webb]]></title>
-            <description><![CDATA[The Spring team is currently working towards not one but two new generations of the framework: 4.3, scheduled for GA at the end of May... and 5.0, scheduled for early 2017. This keynote presents Spring Framework 4.3 with a focus on its developer experience, featuring live demos with the closely aligned Spring Boot 1.4. In the second part, we'll be introducing the infrastructure themes for next year's Spring Framework 5.0: JDK 9, HTTP/2, and reactive architectures.]]></description>
-            <link>https://dev.tube/video/4svNgwAJyK0</link>
-            <guid isPermaLink="true">https://dev.tube/video/4svNgwAJyK0</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[Holden Karau, IBM - #BigDataNYC 2016 - #theCUBE]]></title>
+            <description><![CDATA[01. Holen Karau, IBM, Visits #theCUBE!. (00:22)
+02. What's New In Your World With Spark. (01:07)
+03. What Is Junky API. (02:010)
+04. How Does Spark  Address Complexity. (03:51)
+05. Is The Open Source Community Finding A Way To Colaberate. (05:47)
+06. Is The  Open Source  Community Working To  Find It's Way  Into The Tools. (07:34)
+07. How Much Of A Data Scientist Do You Have To Be. (08:37)
+08. What Is Your Perspective On Machine Learning. (10:01)
+09. Is Sampling Dead. (12:17)
+10. Are We Going To Start Turning Big Data On The Problem Of Big Data. (13:05)
+
+Track List created with http://www.vinjavideo.com.
+--- ---
+Collaboration and machine learning with Spark | #BigDataNYC
+by Brittany Greaner | Sep 29, 2016
+
+Open-source technology is paving the way to the future of affordable and flexible IT, and the Apache Spark open-source processing engine is no exception. There is even a Spark components page where users can share useful tools and technology.
+
+“Even vendors are sharing,” said Holden Karau, principal software engineer at IBM. This enables much wider collaboration throughout the community, as well as narrower collaboration between friends and colleagues. “If you have a notebook and share it with your friend, you can work together more collaboratively. A lot of companies are building notebook solutions,” added Karau.
+
+Karau was interviewed by Dave Vellante (@dvellante) and Peter Burris (@plburris), hosts of theCUBE, from the SiliconANGLE Media team, during BigDataNYC 2016 in New York, NY.
+
+Spark’s range of complexity
+
+Another standout feature of Spark is its range of complexity. It allows users who may not have much knowledge of Python or Java to be able to build what they need without that coding ability.
+At the same time, if users of Spark do understand coding, they can also use that knowledge to their benefit to create exactly what they want. “I think Spark does a good job of being user friendly. With Spark it’s much simpler and exposed in ways people are already used to working with their data,” said Karau.
+
+Machine learning
+
+Another area Spark and other platforms are beginning to dive into is machine learning. The traditional method is to down-sample, but this isn’t the most efficient or thorough method. Machine learning allows a much wider, agile way of doing things.
+
+“When you move people to a laptop, you can train an algorithm to 
+recommend datasets to people,” said Karau. “The combination of notebooks and Spark means data scientists can directly apply data during the exploration phase.” It speeds up the process by eliminating the need to consult coworkers for their data sets or do manual searches. And that is very powerful, with strong implications for the future, Karau concluded.
+
+#BigDataNYC
+#theCUBE]]></description>
+            <link>https://dev.tube/video/6iH6yAa8wFM</link>
+            <guid isPermaLink="true">https://dev.tube/video/6iH6yAa8wFM</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Architecture Deep Dive in Spring Security - Joe Grandja @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+            <title><![CDATA[Philly ETE 2017 #40 - Scaling with Apache Spark (or a lesson in unintended consequences) - H. Karau]]></title>
+            <description><![CDATA[Holden Karau: "Scaling with Apache Spark (or a lesson in unintended consequences)"
 
-This talk will provide an Architectural Overview of Spring Security with a focus on Authentication and Authorization. The main goal is to empower users with a deeper knowledge of how Spring Security works “under the covers”. This talk will also demo various Authentication and Authorization scenarios.]]></description>
-            <link>https://dev.tube/video/8rnOsF3RVQc</link>
-            <guid isPermaLink="true">https://dev.tube/video/8rnOsF3RVQc</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+Apache Spark is one the most popular general purpose distributed systems in the past few years. Apache Spark has APIs in Scala, Java, Python and more recently a few different attempts to provide support for R, C#, and Julia. This talk looks at Apache Spark from a performance/scaling point of view and the work we need to do to be able to handle large datasets. In essence parts of this talk could be considered “the impact of design decisions from years ago and how to work around them.” It’s not all doom and gloom though, we will explore the new APIs and the exciting new things we can do with them with a brief detour into how to work around some of the trade-offs in the new APIs – but mostly focused on the new exciting shiny things we can play with. A basic background with Apache Spark will probably make the talk more exciting, or depressing depending on your point of view, but for those new to Apache Spark just enough to understand whats going will be covered at the start. The presenter would of course encourage you to buy and read her books on the topic (“Learning Spark” & “High Performance Spark”), because which presenter doesn’t do that.]]></description>
+            <link>https://dev.tube/video/7S8zJPICSYg</link>
+            <guid isPermaLink="true">https://dev.tube/video/7S8zJPICSYg</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[KEYNOTE - Designing Applications: The Reactive Way - Rossen Stoyanchev and Stephane Maldini]]></title>
-            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
-
-Over the past year the Spring Framework and Reactor teams have been busy working on support for reactive programming models. Reactor 2.5 is in milestone phases with great momentum behind it. Spring Framework 5 M1 is just around the corner. In this keynote we'll take on you a journey to help you understand the major paradigm shift that's taking place and what it means for the way we write and scale applications.]]></description>
-            <link>https://dev.tube/video/APk2dMdXqzI</link>
-            <guid isPermaLink="true">https://dev.tube/video/APk2dMdXqzI</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[Debugging PySpark: Spark Summit East talk by Holden Karau]]></title>
+            <link>https://dev.tube/video/A0jYQlxc2FU</link>
+            <guid isPermaLink="true">https://dev.tube/video/A0jYQlxc2FU</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The Spring ecosystem in 50 minutes - Jeroen Sterken @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
-
-Slides: https://www.slideshare.net/JeroenSterken1/the-spring-ecosystem-in-50-min
-
-There are currently over 20 main projects, most of them containing multiple subprojects. Do you know each one of them? Probably not.
-
-In this session we have only 1 main goal, taking a bird’s-eye view on all of them. I know, this will get challenging, but afterwards you’ll hopefully discover those projects that you never thought existed. Let’s dive in!]]></description>
-            <link>https://dev.tube/video/AnTViprbdp0</link>
-            <guid isPermaLink="true">https://dev.tube/video/AnTViprbdp0</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[Sparkling Pandas - using Apache Spark to scale Pandas - Holden Karau and Juliet Hougland]]></title>
+            <description><![CDATA[Pandas is a fast and expressive library for data analysis that doesn’t naturally scale to more data than can fit in memory. PySpark is the Python API for Apache Spark that is designed to scale to huge amounts of data but lacks the natural expressiveness of Pandas. We will introduce Sparkling Pandas, a new library that brings together the best features of Pandas and PySpark; Expressiveness, speed, and scalability.]]></description>
+            <link>https://dev.tube/video/AcyI_V8FeIU</link>
+            <guid isPermaLink="true">https://dev.tube/video/AcyI_V8FeIU</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Extending Spring Data - Petar Tahchiev @ Spring I/O 2016]]></title>
-            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
+            <title><![CDATA[Distributed Data Show Episode 34: Spark 2.3 with Holden Karau]]></title>
+            <description><![CDATA[Patrick McFadin catches up with Holden Karau of Google to learn about new features of Spark 2.3, including Vectorized UDFs, Microbatch improvements, and Kubernetes support. Along the way, they explore whether API stability is an indicator that it’s time to make a career move. 
 
-This talk will focus on some particular features of spring-data. It will outline the problems we had to overcome while building the administrative interface for the nemesis e-commerce platform. Our administrative interface is a javascript application that talks to our spring-data-rest enabled platform. We will cover topics like, JPA alternative domain types, querydsl, projections and json schema.]]></description>
-            <link>https://dev.tube/video/Ar8WIcD7pz4</link>
-            <guid isPermaLink="true">https://dev.tube/video/Ar8WIcD7pz4</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+Highlights!
+0:15 - Welcoming Holden
+0:35 - Patrick asks Holden why Spark APIs keep changing and whether API stability and boring infrastructure is a good thing
+2:43 - Big changes in Spark 2.3 include Vectorized UDFs powered by Apache Arrow, which gives a big performance boost to transferring data between Python and the JVM (for those who aren’t fans of Scala)
+6:44 - In the new Spark Microbatch API, sources and sinks are no longer tied to batches. This gives the flexibility to process as quickly as possible when you can tolerate some data loss like some IoT and machine learning use cases
+11:38 - Kubernetes support is finally in Spark 2.3 after a few competing approaches were resolved, simplifying deployment of complex Spark apps that leverage non-JVM libraries
+14:44 Holden explains why Spark struggles with scaling down and how Kubernetes support may be part of the solution.
+18:34 - Patrick and Holden discuss when it will be safe to deploy Spark on K8S in production (hint, it should be before Spark 3)
+
+
+ABOUT DATASTAX ENTERPRISE 5.1
+DataStax Enterprise 5.1, the database platform for cloud applications, includes Apache Cassandra 3.x with materialized views, tiered storage and advanced replication. Introduced in 5.1 is DataStax Enterprise Graph, the first graph database fast enough to power customer-facing applications, scale to massive datasets and integrate advanced tools to power deep analytical queries.
+
+Learn more at http://www.datastax.com/products/datastax-enterprise and https://academy.datastax.com/resources/whats-new-datastax-enterprise-50
+
+CONNECT WITH DATASTAX
+Subscribe: http://www.youtube.com/c/datastax?sub_confirmation=1 
+Site: http://datastax.com 
+Facebook: https://facebook.com/datastax 
+Twitter: https://twitter.com/datastax 
+Linkedin: https://www.linkedin.com/company/datastax
+http://feeds.feedburner.com/datastax 
+https://github.com/datastax 
+
+ABOUT DATASTAX ACADEMY
+On the DataStax Academy YouTube channel, you can find tutorials, webinars and much more to help you learn and stay updated with the latest information on DataStax Enterprise©.  Create an account on https://academy.datastax.com to watch our free online courses, tutorials, and more.]]></description>
+            <link>https://dev.tube/video/Becr6YPF9dQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/Becr6YPF9dQ</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Data Processing With Microservices - Michael Minella @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+            <title><![CDATA[Dealing with Contributor Overload]]></title>
+            <description><![CDATA[Holden Karau
 
-GitHub repo: https://github.com/mminella/data-microservices
+http://lca2018.linux.org.au/schedule/presentation/36/
 
-When the word “microservice” comes up, many thoughts go directly to REST endpoints powering websites. However, applying the 12 factor concepts to batch and integration style workloads can provide immense benefits. In this talk, we will walk through creating data microservices for both streaming applications (integration) via Spring Cloud Stream as well as short lived microservices via Spring Cloud Task. We’ll finish by looking at how Spring Cloud DataFlow can be used to orchestrate these microservices into useful applications. A general knowledge of Spring and Spring Boot will be useful for this talk.]]></description>
-            <link>https://dev.tube/video/COzkPkHZMG8</link>
-            <guid isPermaLink="true">https://dev.tube/video/COzkPkHZMG8</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+The first external person contributing to our project is amazing, but when that 1 snowballs to 1,000 life can get a little bit stressful. All of these fine lovely people want to help, but somehow no one seems to want to help you deal with all of the code reviews, proposed documentation changes, or keeping your testing infrastructure alive (or three people want to help in different directions).
+
+This talk explores what happens as a community grows using the speakers experience in her own personal projects (which have much less than 1k contributors) as well as larger projects, like Apache Spark.
+
+Come for the being told its not your fault, stay for the techniques to avoid pissing everyone off.
+
+P.S.
+
+If the speaker is behind on reviewing one of your pull requests she is very sorry and would like to offer you a sticker and hope this talk explains some of why she is late.
+
+This talk was given at Linux.conf.au 2018 (LCA2018) which was held on 22-26 January 2018 in Sydney Australia.
+
+linux.conf.au is a conference about the Linux operating system, and all aspects of the thriving ecosystem of Free and Open Source Software that has grown up around it. Run since 1999, in a different Australian or New Zealand city each year, by a team of local volunteers, LCA invites more than 500 people to learn from the people who shape the future of Open Source. For more information on the conference see https://linux.conf.au/
+
+#linux.conf.au #linux #foss #opensource]]></description>
+            <link>https://dev.tube/video/BempWfBkvs8</link>
+            <guid isPermaLink="true">https://dev.tube/video/BempWfBkvs8</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Cloud-native streaming and event-driven microservices - Marius Bogoevici @ Spring I/O 2016]]></title>
-            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
+            <title><![CDATA[Spark Structured Streaming for Machine Learning w/ Holden Karau & Seth Hendrickson (IBM) StrataNY]]></title>
+            <description><![CDATA[Streaming machine learning is being integrated in future versions of Spark, but you don’t need to wait. Holden Karau and Seth Hendrickson demonstrate how to do streaming machine learning using Spark’s new Structured Streaming and walk you through creating your own streaming model. Holden and Seth will also cover how to use structured machine-learning algorithms (if they are merged by the talk). By the end of this session, you’ll have a better understanding of Spark’s Structured Streaming API as well as how machine learning works in Spark.
 
-The future of scalable data processing is event-driven microservices! They provide a powerful paradigm that solves issues typically associated with distributed applications, such as availability, data consistency, or communication complexity, and allows the creation of sophisticated and extensible data processing pipelines, bridging the gap between the big data and more traditional enterprise integration world.
-
-Building on the ease of development and deployment provided by Spring Boot, the cloud native capabilities of Spring Cloud, and the messaging model and integration patterns of Spring Integration, the Spring Cloud Stream project provides a simple and powerful framework for event-driven microservices. It defines primitives and abstractions specifically addressing the needs of both event-driven integration, as well as data streaming. For addressing the complexity of deployment, at a higher level of abstraction, Spring Cloud Data Flow is an integrated orchestration layer that provides a highly productive experience for deploying and managing sophisticated data pipelines consisting of standalone microservices. A pluggable runtime SPI allows Spring Cloud Data Flow to coordinate these applications across a variety of distributed runtime platforms such as Apache YARN, Cloud Foundry, Kubernetes, or Apache Mesos. We will demonstrate how to easily create complex data processing pipelines that bridge the world of big data and enterprise integration together, by building Spring Cloud Stream applications from the ground up, and, in the end, how to orchestrate them with Spring Cloud Data Flow.]]></description>
-            <link>https://dev.tube/video/FT9_WR4i28o</link>
-            <guid isPermaLink="true">https://dev.tube/video/FT9_WR4i28o</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+See the companion blog post at https://www.oreilly.com/learning/extend-structured-streaming-for-spark-ml & slides at http://www.slideshare.net/hkarau/apache-spark-structured-streaming-for-machine-learning-strataconf-2016 for more information.]]></description>
+            <link>https://dev.tube/video/Bmfek0Td-f8</link>
+            <guid isPermaLink="true">https://dev.tube/video/Bmfek0Td-f8</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Testing for Unicorns - Alex Soto @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+            <title><![CDATA[Extending Spark Machine Learning   Beyond Linear Regression   by Holden Karau]]></title>
+            <description><![CDATA[This talk was recorded at Scala Days Chicago, 2017. Follow along on Twitter @scaladays and on the website for more information http://scaladays.org/.
 
-Slides: https://www.slideshare.net/asotobu/testing-for-unicorns-77069262
+Abstract:
+Apache Spark is one of the most popular Big Data tools. This talk introduces & takes a deep dive on Spark's scikit-learn inspired Machine Learning pipelines.
 
-One of the most important benefits of automated testing is to ensure a fast and safe code refactoring to evolve our system architecture. The main problem is how to write tests that are easy to write, easy to follow and not time consuming during development nor execution time.
+Spark's ML pipelines provide a lot of power, but sometimes the tools you need for your specific problem aren't available yet. By integrating your own data preparation and machine learning tools into Spark's ML pipelines you will be able to take advantage of useful meta-algorithms, like parameter searching.
 
-In this session, we are going to explore some powerful Java testing libraries that will help you write better (unit) tests focusing on the main Unicorns architecture challenges such as validating microservices endpoints, remote calls to other microservices or just asynchronous/reactive code.]]></description>
-            <link>https://dev.tube/video/GpQ1Nwyimkg</link>
-            <guid isPermaLink="true">https://dev.tube/video/GpQ1Nwyimkg</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+Even if you don't have your own machine learning algorithms you want to implement, this talk peels back the covers on how the ML APIs are built and can help you make even more awesome ML pipelines and customize Spark models for your needs.
+
+A basic understanding of Spark will make it easier to follow along, but if this is your first Spark talk, this will still be useful and give you a broad understanding of how Spark ML functions (of course since the presenter is an author, if this is your first introduction to Spark she encourages you to buy her book "Learning Spark" & "High Performance Spark").]]></description>
+            <link>https://dev.tube/video/CAqqd4UqCtY</link>
+            <guid isPermaLink="true">https://dev.tube/video/CAqqd4UqCtY</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Front Ends for Back End Developers - Matt Raible @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+            <title><![CDATA[Extending Spark Machine Learning - Holden Karau]]></title>
+            <description><![CDATA[At the sold-out Spark & Machine Learning Meetup in Brussels on October 27, 2016, Holden Karau of the Spark Technology Center delivered a lightning talk called A very brief introduction to extending Spark ML for custom models: Talk + Demo.
 
-Slides: https://www.slideshare.net/mraible/front-ends-for-back-end-developers-spring-io-2017
+Holden took a look at Apache SparkML™ pipelines. Inspired by sci-kit learn, they have the potential to make machine learning tasks much easier. This talk looked at how to extend Spark ML with custom model types when the built-in options don't meet your needs.
 
-Are you a backend developer that’s being pushed into front end development? Are you frustrated with all JavaScript frameworks and build tools you have to learn to be a good UI developer? If so, this session is for you! We’ll explore the tools of the trade for fronted development (npm, yarn, Gulp, Webpack, Yeoman) and learn the basics of HTML, CSS, and JavaScript. We’ll dive into the intricacies of Bootstrap, Material Design, ES6, and TypeScript. Finally, after getting you up to speed with all this new tech, we’ll show how it can all be found and integrated through the fine and dandy JHipster project.]]></description>
-            <link>https://dev.tube/video/HnX09pdxEQI</link>
-            <guid isPermaLink="true">https://dev.tube/video/HnX09pdxEQI</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+For more information about the Spark Technology Center: http://www.spark.tc/
+
+Follow us: @apachespark_tc
+Location: San Francisco, CA
+
+Apache®, Apache Spark™, and Spark™ are trademarks of the Apache Software Foundation in the United States and/or other countries.]]></description>
+            <link>https://dev.tube/video/GXjrH3soIuE</link>
+            <guid isPermaLink="true">https://dev.tube/video/GXjrH3soIuE</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Container orchestration on Apache Mesos - DC/OS for Spring Boot devs - Johannes Unterstein]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+            <title><![CDATA[Testing & validating Apache Spark jobs by Holden Karau]]></title>
+            <description><![CDATA[This talk was recorded at BeeScala 2017 in Ljubljana, Slovenia. Follow along on Twitter @BeeScalaConf and on the website for more information http://bee-scala.org.
 
-Slides: https://docs.google.com/presentation/d/1tRWUJnGCGMbYjB11koaOukgzD-zNB8MaimeoFPJ2_JQ/edit
+Abstract:
 
-In the era of Docker, big data and microservices it is really important to distribute your applications reasonable across your cluster and keep a good overview of all of your running applications. Because of this, cluster management software like Apache Mesos and DC/OS are very important and popular. In this session we will implement a java based service using spring boot and will start him locally and with docker-compose. Then we will deploy our service to DC/OS and see how easy it is to scale, upgrade, monitor and do other fancy stuff. And the best thing for the demo: We will have a nice UI and super cool CLI.]]></description>
-            <link>https://dev.tube/video/JM_WcsUN5fs</link>
-            <guid isPermaLink="true">https://dev.tube/video/JM_WcsUN5fs</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+As Spark continues to evolve, we need to revisit our testing techniques to support Datasets, streaming, and more. This talk expands on “Beyond Parallelize and Collect” (not required to have been seen) to discuss how to create large scale test jobs while supporting Spark’s latest features. We will explore the difficulties with testing Streaming Programs, options for setting up integration testing, beyond just local mode, with Spark, and also examine best practices for acceptance tests.]]></description>
+            <link>https://dev.tube/video/LP6blh4TFqI</link>
+            <guid isPermaLink="true">https://dev.tube/video/LP6blh4TFqI</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Awesome Tools to Level Up Your Spring Cloud Architecture - Andreas Evers @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
-
-Slides: https://speakerdeck.com/andreasevers/awesome-tools-to-level-up-your-spring-cloud-architecture-1
-
-Getting up and running with Spring Cloud is a breeze. But once the initial setup is done, it needs to be complemented with an ecosystem that can cope with the extra operational complexity and quality concerns. While running Spring Cloud in production for years, we have integrated some interesting tools for documentation, operations and testing.
-
-During this talk you will see a demo of an integrated platform based on Spring Cloud, including tools like Spring Cloud Contract, wiremock, saboteur, ELK, Spinnaker, Spring Boot Admin and more. One of these tools is a dashboard for visualising Spring Cloud microservice architecture, which has recently been open sourced.
-
-Documenting, testing, troubleshooting, and monitoring highly distributed systems in microservice architectures is hard. Finding quality, complementary tools in the wilds of open source can be even harder. Join this talk for a pragmatic look at taming some of the challenges of running microservices in production.]]></description>
-            <link>https://dev.tube/video/JzgBkodsFsM</link>
-            <guid isPermaLink="true">https://dev.tube/video/JzgBkodsFsM</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[Extending Spark ML for your custom algorithms - Holden Karau]]></title>
+            <link>https://dev.tube/video/Q85aUoyWyfc</link>
+            <guid isPermaLink="true">https://dev.tube/video/Q85aUoyWyfc</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Experiences from using discovery services in a microservice landscape - Magnus Larsson @ Spring I/O]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
+            <title><![CDATA[Holden Karau, IBM   Big Data SV 17   #BigDataSV   #theCUBE]]></title>
+            <description><![CDATA[Holden Karau, from IBM, talks with Jeff Frick & George Gilbert at Big Data SV 2017 at the historic Pagoda Lounge in San Jose, Ca.
 
-One of the most important components in a microservice landscape is the discovery service. During the last few years a large number of alternatives for service discovery have evolved, specifically in the area of container infrastructures.
-
-This presentation will, based on my experiences, go through some of the alternatives. The presentation will cover discovery service components in Netflix OSS, Docker Swarm, Amazon ECS and Google Kubernetes. We will also cover how to use Spring Cloud to write microservices that are independent of the selected discovery service, i.e. that can be used with any of the alternatives without requiring modifications of the code.]]></description>
-            <link>https://dev.tube/video/LkIOSKd5zew</link>
-            <guid isPermaLink="true">https://dev.tube/video/LkIOSKd5zew</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+#BigDataSV
+#theCUBE]]></description>
+            <link>https://dev.tube/video/TpemEZ92Rdg</link>
+            <guid isPermaLink="true">https://dev.tube/video/TpemEZ92Rdg</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[40 Tips & Tricks for Spring in IntelliJ IDEA -  Yann Cébron & Stéphane Nicoll @ Spring I/O 2016]]></title>
-            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
+            <title><![CDATA[Distributed Data Show Episode 38: Spark 3.0 and Beyond with Holden Karau]]></title>
+            <description><![CDATA[David Gilardi talks with Holden Karau of Google to mine many wonderful nuggets on the future of Spark and find out what might happen if she had a magic wand of awesomeness.
 
-IDEs can be powerful, but hard to learn. Some features are hidden or simply not well known.
+Highlights!
 
-Let’s end this dilemma and make you more productive and efficient when working on Spring applications.
-Learn how to navigate, edit and perform refactorings across a variety of common Spring technologies.  
+0:15 - Welcoming Holden back to the show
+0:30 - So what exactly is going to be in Spark 3? Significant updates to the SQL and Machine Learning (ML) APIs. There are missing pieces in ML API, adding them will cause breaking changes to existing models. One example is support for online model serving.
+2:25 - The DataSet API does not yet fully cover all needed cases, causing developers to jump back to RDD APIs, so some API changes will be needed there . There will be continued performance improvements in query planning in minor releases.
+3:13 - Python changes could include changes to handle Vectorized UDFs in the RDD APIs
+4:35 Why it’s so hard to pin down when Spark 3 will appear: breaking API changes have to be worth it. We need to wait until the payoff in capability is worth the breaking. An example would be making ML APIs typesafe.
+6:57 - What Holden would change in Spark, given a magic wand - shared memory buffer between languages using Apache Arrow
+9:46 - Wrapping up - the most exciting change likely to be in Spark 3 in online model serving
 
-You’ll leave this session with a whole stack of power tricks - right from the developers working on it.]]></description>
-            <link>https://dev.tube/video/OfdERvmIJXc</link>
-            <guid isPermaLink="true">https://dev.tube/video/OfdERvmIJXc</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+ABOUT DATASTAX ENTERPRISE 5.1
+DataStax Enterprise 5.1, the database platform for cloud applications, includes Apache Cassandra 3.x with materialized views, tiered storage and advanced replication. Introduced in 5.1 is DataStax Enterprise Graph, the first graph database fast enough to power customer-facing applications, scale to massive datasets and integrate advanced tools to power deep analytical queries.
+
+Learn more at http://www.datastax.com/products/datastax-enterprise and https://academy.datastax.com/resources/whats-new-datastax-enterprise-50
+
+CONNECT WITH DATASTAX
+Subscribe: http://www.youtube.com/c/datastax?sub_confirmation=1 
+Site: http://datastax.com 
+Facebook: https://facebook.com/datastax 
+Twitter: https://twitter.com/datastax 
+Linkedin: https://www.linkedin.com/company/datastax
+http://feeds.feedburner.com/datastax 
+https://github.com/datastax 
+
+ABOUT DATASTAX ACADEMY
+On the DataStax Academy YouTube channel, you can find tutorials, webinars and much more to help you learn and stay updated with the latest information on DataStax Enterprise©.  Create an account on https://academy.datastax.com to watch our free online courses, tutorials, and more.]]></description>
+            <link>https://dev.tube/video/UhlyzFusC5I</link>
+            <guid isPermaLink="true">https://dev.tube/video/UhlyzFusC5I</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Spring Boot and Cloud for Legacy Applications - Marten Deinum @ Spring I/O 2016]]></title>
-            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
-
-Spring Boot as well as the Spring Cloud projects are very neat and powerful technologies. But how easy are they to apply to existing application and how can they help improve existing applications.
-
-In this talk we will take a look at a legacy application and introduce Spring Boot and some of the Spring Cloud technologies to it.]]></description>
-            <link>https://dev.tube/video/Q_WIvCsY6G0</link>
-            <guid isPermaLink="true">https://dev.tube/video/Q_WIvCsY6G0</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[Getting The Best Performance With PySpark]]></title>
+            <link>https://dev.tube/video/V6DkTVvy9vk</link>
+            <guid isPermaLink="true">https://dev.tube/video/V6DkTVvy9vk</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Cloud Native Java - Josh Long @ Spring I/O 2016]]></title>
-            <description><![CDATA[Spring I/O 2016 - 19 -20 May Barcelona
-
-"It is not necessary to change. Survival is not mandatory." -W. Edwards Deming
-
-Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It’s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage.
-
-Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget “devops,” cloud-based services and platforms (like Cloud Foundry) automate operations work and break down the need for ITIL tickets and change management boards.
-
-But velocity, for velocity’s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we’ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.]]></description>
-            <link>https://dev.tube/video/R4s4z7fTEH4</link>
-            <guid isPermaLink="true">https://dev.tube/video/R4s4z7fTEH4</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[Holden Karau - Spark - Where the Magic Breaks]]></title>
+            <link>https://dev.tube/video/ZoNT9tVK6_E</link>
+            <guid isPermaLink="true">https://dev.tube/video/ZoNT9tVK6_E</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Deep Learning with DeepLearning4J and Spring Boot - Artur Garcia & Dimas Cabré @ Spring I/O 2017]]></title>
-            <description><![CDATA[Spring I/O 2017 - 18 -19 May, Barcelona
-
-We'll start with a review on recent advances in Deep Learning. Then we'll present DeepLearning4J (the first commercial-grade, open-source, distributed deep-learning library written for Java) and explore how it covers topics explained in the initial review. We'll then present a Spring Boot application with some functionality run by a Neural Network. Finally we'll explore the possibilities of implementing a Supervised Learning System using Spring Boot Actuator, which will lead to a trained monitoring system that can be interacted with actuator endpoints.]]></description>
-            <link>https://dev.tube/video/RlL9MNT-R3k</link>
-            <guid isPermaLink="true">https://dev.tube/video/RlL9MNT-R3k</guid>
-            <pubDate>Tue, 07 Aug 2018 01:34:26 GMT</pubDate>
+            <title><![CDATA[sfspark.org: Holden Karau, PySpark Beyond Shuffling -- Why it isn't Magic]]></title>
+            <description><![CDATA[PySpark Beyond Shuffling -- Why it isn't Magic -- but also where there is some really cool magic 
+Holden Karau -- Apache Spark Committer, Spark Technology Center, IBM]]></description>
+            <link>https://dev.tube/video/eR8p7cpvHNs</link>
+            <guid isPermaLink="true">https://dev.tube/video/eR8p7cpvHNs</guid>
+            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
         </item>
     </channel>
 </rss>
