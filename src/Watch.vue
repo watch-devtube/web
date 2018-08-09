@@ -62,7 +62,7 @@
                       |  contribute
             .media
             .tags
-              a.tag.is-capitalized(v-for="tag in video.tags" @click="refineTag(tag)") {{tag}}
+              a.tag(v-for="tag in video.tags" @click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
               a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
                 i.fab.fa-youtube 
                 | &nbsp; {{video.channelTitle}}

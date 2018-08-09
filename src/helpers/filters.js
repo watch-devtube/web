@@ -26,6 +26,32 @@ export const duration = it => {
   return (hours ? `${hours} h `: '') + (minutes ? `${minutes} min` : '')
 }
 
+export const capitalizeIfNeeded = (it) => { 
+  let tags = [
+    "iOS", 
+    "IoT", 
+    "DI", 
+    "TDD", 
+    "GraphQL", 
+    "BDD", 
+    "PHP", 
+    ".NET", 
+    "DevOps", 
+    "ML", 
+    "HTML5", 
+    "API",
+    "AWS",
+    "RxJava",
+    "CSS",
+    "REST"
+  ]
+  
+  let noCapitalizeTag = tags.find(tag => new RegExp(`^${tag}$`, "i").test(it))
+  return noCapitalizeTag || capitalize(it)
+}
+
+const capitalize = (str) => str.replace(/\b\w/g, l => l.toUpperCase())
+
 export const truncate = (it, max) => it
   ? it.slice(0, max) + (max < it.length ? '...' : '')
   : it

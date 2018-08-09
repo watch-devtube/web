@@ -52,7 +52,7 @@
               div                
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
-          Tags(:tags="tags" :isNew="isNew" :featured="featured" :clickable="tagsClickable" :channel="channel")
+          Tags(:tags="tags" :isNew="isNew" :featured="featured" :channel="channel")
           .contribute(v-if="speaker")
             p.subtitle.is-7
               | Wrong data? 
@@ -140,7 +140,6 @@
       creationDate: { type: Number, required: true },
       tags: { type: Array, required: false },
       featured: { type: [Boolean, Array], default: false},
-      tagsClickable: { type: Boolean, default: false},
       speaker: {
         required: false,
         name: {

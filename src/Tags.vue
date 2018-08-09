@@ -9,7 +9,6 @@
 <script>
   export default {
     props: {
-      clickable: { type: Boolean, default: false },
       featured: { type: [Boolean, Array], required: true },
       tags: { required: true },
       channel: { required: true },
@@ -17,9 +16,7 @@
     },
     computed: {
       componentLoader() {
-        return () => this.clickable
-          ? import('./ClickableTags.vue')
-          : import('./NonClickableTags.vue')
+        return () => import('./ClickableTags.vue')
       },
     }
   }

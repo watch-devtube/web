@@ -26,7 +26,7 @@ import App from './App.vue'
 import Watch from './Watch.vue'
 import Search from './Search.vue'
 import Contributors from './Contributors.vue'
-import { flatten, views, duration, truncate, published } from './helpers/filters'
+import { flatten, views, duration, truncate, published, capitalizeIfNeeded } from './helpers/filters'
 
 import auth from './auth'
 import videos from './videos'
@@ -52,6 +52,7 @@ Vue.filter('views', views)
 Vue.filter('duration', duration)
 Vue.filter('truncate', truncate)
 Vue.filter('published', published)
+Vue.filter('capitalizeIfNeeded', capitalizeIfNeeded)
 
 const router = new VueRouter({
   mode: 'history',

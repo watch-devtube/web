@@ -2,13 +2,12 @@
   .tags
     span.tag.is-primary.is-capitalized(v-if="isNew") New
     span.tag.is-danger.is-capitalized(v-if="featured") Featured
-    a.tag.is-capitalized(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag}}
+    a.tag(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
     a.tag.is-capitalized(v-on:click="refineChannel(channel)")
       i.fab.fa-youtube
       | &nbsp; {{channel | truncate(10)}}
 </template>
 <script>
-  import { Component } from 'vue-instantsearch'
 
   export default {
     props: {
@@ -17,22 +16,13 @@
       channel: { required: true },
       isNew: { required: true },
     },
-    mixins: [Component],
     methods: {
       refineTag(tag) {
-        if (window.fastrMode) {
-          this.$router.push({ name: 'tag', params: { tag: tag } })
-        } else {
-          this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('tags', tag)
-        }
+        this.$router.push({ name: 'tag', params: { tag: tag } })
       },
       refineChannel(channel) {
-        if (window.fastrMode) {
-          this.$router.push({ name: 'channel', params: { channel: channel } } )
-        } else {
-          this.searchStore.algoliaHelper.addDisjunctiveFacetRefinement('channelTitle', channel)
-        }
-    }
+        this.$router.push({ name: 'channel', params: { channel: channel } } )
+      }
   }
 }
 </script>

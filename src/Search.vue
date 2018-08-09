@@ -11,28 +11,28 @@
                 .column.is-one-quarter
                   p.buttons
                     router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel || showMyWatched || showFavorites" :to="{ name: 'search' }")
-                      span {{speaker || tag || channel || (showMyWatched ? 'Watched' : '') || (showFavorites ? 'Favorites' : '')}}
+                      span {{speaker || tag || channel || (showMyWatched ? 'Watched' : '') || (showFavorites ? 'Favorites' : '') | capitalizeIfNeeded}}
                       span.icon.is-small: i.fas.fa-times
                     a.button.is-small.is-hidden-tablet(@click="$refs.tagPicker.expand()"): span.icon.is-small: i.fas.fa-hashtag
                     a.button.is-small.is-hidden-tablet(@click="$refs.speakerPicker.expand()"): span.icon.is-small: i.far.fa-user-circle
                     a.button.is-small.is-hidden-tablet(@click="$refs.channelPicker.expand()"): span.icon.is-small: i.fab.fa-youtube
     
                   ExpandableTags(ref="tagPicker" icon="fas fa-hashtag" title="Tags" :items="tags" :limit="10" :route="routeToTag")
-                      template(slot-scope="slot") {{slot.item.tag}}
+                      template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
 
                   ExpandableTags(ref="speakerPicker" icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="10" :route="routeToSpeaker")
                       template(slot-scope="slot")
-                        span {{slot.item.name}}
+                        span {{slot.item.name | capitalizeIfNeeded}}
 
                   ExpandableTags(ref="channelPicker" icon="fab fa-youtube" title="Channels" :items="channels" :limit="10" :route="routeToChannel")
-                      template(slot-scope="slot") {{slot.item.title | truncate(25)}}
+                      template(slot-scope="slot") {{slot.item.title | truncate(25) | capitalizeIfNeeded}}
                 .column
                   .columns
                     .column
                       .columns
                         .column.is-hidden-mobile
                           router-link.button.is-small.is-outlined(v-if="speaker || tag || channel || showMyWatched || showFavorites" :to="{ name: 'search' }")
-                            span.is-capitalized(v-if="tag || channel") {{tag || channel}}
+                            span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
                             span.is-lowercased(v-if="speaker") @{{speaker}}
                             span.is-lowercased(v-if="showMyWatched") Watched
                             span.is-lowercased(v-if="showFavorites") Favorites
@@ -59,7 +59,6 @@
                                 :newMode="newMode" 
                                 :tags="result.tags" 
                                 :featured="result.featured" 
-                                :tagsClickable="true" 
                                 :speaker="result.speaker" 
                                 :creationDate="result.creationDate" 
                                 :recordingDate="result.recordingDate" 
