@@ -205,16 +205,18 @@ async function proxy(req: Request, res: Response) {
 
     let { query, page, refinement, sortOrder, watched } = req.body.requests[0].params
 
-    console.time(`Query ${query}`)
+    let q = query.trim().split(/\s+/).map(token => `+${token}`).join(" ")
+
+    console.time(`Query ${q}`)
 
     let maxHitsPerPage = 21
-    let hitsAll = fastr.search(query, refinement, sortOrder).filter(hit => !watched.includes(hit.objectID))
+    let hitsAll = fastr.search(q, refinement, sortOrder).filter(hit => !watched.includes(hit.objectID))
     let from = page * maxHitsPerPage
     let to = from + maxHitsPerPage
     let hitsPage = hitsAll.slice(from, to)
     let nbPages = Math.ceil(hitsAll.length / maxHitsPerPage)
 
-    console.timeEnd(`Query ${query}`)
+    console.timeEnd(`Query ${q}`)
 
     res.status(200).send(
       {
