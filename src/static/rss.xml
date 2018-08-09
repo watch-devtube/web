@@ -4,300 +4,715 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 08 Aug 2018 04:30:33 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Aug 2018 04:33:47 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Holden Karau and Cheburashka interview at JOTB2018]]></title>
-            <description><![CDATA[Interview with Holden Karau during J On The Beach 2018, Málaga, Spain.]]></description>
-            <link>https://dev.tube/video/-WHc01dJlAw</link>
-            <guid isPermaLink="true">https://dev.tube/video/-WHc01dJlAw</guid>
-            <pubDate>Wed, 08 Aug 2018 01:34:16 GMT</pubDate>
+            <title><![CDATA[Which Activation Function Should I Use?]]></title>
+            <description><![CDATA[All neural networks use activation functions, but the reasons behind using them are never clear! Let's discuss what activation functions are, when they should be used, and what the difference between them is.
+
+Sample code from this video:
+https://github.com/llSourcell/Which-Activation-Function-Should-I-Use
+
+Please subscribe! And like. And comment. That's what keeps me going.
+
+More Learning resources:
+http://www.kdnuggets.com/2016/08/role-activation-function-neural-network.html
+http://cs231n.github.io/neural-networks-1/
+https://www.quora.com/What-is-the-role-of-the-activation-function-in-a-neural-network
+https://stats.stackexchange.com/questions/115258/comprehensive-list-of-activation-functions-in-neural-networks-with-pros-cons
+https://en.wikibooks.org/wiki/Artificial_Neural_Networks/Activation_Functions
+https://stackoverflow.com/questions/9782071/why-must-a-nonlinear-activation-function-be-used-in-a-backpropagation-neural-net
+https://papers.nips.cc/paper/874-how-to-choose-an-activation-function.pdf
+http://neuralnetworksanddeeplearning.com/chap4.html
+https://medium.com/towards-data-science/activation-functions-in-neural-networks-58115cda9c96
+https://medium.com/autonomous-agents/mathematical-foundation-for-activation-functions-in-artificial-neural-networks-a51c9dd7c089
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/-7scQpJT7uo</link>
+            <guid isPermaLink="true">https://dev.tube/video/-7scQpJT7uo</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Playing well together: Big data beyond the JVM with Spark and friends - Strata SJ 2018]]></title>
-            <description><![CDATA[Many of the recent big data systems, like Hadoop, Spark, and Kafka, are written primarily in JVM languages. At the same time, there is a wealth of tools for data science and data analytics that exist outside of the JVM. Holden Karau and Rachel Warren explore the state of the current big data ecosystem and explain how to best work with it in non-JVM languages. While much of the focus will be on Python + Spark, the talk will also include interesting anecdotes about how these lessons apply to other systems (including Kafka).
+            <title><![CDATA[How to Generate Video - Intro to Deep Learning #15]]></title>
+            <description><![CDATA[Generative Adversarial Networks. It's time. We're going to use a Deep Convolutional GAN to generate images of the alien language from the movie arrival that we can then stitch together to animate into video. I'll go over the architecture of a GAN and then we'll implement one ourselves!
 
-Holden and Rachel detail how to bridge the gap using PySpark and discuss other solutions like Kafka Streams as well. They also outline the challenges of pure Python solutions like dask. Holden and Rachel start with the current architecture of PySpark and its evolution. They then turn to the future, covering Arrow-accelerated interchange for Python functions, how to expose Python machine learning models into Spark, and how to use systems like Spark to accelerate training of traditional Python models. They also dive into what other similar systems are doing as well as what the options are for (almost) completely ignoring the JVM in the big data space.
+Code for this video (coding challenge included):
+https://github.com/llSourcell/how_to_generate_video
 
-Python users will learn how to more effectively use systems like Spark and understand how the design is changing. JVM developers will gain an understanding of how to Python code from data scientist and Python developers while avoiding the traditional trap of needing to rewrite everything.]]></description>
-            <link>https://dev.tube/video/fNtyDpWOA2k</link>
-            <guid isPermaLink="true">https://dev.tube/video/fNtyDpWOA2k</guid>
-            <pubDate>Wed, 08 Aug 2018 01:34:16 GMT</pubDate>
+Nemanja's winning code:
+https://github.com/Nemzy/video_generator
+
+Niyas' Runner up code:
+https://github.com/niazangels/vae-pokedex
+
+and his blog post:
+https://hackernoon.com/how-to-autoencode-your-pok%C3%A9mon-6b0f5c7b7d97
+
+Please Subscribe! And like. and comment. That's what keeps me going.
+
+More Learning Resources:
+http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow/
+https://blog.openai.com/generative-models/
+http://cs.stanford.edu/people/karpathy/gan/
+https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Generative-Adversarial-Networks
+http://wiseodd.github.io/techblog/2016/09/17/gan-tensorflow/
+https://www.slideshare.net/ThomasDaSilvaPaula/a-very-gentle-introduction-to-generative-adversarial-networks-aka-gans-71614428
+http://blog.evjang.com/2016/06/generative-adversarial-nets-in.html
+https://medium.com/@awjuliani/generative-adversarial-networks-explained-with-a-classic-spongebob-squarepants-episode-54deab2fce39
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/-E2N1kQc8MM</link>
+            <guid isPermaLink="true">https://dev.tube/video/-E2N1kQc8MM</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Beyond Shuffling: Scaling Apache Spark by Holden Karau]]></title>
-            <description><![CDATA[This video was recorded at Scala Days Berlin 2016
-Follow us on Twitter @ScalaDays or visit our website for more information http://scaladays.org 
+            <title><![CDATA[Generative Adversarial Networks (LIVE)]]></title>
+            <description><![CDATA[We're going to build a GAN to generate some images using Tensorflow. This will help you grasp the architecture and intuition behind adversarial approaches to machine learning. We're building a Deep Convolutional GAN to generate MNIST digits. 
 
-Abstract:
-This session will cover our & community experiences scaling Spark jobs to large datasets and the resulting best practices along with code snippets to illustrate.
- 
-The planned topics are:
-* Using Spark counters for performance investigation
-* Spark collects a large number of statistics about our code, but how often do we really look at them? We will cover how to investigate performance issues and figure out where to best spend our time using both counters and the UI.
-* Working with Key/Value Data
-* Replacing groupByKey for awesomeness
-groupByKey makes it too easy to accidently collect individual records which are too large to process. We will talk about how to replace it in different common cases with more memory efficient operations.
-* Effective caching & checkpointing
-* Being able to reuse previously computed RDDs without recomputing can substantially reduce execution time. Choosing when to cache, checkpoint, or what storage level to use can have a huge performance impact.
-* Considerations for noisy clusters
-* Functional transformations with Spark Datasets
-*How to have the some of benefits of Spark’s DataFrames while still having the ability to work with arbitrary Scala code]]></description>
-            <link>https://dev.tube/video/0KGGa9qX9nw</link>
-            <guid isPermaLink="true">https://dev.tube/video/0KGGa9qX9nw</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+Code for this video:
+https://github.com/llSourcell/Generative_Adversarial_networks_LIVE/blob/master/EZGAN.ipynb
+
+Please Subscribe! And like. And comment. That's what keeps me going.
+
+More Learning resources:
+http://guimperarnau.com/blog/2017/03/Fantastic-GANs-and-where-to-find-them
+http://www.cs.toronto.edu/~dtarlow/pos14/talks/goodfellow.pdf
+https://datawarrior.wordpress.com/2017/02/03/generative-adversarial-networks/
+https://www.quora.com/What-are-Generative-Adversarial-Networks
+http://nuit-blanche.blogspot.com/2017/01/nips-2016-tutorial-generative.html
+http://www.paddlepaddle.org/develop/doc/tutorials/gan/index_en.html
+http://gkalliatakis.com/blog/delving-deep-into-gans
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/0VPQHbMvGzg</link>
+            <guid isPermaLink="true">https://dev.tube/video/0VPQHbMvGzg</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[OSCON 2016 - Getting started contributing to Apache Spark by Holden Karau (IBM)]]></title>
-            <description><![CDATA[Apache Spark is one of the most popular tools for big data and with 400+ open pull requests as of this writing, very active in terms of development as well. With such a large volume of contributions, it can be hard to know how to begin contributing yourself. Holden Karau offers a developer-focused head start, walking you through how to find good issues, formatting code, finding reviewers, and what to expect in the code review process. Holden also explores alternatives to contributing to Apache Spark directly (such as creating packages).]]></description>
-            <link>https://dev.tube/video/2SC8BkKILXc</link>
-            <guid isPermaLink="true">https://dev.tube/video/2SC8BkKILXc</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+            <title><![CDATA[How to Predict Music You Love (LIVE)]]></title>
+            <description><![CDATA[In this video, we're going to look at several different type of recommender systems in an iPython notebook. Popularity based, item-item collaborative, then user-item collaborative. Then we'll touch on the bleeding edge in deep learning at the end. Also I freestyle. Twice lol.
+
+Code for this video:
+https://github.com/llSourcell/recommender_live
+
+More learning resources:
+http://tech.hulu.com/blog/2016/08/01/cfnade.html
+https://blogs.msdn.microsoft.com/carlnol/2012/06/23/co-occurrence-approach-to-an-item-based-recommender/
+https://www.mapr.com/blog/inside-look-at-components-of-recommendation-engine
+https://www.ics.uci.edu/~welling/teaching/CS77Bwinter12/presentations/course_Ricci/13-Item-to-Item-Matrix-CF.pdf
+https://www.analyticsvidhya.com/blog/2016/06/quick-guide-build-recommendation-engine-python/
+http://blogs.gartner.com/martin-kihn/how-to-build-a-recommender-system-in-python/
+
+Join us in our Slack channel: 
+http://wizards.herokuapp.com/
+
+Please Subscribe. And Like. And comment. That's what keeps me going. 
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/18adykNGhHU</link>
+            <guid isPermaLink="true">https://dev.tube/video/18adykNGhHU</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Holden Karau, IBM - #BigDataNYC 2016 - #theCUBE]]></title>
-            <description><![CDATA[01. Holen Karau, IBM, Visits #theCUBE!. (00:22)
-02. What's New In Your World With Spark. (01:07)
-03. What Is Junky API. (02:010)
-04. How Does Spark  Address Complexity. (03:51)
-05. Is The Open Source Community Finding A Way To Colaberate. (05:47)
-06. Is The  Open Source  Community Working To  Find It's Way  Into The Tools. (07:34)
-07. How Much Of A Data Scientist Do You Have To Be. (08:37)
-08. What Is Your Perspective On Machine Learning. (10:01)
-09. Is Sampling Dead. (12:17)
-10. Are We Going To Start Turning Big Data On The Problem Of Big Data. (13:05)
+            <title><![CDATA[How to Generate Images - Intro to Deep Learning #14]]></title>
+            <description><![CDATA[We're going to build a variational autoencoder capable of generating novel images after being trained on a collection of images. We'll be using handwritten digit images as training data. Then we'll both generate new digits and plot out the learned embeddings. And I introduce Bayesian theory for the first time in this series :)
 
-Track List created with http://www.vinjavideo.com.
---- ---
-Collaboration and machine learning with Spark | #BigDataNYC
-by Brittany Greaner | Sep 29, 2016
+Code for this video:
+https://github.com/llSourcell/how_to_generate_images
 
-Open-source technology is paving the way to the future of affordable and flexible IT, and the Apache Spark open-source processing engine is no exception. There is even a Spark components page where users can share useful tools and technology.
+Mike's Winning Code:
+https://github.com/xkortex/how_to_win_slot_machines/blob/master/WallStBandits.ipynb
 
-“Even vendors are sharing,” said Holden Karau, principal software engineer at IBM. This enables much wider collaboration throughout the community, as well as narrower collaboration between friends and colleagues. “If you have a notebook and share it with your friend, you can work together more collaboratively. A lot of companies are building notebook solutions,” added Karau.
+SG's Runner up Code:
+https://github.com/esha-sg/Intro-DeepLearning-Siraj-Week13
 
-Karau was interviewed by Dave Vellante (@dvellante) and Peter Burris (@plburris), hosts of theCUBE, from the SiliconANGLE Media team, during BigDataNYC 2016 in New York, NY.
+Please subscribe! And like. And comment. That's what keeps me going.
 
-Spark’s range of complexity
+2 things 
+-The embedding visualization at the end would be more spread out if i trained it for more epochs (50 is recommended) but i just used 5.
+-The code in the video doesn't fully implement the reparameterization trick (to save space) but check the GitHub repo for details on that.
 
-Another standout feature of Spark is its range of complexity. It allows users who may not have much knowledge of Python or Java to be able to build what they need without that coding ability.
-At the same time, if users of Spark do understand coding, they can also use that knowledge to their benefit to create exactly what they want. “I think Spark does a good job of being user friendly. With Spark it’s much simpler and exposed in ways people are already used to working with their data,” said Karau.
+More Learning resources:
+https://jaan.io/what-is-variational-autoencoder-vae-tutorial/
+http://kvfrans.com/variational-autoencoders-explained/
+http://blog.fastforwardlabs.com/2016/08/12/introducing-variational-autoencoders-in-prose-and.html
+http://blog.fastforwardlabs.com/2016/08/22/under-the-hood-of-the-variational-autoencoder-in.html
+http://blog.evjang.com/2016/11/tutorial-categorical-variational.html
+https://jmetzen.github.io/2015-11-27/vae.html
 
-Machine learning
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
 
-Another area Spark and other platforms are beginning to dive into is machine learning. The traditional method is to down-sample, but this isn’t the most efficient or thorough method. Machine learning allows a much wider, agile way of doing things.
-
-“When you move people to a laptop, you can train an algorithm to 
-recommend datasets to people,” said Karau. “The combination of notebooks and Spark means data scientists can directly apply data during the exploration phase.” It speeds up the process by eliminating the need to consult coworkers for their data sets or do manual searches. And that is very powerful, with strong implications for the future, Karau concluded.
-
-#BigDataNYC
-#theCUBE]]></description>
-            <link>https://dev.tube/video/6iH6yAa8wFM</link>
-            <guid isPermaLink="true">https://dev.tube/video/6iH6yAa8wFM</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/3-UDwk1U77s</link>
+            <guid isPermaLink="true">https://dev.tube/video/3-UDwk1U77s</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Philly ETE 2017 #40 - Scaling with Apache Spark (or a lesson in unintended consequences) - H. Karau]]></title>
-            <description><![CDATA[Holden Karau: "Scaling with Apache Spark (or a lesson in unintended consequences)"
+            <title><![CDATA[How to Generate Music - Intro to Deep Learning #9]]></title>
+            <description><![CDATA[We're going to build a music generating neural network trained on jazz songs in Keras. I'll go over the history of algorithmic generation, then we'll walk step by step through the process of how LSTM networks help us generate music.
 
-Apache Spark is one the most popular general purpose distributed systems in the past few years. Apache Spark has APIs in Scala, Java, Python and more recently a few different attempts to provide support for R, C#, and Julia. This talk looks at Apache Spark from a performance/scaling point of view and the work we need to do to be able to handle large datasets. In essence parts of this talk could be considered “the impact of design decisions from years ago and how to work around them.” It’s not all doom and gloom though, we will explore the new APIs and the exciting new things we can do with them with a brief detour into how to work around some of the trade-offs in the new APIs – but mostly focused on the new exciting shiny things we can play with. A basic background with Apache Spark will probably make the talk more exciting, or depressing depending on your point of view, but for those new to Apache Spark just enough to understand whats going will be covered at the start. The presenter would of course encourage you to buy and read her books on the topic (“Learning Spark” & “High Performance Spark”), because which presenter doesn’t do that.]]></description>
-            <link>https://dev.tube/video/7S8zJPICSYg</link>
-            <guid isPermaLink="true">https://dev.tube/video/7S8zJPICSYg</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+Coding Challenge for this video:
+https://github.com/llSourcell/How-to-Generate-Music-Demo
+
+Vishal's Winning Code:
+https://github.com/erilyth/DeepLearning-SirajologyChallenges/tree/master/Art_Generation
+
+Michael's Runner up code:
+https://github.com/michalpelka/How-to-Generate-Art-Demo/blob/master/demo.ipynb
+
+More Learning Resources:
+https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714#.swstv6z61
+http://mourafiq.com/2016/05/15/predicting-sequences-using-rnn-in-tensorflow.html
+https://magenta.tensorflow.org/2016/06/10/recurrent-neural-network-generation-tutorial/
+http://deeplearning.net/tutorial/rnnrbm.html
+https://maraoz.com/2016/02/02/abc-rnn/
+http://www.cs.cmu.edu/~music//cmsip/slides/05-algo-comp.pdf
+http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/
+https://www.reddit.com/r/algorithmicmusic/
+
+Please Subscribe! And like. And comment. That's what keeps me going.
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+
+Thanks Ji-Sung Kim for the example code:
+https://deepjazz.io
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/4DMm5Lhey1U</link>
+            <guid isPermaLink="true">https://dev.tube/video/4DMm5Lhey1U</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Debugging PySpark: Spark Summit East talk by Holden Karau]]></title>
-            <link>https://dev.tube/video/A0jYQlxc2FU</link>
-            <guid isPermaLink="true">https://dev.tube/video/A0jYQlxc2FU</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+            <title><![CDATA[How to Use Tensorflow for Classification (LIVE)]]></title>
+            <description><![CDATA[In this live session I'll introduce & give an overview of Google's Deep Learning library, Tensorflow. Then we'll use it to build a neural network capable of predicting housing prices, with me explaining every step along the way.
+
+Code for this video:
+https://github.com/llSourcell/How_to_use_Tensorflow_for_classification-LIVE
+
+Please subscribe! And like. And comment. That's what keeps me going.
+
+More learning resources:
+https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/
+https://www.oreilly.com/learning/hello-tensorflow
+https://www.tensorflow.org/tutorials/mnist/beginners/
+https://github.com/aymericdamien/TensorFlow-Examples
+https://www.youtube.com/watch?v=2FmcHiLCwTU&t=84s
+https://cs224d.stanford.edu/lectures/CS224d-Lecture7.pdf
+
+Join other Wizards on our Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/4urPuRoT1sE</link>
+            <guid isPermaLink="true">https://dev.tube/video/4urPuRoT1sE</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Sparkling Pandas - using Apache Spark to scale Pandas - Holden Karau and Juliet Hougland]]></title>
-            <description><![CDATA[Pandas is a fast and expressive library for data analysis that doesn’t naturally scale to more data than can fit in memory. PySpark is the Python API for Apache Spark that is designed to scale to huge amounts of data but lacks the natural expressiveness of Pandas. We will introduce Sparkling Pandas, a new library that brings together the best features of Pandas and PySpark; Expressiveness, speed, and scalability.]]></description>
-            <link>https://dev.tube/video/AcyI_V8FeIU</link>
-            <guid isPermaLink="true">https://dev.tube/video/AcyI_V8FeIU</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+            <title><![CDATA[How to Succeed in any Programming Interview 2018]]></title>
+            <description><![CDATA[I'll show you the 5 steps to succeed in any technical interview. We'll go over what a great study plan looks like, resources to help you find jobs, and how you should conduct yourself during the interview.
+
+Please Subscribe! That is the one thing you could do that would make me happiest.
+
+Links from the video below
+
+My Code School (Intro to Data Structures):
+https://www.youtube.com/watch?v=92S4zgXN17o&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=1
+
+MIT Open Courseware (Intro to Algorithms):
+https://www.youtube.com/watch?v=HtSuA80QTyo&index=1&list=PLSX2U_ZE4Huk19DPn34oZlygPbsig380X
+
+HackerEarth and HackerRank:
+https://www.hackerearth.com/
+https://www.hackerrank.com/
+
+Programming Interview Exposed:
+http://books.lihui.org/cs2/Wiley%20-%20Programming%20Interviews%20Exposed_Secrets%20to%20Landing%20Your%20Next%20Job%20(2000).pdf
+
+Cracking the Coding Interview:
+https://github.com/yuanhui-yang/Cracking-the-Coding-Interview/blob/master/Cracking%20the%20Coding%20Interview%20-%204th%20Edition.pdf
+
+How to Conduct a Mock Interview:
+http://web.stanford.edu/dept/CTL/Oralcomm/Microsoft%20Word%20-%20How%20to%20Conduct%20Mock%20Interviews.pdf
+
+Angellist:
+https://angel.co/
+
+HackerNews Who's Hiring:
+https://news.ycombinator.com/item?id=13541679
+
+Making a great resume:
+https://medium.com/@order_group/job-interview-and-good-resume-cv-tips-for-programmers-from-our-experts-3aa626c825ab#.ssdw5a2th
+
+Passing the Interview:
+http://blog.triplebyte.com/how-to-pass-a-programming-interview
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/5KB5KAak6tM</link>
+            <guid isPermaLink="true">https://dev.tube/video/5KB5KAak6tM</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Distributed Data Show Episode 34: Spark 2.3 with Holden Karau]]></title>
-            <description><![CDATA[Patrick McFadin catches up with Holden Karau of Google to learn about new features of Spark 2.3, including Vectorized UDFs, Microbatch improvements, and Kubernetes support. Along the way, they explore whether API stability is an indicator that it’s time to make a career move. 
+            <title><![CDATA[How to Win Slot Machines - Intro to Deep Learning #13]]></title>
+            <description><![CDATA[We'll learn how to solve the multi-armed bandit problem (maximizing success for a given slot machine) using a reinforcement learning technique called policy gradients.
 
-Highlights!
-0:15 - Welcoming Holden
-0:35 - Patrick asks Holden why Spark APIs keep changing and whether API stability and boring infrastructure is a good thing
-2:43 - Big changes in Spark 2.3 include Vectorized UDFs powered by Apache Arrow, which gives a big performance boost to transferring data between Python and the JVM (for those who aren’t fans of Scala)
-6:44 - In the new Spark Microbatch API, sources and sinks are no longer tied to batches. This gives the flexibility to process as quickly as possible when you can tolerate some data loss like some IoT and machine learning use cases
-11:38 - Kubernetes support is finally in Spark 2.3 after a few competing approaches were resolved, simplifying deployment of complex Spark apps that leverage non-JVM libraries
-14:44 Holden explains why Spark struggles with scaling down and how Kubernetes support may be part of the solution.
-18:34 - Patrick and Holden discuss when it will be safe to deploy Spark on K8S in production (hint, it should be before Spark 3)
+Code for this video:
+https://github.com/llSourcell/how_to_win_slot_machines
 
+Mike's winning code:
+https://github.com/xkortex/Siraj_Chatbot_Challenge
 
-ABOUT DATASTAX ENTERPRISE 5.1
-DataStax Enterprise 5.1, the database platform for cloud applications, includes Apache Cassandra 3.x with materialized views, tiered storage and advanced replication. Introduced in 5.1 is DataStax Enterprise Graph, the first graph database fast enough to power customer-facing applications, scale to massive datasets and integrate advanced tools to power deep analytical queries.
+Vishal's runner up code:
+https://github.com/erilyth/DeepLearning-Challenges/tree/master/Text_Based_Chatbot
 
-Learn more at http://www.datastax.com/products/datastax-enterprise and https://academy.datastax.com/resources/whats-new-datastax-enterprise-50
+this coding challenge was really close, so i'm also going to put code for 3rd place just this time (Eibriel):
+https://github.com/Eibriel/ice-cream-truck
 
-CONNECT WITH DATASTAX
-Subscribe: http://www.youtube.com/c/datastax?sub_confirmation=1 
-Site: http://datastax.com 
-Facebook: https://facebook.com/datastax 
-Twitter: https://twitter.com/datastax 
-Linkedin: https://www.linkedin.com/company/datastax
-http://feeds.feedburner.com/datastax 
-https://github.com/datastax 
+Please Subscribe! And like. And comment. That's what keeps me going.
 
-ABOUT DATASTAX ACADEMY
-On the DataStax Academy YouTube channel, you can find tutorials, webinars and much more to help you learn and stay updated with the latest information on DataStax Enterprise©.  Create an account on https://academy.datastax.com to watch our free online courses, tutorials, and more.]]></description>
-            <link>https://dev.tube/video/Becr6YPF9dQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/Becr6YPF9dQ</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+More Learning resources:
+http://karpathy.github.io/2016/05/31/rl/
+http://minpy.readthedocs.io/en/latest/tutorial/rl_policy_gradient_tutorial/rl_policy_gradient.html
+http://pemami4911.github.io/blog/2016/08/21/ddpg-rl.html
+http://kvfrans.com/simple-algoritms-for-solving-cartpole/
+https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-1-fd544fab149
+https://dataorigami.net/blogs/napkin-folding/79031811-multi-armed-bandits
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/AIeWLTUYLZQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/AIeWLTUYLZQ</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Dealing with Contributor Overload]]></title>
-            <description><![CDATA[Holden Karau
+            <title><![CDATA[How to Make a Tensorflow Image Classifier (LIVE)]]></title>
+            <description><![CDATA[We're going to build an image classifier using just Tensorflow (no Keras). This will be in depth, the goal for this video is for you to fully understand how a Convolutional Neural Network works. We'll visualize the filters we create along the way as well.
 
-http://lca2018.linux.org.au/schedule/presentation/36/
+Code for this video: https://github.com/llSourcell/How_to_make_a_tensorflow_image_classifier_LIVE/blob/master/demonotes.ipynb
 
-The first external person contributing to our project is amazing, but when that 1 snowballs to 1,000 life can get a little bit stressful. All of these fine lovely people want to help, but somehow no one seems to want to help you deal with all of the code reviews, proposed documentation changes, or keeping your testing infrastructure alive (or three people want to help in different directions).
+More CNN learning resources:
+http://ufldl.stanford.edu/tutorial/supervised/ConvolutionalNeuralNetwork/
+https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/
+http://cs231n.github.io/convolutional-networks/
+http://deeplearning.net/tutorial/lenet.html
+http://neuralnetworksanddeeplearning.com/chap6.html
+http://machinelearningmastery.com/crash-course-convolutional-neural-networks/
+https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
 
-This talk explores what happens as a community grows using the speakers experience in her own personal projects (which have much less than 1k contributors) as well as larger projects, like Apache Spark.
+Please subscribe! And like. And comment. That's what keeps me going.
 
-Come for the being told its not your fault, stay for the techniques to avoid pissing everyone off.
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
 
-P.S.
-
-If the speaker is behind on reviewing one of your pull requests she is very sorry and would like to offer you a sticker and hope this talk explains some of why she is late.
-
-This talk was given at Linux.conf.au 2018 (LCA2018) which was held on 22-26 January 2018 in Sydney Australia.
-
-linux.conf.au is a conference about the Linux operating system, and all aspects of the thriving ecosystem of Free and Open Source Software that has grown up around it. Run since 1999, in a different Australian or New Zealand city each year, by a team of local volunteers, LCA invites more than 500 people to learn from the people who shape the future of Open Source. For more information on the conference see https://linux.conf.au/
-
-#linux.conf.au #linux #foss #opensource]]></description>
-            <link>https://dev.tube/video/BempWfBkvs8</link>
-            <guid isPermaLink="true">https://dev.tube/video/BempWfBkvs8</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/APmF6qE3Vjc</link>
+            <guid isPermaLink="true">https://dev.tube/video/APmF6qE3Vjc</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Spark Structured Streaming for Machine Learning w/ Holden Karau & Seth Hendrickson (IBM) StrataNY]]></title>
-            <description><![CDATA[Streaming machine learning is being integrated in future versions of Spark, but you don’t need to wait. Holden Karau and Seth Hendrickson demonstrate how to do streaming machine learning using Spark’s new Structured Streaming and walk you through creating your own streaming model. Holden and Seth will also cover how to use structured machine-learning algorithms (if they are merged by the talk). By the end of this session, you’ll have a better understanding of Spark’s Structured Streaming API as well as how machine learning works in Spark.
+            <title><![CDATA[How to Make Money as a Programmer in 2018]]></title>
+            <description><![CDATA[I'll go through 5 methods that you can use to make money as a programmer! We are lucky in that our skill will only get more valuable to society over time. Links to everything I've discussed are below.
 
-See the companion blog post at https://www.oreilly.com/learning/extend-structured-streaming-for-spark-ml & slides at http://www.slideshare.net/hkarau/apache-spark-structured-streaming-for-machine-learning-strataconf-2016 for more information.]]></description>
-            <link>https://dev.tube/video/Bmfek0Td-f8</link>
-            <guid isPermaLink="true">https://dev.tube/video/Bmfek0Td-f8</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+Please Subscribe! And like. And comment. That's what keeps me going.
+
+Contract work:
+http://upwork.com/
+http://freelancer.com/
+https://github.com/engineerapart/TheRemoteFreelancer (huge list)
+
+Improving your portfolio:
+http://www.codeofhonor.com/blog/marketing-yourself-as-a-programmer
+https://softwareengineering.stackexchange.com/questions/54506/how-to-market-yourself-as-a-software-developer/59875
+
+Paul Graham's goldmine of essays on starting a startup:
+http://www.paulgraham.com/articles.html
+
+Programming Challenges:
+http://topcoder.com/
+https://www.hackerearth.com/
+https://www.codechef.com/
+
+Bounty listings:
+https://www.bountysource.com/
+https://bountify.co/
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/BMT7FMwOIKc</link>
+            <guid isPermaLink="true">https://dev.tube/video/BMT7FMwOIKc</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Extending Spark Machine Learning   Beyond Linear Regression   by Holden Karau]]></title>
-            <description><![CDATA[This talk was recorded at Scala Days Chicago, 2017. Follow along on Twitter @scaladays and on the website for more information http://scaladays.org/.
+            <title><![CDATA[How to Train Your Models in the Cloud]]></title>
+            <description><![CDATA[Let's discuss whether you should train your models locally or in the cloud. I'll go through several dedicated GPU options, then compare three cloud options; AWS, Google Cloud, and FloydHub. I was not endorsed by anyone for this. 
 
-Abstract:
-Apache Spark is one of the most popular Big Data tools. This talk introduces & takes a deep dive on Spark's scikit-learn inspired Machine Learning pipelines.
+Code for this video:
+https://github.com/floydhub/fast-style-transfer
 
-Spark's ML pipelines provide a lot of power, but sometimes the tools you need for your specific problem aren't available yet. By integrating your own data preparation and machine learning tools into Spark's ML pipelines you will be able to take advantage of useful meta-algorithms, like parameter searching.
+Please Subscribe! And like. And comment. That's what keeps me going.
 
-Even if you don't have your own machine learning algorithms you want to implement, this talk peels back the covers on how the ML APIs are built and can help you make even more awesome ML pipelines and customize Spark models for your needs.
+High Budget GPU: Titan XP https://www.amazon.com/NVIDIA-GeForce-Pascal-GDDR5X-900-1G611-2500-000/dp/B01JLKP3IS
 
-A basic understanding of Spark will make it easier to follow along, but if this is your first Spark talk, this will still be useful and give you a broad understanding of how Spark ML functions (of course since the presenter is an author, if this is your first introduction to Spark she encourages you to buy her book "Learning Spark" & "High Performance Spark").]]></description>
-            <link>https://dev.tube/video/CAqqd4UqCtY</link>
-            <guid isPermaLink="true">https://dev.tube/video/CAqqd4UqCtY</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+Medium Budget GPU: https://www.amazon.com/MSI-GAMING-GTX-1060-6G/dp/B01IEKYD5U
+
+Small Budget GPU: https://www.amazon.com/dp/B01MF7EQJZ
+
+Build a Deep Learning machine:
+https://medium.com/@ncondo/build-a-deep-learning-rig-for-800-4434e21a424f
+https://medium.com/towards-data-science/building-your-own-deep-learning-box-47b918aea1eb
+https://www.oreilly.com/learning/build-a-super-fast-deep-learning-machine-for-under-1000
+
+More learning resources:
+http://www.infoworld.com/article/3179785/cloud-computing/aws-vs-azure-vs-google-cloud-which-free-tier-is-best.html
+https://thehftguy.com/2016/06/15/gce-vs-aws-in-2016-why-you-should-never-use-amazon/
+https://medium.com/@davidmytton/aws-vs-google-cloud-flexibility-vs-operational-simplicity-dca4324b03d4
+https://news.ycombinator.com/item?id=13659914
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/Bgwujw-yom8</link>
+            <guid isPermaLink="true">https://dev.tube/video/Bgwujw-yom8</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Extending Spark Machine Learning - Holden Karau]]></title>
-            <description><![CDATA[At the sold-out Spark & Machine Learning Meetup in Brussels on October 27, 2016, Holden Karau of the Spark Technology Center delivered a lightning talk called A very brief introduction to extending Spark ML for custom models: Talk + Demo.
+            <title><![CDATA[How to Simulate a Self-Driving Car]]></title>
+            <description><![CDATA[We're going to use Udacity's car simulator app as an environment to create our own autonomous agent! We'll use Keras to train a convolutional neural network on images from the car's cameras as well as steering angles from human driving. Using just those 2 data points, it'll be able to drive itself on any road. 
 
-Holden took a look at Apache SparkML™ pipelines. Inspired by sci-kit learn, they have the potential to make machine learning tasks much easier. This talk looked at how to extend Spark ML with custom model types when the built-in options don't meet your needs.
+Code for this video:
+https://github.com/llSourcell/How_to_simulate_a_self_driving_car
 
-For more information about the Spark Technology Center: http://www.spark.tc/
+More Learning resources:
+https://hackernoon.com/five-skills-self-driving-companies-need-8546d2aba7c1
+http://nicolovaligi.com/reading-list-udacity-self-driving-challenge-3.html
+https://www.linkedin.com/pulse/teaching-car-how-drive-using-deep-learning-muhieddine-el-kaissi
+http://selfdrivingcars.mit.edu/
+http://blog.davidsingleton.org/nnrccar/
+https://www.coursera.org/learn/machine-learning/lecture/zYS8T/autonomous-driving
+https://www.udacity.com/drive
 
-Follow us: @apachespark_tc
-Location: San Francisco, CA
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
 
-Apache®, Apache Spark™, and Spark™ are trademarks of the Apache Software Foundation in the United States and/or other countries.]]></description>
-            <link>https://dev.tube/video/GXjrH3soIuE</link>
-            <guid isPermaLink="true">https://dev.tube/video/GXjrH3soIuE</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/EaY5QiZwSP4</link>
+            <guid isPermaLink="true">https://dev.tube/video/EaY5QiZwSP4</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Testing & validating Apache Spark jobs by Holden Karau]]></title>
-            <description><![CDATA[This talk was recorded at BeeScala 2017 in Ljubljana, Slovenia. Follow along on Twitter @BeeScalaConf and on the website for more information http://bee-scala.org.
+            <title><![CDATA[How to Use Tensorflow for Seq2seq Models (LIVE)]]></title>
+            <description><![CDATA[Let's build a Sequence to Sequence model in Tensorflow to learn exactly how they work. You can use this model to make chatbots, language translators, text generators, and much more . We'll go over memory, attention, and some variants (like bidirectional layers) both programmatically and mathematically.
 
-Abstract:
+Code for this video:
+https://github.com/llSourcell/seq2seq_model_live/blob/master/2-seq2seq-advanced.ipynb
 
-As Spark continues to evolve, we need to revisit our testing techniques to support Datasets, streaming, and more. This talk expands on “Beyond Parallelize and Collect” (not required to have been seen) to discuss how to create large scale test jobs while supporting Spark’s latest features. We will explore the difficulties with testing Streaming Programs, options for setting up integration testing, beyond just local mode, with Spark, and also examine best practices for acceptance tests.]]></description>
-            <link>https://dev.tube/video/LP6blh4TFqI</link>
-            <guid isPermaLink="true">https://dev.tube/video/LP6blh4TFqI</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+Please Subscribe! And like. And comment. That's what keeps me going. 
+
+More Learning resources:
+https://www.tensorflow.org/tutorials/seq2seq
+http://www.kdnuggets.com/2015/06/rnn-tutorial-sequence-learning-recurrent-neural-networks.html
+http://suriyadeepan.github.io/2016-06-28-easy-seq2seq/
+https://indico.io/blog/sequence-modeling-neuralnets-part1/
+http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+Streaming Live from UploadVR's Studio in San Francisco!: https://www.youtube.com/uploadvr
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/ElmBrKyMXxs</link>
+            <guid isPermaLink="true">https://dev.tube/video/ElmBrKyMXxs</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Extending Spark ML for your custom algorithms - Holden Karau]]></title>
-            <link>https://dev.tube/video/Q85aUoyWyfc</link>
-            <guid isPermaLink="true">https://dev.tube/video/Q85aUoyWyfc</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+            <title><![CDATA[How to Simplify Your Dataset Easily (LIVE)]]></title>
+            <description><![CDATA[We're going to compare some different techniques that reduce the dimensionality of our data so we can visualize it. We'll go through each one step by step including the math and I'll answer questions along the way. And I freestyle.
+
+Code for this video:
+https://github.com/llSourcell/How_to_Simplify_Your_Data-LIVE-
+
+Links from the video:
+https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/
+http://setosa.io/ev/eigenvectors-and-eigenvalues/
+
+More learning resources:
+https://plot.ly/ipython-notebooks/principal-component-analysis/
+http://sebastianraschka.com/Articles/2014_pca_step_by_step.html
+https://www.quora.com/What-is-the-difference-between-LDA-and-PCA-for-dimension-reduction
+https://www.quora.com/What-advantages-the-t-sne-algorithm-has-over-pca
+http://stats.stackexchange.com/questions/123040/whats-wrong-with-t-sne-vs-pca-for-dimensional-reduction-using-r
+https://www.oreilly.com/learning/an-illustrated-introduction-to-the-t-sne-algorithm
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+Please subscribe! And like. And comment. That's what keeps me going. 
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/K796Ae4gLlY</link>
+            <guid isPermaLink="true">https://dev.tube/video/K796Ae4gLlY</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Holden Karau, IBM   Big Data SV 17   #BigDataSV   #theCUBE]]></title>
-            <description><![CDATA[Holden Karau, from IBM, talks with Jeff Frick & George Gilbert at Big Data SV 2017 at the historic Pagoda Lounge in San Jose, Ca.
+            <title><![CDATA[How Does Blockchain Work]]></title>
+            <description><![CDATA[In this video, you'll learn how the blockchain works. You won't find this data structure in your computer science textbooks yet, but it will soon underpin the way the entire Internet operates. Let's talk about how blockchain works and how it can be used to improve our AI.
 
-#BigDataSV
-#theCUBE]]></description>
-            <link>https://dev.tube/video/TpemEZ92Rdg</link>
-            <guid isPermaLink="true">https://dev.tube/video/TpemEZ92Rdg</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+Code for this video:
+https://github.com/llSourcell/The_Power_of_the_blockchain
+
+Charles-David's winning code:
+https://github.com/alkaya/Optimizer-cotw
+
+Parminder's runner up code:
+https://github.com/Trion129/Gradient-Descent-from-scratch
+
+Please subscribe! And like. And comment. That's what keeps me going.
+
+More learning resources:
+https://blog.bigchaindb.com/blockchains-for-artificial-intelligence-ec63b0284984
+https://medium.com/towards-data-science/the-blockchain-and-ai-fbfa691f10e0
+https://medium.com/the-intrepid-review/how-does-the-blockchain-work-for-dummies-explained-simply-9f94d386e093
+https://www.oreilly.com/ideas/understanding-the-blockchain
+https://github.com/golemfactory/golem
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/LZEHOlZY2To</link>
+            <guid isPermaLink="true">https://dev.tube/video/LZEHOlZY2To</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Distributed Data Show Episode 38: Spark 3.0 and Beyond with Holden Karau]]></title>
-            <description><![CDATA[David Gilardi talks with Holden Karau of Google to mine many wonderful nuggets on the future of Spark and find out what might happen if she had a magic wand of awesomeness.
+            <title><![CDATA[Generative Adversarial Networks for Style Transfer (LIVE)]]></title>
+            <description><![CDATA[Generative Adversarial Nets are such a rich topic for exploration, we're going to build one that was released just 2 months ago called the "DiscoGAN" that lets us transfer the style between 2 datasets. And I'll be building this using Tensorflow.
 
-Highlights!
+Code for this video:
+https://github.com/llSourcell/GANS-for-style-transfer
 
-0:15 - Welcoming Holden back to the show
-0:30 - So what exactly is going to be in Spark 3? Significant updates to the SQL and Machine Learning (ML) APIs. There are missing pieces in ML API, adding them will cause breaking changes to existing models. One example is support for online model serving.
-2:25 - The DataSet API does not yet fully cover all needed cases, causing developers to jump back to RDD APIs, so some API changes will be needed there . There will be continued performance improvements in query planning in minor releases.
-3:13 - Python changes could include changes to handle Vectorized UDFs in the RDD APIs
-4:35 Why it’s so hard to pin down when Spark 3 will appear: breaking API changes have to be worth it. We need to wait until the payoff in capability is worth the breaking. An example would be making ML APIs typesafe.
-6:57 - What Holden would change in Spark, given a magic wand - shared memory buffer between languages using Apache Arrow
-9:46 - Wrapping up - the most exciting change likely to be in Spark 3 in online model serving
+Please Subscribe! And like. And comment. That's what keeps me going.
 
-ABOUT DATASTAX ENTERPRISE 5.1
-DataStax Enterprise 5.1, the database platform for cloud applications, includes Apache Cassandra 3.x with materialized views, tiered storage and advanced replication. Introduced in 5.1 is DataStax Enterprise Graph, the first graph database fast enough to power customer-facing applications, scale to massive datasets and integrate advanced tools to power deep analytical queries.
+More learning resources:
+https://arxiv.org/abs/1703.05192
+https://github.com/SKTBrain/DiscoGAN
+https://www.reddit.com/r/MachineLearning/comments/5zp0eu/r_170305192_learning_to_discover_crossdomain/
+https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7
 
-Learn more at http://www.datastax.com/products/datastax-enterprise and https://academy.datastax.com/resources/whats-new-datastax-enterprise-50
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
 
-CONNECT WITH DATASTAX
-Subscribe: http://www.youtube.com/c/datastax?sub_confirmation=1 
-Site: http://datastax.com 
-Facebook: https://facebook.com/datastax 
-Twitter: https://twitter.com/datastax 
-Linkedin: https://www.linkedin.com/company/datastax
-http://feeds.feedburner.com/datastax 
-https://github.com/datastax 
-
-ABOUT DATASTAX ACADEMY
-On the DataStax Academy YouTube channel, you can find tutorials, webinars and much more to help you learn and stay updated with the latest information on DataStax Enterprise©.  Create an account on https://academy.datastax.com to watch our free online courses, tutorials, and more.]]></description>
-            <link>https://dev.tube/video/UhlyzFusC5I</link>
-            <guid isPermaLink="true">https://dev.tube/video/UhlyzFusC5I</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/MgdAe-T8obE</link>
+            <guid isPermaLink="true">https://dev.tube/video/MgdAe-T8obE</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Getting The Best Performance With PySpark]]></title>
-            <link>https://dev.tube/video/V6DkTVvy9vk</link>
-            <guid isPermaLink="true">https://dev.tube/video/V6DkTVvy9vk</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+            <title><![CDATA[How to Do Mathematics Easily - Intro to Deep Learning #4]]></title>
+            <description><![CDATA[Let's learn about some key math concepts behind deep learning shall we? We'll build a 3 layer neural network and dive into some key concepts that makes deep learning give us such incredible results.
+
+Coding challenge for this video:
+https://github.com/llSourcell/how_to_do_math_for_deep_learning
+
+Jovian's Winning Code:
+https://github.com/jovianlin/siraj-intro-to-DL-03/blob/master/Siraj%2003%20Challenge.ipynb
+
+Vishal's Runner up Code:
+https://github.com/erilyth/DeepLearning-SirajologyChallenges/tree/master/Sentiment_Analysis
+
+Linear Algebra cheatsheet:
+http://www.souravsengupta.com/cds2016/lectures/Savov_Notes.pdf
+
+Calculus cheatsheet:
+http://tutorial.math.lamar.edu/pdf/Calculus_Cheat_Sheet_All.pdf
+
+Statistics cheatsheet:
+http://web.mit.edu/~csvoss/Public/usabo/stats_handout.pdf
+
+And if you have never had experience with any of these 3 and want to learn from absolute scratch, I'd recommend the respective KhanAcademy courses:
+https://www.khanacademy.org/math
+
+More Learning Resources:
+https://people.ucsc.edu/~praman1/static/pub/math-for-ml.pdf
+http://www.vision.jhu.edu/tutorials/ICCV15-Tutorial-Math-Deep-Learning-Intro-Rene-Joan.pdf
+http://datascience.ibm.com/blog/the-mathematics-of-machine-learning/
+
+Join us in our Slack channel:
+http://wizards.herokuapp.com/
+
+And Part I of this book is so dope, seriously:
+http://www.deeplearningbook.org/
+
+Please subscribe! And like. And comment. That's what keeps me going.
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/N4gDikiec8E</link>
+            <guid isPermaLink="true">https://dev.tube/video/N4gDikiec8E</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Holden Karau - Spark - Where the Magic Breaks]]></title>
-            <link>https://dev.tube/video/ZoNT9tVK6_E</link>
-            <guid isPermaLink="true">https://dev.tube/video/ZoNT9tVK6_E</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+            <title><![CDATA[How to Generate Art - Intro to Deep Learning #8]]></title>
+            <description><![CDATA[We're going to learn how to use deep learning to convert an image into the style of an artist that we choose. We'll go over the history of computer generated art, then dive into the details of how this process works and why deep learning does it so well.
+
+Coding challenge for this video:
+https://github.com/llSourcell/How-to-Generate-Art-Demo
+
+Itai's winning code:
+https://github.com/etai83/lstm_stock_prediction
+
+Andreas' runner up code:
+https://github.com/AndysDeepAbstractions/How-to-Predict-Stock-Prices-Easily-Demo/blob/master/stockdemo.ipynb
+
+More learning resources:
+https://harishnarayanan.org/writing/artistic-style-transfer/
+https://ml4a.github.io/ml4a/style_transfer/
+http://genekogan.com/works/style-transfer/
+https://arxiv.org/abs/1508.06576
+https://jvns.ca/blog/2017/02/12/neural-style/
+
+Style transfer apps:
+http://www.pikazoapp.com/
+http://deepart.io/
+https://artisto.my.com/
+https://prisma-ai.com/
+
+Please subscribe! And like. And comment. That's what keeps me going.
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+
+Song at the beginning is called Everyday by Carly Comando
+jurassic park inception visualization is from http://www.pyimagesearch.com/2015/07/06/bat-country-an-extendible-lightweight-python-package-for-deep-dreaming-with-caffe-and-convolutional-neural-networks/
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/Oex0eWoU7AQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/Oex0eWoU7AQ</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[sfspark.org: Holden Karau, PySpark Beyond Shuffling -- Why it isn't Magic]]></title>
-            <description><![CDATA[PySpark Beyond Shuffling -- Why it isn't Magic -- but also where there is some really cool magic 
-Holden Karau -- Apache Spark Committer, Spark Technology Center, IBM]]></description>
-            <link>https://dev.tube/video/eR8p7cpvHNs</link>
-            <guid isPermaLink="true">https://dev.tube/video/eR8p7cpvHNs</guid>
-            <pubDate>Wed, 08 Aug 2018 01:33:23 GMT</pubDate>
+            <title><![CDATA[How to Beat Pong Using Policy Gradients (LIVE)]]></title>
+            <description><![CDATA[We're going to use the policy gradient technique from reinforcement learning to beat the game of Pong. We'll use OpenAI's Universe as an environment for our agent and I'll go over the process of setting it up as well as the math behind the PG method in detail.
+
+Microphone popping issues end at 11:15 . That cannot happen again. Udacity is aware of this and will be more prepared next time.
+
+Code for this video:
+https://github.com/llSourcell/Policy_Gradients_to_beat_Pong
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+More Learning resources:
+http://www.scholarpedia.org/article/Policy_gradient_methods
+http://proceedings.mlr.press/v32/silver14.pdf
+http://karpathy.github.io/2016/05/31/rl/
+http://home.deib.polimi.it/restelli/MyWebSite/pdf/rl7.pdf
+http://www0.cs.ucl.ac.uk/staff/D.Silver/web/Teaching_files/pg.pdf
+https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient
+
+Please Subscribe! And like. And comment. That's what keeps me going. 
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+Follow me:
+Twitter: https://twitter.com/sirajraval
+Facebook: https://www.facebook.com/sirajology Instagram: https://www.instagram.com/sirajraval/ Instagram: https://www.instagram.com/sirajraval/]]></description>
+            <link>https://dev.tube/video/PDbXPBwOavc</link>
+            <guid isPermaLink="true">https://dev.tube/video/PDbXPBwOavc</guid>
+            <pubDate>Thu, 09 Aug 2018 01:34:27 GMT</pubDate>
         </item>
     </channel>
 </rss>
