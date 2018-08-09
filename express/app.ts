@@ -205,7 +205,7 @@ async function proxy(req: Request, res: Response) {
 
     let { query, page, refinement, sortOrder, watched } = req.body.requests[0].params
 
-    let q = query.trim().split(/\s+/).map(token => `+${token}`).join(" ")
+    let q = query ? query.trim().split(/\s+/).map(token => `+${token}`).join(" ") : query
 
     console.time(`Query ${q}`)
 
