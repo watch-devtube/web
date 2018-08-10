@@ -6,8 +6,6 @@ console.time('Imports')
 
 import * as fs from 'fs'
 import * as path from 'path'
-import * as lru from 'lru-cache'
-import * as algolia from 'algoliasearch'
 
 import { Request, Response } from 'express'
 import { Fastr, dnsCache, Logger } from 'devtube-commons'
@@ -17,18 +15,7 @@ console.timeEnd('Imports')
 console.time('Init')
 
 // Configuration settings
-const algoliaAppId = 'DR90AOGGE9'
-const algoliaApiKey = 'c2655fa0f331ebf28c89f16ec8268565'
-const algoliaIndexName = 'videos'
-const videoCacheSize = 500
-const videoCacheTTL = 1000 * 60 * 60 
 Logger.enabled = true
-
-// Configure video cache
-let videoCache = lru({ 
-  max: videoCacheSize, 
-  maxAge: videoCacheTTL
-})
 
 // Configure DNS cache
 dnsCache()
@@ -44,8 +31,6 @@ let devMode = process.env.DEV_MODE === 'true' || process.argv[2] === 'dev'
 let staticDir = devMode ? '../dist' : './dist'
 let port = process.env.PORT || 8100
 
-let client = algolia(algoliaAppId, algoliaApiKey)
-let index = client.initIndex(algoliaIndexName)
 
 app.use(cors())
 app.use(body.json())
@@ -238,9 +223,14 @@ async function proxy(req: Request, res: Response) {
     
     Logger.info(`VIDEO REQUEST: ${objectID}`)
     
-    try {
-      let video = videoCache.has(objectID) ? videoCache.get(objectID) : await index.getObject(objectID) as any
-      videoCache.set(objectID, video)
+    let q = undefined
+    let sortOrder = '-featured'
+    let refinement = { 'objectID' : objectID } 
+
+    let video = fastr.search(q, refinement, sortOrder).find(it => true) as any
+    if (!video) {
+      res.status(404).send('Not found')
+    } else {
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
         fastrMode: fastrMode,
@@ -257,19 +247,7 @@ async function proxy(req: Request, res: Response) {
           { name: 'twitter:image', content: `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg` }
         ]
       })
-    } catch (e) {      
-      if (e.statusCode && e.statusCode == 404) {
-        res.status(404).send('Not found')
-      } else {
-        Logger.error(e) 
-        res.render('index.html', {
-          title: `Error at Dev.Tube`,
-          serverSideError: JSON.stringify(
-            { message: 'Sorry, but the video is not available now. We\'re working on the solution.' })
-        })
-      }
     }
-
   } else {
     if (fs.existsSync('.' + req.path)) {
       res.sendFile('.' + req.path)

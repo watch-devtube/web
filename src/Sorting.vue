@@ -9,9 +9,7 @@
 </template>
 <script>
   import { mapState, mapActions, mapGetters } from 'vuex'
-  // import { Component } from 'vue-instantsearch';
   export default {
-    // mixins: [Component],
     computed: {
       ...mapState([ 'query' ])
     },
@@ -19,8 +17,6 @@
       sortNow: function(order) {
         this.$parent.hide()
         this.sort(order)
-        // this.$cookie.set('sortBy', order)
-        // this.searchStore.queryParameters = { sortOrder: order }
       },
       ...mapActions('query', [ 'sort' ])
     }    
