@@ -47,25 +47,19 @@ app.set('views', path.join(__dirname, staticDir))
 
 console.timeEnd('Init')
 
-// EXPERIMENTAL FASTR MODE
+// FASTR
 console.time('Fastr indexing')
 let fastrDir = `${__dirname}/data`
-let fastrMode = fs.existsSync(fastrDir) && fs.statSync(fastrDir).isDirectory()
-let fastr = fastrMode ? new Fastr({ dataDir: fastrDir, serialized: true }) : undefined
+let fastr = new Fastr({ dataDir: fastrDir, serialized: true })
 console.timeEnd('Fastr indexing')
 
 Logger.info('---- APPLICATION STARTED ----')
-Logger.info(`---- FASTR MODE: ${fastrMode} ----`)
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Application logic
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let featuredOrUndefined = () => {
-  if (!fastrMode) {
-    return undefined
-  }
   let tags = fastr.listTags()
   let channels = fastr.listChannels()
   let speakers = fastr.listSpeakers()
@@ -94,7 +88,6 @@ async function proxy(req: Request, res: Response) {
 
     res.render('index.html', {      
       title: title,
-      fastrMode: fastrMode,
       nightMode: nightMode,
       featured: featuredOrUndefined(),
       meta: [
@@ -118,7 +111,6 @@ async function proxy(req: Request, res: Response) {
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     let response = {
       title: title,
-      fastrMode: fastrMode,
       nightMode: nightMode,
       board: board,
       meta: [
@@ -147,7 +139,6 @@ async function proxy(req: Request, res: Response) {
       nightMode: nightMode,
       featured: featuredOrUndefined(),
       speaker: `"${speaker}"`,
-      fastrMode: fastrMode,
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
@@ -172,7 +163,6 @@ async function proxy(req: Request, res: Response) {
       title: title,
       nightMode: nightMode,
       featured: featuredOrUndefined(),
-      fastrMode: fastrMode,
       meta: [
         { name: "description", content: description },
         { name: "og:title", content: title },
@@ -184,19 +174,19 @@ async function proxy(req: Request, res: Response) {
       ]
     })    
 
-  } else if (req.path.startsWith("/search") && fastrMode) {
+  } else if (req.path.startsWith("/search")) {
 
     Logger.info(`SEARCH REQUEST: ${JSON.stringify(req.body.requests[0].params)}`)
 
-    let { query, page, refinement, sortOrder, watched } = req.body.requests[0].params
+    let { query, page, refinement, sortOrder, excludes } = req.body.requests[0].params
 
     let q = query ? query.trim().split(/\s+/).map(token => `+${token}`).join(" ") : query
 
     console.time(`Query ${q}`)
 
     let maxHitsPerPage = 21
-    let hitsAll = fastr.search(q, refinement, sortOrder).filter(hit => !watched.includes(hit.objectID))
-    let from = page * maxHitsPerPage
+    let hitsAll = fastr.search(q, refinement, sortOrder).filter(hit => !excludes.includes(hit.objectID))
+    let from = (page || 0) * maxHitsPerPage
     let to = from + maxHitsPerPage
     let hitsPage = hitsAll.slice(from, to)
     let nbPages = Math.ceil(hitsAll.length / maxHitsPerPage)
@@ -233,7 +223,6 @@ async function proxy(req: Request, res: Response) {
     } else {
       res.render('index.html', {
         title: `${video.title} - Watch at Dev.Tube`,
-        fastrMode: fastrMode,
         nightMode: nightMode,
         featured: featuredOrUndefined(),
         preloadedEntity: JSON.stringify(video),

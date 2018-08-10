@@ -6,6 +6,11 @@ export default {
       text: '',
       type: '' 
   },
+  actions: {
+    error (context, state) {
+      context.commit('error', state)
+    }
+  },  
   mutations: {
     error(state, { error, text = 'Please see logs and submit an issue: bit.ly/devtube-issue', title = 'Something went wrong!' }) {
         state.show = true

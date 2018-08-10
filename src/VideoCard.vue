@@ -8,16 +8,7 @@
             .is-overlay
             p.ttl.is-capitalized.is-size-7 {{title}}
       .card-content
-          .media(v-if="speaker && !newMode")
-              .media-left
-                  figure.image.is-48x48
-                    a(:href="'/@' + speaker.twitter"): img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
-              .media-content
-                p.title.is-6: a.has-text-black(:href="'/@' + speaker.twitter") {{speaker.name}}
-                p.subtitle.is-7 
-                  a.has-text-black(:href="'/@' + speaker.twitter") @{{speaker.twitter}} 
-                  a.has-text-black(target="_blank" :href="'https://twitter.com/' + speaker.twitter"): i.fab.fa-twitter
-          .media(v-if="newMode && speaker")
+          .media(v-if="speaker")
               .media-left
                   figure.image.is-48x48
                     img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
@@ -25,7 +16,7 @@
                 p.title.is-6 {{speaker.name}}
                 p.subtitle.is-7 
                   router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") @{{speaker.twitter}} 
-          .media(v-if="newMode && !speaker")
+          .media(v-else)
               .media-left
                 figure.image.is-48x48
                   img.avatar(src="/unknown.png")
@@ -129,7 +120,6 @@
 
   export default {
     props: { 
-      newMode: { type: Boolean, required: true },
       id: { type: String, required: true },
       title: { type: String, required: true },
       channel: { type: String, required: true },

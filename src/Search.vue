@@ -56,7 +56,6 @@
                           template(slot-scope="{ result }")
                             .column.is-6.is-flex-tablet.is-4-widescreen.shrinkIfEmpty
                               VideoCard(
-                                :newMode="newMode" 
                                 :tags="result.tags" 
                                 :featured="result.featured" 
                                 :speaker="result.speaker" 
@@ -96,15 +95,12 @@
 
 </style>
 <script>
-import { createFromAlgoliaCredentials } from 'vue-instantsearch'
 import { createFromAlgoliaClient } from 'vue-instantsearch'
 import { mapState, mapGetters } from 'vuex'
 
 import VideoCard from './VideoCard.vue'
 import NavBar from './NavBar.vue'
 import Sorting from './Sorting.vue'
-import ActiveFilters from './ActiveFilters.vue'
-import YearRange from './YearRange.vue'
 import ExpandableTags from './ExpandableTags.vue'
 
 export default { 
@@ -121,8 +117,7 @@ export default {
       loading: false,
       tagsCollapsed: true,
       speakersCollapsed: true,
-      channelsCollapsed: true,
-      newMode: window.fastrMode
+      channelsCollapsed: true
     };
   },
   watch: {
@@ -152,12 +147,7 @@ export default {
       addAlgoliaAgent(agent) {}
     };
 
-    let searchStore = window.fastrMode ?
-      createFromAlgoliaClient(fastr) :
-      createFromAlgoliaCredentials(
-        'DR90AOGGE9',
-        'c2655fa0f331ebf28c89f16ec8268565'
-    );
+    let searchStore = createFromAlgoliaClient(fastr)
 
     searchStore.queryParameters = {
       hitsPerPage : 21
@@ -196,8 +186,6 @@ export default {
       return { name: 'channel', params: { channel: item.title } }
     },
     fetch() {
-      this.newMode = window.fastrMode
-
 
       this.searchStore.stop()
 
@@ -212,14 +200,14 @@ export default {
       let favoriteVideoIds = this.favoriteIds
       if (this.showMyWatched) {
         this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: watchedVideoIds } } }
-        this.searchStore.queryParameters = { watched: [] }
+        this.searchStore.queryParameters = { excludes: [] }
       } else {
-        this.searchStore.queryParameters = { watched: watchedVideoIds }
+        this.searchStore.queryParameters = { excludes: watchedVideoIds }
       }
 
       if (this.showFavorites) {
         this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: favoriteVideoIds } } }
-        this.searchStore.queryParameters = { watched: [] }
+        this.searchStore.queryParameters = { excludes: [] }
       }
 
       if (this.speaker) {
@@ -240,9 +228,7 @@ export default {
   },
   components: { 
     ExpandableTags,
-    ActiveFilters, 
     VideoCard, 
-    YearRange, 
     Sorting,
     NavBar
   }

@@ -138,7 +138,6 @@
   }  
 </style>
 <script>
-  import axios from 'axios';
   import RelatedVideos from './RelatedVideos.vue'
   import MessageWidget from './MessageWidget.vue'
   import VideoToggles from './VideoToggles.vue'
@@ -167,23 +166,8 @@
     },
     methods: {
       fetch() {
-        this.video = {}
-        if (window.serverSideError) {
-          this.errors.push(window.serverSideError.message)  
-        } else if (window.preloadedEntity) {
-          this.video = window.preloadedEntity
-          this.$Progress.finish()
-        } else {
-          axios.get(`https://DR90AOGGE9-dsn.algolia.net/1/indexes/videos/${this.id}`, {
-              headers: {'X-Algolia-Application-Id': 'DR90AOGGE9',
-              'X-Algolia-API-Key': 'c2655fa0f331ebf28c89f16ec8268565' }
-          }).then(response => {
-            this.video = response.data
-            this.$Progress.finish()
-          }).catch(error => {
-            this.errors.push(error)
-          })   
-        }     
+        this.video = window.preloadedEntity
+        this.$Progress.finish()   
       },
       toggleWidth: function() {
         this.isFullWidth = !this.isFullWidth;
