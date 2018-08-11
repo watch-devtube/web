@@ -11,9 +11,9 @@ const makeKilo = it => it < 100000
   ? Math.round(it / 1000) + '.' + (it % 1000).toString().padStart(3, "0").charAt(0)
   : Math.round(it / 1000)
 
-export const views = it => it && it >= 1000
-  ? `${makeKilo(it)}K`
-  : it
+export const kilo = it => it && it >= 1000
+? `${makeKilo(it)}K`
+: it
 
 export const duration = it => {
   if (!it) {

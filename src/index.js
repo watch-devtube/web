@@ -13,9 +13,9 @@ import Notifications from 'vue-notification'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEllipsisV, faEye, faTimes, faCheck, faClock, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisV, faEye, faTimes, faCheck, faClock, faStar, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
-library.add(faEllipsisV, faEye, faTimes, faCheck, faClock, faStar)
+library.add(faEllipsisV, faEye, faTimes, faCheck, faClock, faPlusSquare, faStar)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 
@@ -26,7 +26,7 @@ import App from './App.vue'
 import Watch from './Watch.vue'
 import Search from './Search.vue'
 import Contributors from './Contributors.vue'
-import { flatten, views, duration, truncate, published, capitalizeIfNeeded } from './helpers/filters'
+import { flatten, duration, kilo, truncate, published, capitalizeIfNeeded } from './helpers/filters'
 
 import auth from './auth'
 import videos from './videos'
@@ -48,10 +48,10 @@ Vue.use(VueProgressBar, {
 })
 
 Vue.filter('flatten', flatten)
-Vue.filter('views', views)
 Vue.filter('duration', duration)
 Vue.filter('truncate', truncate)
 Vue.filter('published', published)
+Vue.filter('kilo', kilo)
 Vue.filter('capitalizeIfNeeded', capitalizeIfNeeded)
 
 const router = new VueRouter({

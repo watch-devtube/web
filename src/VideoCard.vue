@@ -20,7 +20,7 @@
             .level-item.has-text-centered.is-capitalized
               div
                 p.heading.is-capitalized Views
-                p.title.is-size-7 {{views | views}}
+                p.title.is-size-7 {{views | kilo}}
             .level-item.has-text-centered
               div                
                 p.heading.is-capitalized Duration

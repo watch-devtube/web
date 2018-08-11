@@ -27,7 +27,7 @@
                     .level-item.has-text-centered
                       div
                         p.heading Views
-                        p.title.is-size-7 {{video.views | views}}
+                        p.title.is-size-7 {{video.views | kilo}}
                     .level-item.has-text-centered                        
                       div
                         p.heading Duration
