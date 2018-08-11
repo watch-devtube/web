@@ -1,5 +1,5 @@
 let state = {
-  sortOrder: '-featured'
+  sortOrder: '-satisfaction'
 }
 
 let getters = {
