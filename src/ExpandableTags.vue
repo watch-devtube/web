@@ -9,7 +9,8 @@
               a.tag.is-dark(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
               a.is-black.tag(@click="navigate(item)") 
                 | {{item.videos.total | kilo}}  
-                span(v-if="item.videos.new > 0") &nbsp; +{{item.videos.new}}
+              .newCount.has-text-info(v-if="item.videos.new == item.videos.total") NEW!
+              .newCount(v-else-if="item.videos.new > 0") +{{item.videos.new}}
       .modal-close.is-large(aria-label="close" @click="collapsed = !collapsed")
 
     .is-hidden-mobile
@@ -19,10 +20,12 @@
             i(v-bind:class="fontAwesome")
             |  {{title}}
         .tags.has-addons.is-marginless(v-for="item in items.slice(0, limit)")
+          //- a.tag.is-white(title="Subscribe"): font-awesome-icon(icon="plus")
           a.tag.is-white.is-capitalized(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
           a.tag(@click="navigate(item)") 
             | {{item.videos.total | kilo}}
-            span(v-if="item.videos.new > 0") &nbsp; +{{item.videos.new}} new
+          .newCount.has-text-info(v-if="item.videos.new == item.videos.total") NEW!
+          .newCount(v-else-if="item.videos.new > 0") +{{item.videos.new}}
         .tags.has-addons.is-marginless
           a.tag.is-white.is-capitalized(@click="collapsed = !collapsed") More
           a.tag(@click="collapsed = !collapsed") ...
@@ -30,6 +33,13 @@
 <style lang="scss">
   .collapsedScreen .has-addons {
     margin-bottom: 0
+  }
+
+  .newCount {
+    font-size: 9px;
+    position: relative;
+    top: -12px;
+    left: 3px;
   }
 </style>
 <script>

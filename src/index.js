@@ -13,11 +13,12 @@ import Notifications from 'vue-notification'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEllipsisV, faEye, faTimes, faCheck, faClock, faStar, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
-library.add(faEllipsisV, faEye, faTimes, faCheck, faClock, faPlusSquare, faStar)
+import { faEllipsisV, faEye, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
+library.add(faEllipsisV, faEye, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
+Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
 
 import {firebase} from './helpers/firebase'
 

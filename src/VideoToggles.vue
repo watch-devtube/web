@@ -3,7 +3,7 @@
     a.video-action.watched(@click="toggleWatched(videoId); hide()" v-if="auth.user")
       font-awesome-layers(v-if="isWatched(videoId)" title="unmark watched")
         font-awesome-icon.fa-stack-1x(icon="eye")
-        font-awesome-icon.fa-stack-1x(icon="times" transform="shrink-8 up-7 right-7")                        
+        font-awesome-icon.fa-stack-1x(icon="times" transform="shrink-8 up-7 right-7")
       font-awesome-layers(v-else title="mark watched")
         font-awesome-icon.fa-stack-1x(icon="eye")
         font-awesome-icon.fa-stack-1x(icon="check" transform="shrink-8 up-7 right-7")          
