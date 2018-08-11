@@ -4,8 +4,337 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 10 Aug 2018 04:30:44 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 Aug 2018 04:29:56 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[PyTorch Coding Challenge (LIVE)]]></title>
+            <description><![CDATA[PyTorch is a popular deep learning library released by Facebook's AI Research lab. In this video, I'll explain some of its unique features, then use it to solve the Kaggle "Invasive Species Monitoring Challenge". Sometimes, certain species of plants can slowly destroy an ecosystem if left unchecked. We're going to build a ResNet classifier using PyTorch to help detect which plants need to be removed to help the larger ecosystem survive. Get hype! Starts at 2:18 
+
+Code for this video:
+https://github.com/llSourcell/Pytorch_Coding_Challenge_LIVE
+
+Please Subscribe! And like. And comment. That's what keeps me going. 
+
+Want more education? Connect with me here:
+Twitter: https://twitter.com/sirajraval
+instagram: https://www.instagram.com/sirajraval
+Facebook: https://www.facebook.com/sirajology
+
+This video is apart of my Machine Learning Journey course:
+https://github.com/llSourcell/Machine...
+
+More Learning Resources:
+https://github.com/pytorch/examples
+https://pytorch.org/
+https://medium.com/@14prakash/almost-any-image-classification-problem-using-pytorch-i-am-in-love-with-pytorch-26c7aa979ec4
+https://www.youtube.com/watch?v=FloMHMOU5Bs
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+Sign up for the next course at The School of AI:
+https://www.theschool.ai
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693]]></description>
+            <link>https://dev.tube/video/TvwYV0viIQE</link>
+            <guid isPermaLink="true">https://dev.tube/video/TvwYV0viIQE</guid>
+            <pubDate>Sat, 11 Aug 2018 01:32:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CNCF Serverless WG Meeting - 2018-08-09]]></title>
+            <link>https://dev.tube/video/0eig_lLy0lU</link>
+            <guid isPermaLink="true">https://dev.tube/video/0eig_lLy0lU</guid>
+            <pubDate>Sat, 11 Aug 2018 01:32:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[IoT Devices Examples | IoT Applications | Internet of Things Training | Edureka]]></title>
+            <description><![CDATA[** Edureka IoT Training : https://www.edureka.co/iot-certification-training** 
+(IoT Playlist: https://goo.gl/hVG7Cw) 
+The “Things” in IoT have been inspiring smart and superior systems across the globe at low power and even at low costs. In short, these IoT devices are laying the foundation for countless futuristic projects like proverbial home automation systems or smart cities. Know the best examples of these devices being implemented in the leading use cases of today’s world and understand what they’re made up of and what you can do to make them more secure.
+Subscribe to our channel to get video updates. Hit the subscribe button above. 
+#IoT #IoTdevices #IoTtutorial #Things #UseCases #InternetOfThings #iotonlinetraining #Edureka 
+
+-------------------------- 
+
+About our IoT Training 
+IoT Certification Training is designed by industry experts to make you a Certified IoT Developer. Edureka IoT training covers: 
+Understanding of IoT architecture and IoT Decision Framework 
+Configure Raspberry Pi, Understand Sensors, Actuators & get started with python on Raspberry Pi 
+Program Sensors (Sense-HAT board), Face Detection and reorganization using OpenCV-Python 
+Understand various IoT Networking Protocols which are mainly used to develop communication solutions
+Getting started with Cloud and Azure IoT Hub, demonstration of Azure IoT Hub APIs 
+Architect an End-to-End Solution using Raspberry Pi, Sense HAT, and Azure 
+Perform Data Analytics on the collected sensor data, use prediction algorithms to get useful insights 
+IoT challenges, business solutions, research scope and current development, Alexa Voice Bot on Raspberry Pi 
+
+-------------------------- 
+
+Who should go for this IoT Training? 
+This IoT Certification Training on Azure is for all the professionals who are passionate about work with IoT devices and want to go ahead and make their career as an IoT Developer. It is best suited for individuals who are: 
+Software Developers who are venturing into IoT space 
+Solution Architects 
+Technical Architects 
+Students who seek IoT knowledge 
+Business Executives and Managers who want to understand the essentials of IoT 
+
+------------------- 
+
+Why Learn IoT? 
+Internet of Things is considered as the next big technology revolution after invention of the Internet. It is supposed to make tremendous impacts on lives and may possibly lead to the betterment of millions of lives throughout the world. According to Cisco, over 50 million devices are expected to be connected to IoT by 2020. 
+Healthcare, Logistics, Aviation, Education, Information Technology name any thing and IoT will become an integral part of all these verticals. Internet of Things is believed to bring about the singularity which will ultimately converge into becoming the Internet of Everything. IoT has, therefore, become a leading interest of technologists globally and is perceived to be the NEXT BIG THING in IT industry. Learning IoT will not only provide you a career boost but you will also be able to gain insights on how technology has affected the world and will continue to do so in the coming decades. 
+
+For more information, please write back to us at sales@edureka.co 
+Call us at US: +18336900808 (Toll Free) or India: +918861301699 
+Facebook: https://www.facebook.com/edurekaIN/ 
+Twitter: https://twitter.com/edurekain 
+LinkedIn: https://www.linkedin.com/company/edureka 
+
+Customer Review: 
+Michael Harkins, System Architect, Hortonworks says: “The courses are top rate. The best part is live instruction, with playback. But my favorite feature is viewing a previous class. Also, they are always there to answer questions, and prompt when you open an issue if you are having any trouble. Added bonus ~ you get lifetime access to the course you took!!! ~ This is the killer education app... I've taken two courses, and I'm taking two more.”]]></description>
+            <link>https://dev.tube/video/17HMbyNaDjM</link>
+            <guid isPermaLink="true">https://dev.tube/video/17HMbyNaDjM</guid>
+            <pubDate>Sat, 11 Aug 2018 01:32:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Future of Storytelling: How Medium Shapes Story]]></title>
+            <description><![CDATA[In this 2013 GDC session, Schell Games' Jesse Schell examines the history of how different mediums have shaped and re-shaped the story, cull out the most useful patterns, uses them to look forward to the mediums we know are coming next, and makes some bold predictions about the shape of stories to come.
+
+Register for GDC: http://ubm.io/2gk5KTU
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/BjrO-di22v8</link>
+            <guid isPermaLink="true">https://dev.tube/video/BjrO-di22v8</guid>
+            <pubDate>Sat, 11 Aug 2018 01:30:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Cucumber Pro Demo - Webinar, 9th Aug 2018]]></title>
+            <description><![CDATA[In this webinar, Matt Wynne CEO of Cucumber will show you how you can:
+
+- Publish feature files as gorgeous living documentation direct from source control
+- Version those documents, using git branches and Releases
+- Collaborate around the feature files using in-line conversations
+- Publish test results to Cucumber Pro for extra confidence in the documentation
+
+Finally, we’ll look at how you can bring all this together with release approval - allowing business stakeholders to sign off on the requirements, test cases and test results for each release of your product with a single click.
+
+You should watch if you:
+
+- are already invested in BDD as an organisation and ready to 
+- amplify that investment
+- want to empower product owners to stay involved in the BDD process from beginning to end
+- need an in-house appliance installation of Cucumber Pro to keep your feature files secure
+- have the clout to access the necessary infrastructure to set up an appliance: a Linux server/VM, SMTP & LDAP access, firewall configuration etc.
+
+Want to become a Cucumber Pro appliance customer? Read up on our requirements and installation steps here - https://app.cucumber.pro/projects/cucumber-pro/documents/branch/master/features/appliance.md
+
+Just want to take our SaaS app for a spin? Sign up here - https://app.cucumber.pro/signup]]></description>
+            <link>https://dev.tube/video/wNBadMEeoEY</link>
+            <guid isPermaLink="true">https://dev.tube/video/wNBadMEeoEY</guid>
+            <pubDate>Sat, 11 Aug 2018 01:29:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Azure Data Factory visual tools now integrated with GitHub | Azure Friday]]></title>
+            <description><![CDATA[Gaurav Malhotra joins Lara Rubbelke to discuss how you can associate a GitHub repository (public & enterprise) to your Azure Data Factory for collaboration, versioning, source control.
+
+For more information, see:
+
++ Azure Data Factory Visual tools now support GitHub integration (blog post) https://aka.ms/azfr/462/01
++ Visual authoring in Azure Data Factory - Author with GitHub integration (docs) https://aka.ms/azfr/462/02
++ Azure Data Factory overview https://aka.ms/azfr/462/03
++ Azure Data Factory pricing https://aka.ms/azfr/462/04
++ Azure Data Factory docs https://aka.ms/azfr/462/05
++ Create a free account (Azure) https://aka.ms/azfr/462/free]]></description>
+            <link>https://dev.tube/video/3xgbMpDPXNM</link>
+            <guid isPermaLink="true">https://dev.tube/video/3xgbMpDPXNM</guid>
+            <pubDate>Sat, 11 Aug 2018 01:29:09 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[TWC9: CosmosDB JavaScript SDK Updates, Linux on ASE, Underwater Data Center Webcams, and more]]></title>
+            <description><![CDATA[This week on Channel 9, Christina is back, this time wearing more ironic merch (keep those nerd shirt suggestions coming!), and ready to talk about the latest developer news, including:
+
+* 0:30 [Azure Devs at GopherCon](https://twitter.com/OpenAtMicrosoft/status/1027585301127077890), including a workshop on [Cloud-native Go](https://www.gophercon.com/agenda) and an upcoming [Azure Friday takeover](https://twitter.com/azurefriday/status/1027650725881569281). 
+
+* 0:53 [Microsoft Ignite - now with more code](https://www.microsoft.com/en-us/ignite/developer?ocid=AID725708_QSG_BLOG_263164&Aud=DEV) and you can [register for Ignite](https://www.microsoft.com/en-us/ignite/developer?ocid=AID725708_QSG_BLOG_263164&Aud=DEV). It runs September 24-28 in Orlando.
+
+* 1:24 [Azure CosmosDB JavaScript SDK 2.0 Public Preview](https://azure.microsoft.com/en-us/blog/new-azure-cosmosdb-javascript-sdk-2-0-now-in-public-preview/)
+
+* 2:06 [Linux on Azure App Service Enviornment now Generally Available](https://azure.microsoft.com/en-us/blog/linux-on-azure-app-service-environment-now-generally-available/)
+
+* 2:48 [Windows Container Support in Azure App Service Public Preview](https://azure.microsoft.com/en-us/blog/announcing-the-public-preview-of-windows-container-support-in-azure-app-service/)
+* 3:20 [#FiveThings About CSS](https://channel9.msdn.com/Shows/5-Things/Episode-25-Five-Things-About-CSS)
+
+* 3:31 [Defrag Tools: Console Command Favorites](https://channel9.msdn.com/Shows/Defrag-Tools/Defrag-Tools-195-Console-Command-Favorites)
+
+* 3:44 [The Xamarin Show: FlexLayout for Xamarin.Forms Explained](https://channel9.msdn.com/Shows/XamarinShow/FlexLayout-for-XamarinForms-Explained)
+
+* 4:00 [VS Code Extensions For the Discerning Developer Palette](https://css-tricks.com/vs-code-extensions-for-the-discerning-developer-palette/)
+
+* 4:20 [Microsoft Underwater Data Center Gets Webcams](https://www.theverge.com/tldr/2018/8/9/17669936/microsoft-undersea-datacenter-webcam) amd you can [watch the stream](ttps://natick.research.microsoft.com/) at the project website. Utterly mesmerizing!
+
+* 4:47 **Christina's Pick of the Week** [Meet the 15-year old World Excel Champion](https://www.cnn.com/2018/08/08/us/microsoft-excel-champion-trnd/index.html)
+
+Don't forget to let me know your favorite VS Code extensions in the comments!
+
+Please leave a comment or email us at twc9@microsoft.com.
+
+Follow @CH9 http://www.twitter.com/ch9
+Follow @film_girl http://www.twitter.com/film_girl
+ 
+Create a Free Account (Azure) https://aka.ms/c9-azurefree]]></description>
+            <link>https://dev.tube/video/4vZqmfCZ0M0</link>
+            <guid isPermaLink="true">https://dev.tube/video/4vZqmfCZ0M0</guid>
+            <pubDate>Sat, 11 Aug 2018 01:29:09 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin 109 Junginger C++ Cross Platform DAY1]]></title>
+            <description><![CDATA[Markus Junginger, CTO, ObjectBox
+
+CROSS PLATFORM APP CORES WITH MODERN C++
+Cross-Plattform Development, Talk, Pro
+
+C++ is known for its efficiency, but did you know that modern C++ (C++11 and higher) is also fun to work with? For cross platform development, there’s hardly a better choice when it comes to performance sensitive code. And especially on Android with its VM based architecture, C++ outruns any Java/Kotlin based implementation by far.
+Cross-platform development with C++ is not restricted to the mobile world. With the right setup, you can boost your productivity by running your code on the desktop with minimal turnaround times. Basically, there’s no Gradle build you need to wait for.]]></description>
+            <link>https://dev.tube/video/--DSP1Geuqk</link>
+            <guid isPermaLink="true">https://dev.tube/video/--DSP1Geuqk</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 110 Srivastava The A,B and C of Lifecicle Components DAY1]]></title>
+            <description><![CDATA[Nishant Srivastava, Sr. Android Engineer, Soundbrenner
+
+THE A, B AND C OF LIFECYCLE COMPONENTS
+Intermediate / Android Architecture / Talk
+
+If you've been developing Android applications for a while now, you know the pain of handling the lifecycle just right.It’s a pain-point that has existed since the advent of Android, up until recently when Google released Architecture components. As an Android developer you are bugged by handling activity/fragment lifecycle and flow of data in tandem to the lifecycle changes day in and out. Making your code aware about the lifecycle of the process/activity/fragment makes you more confident as a developer and enables faster development. This session would enable you to understand Lifecycle components (ProcessLifecycleOwner, LifecycleOwner, LifecycleObserver) and how they are leveraged in other architecture components like LiveData and ViewModel. By the end of the session you will be able to build your own custom Lifecycle aware Android apps and libraries.]]></description>
+            <link>https://dev.tube/video/2lCrTkwnqu4</link>
+            <guid isPermaLink="true">https://dev.tube/video/2lCrTkwnqu4</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 106 Egan Build a reactive Flutter App DAY1]]></title>
+            <description><![CDATA[Brian Egan, Indie Hacker
+
+BUILD A REACTIVE FLUTTER APP!
+
+Interested in Flutter, but love RxJava and MVI? Curious about how to structure Flutter apps? If so, join along as we explore how to architect apps using using Dart Streams! We'll cover the basics of Streams, how to beef up their power with RxDart, and how to create a Reactive Application with these patterns.
+This talk will cover the Bloc pattern introduced by Google. It's similar to MVI, and helps layer your apps, allowing you to write business logic that works flawlessly across three platforms: iOS, Android, and web.
+Come learn a bit more about Flutter and the architecture patterns that can help give your apps a testable, reusable, and cohesive structure!]]></description>
+            <link>https://dev.tube/video/As6sFqpIwII</link>
+            <guid isPermaLink="true">https://dev.tube/video/As6sFqpIwII</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 108 Heine Code Sharing is caring DAY1]]></title>
+            <description><![CDATA[Tobias Heine, Android Craftsman, Novoda
+Said Tahsin Dane, Lead Android Developer, Wayfair
+
+(CODE) SHARING IS CARING
+Intermediate / Cross-Plattform Development / Talk
+
+In this talk we will deep dive into Kotlin multiplatform projects. We will cover why you should consider using it, compare it with other cross-platform solutions. how it is different than regular Kotlin projects and how to use it to level up your product development. We will show a simple project that includes Android, iOS, Web (React) and Desktop clients. Then we will demonstrate how Kotlin makes it easier to inject platform specific logic into shared code. We will conclude the talk with limitations and challenges we faced during development.]]></description>
+            <link>https://dev.tube/video/O7031dQu6-0</link>
+            <guid isPermaLink="true">https://dev.tube/video/O7031dQu6-0</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 112 Kalicinski Forget everything you know about APKs DAY 1]]></title>
+            <description><![CDATA[Wojtek Kalicinski, Developer Advocate
+
+FORGET EVERYTHING YOU KNOW ABOUT APKs
+Forget everything you know about APKs, the App Bundle is here! This session takes you through the history of Android app distribution, including the APK internals, app signing and Play improvements that ultimately lead to the where we are now. You will learn about the technologies that enabled Google Play Dynamic Delivery using the new bundle format, including for the first time letting developers dynamically load optional modules, containing code and resources, at runtime.]]></description>
+            <link>https://dev.tube/video/Om6NflYCMT0</link>
+            <guid isPermaLink="true">https://dev.tube/video/Om6NflYCMT0</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 105 Kelly using Server Driven UI to rapidly iterate on Android and Across Platforms DAY1]]></title>
+            <description><![CDATA[Laura Kelly, Software Engineer, Airbnb
+
+USING SERVER-DRIVEN UI TO RAPIDLY ITERATE ON ANDROID AND ACROSS PLATFORMS
+Intermediate / Best Practices / Code Quality / Talk
+
+Often companies with large mobile user bases find that they have to balance rapid iteration with the amount of work involved in launching and coordinating a product on multiple platforms (web, native Android, and native iOS). Faced with exactly this question for the Airbnb reservation system, we designed a server-driven UI framework for web, iOS, and Android that allows us to launch new types of reservations on all platforms with a simple backend change. It uses a commonly shared API that is parsed on the client and rendered into a set of corresponding components supported on all platforms. In this talk, I will discuss how we designed this multi-platform system to provide the flexibility needed to launch new types of reservations and UI components, while keeping boilerplate client code to a minimum. Using a common API across all platforms, this type of server-driven UI framework hits the sweet spot of customizability while minimizing redundant client-side work. Moreover, I’ll explain how this system has enabled us to deploy new features on all platforms simultaneously via a simple backend change, without having to release new versions of the native apps. In the code deep dive, I’ll go through the API that is used on all three platforms, how the polymorphic API response is parsed on Android with Jackson, and how those data models are rendered into a reservation using Epoxy, Airbnb’s open-source library for rendering models in a RecyclerView. I'll also touch on how the data models are stored locally for offline usage.]]></description>
+            <link>https://dev.tube/video/f8j4CqImf0U</link>
+            <guid isPermaLink="true">https://dev.tube/video/f8j4CqImf0U</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 107 Lamzy ADB Break on through to the other side DAY1]]></title>
+            <description><![CDATA[Eyal Lezmy, Software Engineer Intermediate Open Source and Research, Qonto
+
+ADB BREAK ON THROUGH TO THE OTHER SIDE
+Intermediate / Open Source and Research / Talk
+
+ADB is maybe one of the most used tools by the Android developers. But it is for sure the less known. If you ever wondered how ADB is working? Why is it faster now? How Android Studio is using it under the hood? Why my ADB server is killed sometimes? And by the way what this server is about? This talk is made for you. I spent several weeks diving into the ADB source code and I learned interesting things about this project its history the internals the interaction with the developers tools ... It's time for me to share this with you. Here is an outline of the presentation: How ADB works (the big picture) Some ADB commands you maybe never heard about The history of the project The ADB Internals (the ADB protocols the structure of the software) How development tools are using ADB?]]></description>
+            <link>https://dev.tube/video/shx5LWnzeHo</link>
+            <guid isPermaLink="true">https://dev.tube/video/shx5LWnzeHo</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 103 Munio The Rise of the State Machines DAY1]]></title>
+            <description><![CDATA[Mounir Boudraa
+Senior Android Developer, Shopify
+
+THE RISE OF THE STATE MACHINES: AN INTRODUCTION TO PREDICTABLE STATE CONTAINER BASED ARCHITECTURES F
+Pro / Android Architecture / Talk
+
+You're right, that title seems scary: there are so many complicated words and... come on, we all know there's no silver bullet in programming. So instead of superficially explaining why an architecture is better than another, let's discuss some issues we face in our daily Android development job and how we can solve those easily through 3 examples. 1. I have crashes I can't reproduce. Those crashes can be seen on different devices. I would like to know exactly all the steps that led to these issues to understand and fix those easily. 2. Integration tests are great and necessary to ensure a complete flow is working as expected, but they are complex to set up, and it takes time to run the whole test suite when using aninstrumentation tool such as Espresso 3. My legacy app has some "startActivity" calls in activites, fragments, custom views, and even in RecyclerView adapters (who did that !?!). I have no visibility regarding the overall navigation of my app and the code is sometimes hard to follow. Hopefully, those issues are not specifically targeting Android, but all front-end developers. 
+And some huge companies and smart people have already worked for years on how we could avoid those. Redux, for instance, is becoming increasingly popular with web front-end developers, because this predictable state container tool helps you write applications that behave consistently and are easy to test. We will see today the concepts underneath and how such an architecture can be implemented using functional programming patterns through writing a Kotlin DSL. This talk is targetting developers who have already written some Kotlin code. At the end of the talk, you will get a new, fresh, vision on how to approach programming on Android, through a unidirectional data flow structure, and maybe you'll be interested in implementing a similar architecture in your apps.]]></description>
+            <link>https://dev.tube/video/xsCaZxBmVMA</link>
+            <guid isPermaLink="true">https://dev.tube/video/xsCaZxBmVMA</guid>
+            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Keep Betting on JavaScript]]></title>
+            <description><![CDATA[Brendan Eich's famous quip, 'Always Bet On JavaScript', revels in JS's history of naysayers predicting that we'd eventually reach a point where JS couldn't grow to meet the demands of modern development; it turns out those have always been bad bets.
+It's safe to say JS is no longer trying to prove itself. It has arrived. Even if it was once a 'dumb kid brother' to something like Java, it's now fully a first class citizen in the programming language ecosystem. JS is certainly not the only dominant language or the 'best tool' for every situation. But increasingly, most tech stacks have it as a central part of their strategy.
+
+We'll look forward at the bets we continue placing on JS and the web, by first looking back at how far we've come and what those steps looked like. From these lessons, we can gaze into the distance and see what the path ahead may look like.
+
+EVENT:
+
+JSCamp Barcelona 2018
+
+SPEAKER:
+
+Kyle Simpson
+
+PERMISSIONS:
+
+Original video was published with the Ⓒ Licence: CC BY-ND https://creativecommons.org/licenses/by-nd/4.0/legalcode
+
+CREDITS / ATTRIBUTION:
+
+Original video source: https://www.youtube.com/watch?v=lDLQA6lQSFg]]></description>
+            <link>https://dev.tube/video/ixzK0jqLO70</link>
+            <guid isPermaLink="true">https://dev.tube/video/ixzK0jqLO70</guid>
+            <pubDate>Sat, 11 Aug 2018 01:23:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GOTO 2018 • Practicalities of Productionizing Distributed Systems • Jeff Hodges]]></title>
+            <description><![CDATA[This presentation was recorded at GOTO Chicago 2018
+http://gotochgo.com
+
+Jeff Hodges - Distributed Systems Engineer & Consultant
+
+ABSTRACT
+Discussing the latest in consensus protocols and container orchestration is fun, but how do we get those things into production? This talk looks at tactics and strategy for productionizing distributed systems today and a little bit of [...]
+
+Download slides and read the full abstract here:
+https://gotochgo.com/2018/sessions/378
+
+https://twitter.com/gotochgo
+https://www.facebook.com/GOTOConference
+http://gotocon.com]]></description>
+            <link>https://dev.tube/video/6RlbgpNKvaA</link>
+            <guid isPermaLink="true">https://dev.tube/video/6RlbgpNKvaA</guid>
+            <pubDate>Sat, 11 Aug 2018 01:23:15 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[#21 Try REACTJS Tutorial -   Focus on an Input with Refs]]></title>
             <description><![CDATA[#21 Try REACTJS Tutorial -   Focus on an Input with Refs
@@ -53,308 +382,6 @@ Sub: http://joincfe.com/youtube
 Pro: http://kirr.co/ni5fia]]></description>
             <link>https://dev.tube/video/9C85o8jIgUU</link>
             <guid isPermaLink="true">https://dev.tube/video/9C85o8jIgUU</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#17 Try REACTJS Tutorial -  Component Lifecycle]]></title>
-            <description><![CDATA[#17 Try REACTJS Tutorial -  Component Lifecycle
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/Aa5xrXNvIyU</link>
-            <guid isPermaLink="true">https://dev.tube/video/Aa5xrXNvIyU</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#13 Try REACTJS Tutorial - npm install react-router]]></title>
-            <description><![CDATA[#13 Try REACTJS Tutorial - npm install react-router
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/Aw9NyazGZUs</link>
-            <guid isPermaLink="true">https://dev.tube/video/Aw9NyazGZUs</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#28 Try REACTJS Tutorial -  Override and Fix Third Party CSS]]></title>
-            <description><![CDATA[#28 Try REACTJS Tutorial -  Override and Fix Third Party CSS
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/Eyigy2aBSKY</link>
-            <guid isPermaLink="true">https://dev.tube/video/Eyigy2aBSKY</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#18 Try REACTJS Tutorial - A Timer with Set and Clear Intervals in React]]></title>
-            <description><![CDATA[#18 Try REACTJS Tutorial - A Timer with Set and Clear Intervals in React
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/NAx76xx40jM</link>
-            <guid isPermaLink="true">https://dev.tube/video/NAx76xx40jM</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#26 Try REACTJS Tutorial -  Image Preview after Dropzone]]></title>
-            <description><![CDATA[#26 Try REACTJS Tutorial -  Image Preview after Dropzone
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/S6Zus2bLJCc</link>
-            <guid isPermaLink="true">https://dev.tube/video/S6Zus2bLJCc</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#9 Try REACTjs Tutorial - Convert Prop to a State]]></title>
-            <description><![CDATA[#9 Try REACTjs Tutorial - Convert Prop to a State
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/U-VNfkH6pJs</link>
-            <guid isPermaLink="true">https://dev.tube/video/U-VNfkH6pJs</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#12 Try REACTJS Tutorial - npm install react-markdown]]></title>
-            <description><![CDATA[#12 Try REACTJS Tutorial - npm install react-markdown
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/YMpI5Ok1Ur8</link>
-            <guid isPermaLink="true">https://dev.tube/video/YMpI5Ok1Ur8</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#14 Try REACTJS Tutorial - Reorder List & Update Child Component]]></title>
-            <description><![CDATA[#14 Try REACTJS Tutorial -  Resort Array by Date or Key Value Pair
-
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/YdDhYrHezDA</link>
-            <guid isPermaLink="true">https://dev.tube/video/YdDhYrHezDA</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#10 Try REACTjs Tutorial - Prop to State to Callback to State]]></title>
-            <description><![CDATA[#10 Try REACTjs Tutorial - Prop to State to Callback to State
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/ZC3cT4te20M</link>
-            <guid isPermaLink="true">https://dev.tube/video/ZC3cT4te20M</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#11 Try REACTJS Tutorial -  npm install react-youtube]]></title>
-            <description><![CDATA[#11 Try REACTJS Tutorial - npm install react-youtube
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/_nBlN9yp9R8</link>
-            <guid isPermaLink="true">https://dev.tube/video/_nBlN9yp9R8</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#25 Try REACTJS Tutorial -  Dropzone]]></title>
-            <description><![CDATA[#25 Try REACTJS Tutorial -  Dropzone
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/aK3aUW08YGw</link>
-            <guid isPermaLink="true">https://dev.tube/video/aK3aUW08YGw</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#8 Try REACTjs Tutorial - Toggle Content with State]]></title>
-            <description><![CDATA[#8 Try REACTjs Tutorial - Toggle Content with State
-
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/aaPkd91GDpI</link>
-            <guid isPermaLink="true">https://dev.tube/video/aaPkd91GDpI</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#20 Try REACTJS Tutorial -  Handle Form and Input Data]]></title>
-            <description><![CDATA[#20 Try REACTJS Tutorial -  Handle Form and Input Data
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/fcMNZ7j4JSg</link>
-            <guid isPermaLink="true">https://dev.tube/video/fcMNZ7j4JSg</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#27 Try REACTJS Tutorial -  Crop Image in React]]></title>
-            <description><![CDATA[#27 Try REACTJS Tutorial -  Crop Image in React
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/jyeRDo2tP_s</link>
-            <guid isPermaLink="true">https://dev.tube/video/jyeRDo2tP_s</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#24 Try REACTJS Tutorial -   Component Based Reusable Input block]]></title>
-            <description><![CDATA[#24 Try REACTJS Tutorial -   Component Based Reusable Input block
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/laN4jmTu3VI</link>
-            <guid isPermaLink="true">https://dev.tube/video/laN4jmTu3VI</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#4 Try REACTJS Tutorial - Using Props]]></title>
-            <description><![CDATA[Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/o_HmCK9njtk</link>
-            <guid isPermaLink="true">https://dev.tube/video/o_HmCK9njtk</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#19 Try REACTJS Tutorial -  Inheritance & Reusable Functions in React]]></title>
-            <description><![CDATA[#19 Try REACTJS Tutorial -  Inheritance & Reusable Functions in React
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/rh1UtAqYM1Y</link>
-            <guid isPermaLink="true">https://dev.tube/video/rh1UtAqYM1Y</guid>
             <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
         </item>
     </channel>
