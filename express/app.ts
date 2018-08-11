@@ -214,7 +214,7 @@ async function proxy(req: Request, res: Response) {
     Logger.info(`VIDEO REQUEST: ${objectID}`)
     
     let q = undefined
-    let sortOrder = '-featured'
+    let sortOrder = '-satisfaction'
     let refinement = { 'objectID' : objectID } 
 
     let video = fastr.search(q, refinement, sortOrder).find(it => true) as any

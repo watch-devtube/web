@@ -58,7 +58,7 @@
               {
                 params: {
                   refinement: refinement,
-                  sortOrder: '-featured',
+                  sortOrder: '-satisfaction',
                   excludes: watchedIds.concat([this.videoId])
                 }
               }
