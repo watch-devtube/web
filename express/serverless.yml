@@ -4,22 +4,31 @@ provider:
   name: aws
   runtime: nodejs6.10
   memorySize: 2048
-  timeout: 30s
+  timeout: 30
 
 package:
   exclude:
-    - "node_modules/**"
     - ".gitignore"
     - "yarn*"
-    - "service_key.json"
+    - "service_key.json*"
+    - "*.ts"
+    - "*.json"
   include:
     - "data/*.json"
     - "../dist/**"
-    - "../sitemap.xml"
     - "*.js"
 
 functions:
-  proxy2:
-    handler: handler.proxy2
+  proxy3:
+    handler: index.proxy3
     events:
-      - http: GET proxy2
+      - http: 
+          path: /proxy3
+          method: get
+      - http: 
+          path: /proxy3/{path+}
+          method: get
+      - http: 
+          path: /proxy3/{path+}
+          method: post
+          

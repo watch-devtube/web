@@ -102,7 +102,9 @@ async function proxy(req: Request, res: Response) {
 
   Logger.info(`REQUEST PATH: ${req.path}`)
 
-  if (!req.path || req.path == '/') {
+  let prefix = '/proxy3'
+
+  if (!req.path || req.path == prefix) {
 
     let title = 'DevTube - The best developer videos in one place'
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
@@ -122,7 +124,7 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
-  } else if (req.path.startsWith("/contributors")) {
+  } else if (req.path.startsWith(`${prefix}/contributors`)) {
 
     // Preload data
     console.time('Contributors loading')
@@ -148,7 +150,7 @@ async function proxy(req: Request, res: Response) {
     }
     res.render('index.html', response)
 
-  } else if (req.path.startsWith("/@")) {
+  } else if (req.path.startsWith(`${prefix}/@`)) {
 
     let speaker = req.path.split("/@")[1]
 
@@ -199,7 +201,7 @@ async function proxy(req: Request, res: Response) {
       ]
     })    
 
-  } else if (req.path.startsWith("/search") && fastrMode) {
+  } else if (req.path.startsWith(`${prefix}/search`) && fastrMode) {
 
     Logger.info(`SEARCH REQUEST: ${JSON.stringify(req.body.requests[0].params)}`)
 
@@ -230,7 +232,7 @@ async function proxy(req: Request, res: Response) {
       }
     )
 
-  } else if (req.path.startsWith('/video/')) {
+  } else if (req.path.startsWith(`${prefix}/video`)) {
 
     let objectID = req.path.split('/')[2]
     
@@ -269,8 +271,9 @@ async function proxy(req: Request, res: Response) {
     }
 
   } else {
-    if (fs.existsSync('.' + req.path)) {
-      res.sendFile('.' + req.path)
+    if (fs.existsSync('/var/task/dist/' + req.path.replace(prefix, '/'))) {
+      console.log('FILE: /var/task/dist/' + req.path.replace(prefix, '/'))
+      res.sendFile('/var/task/dist/' + req.path.replace(prefix, '/'))
     } else {
       res.status(404).send('not found')
     }
