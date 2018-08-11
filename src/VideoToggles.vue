@@ -14,6 +14,8 @@
   
 <style lang="scss">
 
+  .toggles {
+
     .watched {
       height: 1em;
       z-index: 29;
@@ -38,38 +40,10 @@
     }
 
     .video-action:hover {
-      display: inline-block;
-      -moz-animation: pulse 1s infinite linear;
-      -o-animation: pulse 1s infinite linear;
-      -webkit-animation: pulse 1s infinite linear;
       animation: pulse 1s infinite linear;
-    }    
+    }
 
-    @-webkit-keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @-moz-keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @-o-keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @-ms-keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }  
+  }
 </style>
 <script>
 

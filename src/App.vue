@@ -4,6 +4,13 @@
     router-view(v-if="completed")
     vue-progress-bar
 </template>
+<style lang="scss">
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }  
+</style>
 <script>
   import { mapState, mapGetters, mapMutations } from 'vuex'
   export default { 

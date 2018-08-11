@@ -4,28 +4,14 @@
         VideoToggles(:videoId="id" :onWatched="hide")
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
-            i.is-size-3.fab.fa-youtube.watch
+            i.fab.fa-youtube.watch
             .is-overlay
-            p.ttl.is-capitalized.is-size-7 {{title}}
+            .ttl.is-capitalized.is-size-7 
+              .image.is-32x32(v-if="speaker" :title="speaker.name")
+                router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }")
+                  img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+              | {{title}}
       .card-content
-          .media(v-if="speaker")
-              .media-left
-                  figure.image.is-48x48
-                    img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
-              .media-content
-                p.title.is-6 {{speaker.name}}
-                p.subtitle.is-7 
-                  router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }") @{{speaker.twitter}} 
-          .media(v-else)
-              .media-left
-                figure.image.is-48x48
-                  img.avatar(src="/unknown.png")
-              .media-content(v-if="!speaker")
-                p.title.is-6 Know the speaker?
-                p.subtitle.is-7
-                  a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
-                    i.fas.fa-heart
-                    |  contribute
           nav.level.is-mobile
             .level-item.has-text-centered
               div
@@ -50,6 +36,12 @@
               a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
                 i.fas.fa-heart
                 |  contribute
+          .contribute(v-else)
+            p.subtitle.is-7
+              | Know the speaker? 
+              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
+                i.fas.fa-heart
+                |  contribute                
 </template>
 <style lang="scss">
 
@@ -60,7 +52,7 @@
 
 
     .avatar {
-      border-radius: 50%
+      border-radius: 50% !important;
     }
 
 
@@ -72,12 +64,16 @@
           opacity: 0.5;
           transition: 0.4s ease;
           position: absolute;
-          top: 50%;
+          top: 55%;
           left: 50%;
           z-index: 1;
-          height: 30%;
+          height: 20%;
           width: 50%;
           margin: -15% 0 0 -25%;
+        }
+
+        .watch:hover {
+          animation: pulse 1s infinite linear;
         }
 
         div.is-overlay {
@@ -89,13 +85,27 @@
         text-align: left;
         position: absolute;
         bottom: 20px;
-        width: 90%;
-        left: 10%;
-        background-color: #4988cb;
+        width: 80%;
+        left: 20%;
+        background-color:#1f2d3b;
         
         color: white;
         padding: 5px 0 5px 20px;
         padding-right: 20px;
+
+        .image {
+          position: absolute;
+          top: 0; left: -20px; bottom: 0;
+
+          margin: auto;
+          img {
+            border: 1px solid white;
+          }
+        }
+
+        .image:hover {
+          animation: pulse 1s infinite linear;
+        }
     }       
       } 
 
