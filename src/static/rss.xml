@@ -4,8 +4,131 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 11 Aug 2018 04:29:56 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 12 Aug 2018 04:33:19 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[#DCBerlin18 406 Corti The Curious Case of Android Button DAY1]]></title>
+            <description><![CDATA[Nicola Corti, Android Engineer, Yelp Inc.
+
+THE CURIOUS CASE OF ANDROID BUTTON
+Intermediate / Design / UI/UX / Talk
+
+We interact with buttons every day to get coffee, order pizza, or start a new Gradle build. They may look simple and straightforward, but they have a fundamental role in our environment: create a sense of power. We all love to feel empowered and we all hate being frustrated by bad design. Your users know this as well, they want to feel immediately rewarded when they interact with your UI, and they will quickly drop your app if they get annoyed. At Yelp, we get tens of millions button clicks a day. At that kind of scale, every pixel matters. We tune every single aspect of our buttons to make them simple and powerful, but adjusting every single shadow cast, click animation, or color layer can be tricky. In this talk, we will provide a deep dive into the Android framework and the Support Library to understand how buttons are rendered.]]></description>
+            <link>https://dev.tube/video/6MmzwZMYWoA</link>
+            <guid isPermaLink="true">https://dev.tube/video/6MmzwZMYWoA</guid>
+            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 403 Pinto Escapabstracting the Map DAY1]]></title>
+            <description><![CDATA[Marcel Pinto, Lead Android Developer, HERE Technologies
+
+ABSTRACTING THE MAP
+Intermediate / Android Architecture / Talk
+
+
+A while back my PO came to me and said: “Hey! we've got a new map provider, let’s change it”. Panic mode! At the time I was dealing with a legacy app where the Map implementation was everywhere! Every developer eventually faces situations like this one, but not only that, dealing with maps sometimes can get messy and complex. After years dealing with those issues, with new architecture and pattern concepts we can properly abstract the Map, so when your PO says “Let’s change the full Map” you can just say “no problem, give me a minute!” I will try to solve questions like: “In which layer does the Map implementation goes?” “How can we abstract the map from our business logic?” “How to deal with Map Objects and camera updates?” Among other key concepts that will help you deal with Maps in your Android apps.]]></description>
+            <link>https://dev.tube/video/UKKZk5LZtm0</link>
+            <guid isPermaLink="true">https://dev.tube/video/UKKZk5LZtm0</guid>
+            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 404 Montiel Hacking Growth Beelinguaapps Journey to a Million Organic Downloads DAY1]]></title>
+            <description><![CDATA[David Montiel, CEO & Founder, Beelinguapp
+HACKING GROWTH : BEELINGUAPP'S JOURNEY TO A MILLION ORGANIC DOWNLOADS
+
+Beelinguapp is a language learning app built by a single developer. It has reached 1 million organic downloads, Google Play's Editor's Choice and is the highest rated language learning app with 4.8 stars. In this talk David Montiel will talk about the best practices, android design guidelines, methodologies and tools that he used to get Beelinguapp to its current position, an outstanding place for any startup.]]></description>
+            <link>https://dev.tube/video/gJ-aDE5yB1k</link>
+            <guid isPermaLink="true">https://dev.tube/video/gJ-aDE5yB1k</guid>
+            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[401 Dorfmann Tarasenko Advanced Model View Intent The Missing Guide DAY1]]></title>
+            <description><![CDATA[Hannes Dorfmann, Android Developer, Freeletics
+Kostiantyn Tarasenko, Senior Android Developer Intermediate Android Architecture, Freeletics
+
+ADVANCED MODEL-VIEW-INTENT: THE MISSING GUIDE
+Intermediate / Android Architecture / Talk
+
+State-focused architectural design patterns such as Model-View-Intent (MVI) have seen a recent surge in popularity. Have you already considered implementing a state machine based approach for your app? Are you afraid how this architecture scales in the real world? Have you ever wondered how to deal with in-app navigation, A/B tests, animations or ultimately how to test and maintain such architecture efficiently? In this talk we start where other introduction talks end. We will share our knowledge and learnings about the state- machine- based architecture we use in our app that is used by millions of users.]]></description>
+            <link>https://dev.tube/video/mpfHG-aUgGU</link>
+            <guid isPermaLink="true">https://dev.tube/video/mpfHG-aUgGU</guid>
+            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 405 Schranz ARTist A Novel Instrumentation Framework for Customizing and Analyzing Apps]]></title>
+            <description><![CDATA[Oliver Schranz, Researcher & Ph.D. Student, CISPA, Saarland University
+
+ARTIST - A NOVEL INSTRUMENTATION FRAMEWORK FOR CUSTOMIZING AND ANALYZING APPS
+Pro / Open Source and Research / Talk
+
+In this talk, I will give an introduction to a novel instrumentation framework called ARTist, the Android Runtime instrumentation and security toolkit, which allows to arbitrarily modify the code of installed apps. Similar to existing approaches, such as Frida and XPosed, this can be used for modding applications (adding or removing functionality) and app analysis (record traffic, change files, modify databases). However, it does not break the app signature and hence modified applications still receive updates without compromising on security. Additionally, it is capable of modifying not only apps, but also the system server (Package Manager, Activity Manager Service, ...) and application framework classes (everything within framework.jar, ...). I will first outline the basic architecture of ARTist that is built on top of the Android Runtime's (ART) on-device compiler. We will have a look at the underlying design decisions and the deployment options, from regular (rooted) devices to custom ROMs. Then, I will introduce the ARTist SDK that allows developers to easily create own Modules to adapt the functionality of their favorite apps to their needs.
+The goal is to make you comfortable with creating own extensions for your installed apps. And finally, it will showcase some interesting Modules for different use cases, such as app reversing and analysis for pentesters and researchers, and app customization and modding for developers and power users. By the end of this session, you will be able to judge which problems ARTist can solve and how to get started with your first Module right away.]]></description>
+            <link>https://dev.tube/video/w2FWoaRoQLs</link>
+            <guid isPermaLink="true">https://dev.tube/video/w2FWoaRoQLs</guid>
+            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[React Meetup @ ZEIT]]></title>
+            <description><![CDATA[An evening to learn and discuss everything React.
+https://zeit.co/react-meetup]]></description>
+            <link>https://dev.tube/video/N-5TNKJ7eB0</link>
+            <guid isPermaLink="true">https://dev.tube/video/N-5TNKJ7eB0</guid>
+            <pubDate>Sun, 12 Aug 2018 01:29:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Interfacing R and Python || Andrew Collier]]></title>
+            <description><![CDATA[R versus Python for Data Science: the heated battle still rages. But is it really necessary to be partisan on this issue? I don't think so. There are strong arguments in favour of both languages and each clearly has a role to play.
+
+My contention is that the best outcome is a compromise: interfacing the two languages allows one to leverage the strengths of both sides. There are already a few options for such an interface. However, the recently released reticulate package from RStudio kicks this capability up a number of notches. It embeds a Python session in the R environment, exposing a seamless and performant interface.
+
+In this talk I will lay out various reasons to embrace the idea of interfacing R and Python, then show how the reticulate package makes this possible. If you use both R and Python then this can significantly simplify and accelerate your workflow.
+
+EVENT:
+
+PyData Berlin 2018
+
+SPEAKER:
+
+Andrew Collier
+
+PERMISSIONS:
+
+PyData provided Coding Tech with the permission to republish this video.
+
+CREDITS:
+
+PyData: https://pydata.org/berlin2018/schedule/presentation/19/]]></description>
+            <link>https://dev.tube/video/SAGkRuS7Chc</link>
+            <guid isPermaLink="true">https://dev.tube/video/SAGkRuS7Chc</guid>
+            <pubDate>Sun, 12 Aug 2018 01:23:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Build a Reactive Flutter App]]></title>
+            <description><![CDATA[Interested in Flutter, but love RxJava and MVI? Curious about how to structure Flutter apps? If so, join along as we explore how to architect apps using using Dart Streams! We'll cover the basics of Streams, how to beef up their power with RxDart, and how to create a Reactive Application with these patterns.
+
+This talk will cover the Bloc pattern introduced by Google. It's similar to MVI, and helps layer your apps, allowing you to write business logic that works flawlessly across three platforms: iOS, Android, and web.
+
+Come learn a bit more about Flutter and the architecture patterns that can help give your apps a testable, reusable, and cohesive structure!
+
+EVENT:
+
+DCBerlin18
+
+SPEAKER:
+
+Brian Egan
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=As6sFqpIwII]]></description>
+            <link>https://dev.tube/video/n5FMO6G5oI8</link>
+            <guid isPermaLink="true">https://dev.tube/video/n5FMO6G5oI8</guid>
+            <pubDate>Sun, 12 Aug 2018 01:23:12 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[PyTorch Coding Challenge (LIVE)]]></title>
             <description><![CDATA[PyTorch is a popular deep learning library released by Facebook's AI Research lab. In this video, I'll explain some of its unique features, then use it to solve the Kaggle "Invasive Species Monitoring Challenge". Sometimes, certain species of plants can slowly destroy an ecosystem if left unchecked. We're going to build a ResNet classifier using PyTorch to help detect which plants need to be removed to help the larger ecosystem survive. Get hype! Starts at 2:18 
@@ -250,139 +373,6 @@ Forget everything you know about APKs, the App Bundle is here! This session take
             <link>https://dev.tube/video/Om6NflYCMT0</link>
             <guid isPermaLink="true">https://dev.tube/video/Om6NflYCMT0</guid>
             <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 105 Kelly using Server Driven UI to rapidly iterate on Android and Across Platforms DAY1]]></title>
-            <description><![CDATA[Laura Kelly, Software Engineer, Airbnb
-
-USING SERVER-DRIVEN UI TO RAPIDLY ITERATE ON ANDROID AND ACROSS PLATFORMS
-Intermediate / Best Practices / Code Quality / Talk
-
-Often companies with large mobile user bases find that they have to balance rapid iteration with the amount of work involved in launching and coordinating a product on multiple platforms (web, native Android, and native iOS). Faced with exactly this question for the Airbnb reservation system, we designed a server-driven UI framework for web, iOS, and Android that allows us to launch new types of reservations on all platforms with a simple backend change. It uses a commonly shared API that is parsed on the client and rendered into a set of corresponding components supported on all platforms. In this talk, I will discuss how we designed this multi-platform system to provide the flexibility needed to launch new types of reservations and UI components, while keeping boilerplate client code to a minimum. Using a common API across all platforms, this type of server-driven UI framework hits the sweet spot of customizability while minimizing redundant client-side work. Moreover, I’ll explain how this system has enabled us to deploy new features on all platforms simultaneously via a simple backend change, without having to release new versions of the native apps. In the code deep dive, I’ll go through the API that is used on all three platforms, how the polymorphic API response is parsed on Android with Jackson, and how those data models are rendered into a reservation using Epoxy, Airbnb’s open-source library for rendering models in a RecyclerView. I'll also touch on how the data models are stored locally for offline usage.]]></description>
-            <link>https://dev.tube/video/f8j4CqImf0U</link>
-            <guid isPermaLink="true">https://dev.tube/video/f8j4CqImf0U</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 107 Lamzy ADB Break on through to the other side DAY1]]></title>
-            <description><![CDATA[Eyal Lezmy, Software Engineer Intermediate Open Source and Research, Qonto
-
-ADB BREAK ON THROUGH TO THE OTHER SIDE
-Intermediate / Open Source and Research / Talk
-
-ADB is maybe one of the most used tools by the Android developers. But it is for sure the less known. If you ever wondered how ADB is working? Why is it faster now? How Android Studio is using it under the hood? Why my ADB server is killed sometimes? And by the way what this server is about? This talk is made for you. I spent several weeks diving into the ADB source code and I learned interesting things about this project its history the internals the interaction with the developers tools ... It's time for me to share this with you. Here is an outline of the presentation: How ADB works (the big picture) Some ADB commands you maybe never heard about The history of the project The ADB Internals (the ADB protocols the structure of the software) How development tools are using ADB?]]></description>
-            <link>https://dev.tube/video/shx5LWnzeHo</link>
-            <guid isPermaLink="true">https://dev.tube/video/shx5LWnzeHo</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 103 Munio The Rise of the State Machines DAY1]]></title>
-            <description><![CDATA[Mounir Boudraa
-Senior Android Developer, Shopify
-
-THE RISE OF THE STATE MACHINES: AN INTRODUCTION TO PREDICTABLE STATE CONTAINER BASED ARCHITECTURES F
-Pro / Android Architecture / Talk
-
-You're right, that title seems scary: there are so many complicated words and... come on, we all know there's no silver bullet in programming. So instead of superficially explaining why an architecture is better than another, let's discuss some issues we face in our daily Android development job and how we can solve those easily through 3 examples. 1. I have crashes I can't reproduce. Those crashes can be seen on different devices. I would like to know exactly all the steps that led to these issues to understand and fix those easily. 2. Integration tests are great and necessary to ensure a complete flow is working as expected, but they are complex to set up, and it takes time to run the whole test suite when using aninstrumentation tool such as Espresso 3. My legacy app has some "startActivity" calls in activites, fragments, custom views, and even in RecyclerView adapters (who did that !?!). I have no visibility regarding the overall navigation of my app and the code is sometimes hard to follow. Hopefully, those issues are not specifically targeting Android, but all front-end developers. 
-And some huge companies and smart people have already worked for years on how we could avoid those. Redux, for instance, is becoming increasingly popular with web front-end developers, because this predictable state container tool helps you write applications that behave consistently and are easy to test. We will see today the concepts underneath and how such an architecture can be implemented using functional programming patterns through writing a Kotlin DSL. This talk is targetting developers who have already written some Kotlin code. At the end of the talk, you will get a new, fresh, vision on how to approach programming on Android, through a unidirectional data flow structure, and maybe you'll be interested in implementing a similar architecture in your apps.]]></description>
-            <link>https://dev.tube/video/xsCaZxBmVMA</link>
-            <guid isPermaLink="true">https://dev.tube/video/xsCaZxBmVMA</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Keep Betting on JavaScript]]></title>
-            <description><![CDATA[Brendan Eich's famous quip, 'Always Bet On JavaScript', revels in JS's history of naysayers predicting that we'd eventually reach a point where JS couldn't grow to meet the demands of modern development; it turns out those have always been bad bets.
-It's safe to say JS is no longer trying to prove itself. It has arrived. Even if it was once a 'dumb kid brother' to something like Java, it's now fully a first class citizen in the programming language ecosystem. JS is certainly not the only dominant language or the 'best tool' for every situation. But increasingly, most tech stacks have it as a central part of their strategy.
-
-We'll look forward at the bets we continue placing on JS and the web, by first looking back at how far we've come and what those steps looked like. From these lessons, we can gaze into the distance and see what the path ahead may look like.
-
-EVENT:
-
-JSCamp Barcelona 2018
-
-SPEAKER:
-
-Kyle Simpson
-
-PERMISSIONS:
-
-Original video was published with the Ⓒ Licence: CC BY-ND https://creativecommons.org/licenses/by-nd/4.0/legalcode
-
-CREDITS / ATTRIBUTION:
-
-Original video source: https://www.youtube.com/watch?v=lDLQA6lQSFg]]></description>
-            <link>https://dev.tube/video/ixzK0jqLO70</link>
-            <guid isPermaLink="true">https://dev.tube/video/ixzK0jqLO70</guid>
-            <pubDate>Sat, 11 Aug 2018 01:23:18 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[GOTO 2018 • Practicalities of Productionizing Distributed Systems • Jeff Hodges]]></title>
-            <description><![CDATA[This presentation was recorded at GOTO Chicago 2018
-http://gotochgo.com
-
-Jeff Hodges - Distributed Systems Engineer & Consultant
-
-ABSTRACT
-Discussing the latest in consensus protocols and container orchestration is fun, but how do we get those things into production? This talk looks at tactics and strategy for productionizing distributed systems today and a little bit of [...]
-
-Download slides and read the full abstract here:
-https://gotochgo.com/2018/sessions/378
-
-https://twitter.com/gotochgo
-https://www.facebook.com/GOTOConference
-http://gotocon.com]]></description>
-            <link>https://dev.tube/video/6RlbgpNKvaA</link>
-            <guid isPermaLink="true">https://dev.tube/video/6RlbgpNKvaA</guid>
-            <pubDate>Sat, 11 Aug 2018 01:23:15 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#21 Try REACTJS Tutorial -   Focus on an Input with Refs]]></title>
-            <description><![CDATA[#21 Try REACTJS Tutorial -   Focus on an Input with Refs
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/75U6gtzlcZw</link>
-            <guid isPermaLink="true">https://dev.tube/video/75U6gtzlcZw</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Setup REACT on your computer -- #2 Try REACTJS Tutorial]]></title>
-            <description><![CDATA[Setup REACT on your computer -- #2 Try REACTJS Tutorial
-
-Blog Post Guide: https://kirr.co/1m68l5
-
------
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/786VV6f_abM</link>
-            <guid isPermaLink="true">https://dev.tube/video/786VV6f_abM</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#3  Try REACTJS Tutorial - Display Json Data]]></title>
-            <description><![CDATA[3 - Try REACTJS Tutorial - Display Json Data
-
-Playlist - https://www.youtube.com/playlist?list=PLEsfXFp6DpzQbwYDx1zgcKJ4tzyWFaESK
-Code - https://kirr.co/cgl4ih
-Setup - https://youtu.be/786VV6f_abM
-
-
------
-
-
-Sub: http://joincfe.com/youtube
-Pro: http://kirr.co/ni5fia]]></description>
-            <link>https://dev.tube/video/9C85o8jIgUU</link>
-            <guid isPermaLink="true">https://dev.tube/video/9C85o8jIgUU</guid>
-            <pubDate>Fri, 10 Aug 2018 02:17:58 GMT</pubDate>
         </item>
     </channel>
 </rss>
