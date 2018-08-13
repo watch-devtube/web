@@ -4,8 +4,68 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 12 Aug 2018 04:33:19 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 Aug 2018 05:27:26 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Neural Arithmetic Logic Units]]></title>
+            <description><![CDATA[Deepmind released a paper just a few days ago describing a module for neural networks called the Neural Arithmetic Logic Unit (NALU). Although deep neural networks can learn to represent and manipulate numerical information, they don't generalize well outside of the range of numbers encountered during training.  Meaning train it on the numbers 1-10 and it won't be able to count to 11. To improve this ability, the researchers created an architecture that represents numerical quantities as linear activations which are manipulated using primitive arithmetic operators, controlled by learned gates. Its really fascinating stuff, i'll detail how it works in this video. 
+
+Code for this video:
+https://github.com/llSourcell/Neural_Arithmetic_Logic_Units
+
+Please Subscribe! And like. And comment. That's what keeps me going. 
+
+Want more education? Connect with me here:
+Twitter: https://twitter.com/sirajraval
+instagram: https://www.instagram.com/sirajraval
+Facebook: https://www.facebook.com/sirajology
+
+This video is apart of my Machine Learning Journey course:
+https://github.com/llSourcell/Machine_Learning_Journey
+
+More Learning Resources:
+https://arxiv.org/abs/1808.00508
+https://github.com/search?l=Python&q=nalu&type=Repositories
+https://deepmind.com/blog/
+https://www.youtube.com/watch?v=vOppzHpvTiQ&list=PL2-dafEMk2A7YdKv4XfKpfbTH5z6rEEj3
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+Sign up for the next course at The School of AI:
+https://www.theschool.ai
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693]]></description>
+            <link>https://dev.tube/video/v9E7Wg0dHiU</link>
+            <guid isPermaLink="true">https://dev.tube/video/v9E7Wg0dHiU</guid>
+            <pubDate>Mon, 13 Aug 2018 01:33:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Undo All the Things!]]></title>
+            <description><![CDATA[I found a command line interactive interpreter that let me undo lines of Python code that I had just typed and executed. I thought this was the coolest thing! How do you hack undo into other programming environments or create new programming environments with it built in?
+
+Starring fork, LD_PRELOAD, readline, terminal escape sequences, pseudoterminals, online shopping, rectangles and circles, and spaceships!
+
+EVENT:
+
+!!Con 2018
+
+SPEAKER:
+
+Tom Ballinger
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=Zcg1Ku4YB4g]]></description>
+            <link>https://dev.tube/video/rstLHcY3H9M</link>
+            <guid isPermaLink="true">https://dev.tube/video/rstLHcY3H9M</guid>
+            <pubDate>Mon, 13 Aug 2018 01:24:51 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[#DCBerlin18 406 Corti The Curious Case of Android Button DAY1]]></title>
             <description><![CDATA[Nicola Corti, Android Engineer, Yelp Inc.
@@ -349,29 +409,6 @@ This talk will cover the Bloc pattern introduced by Google. It's similar to MVI,
 Come learn a bit more about Flutter and the architecture patterns that can help give your apps a testable, reusable, and cohesive structure!]]></description>
             <link>https://dev.tube/video/As6sFqpIwII</link>
             <guid isPermaLink="true">https://dev.tube/video/As6sFqpIwII</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 108 Heine Code Sharing is caring DAY1]]></title>
-            <description><![CDATA[Tobias Heine, Android Craftsman, Novoda
-Said Tahsin Dane, Lead Android Developer, Wayfair
-
-(CODE) SHARING IS CARING
-Intermediate / Cross-Plattform Development / Talk
-
-In this talk we will deep dive into Kotlin multiplatform projects. We will cover why you should consider using it, compare it with other cross-platform solutions. how it is different than regular Kotlin projects and how to use it to level up your product development. We will show a simple project that includes Android, iOS, Web (React) and Desktop clients. Then we will demonstrate how Kotlin makes it easier to inject platform specific logic into shared code. We will conclude the talk with limitations and challenges we faced during development.]]></description>
-            <link>https://dev.tube/video/O7031dQu6-0</link>
-            <guid isPermaLink="true">https://dev.tube/video/O7031dQu6-0</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 112 Kalicinski Forget everything you know about APKs DAY 1]]></title>
-            <description><![CDATA[Wojtek Kalicinski, Developer Advocate
-
-FORGET EVERYTHING YOU KNOW ABOUT APKs
-Forget everything you know about APKs, the App Bundle is here! This session takes you through the history of Android app distribution, including the APK internals, app signing and Play improvements that ultimately lead to the where we are now. You will learn about the technologies that enabled Google Play Dynamic Delivery using the new bundle format, including for the first time letting developers dynamically load optional modules, containing code and resources, at runtime.]]></description>
-            <link>https://dev.tube/video/Om6NflYCMT0</link>
-            <guid isPermaLink="true">https://dev.tube/video/Om6NflYCMT0</guid>
             <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
         </item>
     </channel>
