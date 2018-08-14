@@ -1,9 +1,8 @@
 <template lang="pug">
-  a.navbar-item.is-size-7(@click="toggle()")
-    | Night mode 
-    | &nbsp;
-    i.fas.fa-moon(v-if="nightMode")
-    i.far.fa-moon(v-else)
+  a.navbar-item.is-size-7(@click="toggle()" v-if="nightMode") Day mode 
+  a.navbar-item.is-size-7(@click="toggle()" v-else)
+    | Night mode&nbsp;
+    font-awesome-icon(:icon="['far', 'moon']")
 </template>
 <script>
   export default {

@@ -81,7 +81,7 @@ async function proxy(req: Request, res: Response) {
 
   Logger.info(`REQUEST PATH: ${req.path}`)
 
-  if (!req.path || req.path == '/') {
+  if (req.path == '/find') {
 
     let title = 'DevTube - The best developer videos in one place'
     let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
@@ -149,6 +149,70 @@ async function proxy(req: Request, res: Response) {
         { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
       ]
     })
+  } else if (req.path.startsWith("/discover-api")) {
+
+    console.time(`Discover API`)
+    let excludes = req.body.excludes
+
+    let shuffle = (a) => {
+      for (let i = a.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    let discover = (refinement, sorting) => fastr
+      .search(undefined, refinement, sorting)
+      .filter(hit => !(excludes || []).includes(hit.objectID))
+      .slice(0, 100)
+
+    let staffPicks = discover({ 'featured' : true }, '-featured')
+    let top = discover(undefined, '-satisfaction')
+    let newAdditions = discover(undefined, '-recordingDate')
+
+    let discovered = [
+      {
+        title: "Staff Picks",
+        items: shuffle(staffPicks).slice(0, 8)
+      },
+      {
+        title: "Top Rated",
+        items: shuffle(top).slice(0, 8)
+      },
+      {
+        title: "Recent Additions",
+        items: shuffle(newAdditions).slice(0, 8)
+      }
+    ]
+
+    console.timeEnd(`Discover API`)
+
+    res.status(200).send(
+      {
+        "results": discovered
+      }
+    )
+
+  } else if (!req.path || req.path == "/") {
+
+    let title = `DevTube - Discover videos`
+    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
+
+    res.render('index.html', {
+      title: title,
+      nightMode: nightMode,
+      featured: featuredOrUndefined(),
+      meta: [
+        { name: "description", content: description },
+        { name: "og:title", content: title },
+        { name: "og:description", content: description },
+        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
+      ]
+    })
 
   } else if (directLink) {
 
@@ -183,8 +247,7 @@ async function proxy(req: Request, res: Response) {
     let q = query ? query.trim().split(/\s+/).map(token => `+${token}`).join(" ") : query
 
     console.time(`Query ${q}`)
-
-    let maxHitsPerPage = 21
+    let maxHitsPerPage = 20
     let hitsAll = fastr.search(q, refinement, sortOrder).filter(hit => !(excludes || []).includes(hit.objectID))
     let from = (page || 0) * maxHitsPerPage
     let to = from + maxHitsPerPage

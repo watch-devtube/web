@@ -1,6 +1,7 @@
 import {firestore} from '../helpers/firebase'
 
 let state = {
+  subscriptions: [],
   loading: true,
   watched: [],
   favorites: []
@@ -20,6 +21,18 @@ let actions = {
       commit('init', { watched: [], favorites: [] })
     }
   },
+  toggleSubscription({commit, getters, rootState}, sub) {
+    let toggledSubscription = it => it.topic == sub.topic && it.type == sub.type
+    let isSubscribed = getters.hasSubscription(sub)
+
+    let newSubscriptions = isSubscribed 
+      ? state.subscriptions.filter(it => !toggledSubscription(it)) 
+      : state.subscriptions.concat([sub])
+
+    userVideos(rootState.auth.user.uid).set({subscriptions: newSubscriptions, favorites: state.favorites, watched : state.watched})
+    .then(ok => { commit('changeSubscriptions', newSubscriptions) })
+    .catch(error => { commit("notify/error", { error: error }, { root: true }) })
+  },
   toggleFavorite({commit, state, rootState}, videoId) {
    
     let video = {
@@ -32,10 +45,9 @@ let actions = {
       ? state.favorites.filter(it => it.videoId != videoId) 
       : state.favorites.concat([video])
       
-    userVideos(rootState.auth.user.uid).set({favorites: newVideos, watched : state.watched})
+    userVideos(rootState.auth.user.uid).set({favorites: newVideos, watched : state.watched, subscriptions: state.subscriptions})
       .then(ok => { commit('changeFavorites', newVideos) })
       .catch(error => { commit("notify/error", { error: error }, { root: true }) })
-
   },
   toggleWatched({commit, state, rootState}, videoId) {
 
@@ -49,13 +61,15 @@ let actions = {
       ? state.watched.filter(it => it.videoId != videoId) 
       : state.watched.concat([video])
 
-    userVideos(rootState.auth.user.uid).set({watched: newVideos, favorites: state.favorites})
+    userVideos(rootState.auth.user.uid).set({watched: newVideos, favorites: state.favorites, subscriptions: state.subscriptions})
       .then(ok => { commit('changeWatched', newVideos) })
       .catch(error => { commit("notify/error", { error: error }, { root: true }) })
   }
 }
 
 let getters = {
+  hasSubscription: state => (sub) => state.subscriptions.some(it => it.topic == sub.topic && it.type == sub.type),
+  hasSubscriptions: (state) => state.subscriptions.length > 0,
   isWatched: state => videoId => state.watched.some(item => item.videoId == videoId),
   isFavorite: state => videoId => state.favorites.some(item => item.videoId == videoId),
 
@@ -70,6 +84,7 @@ let mutations = {
   init: (state, initial) => {
     if (initial) {
       state.watched = initial.watched
+      state.subscriptions = initial.subscriptions || []
       state.favorites = initial.favorites || []
     }
     state.loading = false
@@ -82,7 +97,10 @@ let mutations = {
   },
   changeFavorites: (state, favorites) => {
     state.favorites = favorites
-  }
+  },
+  changeSubscriptions: (state, subscriptions) => {
+    state.subscriptions = subscriptions
+  }  
 }
 
 export default {

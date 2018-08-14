@@ -15,7 +15,7 @@
       position: fixed;
       right: 20px;
       bottom: 20px;
-      z-index: 10;
+      z-index: 40;
       box-shadow: 2px 10px 40px rgba(22,20,19,0.4);
     
     .buttons {

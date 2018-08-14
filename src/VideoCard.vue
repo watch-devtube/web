@@ -1,7 +1,7 @@
 <template lang="pug">
   .card(style="height: 100%; width:100%" v-if="visible")
       .card-image
-        VideoToggles(:videoId="id" :onWatched="hide")
+        VideoToggles(:videoId="id")
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             i.fab.fa-youtube.watch
@@ -29,7 +29,7 @@
               div                
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
-          Tags(:tags="tags" :isNew="isNew" :featured="featured" :channel="channel")
+          Tags(:tags="tags" :isNew="isNew" :channel="channel")
           .contribute(v-if="speaker")
             p.subtitle.is-7
               | Wrong data? 
@@ -138,7 +138,6 @@
       recordingDate: { type: Number, required: true },
       creationDate: { type: Number, required: true },
       tags: { type: Array, required: false },
-      featured: { type: [Boolean, Array], default: false},
       speaker: {
         required: false,
         name: {
@@ -164,9 +163,6 @@
       ...mapGetters('videos', ['isWatched']),
     },
     methods: {
-      hide: function() {
-        this.visible = false
-      },
       watch: function(videoId) {
         this.$router.push({
           name: 'watch',

@@ -13,9 +13,9 @@ import Notifications from 'vue-notification'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEllipsisV, faEye, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMoon, faMinus, faUser, faPlusCircle, faMinusCircle, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
-library.add(faEllipsisV, faEye, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus)
+library.add(faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faMoon)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
@@ -26,6 +26,7 @@ import {firebase} from './helpers/firebase'
 import App from './App.vue'
 import Watch from './Watch.vue'
 import Search from './Search.vue'
+import Discovery from './Discovery.vue'
 import Contributors from './Contributors.vue'
 import { flatten, duration, kilo, truncate, published, capitalizeIfNeeded } from './helpers/filters'
 
@@ -55,18 +56,33 @@ Vue.filter('published', published)
 Vue.filter('kilo', kilo)
 Vue.filter('capitalizeIfNeeded', capitalizeIfNeeded)
 
+Vue.mixin({
+  methods: {
+    shuffle(a) {
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+  }
+})
+
 const router = new VueRouter({
   mode: 'history',
+  linkExactActiveClass: 'is-active',
   routes: [
     { name: 'contributors', path: '/contributors', component: Contributors },
     { name: 'video', path: '/video/:id', component: Watch, props: true },
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },
     { name: 'tag', path: '/tag/:tag', component: Search, props: true },
-    { name: 'search', path: '/', component: Search, 
+    { name: 'discovery', path: '/', component: Discovery, props: true },
+    { name: 'search', path: '/find', component: Search, 
       props: (route) => ({ q: 
         route.query.q, 
         showMyWatched: (route.query.w === 'true'),
+        showMyFeed: (route.query.feed === 'true'),
         showFavorites: (route.query.f === 'true') })
     }
   ],

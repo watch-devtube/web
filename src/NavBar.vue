@@ -5,7 +5,7 @@
         | &nbsp;&nbsp;&nbsp;
         img#logo.logo(src="/logo.png" srcset="/logo.svg" @click="home()")
         a.is-size-7.has-text-white(href="https://devternity.com" target="_blank")
-          span &nbsp; by DevTernity  
+          span &nbsp; by DevTernity
       .navbar-item
         Input(placeholder="Search for videos...") 
       .navbar-burger.burger.has-text-white(data-target="navbarMenu" @click="toggle()" v-bind:class="{ 'is-active': active }")
@@ -14,27 +14,46 @@
         span
     .navbar-menu#navbarMenu(style=" margin-right: -.75rem" v-bind:class="{ 'is-active': active }")
       .navbar-start
+        router-link.navbar-item(:to='{ name: "discovery" }' @click.native="hide()") Discovery
+        router-link.navbar-item(v-if="auth.user && hasSubscriptions" :to='{ name: "search", query: { feed: "true" } }' @click.native="hide()") Subscriptions
+        router-link.navbar-item(v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()") 
+          | Watched ({{watchedCount}})
+        router-link.navbar-item(v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()") 
+          | Favorites ({{favoriteCount}})
+        a.navbar-item(@click="$refs.tags.expand()") 
+          i.fas.fa-hashtag 
+          | &nbsp;Tags
+        ExpandableTags(ref="tags" title="Tags" items="tags" :limit="10" type="tag" attr="tag")
+          template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
+        a.navbar-item(@click="$refs.speakers.expand()") 
+          i.far.fa-user-circle
+          | &nbsp;Speakers
+        ExpandableTags(ref="speakers" title="Speakers" items="speakers" :limit="10" type="speaker" attr="twitter")
+          template(slot-scope="slot") {{slot.item.name | capitalizeIfNeeded}}
+        a.navbar-item(@click="$refs.channels.expand()") 
+          i.fab.fa-youtube
+          | &nbsp;Channels
+        ExpandableTags(ref="channels" title="Channels" items="channels" :limit="10" type="channel" attr="title")
+          template(slot-scope="slot") {{slot.item.title | truncate(25) | capitalizeIfNeeded}}
         slot
       .navbar-end
-        a.navbar-item.is-hoverable.is-size-7(v-if="auth.user")
+        a.navbar-item.is-hoverable(v-if="auth.user")
           .face.is-hidden-touch(:style="'background-image: url(' + auth.user.photoUrl + ')'")
           font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
           span.is-hidden-desktop {{auth.user.name}}
-          .navbar-dropdown.is-boxed.is-size-7
-            a.navbar-item.is-size-7(@click="showWatched()") 
-              | Watched videos ({{watchedCount}})
-            a.navbar-item.is-size-7(@click="showFavorites()") 
-              | Favorites ({{favoriteCount}})
+          .navbar-dropdown.is-right.is-boxed
+            NightMode
             a.navbar-item(@click="signOut()") Logout
 
-        a.navbar-item.is-hoverable.is-size-7(v-else) Log in
-          .navbar-dropdown.is-boxed.is-size-7
-            a.navbar-item.is-size-7(@click="signIn('github'); hide()") via Github
-            a.navbar-item.is-size-7(@click="signIn('google'); hide()") via Google
-        NightMode
-        | &nbsp; &nbsp;  
+        a.navbar-item.is-hoverable(v-else) 
+          font-awesome-icon(:icon="['far', 'user']")
+          | &nbsp;Log in
+          .navbar-dropdown.is-right.is-boxed
+            a.navbar-item(@click="signIn('github'); hide()") via Github
+            a.navbar-item(@click="signIn('google'); hide()") via Google
+        | &nbsp;&nbsp;&nbsp;
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   input {
     -webkit-appearance: none;
@@ -46,6 +65,10 @@ header {
     border: 1px solid #6498cf;
     border-radius: 3px;
   }  
+
+  .navbar-menu .navbar-item {
+    font-size: 12px;
+  }
 
   .face {
     height: 30px;
@@ -76,6 +99,7 @@ header {
 <script>
   import Input from './Input.vue'
   import NightMode from './NightMode.vue'
+  import ExpandableTags from './ExpandableTags.vue'
 
   import { mapState, mapActions, mapGetters } from 'vuex'
 
@@ -83,7 +107,7 @@ header {
   export default {
     computed: {
       ...mapState([ 'auth' ]),
-      ...mapGetters('videos', [ 'watchedCount', 'favoriteCount' ])
+      ...mapGetters('videos', [ 'watchedCount', 'favoriteCount', 'hasSubscriptions' ])
     },
     data: function() {
       return {
@@ -101,22 +125,8 @@ header {
       home() {
         window.location = "/"
       },
-      showWatched() {
-        this.$router.push({
-          name: 'search',
-          query: { w: 'true' }
-        });
-        this.hide();
-      },
-      showFavorites() {
-        this.$router.push({
-          name: 'search',
-          query: { f: 'true' }
-        });
-        this.hide();
-      },
       ...mapActions('auth', [ 'signOut', 'signIn']),
     },
-    components: { Input, NightMode }  
+    components: { Input, NightMode, ExpandableTags }  
   }
 </script>

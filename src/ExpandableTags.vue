@@ -1,34 +1,27 @@
 <template lang="pug">
-  .expandable-tags
-    .modal(v-bind:class="{'is-active': !collapsed}")
-      .modal-background(@click="collapsed = !collapsed")
-      .modal-content
-        .field.is-grouped.is-grouped-multiline
-          .control(v-for="item in items")
-            .tags.has-addons
-              a.tag.is-dark(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
-              a.is-black.tag(@click="navigate(item)") 
-                | {{item.videos.total | kilo}}  
-              .newCount.has-text-info(v-if="item.videos.new == item.videos.total") NEW!
-              .newCount(v-else-if="item.videos.new > 0") +{{item.videos.new}}
-      .modal-close.is-large(aria-label="close" @click="collapsed = !collapsed")
-
-    .is-hidden-mobile
-      p
-        h2.subtitle
-          a(@click="collapsed = false") 
-            i(v-bind:class="fontAwesome")
-            |  {{title}}
-        .tags.has-addons.is-marginless(v-for="item in items.slice(0, limit)")
-          //- a.tag.is-white(title="Subscribe"): font-awesome-icon(icon="plus")
-          a.tag.is-white.is-capitalized(@click="navigate(item)"): slot(v-bind:item="item") {{item}}
-          a.tag(@click="navigate(item)") 
-            | {{item.videos.total | kilo}}
-          .newCount.has-text-info(v-if="item.videos.new == item.videos.total") NEW!
-          .newCount(v-else-if="item.videos.new > 0") +{{item.videos.new}}
-        .tags.has-addons.is-marginless
-          a.tag.is-white.is-capitalized(@click="collapsed = !collapsed") More
-          a.tag(@click="collapsed = !collapsed") ...
+  mixin newCount
+    .newCount.has-text-info(v-if="item.videos.new == item.videos.total") NEW!
+    .newCount.has-text-white(v-else-if="item.videos.new > 0") +{{item.videos.new}}  
+  .modal(v-bind:class="{'is-active': isExpanded}")
+    .modal-background(@click="toggleCollapse()")
+    .modal-content
+      .field.is-grouped.is-grouped-multiline(v-for="item in itemsColection")
+        .control
+          .tags.has-addons
+            a.tag.is-dark(@click="navigate(item)")
+              slot(v-bind:item="item") 
+                | {{item}}
+            a.is-black.tag(@click="navigate(item)") 
+              | {{item.videos.total | kilo}} videos
+            +newCount()
+        .subscribes(v-if="auth.user")
+          a.button.is-danger.is-outlined.is-small(v-if="hasSubscription(subscription(item))" @click="toggleSubscription(subscription(item))") 
+            .icon.is-small
+              font-awesome-icon(icon="times")
+            span unsubscribe
+          a.button.is-info.is-outlined.is-small(v-else @click="toggleSubscription(subscription(item))") 
+            span subscribe
+    .modal-close.is-large(aria-label="close" @click="toggleCollapse()")
 </template>
 <style lang="scss">
   .collapsedScreen .has-addons {
@@ -43,27 +36,49 @@
   }
 </style>
 <script>
+
+  import { mapState, mapActions, mapGetters } from 'vuex'
+
   export default {    
     computed: {
-      fontAwesome: function () {
-        return this.icon
-      }
+      isExpanded() {
+        return !this.collapsed
+      },
+      itemsColection() {
+        return window.featured[this.items]
+      },
+      ...mapState([ 'auth' ]),
+      ...mapGetters('videos', ['hasSubscription']),
     },
     props: {
-      icon:  { type: String, required: false },
+      attr: { type: String, required: false },
       title: { type: String, required: false },
-      route: { type: Function, required: true },
+      type: { type: String, required: true },
       limit: { type: Number, required: true },
-      items: { type: Array, required: true }
+      items: { type: String, required: true }
     },
     methods: {
-      expand: function() {
+      subscription(item) {
+        return { topic : item[this.attr], type : this.type }
+      },
+      expand() {
         this.collapsed = false
       },
-      navigate: function(item) {
+      toggleCollapse() {
+        console.log(!this.collapsed)
+        this.collapsed = !this.collapsed
+        console.log(this.collapsed)
+      },
+      navigate(item) {
+        this.$parent.hide()
         this.collapsed = true
-        this.$router.push(this.route(item))
-      }
+        let routeParams = { }
+        routeParams[this.type] = item[this.attr]
+        let route = { params: routeParams }
+        route.name = this.type
+        this.$router.push(route)
+      },
+      ...mapActions('videos', [ 'toggleSubscription']),
     },
     data: function() {
       return {
