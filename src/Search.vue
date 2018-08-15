@@ -168,7 +168,7 @@ export default {
       }
 
       if (this.tag) {
-        this.searchStore.queryParameter2s = { refinement: { 'tags' : { $contains: this.tag } } }
+        this.searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
       }
       if (this.channel) {
         this.searchStore.queryParameters = { refinement: { 'channelTitle' : this.channel } }
