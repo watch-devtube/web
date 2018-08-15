@@ -1,8 +1,8 @@
 <template lang="pug">
   .related-videos
     .columns.is-multiline
-      .column.is-6.is-4-widescreen.shrinkIfEmpty(v-for="video in hits")
-        VideoCard(:tags="video.tags" :featured="video.featured" :speaker="video.speaker" :creationDate="video.creationDate" :recordingDate="video.recordingDate" :duration="video.duration" :views="video.views" :satisfaction="video.satisfaction" :title="video.title" :id="video.objectID" :channel="video.channelTitle")
+      .column.is-6.is-3-widescreen.shrinkIfEmpty(v-for="video in hits")
+        VideoCard(:tags="video.tags" :speaker="video.speaker" :creationDate="video.creationDate" :recordingDate="video.recordingDate" :duration="video.duration" :views="video.views" :satisfaction="video.satisfaction" :title="video.title" :id="video.objectID" :channel="video.channelTitle")
 </template>
 <style lang="scss">
   .shrinkIfEmpty:empty {
@@ -26,14 +26,6 @@
     },
     asyncComputed: {
       hits() {
-        
-        let shuffle = (a) => {
-          for (let i = a.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]];
-          }
-          return a;
-        }
 
         let watchedIds = this.watchedIds
 
@@ -58,14 +50,14 @@
               {
                 params: {
                   refinement: refinement,
-                  sortOrder: '-featured',
+                  sortOrder: '-satisfaction',
                   excludes: watchedIds.concat([this.videoId])
                 }
               }
             ]
           })
           .then(response => response.data.results[0].hits)
-          .then(hits => shuffle(hits).slice(0, 3))
+          .then(hits => this.shuffle(hits).slice(0, 4))
           .then(hits => {
             this.$Progress.finish()
             return hits

@@ -4,224 +4,11 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 12 Aug 2018 04:33:19 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Aug 2018 04:32:06 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[#DCBerlin18 406 Corti The Curious Case of Android Button DAY1]]></title>
-            <description><![CDATA[Nicola Corti, Android Engineer, Yelp Inc.
-
-THE CURIOUS CASE OF ANDROID BUTTON
-Intermediate / Design / UI/UX / Talk
-
-We interact with buttons every day to get coffee, order pizza, or start a new Gradle build. They may look simple and straightforward, but they have a fundamental role in our environment: create a sense of power. We all love to feel empowered and we all hate being frustrated by bad design. Your users know this as well, they want to feel immediately rewarded when they interact with your UI, and they will quickly drop your app if they get annoyed. At Yelp, we get tens of millions button clicks a day. At that kind of scale, every pixel matters. We tune every single aspect of our buttons to make them simple and powerful, but adjusting every single shadow cast, click animation, or color layer can be tricky. In this talk, we will provide a deep dive into the Android framework and the Support Library to understand how buttons are rendered.]]></description>
-            <link>https://dev.tube/video/6MmzwZMYWoA</link>
-            <guid isPermaLink="true">https://dev.tube/video/6MmzwZMYWoA</guid>
-            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 403 Pinto Escapabstracting the Map DAY1]]></title>
-            <description><![CDATA[Marcel Pinto, Lead Android Developer, HERE Technologies
-
-ABSTRACTING THE MAP
-Intermediate / Android Architecture / Talk
-
-
-A while back my PO came to me and said: “Hey! we've got a new map provider, let’s change it”. Panic mode! At the time I was dealing with a legacy app where the Map implementation was everywhere! Every developer eventually faces situations like this one, but not only that, dealing with maps sometimes can get messy and complex. After years dealing with those issues, with new architecture and pattern concepts we can properly abstract the Map, so when your PO says “Let’s change the full Map” you can just say “no problem, give me a minute!” I will try to solve questions like: “In which layer does the Map implementation goes?” “How can we abstract the map from our business logic?” “How to deal with Map Objects and camera updates?” Among other key concepts that will help you deal with Maps in your Android apps.]]></description>
-            <link>https://dev.tube/video/UKKZk5LZtm0</link>
-            <guid isPermaLink="true">https://dev.tube/video/UKKZk5LZtm0</guid>
-            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 404 Montiel Hacking Growth Beelinguaapps Journey to a Million Organic Downloads DAY1]]></title>
-            <description><![CDATA[David Montiel, CEO & Founder, Beelinguapp
-HACKING GROWTH : BEELINGUAPP'S JOURNEY TO A MILLION ORGANIC DOWNLOADS
-
-Beelinguapp is a language learning app built by a single developer. It has reached 1 million organic downloads, Google Play's Editor's Choice and is the highest rated language learning app with 4.8 stars. In this talk David Montiel will talk about the best practices, android design guidelines, methodologies and tools that he used to get Beelinguapp to its current position, an outstanding place for any startup.]]></description>
-            <link>https://dev.tube/video/gJ-aDE5yB1k</link>
-            <guid isPermaLink="true">https://dev.tube/video/gJ-aDE5yB1k</guid>
-            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[401 Dorfmann Tarasenko Advanced Model View Intent The Missing Guide DAY1]]></title>
-            <description><![CDATA[Hannes Dorfmann, Android Developer, Freeletics
-Kostiantyn Tarasenko, Senior Android Developer Intermediate Android Architecture, Freeletics
-
-ADVANCED MODEL-VIEW-INTENT: THE MISSING GUIDE
-Intermediate / Android Architecture / Talk
-
-State-focused architectural design patterns such as Model-View-Intent (MVI) have seen a recent surge in popularity. Have you already considered implementing a state machine based approach for your app? Are you afraid how this architecture scales in the real world? Have you ever wondered how to deal with in-app navigation, A/B tests, animations or ultimately how to test and maintain such architecture efficiently? In this talk we start where other introduction talks end. We will share our knowledge and learnings about the state- machine- based architecture we use in our app that is used by millions of users.]]></description>
-            <link>https://dev.tube/video/mpfHG-aUgGU</link>
-            <guid isPermaLink="true">https://dev.tube/video/mpfHG-aUgGU</guid>
-            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 405 Schranz ARTist A Novel Instrumentation Framework for Customizing and Analyzing Apps]]></title>
-            <description><![CDATA[Oliver Schranz, Researcher & Ph.D. Student, CISPA, Saarland University
-
-ARTIST - A NOVEL INSTRUMENTATION FRAMEWORK FOR CUSTOMIZING AND ANALYZING APPS
-Pro / Open Source and Research / Talk
-
-In this talk, I will give an introduction to a novel instrumentation framework called ARTist, the Android Runtime instrumentation and security toolkit, which allows to arbitrarily modify the code of installed apps. Similar to existing approaches, such as Frida and XPosed, this can be used for modding applications (adding or removing functionality) and app analysis (record traffic, change files, modify databases). However, it does not break the app signature and hence modified applications still receive updates without compromising on security. Additionally, it is capable of modifying not only apps, but also the system server (Package Manager, Activity Manager Service, ...) and application framework classes (everything within framework.jar, ...). I will first outline the basic architecture of ARTist that is built on top of the Android Runtime's (ART) on-device compiler. We will have a look at the underlying design decisions and the deployment options, from regular (rooted) devices to custom ROMs. Then, I will introduce the ARTist SDK that allows developers to easily create own Modules to adapt the functionality of their favorite apps to their needs.
-The goal is to make you comfortable with creating own extensions for your installed apps. And finally, it will showcase some interesting Modules for different use cases, such as app reversing and analysis for pentesters and researchers, and app customization and modding for developers and power users. By the end of this session, you will be able to judge which problems ARTist can solve and how to get started with your first Module right away.]]></description>
-            <link>https://dev.tube/video/w2FWoaRoQLs</link>
-            <guid isPermaLink="true">https://dev.tube/video/w2FWoaRoQLs</guid>
-            <pubDate>Sun, 12 Aug 2018 01:29:11 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[React Meetup @ ZEIT]]></title>
-            <description><![CDATA[An evening to learn and discuss everything React.
-https://zeit.co/react-meetup]]></description>
-            <link>https://dev.tube/video/N-5TNKJ7eB0</link>
-            <guid isPermaLink="true">https://dev.tube/video/N-5TNKJ7eB0</guid>
-            <pubDate>Sun, 12 Aug 2018 01:29:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Interfacing R and Python || Andrew Collier]]></title>
-            <description><![CDATA[R versus Python for Data Science: the heated battle still rages. But is it really necessary to be partisan on this issue? I don't think so. There are strong arguments in favour of both languages and each clearly has a role to play.
-
-My contention is that the best outcome is a compromise: interfacing the two languages allows one to leverage the strengths of both sides. There are already a few options for such an interface. However, the recently released reticulate package from RStudio kicks this capability up a number of notches. It embeds a Python session in the R environment, exposing a seamless and performant interface.
-
-In this talk I will lay out various reasons to embrace the idea of interfacing R and Python, then show how the reticulate package makes this possible. If you use both R and Python then this can significantly simplify and accelerate your workflow.
-
-EVENT:
-
-PyData Berlin 2018
-
-SPEAKER:
-
-Andrew Collier
-
-PERMISSIONS:
-
-PyData provided Coding Tech with the permission to republish this video.
-
-CREDITS:
-
-PyData: https://pydata.org/berlin2018/schedule/presentation/19/]]></description>
-            <link>https://dev.tube/video/SAGkRuS7Chc</link>
-            <guid isPermaLink="true">https://dev.tube/video/SAGkRuS7Chc</guid>
-            <pubDate>Sun, 12 Aug 2018 01:23:12 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Build a Reactive Flutter App]]></title>
-            <description><![CDATA[Interested in Flutter, but love RxJava and MVI? Curious about how to structure Flutter apps? If so, join along as we explore how to architect apps using using Dart Streams! We'll cover the basics of Streams, how to beef up their power with RxDart, and how to create a Reactive Application with these patterns.
-
-This talk will cover the Bloc pattern introduced by Google. It's similar to MVI, and helps layer your apps, allowing you to write business logic that works flawlessly across three platforms: iOS, Android, and web.
-
-Come learn a bit more about Flutter and the architecture patterns that can help give your apps a testable, reusable, and cohesive structure!
-
-EVENT:
-
-DCBerlin18
-
-SPEAKER:
-
-Brian Egan
-
-PERMISSIONS:
-
-Original video was published with the Creative Commons Attribution license (reuse allowed).
-
-CREDITS:
-
-Original video source: https://www.youtube.com/watch?v=As6sFqpIwII]]></description>
-            <link>https://dev.tube/video/n5FMO6G5oI8</link>
-            <guid isPermaLink="true">https://dev.tube/video/n5FMO6G5oI8</guid>
-            <pubDate>Sun, 12 Aug 2018 01:23:12 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[PyTorch Coding Challenge (LIVE)]]></title>
-            <description><![CDATA[PyTorch is a popular deep learning library released by Facebook's AI Research lab. In this video, I'll explain some of its unique features, then use it to solve the Kaggle "Invasive Species Monitoring Challenge". Sometimes, certain species of plants can slowly destroy an ecosystem if left unchecked. We're going to build a ResNet classifier using PyTorch to help detect which plants need to be removed to help the larger ecosystem survive. Get hype! Starts at 2:18 
-
-Code for this video:
-https://github.com/llSourcell/Pytorch_Coding_Challenge_LIVE
-
-Please Subscribe! And like. And comment. That's what keeps me going. 
-
-Want more education? Connect with me here:
-Twitter: https://twitter.com/sirajraval
-instagram: https://www.instagram.com/sirajraval
-Facebook: https://www.facebook.com/sirajology
-
-This video is apart of my Machine Learning Journey course:
-https://github.com/llSourcell/Machine...
-
-More Learning Resources:
-https://github.com/pytorch/examples
-https://pytorch.org/
-https://medium.com/@14prakash/almost-any-image-classification-problem-using-pytorch-i-am-in-love-with-pytorch-26c7aa979ec4
-https://www.youtube.com/watch?v=FloMHMOU5Bs
-
-Join us in the Wizards Slack channel:
-http://wizards.herokuapp.com/
-
-Sign up for the next course at The School of AI:
-https://www.theschool.ai
-
-And please support me on Patreon:
-https://www.patreon.com/user?u=3191693]]></description>
-            <link>https://dev.tube/video/TvwYV0viIQE</link>
-            <guid isPermaLink="true">https://dev.tube/video/TvwYV0viIQE</guid>
-            <pubDate>Sat, 11 Aug 2018 01:32:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CNCF Serverless WG Meeting - 2018-08-09]]></title>
-            <link>https://dev.tube/video/0eig_lLy0lU</link>
-            <guid isPermaLink="true">https://dev.tube/video/0eig_lLy0lU</guid>
-            <pubDate>Sat, 11 Aug 2018 01:32:15 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[IoT Devices Examples | IoT Applications | Internet of Things Training | Edureka]]></title>
-            <description><![CDATA[** Edureka IoT Training : https://www.edureka.co/iot-certification-training** 
-(IoT Playlist: https://goo.gl/hVG7Cw) 
-The “Things” in IoT have been inspiring smart and superior systems across the globe at low power and even at low costs. In short, these IoT devices are laying the foundation for countless futuristic projects like proverbial home automation systems or smart cities. Know the best examples of these devices being implemented in the leading use cases of today’s world and understand what they’re made up of and what you can do to make them more secure.
-Subscribe to our channel to get video updates. Hit the subscribe button above. 
-#IoT #IoTdevices #IoTtutorial #Things #UseCases #InternetOfThings #iotonlinetraining #Edureka 
-
--------------------------- 
-
-About our IoT Training 
-IoT Certification Training is designed by industry experts to make you a Certified IoT Developer. Edureka IoT training covers: 
-Understanding of IoT architecture and IoT Decision Framework 
-Configure Raspberry Pi, Understand Sensors, Actuators & get started with python on Raspberry Pi 
-Program Sensors (Sense-HAT board), Face Detection and reorganization using OpenCV-Python 
-Understand various IoT Networking Protocols which are mainly used to develop communication solutions
-Getting started with Cloud and Azure IoT Hub, demonstration of Azure IoT Hub APIs 
-Architect an End-to-End Solution using Raspberry Pi, Sense HAT, and Azure 
-Perform Data Analytics on the collected sensor data, use prediction algorithms to get useful insights 
-IoT challenges, business solutions, research scope and current development, Alexa Voice Bot on Raspberry Pi 
-
--------------------------- 
-
-Who should go for this IoT Training? 
-This IoT Certification Training on Azure is for all the professionals who are passionate about work with IoT devices and want to go ahead and make their career as an IoT Developer. It is best suited for individuals who are: 
-Software Developers who are venturing into IoT space 
-Solution Architects 
-Technical Architects 
-Students who seek IoT knowledge 
-Business Executives and Managers who want to understand the essentials of IoT 
-
-------------------- 
-
-Why Learn IoT? 
-Internet of Things is considered as the next big technology revolution after invention of the Internet. It is supposed to make tremendous impacts on lives and may possibly lead to the betterment of millions of lives throughout the world. According to Cisco, over 50 million devices are expected to be connected to IoT by 2020. 
-Healthcare, Logistics, Aviation, Education, Information Technology name any thing and IoT will become an integral part of all these verticals. Internet of Things is believed to bring about the singularity which will ultimately converge into becoming the Internet of Everything. IoT has, therefore, become a leading interest of technologists globally and is perceived to be the NEXT BIG THING in IT industry. Learning IoT will not only provide you a career boost but you will also be able to gain insights on how technology has affected the world and will continue to do so in the coming decades. 
-
-For more information, please write back to us at sales@edureka.co 
-Call us at US: +18336900808 (Toll Free) or India: +918861301699 
-Facebook: https://www.facebook.com/edurekaIN/ 
-Twitter: https://twitter.com/edurekain 
-LinkedIn: https://www.linkedin.com/company/edureka 
-
-Customer Review: 
-Michael Harkins, System Architect, Hortonworks says: “The courses are top rate. The best part is live instruction, with playback. But my favorite feature is viewing a previous class. Also, they are always there to answer questions, and prompt when you open an issue if you are having any trouble. Added bonus ~ you get lifetime access to the course you took!!! ~ This is the killer education app... I've taken two courses, and I'm taking two more.”]]></description>
-            <link>https://dev.tube/video/17HMbyNaDjM</link>
-            <guid isPermaLink="true">https://dev.tube/video/17HMbyNaDjM</guid>
-            <pubDate>Sat, 11 Aug 2018 01:32:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[The Future of Storytelling: How Medium Shapes Story]]></title>
-            <description><![CDATA[In this 2013 GDC session, Schell Games' Jesse Schell examines the history of how different mediums have shaped and re-shaped the story, cull out the most useful patterns, uses them to look forward to the mediums we know are coming next, and makes some bold predictions about the shape of stories to come.
+            <title><![CDATA[Partnership on Darkest Dungeon: The Double-Edged Sword]]></title>
+            <description><![CDATA[In this 2018 GDC session, Red Hook Studios' Tyler Sigman & Chris Bourassa share crucial lessons learned throughout the development of Darkest Dungeon, including the challenges of running a company with two presidents. 
 
 Register for GDC: http://ubm.io/2gk5KTU
 
@@ -230,149 +17,399 @@ Join the GDC mailing list: http://www.gdconf.com/subscribe
 Follow GDC on Twitter: https://twitter.com/Official_GDC 
 
 GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/BjrO-di22v8</link>
-            <guid isPermaLink="true">https://dev.tube/video/BjrO-di22v8</guid>
-            <pubDate>Sat, 11 Aug 2018 01:30:42 GMT</pubDate>
+            <link>https://dev.tube/video/UoogT3XOl-8</link>
+            <guid isPermaLink="true">https://dev.tube/video/UoogT3XOl-8</guid>
+            <pubDate>Wed, 15 Aug 2018 01:35:47 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Cucumber Pro Demo - Webinar, 9th Aug 2018]]></title>
-            <description><![CDATA[In this webinar, Matt Wynne CEO of Cucumber will show you how you can:
+            <title><![CDATA[DeepMind AlphaGo Zero Explained]]></title>
+            <description><![CDATA[DeepMind's AlphaGo Zero algorithm beat the best Go player in the world by training entirely by self-play. It played against itself repeatedly, getting better over time with no human gameplay input. AlphaGo Zero was a remarkable moment in AI history, a moment that will always be remembered. Move 37 in particular is worthy of many philosophical debates. You'll see what I mean and get a technical overview of its neural components (code + animations) in this video. Enjoy! 
 
-- Publish feature files as gorgeous living documentation direct from source control
-- Version those documents, using git branches and Releases
-- Collaborate around the feature files using in-line conversations
-- Publish test results to Cucumber Pro for extra confidence in the documentation
+Code for this video:
+https://github.com/Zeta36/chess-alpha-zero
 
-Finally, we’ll look at how you can bring all this together with release approval - allowing business stakeholders to sign off on the requirements, test cases and test results for each release of your product with a single click.
+Please Subscribe! And like. And comment. That's what keeps me going. 
 
-You should watch if you:
+Want more education? Connect with me here:
+Twitter: https://twitter.com/sirajraval
+instagram: https://www.instagram.com/sirajraval
+Facebook: https://www.facebook.com/sirajology
 
-- are already invested in BDD as an organisation and ready to 
-- amplify that investment
-- want to empower product owners to stay involved in the BDD process from beginning to end
-- need an in-house appliance installation of Cucumber Pro to keep your feature files secure
-- have the clout to access the necessary infrastructure to set up an appliance: a Linux server/VM, SMTP & LDAP access, firewall configuration etc.
+There are 2 errors in this video:
+1. At the top of the residual network, it says value layer twice. One should say 'policy' layer.
+2 The residual network is 40 layers, i say 20. 
 
-Want to become a Cucumber Pro appliance customer? Read up on our requirements and installation steps here - https://app.cucumber.pro/projects/cucumber-pro/documents/branch/master/features/appliance.md
+This video is apart of my Machine Learning Journey course:
+https://github.com/llSourcell/Machine_Learning_Journey
 
-Just want to take our SaaS app for a spin? Sign up here - https://app.cucumber.pro/signup]]></description>
-            <link>https://dev.tube/video/wNBadMEeoEY</link>
-            <guid isPermaLink="true">https://dev.tube/video/wNBadMEeoEY</guid>
-            <pubDate>Sat, 11 Aug 2018 01:29:44 GMT</pubDate>
+More Learning Resources:
+https://deepmind.com/blog/alphago-zero-learning-scratch/
+https://medium.com/applied-data-science/alphago-zero-explained-in-one-diagram-365f5abf67e0
+https://hackernoon.com/the-3-tricks-that-made-alphago-zero-work-f3d47b6686ef
+https://web.stanford.edu/~surag/posts/alphazero.html
+http://tim.hibal.org/blog/alpha-zero-how-and-why-it-works/
+http://www.jessicayung.com/alphago-zero-an-overview-of-the-algorithm/
+
+Join us in the Wizards Slack channel:
+http://wizards.herokuapp.com/
+
+Sign up for the next course at The School of AI:
+https://www.theschool.ai
+
+And please support me on Patreon:
+https://www.patreon.com/user?u=3191693
+
+#AlphaGoZero #Deepmind #SirajRaval]]></description>
+            <link>https://dev.tube/video/UzYeqAJ2bA8</link>
+            <guid isPermaLink="true">https://dev.tube/video/UzYeqAJ2bA8</guid>
+            <pubDate>Wed, 15 Aug 2018 01:32:29 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Azure Data Factory visual tools now integrated with GitHub | Azure Friday]]></title>
-            <description><![CDATA[Gaurav Malhotra joins Lara Rubbelke to discuss how you can associate a GitHub repository (public & enterprise) to your Azure Data Factory for collaboration, versioning, source control.
+            <title><![CDATA[(⌐_) Turnable Tables, Part 1 (_¬)  | 3D CSS Record Player | @keyframers 1.18.0]]></title>
+            <description><![CDATA[Stephen Shaw and a faintly appearing David Khourshid create a 3D turntable with CSS! Control the rotation & open the lid with the power of CSS Variables.
 
-For more information, see:
+Part 2 will air next week on August 20th! Tune in a twitch.tv/keyframers for the live stream.
 
-+ Azure Data Factory Visual tools now support GitHub integration (blog post) https://aka.ms/azfr/462/01
-+ Visual authoring in Azure Data Factory - Author with GitHub integration (docs) https://aka.ms/azfr/462/02
-+ Azure Data Factory overview https://aka.ms/azfr/462/03
-+ Azure Data Factory pricing https://aka.ms/azfr/462/04
-+ Azure Data Factory docs https://aka.ms/azfr/462/05
-+ Create a free account (Azure) https://aka.ms/azfr/462/free]]></description>
-            <link>https://dev.tube/video/3xgbMpDPXNM</link>
-            <guid isPermaLink="true">https://dev.tube/video/3xgbMpDPXNM</guid>
-            <pubDate>Sat, 11 Aug 2018 01:29:09 GMT</pubDate>
+* ⏰ Streamed live on August 13, 2016 at https://twitch.tv/keyframers
+* 💡Inspiration: https://dribbble.com/shots/4930227-Vinyls-E-Commerce-App
+* 📺 Video: https://youtu.be/tdWxCsAqx7I
+* 💻 Code: https://cdpn.io/pen/YjMwqX/
+
+Skip around:
+2:00 Animation overview
+6:00 Start coding
+1:40:00 Keyflections
+
+Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+
+* Like & subscribe on YouTube at https://youtube.com/keyframers
+* Follow & tweet us at https://twitter.com/keyframers.
+* Join the live streams & subscribe on Twitch https://twitch.tv/keyframers 
+* Support us on Patreon at https://patreon.com/keyframers 
+
+Topics covered:
+
+* CSS Variables
+* CSS 3D
+* input[type="range"]]]></description>
+            <link>https://dev.tube/video/tdWxCsAqx7I</link>
+            <guid isPermaLink="true">https://dev.tube/video/tdWxCsAqx7I</guid>
+            <pubDate>Wed, 15 Aug 2018 01:32:14 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[TWC9: CosmosDB JavaScript SDK Updates, Linux on ASE, Underwater Data Center Webcams, and more]]></title>
-            <description><![CDATA[This week on Channel 9, Christina is back, this time wearing more ironic merch (keep those nerd shirt suggestions coming!), and ready to talk about the latest developer news, including:
+            <title><![CDATA[ml5.js: Feature Extractor Classification]]></title>
+            <description><![CDATA[In this video, I use ml5's feature extractor to train a machine learning image classifier with my own images. #machinelearning #classification #ml5 #p5js
 
-* 0:30 [Azure Devs at GopherCon](https://twitter.com/OpenAtMicrosoft/status/1027585301127077890), including a workshop on [Cloud-native Go](https://www.gophercon.com/agenda) and an upcoming [Azure Friday takeover](https://twitter.com/azurefriday/status/1027650725881569281). 
+🔗code: https://github.com/CodingTrain/website/tree/master/Courses/beginner_ml5
 
-* 0:53 [Microsoft Ignite - now with more code](https://www.microsoft.com/en-us/ignite/developer?ocid=AID725708_QSG_BLOG_263164&Aud=DEV) and you can [register for Ignite](https://www.microsoft.com/en-us/ignite/developer?ocid=AID725708_QSG_BLOG_263164&Aud=DEV). It runs September 24-28 in Orlando.
+🎥 Next Video: https://youtu.be/aKgq0m1YjvQ
 
-* 1:24 [Azure CosmosDB JavaScript SDK 2.0 Public Preview](https://azure.microsoft.com/en-us/blog/new-azure-cosmosdb-javascript-sdk-2-0-now-in-public-preview/)
+🔗 ml5.js: https://ml5js.org
+🔗 Teachable Machine: https://teachablemachine.withgoogle.com/
+🔗 New Classification & Regression Examples: https://github.com/ml5js/ml5-library/issues/128
+🔗 Pong ml5.js: https://github.com/matamalaortiz/Pong-ML
 
-* 2:06 [Linux on Azure App Service Enviornment now Generally Available](https://azure.microsoft.com/en-us/blog/linux-on-azure-app-service-environment-now-generally-available/)
+🚂 Website: http://thecodingtrain.com/ 
+💖 Patreon: https://patreon.com/codingtrain
+🛒 Store: https://codingtrain.storenvy.com
+📚 Books: https://www.amazon.com/shop/thecodingtrain 
 
-* 2:48 [Windows Container Support in Azure App Service Public Preview](https://azure.microsoft.com/en-us/blog/announcing-the-public-preview-of-windows-container-support-in-azure-app-service/)
-* 3:20 [#FiveThings About CSS](https://channel9.msdn.com/Shows/5-Things/Episode-25-Five-Things-About-CSS)
+🎥  Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥  Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
 
-* 3:31 [Defrag Tools: Console Command Favorites](https://channel9.msdn.com/Shows/Defrag-Tools/Defrag-Tools-195-Console-Command-Favorites)
-
-* 3:44 [The Xamarin Show: FlexLayout for Xamarin.Forms Explained](https://channel9.msdn.com/Shows/XamarinShow/FlexLayout-for-XamarinForms-Explained)
-
-* 4:00 [VS Code Extensions For the Discerning Developer Palette](https://css-tricks.com/vs-code-extensions-for-the-discerning-developer-palette/)
-
-* 4:20 [Microsoft Underwater Data Center Gets Webcams](https://www.theverge.com/tldr/2018/8/9/17669936/microsoft-undersea-datacenter-webcam) amd you can [watch the stream](ttps://natick.research.microsoft.com/) at the project website. Utterly mesmerizing!
-
-* 4:47 **Christina's Pick of the Week** [Meet the 15-year old World Excel Champion](https://www.cnn.com/2018/08/08/us/microsoft-excel-champion-trnd/index.html)
-
-Don't forget to let me know your favorite VS Code extensions in the comments!
-
-Please leave a comment or email us at twc9@microsoft.com.
-
-Follow @CH9 http://www.twitter.com/ch9
-Follow @film_girl http://www.twitter.com/film_girl
- 
-Create a Free Account (Azure) https://aka.ms/c9-azurefree]]></description>
-            <link>https://dev.tube/video/4vZqmfCZ0M0</link>
-            <guid isPermaLink="true">https://dev.tube/video/4vZqmfCZ0M0</guid>
-            <pubDate>Sat, 11 Aug 2018 01:29:09 GMT</pubDate>
+🔗  https://p5js.org/
+🔗  https://processing.org]]></description>
+            <link>https://dev.tube/video/eeO-rWYFuG0</link>
+            <guid isPermaLink="true">https://dev.tube/video/eeO-rWYFuG0</guid>
+            <pubDate>Wed, 15 Aug 2018 01:32:10 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin 109 Junginger C++ Cross Platform DAY1]]></title>
-            <description><![CDATA[Markus Junginger, CTO, ObjectBox
+            <title><![CDATA[Cross Site Scripting Tutorial | Penetration Testing Tutorial | Web Application Security | Edureka]]></title>
+            <description><![CDATA[In this Edureka live, we will go over one of the most rampant vulnerability of web based applications i.e. Cross Site Scripting. The following topics will be covered in this session:
 
-CROSS PLATFORM APP CORES WITH MODERN C++
-Cross-Plattform Development, Talk, Pro
+1. What is Cross Site Scripting
+2. Types of Cross Site Scripting 
+3. Repercussions on Cross Site Scripting
+4. Preventing Cross Site Scripting
+5. Demo on types of Cross Site Scripting
 
-C++ is known for its efficiency, but did you know that modern C++ (C++11 and higher) is also fun to work with? For cross platform development, there’s hardly a better choice when it comes to performance sensitive code. And especially on Android with its VM based architecture, C++ outruns any Java/Kotlin based implementation by far.
-Cross-platform development with C++ is not restricted to the mobile world. With the right setup, you can boost your productivity by running your code on the desktop with minimal turnaround times. Basically, there’s no Gradle build you need to wait for.]]></description>
-            <link>https://dev.tube/video/--DSP1Geuqk</link>
-            <guid isPermaLink="true">https://dev.tube/video/--DSP1Geuqk</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+To practice Cross Site Scripting, download OWASP-BWAP from this link: https://sourceforge.net/projects/owaspbwa/
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/1qzjWNcQVeI</link>
+            <guid isPermaLink="true">https://dev.tube/video/1qzjWNcQVeI</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:59 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 110 Srivastava The A,B and C of Lifecicle Components DAY1]]></title>
-            <description><![CDATA[Nishant Srivastava, Sr. Android Engineer, Soundbrenner
+            <title><![CDATA[Neural Network Tutorial | Introduction to Neural Network | Deep Learning Tutorial | Edureka]]></title>
+            <description><![CDATA[( TensorFlow Training - https://www.edureka.co/ai-deep-learni... )  
 
-THE A, B AND C OF LIFECYCLE COMPONENTS
+This video will provide you with a brief and crisp knowledge of Neural Networks, how they work, the various parameters involved in the whole Deep Learning Process.
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Check our complete Deep Learning With TensorFlow playlist here:   https://goo.gl/cck4hE
+
+- - - - - - - - - - - - - -
+
+How it Works?
+
+1. This is 21 hrs of Online Live Instructor-led course. Weekend class: 7 sessions of 3 hours each.
+2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
+3. At the end of the training you will have to undergo a 2-hour LIVE Practical Exam based on which we will provide you a Grade and a Verifiable Certificate!
+
+- - - - - - - - - - - - - -
+
+About the Course
+Edureka's Deep learning with Tensorflow course will help you to learn the basic concepts of TensorFlow, the main functions, operations and the execution pipeline. Starting with a simple “Hello Word” example, throughout the course you will be able to see how TensorFlow can be used in curve fitting, regression, classification and minimization of error functions. This concept is then explored in the Deep Learning world. You will evaluate the common, and not so common, deep neural networks and see how these can be exploited in the real world with complex raw data using TensorFlow. In addition, you will learn how to apply TensorFlow for backpropagation to tune the weights and biases while the Neural Networks are being trained. Finally, the course covers different types of Deep Architectures, such as Convolutional Networks, Recurrent Networks and Autoencoders. 
+
+Delve into neural networks, implement Deep Learning algorithms, and explore layers of data abstraction with the help of this Deep Learning with TensorFlow course.
+
+
+- - - - - - - - - - - - - - 
+
+Who should go for this course?
+
+The following professionals can go for this course:
+
+1. Developers aspiring to be a 'Data Scientist'
+
+2. Analytics Managers who are leading a team of analysts 
+
+3. Business Analysts who want to understand Deep Learning (ML) Techniques
+
+4. Information Architects who want to gain expertise in Predictive Analytics
+
+5. Professionals who want to captivate and analyze Big Data
+
+6. Analysts wanting to understand Data Science methodologies
+
+However, Deep learning is not just focused to one particular industry or skill set, it can be used by anyone to enhance their portfolio.
+
+- - - - - - - - - - - - - - 
+
+Why Learn Deep Learning With TensorFlow?
+TensorFlow is one of the best libraries to implement Deep Learning. TensorFlow is a software library for numerical computation of mathematical expressions, using data flow graphs. Nodes in the graph represent mathematical operations, while the edges represent the multidimensional data arrays (tensors) that flow between them. It was created by Google and tailored for Machine Learning. In fact, it is being widely used to develop solutions with Deep Learning. 
+
+Machine learning is one of the fastest-growing and most exciting fields out there, and Deep Learning represents its true bleeding edge. Deep learning is primarily a study of multi-layered neural networks, spanning over a vast range of model architectures. Traditional neural networks relied on shallow nets, composed of one input, one hidden layer and one output layer. Deep-learning networks are distinguished from these ordinary neural networks having more hidden layers, or so-called more depth. These kinds of nets are capable of discovering hidden structures within unlabeled and unstructured data (i.e. images, sound, and text), which constitutes the vast majority of data in the world.
+
+Please write back to us at sales@edureka.co or call us at +91 88808 62004 for more information. 
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/WLxI4D01nj8</link>
+            <guid isPermaLink="true">https://dev.tube/video/WLxI4D01nj8</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:59 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[S3 Operations with AWS Lambda]]></title>
+            <description><![CDATA[Learn how to read and save a file into an S3 bucket using AWS-SDK from an AWS Lambda. We will create the bucket from the serverless.yml using cloudformation. Then, we will perform operations onto the stored files and save them back.
+
+💻Code: https://github.com/mavi888/serverless-s3-operations
+
+🔗Serverless 101 series: https://www.youtube.com/playlist?list=PLWKjhJtqVAbkXQS12WiLsH1oaNZBSoWuV
+
+🔗Marcia's channel: https://www.youtube.com/channel/UCSLIvjWJwLRQze9Pn4cectQ
+
+🔗Marcia's website: http://marciavillalba.com
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/GEizappc_WI</link>
+            <guid isPermaLink="true">https://dev.tube/video/GEizappc_WI</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Answering tricky JavaScript interview questions]]></title>
+            <description><![CDATA[We all work in our respective silos when writing JavaScript, be it a framework or library. After a few years working as a Front-end dev, I looked at a list of "JS interview" questions and realized that I couldn't answer many of them (at least not well). So I set out on a long, somewhat lonesome journey of JS discovery, and am pleased to share my findings with you, in the form of a talk.
+
+Regardless of how you feel about getting asked random questions meant to trick you up in an interview (you should be appalled), my talk will cover some basic JS subtleties, and hopefully fill in some knowledge gaps w/r/t:
+- Hoisting and variable scope
+- Expressions v. statements
+- Undeclared v. undefined v. null
+- Equality comparisons
+- How to properly walk out if an interviewer asks you to do fizz buzz
+
+This talk was given at Nodevember 2016 by Russell Anderson.
+
+Checkout the Nodevember channel for more great talks: https://www.youtube.com/channel/UC7z0nOE8ITfrGnXJgNzYaEQ
+
+This talk is under the creative commons license. freeCodeCamp is not associated with this talk. We're just excited to bring more exposure to to it!
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/jh86NGG9jdE</link>
+            <guid isPermaLink="true">https://dev.tube/video/jh86NGG9jdE</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Envoy Community Meeting - 2018-08-14]]></title>
+            <link>https://dev.tube/video/6Hl5yTPfEuw</link>
+            <guid isPermaLink="true">https://dev.tube/video/6Hl5yTPfEuw</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CNCF Networking WG Meeting - 2018-08-14]]></title>
+            <link>https://dev.tube/video/lBG38RIzOZE</link>
+            <guid isPermaLink="true">https://dev.tube/video/lBG38RIzOZE</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Chirp your device into Azure IoT Central]]></title>
+            <description><![CDATA[Here is a smart way to use sound to provision IoT devices with wireless configuration, Cloud connection credentials and more. Chirp (https://chirp.io) created enterprise-ready, cross platform SDKs for transmitting data over sound and the Azure IoT team collaborated with Chirp to implement a nice and easy way to setup an MXChip devkit and connect it to Azure IoT Central using just sound.
+
+Get started with Azure IoT Central: http://azureiotcentral.com
+
+Get started with the Chirp SDK: https://admin.chirp.io/
+
+Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
+            <link>https://dev.tube/video/1oCyJe7WS7o</link>
+            <guid isPermaLink="true">https://dev.tube/video/1oCyJe7WS7o</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Yang Li: Service Fabric Cluster Resource Manager]]></title>
+            <description><![CDATA[The Service Fabric Cluster Resource Manager (CRM, not to be confused with Customer Relationship Management) is responsible for optimizing the placement and load balancing (PLB, not to be confused with network load balancing) of nodes inside a cluster. This is the part of Service Fabric where Simulated Annealing is done to optimize and balance the "heat" distribution among nodes (so, no node does too little work (cold) nor too much work (hot) - balance is important - it's really Zen). You first heard about our use of a metallurgical algorithm during the Gopal interview. 
+
+Check out the Simulated Annealing algorithm as implemented by Yang and co:
+https://github.com/Microsoft/service-fabric/blob/master/src/prod/src/Reliability/LoadBalancing/Searcher.cpp#L1453
+
+Check out Yang's code:
+https://github.com/Microsoft/service-fabric/tree/master/src/prod/src/Reliability/LoadBalancing]]></description>
+            <link>https://dev.tube/video/4W3mB-j42rA</link>
+            <guid isPermaLink="true">https://dev.tube/video/4W3mB-j42rA</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Distributed Systems, Demystified: Cassandra, DataStax demo and FAQ]]></title>
+            <description><![CDATA[Distributed system blog posts, podcasts, and presentations are everywhere, but understanding how to actually use various tools, projects, and services? Not so straightforward.
+
+Adron Hall (@adron), Developer Evangelist at DataStax, joins Christina Warren (@film_girl) to break down distributed systems, including what they are (and aren't), then dive into questions to ask as you design distributed data systems and how to weigh pros and cons. 
+
+To help you visualize and get started, you'll see his favorite Cassandra* demo -- and how to make systems more intelligent and resilient across clouds and regions.
+
+*Apache Cassandra = NoSQL open source distributed database
+
+00:54 What is a Distributed System?
+04:07 Distributed database demo - multi-cloud, multi-node, DataStax and more
+08:32 When should I use a distributed system?
+10:00 Getting started resources, repos, and more
+
+Check out Microsoft + Open Source: https://opensource.microsoft.com/
+
+DataStax Academy materials available here: https://academy.datastax.com/courses
+
+Explore Cassandra: http://cassandra.apache.org/
+
+Adron's blog: https://compositecode.blog/
+
+DataStax Enterprise is available in the Azure Marketplace here: https://aka.ms/DataStax_and_Azure_Marketplace]]></description>
+            <link>https://dev.tube/video/6eI_sbSmuas</link>
+            <guid isPermaLink="true">https://dev.tube/video/6eI_sbSmuas</guid>
+            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 208 Friedrich Production Fluttering DAY1]]></title>
+            <description><![CDATA[Matthias Friedrich, Android Developer Beginner Cross-Plattform Development, Jimdo
+
+PRODUCTION FLUTTER'ING
+Beginner / Cross-Plattform Development / Talk
+
+End of 2017 we were about to start work on a completely new app that should lay ground for our whole companies mobile app strategy for the years to come. We decided to join forces of our two existing native mobile app developer teams and use Flutter Google’s new cross-platform framework for Android and iOS. Advantages like really well working hot-reload complete code sharing for both platforms and a modern reactive ui framework are just too good to be ignored. But Flutter is still in an early state and with that has its teething troubles and also very own shortcomings. In the first part of this talk I want to share the overall experience we made building our very first Flutter app and running it in production for over 3 months. The second half then goes full into live coding mode to show one of Flutter’s strengths: the easiness to build a fully customized animated graph the visual highlight of our still small but beautiful app. After the talk you hopefully have a better picture of what Flutter is capable of its state of maturity and which use-cases it’s already great to be taken for.]]></description>
+            <link>https://dev.tube/video/2RKbrKgHSI4</link>
+            <guid isPermaLink="true">https://dev.tube/video/2RKbrKgHSI4</guid>
+            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 210 Munim A Structured Guide to Accessibility on Android DAY1]]></title>
+            <description><![CDATA[Ataul Munim, Product Engineer Beginner Design/ UI/UX, Novoda
+
+A STRUCTURED GUIDE TO ACCESSIBILITY ON ANDROID
+Beginner / Design / UI/UX / Talk
+
+A structured guide to building accessible apps on Android. This presentation will include practical checks and steps you can implement today and give you the confidence to know you're doing the best you can to support as many users as possible. The content will be familiar to beginner Android developers and we'll use a real-world app as an example to ensure we're covering non-trivial usecases.]]></description>
+            <link>https://dev.tube/video/dm05qny_kfE</link>
+            <guid isPermaLink="true">https://dev.tube/video/dm05qny_kfE</guid>
+            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 209 Miu Room An SQLite Object Mapping Library DAY1]]></title>
+            <description><![CDATA[Magda Miu, Mobile Team Leader and Scrum Master
+
+ROOM: AN SQLITE OBJECT MAPPING LIBRARY
 Intermediate / Android Architecture / Talk
 
-If you've been developing Android applications for a while now, you know the pain of handling the lifecycle just right.It’s a pain-point that has existed since the advent of Android, up until recently when Google released Architecture components. As an Android developer you are bugged by handling activity/fragment lifecycle and flow of data in tandem to the lifecycle changes day in and out. Making your code aware about the lifecycle of the process/activity/fragment makes you more confident as a developer and enables faster development. This session would enable you to understand Lifecycle components (ProcessLifecycleOwner, LifecycleOwner, LifecycleObserver) and how they are leveraged in other architecture components like LiveData and ViewModel. By the end of the session you will be able to build your own custom Lifecycle aware Android apps and libraries.]]></description>
-            <link>https://dev.tube/video/2lCrTkwnqu4</link>
-            <guid isPermaLink="true">https://dev.tube/video/2lCrTkwnqu4</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+Handling an SQLite database in Android implies challenges like: a lot of boilerplate code, database operations on the main thread, queries checked at runtime and especially unmaintainable code. At Google I/O 2017, the Android team launched Room, an SQLite object mapper, that provides a set of components and features that will solve all these challenges and will help us, the developers, to have a better experience when using a database in our app. The presentation will include examples about how to use the main components from Room (@Entity, @Dao, @Database), how to handle the relations between the entities, how to use the (observable) queries and not run database operations on the main thread. Also we will discover more details about the migration support, compile time query verification and what’s happening behind the scenes.]]></description>
+            <link>https://dev.tube/video/grCpunREe0Y</link>
+            <guid isPermaLink="true">https://dev.tube/video/grCpunREe0Y</guid>
+            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 106 Egan Build a reactive Flutter App DAY1]]></title>
-            <description><![CDATA[Brian Egan, Indie Hacker
+            <title><![CDATA[#DCBerlin18 211 Bahkshi Mastering the Art of A,B Testing and Beyond DAY1]]></title>
+            <description><![CDATA[Kapil Bakshi, Android Engineer
 
-BUILD A REACTIVE FLUTTER APP!
+MASTERING THE ART OF A/B TESTING AND BEYOND
+Intermediate / Design / UI/UX / Talk
 
-Interested in Flutter, but love RxJava and MVI? Curious about how to structure Flutter apps? If so, join along as we explore how to architect apps using using Dart Streams! We'll cover the basics of Streams, how to beef up their power with RxDart, and how to create a Reactive Application with these patterns.
-This talk will cover the Bloc pattern introduced by Google. It's similar to MVI, and helps layer your apps, allowing you to write business logic that works flawlessly across three platforms: iOS, Android, and web.
-Come learn a bit more about Flutter and the architecture patterns that can help give your apps a testable, reusable, and cohesive structure!]]></description>
-            <link>https://dev.tube/video/As6sFqpIwII</link>
-            <guid isPermaLink="true">https://dev.tube/video/As6sFqpIwII</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+In today’s user centric world where companies try their level best to win their users’ hearts, it has become indispensable to capture each and every user data point in order to make data driven decisions. While planning new features it becomes very confusing if you have a lot of variations in mind. No matter how good your hypothesis be, ultimately its the users, their mindset, their behaviour, their habits which govern the validity and correctness of your feature. A/B Testing transforms “I guess, I suppose to I know” by letting us distribute different versions of our product among users and determine in real time which version emerges as the leader. We can then roll out that version to all the users. From learning What is A/B Testing, Why is it needed, Fundamental blocks of A/B Testing to diving deeper into A/B Testing Stuff Designers should know, different A/B Testing Platforms available with some quick exploration of two of them, we will ultimately draw some important conclusions like When not to A/B Test, avoiding Common A/B Testing Mistakes and some of the Best Practices. So my dear Designers Design and my beloved Developers Devise, With A/B Testing Let’s All Rise!]]></description>
+            <link>https://dev.tube/video/v2sIuviKGWQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/v2sIuviKGWQ</guid>
+            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 108 Heine Code Sharing is caring DAY1]]></title>
-            <description><![CDATA[Tobias Heine, Android Craftsman, Novoda
-Said Tahsin Dane, Lead Android Developer, Wayfair
+            <title><![CDATA[#DCBerlin18 207 Narayan Peristence as the Single Source of Truth DAY1]]></title>
+            <description><![CDATA[Saket Narayan, Android developer, uncommon.is
 
-(CODE) SHARING IS CARING
-Intermediate / Cross-Plattform Development / Talk
+PERSISTENCE AS THE SINGLE SOURCE OF TRUTH
+Android Architecture, Talk, Intermediate
 
-In this talk we will deep dive into Kotlin multiplatform projects. We will cover why you should consider using it, compare it with other cross-platform solutions. how it is different than regular Kotlin projects and how to use it to level up your product development. We will show a simple project that includes Android, iOS, Web (React) and Desktop clients. Then we will demonstrate how Kotlin makes it easier to inject platform specific logic into shared code. We will conclude the talk with limitations and challenges we faced during development.]]></description>
-            <link>https://dev.tube/video/O7031dQu6-0</link>
-            <guid isPermaLink="true">https://dev.tube/video/O7031dQu6-0</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+Simple is better than complex. Complex is better than complicated.
+In the world of Android, where all sources of information and user interactions are asynchronous, UI state can become hard to reason about, especially in large apps. This is not only difficult to maintain but also increases complexity with the addition of every new feature.
+This talk will explore the idea of “persistence as the single source of truth” as a way to simplify state management, where persistent storage becomes the source for all data changes, and the UI is reduced to a reactive representation of persisted data. This forces the flow of data to be unidirectional which makes it easy to follow. The pattern is architecture agnostic and can be used in any MV-anything.We’ll see other benefits of persistence where screens can stop exchanging data through serialized Bundles, get state restoration across Activity recreations for free, and deliver offline support out-of-the-box where all UI interactions receive immediate feedback and the user is never forced to wait.]]></description>
+            <link>https://dev.tube/video/vH0m8TqvR4M</link>
+            <guid isPermaLink="true">https://dev.tube/video/vH0m8TqvR4M</guid>
+            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 112 Kalicinski Forget everything you know about APKs DAY 1]]></title>
-            <description><![CDATA[Wojtek Kalicinski, Developer Advocate
+            <title><![CDATA[#DCBerlin18 206 Polanski I Convinced Groupon to Flutter  Do Same with Yours! DAY1]]></title>
+            <description><![CDATA[Tomek Polanski, Software Developer, Groupon
 
-FORGET EVERYTHING YOU KNOW ABOUT APKs
-Forget everything you know about APKs, the App Bundle is here! This session takes you through the history of Android app distribution, including the APK internals, app signing and Play improvements that ultimately lead to the where we are now. You will learn about the technologies that enabled Google Play Dynamic Delivery using the new bundle format, including for the first time letting developers dynamically load optional modules, containing code and resources, at runtime.]]></description>
-            <link>https://dev.tube/video/Om6NflYCMT0</link>
-            <guid isPermaLink="true">https://dev.tube/video/Om6NflYCMT0</guid>
-            <pubDate>Sat, 11 Aug 2018 01:28:47 GMT</pubDate>
+I CONVINCED GROUPON TO FLUTTER. DO SAME WITH YOUR COMPANY!
+
+Flutter is a new cross-platform mobile application solution from Google. While its touted benefits like the speed and the simplicity to create cross-platform applications sound appealing and you might be keen to adopt it, your team might be hesitant to adopt it because of perceptions of risk and uncertainty as the solution for your real-world app. I will tell my story about how I convinced my team at Groupon to try out Flutter. How highlighting the benefits, whilst being fully transparent about the risks will strengthen your argument.
+Next, we will help you address your team’s concerns; starting with fellow developers through to management. I will share how to get the whole team onboard, by showing your:
+Designers; how to make a beautiful application
+QA; how to make your application more robust
+Developers; how easy and captivating is to use Flutter
+Product owners; that Flutter is feasible for product goals
+Finally, I will share some of the challenges while integrating Google’s cross-platform framework into an already existing application and how we tackled them.
+After the talk, you should know if your team would benefit from Flutter, and if it does - how you can convince your colleagues.]]></description>
+            <link>https://dev.tube/video/vwbVIemvx8Q</link>
+            <guid isPermaLink="true">https://dev.tube/video/vwbVIemvx8Q</guid>
+            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[People that make computers go crazy - Gojko Adzic]]></title>
+            <description><![CDATA[What happens to people whose last name makes them invisible to software, how the world's longest name broke a supercomputer, and why it's so hard to detect false names online.
+Gojko will shock you with stories about problems caused by wrong assumptions in computer systems, when they face the hard, unforgiving punch of reality. You'll also learn how to avoid and prevent such problems.]]></description>
+            <link>https://dev.tube/video/1Rna6NvIIDk</link>
+            <guid isPermaLink="true">https://dev.tube/video/1Rna6NvIIDk</guid>
+            <pubDate>Wed, 15 Aug 2018 01:28:50 GMT</pubDate>
         </item>
     </channel>
 </rss>

@@ -10,9 +10,24 @@
     50% { opacity: 0.3; }
     100% { opacity: 1; }
   }  
+  .shrinkIfEmpty:empty {
+    display: none !important
+  }
+
+  .paging  {
+    .pagination-list {
+      justify-content: center;
+    }
+
+    .is-current a {
+      background-color: #343d46;
+      color: white;
+    }
+  }
 </style>
 <script>
   import { mapState, mapGetters, mapMutations } from 'vuex'
+  
   export default { 
     created() {
       this.$Progress.start()
@@ -34,8 +49,8 @@
         this.disableNotify()
       }
     }, 
-   methods: {
-    ...mapMutations('notify', ['disableNotify'])
-  },       
+    methods: {
+      ...mapMutations('notify', ['disableNotify'])
+    }
   }
 </script>

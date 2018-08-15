@@ -1,7 +1,7 @@
 <template lang="pug">
   .card(style="height: 100%; width:100%" v-if="visible")
       .card-image
-        VideoToggles(:videoId="id" :onWatched="hide")
+        VideoToggles(:videoId="id")
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             i.fab.fa-youtube.watch
@@ -20,7 +20,7 @@
             .level-item.has-text-centered.is-capitalized
               div
                 p.heading.is-capitalized Views
-                p.title.is-size-7 {{views | views}}
+                p.title.is-size-7 {{views | kilo}}
             .level-item.has-text-centered
               div                
                 p.heading.is-capitalized Duration
@@ -29,7 +29,7 @@
               div                
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
-          Tags(:tags="tags" :isNew="isNew" :featured="featured" :channel="channel")
+          Tags(:tags="tags" :isNew="isNew" :channel="channel")
           .contribute(v-if="speaker")
             p.subtitle.is-7
               | Wrong data? 
@@ -115,12 +115,11 @@
     color: #ec0047;
   }
 
-  .card:hover {
-    box-shadow: 0 2px 3px rgba(10,10,10,.20), 0 0 0 1px rgba(10,10,10,.20);
+  .card-image:hover {
     .watch {
       opacity: 1 !important;
     }
-  } 
+  }
 </style>
 <script>
   import Tags from './Tags.vue'
@@ -139,7 +138,6 @@
       recordingDate: { type: Number, required: true },
       creationDate: { type: Number, required: true },
       tags: { type: Array, required: false },
-      featured: { type: [Boolean, Array], default: false},
       speaker: {
         required: false,
         name: {
@@ -165,9 +163,6 @@
       ...mapGetters('videos', ['isWatched']),
     },
     methods: {
-      hide: function() {
-        this.visible = false
-      },
       watch: function(videoId) {
         this.$router.push({
           name: 'watch',

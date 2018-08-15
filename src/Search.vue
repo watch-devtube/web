@@ -3,70 +3,45 @@
     header
       .container    
         NavBar
-          Sorting  
+          Sorting 
     ais-index(:search-store="searchStore" index-name="videos")
       section.section(style="margin-top: 20px")
             .container
               .columns
-                .column.is-one-quarter
-                  p.buttons
-                    router-link.button.is-small.is-outlined.is-hidden-tablet(v-if="speaker || tag || channel || showMyWatched || showFavorites" :to="{ name: 'search' }")
-                      span {{speaker || tag || channel || (showMyWatched ? 'Watched' : '') || (showFavorites ? 'Favorites' : '') | capitalizeIfNeeded}}
-                      span.icon.is-small: i.fas.fa-times
-                    a.button.is-small.is-hidden-tablet(@click="$refs.tagPicker.expand()"): span.icon.is-small: i.fas.fa-hashtag
-                    a.button.is-small.is-hidden-tablet(@click="$refs.speakerPicker.expand()"): span.icon.is-small: i.far.fa-user-circle
-                    a.button.is-small.is-hidden-tablet(@click="$refs.channelPicker.expand()"): span.icon.is-small: i.fab.fa-youtube
-    
-                  ExpandableTags(ref="tagPicker" icon="fas fa-hashtag" title="Tags" :items="tags" :limit="10" :route="routeToTag")
-                      template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
-
-                  ExpandableTags(ref="speakerPicker" icon="far fa-user-circle" title="Speakers" :items="speakers" :limit="10" :route="routeToSpeaker")
-                      template(slot-scope="slot")
-                        span {{slot.item.name | capitalizeIfNeeded}}
-
-                  ExpandableTags(ref="channelPicker" icon="fab fa-youtube" title="Channels" :items="channels" :limit="10" :route="routeToChannel")
-                      template(slot-scope="slot") {{slot.item.title | truncate(25) | capitalizeIfNeeded}}
                 .column
-                  .columns
-                    .column
-                      .columns
-                        .column.is-hidden-mobile
-                          router-link.button.is-small.is-outlined(v-if="speaker || tag || channel || showMyWatched || showFavorites" :to="{ name: 'search' }")
-                            span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
-                            span.is-lowercased(v-if="speaker") @{{speaker}}
-                            span.is-lowercased(v-if="showMyWatched") Watched
-                            span.is-lowercased(v-if="showFavorites") Favorites
-                            span.icon.is-small: i.fas.fa-times
-                      .loading(v-if="loading")
-                        .notification.overrideVueNotificationsIssue
-                          p
-                            | Searching for the best tech videos 👨🏻‍💻...
-                            br
-                            br
-                            | We're working on reducing Cloud Function cold start time.
-                      .loaded(v-else)
-                        ais-no-results
-                          template(slot-scope="props")
-                            .notification.overrideVueNotificationsIssue
-                              p
-                                | No videos matching your query. Please 
-                                a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
-                                | .
-                        ais-results#videos.columns.is-multiline
-                          template(slot-scope="{ result }")
-                            .column.is-6.is-flex-tablet.is-4-widescreen.shrinkIfEmpty
-                              VideoCard(
-                                :tags="result.tags" 
-                                :featured="result.featured" 
-                                :speaker="result.speaker" 
-                                :creationDate="result.creationDate" 
-                                :recordingDate="result.recordingDate" 
-                                :duration="result.duration" 
-                                :views="result.views" 
-                                :satisfaction="result.satisfaction" 
-                                :title="result.title" 
-                                :id="result.objectID" 
-                                :channel="result.channelTitle")
+                  router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'discovery' }")
+                    span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
+                    span.is-lowercased(v-if="speaker") @{{speaker}}
+                    span.icon.is-small: i.fas.fa-times
+              .loading(v-if="loading")
+                .notification.overrideVueNotificationsIssue
+                  p
+                    | Searching for the best tech videos 👨🏻‍💻...
+                    br
+                    br
+                    | We're working on reducing Cloud Function cold start time.
+              .loaded(v-else)
+                ais-no-results
+                  template(slot-scope="props")
+                    .notification.overrideVueNotificationsIssue
+                      p
+                        | No videos matching your query. Please 
+                        a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
+                        | .
+                ais-results#videos.columns.is-multiline
+                  template(slot-scope="{ result }")
+                    .column.is-6.is-flex-tablet.is-3-widescreen.shrinkIfEmpty
+                      VideoCard(
+                        :tags="result.tags" 
+                        :speaker="result.speaker" 
+                        :creationDate="result.creationDate" 
+                        :recordingDate="result.recordingDate" 
+                        :duration="result.duration" 
+                        :views="result.views" 
+                        :satisfaction="result.satisfaction" 
+                        :title="result.title" 
+                        :id="result.objectID" 
+                        :channel="result.channelTitle")
       section.section
         .container
           .columns
@@ -76,24 +51,6 @@
               nav.paging(role="navigation" aria-label="pagination")
                 ais-pagination.pagination(:class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
 </template>
-<style lang="scss">
-
-.shrinkIfEmpty:empty {
-  display: none !important
-}
-
-.paging  {
-  .pagination-list {
-    justify-content: center;
-  }
-
-  .is-current a {
-    background-color: #343d46;
-    color: white;
-  } 
-}
-
-</style>
 <script>
 import { createFromAlgoliaClient } from 'vue-instantsearch'
 import { mapState, mapGetters } from 'vuex'
@@ -107,17 +64,16 @@ export default {
   props: {
     q: { type: String, default: '' },
     showMyWatched: { type: Boolean, default: false },
+    showMyFeed: { type: Boolean, default: false },    
     showFavorites: { type: Boolean, default: false },
+    showDiscovery: { type: Boolean, default: false },
     speaker: { type: String, required: false },
     channel: { type: String, required: false },
     tag: { type: String, required: false }
   },
   data: function() {
     return {
-      loading: false,
-      tagsCollapsed: true,
-      speakersCollapsed: true,
-      channelsCollapsed: true
+      loading: false
     };
   },
   watch: {
@@ -148,26 +104,12 @@ export default {
     };
 
     let searchStore = createFromAlgoliaClient(fastr)
-
-    searchStore.queryParameters = {
-      hitsPerPage : 21
-    }
-
     this.searchStore = searchStore
 
     this.fetch()
     this.syncQuery()
   },
   computed: {
-    tags() {
-      return window.featured.tags
-    },
-    speakers() {
-      return window.featured.speakers
-    },
-    channels() {
-      return window.featured.channels
-    },
     ...mapState([ 'videos', 'query' ]),
     ...mapGetters('videos', ['watchedIds', 'favoriteIds']),
     ...mapGetters('loading', ['completed'])
@@ -175,15 +117,6 @@ export default {
   methods: {
     syncQuery() {
       this.searchStore.queryParameters = this.query
-    },
-    routeToTag(item) {
-      return { name: 'tag', params: { tag: item.tag } }
-    },
-    routeToSpeaker(item) {
-      return { name: 'speaker', params: { speaker: item.twitter } }
-    },
-    routeToChannel(item) {
-      return { name: 'channel', params: { channel: item.title } }
     },
     fetch() {
 
@@ -198,6 +131,7 @@ export default {
 
       let watchedVideoIds = this.watchedIds
       let favoriteVideoIds = this.favoriteIds
+
       if (this.showMyWatched) {
         this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: watchedVideoIds } } }
         this.searchStore.queryParameters = { excludes: [] }
@@ -208,6 +142,25 @@ export default {
       if (this.showFavorites) {
         this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: favoriteVideoIds } } }
         this.searchStore.queryParameters = { excludes: [] }
+      }
+
+      if (this.showMyFeed) {
+        let subscriptions = this.videos.subscriptions
+
+        let subscribedTags = subscriptions.filter(sub => sub.type == 'tag').map(sub => sub.topic)
+        let subscribedChannels = subscriptions.filter(sub => sub.type == 'channel').map(sub => sub.topic)
+        let subscribedSpeakers = subscriptions.filter(sub => sub.type == 'speaker').map(sub => sub.topic)
+
+        let myFeedQuery = { 
+          $or: [
+            { 'tags': { $containsAny: subscribedTags} },
+            { 'channelTitle': { $in: subscribedChannels } },
+            { 'speaker.twitter': { $in: subscribedSpeakers } }
+          ]
+        }
+
+        this.searchStore.queryParameters = { refinement: myFeedQuery }
+        this.searchStore.queryParameters = { excludes: watchedVideoIds }
       }
 
       if (this.speaker) {
