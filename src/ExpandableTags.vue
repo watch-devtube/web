@@ -41,6 +41,9 @@
 
   export default {    
     computed: {
+      html() {
+        return document.documentElement
+      },
       isExpanded() {
         return !this.collapsed
       },
@@ -61,13 +64,14 @@
       subscription(item) {
         return { topic : item[this.attr], type : this.type }
       },
-      expand() {
-        this.collapsed = false
-      },
       toggleCollapse() {
-        console.log(!this.collapsed)
         this.collapsed = !this.collapsed
-        console.log(this.collapsed)
+
+        if (!this.collapsed) {
+          this.html.classList.add('is-clipped')
+        } else {
+          this.html.classList.remove('is-clipped')
+        }
       },
       navigate(item) {
         this.$parent.hide()
@@ -77,6 +81,7 @@
         let route = { params: routeParams }
         route.name = this.type
         this.$router.push(route)
+        this.html.classList.remove('is-clipped')
       },
       ...mapActions('videos', [ 'toggleSubscription']),
     },

@@ -20,17 +20,17 @@
           | Watched ({{watchedCount}})
         router-link.navbar-item(v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()") 
           | Favorites ({{favoriteCount}})
-        a.navbar-item(@click="$refs.tags.expand()") 
+        a.navbar-item(@click="$refs.tags.toggleCollapse()")
           i.fas.fa-hashtag 
           | &nbsp;Tags
         ExpandableTags(ref="tags" title="Tags" items="tags" :limit="10" type="tag" attr="tag")
           template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
-        a.navbar-item(@click="$refs.speakers.expand()") 
+        a.navbar-item(@click="$refs.speakers.toggleCollapse()")
           i.far.fa-user-circle
           | &nbsp;Speakers
         ExpandableTags(ref="speakers" title="Speakers" items="speakers" :limit="10" type="speaker" attr="twitter")
           template(slot-scope="slot") {{slot.item.name | capitalizeIfNeeded}}
-        a.navbar-item(@click="$refs.channels.expand()") 
+        a.navbar-item(@click="$refs.channels.toggleCollapse()")
           i.fab.fa-youtube
           | &nbsp;Channels
         ExpandableTags(ref="channels" title="Channels" items="channels" :limit="10" type="channel" attr="title")
