@@ -164,6 +164,7 @@ async function proxy(req: Request, res: Response) {
 
     let discover = (refinement, sorting) => fastr
       .search(undefined, refinement, sorting)
+      .filter(hit => hit != null)
       .filter(hit => !(excludes || []).includes(hit.objectID))
       .slice(0, 100)
 
@@ -248,7 +249,10 @@ async function proxy(req: Request, res: Response) {
 
     console.time(`Query ${q}`)
     let maxHitsPerPage = 20
-    let hitsAll = fastr.search(q, refinement, sortOrder).filter(hit => !(excludes || []).includes(hit.objectID))
+    let hitsAll = fastr.search(q, refinement, sortOrder)
+      .filter(hit => hit != null)
+      .filter(hit => !(excludes || [])
+      .includes(hit.objectID))
     let from = (page || 0) * maxHitsPerPage
     let to = from + maxHitsPerPage
     let hitsPage = hitsAll.slice(from, to)
@@ -280,7 +284,10 @@ async function proxy(req: Request, res: Response) {
     let sortOrder = '-satisfaction'
     let refinement = { 'objectID' : objectID } 
 
-    let video = fastr.search(q, refinement, sortOrder).find(it => true) as any
+    let video = fastr.search(q, refinement, sortOrder)
+      .filter(hit => hit != null)
+      .find(it => true) as any
+
     if (!video) {
       res.status(404).send('Not found')
     } else {
