@@ -4,412 +4,262 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 15 Aug 2018 04:32:06 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Aug 2018 04:30:32 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Partnership on Darkest Dungeon: The Double-Edged Sword]]></title>
-            <description><![CDATA[In this 2018 GDC session, Red Hook Studios' Tyler Sigman & Chris Bourassa share crucial lessons learned throughout the development of Darkest Dungeon, including the challenges of running a company with two presidents. 
+            <title><![CDATA[Java Video Tutorial 48]]></title>
+            <description><![CDATA[Get the Code: http://goo.gl/bwVX8
 
-Register for GDC: http://ubm.io/2gk5KTU
+I show you how to Make a Java Paint Application! One of you guys asked me to do this and it gives me a great opportunity to review and cover new topics all at once.
 
-Join the GDC mailing list: http://www.gdconf.com/subscribe
-
-Follow GDC on Twitter: https://twitter.com/Official_GDC 
-
-GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/UoogT3XOl-8</link>
-            <guid isPermaLink="true">https://dev.tube/video/UoogT3XOl-8</guid>
-            <pubDate>Wed, 15 Aug 2018 01:35:47 GMT</pubDate>
+I cover swing, events, mouse events, Graphics2D, ArrayList, and numerous other topics.]]></description>
+            <link>https://dev.tube/video/235mse79MCw</link>
+            <guid isPermaLink="true">https://dev.tube/video/235mse79MCw</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[DeepMind AlphaGo Zero Explained]]></title>
-            <description><![CDATA[DeepMind's AlphaGo Zero algorithm beat the best Go player in the world by training entirely by self-play. It played against itself repeatedly, getting better over time with no human gameplay input. AlphaGo Zero was a remarkable moment in AI history, a moment that will always be remembered. Move 37 in particular is worthy of many philosophical debates. You'll see what I mean and get a technical overview of its neural components (code + animations) in this video. Enjoy! 
+            <title><![CDATA[Java Video Tutorial 50]]></title>
+            <description><![CDATA[Get the Code: http://goo.gl/Kt95u
 
-Code for this video:
-https://github.com/Zeta36/chess-alpha-zero
+I wanted to make the 50th part of my Java Video Tutorial special! In this tutorial, I answer numerous questions.
 
-Please Subscribe! And like. And comment. That's what keeps me going. 
+I begin showing you how to design a game like Asteroids. I start teaching OOP design principles using UML. You learn how to draw polygons on the screen and how to animate them. And, to top it all off I show you how collision detection works.
 
-Want more education? Connect with me here:
-Twitter: https://twitter.com/sirajraval
-instagram: https://www.instagram.com/sirajraval
-Facebook: https://www.facebook.com/sirajology
-
-There are 2 errors in this video:
-1. At the top of the residual network, it says value layer twice. One should say 'policy' layer.
-2 The residual network is 40 layers, i say 20. 
-
-This video is apart of my Machine Learning Journey course:
-https://github.com/llSourcell/Machine_Learning_Journey
-
-More Learning Resources:
-https://deepmind.com/blog/alphago-zero-learning-scratch/
-https://medium.com/applied-data-science/alphago-zero-explained-in-one-diagram-365f5abf67e0
-https://hackernoon.com/the-3-tricks-that-made-alphago-zero-work-f3d47b6686ef
-https://web.stanford.edu/~surag/posts/alphazero.html
-http://tim.hibal.org/blog/alpha-zero-how-and-why-it-works/
-http://www.jessicayung.com/alphago-zero-an-overview-of-the-algorithm/
-
-Join us in the Wizards Slack channel:
-http://wizards.herokuapp.com/
-
-Sign up for the next course at The School of AI:
-https://www.theschool.ai
-
-And please support me on Patreon:
-https://www.patreon.com/user?u=3191693
-
-#AlphaGoZero #Deepmind #SirajRaval]]></description>
-            <link>https://dev.tube/video/UzYeqAJ2bA8</link>
-            <guid isPermaLink="true">https://dev.tube/video/UzYeqAJ2bA8</guid>
-            <pubDate>Wed, 15 Aug 2018 01:32:29 GMT</pubDate>
+Yes, there is a lot in this 14 minute video :)]]></description>
+            <link>https://dev.tube/video/4wWLEeQSXLQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/4wWLEeQSXLQ</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[(⌐_) Turnable Tables, Part 1 (_¬)  | 3D CSS Record Player | @keyframers 1.18.0]]></title>
-            <description><![CDATA[Stephen Shaw and a faintly appearing David Khourshid create a 3D turntable with CSS! Control the rotation & open the lid with the power of CSS Variables.
+            <title><![CDATA[Java Video Tutorial 60]]></title>
+            <description><![CDATA[Get the game: http://goo.gl/LWesG
 
-Part 2 will air next week on August 20th! Tune in a twitch.tv/keyframers for the live stream.
+In this video I continue my Java Asteroids game. I pretty much finish up the game in this tutorial.
 
-* ⏰ Streamed live on August 13, 2016 at https://twitch.tv/keyframers
-* 💡Inspiration: https://dribbble.com/shots/4930227-Vinyls-E-Commerce-App
-* 📺 Video: https://youtu.be/tdWxCsAqx7I
-* 💻 Code: https://cdpn.io/pen/YjMwqX/
-
-Skip around:
-2:00 Animation overview
-6:00 Start coding
-1:40:00 Keyflections
-
-Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
-
-* Like & subscribe on YouTube at https://youtube.com/keyframers
-* Follow & tweet us at https://twitter.com/keyframers.
-* Join the live streams & subscribe on Twitch https://twitch.tv/keyframers 
-* Support us on Patreon at https://patreon.com/keyframers 
-
-Topics covered:
-
-* CSS Variables
-* CSS 3D
-* input[type="range"]]]></description>
-            <link>https://dev.tube/video/tdWxCsAqx7I</link>
-            <guid isPermaLink="true">https://dev.tube/video/tdWxCsAqx7I</guid>
-            <pubDate>Wed, 15 Aug 2018 01:32:14 GMT</pubDate>
+I show you how to do a bunch of new things. I show you how to play sound in a JFrame. We introduce yet another way to handle collision detection. We remove items from the screen when they are destroyed. And, a whole bunch more is covered.]]></description>
+            <link>https://dev.tube/video/8A3ziZPZbgQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/8A3ziZPZbgQ</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[ml5.js: Feature Extractor Classification]]></title>
-            <description><![CDATA[In this video, I use ml5's feature extractor to train a machine learning image classifier with my own images. #machinelearning #classification #ml5 #p5js
+            <title><![CDATA[Java Video Tutorial 54 Java Polygon Collision Detection]]></title>
+            <description><![CDATA[Get Everything Here: http://goo.gl/JmTrs
 
-🔗code: https://github.com/CodingTrain/website/tree/master/Courses/beginner_ml5
+I've been asked many times to create a program that handles Java collision detection with polygons. This is a continuation of my tutorial on how to make a Java video game and if you haven't been watching you should check it out.
 
-🎥 Next Video: https://youtu.be/aKgq0m1YjvQ
-
-🔗 ml5.js: https://ml5js.org
-🔗 Teachable Machine: https://teachablemachine.withgoogle.com/
-🔗 New Classification & Regression Examples: https://github.com/ml5js/ml5-library/issues/128
-🔗 Pong ml5.js: https://github.com/matamalaortiz/Pong-ML
-
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Books: https://www.amazon.com/shop/thecodingtrain 
-
-🎥  Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥  Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/eeO-rWYFuG0</link>
-            <guid isPermaLink="true">https://dev.tube/video/eeO-rWYFuG0</guid>
-            <pubDate>Wed, 15 Aug 2018 01:32:10 GMT</pubDate>
+It is surprisingly easy to handle collision detection with polygons. All you have to do is surround all of your polygons with rectangles and a handy dandy method named intersects handles pretty much everything else!]]></description>
+            <link>https://dev.tube/video/8KNwjOsdn8I</link>
+            <guid isPermaLink="true">https://dev.tube/video/8KNwjOsdn8I</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Cross Site Scripting Tutorial | Penetration Testing Tutorial | Web Application Security | Edureka]]></title>
-            <description><![CDATA[In this Edureka live, we will go over one of the most rampant vulnerability of web based applications i.e. Cross Site Scripting. The following topics will be covered in this session:
+            <title><![CDATA[Eclipse Shortcut Keys]]></title>
+            <description><![CDATA[Get the Cheat Sheet: http://goo.gl/OI9DU
 
-1. What is Cross Site Scripting
-2. Types of Cross Site Scripting 
-3. Repercussions on Cross Site Scripting
-4. Preventing Cross Site Scripting
-5. Demo on types of Cross Site Scripting
+I have been asked many times to cover the Eclipse shortcut keys that I use all of the time, so in this tutorial I will do just that. I did my best to limit the tutorial to the most commonly used shortcuts I use so that they are easier to memorize. I also provide them in a table below.
 
-To practice Cross Site Scripting, download OWASP-BWAP from this link: https://sourceforge.net/projects/owaspbwa/
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/1qzjWNcQVeI</link>
-            <guid isPermaLink="true">https://dev.tube/video/1qzjWNcQVeI</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:59 GMT</pubDate>
+Both the Auto Complete and the Keystroke shortcuts are covered. I hope this helps you write code quicker. Feel free to leave your own favorites in the comment section below if you think I missed something important.]]></description>
+            <link>https://dev.tube/video/C5glFtpuy0U</link>
+            <guid isPermaLink="true">https://dev.tube/video/C5glFtpuy0U</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Neural Network Tutorial | Introduction to Neural Network | Deep Learning Tutorial | Edureka]]></title>
-            <description><![CDATA[( TensorFlow Training - https://www.edureka.co/ai-deep-learni... )  
+            <title><![CDATA[Java Video Tutorial 58]]></title>
+            <description><![CDATA[Get all the code: http://goo.gl/J3MtJ
 
-This video will provide you with a brief and crisp knowledge of Neural Networks, how they work, the various parameters involved in the whole Deep Learning Process.
+As we continue to make an asteroid Java game, I show you how to make your space ship shoot.
 
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-Check our complete Deep Learning With TensorFlow playlist here:   https://goo.gl/cck4hE
-
-- - - - - - - - - - - - - -
-
-How it Works?
-
-1. This is 21 hrs of Online Live Instructor-led course. Weekend class: 7 sessions of 3 hours each.
-2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-3. At the end of the training you will have to undergo a 2-hour LIVE Practical Exam based on which we will provide you a Grade and a Verifiable Certificate!
-
-- - - - - - - - - - - - - -
-
-About the Course
-Edureka's Deep learning with Tensorflow course will help you to learn the basic concepts of TensorFlow, the main functions, operations and the execution pipeline. Starting with a simple “Hello Word” example, throughout the course you will be able to see how TensorFlow can be used in curve fitting, regression, classification and minimization of error functions. This concept is then explored in the Deep Learning world. You will evaluate the common, and not so common, deep neural networks and see how these can be exploited in the real world with complex raw data using TensorFlow. In addition, you will learn how to apply TensorFlow for backpropagation to tune the weights and biases while the Neural Networks are being trained. Finally, the course covers different types of Deep Architectures, such as Convolutional Networks, Recurrent Networks and Autoencoders. 
-
-Delve into neural networks, implement Deep Learning algorithms, and explore layers of data abstraction with the help of this Deep Learning with TensorFlow course.
-
-
-- - - - - - - - - - - - - - 
-
-Who should go for this course?
-
-The following professionals can go for this course:
-
-1. Developers aspiring to be a 'Data Scientist'
-
-2. Analytics Managers who are leading a team of analysts 
-
-3. Business Analysts who want to understand Deep Learning (ML) Techniques
-
-4. Information Architects who want to gain expertise in Predictive Analytics
-
-5. Professionals who want to captivate and analyze Big Data
-
-6. Analysts wanting to understand Data Science methodologies
-
-However, Deep learning is not just focused to one particular industry or skill set, it can be used by anyone to enhance their portfolio.
-
-- - - - - - - - - - - - - - 
-
-Why Learn Deep Learning With TensorFlow?
-TensorFlow is one of the best libraries to implement Deep Learning. TensorFlow is a software library for numerical computation of mathematical expressions, using data flow graphs. Nodes in the graph represent mathematical operations, while the edges represent the multidimensional data arrays (tensors) that flow between them. It was created by Google and tailored for Machine Learning. In fact, it is being widely used to develop solutions with Deep Learning. 
-
-Machine learning is one of the fastest-growing and most exciting fields out there, and Deep Learning represents its true bleeding edge. Deep learning is primarily a study of multi-layered neural networks, spanning over a vast range of model architectures. Traditional neural networks relied on shallow nets, composed of one input, one hidden layer and one output layer. Deep-learning networks are distinguished from these ordinary neural networks having more hidden layers, or so-called more depth. These kinds of nets are capable of discovering hidden structures within unlabeled and unstructured data (i.e. images, sound, and text), which constitutes the vast majority of data in the world.
-
-Please write back to us at sales@edureka.co or call us at +91 88808 62004 for more information. 
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/WLxI4D01nj8</link>
-            <guid isPermaLink="true">https://dev.tube/video/WLxI4D01nj8</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:59 GMT</pubDate>
+It sounds like a simple concept until you realize the ship is shooting while it is rotating through space at an angle that may not be equal to the direction it is moving. Don't worry, we'll figure it out together in this and the next tutorial.]]></description>
+            <link>https://dev.tube/video/MfqbEYyg3J8</link>
+            <guid isPermaLink="true">https://dev.tube/video/MfqbEYyg3J8</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[S3 Operations with AWS Lambda]]></title>
-            <description><![CDATA[Learn how to read and save a file into an S3 bucket using AWS-SDK from an AWS Lambda. We will create the bucket from the serverless.yml using cloudformation. Then, we will perform operations onto the stored files and save them back.
+            <title><![CDATA[Java Video Tutorial 57]]></title>
+            <description><![CDATA[Get the code: http://goo.gl/5I88E
 
-💻Code: https://github.com/mavi888/serverless-s3-operations
+In this video I continue making a Java Asteroids game while teaching about OOP design principles. In previous videos I showed how to make a Java UML class diagram and then we turned the UML class diagram into a class.
 
-🔗Serverless 101 series: https://www.youtube.com/playlist?list=PLWKjhJtqVAbkXQS12WiLsH1oaNZBSoWuV
+Here I finish up the class so that you can now fly your ship in any direction. You'll also be able to keep it on the game board and use life like velocity that accelerates.
 
-🔗Marcia's channel: https://www.youtube.com/channel/UCSLIvjWJwLRQze9Pn4cectQ
-
-🔗Marcia's website: http://marciavillalba.com
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/GEizappc_WI</link>
-            <guid isPermaLink="true">https://dev.tube/video/GEizappc_WI</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:54 GMT</pubDate>
+All of the code is  heavily commented to help you learn.]]></description>
+            <link>https://dev.tube/video/S1xCzB4d9G8</link>
+            <guid isPermaLink="true">https://dev.tube/video/S1xCzB4d9G8</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Answering tricky JavaScript interview questions]]></title>
-            <description><![CDATA[We all work in our respective silos when writing JavaScript, be it a framework or library. After a few years working as a Front-end dev, I looked at a list of "JS interview" questions and realized that I couldn't answer many of them (at least not well). So I set out on a long, somewhat lonesome journey of JS discovery, and am pleased to share my findings with you, in the form of a talk.
+            <title><![CDATA[Java Video Tutorial 49]]></title>
+            <description><![CDATA[Get the Code: http://goo.gl/zuTwv
 
-Regardless of how you feel about getting asked random questions meant to trick you up in an interview (you should be appalled), my talk will cover some basic JS subtleties, and hopefully fill in some knowledge gaps w/r/t:
-- Hoisting and variable scope
-- Expressions v. statements
-- Undeclared v. undefined v. null
-- Equality comparisons
-- How to properly walk out if an interviewer asks you to do fizz buzz
+In this part of my Java Video Tutorial, I continue to show you how to make a Java paint application. If you missed part 1 watch it.
 
-This talk was given at Nodevember 2016 by Russell Anderson.
+I cover numerous topics including: how to draw lines, ellipses, brush strokes. I also cover how to save transparency values for shapes. And, because you requested it how to create a custom event listener and much more.
 
-Checkout the Nodevember channel for more great talks: https://www.youtube.com/channel/UC7z0nOE8ITfrGnXJgNzYaEQ
-
-This talk is under the creative commons license. freeCodeCamp is not associated with this talk. We're just excited to bring more exposure to to it!
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/jh86NGG9jdE</link>
-            <guid isPermaLink="true">https://dev.tube/video/jh86NGG9jdE</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:54 GMT</pubDate>
+After this tutorial, you'll be able to make an app with much of the functionality of Photoshop.]]></description>
+            <link>https://dev.tube/video/T6FxSiYQ7nI</link>
+            <guid isPermaLink="true">https://dev.tube/video/T6FxSiYQ7nI</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Envoy Community Meeting - 2018-08-14]]></title>
-            <link>https://dev.tube/video/6Hl5yTPfEuw</link>
-            <guid isPermaLink="true">https://dev.tube/video/6Hl5yTPfEuw</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:40 GMT</pubDate>
+            <title><![CDATA[Java Video Tutorial 56]]></title>
+            <description><![CDATA[Get the finished code: http://goo.gl/sCL6A
+
+In this part of my Java video tutorial I turn the SpaceShip UML class diagram I designed in the last video into a real class.
+ This class will allow you to fly the space ship around the screen at any angle. You'll be able to rotate it while maintaining the ships current direction. It is considered to be a pretty complicated technique that is squeezed into a few lines :)
+
+All of the code follows the video below to improve your learning experience.]]></description>
+            <link>https://dev.tube/video/UWIFtzUjDLw</link>
+            <guid isPermaLink="true">https://dev.tube/video/UWIFtzUjDLw</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[CNCF Networking WG Meeting - 2018-08-14]]></title>
-            <link>https://dev.tube/video/lBG38RIzOZE</link>
-            <guid isPermaLink="true">https://dev.tube/video/lBG38RIzOZE</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:40 GMT</pubDate>
+            <title><![CDATA[Java Programming]]></title>
+            <description><![CDATA[Cheat Sheet is Here : http://goo.gl/OPMjte
+
+Slower Java Tutorial : http://goo.gl/UHdlyP
+
+How to Install Java & Eclipse : http://goo.gl/vEEEJE
+
+Best Java Book : http://amzn.to/2l27h2h
+
+Support Me on Patreon : https://www.patreon.com/derekbanas
+
+In this Java programming Tutorial I'll teach you all of the core knowledge needed to write Java code in 30 minutes. This is the most popular request from everyone.
+
+I specifically cover the following topics: primitive data types, comments, class, import, Scanner, final, Strings, static, private, protected, public, constructors, math, hasNextLine, nextLine, getters, setters, method overloading, Random, casting, toString, conversion from Strings to primitives, converting from primitives to Strings, if, else, else if, print, println, printf, logical operators, comparison operators, ternary operator, switch, for, while, break, continue, do while, polymorphism, arrays, for each, multidimensional arrays and more.]]></description>
+            <link>https://dev.tube/video/WPvGqX-TXP0</link>
+            <guid isPermaLink="true">https://dev.tube/video/WPvGqX-TXP0</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Chirp your device into Azure IoT Central]]></title>
-            <description><![CDATA[Here is a smart way to use sound to provision IoT devices with wireless configuration, Cloud connection credentials and more. Chirp (https://chirp.io) created enterprise-ready, cross platform SDKs for transmitting data over sound and the Azure IoT team collaborated with Chirp to implement a nice and easy way to setup an MXChip devkit and connect it to Azure IoT Central using just sound.
+            <title><![CDATA[Java Video Tutorial 53]]></title>
+            <description><![CDATA[Get everything here: http://goo.gl/4kePr
 
-Get started with Azure IoT Central: http://azureiotcentral.com
+I first started the how to make Java games series to solve a bunch of problems. Many people in the forums are posting extremely complicated ways to rotate polygons in Java for example. It is very easy to rotate polygons!
 
-Get started with the Chirp SDK: https://admin.chirp.io/
+I also saw many people struggle with other calculations like: 
 
-Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
-            <link>https://dev.tube/video/1oCyJe7WS7o</link>
-            <guid isPermaLink="true">https://dev.tube/video/1oCyJe7WS7o</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
+1. Finding the length and angle of a line between vectors 
+2. Calculate the points of a rotating polygon 
+3. Calculate the area of irregular polygons 
+4. Find the center points of an irregular polygon 
+5. Repeat keyboard clicks if the user holds down a key
+
+Much, much more....]]></description>
+            <link>https://dev.tube/video/fK0fxjbjdQA</link>
+            <guid isPermaLink="true">https://dev.tube/video/fK0fxjbjdQA</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Yang Li: Service Fabric Cluster Resource Manager]]></title>
-            <description><![CDATA[The Service Fabric Cluster Resource Manager (CRM, not to be confused with Customer Relationship Management) is responsible for optimizing the placement and load balancing (PLB, not to be confused with network load balancing) of nodes inside a cluster. This is the part of Service Fabric where Simulated Annealing is done to optimize and balance the "heat" distribution among nodes (so, no node does too little work (cold) nor too much work (hot) - balance is important - it's really Zen). You first heard about our use of a metallurgical algorithm during the Gopal interview. 
+            <title><![CDATA[Java Video Tutorial 52]]></title>
+            <description><![CDATA[Get the Code: http://goo.gl/JfZla
 
-Check out the Simulated Annealing algorithm as implemented by Yang and co:
-https://github.com/Microsoft/service-fabric/blob/master/src/prod/src/Reliability/LoadBalancing/Searcher.cpp#L1453
+In this part of my Java video tutorial, I create the spaceship object and a keyboard listener. I will use the keyboard listener to move the ship around the screen.
 
-Check out Yang's code:
-https://github.com/Microsoft/service-fabric/tree/master/src/prod/src/Reliability/LoadBalancing]]></description>
-            <link>https://dev.tube/video/4W3mB-j42rA</link>
-            <guid isPermaLink="true">https://dev.tube/video/4W3mB-j42rA</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
+It is so easy to randomly add objects to the game we started making here Make a Java Video Game. I slowed things down a bit here, just to make sure you completely get the process.]]></description>
+            <link>https://dev.tube/video/lebZd9bDnc8</link>
+            <guid isPermaLink="true">https://dev.tube/video/lebZd9bDnc8</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Distributed Systems, Demystified: Cassandra, DataStax demo and FAQ]]></title>
-            <description><![CDATA[Distributed system blog posts, podcasts, and presentations are everywhere, but understanding how to actually use various tools, projects, and services? Not so straightforward.
+            <title><![CDATA[Java Video Tutorial 59]]></title>
+            <description><![CDATA[Get the game code: http://goo.gl/OKMBp
 
-Adron Hall (@adron), Developer Evangelist at DataStax, joins Christina Warren (@film_girl) to break down distributed systems, including what they are (and aren't), then dive into questions to ask as you design distributed data systems and how to weigh pros and cons. 
+In the last part of this tutorial I showed you how to make the PhotonTorpedo class using a UML class diagram.
 
-To help you visualize and get started, you'll see his favorite Cassandra* demo -- and how to make systems more intelligent and resilient across clouds and regions.
+In this tutorial, I show you how to make your space ship shoot the torpedos on the screen. As you'll see, because I used good OOP design principles in the last video, adding the shooting feature will require very few changes.
 
-*Apache Cassandra = NoSQL open source distributed database
-
-00:54 What is a Distributed System?
-04:07 Distributed database demo - multi-cloud, multi-node, DataStax and more
-08:32 When should I use a distributed system?
-10:00 Getting started resources, repos, and more
-
-Check out Microsoft + Open Source: https://opensource.microsoft.com/
-
-DataStax Academy materials available here: https://academy.datastax.com/courses
-
-Explore Cassandra: http://cassandra.apache.org/
-
-Adron's blog: https://compositecode.blog/
-
-DataStax Enterprise is available in the Azure Marketplace here: https://aka.ms/DataStax_and_Azure_Marketplace]]></description>
-            <link>https://dev.tube/video/6eI_sbSmuas</link>
-            <guid isPermaLink="true">https://dev.tube/video/6eI_sbSmuas</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
+All of the code above is heavily commented to help you learn.]]></description>
+            <link>https://dev.tube/video/ptsNLcQYxCQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/ptsNLcQYxCQ</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 208 Friedrich Production Fluttering DAY1]]></title>
-            <description><![CDATA[Matthias Friedrich, Android Developer Beginner Cross-Plattform Development, Jimdo
+            <title><![CDATA[Java Video Tutorial 51]]></title>
+            <description><![CDATA[Game code is here: http://goo.gl/M0Tqj
 
-PRODUCTION FLUTTER'ING
-Beginner / Cross-Plattform Development / Talk
+Here I continue what I started in Make a Java Video Game. If you haven't seen it, watch it before this video.
 
-End of 2017 we were about to start work on a completely new app that should lay ground for our whole companies mobile app strategy for the years to come. We decided to join forces of our two existing native mobile app developer teams and use Flutter Google’s new cross-platform framework for Android and iOS. Advantages like really well working hot-reload complete code sharing for both platforms and a modern reactive ui framework are just too good to be ignored. But Flutter is still in an early state and with that has its teething troubles and also very own shortcomings. In the first part of this talk I want to share the overall experience we made building our very first Flutter app and running it in production for over 3 months. The second half then goes full into live coding mode to show one of Flutter’s strengths: the easiness to build a fully customized animated graph the visual highlight of our still small but beautiful app. After the talk you hopefully have a better picture of what Flutter is capable of its state of maturity and which use-cases it’s already great to be taken for.]]></description>
-            <link>https://dev.tube/video/2RKbrKgHSI4</link>
-            <guid isPermaLink="true">https://dev.tube/video/2RKbrKgHSI4</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+I'll now create the GameBoard class that will animate all of my asteroids. I redraw the board using threads. If you are rusty on them, check out my Java Thread Video Tutorial.]]></description>
+            <link>https://dev.tube/video/sSbcAFqpw-o</link>
+            <guid isPermaLink="true">https://dev.tube/video/sSbcAFqpw-o</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 210 Munim A Structured Guide to Accessibility on Android DAY1]]></title>
-            <description><![CDATA[Ataul Munim, Product Engineer Beginner Design/ UI/UX, Novoda
+            <title><![CDATA[Install Eclipse for Java]]></title>
+            <description><![CDATA[Get the Steps in List Format: http://goo.gl/Lrq67
 
-A STRUCTURED GUIDE TO ACCESSIBILITY ON ANDROID
-Beginner / Design / UI/UX / Talk
+I've been asked to show you how to Install Eclipse for Java a few times lately. So in this video I'll show you how to install Eclipse step-by-step.
 
-A structured guide to building accessible apps on Android. This presentation will include practical checks and steps you can implement today and give you the confidence to know you're doing the best you can to support as many users as possible. The content will be familiar to beginner Android developers and we'll use a real-world app as an example to ensure we're covering non-trivial usecases.]]></description>
-            <link>https://dev.tube/video/dm05qny_kfE</link>
-            <guid isPermaLink="true">https://dev.tube/video/dm05qny_kfE</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+Not only will I show you how to install eclipse, but I'll also cover how to install Java, set up code completion and install java libraries.]]></description>
+            <link>https://dev.tube/video/svJQu6LUSTs</link>
+            <guid isPermaLink="true">https://dev.tube/video/svJQu6LUSTs</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 209 Miu Room An SQLite Object Mapping Library DAY1]]></title>
-            <description><![CDATA[Magda Miu, Mobile Team Leader and Scrum Master
+            <title><![CDATA[Java Video Tutorial 55]]></title>
+            <description><![CDATA[Everything from the video: http://goo.gl/aXpXa
 
-ROOM: AN SQLITE OBJECT MAPPING LIBRARY
-Intermediate / Android Architecture / Talk
+In this part of my Java video tutorial I focus on Java OOP Design Principles. We are still making the game we started , but now I'm creating all of the needed parts with strong use of encapsulation.
 
-Handling an SQLite database in Android implies challenges like: a lot of boilerplate code, database operations on the main thread, queries checked at runtime and especially unmaintainable code. At Google I/O 2017, the Android team launched Room, an SQLite object mapper, that provides a set of components and features that will solve all these challenges and will help us, the developers, to have a better experience when using a database in our app. The presentation will include examples about how to use the main components from Room (@Entity, @Dao, @Database), how to handle the relations between the entities, how to use the (observable) queries and not run database operations on the main thread. Also we will discover more details about the migration support, compile time query verification and what’s happening behind the scenes.]]></description>
-            <link>https://dev.tube/video/grCpunREe0Y</link>
-            <guid isPermaLink="true">https://dev.tube/video/grCpunREe0Y</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+I walk you through the think process of going from features needed to a finished UML class diagram. I know this is an odd way to talk about OOP design principles, but I wanted to present it in a new fresh way.
+
+What's better than making a game while learning OOP?]]></description>
+            <link>https://dev.tube/video/upmRIZwAHAY</link>
+            <guid isPermaLink="true">https://dev.tube/video/upmRIZwAHAY</guid>
+            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 211 Bahkshi Mastering the Art of A,B Testing and Beyond DAY1]]></title>
-            <description><![CDATA[Kapil Bakshi, Android Engineer
+            <title><![CDATA[Sabermetrics 2]]></title>
+            <description><![CDATA[Get Everything: http://goo.gl/QI8dG
 
-MASTERING THE ART OF A/B TESTING AND BEYOND
-Intermediate / Design / UI/UX / Talk
+I continue my Sabermetrics Baseball tutorial. I'm going to introduce a few new SQL functions being CONCAT, COALESCE and HAVING.
 
-In today’s user centric world where companies try their level best to win their users’ hearts, it has become indispensable to capture each and every user data point in order to make data driven decisions. While planning new features it becomes very confusing if you have a lot of variations in mind. No matter how good your hypothesis be, ultimately its the users, their mindset, their behaviour, their habits which govern the validity and correctness of your feature. A/B Testing transforms “I guess, I suppose to I know” by letting us distribute different versions of our product among users and determine in real time which version emerges as the leader. We can then roll out that version to all the users. From learning What is A/B Testing, Why is it needed, Fundamental blocks of A/B Testing to diving deeper into A/B Testing Stuff Designers should know, different A/B Testing Platforms available with some quick exploration of two of them, we will ultimately draw some important conclusions like When not to A/B Test, avoiding Common A/B Testing Mistakes and some of the Best Practices. So my dear Designers Design and my beloved Developers Devise, With A/B Testing Let’s All Rise!]]></description>
-            <link>https://dev.tube/video/v2sIuviKGWQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/v2sIuviKGWQ</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+We will also calculate the top players based on RBIs, HRs, Batting Average, On Base Percentage, and Slugging Percentage. And, I'll show you how to pull in data on the players position and their salary.]]></description>
+            <link>https://dev.tube/video/02HlbJ18aYc</link>
+            <guid isPermaLink="true">https://dev.tube/video/02HlbJ18aYc</guid>
+            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 207 Narayan Peristence as the Single Source of Truth DAY1]]></title>
-            <description><![CDATA[Saket Narayan, Android developer, uncommon.is
+            <title><![CDATA[Java Video Tutorial 5]]></title>
+            <description><![CDATA[Code is Here: http://wp.me/p1U2FZ-1vY
 
-PERSISTENCE AS THE SINGLE SOURCE OF TRUTH
-Android Architecture, Talk, Intermediate
+Best Java Book : http://goo.gl/FtKp0m
 
-Simple is better than complex. Complex is better than complicated.
-In the world of Android, where all sources of information and user interactions are asynchronous, UI state can become hard to reason about, especially in large apps. This is not only difficult to maintain but also increases complexity with the addition of every new feature.
-This talk will explore the idea of “persistence as the single source of truth” as a way to simplify state management, where persistent storage becomes the source for all data changes, and the UI is reduced to a reactive representation of persisted data. This forces the flow of data to be unidirectional which makes it easy to follow. The pattern is architecture agnostic and can be used in any MV-anything.We’ll see other benefits of persistence where screens can stop exchanging data through serialized Bundles, get state restoration across Activity recreations for free, and deliver offline support out-of-the-box where all UI interactions receive immediate feedback and the user is never forced to wait.]]></description>
-            <link>https://dev.tube/video/vH0m8TqvR4M</link>
-            <guid isPermaLink="true">https://dev.tube/video/vH0m8TqvR4M</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+Here I continue my Java Video Tutorial by covering methods, or functions in Java.
+
+I spend a considerable amount of time on those things that tend to confuse people who are learning Java. I review how class variables differ from local variables and provide numerous examples of methods.]]></description>
+            <link>https://dev.tube/video/1HTsLK_m2ao</link>
+            <guid isPermaLink="true">https://dev.tube/video/1HTsLK_m2ao</guid>
+            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 206 Polanski I Convinced Groupon to Flutter  Do Same with Yours! DAY1]]></title>
-            <description><![CDATA[Tomek Polanski, Software Developer, Groupon
+            <title><![CDATA[Java Video Tutorial 15]]></title>
+            <description><![CDATA[Code is Here: http://goo.gl/8I3sW
 
-I CONVINCED GROUPON TO FLUTTER. DO SAME WITH YOUR COMPANY!
+Best Java Book : http://goo.gl/FtKp0m
 
-Flutter is a new cross-platform mobile application solution from Google. While its touted benefits like the speed and the simplicity to create cross-platform applications sound appealing and you might be keen to adopt it, your team might be hesitant to adopt it because of perceptions of risk and uncertainty as the solution for your real-world app. I will tell my story about how I convinced my team at Groupon to try out Flutter. How highlighting the benefits, whilst being fully transparent about the risks will strengthen your argument.
-Next, we will help you address your team’s concerns; starting with fellow developers through to management. I will share how to get the whole team onboard, by showing your:
-Designers; how to make a beautiful application
-QA; how to make your application more robust
-Developers; how easy and captivating is to use Flutter
-Product owners; that Flutter is feasible for product goals
-Finally, I will share some of the challenges while integrating Google’s cross-platform framework into an already existing application and how we tackled them.
-After the talk, you should know if your team would benefit from Flutter, and if it does - how you can convince your colleagues.]]></description>
-            <link>https://dev.tube/video/vwbVIemvx8Q</link>
-            <guid isPermaLink="true">https://dev.tube/video/vwbVIemvx8Q</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+In this part of the Java Video Tutorial I cover interfaces, abstract classes, abstract methods and more.
+
+You need interfaces and abstract classes because Java doesn't allow you to inherit from more than one other class. You would use an interface when you want to force the user of the interface to create every method in the interface.
+
+You use an abstract method when you need some flexibility.]]></description>
+            <link>https://dev.tube/video/1PPDoAKbaNA</link>
+            <guid isPermaLink="true">https://dev.tube/video/1PPDoAKbaNA</guid>
+            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[People that make computers go crazy - Gojko Adzic]]></title>
-            <description><![CDATA[What happens to people whose last name makes them invisible to software, how the world's longest name broke a supercomputer, and why it's so hard to detect false names online.
-Gojko will shock you with stories about problems caused by wrong assumptions in computer systems, when they face the hard, unforgiving punch of reality. You'll also learn how to avoid and prevent such problems.]]></description>
-            <link>https://dev.tube/video/1Rna6NvIIDk</link>
-            <guid isPermaLink="true">https://dev.tube/video/1Rna6NvIIDk</guid>
-            <pubDate>Wed, 15 Aug 2018 01:28:50 GMT</pubDate>
+            <title><![CDATA[Java Video Tutorial 20]]></title>
+            <description><![CDATA[Code Here: http://goo.gl/THKae
+
+Best Java Book : http://goo.gl/FtKp0m
+
+I introduce you to Graphical User Interfaces (GUI) in this part of my Java Video Tutorial. I focus specifically on Java Swing and its components.
+
+We figure out how to display frames, panels, labels, buttons, text areas and more. I also go over the Dimension object and the Java Toolkit, which allows you to ask questions of the operating system.]]></description>
+            <link>https://dev.tube/video/3XB3in9Xqy8</link>
+            <guid isPermaLink="true">https://dev.tube/video/3XB3in9Xqy8</guid>
+            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
         </item>
     </channel>
 </rss>
