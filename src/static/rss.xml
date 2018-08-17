@@ -4,11 +4,194 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 15 Aug 2018 04:32:06 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Aug 2018 04:29:04 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Partnership on Darkest Dungeon: The Double-Edged Sword]]></title>
-            <description><![CDATA[In this 2018 GDC session, Red Hook Studios' Tyler Sigman & Chris Bourassa share crucial lessons learned throughout the development of Darkest Dungeon, including the challenges of running a company with two presidents. 
+            <title><![CDATA[ml5.js: Feature Extractor Regression]]></title>
+            <description><![CDATA[In this video, I use ml5's feature extractor and re-train the MobileNet model to output a "regression" controlling a slider. #machinelearning #regression #ml5 #p5js
+
+🔗code: https://github.com/CodingTrain/website/tree/master/Courses/beginner_ml5
+
+🔗 ml5.js: https://ml5js.org
+🔗 New Classification & Regression Examples: https://github.com/ml5js/ml5-library/issues/128
+🔗 Pong ml5.js: https://github.com/matamalaortiz/Pong-ML
+
+🎥 Interacting with Sliders: https://youtu.be/587qclhguQg
+
+🚂 Website: http://thecodingtrain.com/ 
+💖 Patreon: https://patreon.com/codingtrain
+🛒 Store: https://codingtrain.storenvy.com
+📚 Books: https://www.amazon.com/shop/thecodingtrain 
+
+🎥 Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+🔗  https://p5js.org/
+🔗  https://processing.org]]></description>
+            <link>https://dev.tube/video/aKgq0m1YjvQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/aKgq0m1YjvQ</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AWS Machine Learning Tutorial | Amazon Machine Learning | AWS Training | Edureka]]></title>
+            <description><![CDATA[This Edureka ‘AWS Machine Learning Tutorial’ session will introduce you to nitty gritties of Cloud Computing, Machine Learning and help you build an ML model using AWS.
+Following is the list of content covered in this session:
+1. What Is Cloud?
+2. What Is AWS?
+3. Machine Learning
+4. Demo: Implement Machine learning Using AWS
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/TzLuAjhfSrE</link>
+            <guid isPermaLink="true">https://dev.tube/video/TzLuAjhfSrE</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:45 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Diffie Hellman Key Exchange Algorithm | Secret Key Exchange | Network Security Tutorial | Edureka]]></title>
+            <description><![CDATA[** Cyber Security Course: https://www.edureka.co/cybersecurity-certification-training **
+This Edureka video teaches Diffie-Helman algorithm which is used to exchange the symmetric key between sender and receiver. The exchange of keys is done using a mathematical calculation individually at both ends. 
+
+Subscribe to our channel to get video updates. Hit the subscribe button above.
+
+About Edureka Cyber Security Training
+
+Cybersecurity is the combination of processes, practices, and technologies designed to protect networks, computers, programs, data and information from attack, damage or unauthorized access.
+
+Edureka’s Cybersecurity Certification Course will help you in learning about the basic concepts of Cybersecurity along with the methodologies that must be practiced ensuring information security of an organization. Starting from the Ground level Security Essentials, this course will lead you through Cryptography, Computer Networks & Security, Application Security, Data & Endpoint Security, idAM (Identity & Access Management), Cloud Security, Cyber-Attacks and various security practices for businesses.
+
+------------------------------------------------
+
+Why Learn Cyber Security?
+
+Cybersecurity is the gathering of advances that procedures and practices expected to ensure systems, PCs, projects and information from assault, harm or unapproved get to. In a processing setting, security incorporates both cybersecurity and physical security, it is imperative since cyberattackers can without much of a stretch take and obliterate the profoundly grouped data of governments, defense offices and banks for which the results are huge so it is essential to have an appropriate innovation which an avoid digital wrongdoings.
+
+---------------------------------------------------
+
+Objectives of Edureka Cyber Security Course
+
+This course is designed to cover a holistic & a wide variety of foundational topics of the cybersecurity domain which will be helpful to lead freshers as well as IT professional having 1 to 2 years of experience, into the next level of choice such as ethical hacking/ audit & compliance / GRC/ Security Architecture and so on
+This course focuses mainly on the basics concepts of Cyber Security
+In this course, we are going to deal with Ground level security essentials cryptography, computer networks & security, application security, data & endpoint security, idAM (identity & access management), cloud security, cyber-attacks and various security practices for businesses
+This course will be your first step towards learning Cyber Security
+--------------------------------------
+
+Who Should go for this Training?
+
+Anyone having the zeal to learn innovative technologies can take up this course. Especially, students and professionals aspiring to make a career in the Cybersecurity technology. However, Cybersecurity Certification Course is best suited for the below-mentioned profiles:-
+Networking Professionals
+Linux Administrators
+-----------------------------------------------
+
+ Please write back to us at sales@edureka.co or Call us at US: +18336900808 (Toll Free) or India: +918861301699
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/ochCOjm7XZk</link>
+            <guid isPermaLink="true">https://dev.tube/video/ochCOjm7XZk</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:45 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Five Ws of Atomic Design]]></title>
+            <description><![CDATA[This talk introduces the basic concepts of atomic design and will help you understand and know more about who invented it, what atomic design is, where and when it should be implemented and why.
+
+Talk by Riccardo Erra at the JS Roundabout meetup.
+
+Recorded by Pusher.com. Check them out if you want awesome real-time tools, and subscribe to the their YouTube channel for more talks!
+
+Pusher's channel: https://www.youtube.com/channel/UCoyqucxoFXDFnh3khD0rjUg
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/q7b1W47Fbng</link>
+            <guid isPermaLink="true">https://dev.tube/video/q7b1W47Fbng</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:25 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2018/06/27 - 01 - Mutation Testing]]></title>
+            <description><![CDATA[On écrit tous des tests (n’est-ce pas ?), mais comment savoir s’ils sont utiles ?
+
+    Par leur nombre ? Faux, beaucoup de tests ne garantissent pas que l’application fonctionne correctement
+    Avec une bonne couverture du code ? Encore faux, mieux mais pas suffisant
+
+L’important est d'être confiant sur la capacité des tests à détecter les problèmes (c’est pourquoi en TDD un test doit échouer au début, pour etre sur qu’il teste bien quelque chose). Laissez-moi donc vous présenter le mutation testing ! Cette technique modifie votre code, lance les tests et s’attend à ce qu’ils échouent. Si non, c’est que cette partie est mal testée… Dans ce talk je détaillerai les principes du mutation testing, expliquerai comment l’utiliser sur un projet scala et montrerai les résultats obtenus sur un projet réel.
+
+Par Loic Knuchel]]></description>
+            <link>https://dev.tube/video/297tyPsXOm8</link>
+            <guid isPermaLink="true">https://dev.tube/video/297tyPsXOm8</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2018/06/27 - 02 - Hadoop Unit]]></title>
+            <description><![CDATA[Dans une période où les tests sont de rigueurs et où l'on parle d'agilité et donc de cycle de plus en plus court, lorsque l'on utilise des technologies dites BigData comme Hadoop ou Spark, il est souvent bien difficile de mettre en place l'écosystème nécessaire aux tests (Apache Cassandra, Apache Kafka, HDFS, Hive, ElasticSearch, HBase, ...).
+Venez découvrir comment Hadoop Unit permet de réaliser simplement des tests d'intégration.
+
+Par Khanh Tuong Maudoux]]></description>
+            <link>https://dev.tube/video/CrgqRiVxiWw</link>
+            <guid isPermaLink="true">https://dev.tube/video/CrgqRiVxiWw</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2018/06/27 - 05 - Outils de développement Cloud]]></title>
+            <description><![CDATA[A travers des exemples, nous verrons qu'il est possible d'avoir la même expérience développeur quand on utilise un cluster Kubernetes/OpenShift. Les cas suivants seront abordés:
+
+    hotdeploy de code sur un cluster
+    remote debug d'une application tournant sur un cluster
+
+Par Jeff Maury]]></description>
+            <link>https://dev.tube/video/HHTB4YUcUPw</link>
+            <guid isPermaLink="true">https://dev.tube/video/HHTB4YUcUPw</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2018/06/27 - 04 - Jenkins plugin Support Core]]></title>
+            <description><![CDATA[Un plugin avec un tel nom, ça ne fait pas rêver, mais il doit être dans le coteau suisse des administrateur de Jenkins. Le plugin permet d'avoir un certain nombre d'information sur une instance Jenkins et connaitre le pourquoi du comment elle (l'instance) ne fonctionne pas correctement ou fonctionne au ralenti. On pourra aussi voir comment, chez CloudBees, on s'en sert pour passer des diagnostics automatique pour nos clients.
+
+Par Adrien Lecharpentier]]></description>
+            <link>https://dev.tube/video/viHn65y6kKo</link>
+            <guid isPermaLink="true">https://dev.tube/video/viHn65y6kKo</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2018/06/27 - 03 - KSql]]></title>
+            <description><![CDATA[Apache Kafka est une plateforme de streaming dont on connait les qualités de performance, robustesse, resilience, securité, etc. Je vous propose de faire une demo de KSQL qui permet de manipuler les données qui passent dans les tuyaux avec le seul langage que tout le monde connait: SQL.
+
+Et comme nous sommes des geeks, nous ferons un petit détour sur Kafka Streams, la librairie sur laquelle repose KSQL
+
+Par Florent Ramière]]></description>
+            <link>https://dev.tube/video/wwtef_Gsv8U</link>
+            <guid isPermaLink="true">https://dev.tube/video/wwtef_Gsv8U</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CNCF Serverless WG Meeting - 2018-08-16]]></title>
+            <link>https://dev.tube/video/yn_Pvmja9Vs</link>
+            <guid isPermaLink="true">https://dev.tube/video/yn_Pvmja9Vs</guid>
+            <pubDate>Fri, 17 Aug 2018 01:32:50 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Q: Why Do Keynote Speakers Keep Suggesting That Improving Security Is Possible?]]></title>
+            <description><![CDATA[James Mickens, Harvard University
+
+Some people enter the technology industry to build newer, more exciting kinds of technology as quickly as possible. My keynote will savage these people and will burn important professional bridges, likely forcing me to join a monastery or another penance-focused organization. In my keynote, I will explain why the proliferation of ubiquitous technology is good in the same sense that ubiquitous Venus weather would be good, i.e., not good at all. Using case studies involving machine learning and other hastily-executed figments of Silicon Valley’s imagination, I will explain why computer security (and larger notions of ethical computing) are difficult to achieve if developers insist on literally not questioning anything that they do since even brief introspection would reduce the frequency of git commits. At some point, my microphone will be cut off, possibly by hotel management, but possibly by myself, because microphones are technology and we need to reclaim the stark purity that emerges from amplifying our voices using rams’ horns and sheets of papyrus rolled into cone shapes. I will explain why papyrus cones are not vulnerable to buffer overflow attacks, and then I will conclude by observing that my new start-up papyr.us is looking for talented full-stack developers who are comfortable executing computational tasks on an abacus or several nearby sticks.
+
+Sign up to find out more about Security '18 at https://security18.usenix.org]]></description>
+            <link>https://dev.tube/video/ajGX7odA87k</link>
+            <guid isPermaLink="true">https://dev.tube/video/ajGX7odA87k</guid>
+            <pubDate>Fri, 17 Aug 2018 01:32:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Design of Everyday Games]]></title>
+            <description><![CDATA[In this 2016 GDC session, CCA's Christina Wodtke explores the core principles of user experience design philosophy, and how it can help create games that are elegant and complete experiences.
 
 Register for GDC: http://ubm.io/2gk5KTU
 
@@ -17,399 +200,132 @@ Join the GDC mailing list: http://www.gdconf.com/subscribe
 Follow GDC on Twitter: https://twitter.com/Official_GDC 
 
 GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
-            <link>https://dev.tube/video/UoogT3XOl-8</link>
-            <guid isPermaLink="true">https://dev.tube/video/UoogT3XOl-8</guid>
-            <pubDate>Wed, 15 Aug 2018 01:35:47 GMT</pubDate>
+            <link>https://dev.tube/video/bhxhL6ChYko</link>
+            <guid isPermaLink="true">https://dev.tube/video/bhxhL6ChYko</guid>
+            <pubDate>Fri, 17 Aug 2018 01:32:19 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[DeepMind AlphaGo Zero Explained]]></title>
-            <description><![CDATA[DeepMind's AlphaGo Zero algorithm beat the best Go player in the world by training entirely by self-play. It played against itself repeatedly, getting better over time with no human gameplay input. AlphaGo Zero was a remarkable moment in AI history, a moment that will always be remembered. Move 37 in particular is worthy of many philosophical debates. You'll see what I mean and get a technical overview of its neural components (code + animations) in this video. Enjoy! 
+            <title><![CDATA[Deep Neural Networks with PyTorch || Stefan Otte]]></title>
+            <description><![CDATA[Learn PyTorch and implement deep neural networks (and classic machine learning models). This is a hands on tutorial which is geared toward people who are new to PyTorch.
 
-Code for this video:
-https://github.com/Zeta36/chess-alpha-zero
+PyTorch is a relatively new neural network library which offers a nice tensor library, automatic differentiation for gradient descent, strong and easy gpu support, dynamic neural networks, and is easy to debug.
 
-Please Subscribe! And like. And comment. That's what keeps me going. 
+EVENT:
 
-Want more education? Connect with me here:
-Twitter: https://twitter.com/sirajraval
-instagram: https://www.instagram.com/sirajraval
-Facebook: https://www.facebook.com/sirajology
+PyData Berlin 2018
 
-There are 2 errors in this video:
-1. At the top of the residual network, it says value layer twice. One should say 'policy' layer.
-2 The residual network is 40 layers, i say 20. 
+SPEAKER:
 
-This video is apart of my Machine Learning Journey course:
-https://github.com/llSourcell/Machine_Learning_Journey
+Stefan Otte
 
-More Learning Resources:
-https://deepmind.com/blog/alphago-zero-learning-scratch/
-https://medium.com/applied-data-science/alphago-zero-explained-in-one-diagram-365f5abf67e0
-https://hackernoon.com/the-3-tricks-that-made-alphago-zero-work-f3d47b6686ef
-https://web.stanford.edu/~surag/posts/alphazero.html
-http://tim.hibal.org/blog/alpha-zero-how-and-why-it-works/
-http://www.jessicayung.com/alphago-zero-an-overview-of-the-algorithm/
+PERMISSIONS:
 
-Join us in the Wizards Slack channel:
-http://wizards.herokuapp.com/
+PyData Conference Organizer provided Coding Tech with the permission to republish this video.
 
-Sign up for the next course at The School of AI:
-https://www.theschool.ai
+CREDITS:
 
-And please support me on Patreon:
-https://www.patreon.com/user?u=3191693
-
-#AlphaGoZero #Deepmind #SirajRaval]]></description>
-            <link>https://dev.tube/video/UzYeqAJ2bA8</link>
-            <guid isPermaLink="true">https://dev.tube/video/UzYeqAJ2bA8</guid>
-            <pubDate>Wed, 15 Aug 2018 01:32:29 GMT</pubDate>
+Original video source: https://www.youtube.com/watch?v=_H3aw6wkCv0]]></description>
+            <link>https://dev.tube/video/KoyUYUcEyT8</link>
+            <guid isPermaLink="true">https://dev.tube/video/KoyUYUcEyT8</guid>
+            <pubDate>Fri, 17 Aug 2018 01:31:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[(⌐_) Turnable Tables, Part 1 (_¬)  | 3D CSS Record Player | @keyframers 1.18.0]]></title>
-            <description><![CDATA[Stephen Shaw and a faintly appearing David Khourshid create a 3D turntable with CSS! Control the rotation & open the lid with the power of CSS Variables.
+            <title><![CDATA[CSS as a Service: Maintaining Style]]></title>
+            <description><![CDATA[We often build multiple websites and applications that share the same styles across multiple code bases (style guides/pattern libraries). Maintaining these styles becomes quite a task, and causes increasing frustration overtime. Fortunately it doesn’t have to be this way.
 
-Part 2 will air next week on August 20th! Tune in a twitch.tv/keyframers for the live stream.
+Within this talk we’ll cover a service-oriented architecture approach to writing HTML and CSS, including Sass, and keeping our code modular and performant. Geared towards designers and front-end developers, we’ll discuss at how to best structure and write front-end code for maintainability and reuse, as well as how to properly package these styles to be used within different development environments. Consistency shouldn’t take a back seat to maintainability, and this talk covers how to have the best of both worlds.
 
-* ⏰ Streamed live on August 13, 2016 at https://twitch.tv/keyframers
-* 💡Inspiration: https://dribbble.com/shots/4930227-Vinyls-E-Commerce-App
-* 📺 Video: https://youtu.be/tdWxCsAqx7I
-* 💻 Code: https://cdpn.io/pen/YjMwqX/
+EVENT:
 
-Skip around:
-2:00 Animation overview
-6:00 Start coding
-1:40:00 Keyflections
+PyOhio 2018
 
-Like what we're doing? There are many ways you can support @keyframers so we can keep live coding awesome animations!
+SPEAKER:
 
-* Like & subscribe on YouTube at https://youtube.com/keyframers
-* Follow & tweet us at https://twitter.com/keyframers.
-* Join the live streams & subscribe on Twitch https://twitch.tv/keyframers 
-* Support us on Patreon at https://patreon.com/keyframers 
+Shay Howe
 
-Topics covered:
+PERMISSIONS:
 
-* CSS Variables
-* CSS 3D
-* input[type="range"]]]></description>
-            <link>https://dev.tube/video/tdWxCsAqx7I</link>
-            <guid isPermaLink="true">https://dev.tube/video/tdWxCsAqx7I</guid>
-            <pubDate>Wed, 15 Aug 2018 01:32:14 GMT</pubDate>
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=STYnug7xYfQ]]></description>
+            <link>https://dev.tube/video/PkGUHykFHg4</link>
+            <guid isPermaLink="true">https://dev.tube/video/PkGUHykFHg4</guid>
+            <pubDate>Fri, 17 Aug 2018 01:31:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[ml5.js: Feature Extractor Classification]]></title>
-            <description><![CDATA[In this video, I use ml5's feature extractor to train a machine learning image classifier with my own images. #machinelearning #classification #ml5 #p5js
+            <title><![CDATA[#DCBerlin18 103 Farber Kozlov THE BUILD SIDE OF ANDROID APP DAY2]]></title>
+            <description><![CDATA[Nikita Kozlov, Android Software Engineer, Zalando SE
+Boris Farber, Developer Advocate, Google
 
-🔗code: https://github.com/CodingTrain/website/tree/master/Courses/beginner_ml5
+THE BUILD SIDE OF ANDROID APP
+Intermediate / Best Practices / Code Quality / Talk
 
-🎥 Next Video: https://youtu.be/aKgq0m1YjvQ
-
-🔗 ml5.js: https://ml5js.org
-🔗 Teachable Machine: https://teachablemachine.withgoogle.com/
-🔗 New Classification & Regression Examples: https://github.com/ml5js/ml5-library/issues/128
-🔗 Pong ml5.js: https://github.com/matamalaortiz/Pong-ML
-
-🚂 Website: http://thecodingtrain.com/ 
-💖 Patreon: https://patreon.com/codingtrain
-🛒 Store: https://codingtrain.storenvy.com
-📚 Books: https://www.amazon.com/shop/thecodingtrain 
-
-🎥  Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
-🎥  Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
-
-🔗  https://p5js.org/
-🔗  https://processing.org]]></description>
-            <link>https://dev.tube/video/eeO-rWYFuG0</link>
-            <guid isPermaLink="true">https://dev.tube/video/eeO-rWYFuG0</guid>
-            <pubDate>Wed, 15 Aug 2018 01:32:10 GMT</pubDate>
+Are annotation processors fast or slow, is having many packages a good thing, and what about modules? What could be an efficient project architecture? All these and more, we are going to present in our talk backed up by hard metrics. You will gain tools how to properly architect and refactor your Android app when working with the following: Modules Topologies Java/Kotlin Annotation Processors Packages]]></description>
+            <link>https://dev.tube/video/3HNrarIkOg0</link>
+            <guid isPermaLink="true">https://dev.tube/video/3HNrarIkOg0</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Cross Site Scripting Tutorial | Penetration Testing Tutorial | Web Application Security | Edureka]]></title>
-            <description><![CDATA[In this Edureka live, we will go over one of the most rampant vulnerability of web based applications i.e. Cross Site Scripting. The following topics will be covered in this session:
+            <title><![CDATA[#DCBerlin18 107 Catalan  PARTY LIKE IT'S 1970  CONVERSATIONAL INTERFACES ARE BACK DAY2]]></title>
+            <description><![CDATA[Adrian Catalan, Android GDE Beginner Design / UI/UX
 
-1. What is Cross Site Scripting
-2. Types of Cross Site Scripting 
-3. Repercussions on Cross Site Scripting
-4. Preventing Cross Site Scripting
-5. Demo on types of Cross Site Scripting
-
-To practice Cross Site Scripting, download OWASP-BWAP from this link: https://sourceforge.net/projects/owaspbwa/
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/1qzjWNcQVeI</link>
-            <guid isPermaLink="true">https://dev.tube/video/1qzjWNcQVeI</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:59 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Neural Network Tutorial | Introduction to Neural Network | Deep Learning Tutorial | Edureka]]></title>
-            <description><![CDATA[( TensorFlow Training - https://www.edureka.co/ai-deep-learni... )  
-
-This video will provide you with a brief and crisp knowledge of Neural Networks, how they work, the various parameters involved in the whole Deep Learning Process.
-
-Subscribe to our channel to get video updates. Hit the subscribe button above.
-
-Check our complete Deep Learning With TensorFlow playlist here:   https://goo.gl/cck4hE
-
-- - - - - - - - - - - - - -
-
-How it Works?
-
-1. This is 21 hrs of Online Live Instructor-led course. Weekend class: 7 sessions of 3 hours each.
-2. We have a 24x7 One-on-One LIVE Technical Support to help you with any problems you might face or any clarifications you may require during the course.
-3. At the end of the training you will have to undergo a 2-hour LIVE Practical Exam based on which we will provide you a Grade and a Verifiable Certificate!
-
-- - - - - - - - - - - - - -
-
-About the Course
-Edureka's Deep learning with Tensorflow course will help you to learn the basic concepts of TensorFlow, the main functions, operations and the execution pipeline. Starting with a simple “Hello Word” example, throughout the course you will be able to see how TensorFlow can be used in curve fitting, regression, classification and minimization of error functions. This concept is then explored in the Deep Learning world. You will evaluate the common, and not so common, deep neural networks and see how these can be exploited in the real world with complex raw data using TensorFlow. In addition, you will learn how to apply TensorFlow for backpropagation to tune the weights and biases while the Neural Networks are being trained. Finally, the course covers different types of Deep Architectures, such as Convolutional Networks, Recurrent Networks and Autoencoders. 
-
-Delve into neural networks, implement Deep Learning algorithms, and explore layers of data abstraction with the help of this Deep Learning with TensorFlow course.
-
-
-- - - - - - - - - - - - - - 
-
-Who should go for this course?
-
-The following professionals can go for this course:
-
-1. Developers aspiring to be a 'Data Scientist'
-
-2. Analytics Managers who are leading a team of analysts 
-
-3. Business Analysts who want to understand Deep Learning (ML) Techniques
-
-4. Information Architects who want to gain expertise in Predictive Analytics
-
-5. Professionals who want to captivate and analyze Big Data
-
-6. Analysts wanting to understand Data Science methodologies
-
-However, Deep learning is not just focused to one particular industry or skill set, it can be used by anyone to enhance their portfolio.
-
-- - - - - - - - - - - - - - 
-
-Why Learn Deep Learning With TensorFlow?
-TensorFlow is one of the best libraries to implement Deep Learning. TensorFlow is a software library for numerical computation of mathematical expressions, using data flow graphs. Nodes in the graph represent mathematical operations, while the edges represent the multidimensional data arrays (tensors) that flow between them. It was created by Google and tailored for Machine Learning. In fact, it is being widely used to develop solutions with Deep Learning. 
-
-Machine learning is one of the fastest-growing and most exciting fields out there, and Deep Learning represents its true bleeding edge. Deep learning is primarily a study of multi-layered neural networks, spanning over a vast range of model architectures. Traditional neural networks relied on shallow nets, composed of one input, one hidden layer and one output layer. Deep-learning networks are distinguished from these ordinary neural networks having more hidden layers, or so-called more depth. These kinds of nets are capable of discovering hidden structures within unlabeled and unstructured data (i.e. images, sound, and text), which constitutes the vast majority of data in the world.
-
-Please write back to us at sales@edureka.co or call us at +91 88808 62004 for more information. 
-
-Facebook: https://www.facebook.com/edurekaIN/
-Twitter: https://twitter.com/edurekain
-LinkedIn: https://www.linkedin.com/company/edureka]]></description>
-            <link>https://dev.tube/video/WLxI4D01nj8</link>
-            <guid isPermaLink="true">https://dev.tube/video/WLxI4D01nj8</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:59 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[S3 Operations with AWS Lambda]]></title>
-            <description><![CDATA[Learn how to read and save a file into an S3 bucket using AWS-SDK from an AWS Lambda. We will create the bucket from the serverless.yml using cloudformation. Then, we will perform operations onto the stored files and save them back.
-
-💻Code: https://github.com/mavi888/serverless-s3-operations
-
-🔗Serverless 101 series: https://www.youtube.com/playlist?list=PLWKjhJtqVAbkXQS12WiLsH1oaNZBSoWuV
-
-🔗Marcia's channel: https://www.youtube.com/channel/UCSLIvjWJwLRQze9Pn4cectQ
-
-🔗Marcia's website: http://marciavillalba.com
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/GEizappc_WI</link>
-            <guid isPermaLink="true">https://dev.tube/video/GEizappc_WI</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:54 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Answering tricky JavaScript interview questions]]></title>
-            <description><![CDATA[We all work in our respective silos when writing JavaScript, be it a framework or library. After a few years working as a Front-end dev, I looked at a list of "JS interview" questions and realized that I couldn't answer many of them (at least not well). So I set out on a long, somewhat lonesome journey of JS discovery, and am pleased to share my findings with you, in the form of a talk.
-
-Regardless of how you feel about getting asked random questions meant to trick you up in an interview (you should be appalled), my talk will cover some basic JS subtleties, and hopefully fill in some knowledge gaps w/r/t:
-- Hoisting and variable scope
-- Expressions v. statements
-- Undeclared v. undefined v. null
-- Equality comparisons
-- How to properly walk out if an interviewer asks you to do fizz buzz
-
-This talk was given at Nodevember 2016 by Russell Anderson.
-
-Checkout the Nodevember channel for more great talks: https://www.youtube.com/channel/UC7z0nOE8ITfrGnXJgNzYaEQ
-
-This talk is under the creative commons license. freeCodeCamp is not associated with this talk. We're just excited to bring more exposure to to it!
-
---
-
-Learn to code for free and get a developer job: https://www.freecodecamp.org
-
-Read hundreds of articles on programming: https://medium.freecodecamp.org
-
-And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
-            <link>https://dev.tube/video/jh86NGG9jdE</link>
-            <guid isPermaLink="true">https://dev.tube/video/jh86NGG9jdE</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:54 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Envoy Community Meeting - 2018-08-14]]></title>
-            <link>https://dev.tube/video/6Hl5yTPfEuw</link>
-            <guid isPermaLink="true">https://dev.tube/video/6Hl5yTPfEuw</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:40 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CNCF Networking WG Meeting - 2018-08-14]]></title>
-            <link>https://dev.tube/video/lBG38RIzOZE</link>
-            <guid isPermaLink="true">https://dev.tube/video/lBG38RIzOZE</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:40 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Chirp your device into Azure IoT Central]]></title>
-            <description><![CDATA[Here is a smart way to use sound to provision IoT devices with wireless configuration, Cloud connection credentials and more. Chirp (https://chirp.io) created enterprise-ready, cross platform SDKs for transmitting data over sound and the Azure IoT team collaborated with Chirp to implement a nice and easy way to setup an MXChip devkit and connect it to Azure IoT Central using just sound.
-
-Get started with Azure IoT Central: http://azureiotcentral.com
-
-Get started with the Chirp SDK: https://admin.chirp.io/
-
-Create a Free Account (Azure): https://aka.ms/c9-azurefree]]></description>
-            <link>https://dev.tube/video/1oCyJe7WS7o</link>
-            <guid isPermaLink="true">https://dev.tube/video/1oCyJe7WS7o</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Yang Li: Service Fabric Cluster Resource Manager]]></title>
-            <description><![CDATA[The Service Fabric Cluster Resource Manager (CRM, not to be confused with Customer Relationship Management) is responsible for optimizing the placement and load balancing (PLB, not to be confused with network load balancing) of nodes inside a cluster. This is the part of Service Fabric where Simulated Annealing is done to optimize and balance the "heat" distribution among nodes (so, no node does too little work (cold) nor too much work (hot) - balance is important - it's really Zen). You first heard about our use of a metallurgical algorithm during the Gopal interview. 
-
-Check out the Simulated Annealing algorithm as implemented by Yang and co:
-https://github.com/Microsoft/service-fabric/blob/master/src/prod/src/Reliability/LoadBalancing/Searcher.cpp#L1453
-
-Check out Yang's code:
-https://github.com/Microsoft/service-fabric/tree/master/src/prod/src/Reliability/LoadBalancing]]></description>
-            <link>https://dev.tube/video/4W3mB-j42rA</link>
-            <guid isPermaLink="true">https://dev.tube/video/4W3mB-j42rA</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Distributed Systems, Demystified: Cassandra, DataStax demo and FAQ]]></title>
-            <description><![CDATA[Distributed system blog posts, podcasts, and presentations are everywhere, but understanding how to actually use various tools, projects, and services? Not so straightforward.
-
-Adron Hall (@adron), Developer Evangelist at DataStax, joins Christina Warren (@film_girl) to break down distributed systems, including what they are (and aren't), then dive into questions to ask as you design distributed data systems and how to weigh pros and cons. 
-
-To help you visualize and get started, you'll see his favorite Cassandra* demo -- and how to make systems more intelligent and resilient across clouds and regions.
-
-*Apache Cassandra = NoSQL open source distributed database
-
-00:54 What is a Distributed System?
-04:07 Distributed database demo - multi-cloud, multi-node, DataStax and more
-08:32 When should I use a distributed system?
-10:00 Getting started resources, repos, and more
-
-Check out Microsoft + Open Source: https://opensource.microsoft.com/
-
-DataStax Academy materials available here: https://academy.datastax.com/courses
-
-Explore Cassandra: http://cassandra.apache.org/
-
-Adron's blog: https://compositecode.blog/
-
-DataStax Enterprise is available in the Azure Marketplace here: https://aka.ms/DataStax_and_Azure_Marketplace]]></description>
-            <link>https://dev.tube/video/6eI_sbSmuas</link>
-            <guid isPermaLink="true">https://dev.tube/video/6eI_sbSmuas</guid>
-            <pubDate>Wed, 15 Aug 2018 01:31:37 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 208 Friedrich Production Fluttering DAY1]]></title>
-            <description><![CDATA[Matthias Friedrich, Android Developer Beginner Cross-Plattform Development, Jimdo
-
-PRODUCTION FLUTTER'ING
-Beginner / Cross-Plattform Development / Talk
-
-End of 2017 we were about to start work on a completely new app that should lay ground for our whole companies mobile app strategy for the years to come. We decided to join forces of our two existing native mobile app developer teams and use Flutter Google’s new cross-platform framework for Android and iOS. Advantages like really well working hot-reload complete code sharing for both platforms and a modern reactive ui framework are just too good to be ignored. But Flutter is still in an early state and with that has its teething troubles and also very own shortcomings. In the first part of this talk I want to share the overall experience we made building our very first Flutter app and running it in production for over 3 months. The second half then goes full into live coding mode to show one of Flutter’s strengths: the easiness to build a fully customized animated graph the visual highlight of our still small but beautiful app. After the talk you hopefully have a better picture of what Flutter is capable of its state of maturity and which use-cases it’s already great to be taken for.]]></description>
-            <link>https://dev.tube/video/2RKbrKgHSI4</link>
-            <guid isPermaLink="true">https://dev.tube/video/2RKbrKgHSI4</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 210 Munim A Structured Guide to Accessibility on Android DAY1]]></title>
-            <description><![CDATA[Ataul Munim, Product Engineer Beginner Design/ UI/UX, Novoda
-
-A STRUCTURED GUIDE TO ACCESSIBILITY ON ANDROID
+PARTY LIKE IT'S 1970: CONVERSATIONAL INTERFACES ARE BACK (INTO YOUR ANDROID APP)
 Beginner / Design / UI/UX / Talk
 
-A structured guide to building accessible apps on Android. This presentation will include practical checks and steps you can implement today and give you the confidence to know you're doing the best you can to support as many users as possible. The content will be familiar to beginner Android developers and we'll use a real-world app as an example to ensure we're covering non-trivial usecases.]]></description>
-            <link>https://dev.tube/video/dm05qny_kfE</link>
-            <guid isPermaLink="true">https://dev.tube/video/dm05qny_kfE</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+"Behold the promise land of AI. Machine learning has brought natural language processing right into our backyards and with it the possibilities of different ways of interaction such as conversations. But the challenges have evolved as recognizing the input can be done via an API (like DialogFlow) we also need to consider the interface and how to give an experience so natural that it seem like a human conversation. ""Oh hi how are you holding up? because I'm a potato"" it's not longer enough we need conversationally-enabled Android apps built with a different set of design concepts. In this talk we'll review examples of conversational interfaces, benefits of having one on your app, and the core principles for the design process of conversational experiences."]]></description>
+            <link>https://dev.tube/video/3kA3vG4rLLo</link>
+            <guid isPermaLink="true">https://dev.tube/video/3kA3vG4rLLo</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 209 Miu Room An SQLite Object Mapping Library DAY1]]></title>
-            <description><![CDATA[Magda Miu, Mobile Team Leader and Scrum Master
+            <title><![CDATA[#DCBerlin18 106 Davis GETTING A GRIP ON GRAPHQL DAY2]]></title>
+            <description><![CDATA[Annyce Davis, Android Development Manager, Off Grid Electric
 
-ROOM: AN SQLITE OBJECT MAPPING LIBRARY
+GETTING A GRIP ON GRAPHQL
+Beginner / APIs / Talk
+
+GraphQL is a query language for your API. This allows you to interact with your existing web services and databases in a new way. Instead of relying on a predetermined output structure from your API, you can “query” it and choose only the fields that you’re interested in. In this talk, learn what GraphQL is all about and how you can take advantage of it in your applications. A few key GraphQL terms we'll cover are: * Fields/Types * Variables * Queries/Mutations Then we'll take a look at how you can integrate the Apollo Client library inside of an Android application. GraphQL isn't going away, so here's your chance to get a grip on this exciting technology!]]></description>
+            <link>https://dev.tube/video/5GSWFsLc8t4</link>
+            <guid isPermaLink="true">https://dev.tube/video/5GSWFsLc8t4</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#DCBerlin18 104 Davies LEVERAGING ANDROID DATABINDING WITH KOTLIN DAY2]]></title>
+            <description><![CDATA[Ash Davies, Senior Android Developer, ImmobilienScout
+
+LEVERAGING ANDROID DATABINDING WITH KOTLIN
 Intermediate / Android Architecture / Talk
 
-Handling an SQLite database in Android implies challenges like: a lot of boilerplate code, database operations on the main thread, queries checked at runtime and especially unmaintainable code. At Google I/O 2017, the Android team launched Room, an SQLite object mapper, that provides a set of components and features that will solve all these challenges and will help us, the developers, to have a better experience when using a database in our app. The presentation will include examples about how to use the main components from Room (@Entity, @Dao, @Database), how to handle the relations between the entities, how to use the (observable) queries and not run database operations on the main thread. Also we will discover more details about the migration support, compile time query verification and what’s happening behind the scenes.]]></description>
-            <link>https://dev.tube/video/grCpunREe0Y</link>
-            <guid isPermaLink="true">https://dev.tube/video/grCpunREe0Y</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+Android databinding is considered as both a powerful toolchain empowering your views with access to view data without the necessity to build cumbersome presenters and conversely as an overly complex convoluted mess of binding statements opening the door to unnecessary irresponsible domain logic in your view layouts. Whilst the latter of these statements can be true databinding offers a very powerful code generation syntax allowing you to utilise the power of the compiler to ensure that your binding statements are runtime safe. Combining this with the terse syntax afforded by Kotlin allows us to dramatically cut down on boilerplate and build complex user interfaces with relative ease. In this talk you can learn how to utilise extension bindings and property delegates with your layouts and manage your screen state transformations with true and safe two-way binding allowing you to build a fully reactive observable view layout.]]></description>
+            <link>https://dev.tube/video/Bl9DatA1RAk</link>
+            <guid isPermaLink="true">https://dev.tube/video/Bl9DatA1RAk</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 211 Bahkshi Mastering the Art of A,B Testing and Beyond DAY1]]></title>
-            <description><![CDATA[Kapil Bakshi, Android Engineer
+            <title><![CDATA[#DCBerlin18 108 Turner REAL TIME AUDIO WITH THE ONE HUNDRED OSCILLATOR SYNTHESIZER DAY2]]></title>
+            <description><![CDATA[Don Turner, Developer Advocate - Android Audio, Google
 
-MASTERING THE ART OF A/B TESTING AND BEYOND
-Intermediate / Design / UI/UX / Talk
-
-In today’s user centric world where companies try their level best to win their users’ hearts, it has become indispensable to capture each and every user data point in order to make data driven decisions. While planning new features it becomes very confusing if you have a lot of variations in mind. No matter how good your hypothesis be, ultimately its the users, their mindset, their behaviour, their habits which govern the validity and correctness of your feature. A/B Testing transforms “I guess, I suppose to I know” by letting us distribute different versions of our product among users and determine in real time which version emerges as the leader. We can then roll out that version to all the users. From learning What is A/B Testing, Why is it needed, Fundamental blocks of A/B Testing to diving deeper into A/B Testing Stuff Designers should know, different A/B Testing Platforms available with some quick exploration of two of them, we will ultimately draw some important conclusions like When not to A/B Test, avoiding Common A/B Testing Mistakes and some of the Best Practices. So my dear Designers Design and my beloved Developers Devise, With A/B Testing Let’s All Rise!]]></description>
-            <link>https://dev.tube/video/v2sIuviKGWQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/v2sIuviKGWQ</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#DCBerlin18 207 Narayan Peristence as the Single Source of Truth DAY1]]></title>
-            <description><![CDATA[Saket Narayan, Android developer, uncommon.is
-
-PERSISTENCE AS THE SINGLE SOURCE OF TRUTH
+REAL-TIME AUDIO WITH THE ONE HUNDRED OSCILLATOR SYNTHESIZER
 Android Architecture, Talk, Intermediate
 
-Simple is better than complex. Complex is better than complicated.
-In the world of Android, where all sources of information and user interactions are asynchronous, UI state can become hard to reason about, especially in large apps. This is not only difficult to maintain but also increases complexity with the addition of every new feature.
-This talk will explore the idea of “persistence as the single source of truth” as a way to simplify state management, where persistent storage becomes the source for all data changes, and the UI is reduced to a reactive representation of persisted data. This forces the flow of data to be unidirectional which makes it easy to follow. The pattern is architecture agnostic and can be used in any MV-anything.We’ll see other benefits of persistence where screens can stop exchanging data through serialized Bundles, get state restoration across Activity recreations for free, and deliver offline support out-of-the-box where all UI interactions receive immediate feedback and the user is never forced to wait.]]></description>
-            <link>https://dev.tube/video/vH0m8TqvR4M</link>
-            <guid isPermaLink="true">https://dev.tube/video/vH0m8TqvR4M</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
+Android can be a great platform for musical creativity. In this session Don Turner (Developer Advocate, Android Audio) will build a musical app from scratch* on Android. He'll demonstrate methods for obtaining the best performance from the widest range of devices, and how to take advantage of the new breed of low latency Android "pro audio" devices. The app will be written in C and C++ using the Android NDK APIs.]]></description>
+            <link>https://dev.tube/video/J04iPJBkAKs</link>
+            <guid isPermaLink="true">https://dev.tube/video/J04iPJBkAKs</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#DCBerlin18 206 Polanski I Convinced Groupon to Flutter  Do Same with Yours! DAY1]]></title>
-            <description><![CDATA[Tomek Polanski, Software Developer, Groupon
+            <title><![CDATA[#DCBerlin18 110 Preussler Day2TO INJECT OR NOT INJECT   DEPENDENCY INJECTION IN A KOTLIN WORLD DAY2]]></title>
+            <description><![CDATA[Danny Preussler, Head of Mobile, Intermediate Android Architechture, sporttotal.tv
 
-I CONVINCED GROUPON TO FLUTTER. DO SAME WITH YOUR COMPANY!
+TO INJECT OR NOT INJECT - DEPENDENCY INJECTION IN A KOTLIN WORLD
+Intermediate / Android Architecture / Talk
 
-Flutter is a new cross-platform mobile application solution from Google. While its touted benefits like the speed and the simplicity to create cross-platform applications sound appealing and you might be keen to adopt it, your team might be hesitant to adopt it because of perceptions of risk and uncertainty as the solution for your real-world app. I will tell my story about how I convinced my team at Groupon to try out Flutter. How highlighting the benefits, whilst being fully transparent about the risks will strengthen your argument.
-Next, we will help you address your team’s concerns; starting with fellow developers through to management. I will share how to get the whole team onboard, by showing your:
-Designers; how to make a beautiful application
-QA; how to make your application more robust
-Developers; how easy and captivating is to use Flutter
-Product owners; that Flutter is feasible for product goals
-Finally, I will share some of the challenges while integrating Google’s cross-platform framework into an already existing application and how we tackled them.
-After the talk, you should know if your team would benefit from Flutter, and if it does - how you can convince your colleagues.]]></description>
-            <link>https://dev.tube/video/vwbVIemvx8Q</link>
-            <guid isPermaLink="true">https://dev.tube/video/vwbVIemvx8Q</guid>
-            <pubDate>Wed, 15 Aug 2018 01:29:05 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[People that make computers go crazy - Gojko Adzic]]></title>
-            <description><![CDATA[What happens to people whose last name makes them invisible to software, how the world's longest name broke a supercomputer, and why it's so hard to detect false names online.
-Gojko will shock you with stories about problems caused by wrong assumptions in computer systems, when they face the hard, unforgiving punch of reality. You'll also learn how to avoid and prevent such problems.]]></description>
-            <link>https://dev.tube/video/1Rna6NvIIDk</link>
-            <guid isPermaLink="true">https://dev.tube/video/1Rna6NvIIDk</guid>
-            <pubDate>Wed, 15 Aug 2018 01:28:50 GMT</pubDate>
+Dependency Injection via frameworks like Dagger were present in most modern Android projects. But then Kotlin happened. And since then a bunch of new libraries like Koin or Kodein appeared. Developers are even writing articles how to do DI without any framework. Some argue that those don’t even offer real dependency injection. Let’s look at that argument and compare the approaches. So is there something wrong with Dagger & co. in Kotlin? Are they obsolete? What are the alternatives? Let’s dive in.]]></description>
+            <link>https://dev.tube/video/eUKtxzqLyKM</link>
+            <guid isPermaLink="true">https://dev.tube/video/eUKtxzqLyKM</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
     </channel>
 </rss>
