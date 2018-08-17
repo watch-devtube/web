@@ -16,6 +16,7 @@
     "babel-polyfill": "^6.26.0",
     "dayjs": "^1.5.16",
     "firebase": "^5.3.1",
+    "@firebase/app-types": "^0.3.2",
     "v-debounce": "^0.1.2",
     "vue": "^2.2.1",
     "vue-async-computed": "^3.3.1",
