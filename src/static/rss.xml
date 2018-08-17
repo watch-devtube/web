@@ -4,262 +4,328 @@
         <description><![CDATA[DevTube the place where developer videos live]]></description>
         <link>https://dev.tube</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 16 Aug 2018 04:30:32 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Aug 2018 04:29:04 GMT</lastBuildDate>
         <atom:link href="https://dev.tube/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Java Video Tutorial 48]]></title>
-            <description><![CDATA[Get the Code: http://goo.gl/bwVX8
+            <title><![CDATA[ml5.js: Feature Extractor Regression]]></title>
+            <description><![CDATA[In this video, I use ml5's feature extractor and re-train the MobileNet model to output a "regression" controlling a slider. #machinelearning #regression #ml5 #p5js
 
-I show you how to Make a Java Paint Application! One of you guys asked me to do this and it gives me a great opportunity to review and cover new topics all at once.
+🔗code: https://github.com/CodingTrain/website/tree/master/Courses/beginner_ml5
 
-I cover swing, events, mouse events, Graphics2D, ArrayList, and numerous other topics.]]></description>
-            <link>https://dev.tube/video/235mse79MCw</link>
-            <guid isPermaLink="true">https://dev.tube/video/235mse79MCw</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+🔗 ml5.js: https://ml5js.org
+🔗 New Classification & Regression Examples: https://github.com/ml5js/ml5-library/issues/128
+🔗 Pong ml5.js: https://github.com/matamalaortiz/Pong-ML
+
+🎥 Interacting with Sliders: https://youtu.be/587qclhguQg
+
+🚂 Website: http://thecodingtrain.com/ 
+💖 Patreon: https://patreon.com/codingtrain
+🛒 Store: https://codingtrain.storenvy.com
+📚 Books: https://www.amazon.com/shop/thecodingtrain 
+
+🎥 Beginners: https://www.youtube.com/watch?v=8j0UDiN7my4&index=1&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+🎥 Coding Challenges: https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
+
+🔗  https://p5js.org/
+🔗  https://processing.org]]></description>
+            <link>https://dev.tube/video/aKgq0m1YjvQ</link>
+            <guid isPermaLink="true">https://dev.tube/video/aKgq0m1YjvQ</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:58 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 50]]></title>
-            <description><![CDATA[Get the Code: http://goo.gl/Kt95u
+            <title><![CDATA[AWS Machine Learning Tutorial | Amazon Machine Learning | AWS Training | Edureka]]></title>
+            <description><![CDATA[This Edureka ‘AWS Machine Learning Tutorial’ session will introduce you to nitty gritties of Cloud Computing, Machine Learning and help you build an ML model using AWS.
+Following is the list of content covered in this session:
+1. What Is Cloud?
+2. What Is AWS?
+3. Machine Learning
+4. Demo: Implement Machine learning Using AWS
 
-I wanted to make the 50th part of my Java Video Tutorial special! In this tutorial, I answer numerous questions.
+Subscribe to our channel to get video updates. Hit the subscribe button above.
 
-I begin showing you how to design a game like Asteroids. I start teaching OOP design principles using UML. You learn how to draw polygons on the screen and how to animate them. And, to top it all off I show you how collision detection works.
-
-Yes, there is a lot in this 14 minute video :)]]></description>
-            <link>https://dev.tube/video/4wWLEeQSXLQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/4wWLEeQSXLQ</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/TzLuAjhfSrE</link>
+            <guid isPermaLink="true">https://dev.tube/video/TzLuAjhfSrE</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:45 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 60]]></title>
-            <description><![CDATA[Get the game: http://goo.gl/LWesG
+            <title><![CDATA[Diffie Hellman Key Exchange Algorithm | Secret Key Exchange | Network Security Tutorial | Edureka]]></title>
+            <description><![CDATA[** Cyber Security Course: https://www.edureka.co/cybersecurity-certification-training **
+This Edureka video teaches Diffie-Helman algorithm which is used to exchange the symmetric key between sender and receiver. The exchange of keys is done using a mathematical calculation individually at both ends. 
 
-In this video I continue my Java Asteroids game. I pretty much finish up the game in this tutorial.
+Subscribe to our channel to get video updates. Hit the subscribe button above.
 
-I show you how to do a bunch of new things. I show you how to play sound in a JFrame. We introduce yet another way to handle collision detection. We remove items from the screen when they are destroyed. And, a whole bunch more is covered.]]></description>
-            <link>https://dev.tube/video/8A3ziZPZbgQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/8A3ziZPZbgQ</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+About Edureka Cyber Security Training
+
+Cybersecurity is the combination of processes, practices, and technologies designed to protect networks, computers, programs, data and information from attack, damage or unauthorized access.
+
+Edureka’s Cybersecurity Certification Course will help you in learning about the basic concepts of Cybersecurity along with the methodologies that must be practiced ensuring information security of an organization. Starting from the Ground level Security Essentials, this course will lead you through Cryptography, Computer Networks & Security, Application Security, Data & Endpoint Security, idAM (Identity & Access Management), Cloud Security, Cyber-Attacks and various security practices for businesses.
+
+------------------------------------------------
+
+Why Learn Cyber Security?
+
+Cybersecurity is the gathering of advances that procedures and practices expected to ensure systems, PCs, projects and information from assault, harm or unapproved get to. In a processing setting, security incorporates both cybersecurity and physical security, it is imperative since cyberattackers can without much of a stretch take and obliterate the profoundly grouped data of governments, defense offices and banks for which the results are huge so it is essential to have an appropriate innovation which an avoid digital wrongdoings.
+
+---------------------------------------------------
+
+Objectives of Edureka Cyber Security Course
+
+This course is designed to cover a holistic & a wide variety of foundational topics of the cybersecurity domain which will be helpful to lead freshers as well as IT professional having 1 to 2 years of experience, into the next level of choice such as ethical hacking/ audit & compliance / GRC/ Security Architecture and so on
+This course focuses mainly on the basics concepts of Cyber Security
+In this course, we are going to deal with Ground level security essentials cryptography, computer networks & security, application security, data & endpoint security, idAM (identity & access management), cloud security, cyber-attacks and various security practices for businesses
+This course will be your first step towards learning Cyber Security
+--------------------------------------
+
+Who Should go for this Training?
+
+Anyone having the zeal to learn innovative technologies can take up this course. Especially, students and professionals aspiring to make a career in the Cybersecurity technology. However, Cybersecurity Certification Course is best suited for the below-mentioned profiles:-
+Networking Professionals
+Linux Administrators
+-----------------------------------------------
+
+ Please write back to us at sales@edureka.co or Call us at US: +18336900808 (Toll Free) or India: +918861301699
+
+Facebook: https://www.facebook.com/edurekaIN/
+Twitter: https://twitter.com/edurekain
+LinkedIn: https://www.linkedin.com/company/edureka]]></description>
+            <link>https://dev.tube/video/ochCOjm7XZk</link>
+            <guid isPermaLink="true">https://dev.tube/video/ochCOjm7XZk</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:45 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 54 Java Polygon Collision Detection]]></title>
-            <description><![CDATA[Get Everything Here: http://goo.gl/JmTrs
+            <title><![CDATA[The Five Ws of Atomic Design]]></title>
+            <description><![CDATA[This talk introduces the basic concepts of atomic design and will help you understand and know more about who invented it, what atomic design is, where and when it should be implemented and why.
 
-I've been asked many times to create a program that handles Java collision detection with polygons. This is a continuation of my tutorial on how to make a Java video game and if you haven't been watching you should check it out.
+Talk by Riccardo Erra at the JS Roundabout meetup.
 
-It is surprisingly easy to handle collision detection with polygons. All you have to do is surround all of your polygons with rectangles and a handy dandy method named intersects handles pretty much everything else!]]></description>
-            <link>https://dev.tube/video/8KNwjOsdn8I</link>
-            <guid isPermaLink="true">https://dev.tube/video/8KNwjOsdn8I</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Recorded by Pusher.com. Check them out if you want awesome real-time tools, and subscribe to the their YouTube channel for more talks!
+
+Pusher's channel: https://www.youtube.com/channel/UCoyqucxoFXDFnh3khD0rjUg
+
+--
+
+Learn to code for free and get a developer job: https://www.freecodecamp.org
+
+Read hundreds of articles on programming: https://medium.freecodecamp.org
+
+And subscribe for new videos on technology every day: https://youtube.com/subscription_center?add_user=freecodecamp]]></description>
+            <link>https://dev.tube/video/q7b1W47Fbng</link>
+            <guid isPermaLink="true">https://dev.tube/video/q7b1W47Fbng</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:25 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Eclipse Shortcut Keys]]></title>
-            <description><![CDATA[Get the Cheat Sheet: http://goo.gl/OI9DU
+            <title><![CDATA[2018/06/27 - 01 - Mutation Testing]]></title>
+            <description><![CDATA[On écrit tous des tests (n’est-ce pas ?), mais comment savoir s’ils sont utiles ?
 
-I have been asked many times to cover the Eclipse shortcut keys that I use all of the time, so in this tutorial I will do just that. I did my best to limit the tutorial to the most commonly used shortcuts I use so that they are easier to memorize. I also provide them in a table below.
+    Par leur nombre ? Faux, beaucoup de tests ne garantissent pas que l’application fonctionne correctement
+    Avec une bonne couverture du code ? Encore faux, mieux mais pas suffisant
 
-Both the Auto Complete and the Keystroke shortcuts are covered. I hope this helps you write code quicker. Feel free to leave your own favorites in the comment section below if you think I missed something important.]]></description>
-            <link>https://dev.tube/video/C5glFtpuy0U</link>
-            <guid isPermaLink="true">https://dev.tube/video/C5glFtpuy0U</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+L’important est d'être confiant sur la capacité des tests à détecter les problèmes (c’est pourquoi en TDD un test doit échouer au début, pour etre sur qu’il teste bien quelque chose). Laissez-moi donc vous présenter le mutation testing ! Cette technique modifie votre code, lance les tests et s’attend à ce qu’ils échouent. Si non, c’est que cette partie est mal testée… Dans ce talk je détaillerai les principes du mutation testing, expliquerai comment l’utiliser sur un projet scala et montrerai les résultats obtenus sur un projet réel.
+
+Par Loic Knuchel]]></description>
+            <link>https://dev.tube/video/297tyPsXOm8</link>
+            <guid isPermaLink="true">https://dev.tube/video/297tyPsXOm8</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 58]]></title>
-            <description><![CDATA[Get all the code: http://goo.gl/J3MtJ
+            <title><![CDATA[2018/06/27 - 02 - Hadoop Unit]]></title>
+            <description><![CDATA[Dans une période où les tests sont de rigueurs et où l'on parle d'agilité et donc de cycle de plus en plus court, lorsque l'on utilise des technologies dites BigData comme Hadoop ou Spark, il est souvent bien difficile de mettre en place l'écosystème nécessaire aux tests (Apache Cassandra, Apache Kafka, HDFS, Hive, ElasticSearch, HBase, ...).
+Venez découvrir comment Hadoop Unit permet de réaliser simplement des tests d'intégration.
 
-As we continue to make an asteroid Java game, I show you how to make your space ship shoot.
-
-It sounds like a simple concept until you realize the ship is shooting while it is rotating through space at an angle that may not be equal to the direction it is moving. Don't worry, we'll figure it out together in this and the next tutorial.]]></description>
-            <link>https://dev.tube/video/MfqbEYyg3J8</link>
-            <guid isPermaLink="true">https://dev.tube/video/MfqbEYyg3J8</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Par Khanh Tuong Maudoux]]></description>
+            <link>https://dev.tube/video/CrgqRiVxiWw</link>
+            <guid isPermaLink="true">https://dev.tube/video/CrgqRiVxiWw</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 57]]></title>
-            <description><![CDATA[Get the code: http://goo.gl/5I88E
+            <title><![CDATA[2018/06/27 - 05 - Outils de développement Cloud]]></title>
+            <description><![CDATA[A travers des exemples, nous verrons qu'il est possible d'avoir la même expérience développeur quand on utilise un cluster Kubernetes/OpenShift. Les cas suivants seront abordés:
 
-In this video I continue making a Java Asteroids game while teaching about OOP design principles. In previous videos I showed how to make a Java UML class diagram and then we turned the UML class diagram into a class.
+    hotdeploy de code sur un cluster
+    remote debug d'une application tournant sur un cluster
 
-Here I finish up the class so that you can now fly your ship in any direction. You'll also be able to keep it on the game board and use life like velocity that accelerates.
-
-All of the code is  heavily commented to help you learn.]]></description>
-            <link>https://dev.tube/video/S1xCzB4d9G8</link>
-            <guid isPermaLink="true">https://dev.tube/video/S1xCzB4d9G8</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Par Jeff Maury]]></description>
+            <link>https://dev.tube/video/HHTB4YUcUPw</link>
+            <guid isPermaLink="true">https://dev.tube/video/HHTB4YUcUPw</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 49]]></title>
-            <description><![CDATA[Get the Code: http://goo.gl/zuTwv
+            <title><![CDATA[2018/06/27 - 04 - Jenkins plugin Support Core]]></title>
+            <description><![CDATA[Un plugin avec un tel nom, ça ne fait pas rêver, mais il doit être dans le coteau suisse des administrateur de Jenkins. Le plugin permet d'avoir un certain nombre d'information sur une instance Jenkins et connaitre le pourquoi du comment elle (l'instance) ne fonctionne pas correctement ou fonctionne au ralenti. On pourra aussi voir comment, chez CloudBees, on s'en sert pour passer des diagnostics automatique pour nos clients.
 
-In this part of my Java Video Tutorial, I continue to show you how to make a Java paint application. If you missed part 1 watch it.
-
-I cover numerous topics including: how to draw lines, ellipses, brush strokes. I also cover how to save transparency values for shapes. And, because you requested it how to create a custom event listener and much more.
-
-After this tutorial, you'll be able to make an app with much of the functionality of Photoshop.]]></description>
-            <link>https://dev.tube/video/T6FxSiYQ7nI</link>
-            <guid isPermaLink="true">https://dev.tube/video/T6FxSiYQ7nI</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Par Adrien Lecharpentier]]></description>
+            <link>https://dev.tube/video/viHn65y6kKo</link>
+            <guid isPermaLink="true">https://dev.tube/video/viHn65y6kKo</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 56]]></title>
-            <description><![CDATA[Get the finished code: http://goo.gl/sCL6A
+            <title><![CDATA[2018/06/27 - 03 - KSql]]></title>
+            <description><![CDATA[Apache Kafka est une plateforme de streaming dont on connait les qualités de performance, robustesse, resilience, securité, etc. Je vous propose de faire une demo de KSQL qui permet de manipuler les données qui passent dans les tuyaux avec le seul langage que tout le monde connait: SQL.
 
-In this part of my Java video tutorial I turn the SpaceShip UML class diagram I designed in the last video into a real class.
- This class will allow you to fly the space ship around the screen at any angle. You'll be able to rotate it while maintaining the ships current direction. It is considered to be a pretty complicated technique that is squeezed into a few lines :)
+Et comme nous sommes des geeks, nous ferons un petit détour sur Kafka Streams, la librairie sur laquelle repose KSQL
 
-All of the code follows the video below to improve your learning experience.]]></description>
-            <link>https://dev.tube/video/UWIFtzUjDLw</link>
-            <guid isPermaLink="true">https://dev.tube/video/UWIFtzUjDLw</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Par Florent Ramière]]></description>
+            <link>https://dev.tube/video/wwtef_Gsv8U</link>
+            <guid isPermaLink="true">https://dev.tube/video/wwtef_Gsv8U</guid>
+            <pubDate>Fri, 17 Aug 2018 01:33:16 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Programming]]></title>
-            <description><![CDATA[Cheat Sheet is Here : http://goo.gl/OPMjte
-
-Slower Java Tutorial : http://goo.gl/UHdlyP
-
-How to Install Java & Eclipse : http://goo.gl/vEEEJE
-
-Best Java Book : http://amzn.to/2l27h2h
-
-Support Me on Patreon : https://www.patreon.com/derekbanas
-
-In this Java programming Tutorial I'll teach you all of the core knowledge needed to write Java code in 30 minutes. This is the most popular request from everyone.
-
-I specifically cover the following topics: primitive data types, comments, class, import, Scanner, final, Strings, static, private, protected, public, constructors, math, hasNextLine, nextLine, getters, setters, method overloading, Random, casting, toString, conversion from Strings to primitives, converting from primitives to Strings, if, else, else if, print, println, printf, logical operators, comparison operators, ternary operator, switch, for, while, break, continue, do while, polymorphism, arrays, for each, multidimensional arrays and more.]]></description>
-            <link>https://dev.tube/video/WPvGqX-TXP0</link>
-            <guid isPermaLink="true">https://dev.tube/video/WPvGqX-TXP0</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+            <title><![CDATA[CNCF Serverless WG Meeting - 2018-08-16]]></title>
+            <link>https://dev.tube/video/yn_Pvmja9Vs</link>
+            <guid isPermaLink="true">https://dev.tube/video/yn_Pvmja9Vs</guid>
+            <pubDate>Fri, 17 Aug 2018 01:32:50 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 53]]></title>
-            <description><![CDATA[Get everything here: http://goo.gl/4kePr
+            <title><![CDATA[Q: Why Do Keynote Speakers Keep Suggesting That Improving Security Is Possible?]]></title>
+            <description><![CDATA[James Mickens, Harvard University
 
-I first started the how to make Java games series to solve a bunch of problems. Many people in the forums are posting extremely complicated ways to rotate polygons in Java for example. It is very easy to rotate polygons!
+Some people enter the technology industry to build newer, more exciting kinds of technology as quickly as possible. My keynote will savage these people and will burn important professional bridges, likely forcing me to join a monastery or another penance-focused organization. In my keynote, I will explain why the proliferation of ubiquitous technology is good in the same sense that ubiquitous Venus weather would be good, i.e., not good at all. Using case studies involving machine learning and other hastily-executed figments of Silicon Valley’s imagination, I will explain why computer security (and larger notions of ethical computing) are difficult to achieve if developers insist on literally not questioning anything that they do since even brief introspection would reduce the frequency of git commits. At some point, my microphone will be cut off, possibly by hotel management, but possibly by myself, because microphones are technology and we need to reclaim the stark purity that emerges from amplifying our voices using rams’ horns and sheets of papyrus rolled into cone shapes. I will explain why papyrus cones are not vulnerable to buffer overflow attacks, and then I will conclude by observing that my new start-up papyr.us is looking for talented full-stack developers who are comfortable executing computational tasks on an abacus or several nearby sticks.
 
-I also saw many people struggle with other calculations like: 
-
-1. Finding the length and angle of a line between vectors 
-2. Calculate the points of a rotating polygon 
-3. Calculate the area of irregular polygons 
-4. Find the center points of an irregular polygon 
-5. Repeat keyboard clicks if the user holds down a key
-
-Much, much more....]]></description>
-            <link>https://dev.tube/video/fK0fxjbjdQA</link>
-            <guid isPermaLink="true">https://dev.tube/video/fK0fxjbjdQA</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Sign up to find out more about Security '18 at https://security18.usenix.org]]></description>
+            <link>https://dev.tube/video/ajGX7odA87k</link>
+            <guid isPermaLink="true">https://dev.tube/video/ajGX7odA87k</guid>
+            <pubDate>Fri, 17 Aug 2018 01:32:30 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 52]]></title>
-            <description><![CDATA[Get the Code: http://goo.gl/JfZla
+            <title><![CDATA[The Design of Everyday Games]]></title>
+            <description><![CDATA[In this 2016 GDC session, CCA's Christina Wodtke explores the core principles of user experience design philosophy, and how it can help create games that are elegant and complete experiences.
 
-In this part of my Java video tutorial, I create the spaceship object and a keyboard listener. I will use the keyboard listener to move the ship around the screen.
+Register for GDC: http://ubm.io/2gk5KTU
 
-It is so easy to randomly add objects to the game we started making here Make a Java Video Game. I slowed things down a bit here, just to make sure you completely get the process.]]></description>
-            <link>https://dev.tube/video/lebZd9bDnc8</link>
-            <guid isPermaLink="true">https://dev.tube/video/lebZd9bDnc8</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.]]></description>
+            <link>https://dev.tube/video/bhxhL6ChYko</link>
+            <guid isPermaLink="true">https://dev.tube/video/bhxhL6ChYko</guid>
+            <pubDate>Fri, 17 Aug 2018 01:32:19 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 59]]></title>
-            <description><![CDATA[Get the game code: http://goo.gl/OKMBp
+            <title><![CDATA[Deep Neural Networks with PyTorch || Stefan Otte]]></title>
+            <description><![CDATA[Learn PyTorch and implement deep neural networks (and classic machine learning models). This is a hands on tutorial which is geared toward people who are new to PyTorch.
 
-In the last part of this tutorial I showed you how to make the PhotonTorpedo class using a UML class diagram.
+PyTorch is a relatively new neural network library which offers a nice tensor library, automatic differentiation for gradient descent, strong and easy gpu support, dynamic neural networks, and is easy to debug.
 
-In this tutorial, I show you how to make your space ship shoot the torpedos on the screen. As you'll see, because I used good OOP design principles in the last video, adding the shooting feature will require very few changes.
+EVENT:
 
-All of the code above is heavily commented to help you learn.]]></description>
-            <link>https://dev.tube/video/ptsNLcQYxCQ</link>
-            <guid isPermaLink="true">https://dev.tube/video/ptsNLcQYxCQ</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+PyData Berlin 2018
+
+SPEAKER:
+
+Stefan Otte
+
+PERMISSIONS:
+
+PyData Conference Organizer provided Coding Tech with the permission to republish this video.
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=_H3aw6wkCv0]]></description>
+            <link>https://dev.tube/video/KoyUYUcEyT8</link>
+            <guid isPermaLink="true">https://dev.tube/video/KoyUYUcEyT8</guid>
+            <pubDate>Fri, 17 Aug 2018 01:31:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 51]]></title>
-            <description><![CDATA[Game code is here: http://goo.gl/M0Tqj
+            <title><![CDATA[CSS as a Service: Maintaining Style]]></title>
+            <description><![CDATA[We often build multiple websites and applications that share the same styles across multiple code bases (style guides/pattern libraries). Maintaining these styles becomes quite a task, and causes increasing frustration overtime. Fortunately it doesn’t have to be this way.
 
-Here I continue what I started in Make a Java Video Game. If you haven't seen it, watch it before this video.
+Within this talk we’ll cover a service-oriented architecture approach to writing HTML and CSS, including Sass, and keeping our code modular and performant. Geared towards designers and front-end developers, we’ll discuss at how to best structure and write front-end code for maintainability and reuse, as well as how to properly package these styles to be used within different development environments. Consistency shouldn’t take a back seat to maintainability, and this talk covers how to have the best of both worlds.
 
-I'll now create the GameBoard class that will animate all of my asteroids. I redraw the board using threads. If you are rusty on them, check out my Java Thread Video Tutorial.]]></description>
-            <link>https://dev.tube/video/sSbcAFqpw-o</link>
-            <guid isPermaLink="true">https://dev.tube/video/sSbcAFqpw-o</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+EVENT:
+
+PyOhio 2018
+
+SPEAKER:
+
+Shay Howe
+
+PERMISSIONS:
+
+Original video was published with the Creative Commons Attribution license (reuse allowed).
+
+CREDITS:
+
+Original video source: https://www.youtube.com/watch?v=STYnug7xYfQ]]></description>
+            <link>https://dev.tube/video/PkGUHykFHg4</link>
+            <guid isPermaLink="true">https://dev.tube/video/PkGUHykFHg4</guid>
+            <pubDate>Fri, 17 Aug 2018 01:31:51 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Install Eclipse for Java]]></title>
-            <description><![CDATA[Get the Steps in List Format: http://goo.gl/Lrq67
+            <title><![CDATA[#DCBerlin18 103 Farber Kozlov THE BUILD SIDE OF ANDROID APP DAY2]]></title>
+            <description><![CDATA[Nikita Kozlov, Android Software Engineer, Zalando SE
+Boris Farber, Developer Advocate, Google
 
-I've been asked to show you how to Install Eclipse for Java a few times lately. So in this video I'll show you how to install Eclipse step-by-step.
+THE BUILD SIDE OF ANDROID APP
+Intermediate / Best Practices / Code Quality / Talk
 
-Not only will I show you how to install eclipse, but I'll also cover how to install Java, set up code completion and install java libraries.]]></description>
-            <link>https://dev.tube/video/svJQu6LUSTs</link>
-            <guid isPermaLink="true">https://dev.tube/video/svJQu6LUSTs</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+Are annotation processors fast or slow, is having many packages a good thing, and what about modules? What could be an efficient project architecture? All these and more, we are going to present in our talk backed up by hard metrics. You will gain tools how to properly architect and refactor your Android app when working with the following: Modules Topologies Java/Kotlin Annotation Processors Packages]]></description>
+            <link>https://dev.tube/video/3HNrarIkOg0</link>
+            <guid isPermaLink="true">https://dev.tube/video/3HNrarIkOg0</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 55]]></title>
-            <description><![CDATA[Everything from the video: http://goo.gl/aXpXa
+            <title><![CDATA[#DCBerlin18 107 Catalan  PARTY LIKE IT'S 1970  CONVERSATIONAL INTERFACES ARE BACK DAY2]]></title>
+            <description><![CDATA[Adrian Catalan, Android GDE Beginner Design / UI/UX
 
-In this part of my Java video tutorial I focus on Java OOP Design Principles. We are still making the game we started , but now I'm creating all of the needed parts with strong use of encapsulation.
+PARTY LIKE IT'S 1970: CONVERSATIONAL INTERFACES ARE BACK (INTO YOUR ANDROID APP)
+Beginner / Design / UI/UX / Talk
 
-I walk you through the think process of going from features needed to a finished UML class diagram. I know this is an odd way to talk about OOP design principles, but I wanted to present it in a new fresh way.
-
-What's better than making a game while learning OOP?]]></description>
-            <link>https://dev.tube/video/upmRIZwAHAY</link>
-            <guid isPermaLink="true">https://dev.tube/video/upmRIZwAHAY</guid>
-            <pubDate>Thu, 16 Aug 2018 01:36:12 GMT</pubDate>
+"Behold the promise land of AI. Machine learning has brought natural language processing right into our backyards and with it the possibilities of different ways of interaction such as conversations. But the challenges have evolved as recognizing the input can be done via an API (like DialogFlow) we also need to consider the interface and how to give an experience so natural that it seem like a human conversation. ""Oh hi how are you holding up? because I'm a potato"" it's not longer enough we need conversationally-enabled Android apps built with a different set of design concepts. In this talk we'll review examples of conversational interfaces, benefits of having one on your app, and the core principles for the design process of conversational experiences."]]></description>
+            <link>https://dev.tube/video/3kA3vG4rLLo</link>
+            <guid isPermaLink="true">https://dev.tube/video/3kA3vG4rLLo</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Sabermetrics 2]]></title>
-            <description><![CDATA[Get Everything: http://goo.gl/QI8dG
+            <title><![CDATA[#DCBerlin18 106 Davis GETTING A GRIP ON GRAPHQL DAY2]]></title>
+            <description><![CDATA[Annyce Davis, Android Development Manager, Off Grid Electric
 
-I continue my Sabermetrics Baseball tutorial. I'm going to introduce a few new SQL functions being CONCAT, COALESCE and HAVING.
+GETTING A GRIP ON GRAPHQL
+Beginner / APIs / Talk
 
-We will also calculate the top players based on RBIs, HRs, Batting Average, On Base Percentage, and Slugging Percentage. And, I'll show you how to pull in data on the players position and their salary.]]></description>
-            <link>https://dev.tube/video/02HlbJ18aYc</link>
-            <guid isPermaLink="true">https://dev.tube/video/02HlbJ18aYc</guid>
-            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
+GraphQL is a query language for your API. This allows you to interact with your existing web services and databases in a new way. Instead of relying on a predetermined output structure from your API, you can “query” it and choose only the fields that you’re interested in. In this talk, learn what GraphQL is all about and how you can take advantage of it in your applications. A few key GraphQL terms we'll cover are: * Fields/Types * Variables * Queries/Mutations Then we'll take a look at how you can integrate the Apollo Client library inside of an Android application. GraphQL isn't going away, so here's your chance to get a grip on this exciting technology!]]></description>
+            <link>https://dev.tube/video/5GSWFsLc8t4</link>
+            <guid isPermaLink="true">https://dev.tube/video/5GSWFsLc8t4</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 5]]></title>
-            <description><![CDATA[Code is Here: http://wp.me/p1U2FZ-1vY
+            <title><![CDATA[#DCBerlin18 104 Davies LEVERAGING ANDROID DATABINDING WITH KOTLIN DAY2]]></title>
+            <description><![CDATA[Ash Davies, Senior Android Developer, ImmobilienScout
 
-Best Java Book : http://goo.gl/FtKp0m
+LEVERAGING ANDROID DATABINDING WITH KOTLIN
+Intermediate / Android Architecture / Talk
 
-Here I continue my Java Video Tutorial by covering methods, or functions in Java.
-
-I spend a considerable amount of time on those things that tend to confuse people who are learning Java. I review how class variables differ from local variables and provide numerous examples of methods.]]></description>
-            <link>https://dev.tube/video/1HTsLK_m2ao</link>
-            <guid isPermaLink="true">https://dev.tube/video/1HTsLK_m2ao</guid>
-            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
+Android databinding is considered as both a powerful toolchain empowering your views with access to view data without the necessity to build cumbersome presenters and conversely as an overly complex convoluted mess of binding statements opening the door to unnecessary irresponsible domain logic in your view layouts. Whilst the latter of these statements can be true databinding offers a very powerful code generation syntax allowing you to utilise the power of the compiler to ensure that your binding statements are runtime safe. Combining this with the terse syntax afforded by Kotlin allows us to dramatically cut down on boilerplate and build complex user interfaces with relative ease. In this talk you can learn how to utilise extension bindings and property delegates with your layouts and manage your screen state transformations with true and safe two-way binding allowing you to build a fully reactive observable view layout.]]></description>
+            <link>https://dev.tube/video/Bl9DatA1RAk</link>
+            <guid isPermaLink="true">https://dev.tube/video/Bl9DatA1RAk</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 15]]></title>
-            <description><![CDATA[Code is Here: http://goo.gl/8I3sW
+            <title><![CDATA[#DCBerlin18 108 Turner REAL TIME AUDIO WITH THE ONE HUNDRED OSCILLATOR SYNTHESIZER DAY2]]></title>
+            <description><![CDATA[Don Turner, Developer Advocate - Android Audio, Google
 
-Best Java Book : http://goo.gl/FtKp0m
+REAL-TIME AUDIO WITH THE ONE HUNDRED OSCILLATOR SYNTHESIZER
+Android Architecture, Talk, Intermediate
 
-In this part of the Java Video Tutorial I cover interfaces, abstract classes, abstract methods and more.
-
-You need interfaces and abstract classes because Java doesn't allow you to inherit from more than one other class. You would use an interface when you want to force the user of the interface to create every method in the interface.
-
-You use an abstract method when you need some flexibility.]]></description>
-            <link>https://dev.tube/video/1PPDoAKbaNA</link>
-            <guid isPermaLink="true">https://dev.tube/video/1PPDoAKbaNA</guid>
-            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
+Android can be a great platform for musical creativity. In this session Don Turner (Developer Advocate, Android Audio) will build a musical app from scratch* on Android. He'll demonstrate methods for obtaining the best performance from the widest range of devices, and how to take advantage of the new breed of low latency Android "pro audio" devices. The app will be written in C and C++ using the Android NDK APIs.]]></description>
+            <link>https://dev.tube/video/J04iPJBkAKs</link>
+            <guid isPermaLink="true">https://dev.tube/video/J04iPJBkAKs</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Java Video Tutorial 20]]></title>
-            <description><![CDATA[Code Here: http://goo.gl/THKae
+            <title><![CDATA[#DCBerlin18 110 Preussler Day2TO INJECT OR NOT INJECT   DEPENDENCY INJECTION IN A KOTLIN WORLD DAY2]]></title>
+            <description><![CDATA[Danny Preussler, Head of Mobile, Intermediate Android Architechture, sporttotal.tv
 
-Best Java Book : http://goo.gl/FtKp0m
+TO INJECT OR NOT INJECT - DEPENDENCY INJECTION IN A KOTLIN WORLD
+Intermediate / Android Architecture / Talk
 
-I introduce you to Graphical User Interfaces (GUI) in this part of my Java Video Tutorial. I focus specifically on Java Swing and its components.
-
-We figure out how to display frames, panels, labels, buttons, text areas and more. I also go over the Dimension object and the Java Toolkit, which allows you to ask questions of the operating system.]]></description>
-            <link>https://dev.tube/video/3XB3in9Xqy8</link>
-            <guid isPermaLink="true">https://dev.tube/video/3XB3in9Xqy8</guid>
-            <pubDate>Thu, 16 Aug 2018 01:34:55 GMT</pubDate>
+Dependency Injection via frameworks like Dagger were present in most modern Android projects. But then Kotlin happened. And since then a bunch of new libraries like Koin or Kodein appeared. Developers are even writing articles how to do DI without any framework. Some argue that those don’t even offer real dependency injection. Let’s look at that argument and compare the approaches. So is there something wrong with Dagger & co. in Kotlin? Are they obsolete? What are the alternatives? Let’s dive in.]]></description>
+            <link>https://dev.tube/video/eUKtxzqLyKM</link>
+            <guid isPermaLink="true">https://dev.tube/video/eUKtxzqLyKM</guid>
+            <pubDate>Fri, 17 Aug 2018 01:30:56 GMT</pubDate>
         </item>
     </channel>
 </rss>
