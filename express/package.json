@@ -17,7 +17,7 @@
     "@types/request": "^2.47.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
-    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201807261642/devtube-commons-v0.1.0.tgz",
+    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201808170811/devtube-commons-v0.1.0.tgz",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
     "mustache-express": "^1.2.6",
