@@ -24,6 +24,12 @@ cd express
 # install server app dependencies 
 yarn
 
+# download test data
+mkdir data
+curl -f --output data/loki.json https://storage.googleapis.com/dev-tube-index/loki-test.json
+curl -f --output data/lunr.json https://storage.googleapis.com/dev-tube-index/lunr-test.json
+curl -f --output data/board.json https://storage.googleapis.com/dev-tube-index/board.json
+
 # run server app on
 yarn run dev
 ```
