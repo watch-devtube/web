@@ -36,23 +36,7 @@ yarn run dev
 
 Voila! The app is available via port `8100`.
 
-## How to deploy the app to production?
-
-``` bash
-# make sure serverless is installed
-npm install --global serverless
-
-# build client app
-yarn && yarn build
-
-# build server app
-cd express && yarn && yarn compile
-
-# deploy server app as Google cloud function
-serverless deploy
-
-```
-
 ## How to contribute content?
+
 The info is [here](https://github.com/watch-devtube/contrib).
 
