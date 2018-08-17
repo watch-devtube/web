@@ -30,6 +30,7 @@ script:
 - serverless version
 - tsc --version
 - yarn
+- gsutil cp gs://dev-tube-index/*.xml ./src/static
 - yarn build
 # compile express app
 - cd express

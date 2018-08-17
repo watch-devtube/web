@@ -2,6 +2,7 @@
 node_modules/
 backup/
 dist/
+src/static/*.xml
 npm-debug.log
 yarn-error.log
-/.idea
+.idea/
