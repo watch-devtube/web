@@ -23,7 +23,7 @@
                 :title="result.title" 
                 :id="result.objectID" 
                 :channel="result.channelTitle")
-          span(v-else) Nothing today, bro!
+          span(v-else) Nothing today, folks! 
             a.button(href="https://dev.tube/contributors") Become a contributor!      
 </template>
 <script>
