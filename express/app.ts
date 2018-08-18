@@ -116,10 +116,13 @@ async function proxy(req: Request, res: Response) {
     })
   } else if (req.path.startsWith("/@")) {
     let speaker = req.path.split("/@")[1]
+    let avatarUrl = Buffer.from(`http://avatars.io/twitter/${speaker}`).toString('base64')
+    let image = `https://res.cloudinary.com/eduardsi/image/upload/l_fetch:${avatarUrl},w_180,h_180,g_south_west,x_650,y_270,r_max,bo_2px_solid_white/e_colorize,co_white,l_text:Lato_35:@${speaker.toUpperCase()},g_south_west,x_220,y_307/dazzle_xcifcf.png`
     Logger.info(`SPEAKER REQUEST: ${speaker}`)
     indexHtml(res, {
       title: `DevTube - Videos by @${speaker}`,
-      speaker: `"${speaker}"`
+      speaker: `"${speaker}"`,
+      ogImage: image
     })
   } else if (req.path.startsWith("/discover-api")) {
 
