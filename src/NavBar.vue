@@ -50,6 +50,7 @@
           | &nbsp;Log in
           .navbar-dropdown.is-right.is-boxed
             a.navbar-item(@click="signIn('github'); hide()") via Github
+            a.navbar-item(@click="signIn('twitter'); hide()") via Twitter
             a.navbar-item(@click="signIn('google'); hide()") via Google
         | &nbsp;&nbsp;&nbsp;
 </template>

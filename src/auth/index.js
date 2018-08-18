@@ -6,6 +6,9 @@ let authProviders = {
   },
   github: {
     name: firebase.auth.GithubAuthProvider
+  },
+  twitter: {
+    name: firebase.auth.TwitterAuthProvider
   }
 };
 
