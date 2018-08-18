@@ -9,6 +9,7 @@ import * as path from 'path'
 
 import { Request, Response } from 'express'
 import { Fastr, dnsCache, Logger } from 'devtube-commons'
+import { shuffle } from './utils'
 
 console.timeEnd('Imports')
 
@@ -121,14 +122,6 @@ async function proxy(req: Request, res: Response) {
 
     console.time(`Discover API`)
     let excludes = req.body.excludes
-
-    let shuffle = (a) => {
-      for (let i = a.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a
-    }
 
     let discover = (refinement, sorting) => fastr
       .search(undefined, refinement, sorting)
