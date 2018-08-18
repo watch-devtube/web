@@ -73,7 +73,7 @@ let featuredOrUndefined = () => {
 console.timeEnd('Application start')
 
 async function proxy(req: Request, res: Response) {
-  
+
   let directLink = ['/channel/', '/tag/'].find(it => req.path.startsWith(it))
 
   let cookies = req.get('Cookie')
@@ -81,12 +81,12 @@ async function proxy(req: Request, res: Response) {
 
   Logger.info(`REQUEST PATH: ${req.path}`)
 
-  if (req.path == '/find') {
+  let indexHtml = (res, overrides = {} as any) => {
+    let title = overrides.title || 'DevTube - The best developer videos in one place'
+    let description = overrides.description || 'Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world.'
+    let ogImage = overrides.ogImage || 'https://dev.tube/open_graph.jpg'
 
-    let title = 'DevTube - The best developer videos in one place'
-    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
-
-    res.render('index.html', {      
+    let defaultResponse = {
       title: title,
       nightMode: nightMode,
       featured: featuredOrUndefined(),
@@ -94,60 +94,28 @@ async function proxy(req: Request, res: Response) {
         { name: "description", content: description },
         { name: "og:title", content: title },
         { name: "og:description", content: description },
-        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
+        { name: "og:image", content: ogImage },
         { name: 'twitter:title', content: title },
         { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
-      ]
-    })
-  } else if (req.path.startsWith("/contributors")) {
-
-    // Preload data
-    console.time('Contributors loading')
-    let board = fs.readFileSync(`${__dirname}/data/board.json`, 'utf8')
-    console.timeEnd('Contributors loading')
-
-    let title = 'DevTube Contributors'
-    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
-    let response = {
-      title: title,
-      nightMode: nightMode,
-      board: board,
-      meta: [
-        { name: "description", content: description },
-        { name: "og:title", content: title },
-        { name: "og:description", content: description },
-        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
+        { name: 'twitter:image', content: ogImage }
       ]
     }
-    res.render('index.html', response)
+    res.render('index.html', { ...defaultResponse, ...overrides })
+  }
 
+  if (!req.path || req.path == "/" || req.path == '/find' ) {
+    indexHtml(res)
+  } else if (req.path.startsWith("/contributors")) {
+    indexHtml(res, {
+      title: 'DevTube – Community and Contributors',
+      board: fs.readFileSync(`${__dirname}/data/board.json`, 'utf8')
+    })
   } else if (req.path.startsWith("/@")) {
-
     let speaker = req.path.split("/@")[1]
-
     Logger.info(`SPEAKER REQUEST: ${speaker}`)
-
-    let title = `DevTube - Videos by @${speaker}`
-    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
-
-    res.render('index.html', {
-      title: title,
-      nightMode: nightMode,
-      featured: featuredOrUndefined(),
-      speaker: `"${speaker}"`,
-      meta: [
-        { name: "description", content: description },
-        { name: "og:title", content: title },
-        { name: "og:description", content: description },
-        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
-      ]
+    indexHtml(res, {
+      title: `DevTube - Videos by @${speaker}`,
+      speaker: `"${speaker}"`
     })
   } else if (req.path.startsWith("/discover-api")) {
 
@@ -159,7 +127,7 @@ async function proxy(req: Request, res: Response) {
         let j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
       }
-      return a;
+      return a
     }
 
     let discover = (refinement, sorting) => fastr
@@ -194,51 +162,13 @@ async function proxy(req: Request, res: Response) {
         "results": discovered
       }
     )
-
-  } else if (!req.path || req.path == "/") {
-
-    let title = `DevTube - Discover videos`
-    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
-
-    res.render('index.html', {
-      title: title,
-      nightMode: nightMode,
-      featured: featuredOrUndefined(),
-      meta: [
-        { name: "description", content: description },
-        { name: "og:title", content: title },
-        { name: "og:description", content: description },
-        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
-      ]
-    })
-
   } else if (directLink) {
-
     let param = req.path.split(directLink)[1]
-
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
-
-    let title = `DevTube - Videos by ${param}`
-    let description = 'Enjoy the best technical videos and share it with friends, colleagues, and the world.'
     
-    res.render('index.html', {
-      title: title,
-      nightMode: nightMode,
-      featured: featuredOrUndefined(),
-      meta: [
-        { name: "description", content: description },
-        { name: "og:title", content: title },
-        { name: "og:description", content: description },
-        { name: "og:image", content: 'https://dev.tube/open_graph.jpg' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: 'https://dev.tube/open_graph.jpg' }
-      ]
-    })    
-
+    indexHtml(res, {
+      title: `DevTube - Videos, tutorials, webinars about ${param}`
+    })   
   } else if (req.path.startsWith("/search")) {
 
     Logger.info(`SEARCH REQUEST: ${JSON.stringify(req.body.requests[0].params)}`)
@@ -291,20 +221,11 @@ async function proxy(req: Request, res: Response) {
     if (!video) {
       res.status(404).send('Not found')
     } else {
-      res.render('index.html', {
+      indexHtml(res, {
         title: `${video.title} - Watch at Dev.Tube`,
-        nightMode: nightMode,
-        featured: featuredOrUndefined(),
-        preloadedEntity: JSON.stringify(video),
-        meta: [
-          { name: 'description', content: video.description },
-          { name: "og:title", content: video.title },
-          { name: "og:description", content: video.description },
-          { name: "og:image", content: `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg` },
-          { name: 'twitter:title', content: video.title },
-          { name: 'twitter:description', content: video.description },
-          { name: 'twitter:image', content: `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg` }
-        ]
+        description: video.description,
+        ogImage: `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`,
+        preloadedEntity: JSON.stringify(video)
       })
     }
   } else {
