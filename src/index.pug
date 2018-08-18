@@ -39,6 +39,14 @@ html(lang='en')
     link(rel='alternate' type='application/rss+xml' title="Newly added videos" href='https://dev.tube/rss.xml')
     script(src='//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/dayjs/1.5.24/dayjs.min.js')
+    |     {{#meta}}
+    |       {{#name}}
+    meta(name='{{name}}', content='{{{content}}}')
+    |      {{/name}}
+    |      {{^name}}
+    meta(property='{{property}}', content='{{{content}}}')
+    |     {{/name}}
+    |   {{/meta}}
     script(type="application/ld+json").
       {
         "@context": "http://schema.org",
@@ -47,12 +55,6 @@ html(lang='en')
         "url": "https://dev.tube",
         "sameAs": ["https://twitter.com/watchdevtube", "https://github.com/watch-devtube"]
       }
-    meta(name='twitter:card', content='summary_large_image')
-    meta(name='twitter:site', content='@WatchDevTube')
-    meta(name='twitter:creator', content='@WatchDevTube')
-    |     {{#meta}}
-    meta(name='{{name}}', content='{{{content}}}')
-    |     {{/meta}}
   body
     script.
       window.preloadedEntity = {{& preloadedEntity}}{{^preloadedEntity}}undefined{{/preloadedEntity}}

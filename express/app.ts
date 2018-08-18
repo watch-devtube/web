@@ -93,12 +93,15 @@ async function proxy(req: Request, res: Response) {
       featured: featuredOrUndefined(),
       meta: [
         { name: "description", content: description },
-        { name: "og:title", content: title },
-        { name: "og:description", content: description },
-        { name: "og:image", content: ogImage },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: ogImage }
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:image", content: ogImage },
+        { property: 'twitter:title', content: title },
+        { property: 'twitter:description', content: description },
+        { property: 'twitter:image', content: ogImage },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:site', content: '@WatchDevTube' },
+        { property: 'twitter:creator', content: '@WatchDevTube' }
       ]
     }
     res.render('index.html', { ...defaultResponse, ...overrides })
@@ -214,11 +217,29 @@ async function proxy(req: Request, res: Response) {
     if (!video) {
       res.status(404).send('Not found')
     } else {
+      let ogImage = `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`
+      let link = `https://youtube.com/v/${video.objectID}`
+      let title = `${video.title} – Watch @ Dev.Tube`
       indexHtml(res, {
-        title: `${video.title} - Watch at Dev.Tube`,
+        title: title,
         description: video.description,
-        ogImage: `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`,
-        preloadedEntity: JSON.stringify(video)
+        ogImage: ogImage,
+        preloadedEntity: JSON.stringify(video),
+        meta: [
+          { name: "description", content: video.description },
+          { property: "og:title", content: title },
+          { property: "og:description", content: video.description },
+          { property: "og:image", content: ogImage },
+          { property: 'twitter:title', content: title },
+          { property: 'twitter:description', content: video.description },
+          { property: 'twitter:image', content: ogImage },
+          { property: 'twitter:card', content: 'player' },
+          { property: 'twitter:player', content: link },
+          { property: 'twitter:player:width', content: '435' },
+          { property: 'twitter:player:height', content: '251' },
+          { property: 'twitter:site', content: '@WatchDevTube' },
+          { property: 'twitter:creator', content: '@WatchDevTube' }
+        ]
       })
     }
   } else {
