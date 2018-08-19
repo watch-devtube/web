@@ -221,28 +221,12 @@ async function proxy(req: Request, res: Response) {
       res.status(404).send('Not found')
     } else {
       let ogImage = `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`
-      let link = `https://youtube.com/v/${video.objectID}`
       let title = `${video.title} – Watch @ Dev.Tube`
       indexHtml(res, {
         title: title,
         description: video.description,
         ogImage: ogImage,
-        preloadedEntity: JSON.stringify(video),
-        meta: [
-          { name: "description", content: video.description },
-          { property: "og:title", content: title },
-          { property: "og:description", content: video.description },
-          { property: "og:image", content: ogImage },
-          { property: 'twitter:title', content: title },
-          { property: 'twitter:description', content: video.description },
-          { property: 'twitter:image', content: ogImage },
-          { property: 'twitter:card', content: 'player' },
-          { property: 'twitter:player', content: link },
-          { property: 'twitter:player:width', content: '435' },
-          { property: 'twitter:player:height', content: '251' },
-          { property: 'twitter:site', content: '@WatchDevTube' },
-          { property: 'twitter:creator', content: '@WatchDevTube' }
-        ]
+        preloadedEntity: JSON.stringify(video)
       })
     }
   } else {
