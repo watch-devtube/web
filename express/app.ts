@@ -170,6 +170,10 @@ async function proxy(req: Request, res: Response) {
     })   
   } else if (req.path.startsWith("/search")) {
 
+    if (!req.body.requests || !req.body.requests.length) {
+      res.sendStatus(400)
+    }
+
     Logger.info(`SEARCH REQUEST: ${JSON.stringify(req.body.requests[0].params)}`)
 
     let { query, page, refinement, sortOrder, excludes } = req.body.requests[0].params
