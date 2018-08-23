@@ -8,8 +8,8 @@ export class Videos {
   ids: string[]
 
   constructor(ids) {
-    this.ids = ids
-    this.videoKeys = ids.map(id => datastore.key(['video', id]))
+    this.ids = ids || []
+    this.videoKeys = this.ids.map(id => datastore.key(['video', id]))
   }
 
   fetch() {
