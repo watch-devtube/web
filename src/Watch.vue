@@ -22,11 +22,15 @@
                   nav.level.is-mobile
                     .level-item.has-text-centered
                       div
-                        p.heading: i.far.fa-smile
-                        p.title.is-size-7 {{video.satisfaction}}
+                        p.heading: font-awesome-icon(:icon="['far', 'thumbs-up']")
+                        p.title.is-size-7 {{video.likes | kilo}}
                     .level-item.has-text-centered
                       div
-                        p.heading Views
+                        p.heading: font-awesome-icon(:icon="['far', 'thumbs-down']")
+                        p.title.is-size-7 {{video.dislikes | kilo}}
+                    .level-item.has-text-centered
+                      div
+                        p.heading: font-awesome-icon(:icon="['far', 'eye']")
                         p.title.is-size-7 {{video.views | kilo}}
                     .level-item.has-text-centered                        
                       div

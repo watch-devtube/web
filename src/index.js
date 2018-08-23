@@ -13,9 +13,9 @@ import Notifications from 'vue-notification'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMoon, faMinus, faUser, faPlusCircle, faMinusCircle, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMoon, faMinus, faUser, faPlusCircle, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
-library.add(faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faMoon)
+library.add(faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faMoon, faThumbsUp, faThumbsDown)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)

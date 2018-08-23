@@ -15,11 +15,15 @@
           nav.level.is-mobile
             .level-item.has-text-centered
               div
-                p.heading.is-capitalized: i.far.fa-smile
-                p.title.is-size-7 {{satisfaction}} 
+                p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'thumbs-up']")
+                p.title.is-size-7 {{likes | kilo}} 
+            .level-item.has-text-centered
+              div
+                p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'thumbs-down']")
+                p.title.is-size-7 {{dislikes | kilo}}
             .level-item.has-text-centered.is-capitalized
               div
-                p.heading.is-capitalized Views
+                p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'eye']")
                 p.title.is-size-7 {{views | kilo}}
             .level-item.has-text-centered
               div                
@@ -132,7 +136,8 @@
       id: { type: String, required: true },
       title: { type: String, required: true },
       channel: { type: String, required: true },
-      satisfaction: { type: Number, required: true },
+      likes: { type: Number, required: true },
+      dislikes: { type: Number, required: true },
       views: { type: Number, default: 0 },
       duration: { type: Number, required: true },
       recordingDate: { type: Number, required: true },

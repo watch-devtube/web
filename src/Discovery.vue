@@ -19,7 +19,8 @@
                 :recordingDate="result.recordingDate" 
                 :duration="result.duration" 
                 :views="result.views" 
-                :satisfaction="result.satisfaction" 
+                :likes="result.likes"
+                :dislikes="result.dislikes"
                 :title="result.title" 
                 :id="result.objectID" 
                 :channel="result.channelTitle")
