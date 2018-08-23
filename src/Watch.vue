@@ -11,13 +11,13 @@
             p {{errors[0]}}
     .container(v-if="errors.length == 0")
       .columns
-        .column.is-one-half(v-bind:class="{ active: isFullWidth }")
+        .column
           .card
             .card-image
               VideoToggles(:videoId="id")
               a(@click="toggleWatched(id)" v-if="auth.user")
               .videoWrapper
-                iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0'" frameborder="0" allowfullscreen)
+                iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0&rel=0'" frameborder="0" allowfullscreen)
             .card-content
                   nav.level.is-mobile
                     .level-item.has-text-centered
@@ -32,21 +32,22 @@
                       div
                         p.heading: font-awesome-icon(:icon="['far', 'eye']")
                         p.title.is-size-7 {{video.views | kilo}}
-                    .level-item.has-text-centered                        
+                    .level-item.has-text-centered
                       div
                         p.heading Duration
                         p.title.is-size-7 {{video.duration | duration}}
-                    .level-item.has-text-centered                        
+                    .level-item.has-text-centered
                       div
                         p.heading Recorded
                         p.title.is-size-7 {{video.recordingDate | published}}
-                    .level-item.has-text-centered(id="toggleWidth")                        
-                      a(v-on:click="toggleWidth")
-                        p.heading {{ isFullWidth ? 'Collapse' : 'Expand' }}
-                        p.title.is-size-7: i.fas.fa-expand
-        .column
+                    .level-item.has-text-centered
+                      div
+                        p.heading Share
+                        p.title.is-size-7
+                          ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
           .content
-            h1 {{video.title}}
+            h3
+            h3.title {{video.title}}
             .media(v-if="video.speaker && video.speaker.twitter")
                 .media-left.has-text-left
                     figure.image.is-48x48.is-marginless
@@ -63,23 +64,22 @@
                   p.subtitle.is-6
                     a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
                       i.fas.fa-heart
-                      |  contribute
+                      |  contribute for karma
             .media
-            .tags
-              a.tag(v-for="tag in video.tags" @click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
-              a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
-                i.fab.fa-youtube 
-                | &nbsp; {{video.channelTitle}}
+            .columns
+              .column.is-narrow
+                .tags
+                  a.tag(v-for="tag in video.tags" @click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
+                  a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
+                    i.fab.fa-youtube 
+                    | &nbsp; {{video.channelTitle}}
+              .column
+                p(v-if="video.speaker")
+                  | Wrong data? 
+                  a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                    i.fas.fa-heart
+                    |  contribute
             p {{video.description}}
-            p
-              | Enjoyed the video?
-              ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
-            p(v-if="video.speaker")
-              | Wrong data? 
-              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                i.fas.fa-heart
-                |  contribute
-
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       .comments
@@ -106,10 +106,6 @@
     flex-wrap: wrap;
   }
 
-  .column.is-one-half.active {
-    min-width: 100%;
-  }
-
   @media only screen and (max-width: 768px) {
     #toggleWidth {
       display: none;
@@ -127,9 +123,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        &.active {
-          min-width: 100%;
-        }
       }
   }
   .card-content {

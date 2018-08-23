@@ -2,15 +2,12 @@
   .share
     a(:href="'//www.facebook.com/sharer/sharer.php?u=' + url" target="_blank") 
       i.fab.fa-facebook
-      |  share
     a(:href="'//twitter.com/intent/tweet?text=' + thanksOrBlank + encodedTitle + '&via=WatchDevTube&hashtags=' + csvTags + '&url=' + url" target="_blank")
       | &nbsp;
       i.fab.fa-twitter-square
-      |  tweet
     a(:href="'//linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + encodedTitle" target="_blank")
       | &nbsp;
       i.fab.fa-linkedin
-      |  share    
 </template>
 <script>
   export default {
