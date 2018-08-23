@@ -9,7 +9,8 @@ import * as path from 'path'
 
 import { Request, Response } from 'express'
 import { Fastr, dnsCache, Logger } from 'devtube-commons'
-import { shuffle } from './utils'
+import './utils'
+import { Videos } from './videos'
 
 console.timeEnd('Imports')
 
@@ -133,34 +134,26 @@ async function proxy(req: Request, res: Response) {
       .search(undefined, refinement, sorting)
       .filter(hit => hit != null)
       .filter(hit => !(excludes || []).includes(hit.objectID))
+      .map(hit => hit.objectID)
       .slice(0, 100)
+      .shuffle()
+      .slice(0, 8)
 
-    let staffPicks = discover({ 'featured' : true }, '-featured')
-    let top = discover(undefined, '-satisfaction')
-    let newAdditions = discover(undefined, '-recordingDate')
-
-    let discovered = [
-      {
-        title: "Staff Picks",
-        items: shuffle(staffPicks).slice(0, 8)
-      },
-      {
-        title: "Top Rated",
-        items: shuffle(top).slice(0, 8)
-      },
-      {
-        title: "Recent Additions",
-        items: shuffle(newAdditions).slice(0, 8)
-      }
+    let discovery = [
+      { title: "Staff Picks",      ids: discover({ featured : true }, '-featured') },
+      { title: "Top Rated",        ids: discover(undefined, '-satisfaction') },
+      { title: "Recent Additions", ids: discover(undefined, '-recordingDate') }
     ]
 
-    console.timeEnd(`Discover API`)
+    let allVideoIds = discovery.flatMap(x => x.ids)
+    let allVideos = await new Videos(allVideoIds).fetch()
 
-    res.status(200).send(
-      {
-        "results": discovered
-      }
-    )
+    let discovered = discovery.map(({title, ids}) => {
+      return { title: title, items: allVideos.filter(video => ids.some(id => id == video.objectID))}
+    })
+
+    console.timeEnd(`Discover API`)
+    res.status(200).send( { results: discovered } )
   } else if (directLink) {
     let param = req.path.split(directLink)[1]
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
@@ -182,14 +175,15 @@ async function proxy(req: Request, res: Response) {
 
     console.time(`Query ${q}`)
     let maxHitsPerPage = 20
-    let hitsAll = fastr.search(q, refinement, sortOrder)
+    let hitsIds = fastr.search(q, refinement, sortOrder)
       .filter(hit => hit != null)
-      .filter(hit => !(excludes || [])
-      .includes(hit.objectID))
+      .filter(hit => !(excludes || []).includes(hit.objectID))
+      .map(hit => hit.objectID)
+
     let from = (page || 0) * maxHitsPerPage
     let to = from + maxHitsPerPage
-    let hitsPage = hitsAll.slice(from, to)
-    let nbPages = Math.ceil(hitsAll.length / maxHitsPerPage)
+    let hitsPage = await new Videos(hitsIds.slice(from, to)).fetch()
+    let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage)
 
     console.timeEnd(`Query ${q}`)
 
@@ -199,7 +193,7 @@ async function proxy(req: Request, res: Response) {
           {
             "hits": hitsPage,
             "page": page,
-            "nbHits": hitsAll.length,
+            "nbHits": hitsIds.length,
             "nbPages": nbPages,
             "hitsPerPage": maxHitsPerPage
           }
@@ -217,9 +211,12 @@ async function proxy(req: Request, res: Response) {
     let sortOrder = '-satisfaction'
     let refinement = { 'objectID' : objectID } 
 
-    let video = fastr.search(q, refinement, sortOrder)
+    let videoId = fastr.search(q, refinement, sortOrder)
       .filter(hit => hit != null)
-      .find(it => true) as any
+      .map(it => it.objectID)
+      .find(it => true)
+
+    let [video] = await new Videos([videoId]).fetch()
 
     if (!video) {
       res.status(404).send('Not found')
