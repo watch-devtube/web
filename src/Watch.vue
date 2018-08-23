@@ -4,12 +4,7 @@
     .container    
       NavBar
   section.section.body
-    .container(v-if="errors.length > 0")
-      .columns
-        .column
-          .notification.is-danger
-            p {{errors[0]}}
-    .container(v-if="errors.length == 0")
+    .container
       .columns
         .column
           .card
