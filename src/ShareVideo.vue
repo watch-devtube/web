@@ -9,6 +9,11 @@
       | &nbsp;
       i.fab.fa-linkedin
 </template>
+<style lang="scss">
+  a:hover {
+    color: white;
+  }
+</style>
 <script>
   export default {
     props: { 

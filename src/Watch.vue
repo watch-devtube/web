@@ -1,7 +1,7 @@
 <template lang="pug">
 .watch
   header
-    .container    
+    .container
       NavBar
   section.section.body
     .container
@@ -17,11 +17,11 @@
                   nav.level.is-mobile
                     .level-item.has-text-centered
                       div
-                        p.heading: font-awesome-icon(:icon="['far', 'thumbs-up']")
+                        p.heading: a: font-awesome-icon(:icon="['far', 'thumbs-up']")
                         p.title.is-size-7 {{video.likes | kilo}}
                     .level-item.has-text-centered
                       div
-                        p.heading: font-awesome-icon(:icon="['far', 'thumbs-down']")
+                        p.heading: a: font-awesome-icon(:icon="['far', 'thumbs-down']")
                         p.title.is-size-7 {{video.dislikes | kilo}}
                     .level-item.has-text-centered
                       div
@@ -82,29 +82,11 @@
 </template>
 <style scoped lang="scss">
   header {
-    background-color: #343d46;
     padding: 10px;
-
-    @media only screen and (max-width: 768px) {
-      .logo {
-        width: 70px;
-        margin-bottom: 10px;
-      }
-    }
-
-    .links a {
-      color: white;
-    }
   }
 
   .columns:not(.is-desktop) {
     flex-wrap: wrap;
-  }
-
-  @media only screen and (max-width: 768px) {
-    #toggleWidth {
-      display: none;
-    }
   }
 
   .videoWrapper {
@@ -123,6 +105,9 @@
   .card-content {
     p { color: white; }
     background-color: #343d46;
+    a:hover {
+      color: white;
+    }
   }
 
   .avatar {
