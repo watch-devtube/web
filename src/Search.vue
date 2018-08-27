@@ -88,7 +88,7 @@ export default {
       search(requests) {
         that.$Progress.start()
         that.loading = true
-        return fetch('/search', {
+        return fetch('/api/search', {
           method: 'post',
           headers: {
             'Content-Type': 'application/json',

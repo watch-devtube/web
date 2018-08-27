@@ -40,7 +40,7 @@
     },
     asyncComputed: {
       items() {
-        return axios.post(`/discover-api`, {
+        return axios.post(`/api/discover`, {
           excludes: this.watchedIds
         })
         .then(response => response.data)

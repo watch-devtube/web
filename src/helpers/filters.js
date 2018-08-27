@@ -50,7 +50,9 @@ export const capitalizeIfNeeded = (it) => {
   return noCapitalizeTag || capitalize(it)
 }
 
-const capitalize = (str) => str.replace(/\b\w/g, l => l.toUpperCase())
+const capitalize = (str) => str
+  ? str.replace(/\b\w/g, l => l.toUpperCase())
+  : str
 
 export const truncate = (it, max) => it
   ? it.slice(0, max) + (max < it.length ? '...' : '')

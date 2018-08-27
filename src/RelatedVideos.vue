@@ -45,7 +45,7 @@
                     { 'channelTitle' : this.channel }
 
           
-        return axios.post(`/search`, {
+        return axios.post(`/api/search`, {
             requests: [
               {
                 params: {
