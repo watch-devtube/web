@@ -5,4 +5,5 @@ dist/
 src/static/*.xml
 npm-debug.log
 yarn-error.log
+service_key.json
 .idea/
