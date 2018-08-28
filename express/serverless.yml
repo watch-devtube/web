@@ -20,6 +20,7 @@ package:
     - "service_key.json"
   include:
     - "api/**"
+    - "firebase.json"
     - "data/*.json"
     - "../dist/**"
     - "../sitemap.xml"
