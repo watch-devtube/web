@@ -10,7 +10,7 @@
       i.fab.fa-linkedin
 </template>
 <style lang="scss">
-  a:hover {
+  .share a:hover {
     color: white;
   }
 </style>
@@ -21,7 +21,7 @@
       title: { type: String, required: true },
       speaker: { type: String, required: true },
       channel: { type: String, required: true },
-      tags: { type: Array, required: false, default: []}
+      tags: { type: Array, required: false, default: () => []}
     },
     computed: {
       thanksOrBlank() {

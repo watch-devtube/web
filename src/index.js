@@ -35,6 +35,7 @@ import videos from './videos'
 import loading from './loading'
 import notify from './notify'
 import query from './query'
+import likes from './likes'
 
 Vue.use(Vuex)
 Vue.use(InstantSearch)
@@ -91,7 +92,7 @@ const router = new VueRouter({
 import createPersistedState from "vuex-persistedstate"
 const store = new Vuex.Store({
   modules: {
-    auth, videos, loading, notify, query
+    auth, videos, loading, notify, query, likes
   },
   strict: true,
   plugins:[

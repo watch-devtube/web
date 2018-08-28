@@ -9,8 +9,8 @@ const shuffle = (a) => {
 declare global {
   interface Array<T> {
     shuffle(): Array<T>;
+    dedup<E>(callback: (t: T) => E): Array<T>;
     flatMap<E>(callback: (t: T) => Array<E>): Array<E>
-
   }
 }
 
@@ -19,6 +19,15 @@ if (!Array.prototype.shuffle) {
     return shuffle(this)
   }
 }
+
+if (!Array.prototype.dedup) {
+  Array.prototype.dedup = function<T>(f: Function): T[] {
+    return this.filter((that, pos, arr) => {
+      return arr.map(it => f(it)).indexOf(f(that)) === pos;
+    })
+  }
+}
+
 
 
 if (!Array.prototype.flatMap) {

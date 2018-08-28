@@ -2,7 +2,7 @@
   .related-videos
     .columns.is-multiline
       .column.is-6.is-3-widescreen.shrinkIfEmpty(v-for="video in hits")
-        VideoCard(:tags="video.tags" :speaker="video.speaker" :likes="video.likes" :dislikes="video.dislikes" :creationDate="video.creationDate" :recordingDate="video.recordingDate" :duration="video.duration" :views="video.views" :satisfaction="video.satisfaction" :title="video.title" :id="video.objectID" :channel="video.channelTitle")
+        VideoCard(:tags="video.tags" :speaker="video.speaker" :likes="video.likes + (video.dtLikes || 0)" :dislikes="video.dislikes  + (video.dtDislikes || 0)" :creationDate="video.creationDate" :recordingDate="video.recordingDate" :duration="video.duration" :views="video.views" :satisfaction="video.satisfaction" :title="video.title" :id="video.objectID" :channel="video.channelTitle")
 </template>
 <style lang="scss">
   .shrinkIfEmpty:empty {
@@ -19,7 +19,7 @@
       videoId: { type: String },
       channel: { type: String },
       speakerTwitter: { type: String },
-      tags: { type: Array, required: false, default: [] }
+      tags: { type: Array, required: false, default: () => [] }
     },
     computed: {
       ...mapGetters('videos', ['watchedIds'])

@@ -7,11 +7,13 @@ console.time('Imports')
 import * as fs from 'fs'
 import * as path from 'path'
 
+
+import './utils'
 import { Request, Response } from 'express'
 import { dnsCache, Logger } from 'devtube-commons'
-import './utils'
-import {fastr} from './api/fastr'
+import { fastr } from './api/fastr'
 import { Videos } from './videos'
+import { User } from './api/user'
 import responseTime from './responseTime'
 
 
@@ -123,7 +125,7 @@ async function proxy(req: Request, res: Response) {
       speaker: `"${speaker}"`,
       ogImage: image
     })
-  } else if (req.path.startsWith("/api")) {
+  } else if (req.path.startsWith("/api/")) {
     let module = await import(`./${req.path}`)
     module.default(req, res)
   } else if (directLink) {
@@ -148,7 +150,9 @@ async function proxy(req: Request, res: Response) {
       .map(it => it.objectID)
       .find(it => true)
 
-    let [video] = await new Videos([videoId]).fetch()
+    let videos = new Videos([videoId])
+    let [video] = await videos.fetch()
+    let [reactions] = await videos.reactions()
 
     if (!video) {
       res.status(404).send('Not found')
@@ -159,7 +163,7 @@ async function proxy(req: Request, res: Response) {
         title: title,
         description: video.description,
         ogImage: ogImage,
-        preloadedEntity: JSON.stringify(video)
+        preloadedEntity: JSON.stringify({...video, reactions: reactions})
       })
     }
   } else {
@@ -170,6 +174,21 @@ async function proxy(req: Request, res: Response) {
     }
   }
 }
+app.post("/api2/videos/:videoId/likes", async (req: Request, res: Response) => {
+  let { auth } = req.headers
+  let u = new User(auth)
+  let uid = await u.uid()
+  let module = await import("./api/reactions")
+  module.like(req, res, { uid: uid })
+})
+
+app.post("/api2/videos/:videoId/dislikes", async (req: Request, res: Response) => {
+  let { auth } = req.headers
+  let u = new User(auth)
+  let uid = await u.uid()
+  let module = await import("./api/reactions")
+  module.dislike(req, res, { uid: uid })
+})
 
 app.get("*", proxy)
 app.post("*", proxy)

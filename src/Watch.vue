@@ -17,12 +17,18 @@
                   nav.level.is-mobile
                     .level-item.has-text-centered
                       div
-                        p.heading: a: font-awesome-icon(:icon="['far', 'thumbs-up']")
-                        p.title.is-size-7 {{video.likes | kilo}}
+                        p.heading
+                          span(v-if="!auth.user || iDisliked"): font-awesome-icon(:icon="['far', 'thumbs-up']")
+                          span(v-else-if="iLiked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-up']")
+                          a(v-else @click="putALike(id)"): font-awesome-icon(:icon="['far', 'thumbs-up']")
+                        p.title.is-size-7 {{video.likes + dtLikes | kilo}} 
                     .level-item.has-text-centered
                       div
-                        p.heading: a: font-awesome-icon(:icon="['far', 'thumbs-down']")
-                        p.title.is-size-7 {{video.dislikes | kilo}}
+                        p.heading
+                          span(v-if="!auth.user || iLiked"): font-awesome-icon(:icon="['far', 'thumbs-down']")
+                          span(v-else-if="iDisliked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-down']")
+                          a(v-else @click="putADislike(id)"): font-awesome-icon(:icon="['far', 'thumbs-down']")
+                        p.title.is-size-7 {{video.dislikes + dtDislikes | kilo}}
                     .level-item.has-text-centered
                       div
                         p.heading: font-awesome-icon(:icon="['far', 'eye']")
@@ -127,7 +133,9 @@
     data: function() {
       return {
         errors: [],
-        video: {},
+        video: {
+          reactions: {}
+        },
         isFullWidth: false
       }
     },
@@ -138,10 +146,34 @@
       '$route': 'fetch'
     },
     computed: {
+      dtLikes() {
+        return (this.video.reactions && this.video.reactions.likes.length) || 0
+      },
+      dtDislikes() {
+        return (this.video.reactions && this.video.reactions.dislikes.length) || 0
+      },
+      iLiked() {
+        let me = this.auth.user.uid
+        return this.video.reactions && this.video.reactions.likes.some(like => like.uid == me)
+      },
+      iDisliked() {
+        let me = this.auth.user.uid
+        return this.video.reactions && this.video.reactions.dislikes.some(dislike => dislike.uid == me)
+      },
       ...mapState([ 'videos', 'auth' ]),
       ...mapGetters('videos', ['isWatched'])
     },
     methods: {
+      putALike(id) {
+        this.$store.dispatch('likes/putALike', id)
+        .then(r => this.$set(this.video, 'reactions', r.data))
+        .catch(e => this.$store.dispatch("notify/error", { error: e }))
+      },
+      putADislike(id) {
+        this.$store.dispatch('likes/putADislike', id)
+          .then(r => this.$set(this.video, 'reactions', r.data))
+          .catch(e => this.$store.dispatch("notify/error", { error: e }))
+      },
       fetch() {
         this.video = window.preloadedEntity
         this.$Progress.finish()   

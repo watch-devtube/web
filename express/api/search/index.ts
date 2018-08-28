@@ -1,5 +1,4 @@
 import { Videos } from '../../videos'
-import { Logger } from 'devtube-commons'
 import { fastr } from '../../api/fastr'
 
 export default async (req, res) => {

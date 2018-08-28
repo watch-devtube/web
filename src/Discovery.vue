@@ -19,8 +19,8 @@
                 :recordingDate="result.recordingDate" 
                 :duration="result.duration" 
                 :views="result.views" 
-                :likes="result.likes"
-                :dislikes="result.dislikes"
+                :likes="result.likes + (result.dtLikes || 0)"
+                :dislikes="result.dislikes + (result.dtDislikes || 0)"
                 :title="result.title" 
                 :id="result.objectID" 
                 :channel="result.channelTitle")

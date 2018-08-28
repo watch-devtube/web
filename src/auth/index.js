@@ -35,12 +35,15 @@ let actions = {
   },
   autoSignIn ({commit}, payload) {
     if (payload) {
-      commit('setUser', {
-        id: payload.uid,
-        name: payload.displayName,
-        email: payload.email,
-        photoUrl: payload.photoURL,
-        uid: payload.uid
+      payload.getIdToken().then(token => {
+        commit('setUser', {
+          id: payload.uid,
+          name: payload.displayName,
+          email: payload.email,
+          photoUrl: payload.photoURL,
+          uid: payload.uid,
+          tkn: token
+        })
       })
     } else {
       commit('setUser', undefined)
@@ -52,20 +55,7 @@ let actions = {
     let providerInfo = authProviders[providerName]
     let provider = new (providerInfo.name)()
     firebase.auth().signInWithPopup(provider)
-      .then(
-        user => {
-          console.log(user);
-          let newUser = {
-            id: user.uid,
-            name: user.displayName,
-            email: user.email,
-            photoUrl: user.photoURL,
-            uid: user.uid
-          }
-          commit('setUser', newUser)
-          location.reload()
-        }
-      )
+      .then(user => location.reload())
       .catch(error => {
           if (error.code == "auth/popup-closed-by-user") {
             return

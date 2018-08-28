@@ -20,6 +20,7 @@
     "cors": "^2.8.4",
     "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201808170811/devtube-commons-v0.1.0.tgz",
     "express": "^4.16.3",
+    "firebase-admin": "^6.0.0",
     "lodash": "^4.17.10",
     "mustache-express": "^1.2.6",
     "serverless-google-cloudfunctions": "^1.2.0",
