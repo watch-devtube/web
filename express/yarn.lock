@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@firebase/app-types@0.3.2":
+"@firebase/app-types@0.3.2", "@firebase/app-types@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.3.2.tgz#a92dc544290e2893bd8c02a81e684dae3d8e7c85"
 
@@ -257,10 +257,6 @@
 "@protobufjs/utf8@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
-
-"@types/algoliasearch@^3.27.5":
-  version "3.27.5"
-  resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.27.5.tgz#266843bbae54d4d393c3143f3786a82ed302030e"
 
 "@types/body-parser@*":
   version "1.17.0"

@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
-    "@types/algoliasearch": "^3.27.5",
     "@types/express": "^4.16.0",
     "@types/lodash": "^4.14.109",
     "@types/lru-cache": "^4.1.1",
     "@types/request": "^2.47.1",
+    "@firebase/app-types": "^0.3.2",    
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201808170811/devtube-commons-v0.1.0.tgz",
