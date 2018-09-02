@@ -31,7 +31,7 @@ script:
 - serverless version
 - tsc --version
 - yarn
-- gsutil cp gs://dev-tube-index/*.xml ./src/static
+- gsutil -m cp gs://dev-tube-index/*.xml ./src/static
 - yarn build
 # compile express app
 - cd express
@@ -39,7 +39,7 @@ script:
 - yarn build
 # get data 
 - mkdir ./data
-- gsutil cp gs://dev-tube-index/*.json ./data
+- gsutil -m cp gs://dev-tube-index/*.json ./data
 # select deployment
 - export DEPLOYMENT=green
 # deploy proxy
