@@ -1,0 +1,4 @@
+proxy-blue:
+  handler: proxy
+  events:
+    - http: path

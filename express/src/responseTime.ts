@@ -1,3 +1,4 @@
+
 export default (req, res, next) => {
   const startHrTime = process.hrtime();
   res.on("finish", () => {

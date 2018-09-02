@@ -1,12 +1,10 @@
 
-
 console.time('Application start')
 
 console.time('Imports')
 
 import * as fs from 'fs'
 import * as path from 'path'
-
 
 import './utils'
 import { Request, Response } from 'express'
@@ -15,7 +13,6 @@ import { fastr } from './api/fastr'
 import { Videos } from './videos'
 import { User } from './api/user'
 import responseTime from './responseTime'
-
 
 console.timeEnd('Imports')
 
@@ -35,9 +32,9 @@ let cors = require('cors')
 
 let app = express()
 let devMode = process.env.DEV_MODE === 'true' || process.argv[2] === 'dev'
-let staticDir = devMode ? '../dist' : './dist'
+let staticDir = path.resolve(devMode ? `${__dirname}/../../../dist` : './dist')
+let dataDir = path.resolve(devMode ? `${__dirname}/../../data` : './data')
 let port = process.env.PORT || 8100
-
 
 app.use(cors())
 app.use(responseTime)
@@ -84,6 +81,7 @@ async function proxy(req: Request, res: Response) {
   Logger.info(`REQUEST PATH: ${req.path}`)
 
   let indexHtml = (res, overrides = {} as any) => {
+
     let title = overrides.title || 'DevTube - The best developer videos in one place'
     let description = overrides.description || 'Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world.'
     let ogImage = overrides.ogImage || 'https://dev.tube/open_graph.jpg'
@@ -105,7 +103,9 @@ async function proxy(req: Request, res: Response) {
         { property: 'twitter:creator', content: '@WatchDevTube' }
       ]
     }
-    res.render('index.html', { ...defaultResponse, ...overrides })
+
+    res.render(`${staticDir}/index.html`, { ...defaultResponse, ...overrides })
+
   }
 
   if (!req.path || req.path == "/" || req.path == '/find' ) {
@@ -113,7 +113,7 @@ async function proxy(req: Request, res: Response) {
   } else if (req.path.startsWith("/contributors")) {
     indexHtml(res, {
       title: 'DevTube – Community and Contributors',
-      board: fs.readFileSync(`${__dirname}/data/board.json`, 'utf8')
+      board: fs.readFileSync(`${dataDir}/board.json`, 'utf8')
     })
   } else if (req.path.startsWith("/@")) {
     let speaker = req.path.split("/@")[1]
@@ -167,13 +167,16 @@ async function proxy(req: Request, res: Response) {
       })
     }
   } else {
-    if (fs.existsSync('.' + req.path)) {
-      res.sendFile('.' + req.path)
+    let absoluteFilePath = path.resolve(`${staticDir}/${req.path}`)
+    if (fs.existsSync(absoluteFilePath)) {
+      res.sendFile(absoluteFilePath)
     } else {
+      Logger.debug(`REQUESTED NOT EXISTING PATH: ${absoluteFilePath}`)
       res.status(404).send('not found')
     }
   }
 }
+
 app.post("/api2/videos/:videoId/likes", async (req: Request, res: Response) => {
   let { auth } = req.headers
   let u = new User(auth)

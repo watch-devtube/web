@@ -1,4 +1,5 @@
-service: devtube-proxy-with-data
+
+service: devtube-proxy-${env:DEPLOYMENT}
 
 provider:
   name: google
@@ -10,7 +11,6 @@ provider:
 
 plugins:
   - serverless-google-cloudfunctions
-  - serverless-plugin-typescript
 
 package:
   exclude:
@@ -18,16 +18,15 @@ package:
     - ".gitignore"
     - "yarn*"
     - "service_key.json"
+    - "src/**"
+    - "*.yml"
+    - "*.enc"
+    - "*.ts"
   include:
-    - "api/**"
+    - "./dist/**"
+    - "../dist/**"
     - "firebase.json"
     - "data/*.json"
-    - "../dist/**"
-    - "../sitemap.xml"
-    - "*.js"
 
 functions:
-  proxy2:
-    handler: proxy2
-    events:
-      - http: path
+  - ${file(functions-${env:DEPLOYMENT}.yml)}

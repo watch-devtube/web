@@ -1,5 +1,6 @@
 *.js
 service_key.json
+firebase.json
 .serverless/
 .build/
 dist/

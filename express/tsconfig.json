@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "removeComments": true,
-    "lib": ["es2015"]
+    "outDir": "./dist",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ]
   },
   "include": [
     "**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts",
+    "**/__mocks__/*.ts",
+    "**/__mocks__/**/*.ts",    
   ]
 }

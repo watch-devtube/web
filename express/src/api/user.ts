@@ -1,6 +1,7 @@
+
 import * as admin from 'firebase-admin'
 
-var serviceAccount = require('../firebase.json');
+var serviceAccount = require('../../../firebase.json')
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -18,4 +19,5 @@ export class User {
   uid() {
     return admin.auth().verifyIdToken(this.jwtToken).then(decodedToken => decodedToken.uid)
   }
+
 }

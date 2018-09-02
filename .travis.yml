@@ -36,13 +36,15 @@ script:
 # compile express app
 - cd express
 - yarn
-- yarn compile
+- yarn build
 # get data 
 - mkdir ./data
 - gsutil cp gs://dev-tube-index/*.json ./data
-# deploy proxy with data
+# select deployment
+- export DEPLOYMENT=green
+# deploy proxy
 - serverless package
-- unzip -l .serverless/devtube-proxy-with-data.zip
+- unzip -l .serverless/devtube-proxy-${DEPLOYMENT}.zip
 - serverless deploy
 notifications:
   slack:

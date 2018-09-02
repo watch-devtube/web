@@ -3,11 +3,11 @@
   "description": "Dev.Tube Web Express App",
   "version": "1.0.0",
   "author": "Eduards Sizovs <eduards@devternity.com>",
-  "main": "index.js",
+  "main": "dist/index.js",
   "private": true,
   "scripts": {
-    "dev": "tsc --project tsconfig.json && node app.js dev",
-    "compile": "tsc --project tsconfig.json"
+    "dev": "rimraf dist && tsc && node dist/src/app.js dev",
+    "build": "rimraf dist && tsc"
   },
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
