@@ -1,4 +1,4 @@
-proxy-blue:
+proxyBlue:
   handler: proxyBlue
   events:
     - http: path

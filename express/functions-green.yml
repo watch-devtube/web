@@ -1,4 +1,4 @@
-proxy-green:
+proxyGreen:
   handler: proxyGreen
   events:
     - http: path
