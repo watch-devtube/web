@@ -56,6 +56,11 @@
 </template>
 <style lang="scss" scoped>
 header {
+
+  .logo {
+    cursor: pointer;
+  }
+
   input {
     -webkit-appearance: none;
     outline: none;
