@@ -8,6 +8,7 @@ provider:
   credentials: service_key.json
   memorySize: 2048
   timeout: 30s
+  region: us-central1
 
 plugins:
   - serverless-google-cloudfunctions
@@ -23,8 +24,8 @@ package:
     - "*.enc"
     - "*.ts"
   include:
-    - "./dist/**"
     - "../dist/**"
+    - "./dist/**/*.js"
     - "firebase.json"
     - "data/*.json"
 
