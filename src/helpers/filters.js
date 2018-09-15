@@ -21,9 +21,20 @@ export const duration = it => {
   }
 
   const date = new Date(it * 1000)
-  const hours = date.getUTCHours()
+  const hours = Math.floor(it / 3600)
   const minutes = date.getUTCMinutes()
   return (hours ? `${hours} h `: '') + (minutes ? `${minutes} min` : '')
+}
+
+export const durationFull = it => {
+  if (!it) {
+    return it
+  }
+  
+  const date = new Date(it * 1000)
+  const hours = Math.floor(it / 3600)
+  const minutes = date.getUTCMinutes()
+  return (hours ? `${hours} hours`: `${minutes} minutes`)
 }
 
 export const capitalizeIfNeeded = (it) => { 

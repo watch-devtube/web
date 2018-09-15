@@ -28,6 +28,8 @@
                         | No videos matching your query. Please 
                         a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
                         | .
+                section(v-if="speaker")
+                  SpeakerStats(:stats="stats")
                 ais-results#videos.columns.is-multiline
                   template(slot-scope="{ result }")
                     .column.is-6.is-flex-tablet.is-3-widescreen.shrinkIfEmpty
@@ -58,6 +60,7 @@ import { mapState, mapGetters } from 'vuex'
 
 import VideoCard from './VideoCard.vue'
 import NavBar from './NavBar.vue'
+import SpeakerStats from './SpeakerStats.vue'
 import Sorting from './Sorting.vue'
 import ExpandableTags from './ExpandableTags.vue'
 
@@ -72,10 +75,11 @@ export default {
     channel: { type: String, required: false },
     tag: { type: String, required: false }
   },
-  data: function() {
+  data: () => {
     return {
-      loading: false
-    };
+      loading: false,
+      stats: {}
+    }
   },
   watch: {
     '$route': 'fetch',
@@ -98,6 +102,9 @@ export default {
           let json = res.json()
           that.$Progress.finish()
           that.loading = false
+          return json
+        }).then(json => {
+          that.stats = json.stats
           return json
         })
       },
@@ -184,7 +191,8 @@ export default {
     ExpandableTags,
     VideoCard, 
     Sorting,
-    NavBar
+    NavBar,
+    SpeakerStats
   }
 }
 </script>

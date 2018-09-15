@@ -12,6 +12,7 @@ import { dnsCache, Logger } from 'devtube-commons'
 import { fastr } from './api/fastr'
 import { Videos } from './videos'
 import { User } from './api/user'
+import { OgImage } from './ogImage'
 import responseTime from './responseTime'
 
 console.timeEnd('Imports')
@@ -116,14 +117,12 @@ async function proxy(req: Request, res: Response) {
       board: fs.readFileSync(`${dataDir}/board.json`, 'utf8')
     })
   } else if (req.path.startsWith("/@")) {
-    let speaker = req.path.split("/@")[1]
-    let avatarUrl = Buffer.from(`http://avatars.io/twitter/${speaker}`).toString('base64')
-    let image = `https://res.cloudinary.com/eduardsi/image/upload/l_fetch:${avatarUrl},w_180,h_180,g_south_west,x_650,y_270,r_max,bo_2px_solid_white/e_colorize,co_white,l_text:Lato_35:@${speaker.toUpperCase()},g_south_west,x_220,y_307/dazzle_xcifcf.png`
+    let [_, speaker] = req.path.split("/@")
     Logger.info(`SPEAKER REQUEST: ${speaker}`)
     indexHtml(res, {
       title: `DevTube - Videos by @${speaker}`,
       speaker: `"${speaker}"`,
-      ogImage: image
+      ogImage: new OgImage(speaker).url
     })
   } else if (req.path.startsWith("/api/")) {
     let module = await import(`./${req.path}`)
@@ -131,7 +130,6 @@ async function proxy(req: Request, res: Response) {
   } else if (directLink) {
     let param = req.path.split(directLink)[1]
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
-    
     indexHtml(res, {
       title: `DevTube - Videos, tutorials, webinars about ${param}`
     })   
