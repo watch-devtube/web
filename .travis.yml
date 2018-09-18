@@ -54,7 +54,7 @@ script:
 - export DEPLOYMENT=green
 
 # deploy proxy
-- gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s
+- gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
 # test deployment
 # - ab https://us-central1-dev-tube.cloudfunctions.net/proxyGreen
 
