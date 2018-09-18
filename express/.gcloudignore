@@ -1,8 +1,7 @@
-node_modules/
 .gitignore
 yarn*
 service_key.json
-src/
+./src/
 *.yml
 *.enc
 *.ts

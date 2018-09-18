@@ -16,3 +16,19 @@ export function devtube_blue(req, res) {
   }
   return app(req, res)
 }
+
+export function devtube_lime(req, res) {
+  if (!req.url) {
+    req.url = '/'
+    req.path = '/'
+  }
+  return app(req, res)
+}
+
+export function devtube_purple(req, res) {
+  if (!req.url) {
+    req.url = '/'
+    req.path = '/'
+  }
+  return app(req, res)
+}
