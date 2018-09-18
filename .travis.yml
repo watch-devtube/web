@@ -31,14 +31,13 @@ before_install:
 script:
 
 # compile vue app
-- serverless version
-- tsc --version
 - yarn
 - gsutil -m cp gs://dev-tube-index/*.xml ./src/static
 - yarn build
 
 # compile express app
 - cd express
+- tsc --version
 - yarn
 - yarn build
 - cp -r ../dist/* ./dist
@@ -54,6 +53,8 @@ script:
 - export DEPLOYMENT=green
 
 # deploy proxy
+- ls -latr ./dist
+- ls -latr ./data
 - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
 # test deployment
 # - ab https://us-central1-dev-tube.cloudfunctions.net/proxyGreen

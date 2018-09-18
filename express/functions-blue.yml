@@ -1,4 +1,0 @@
-devtube_blue:
-  handler: devtube_blue
-  events:
-    - http: path
