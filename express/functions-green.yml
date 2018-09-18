@@ -1,4 +1,4 @@
-proxy_green:
-  handler: p_green
+devtube_green:
+  handler: devtube_green
   events:
     - http: path

@@ -28,7 +28,9 @@ import Watch from './Watch.vue'
 import Search from './Search.vue'
 import Discovery from './Discovery.vue'
 import Contributors from './Contributors.vue'
-import { flatten, duration, kilo, truncate, published, capitalizeIfNeeded } from './helpers/filters'
+import VueChartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+import { flatten, duration, kilo, truncate, published, capitalizeIfNeeded, durationFull } from './helpers/filters'
 
 import auth from './auth'
 import videos from './videos'
@@ -44,6 +46,7 @@ Vue.use(Notifications)
 Vue.use(VueRouter)
 Vue.use(VueDisqus)
 Vue.use(AsyncComputed)
+Vue.use(VueChartkick, {adapter: Chart})
 Vue.use(VueProgressBar, {
   color: 'rgb(143, 255, 199)',
   failedColor: 'red',
@@ -52,6 +55,7 @@ Vue.use(VueProgressBar, {
 
 Vue.filter('flatten', flatten)
 Vue.filter('duration', duration)
+Vue.filter('durationFull', durationFull)
 Vue.filter('truncate', truncate)
 Vue.filter('published', published)
 Vue.filter('kilo', kilo)
