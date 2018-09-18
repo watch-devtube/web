@@ -4,5 +4,6 @@ firebase.json
 .serverless/
 .build/
 dist/
+lib/
 data/
 data.zip

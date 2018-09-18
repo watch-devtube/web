@@ -1,0 +1,9 @@
+node_modules/
+.gitignore
+yarn*
+service_key.json
+src/
+*.yml
+*.enc
+*.ts
+.serverless/

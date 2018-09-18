@@ -10,20 +10,21 @@
     "build": "rimraf dist && tsc"
   },
   "dependencies": {
+    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201808170811/devtube-commons-v0.1.0.tgz",
     "@google-cloud/datastore": "^1.4.2",
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201808170811/devtube-commons-v0.1.0.tgz",    "express": "^4.16.3",
+    "express": "^4.16.3",
     "firebase-admin": "^6.0.0",
-    "lodash": "^4.17.10",
-    "mustache-express": "^1.2.6"
+    "lodash": "^4.17.11",
+    "mustache-express": "^1.2.7"
   },
   "devDependencies": {
     "serverless-google-cloudfunctions": "^2.0.0",
     "@types/node": "^10.0.3",
     "@firebase/app-types": "^0.3.2",
     "@types/express": "^4.16.0",
-    "@types/lodash": "^4.14.109",
+    "@types/lodash": "^4.14.116",
     "@types/lru-cache": "^4.1.1",
     "@types/request": "^2.47.1"
   }
