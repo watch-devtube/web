@@ -21,8 +21,7 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_49221facfcc9_key -iv $encrypted_49221facfcc9_iv -in express/firebase.json.enc -out express/firebase.json -d
   - openssl aes-256-cbc -K $encrypted_2e4cd36ad6d9_key -iv $encrypted_2e4cd36ad6d9_iv -in express/admin.dev.tube.pem.enc -out express/admin.dev.tube.pem -d
   - chmod 400 express/admin.dev.tube.pem
-  - if [ ! -d $HOME/gcloud/google-cloud-sdk ]
-    then
+  - if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
       mkdir -p $HOME/gcloud &&
       wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=$HOME/gcloud &&
       cd $HOME/gcloud &&
@@ -31,8 +30,7 @@ before_install:
       cd $TRAVIS_BUILD_DIR;
     fi
   - gcloud -q components update
-  - if [ -a express/service_key.json ]
-    then
+  - if [ -a express/service_key.json ]; then
       gcloud -q auth activate-service-account --key-file express/service_key.json;
     fi
   - npm i typescript -g
@@ -77,12 +75,10 @@ script:
   - artillery quick --count 1 -n 20 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/
 
   # switch green/blue
-  - if [[ $BLUE -eq 0 -a $GREEN -eq 0 ]]
-    then
+  - if [[ $BLUE -eq 0 -a $GREEN -eq 0 ]]; then
       ${SSH} sudo touch /etc/nginx/${DEPLOYMENT}
     fi
-  - if [[ $BLUE -eq 1 ]]
-    then 
+  - if [[ $BLUE -eq 1 ]]; then
       ${SSH} sudo mv /etc/nginx/green /etc/nginx/blue
     else 
       ${SSH} sudo mv /etc/nginx/blue /etc/nginx/green
