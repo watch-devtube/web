@@ -72,7 +72,7 @@ script:
   - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
 
   # test deployment
-  - artillery quick --count 1 -n 20 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/
+  - artillery quick --count 2 -n 20 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/
 
   # switch green/blue
   - if [ $BLUE -eq 0 -a $GREEN -eq 0 ]; then
