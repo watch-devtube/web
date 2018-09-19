@@ -32,7 +32,6 @@ before_install:
   - if [ -a express/service_key.json ]; then
       gcloud -q auth activate-service-account --key-file express/service_key.json;
     fi
-  - npm i serverless -g
   - npm i typescript -g
 
 script:
