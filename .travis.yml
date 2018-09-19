@@ -56,8 +56,8 @@ script:
 
   # select deployment
   - export SSH="ssh -oStrictHostKeyChecking=no -i admin.dev.tube.pem ${DEPLOY_USER}@${DEPLOY_HOST}"
-  - export GREEN=$(${SSH} bash -c 'test -f /etc/nginx/green && echo 1 || echo 0')
-  - export BLUE=$(${SSH} bash -c 'test -f /etc/nginx/blue && echo 1 || echo 0')
+  - export GREEN=$(${SSH} ls -1 /etc/nginx/green | wc -l)
+  - export BLUE=$(${SSH} ls -1 /etc/nginx/blue | wc -l)
   - echo $GREEN
   - echo $BLUE
   # - export DEPLOYMENT="$(./current_color.sh)"
