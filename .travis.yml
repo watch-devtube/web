@@ -70,7 +70,7 @@ script:
   # deploy express app
   - touch ./dist/deployment.txt
   - echo $DEPLOYMENT > ./dist/deployment.txt
-  - echo https://github.com/watch-devtube/web/$(git rev-parse HEAD) >> ./dist/deployment.txt
+  - echo https://github.com/watch-devtube/web/commits/$(git rev-parse HEAD) >> ./dist/deployment.txt
   - ls -latr ./dist
   - ls -latr ./data
   - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
