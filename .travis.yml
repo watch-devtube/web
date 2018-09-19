@@ -21,15 +21,10 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_49221facfcc9_key -iv $encrypted_49221facfcc9_iv -in express/firebase.json.enc -out express/firebase.json -d
   - openssl aes-256-cbc -K $encrypted_2e4cd36ad6d9_key -iv $encrypted_2e4cd36ad6d9_iv -in express/admin.dev.tube.pem.enc -out express/admin.dev.tube.pem -d
   - chmod 400 express/admin.dev.tube.pem
-  - if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
-      mkdir -p $HOME/gcloud &&
-      wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=$HOME/gcloud &&
-      cd $HOME/gcloud &&
-      tar xzf google-cloud-sdk.tar.gz &&
-      printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh &&
-      cd $TRAVIS_BUILD_DIR;
-    fi
-  - gcloud -q components update
+  - export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && 
+    echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && 
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && 
+    apt-get update -y && apt-get install google-cloud-sdk -y
   - if [ -a express/service_key.json ]; then
       gcloud -q auth activate-service-account --key-file express/service_key.json;
     fi
