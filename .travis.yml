@@ -25,7 +25,7 @@ before_install:
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && 
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - && 
     sudo apt-get update -y && 
-    sudo apt-get install google-cloud-sdk -y
+    sudo apt-get install google-cloud-sdk=216.0.0-0_all -y
   - if [ -a express/service_key.json ]; then
       gcloud -q auth activate-service-account --key-file express/service_key.json;
     fi
