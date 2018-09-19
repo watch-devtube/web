@@ -63,9 +63,11 @@ script:
     fi
   - echo $DEPLOYMENT
 
-  # deploy proxy
+  # deploy express app
   - ls -latr ./dist
   - ls -latr ./data
+  - echo -n $DEPLOYMENT > dist/deployment.txt
+  - echo -n "https://github.com/watch-devtube/web/$(git rev-parse HEAD)" >> dist/deployment.txt
   - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
 
   # test deployment
