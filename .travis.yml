@@ -35,6 +35,9 @@ before_install:
 
 script:
 
+  # magic
+  - set -e
+
   # compile vue app
   - yarn
   - gsutil -m cp gs://dev-tube-index/*.xml ./src/static
@@ -76,6 +79,7 @@ script:
   - artillery quick --count 2 -n 20 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/
 
   # switch green/blue
+  - set +e
   - if [ $BLUE -eq 0 -a $GREEN -eq 0 ]; then
       ${SSH} sudo touch /etc/nginx/${DEPLOYMENT};
     elif [ "$DEPLOYMENT" = "blue" ]; then
