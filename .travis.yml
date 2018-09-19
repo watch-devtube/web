@@ -1,68 +1,79 @@
 language: node_js
+
 branches:
   only:
-  - master
+   - master
+
 cache:
   directories:
     - $HOME/gcloud/
     - node_modules
     - express/node_modules
+
 env:
-    - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json SLS_DEBUG=1
+  global:
+    - secure: "eeuhASPfOvjwdGadQsej82RDP/at1pB7Q2h4uRyAMEaJ1W5x2PcHarcq8bMQYC4q+s2lNBz5zBAOxC54dQouDDN5H8IprWMj3yfUdEGKIkwwQvzCx51B1fJU0glbzE8jGBfsS77wFUclPWmHFvcF/PYs3BBguM54CVPzH0k+oJ8nasg5HvpBNuZnCwaz92vOJwwR32DwaaS8BVdgMWHt+gLVSN+fN59tVn8RdXwUlOb0cEvNTk+TETjy4ilG8QfWnqEfJh2AMWT8nsHHuxDoenmvgYPeVluH69jGAo6nTUkBOGRrlxT8MoxLXzJjEmFh2THzxM1ZvzLJ3tdfgH+tU97xaf2f0j27D+FJtsKXy9TRLs4UiAiFl41aZVXb/NZdIJduAjiP0tm51OjMsb7hJkxFVd0oD86xK5XEvbrS8M6wNWOKn8Bw67WDrbqbRnXYKoEy6SIicrrD+LVThUf7xvLQaob7MknBfWFYSNrr7JWtFegcF8D6C4264iFMWa7YG8fvgZLMezbRPcsL6lU0mcxJN4Czh9QOqW0uWMe6KrojMgTEXhm9bePLHXhdJ5kyEWRsHr0VC1kosGd4XPK51B0XQ12/e5Mu+0CTmFeG6/V0vaD0zgtV3NqL9GWrf6nbh9ZzaXzCQ/Cm3/QbYeehjPmlNOFiehtK2Anvh3Nnl04="   
+  matrix:
+    - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_97a0b4bf9e4a_key -iv $encrypted_97a0b4bf9e4a_iv -in express/service_key.json.enc -out express/service_key.json -d
-- openssl aes-256-cbc -K $encrypted_49221facfcc9_key -iv $encrypted_49221facfcc9_iv -in express/firebase.json.enc -out express/firebase.json -d
-- if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
-    mkdir -p $HOME/gcloud &&
-    wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=$HOME/gcloud &&
-    cd $HOME/gcloud &&
-    tar xzf google-cloud-sdk.tar.gz &&
-    printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh &&
-    cd $TRAVIS_BUILD_DIR;
-  fi
-- gcloud -q components update
-- if [ -a express/service_key.json ]; then
-    gcloud -q auth activate-service-account --key-file express/service_key.json;
-  fi
-- npm i serverless -g
-- npm i typescript -g
+  - openssl aes-256-cbc -K $encrypted_97a0b4bf9e4a_key -iv $encrypted_97a0b4bf9e4a_iv -in express/service_key.json.enc -out express/service_key.json -d
+  - openssl aes-256-cbc -K $encrypted_49221facfcc9_key -iv $encrypted_49221facfcc9_iv -in express/firebase.json.enc -out express/firebase.json -d
+  - openssl aes-256-cbc -K $encrypted_2e4cd36ad6d9_key -iv $encrypted_2e4cd36ad6d9_iv -in express/admin.dev.tube.pem.enc -out express/admin.dev.tube.pem -d
+  - if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
+      mkdir -p $HOME/gcloud &&
+      wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=$HOME/gcloud &&
+      cd $HOME/gcloud &&
+      tar xzf google-cloud-sdk.tar.gz &&
+      printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh &&
+      cd $TRAVIS_BUILD_DIR;
+    fi
+  - gcloud -q components update
+  - if [ -a express/service_key.json ]; then
+      gcloud -q auth activate-service-account --key-file express/service_key.json;
+    fi
+  - npm i serverless -g
+  - npm i typescript -g
 
 script:
 
-# compile vue app
-- yarn
-- gsutil -m cp gs://dev-tube-index/*.xml ./src/static
-- yarn build
+  # compile vue app
+  - yarn
+  - gsutil -m cp gs://dev-tube-index/*.xml ./src/static
+  - yarn build
 
-# compile express app
-- cd express
-- tsc --version
-- yarn
-- yarn build
-- cp -r ../dist/* ./dist
+  # compile express app
+  - cd express
+  - tsc --version
+  - yarn
+  - yarn build
+  - cp -r ../dist/* ./dist
 
-# get data 
-- mkdir ./data
-- gsutil -m cp gs://dev-tube-index/*.json ./data
+  # get data 
+  - mkdir ./data
+  - gsutil -m cp gs://dev-tube-index/*.json ./data
 
-# select deployment
-# - test -f /etc/nginx/green
-# - test -f /etc/nginx/blue
-# - export DEPLOYMENT="$(./current_color.sh)"
-- export DEPLOYMENT=green
+  # select deployment
+  - export SSH="ssh -i admin.dev.tube.pem ${DEPLOY_USER}@${DEPLOY_HOST}"
+  - export GREEN=$(${SSH} test -f /etc/nginx/green && echo 1 || echo 0)
+  - export BLUE=$(${SSH} test -f /etc/nginx/blue && echo 1 || echo 0)
+  - echo $GREEN
+  - echo $BLUE
+  # - export DEPLOYMENT="$(./current_color.sh)"
+  - export DEPLOYMENT=green
 
-# deploy proxy
-- ls -latr ./dist
-- ls -latr ./data
-- gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
-# test deployment
-# - ab https://us-central1-dev-tube.cloudfunctions.net/proxyGreen
+  # deploy proxy
+  - ls -latr ./dist
+  - ls -latr ./data
+  - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
 
-# switch green/blue
-# - if does not exist then sudo touch /etc/nginx/green 
-# - if green exist then sudo mv /etc/nginx/green /etc/nginx/blue
-# - if green exist then sudo mv /etc/nginx/blue /etc/nginx/green
+  # test deployment
+  # - ab https://us-central1-dev-tube.cloudfunctions.net/proxyGreen
+
+  # switch green/blue
+  # - if does not exist then sudo touch /etc/nginx/green 
+  # - if green exist then sudo mv /etc/nginx/green /etc/nginx/blue
+  # - if green exist then sudo mv /etc/nginx/blue /etc/nginx/green
 
 notifications:
   slack:
