@@ -74,14 +74,13 @@ script:
   # switch green/blue
   - if [ $BLUE -eq 0 -a $GREEN -eq 0 ]; then
       ${SSH} sudo touch /etc/nginx/${DEPLOYMENT};
-    fi
-  - if [ $BLUE -eq 1 ]; then
+    elif [ "$DEPLOYMENT" = "blue" ]; then
       ${SSH} sudo mv /etc/nginx/green /etc/nginx/blue;
     else 
       ${SSH} sudo mv /etc/nginx/blue /etc/nginx/green;
     fi
-  - ${SSH} ls -1 /etc/nginx/green
-  - ${SSH} ls -1 /etc/nginx/blue
+  - ${SSH} ls -1 /etc/nginx/green | wc -l
+  - ${SSH} ls -1 /etc/nginx/blue | wc -l
 
 notifications:
   slack:
