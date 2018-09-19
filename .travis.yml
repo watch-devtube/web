@@ -54,9 +54,9 @@ script:
   - gsutil -m cp gs://dev-tube-index/*.json ./data
 
   # select deployment
-  - export SSH="ssh -i admin.dev.tube.pem ${DEPLOY_USER}@${DEPLOY_HOST}"
-  - export GREEN=$(${SSH} test -f /etc/nginx/green && echo 1 || echo 0)
-  - export BLUE=$(${SSH} test -f /etc/nginx/blue && echo 1 || echo 0)
+  - export SSH="ssh -oStrictHostKeyChecking=no -i admin.dev.tube.pem ${DEPLOY_USER}@${DEPLOY_HOST}"
+  - export GREEN=$(${SSH} -c 'test -f /etc/nginx/green && echo 1 || echo 0')
+  - export BLUE=$(${SSH} -c 'test -f /etc/nginx/blue && echo 1 || echo 0')
   - echo $GREEN
   - echo $BLUE
   # - export DEPLOYMENT="$(./current_color.sh)"
