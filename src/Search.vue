@@ -48,7 +48,7 @@
               br
               br
               nav.paging(role="navigation" aria-label="pagination")
-                ais-pagination.pagination(:class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
+                ais-pagination.pagination(v-on:page-change="scrollTop" :class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
 </template>
 <script>
 import { createFromAlgoliaClient } from 'vue-instantsearch'
@@ -119,6 +119,9 @@ export default {
     ...mapGetters('loading', ['completed'])
   },
   methods: {
+    scrollTop() {
+      window.scrollTo(0, 0)
+    },
     syncQuery() {
       this.searchStore.queryParameters = this.query
     },
