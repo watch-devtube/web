@@ -79,7 +79,8 @@ export default {
   },
   watch: {
     '$route': 'fetch',
-    '$store.state.query.sortOrder': 'syncQuery' 
+    '$store.state.query.sortOrder': 'syncQuery',
+    '$store.state.query.lang': 'syncQuery'
   },  
   created() {
     let that = this

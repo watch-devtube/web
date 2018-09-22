@@ -10,7 +10,7 @@
     "build": "rimraf dist && tsc"
   },
   "dependencies": {
-    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201808170811/devtube-commons-v0.1.0.tgz",
+    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201809221610/devtube-commons-v0.1.0.tgz",
     "@google-cloud/datastore": "^1.4.2",
     "body-parser": "^1.18.3",
     "dayjs": "^1.7.5",

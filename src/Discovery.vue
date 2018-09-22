@@ -21,8 +21,8 @@
                 :title="result.title" 
                 :id="result.objectID" 
                 :channel="result.channelTitle")
-          span(v-else) Nothing today, folks! 
-            a.button(href="https://dev.tube/contributors") Become a contributor!      
+          span(v-else) Nothing according to your criteria, folks. 
+            a(href="https://dev.tube/contributors") Become a contributor!
 </template>
 <script>
   import NavBar from './NavBar.vue'
@@ -33,12 +33,14 @@
 
   export default {
     computed: {
+      ...mapState([ 'query' ]),
       ...mapGetters('videos', ['watchedIds'])
     },
     asyncComputed: {
       items() {
         return axios.post(`/api/discover`, {
-          excludes: this.watchedIds
+          excludes: this.watchedIds,
+          lang: this.query.lang
         })
         .then(response => response.data)
         .then(hits => {

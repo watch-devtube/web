@@ -8,7 +8,7 @@ export default async (req, res) => {
     res.sendStatus(400)
   }
 
-  let { query, page, refinement, sortOrder, excludes } = req.body.requests[0].params
+  let { query, page, refinement, sortOrder, lang, excludes } = req.body.requests[0].params
 
   let q = query ? query.trim().split(/\s+/).map(token => `+${token}`).join(" ") : query
 
@@ -29,6 +29,7 @@ export default async (req, res) => {
   let stats = hits.reduce(reducer, {})
 
   let hitsIds = hits
+    .filter(hit => !lang || hit.language == lang) 
     .filter(hit => !(excludes || []).includes(hit.objectID))
     .map(hit => hit.objectID)  
 

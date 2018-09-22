@@ -5,6 +5,7 @@
       .container
         NavBar
           Sorting
+          Lang
     router-view(v-if="completed")
     vue-progress-bar
 </template>
@@ -37,6 +38,7 @@
 <script>
   import NavBar from './NavBar.vue'
   import Sorting from './Sorting.vue'
+  import Lang from './LangFilter.vue'
   import { mapState, mapGetters, mapMutations } from 'vuex'
   
   export default { 
@@ -63,6 +65,6 @@
     methods: {
       ...mapMutations('notify', ['disableNotify'])
     },
-    components: {NavBar, Sorting}
+    components: { NavBar, Sorting, Lang }
   }
 </script>

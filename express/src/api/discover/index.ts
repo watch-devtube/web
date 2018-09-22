@@ -4,9 +4,11 @@ import {fastr} from '../../api/fastr'
 export default async (req, res) => {
 
   let excludes = req.body.excludes
+  let lang = req.body.lang
 
   let discover = (refinement, sorting) => fastr
     .search(undefined, refinement, sorting)
+    .filter(hit => !lang || hit.language == lang) 
     .filter(hit => hit != null)
     .filter(hit => !(excludes || []).includes(hit.objectID))
     .map(hit => hit.objectID)
