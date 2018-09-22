@@ -1,5 +1,5 @@
 <template lang="pug">
-  input(ref="query" v-model.lazy="query" v-debounce="300")
+  input(ref="query" v-model.lazy="query" v-debounce="300" autofocus)
 </template>
 
 <script>

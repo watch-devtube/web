@@ -1,8 +1,5 @@
 <template lang="pug">
 .watch
-  header
-    .container
-      NavBar
   section.section.body
     .container
       .columns
@@ -87,9 +84,6 @@
         vue-disqus(shortname="dev-tube" :identifier="id" :url="'https://dev.tube/video/' + id")
 </template>
 <style scoped lang="scss">
-  header {
-    padding: 10px;
-  }
 
   .columns:not(.is-desktop) {
     flex-wrap: wrap;

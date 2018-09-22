@@ -1,6 +1,10 @@
 <template lang="pug">
   #app
     notifications(group="notification" :duration="-1")
+    header
+      .container
+        NavBar
+          Sorting
     router-view(v-if="completed")
     vue-progress-bar
 </template>
@@ -10,6 +14,11 @@
     50% { opacity: 0.3; }
     100% { opacity: 1; }
   }  
+
+  header {
+    padding: 10px;
+  }
+  
   .shrinkIfEmpty:empty {
     display: none !important
   }
@@ -26,6 +35,8 @@
   }
 </style>
 <script>
+  import NavBar from './NavBar.vue'
+  import Sorting from './Sorting.vue'
   import { mapState, mapGetters, mapMutations } from 'vuex'
   
   export default { 
@@ -51,6 +62,7 @@
     }, 
     methods: {
       ...mapMutations('notify', ['disableNotify'])
-    }
+    },
+    components: {NavBar, Sorting}
   }
 </script>

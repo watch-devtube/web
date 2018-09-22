@@ -1,8 +1,5 @@
 <template lang="pug">
   .discovery
-    header
-      .container    
-        NavBar
     section.section(style="margin-top: 20px")
       .container
         .group(v-for="item in items")

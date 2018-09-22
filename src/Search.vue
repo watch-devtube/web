@@ -1,9 +1,5 @@
 <template lang="pug">
   .searchContainer
-    header
-      .container    
-        NavBar
-          Sorting 
     ais-index(:search-store="searchStore" index-name="videos")
       section.section(style="margin-top: 20px")
             .container
@@ -59,8 +55,8 @@ import { createFromAlgoliaClient } from 'vue-instantsearch'
 import { mapState, mapGetters } from 'vuex'
 
 import VideoCard from './VideoCard.vue'
-import NavBar from './NavBar.vue'
 import SpeakerStats from './SpeakerStats.vue'
+import NavBar from './NavBar.vue'
 import Sorting from './Sorting.vue'
 import ExpandableTags from './ExpandableTags.vue'
 
