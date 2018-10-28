@@ -13,7 +13,7 @@
     },
   data: () => {
     return {
-      languages: ['Chinese', 'Danish', 'English', 'French', 'Italian', 'Spanish', 'German', 'Russian', 'Portugese', 'Lithuanian', 'Korean', 'Ukrainian'].sort()
+      languages: ['Chinese', 'Danish', 'English', 'French', 'Italian', 'Spanish', 'German', 'Russian', 'Portuguese', 'Lithuanian', 'Korean', 'Ukrainian'].sort()
     }
   },
     methods: {
