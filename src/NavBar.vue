@@ -14,7 +14,6 @@
         span
     .navbar-menu#navbarMenu(style=" margin-right: -.75rem" v-bind:class="{ 'is-active': active }")
       .navbar-start
-        router-link.navbar-item(:to='{ name: "discovery" }' @click.native="hide()") Discovery
         router-link.navbar-item(v-if="auth.user && hasSubscriptions" :to='{ name: "search", query: { feed: "true" } }' @click.native="hide()") Subscriptions
         router-link.navbar-item(v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()") 
           | Watched

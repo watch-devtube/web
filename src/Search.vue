@@ -5,7 +5,7 @@
             .container
               .columns
                 .column
-                  router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'discovery' }")
+                  router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'search' }")
                     span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
                     span.is-lowercased(v-if="speaker") @{{speaker}}
                     span.icon.is-small: i.fas.fa-times
@@ -66,7 +66,6 @@ export default {
     showMyWatched: { type: Boolean, default: false },
     showMyFeed: { type: Boolean, default: false },    
     showFavorites: { type: Boolean, default: false },
-    showDiscovery: { type: Boolean, default: false },
     speaker: { type: String, required: false },
     channel: { type: String, required: false },
     tag: { type: String, required: false }
