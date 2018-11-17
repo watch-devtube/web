@@ -11,6 +11,7 @@
                 router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }")
                   img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
               .image.is-32x32(title="Add speaker" v-else)
+                a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
                   img.avatar(src="/add-speaker.png")
               | {{title}}
       .card-content
