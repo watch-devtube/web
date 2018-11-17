@@ -66,7 +66,7 @@
                     i.fab.fa-youtube 
                     | &nbsp; {{video.channelTitle}}
               .column
-                p(v-if="video.speaker")
+                p
                   | Wrong data? 
                   a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
                     i.fas.fa-heart
