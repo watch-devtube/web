@@ -2,10 +2,10 @@
   .discovery
     section.section(style="margin-top: 20px")
       .container
-        .group(v-for="item in items")
-          hr
+        .group(v-for="(item, index) in items")
+          br(v-if="index != 0")
+          br(v-if="index != 0")
           h1.title {{item.title}}
-          hr
           .columns.is-multiline(v-if="item.items.length")
             .column.is-6.is-flex-tablet.is-3-widescreen.shrinkIfEmpty(v-for="result in item.items")
               VideoCard(
