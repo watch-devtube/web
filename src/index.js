@@ -5,7 +5,6 @@ import Vuex from 'vuex'
 
 import VueRouter from 'vue-router'
 import VueCookie from 'vue-cookie'
-import VueDisqus from 'vue-disqus'
 import AsyncComputed from 'vue-async-computed'
 import InstantSearch from 'vue-instantsearch'
 import VueProgressBar from 'vue-progressbar'
@@ -43,7 +42,6 @@ Vue.use(InstantSearch)
 Vue.use(VueCookie)
 Vue.use(Notifications)
 Vue.use(VueRouter)
-Vue.use(VueDisqus)
 Vue.use(AsyncComputed)
 Vue.use(VueChartkick, {adapter: Chart})
 Vue.use(VueProgressBar, {

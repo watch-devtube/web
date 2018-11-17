@@ -8638,10 +8638,6 @@ vue-delay@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/vue-delay/-/vue-delay-0.1.0.tgz#dabfc3bef1c8f2b244c0d1a5d4fb247586a8b414"
 
-vue-disqus@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/vue-disqus/-/vue-disqus-3.0.3.tgz#f1e22922c23e2286923ae2eab6b8dbddabb524ac"
-
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
