@@ -17,9 +17,13 @@
         router-link.navbar-item(:to='{ name: "discovery" }' @click.native="hide()") Discovery
         router-link.navbar-item(v-if="auth.user && hasSubscriptions" :to='{ name: "search", query: { feed: "true" } }' @click.native="hide()") Subscriptions
         router-link.navbar-item(v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()") 
-          | Watched ({{watchedCount}})
+          | Watched
+          font-awesome-layers(style="position: relative; top: -5px")
+            font-awesome-layers-text(:value="watchedCount" transform="shrink-4")
         router-link.navbar-item(v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()") 
-          | Favorites ({{favoriteCount}})
+          | Favorites
+          font-awesome-layers(style="position: relative; top: -5px")
+            font-awesome-layers-text(:value="favoriteCount" transform="shrink-4")          
         a.navbar-item(@click="$refs.tags.toggleCollapse()")
           i.fas.fa-hashtag 
           | &nbsp;Tags

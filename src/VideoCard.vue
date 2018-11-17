@@ -10,6 +10,8 @@
               .image.is-32x32(v-if="speaker" :title="speaker.name")
                 router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }")
                   img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter")
+              .image.is-32x32(title="Add speaker" v-else)
+                  img.avatar(src="/add-speaker.png")
               | {{title}}
       .card-content
           nav.level.is-mobile
@@ -34,18 +36,11 @@
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :channel="channel")
-          .contribute(v-if="speaker")
+          .contribute
             p.subtitle.is-7
-              | Wrong data? 
               a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
-                i.fas.fa-heart
-                |  contribute
-          .contribute(v-else)
-            p.subtitle.is-7
-              | Know the speaker? 
-              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
-                i.fas.fa-heart
-                |  contribute                
+                font-awesome-icon(icon="edit")
+                |  edit
 </template>
 <style lang="scss">
 
@@ -54,6 +49,12 @@
     position: relative;
     transition: 0.4s ease;  
 
+
+    .contribute {
+      position: absolute; 
+      right: 10px; 
+      bottom: 10px;
+    }
 
     .avatar {
       border-radius: 50% !important;

@@ -1,6 +1,6 @@
 <template lang="pug">
   .navbar-item.has-dropdown.is-hoverable.is-size-7
-    a.is-size-7.navbar-link Language
+    a.is-size-7.navbar-link: font-awesome-icon(:icon="['fa', 'language']")
     .navbar-dropdown.is-boxed.is-size-7
       a.navbar-item.is-size-7(v-bind:class="{ 'is-active': (!query.lang) }" @click="langFilter(undefined)") Any
       a.navbar-item.is-size-7(v-for="language in languages" v-bind:class="{ 'is-active': query.lang == language }" @click="langFilter(language)") {{language}}

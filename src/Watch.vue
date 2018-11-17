@@ -45,24 +45,18 @@
                           ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
           .content
             h3
-            h3.title {{video.title}}
             .media(v-if="video.speaker && video.speaker.twitter")
                 .media-left.has-text-left
-                    figure.image.is-48x48.is-marginless
+                    figure.image.is-32x32.is-marginless
                       img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
                 .media-content
                   p.title.is-4 {{video.speaker.name}}
                   p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
             .media(v-else)
                 .media-left.has-text-left
-                    figure.image.is-48x48.is-marginless
-                      img.avatar(src="/unknown.png")
-                .media-content
-                  p.title.is-4 Know the speaker?
-                  p.subtitle.is-6
-                    a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                      i.fas.fa-heart
-                      |  contribute for karma
+                    figure.image.is-32x32.is-marginless
+                      a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+                        img.avatar(src="/add-speaker.png")
             .media
             .columns
               .column.is-narrow
@@ -76,7 +70,7 @@
                   | Wrong data? 
                   a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
                     i.fas.fa-heart
-                    |  contribute
+                    |  fix
             p {{video.description}}
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
