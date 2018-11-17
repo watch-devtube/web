@@ -85,8 +85,8 @@ async function proxy(req: Request, res: Response) {
 
     let doubleToSingleQuotes = (str) => str.replace(/"/g, '\'')
 
-    let title = doubleToSingleQuotes(overrides.title) || 'DevTube - The best developer videos in one place'
-    let description = doubleToSingleQuotes(overrides.description) || 'Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world.'
+    let title = doubleToSingleQuotes(overrides.title || 'DevTube - The best developer videos in one place')
+    let description = doubleToSingleQuotes(overrides.description || 'Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world.')
     let ogImage = overrides.ogImage || 'https://dev.tube/open_graph.jpg'
 
 
