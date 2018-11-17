@@ -83,9 +83,13 @@ async function proxy(req: Request, res: Response) {
 
   let indexHtml = (res, overrides = {} as any) => {
 
-    let title = overrides.title || 'DevTube - The best developer videos in one place'
-    let description = overrides.description || 'Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world.'
+    let doubleToSingleQuotes = (str) => str.replace(/"/g, '\'')
+
+    let title = doubleToSingleQuotes(overrides.title) || 'DevTube - The best developer videos in one place'
+    let description = doubleToSingleQuotes(overrides.description) || 'Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world.'
     let ogImage = overrides.ogImage || 'https://dev.tube/open_graph.jpg'
+
+
 
     let defaultResponse = {
       title: title,
@@ -156,7 +160,7 @@ async function proxy(req: Request, res: Response) {
       res.status(404).send('Not found')
     } else {
       let ogImage = `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`
-      let title = `${video.title} – Watch @ Dev.Tube`
+      let title = `${video.title} – Watch Video @ Dev.Tube`
       indexHtml(res, {
         title: title,
         description: video.description,
