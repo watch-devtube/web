@@ -36,6 +36,11 @@
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :channel="channel")
+          .channel
+            p.subtitle.is-7
+              a.is-capitalized(v-on:click="refineChannel(channel)")
+                i.fab.fa-youtube
+                | &nbsp; {{channel | truncate(25)}}
           .contribute
             p.subtitle.is-7
               a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
@@ -49,6 +54,12 @@
     position: relative;
     transition: 0.4s ease;  
 
+
+    .channel {
+      position: absolute; 
+      left: 10px; 
+      bottom: 10px;      
+    }
 
     .contribute {
       position: absolute; 
@@ -175,6 +186,9 @@
           params: { id: videoId }
         });
       },
+      refineChannel(channel) {
+        this.$router.push({ name: 'channel', params: { channel: channel } } )
+      }      
     },    
     components: { Tags, VideoToggles }
   };
