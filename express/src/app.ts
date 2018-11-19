@@ -179,6 +179,32 @@ async function proxy(req: Request, res: Response) {
   }
 }
 
+app.get("/yo", (req: Request, res: Response) => {
+  const Vue = require('vue')
+  const app = new Vue({
+    data: {
+      url: req.url
+    },
+    template: `<div>The visited URL is: {{ url }}</div>`
+  })
+
+  const renderer = require('vue-server-renderer').createRenderer()
+
+  renderer.renderToString(app, (err, html) => {
+    if (err) {
+      res.status(500).end('Internal Server Error')
+      return      
+    }
+    res.end(`
+      <!DOCTYPE html>
+      <html lang="en">
+        <head><title>Hello</title></head>
+        <body>${html}</body>
+      </html>
+    `)
+  })  
+})
+
 app.post("/api2/videos/:videoId/likes", async (req: Request, res: Response) => {
   let { auth } = req.headers
   let u = new User(auth)
