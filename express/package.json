@@ -6,8 +6,8 @@
   "main": "dist/index.js",
   "private": true,
   "scripts": {
-    "dev": "rimraf dist && tsc && node dist/src/app.js dev",
-    "build": "rimraf dist && tsc"
+    "dev": "webpack --mode=development && node dist/index.js dev",
+    "build": "webpack --hide-modules --mode=production"
   },
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
@@ -28,6 +28,10 @@
     "@types/lru-cache": "^4.1.1",
     "@types/node": "^10.0.3",
     "@types/request": "^2.47.1",
-    "serverless-google-cloudfunctions": "^2.0.0"
+    "awesome-typescript-loader": "^5.2.1",
+    "serverless-google-cloudfunctions": "^2.0.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.26.0",
+    "webpack-merge": "^4.1.4"
   }
 }

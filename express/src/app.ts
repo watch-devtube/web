@@ -7,9 +7,10 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 import './utils'
+import Vue from 'vue'
+import { Fastr } from 'devtube-commons'
 import { Request, Response } from 'express'
 import { dnsCache, Logger } from 'devtube-commons'
-import { fastr } from './api/fastr'
 import { Videos } from './videos'
 import { User } from './api/user'
 import { OgImage } from './ogImage'
@@ -33,9 +34,13 @@ let cors = require('cors')
 
 let app = express()
 let devMode = process.env.DEV_MODE === 'true' || process.argv[2] === 'dev'
-let staticDir = path.resolve(devMode ? `${__dirname}/../../../dist` : './dist')
-let dataDir = path.resolve(devMode ? `${__dirname}/../../data` : './data')
+let staticDir = path.resolve(devMode ? `../dist` : './dist')
+let dataDir = path.resolve('./data')
 let port = process.env.PORT || 8100
+
+Logger.time('Fastr indexing')
+let fastr = new Fastr({ dataDir: dataDir, serialized: true })
+Logger.timeEnd('Fastr indexing')
 
 app.use(cors())
 app.use(responseTime)
@@ -129,8 +134,8 @@ async function proxy(req: Request, res: Response) {
       ogImage: new OgImage(speaker).url
     })
   } else if (req.path.startsWith("/api/")) {
-    let module = await import(`./${req.path}`)
-    module.default(req, res)
+    let module = await import(`.${req.path}`)
+    module.default(req, res, fastr)
   } else if (directLink) {
     let param = req.path.split(directLink)[1]
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
@@ -180,7 +185,6 @@ async function proxy(req: Request, res: Response) {
 }
 
 app.get("/yo", (req: Request, res: Response) => {
-  const Vue = require('vue')
   const app = new Vue({
     data: {
       url: req.url

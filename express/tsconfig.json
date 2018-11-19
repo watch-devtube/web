@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
     "removeComments": true,
     "outDir": "./dist",
     "lib": [ "es2015", "dom" ]

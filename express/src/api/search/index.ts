@@ -1,8 +1,7 @@
 import { Videos } from '../../videos'
-import { fastr } from '../../api/fastr'
 import * as dayjs from 'dayjs'
 
-export default async (req, res) => {
+export default async (req, res, fastr) => {
 
   if (!req.body.requests || !req.body.requests.length) {
     res.sendStatus(400)

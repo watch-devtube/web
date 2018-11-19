@@ -1,10 +1,9 @@
 
 import * as admin from 'firebase-admin'
-
-var serviceAccount = require('../../../firebase.json')
+import * as serviceAccount from '../../firebase.json'
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
   databaseURL: 'https://watchdevtube.firebaseio.com'
 })
 

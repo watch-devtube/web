@@ -1,15 +1,13 @@
 /* eslint-disable import/no-commonjs */
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); 
-const WriteFilePlugin = require('write-file-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
-const webpack = require('webpack');
-
-const dest = path.resolve(__dirname, './dist');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WriteFilePlugin = require('write-file-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const dest = path.resolve(__dirname, './dist')
 
 module.exports = {
+  entry: './src/entry-client.js',
   output: {
     path: dest,
     publicPath: '/',
