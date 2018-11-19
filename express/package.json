@@ -29,9 +29,9 @@
     "@types/node": "^10.0.3",
     "@types/request": "^2.47.1",
     "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^1.0.0",
     "serverless-google-cloudfunctions": "^2.0.0",
     "typescript": "^3.1.6",
-    "webpack": "^4.26.0",
-    "webpack-merge": "^4.1.4"
+    "webpack": "^4.26.0"
   }
 }
