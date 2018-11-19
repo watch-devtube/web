@@ -2,6 +2,8 @@ const path = require('path')
 
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const nodeExternals = require('webpack-node-externals')
+
 
 module.exports = {
   target: 'node',
@@ -10,8 +12,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
-  },  
-  devtool: 'inline-source-map',
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
@@ -29,5 +30,5 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new CheckerPlugin()
   ],    
-  externals: Object.keys(require('./package.json').dependencies)
+  externals: [nodeExternals()]
 }

@@ -8,7 +8,7 @@ cache:
   directories:
     - $HOME/gcloud/
     - node_modules
-    - express/node_modules
+#    - express/node_modules
 
 env:
   global:
@@ -29,7 +29,7 @@ before_install:
   - if [ -a express/service_key.json ]; then
       gcloud -q auth activate-service-account --key-file express/service_key.json;
     fi
-  - npm i typescript -g
+  # - npm i typescript -g
   - npm i artillery -g 
   - npm i yarn -g 
 
@@ -45,9 +45,11 @@ script:
 
   # compile express app
   - cd express
-  - tsc --version
+  # - tsc --version
   - yarn
   - yarn build
+  - rm -rf node_modules
+  - yarn install --production
   - cp -r ../dist/* ./dist
 
   # get data 
