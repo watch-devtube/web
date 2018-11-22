@@ -123,6 +123,7 @@ async function proxy(req: Request, res: Response) {
   } else if (req.path.startsWith("/contributors")) {
     indexHtml(res, {
       title: 'DevTube – Community and Contributors',
+      description: 'Let\'s build the best tech video hub together!',
       board: fs.readFileSync(`${dataDir}/board.json`, 'utf8')
     })
   } else if (req.path.startsWith("/@")) {
@@ -156,6 +157,12 @@ async function proxy(req: Request, res: Response) {
       .filter(hit => hit != null)
       .map(it => it.objectID)
       .find(it => true)
+
+    if (!videoId) {
+      res.status(404).send('Not found')
+      return
+    }
+
 
     let videos = new Videos([videoId])
     let [video] = await videos.fetch()

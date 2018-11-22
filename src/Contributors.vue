@@ -3,17 +3,9 @@
     header
       .container
         nav.level(style="min-height: 80px")
-          .level-left
-            .level-item
-              a(href="/"): img.logo(src="/logo.png" srcset="/logo.svg")
           .level-item.has-text-white.has-text-centered 
             i.far.fa-heart.has-text-danger
             | &nbsp;Contributors
-          .level-right.has-text-lato
-            .level-item.links.is-size-10
-              a.has-text-white(href="https://devternity.com" target="_blank")
-                span inspired by  
-                strong DevTernity
     .section.container
       .content
         p 

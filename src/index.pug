@@ -55,7 +55,6 @@ html(lang='en')
         "url": "https://dev.tube",
         "sameAs": ["https://twitter.com/watchdevtube", "https://github.com/watch-devtube"]
       }
-  body
     script.
       window.preloadedEntity = {{& preloadedEntity}}{{^preloadedEntity}}undefined{{/preloadedEntity}}
       window.serverSideError = {{& serverSideError}}{{^serverSideError}}undefined{{/serverSideError}}
@@ -86,10 +85,10 @@ html(lang='en')
       d.addEventListener("DOMContentLoaded", f, false);
       } else { f(); }
       })(document, window, "yandex_metrika_callbacks");
-    noscript
-      div
-        img(src='//mc.yandex.ru/watch/48723362', style='position:absolute; left:-9999px;', alt='')
+  body
     #vue
+      h1 {{{title}}}
+      p {{{description}}}
     footer.footer(style="margin-top: 1em")
       .content.has-text-centered
         p 

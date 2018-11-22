@@ -42,9 +42,6 @@
   import { mapState, mapGetters, mapMutations } from 'vuex'
   
   export default { 
-    created() {
-      this.$Progress.start()
-    },
     computed: {
      ...mapGetters('loading', ['completed']),
      ...mapState({show: state => state.notify.show})
