@@ -5,6 +5,7 @@ console.time('Imports')
 
 import * as fs from 'fs'
 import * as path from 'path'
+import * as dayjs from 'dayjs'
 
 import './utils'
 import Vue from 'vue'
@@ -177,7 +178,23 @@ async function proxy(req: Request, res: Response) {
         title: title,
         description: video.description,
         ogImage: ogImage,
-        preloadedEntity: JSON.stringify({...video, reactions: reactions})
+        preloadedEntity: JSON.stringify({...video, reactions: reactions}),
+        jsonld: JSON.stringify({
+          "@context": "http://schema.org/",
+          "@type": "VideoObject",
+          "name": title,
+          "@id": "https://dev.tube/video/" + videoId,
+          "datePublished": dayjs(video.recordingDate * 1000).format('YYYY-MM-DD'),
+          "description": video.description,
+          "thumbnailURL": ogImage,
+          "thumbnail": ogImage,
+          "interactionCount": video.views,
+          "uploadDate": dayjs(video.recordingDate * 1000).format('YYYY-MM-DD'),
+          "author": {
+            "@type": "Person",
+            "name": video.speaker ? video.speaker.name : ""
+          }
+        })
       })
     }
   } else {

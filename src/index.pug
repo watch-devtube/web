@@ -48,13 +48,7 @@ html(lang='en')
     |     {{/name}}
     |   {{/meta}}
     script(type="application/ld+json").
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "DevTube",
-        "url": "https://dev.tube",
-        "sameAs": ["https://twitter.com/watchdevtube", "https://github.com/watch-devtube"]
-      }
+      {{{jsonld}}}
     script.
       window.preloadedEntity = {{& preloadedEntity}}{{^preloadedEntity}}undefined{{/preloadedEntity}}
       window.serverSideError = {{& serverSideError}}{{^serverSideError}}undefined{{/serverSideError}}
