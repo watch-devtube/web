@@ -95,8 +95,6 @@ async function proxy(req: Request, res: Response) {
     let description = doubleToSingleQuotes(overrides.description || 'Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world.')
     let ogImage = overrides.ogImage || 'https://dev.tube/open_graph.jpg'
 
-
-
     let defaultResponse = {
       title: title,
       nightMode: nightMode,
@@ -132,6 +130,7 @@ async function proxy(req: Request, res: Response) {
     Logger.info(`SPEAKER REQUEST: ${speaker}`)
     indexHtml(res, {
       title: `DevTube - Videos by @${speaker}`,
+      description: `All conference videos by @${speaker} are here`,
       speaker: `"${speaker}"`,
       ogImage: new OgImage(speaker).url
     })
@@ -142,7 +141,8 @@ async function proxy(req: Request, res: Response) {
     let param = req.path.split(directLink)[1]
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
     indexHtml(res, {
-      title: `DevTube - Videos, tutorials, webinars about ${param}`
+      title: `DevTube - Videos, tutorials, webinars about ${param}`,
+      description: `All videos and tutorials by @${directLink} are here`,
     })   
   } else if (req.path.startsWith('/video/')) {
 
