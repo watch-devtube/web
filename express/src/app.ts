@@ -142,7 +142,7 @@ async function proxy(req: Request, res: Response) {
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
     indexHtml(res, {
       title: `DevTube - Videos, tutorials, webinars about ${param}`,
-      description: `All videos and tutorials by @${directLink} are here`,
+      description: `All videos and tutorials by @${param} are here`,
     })   
   } else if (req.path.startsWith('/video/')) {
 
