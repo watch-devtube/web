@@ -9,6 +9,16 @@
 <script>
   import { mapState, mapActions, mapGetters } from 'vuex'
   export default {
+    created() {
+      let q = this.$route.query
+      let forceOrder = q.by
+      if (forceOrder) {
+        this.sort(forceOrder)
+        let query = Object.assign({}, q)
+        delete query.by
+        this.$router.replace({ query })
+      }
+    },
     computed: {
       ...mapState([ 'query' ])
     },

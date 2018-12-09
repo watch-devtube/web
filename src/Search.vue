@@ -52,7 +52,7 @@
 </template>
 <script>
 import { createFromAlgoliaClient } from 'vue-instantsearch'
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 import VideoCard from './VideoCard.vue'
 import SpeakerStats from './SpeakerStats.vue'

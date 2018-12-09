@@ -80,8 +80,8 @@ const router = new VueRouter({
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },
     { name: 'tag', path: '/tag/:tag', component: Search, props: true },
     { name: 'search', path: '/', component: Search, 
-      props: (route) => ({ q: 
-        route.query.q, 
+      props: (route) => ({ 
+        q: route.query.q, 
         showMyWatched: (route.query.w === 'true'),
         showMyFeed: (route.query.feed === 'true'),
         showFavorites: (route.query.f === 'true') })
