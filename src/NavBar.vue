@@ -49,7 +49,7 @@
             a.navbar-item(@click="signOut()") Logout
 
         a.navbar-item.is-hoverable(v-else) 
-          font-awesome-icon(:icon="['far', 'user']")
+          font-awesome-icon(:icon="['fa', 'user']")
           | &nbsp;Log in
           .navbar-dropdown.is-right.is-boxed
             a.navbar-item(@click="signIn('github'); hide()") via Github

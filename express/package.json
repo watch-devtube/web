@@ -18,8 +18,8 @@
     "express": "^4.16.3",
     "firebase-admin": "^6.0.0",
     "lodash": "^4.17.11",
-    "mustache-express": "^1.2.7",
-    "vue-server-renderer": "^2.5.17"
+    "lru-cache": "^4.1.1",
+    "mustache-express": "^1.2.7"
   },
   "devDependencies": {
     "@firebase/app-types": "^0.3.2",
