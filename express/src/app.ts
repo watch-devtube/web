@@ -28,6 +28,7 @@ Logger.enabled = true
 dnsCache()
 
 // Configure Express application dependencies
+let oneHour = 3600000 * 4
 let express = require('express')
 let body = require('body-parser')
 let mustache = require('mustache-express')
@@ -46,8 +47,10 @@ Logger.timeEnd('Fastr indexing')
 app.use(cors())
 app.use(responseTime)
 app.use(body.json())
+
 app.use(express.static(staticDir, {
-  index: false
+  index: false,
+  maxAge: oneHour
 }))
 
 app.engine('html', mustache())
