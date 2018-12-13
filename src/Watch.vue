@@ -145,8 +145,7 @@
         let me = this.auth.user.uid
         return this.video.reactions && this.video.reactions.dislikes.some(dislike => dislike.uid == me)
       },
-      ...mapState([ 'videos', 'auth' ]),
-      ...mapGetters('videos', ['isWatched'])
+      ...mapState([ 'videos', 'auth' ])
     },
     methods: {
       putALike(id) {

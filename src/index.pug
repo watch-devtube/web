@@ -27,18 +27,18 @@ html(lang='en')
     link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
     style.
       body, button, input, select, textarea {
-        font-family: "Lato", "Helvetica Neue", "Helvetica", Arial, "sans-serif"
+        font-family: Arial
       }
       .notification.overrideVueNotificationsIssue {
         background-color: #f5f5f5;
       }
     |     {{/nightMode}}
-    link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato')
     link(rel='shortcut icon' href='/favicon.png')
     link(rel='icon' href='/favicon.png')
     link(rel='alternate' type='application/rss+xml' title="Newly added videos" href='https://dev.tube/rss.xml')
     script(src='//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/dayjs/1.5.24/dayjs.min.js')
+    script(defer='', src='//use.fontawesome.com/releases/v5.2.0/js/all.js')
     |     {{#meta}}
     |       {{#name}}
     meta(name='{{name}}', content='{{{content}}}')
@@ -56,58 +56,9 @@ html(lang='en')
       window.board = {{& board}}{{^board}}undefined{{/board}}
       window.speaker = {{& speaker}}{{^speaker}}undefined{{/speaker}}
       window.featured = {{& featured}}{{^featured}}undefined{{/featured}}
-    script(type='text/javascript').
-      (function (d, w, c) {
-      (w[c] = w[c] || []).push(function() {
-      try {
-      w.yaCounter48723362 = new Ya.Metrika({
-      id:48723362,
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true
-      });
-      } catch(e) { }
-      });
-      var n = d.getElementsByTagName("script")[0],
-      s = d.createElement("script"),
-      f = function () { n.parentNode.insertBefore(s, n); };
-      s.type = "text/javascript";
-      s.async = true;
-      s.src = "https://mc.yandex.ru/metrika/watch.js";
-      if (w.opera == "[object Opera]") {
-      d.addEventListener("DOMContentLoaded", f, false);
-      } else { f(); }
-      })(document, window, "yandex_metrika_callbacks");
+    include yandex.pug
   body
     #vue
       h1 {{{title}}}
       p {{{description}}}
-    footer.footer(style="margin-top: 1em")
-      .content.has-text-centered
-        p 
-          | DevTube has been developed by  
-          a(href="/@codingandrey") @codingandrey
-          |,  
-          a(href="/@eduardsi") @eduardsi
-          |  and 
-          a(href="/contributors")
-            i.far.fa-heart.has-text-danger
-            | &nbsp;contributors
-          | .
-        p 
-          | Inspired by 
-          a(href="https://devternity.com" target="_blank") DevTernity 
-          | – the top 3 developer conference in Europe.
-        p 
-         a(href="mailto:hello@dev.tube"): i.fa.fa-envelope
-         |  &nbsp; 
-         a(href="//twitter.com/WatchDevTube" target="_blank"): i.fab.fa-twitter
-        hr
-        p.is-size-7 
-          | We use cookies to improve UX (sorting preference, night mode, resuming video). To inspect and block cookies use 
-          a(href="//ghostery.com") Ghostery
-          |  on your browser. Here is our 
-          a(href="//github.com/watch-devtube/privacy-policy") privacy policy
-          | .
-    script(defer='', src='//use.fontawesome.com/releases/v5.2.0/js/all.js')
+    include footer.pug
