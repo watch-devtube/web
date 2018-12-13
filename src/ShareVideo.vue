@@ -5,7 +5,7 @@
     a(:href="'//twitter.com/intent/tweet?text=' + thanksOrBlank + encodedTitle + '&via=WatchDevTube&hashtags=' + csvTags + '&url=' + url" target="_blank" aria-label="twitter")
       | &nbsp;
       i.fab.fa-twitter-square
-    a(:href="'//linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + encodedTitle" target="_blank" aria-label="linkedin")
+    a(:href="'//linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + encodedTitle" target="_blank" aria-label="twitter")
       | &nbsp;
       i.fab.fa-linkedin
 </template>

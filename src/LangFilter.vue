@@ -11,7 +11,7 @@
     computed: {
       ...mapState([ 'query' ])
     },
-  data: () => {
+  data: function() {
     return {
       languages: ['Chinese', 'Danish', 'English', 'French', 'Italian', 'Spanish', 'German', 'Russian', 'Portuguese', 'Lithuanian', 'Korean', 'Ukrainian'].sort()
     }

@@ -10,7 +10,6 @@ import InstantSearch from 'vue-instantsearch'
 import VueProgressBar from 'vue-progressbar'
 import Notifications from 'vue-notification'
 
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faUser, faPlusCircle, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
@@ -20,7 +19,6 @@ Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
 
 import {firebase} from './helpers/firebase'
-
 
 import App from './App.vue'
 import Watch from './Watch.vue'

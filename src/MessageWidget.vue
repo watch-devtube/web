@@ -1,5 +1,5 @@
 <template lang="pug">
-  delay(:wait="1000")
+  delay(:wait="5000")
     .message-widget(v-if="ad")
       .buttons
         a(v-on:click.stop="close"): i.fas.fa-times
@@ -43,8 +43,8 @@
 
 </style>
 <script>
-import axios from 'axios';
-import Delay from 'vue-delay'
+import axios from 'axios'
+import Delay from './Delay'
 
 export default {
     props: { 
