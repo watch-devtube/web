@@ -3,7 +3,7 @@
     .navbar-brand(style="margin-left: -.75rem")
       .navbar-item
         | &nbsp;&nbsp;&nbsp;
-        img#logo.logo(src="/logo.png" srcset="/logo.svg" @click="home()")
+        img#logo.logo(src="/logo.png" srcset="/logo.svg" @click="home()" alt="logo")
         a.is-size-7.has-text-white(href="https://devternity.com" target="_blank")
           span &nbsp; by DevTernity
       .navbar-item

@@ -9,7 +9,7 @@
               VideoToggles(:videoId="id")
               a(@click="toggleWatched(id)" v-if="auth.user")
               .videoWrapper
-                iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0&rel=0'" frameborder="0" allowfullscreen)
+                iframe(:src="'https://www.youtube.com/embed/' + id + '?showinfo=0&rel=0'" title="Embedded video" frameborder="0" allowfullscreen)
             .card-content
                   nav.level.is-mobile
                     .level-item.has-text-centered
@@ -48,7 +48,7 @@
             .media(v-if="video.speaker && video.speaker.twitter")
                 .media-left.has-text-left
                     figure.image.is-32x32.is-marginless
-                      img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter")
+                      img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter" :alt="video.speaker.name + ' avatar'")
                 .media-content
                   p.title.is-4 {{video.speaker.name}}
                   p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
@@ -56,7 +56,7 @@
                 .media-left.has-text-left
                     figure.image.is-32x32.is-marginless
                       a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                        img.avatar(src="/add-speaker.png")
+                        img.avatar(src="/add-speaker.png" alt="Add speaker")
             .media
             .columns
               .column.is-narrow

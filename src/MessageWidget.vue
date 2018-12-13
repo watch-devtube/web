@@ -3,7 +3,7 @@
     .message-widget(v-if="ad")
       .buttons
         a(v-on:click.stop="close"): i.fas.fa-times
-      a(:href="'https://twitter.com/' + this.ad.author"): img.agent(:alt="this.ad.author" :src="'https://avatars.io/twitter/' + this.ad.author")
+      a(:href="'https://twitter.com/' + this.ad.author"): img.agent(:src="'https://avatars.io/twitter/' + this.ad.author" :alt="this.ad.author + ' avatar'")
       .message
         .content(v-html="ad.message")
 </template>
