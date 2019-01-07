@@ -5,7 +5,7 @@
         | &nbsp;&nbsp;&nbsp;
         img#logo.logo(src="/logo.png" srcset="/logo.svg" @click="home()" alt="logo")
         a.is-size-7.has-text-white(href="https://devternity.com" target="_blank")
-          span &nbsp; by DevTernity
+          span.is-hidden-mobile &nbsp; by DevTernity
       .navbar-item
         Input(placeholder="Search for videos...") 
       .navbar-burger.burger.has-text-white(data-target="navbarMenu" @click="toggle()" v-bind:class="{ 'is-active': active }")
@@ -59,21 +59,10 @@
 </template>
 <style lang="scss" scoped>
 header {
-
+  
   .logo {
     cursor: pointer;
   }
-
-  input {
-    -webkit-appearance: none;
-    outline: none;
-    color: white;
-    font-weight: 100;
-    background-color: inherit;
-    padding: 8px 26px 8px 52px;
-    border: 1px solid #6498cf;
-    border-radius: 3px;
-  }  
 
   .navbar-menu .navbar-item {
     font-size: 12px;
@@ -90,14 +79,7 @@ header {
     margin-right: 0.5em;
   }
 
-  input::placeholder{
-    color: #fff;
-  }  
-
   @media only screen and (max-width: 768px) {
-    input {
-      padding: 5px 0px 5px 25px;
-    }
     .logo {
       width: 45px;
     }
