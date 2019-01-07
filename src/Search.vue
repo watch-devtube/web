@@ -31,6 +31,7 @@
                     .column.is-6.is-flex-tablet.is-3-widescreen.shrinkIfEmpty
                       VideoCard(
                         :tags="result.tags" 
+                        :isFeatured="result.featured"
                         :speaker="result.speaker" 
                         :creationDate="result.creationDate" 
                         :recordingDate="result.recordingDate" 

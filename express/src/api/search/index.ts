@@ -14,6 +14,7 @@ export default async (req, res, fastr) => {
   let q = query ? query.trim().split(/\s+/).map(token => `+${token}`).join(" ") : query
 
   let requestKey = JSON.stringify({ query, page, refinement, sortOrder, lang, excludes })
+
   let hottestResponse = hottestResponses.get(requestKey)
 
   if (hottestResponse) {
@@ -21,7 +22,7 @@ export default async (req, res, fastr) => {
   } else {
     let maxHitsPerPage = 20
     let hits = fastr
-      .search(q, refinement, sortOrder)
+      .search(q, refinement, ['-featured', sortOrder])
       .filter(hit => hit != null)
 
     let calculateStats = (stats, it) => {

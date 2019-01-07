@@ -1,6 +1,7 @@
 <template lang="pug">
   .tags
     span.tag.is-primary.is-capitalized(v-if="isNew") New
+    span.tag.is-primary.is-capitalized(v-if="isFeatured") Featured
     a.tag(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
 </template>
 <script>
@@ -8,7 +9,8 @@
     props: {
       tags: { required: true },
       channel: { required: true },
-      isNew: { required: true }
+      isNew: { required: true },
+      isFeatured: { required : true }
     },
     methods: {
       refineTag(tag) {

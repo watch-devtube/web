@@ -36,7 +36,7 @@
               div                
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
-          Tags(:tags="tags" :isNew="isNew" :channel="channel")
+          Tags(:tags="tags" :isNew="isNew" :isFeatured="isFeatured" :channel="channel")
           .channel
             p.subtitle.is-7
               a.is-capitalized(v-on:click="refineChannel(channel)")
@@ -148,6 +148,7 @@
     props: { 
       id: { type: String, required: true },
       title: { type: String, required: true },
+      isFeatured: { type: Boolean, default: false },
       channel: { type: String, required: true },
       likes: { type: Number, required: true },
       dislikes: { type: Number, required: true },
