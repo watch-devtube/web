@@ -15,27 +15,24 @@
     .navbar-menu#navbarMenu(style=" margin-right: -.75rem" v-bind:class="{ 'is-active': active }")
       .navbar-start
         router-link.navbar-item(v-if="auth.user && hasSubscriptions" :to='{ name: "search", query: { feed: "true" } }' @click.native="hide()") Subscriptions
-        router-link.navbar-item(v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()") 
-          | Watched
+        router-link.navbar-item(title="Watched" v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()") 
+          font-awesome-icon(:icon="['far', 'eye']")
           font-awesome-layers(style="position: relative; top: -5px")
             font-awesome-layers-text(:value="watchedCount" transform="shrink-4")
-        router-link.navbar-item(v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()") 
-          | Favorites
+        router-link.navbar-item(title="Favorites" v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()") 
+          font-awesome-icon(:icon="['far', 'star']")
           font-awesome-layers(style="position: relative; top: -5px")
             font-awesome-layers-text(:value="favoriteCount" transform="shrink-4")          
-        a.navbar-item(@click="$refs.tags.toggleCollapse()")
-          i.fas.fa-hashtag 
-          | &nbsp;Tags
+        a.navbar-item(title="Tags" @click="$refs.tags.toggleCollapse()")
+          i.fas.fa-hashtag
         ExpandableTags(ref="tags" title="Tags" items="tags" :limit="10" type="tag" attr="tag")
           template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
-        a.navbar-item(@click="$refs.speakers.toggleCollapse()")
+        a.navbar-item(title="Speakers" @click="$refs.speakers.toggleCollapse()")
           i.far.fa-user-circle
-          | &nbsp;Speakers
         ExpandableTags(ref="speakers" title="Speakers" items="speakers" :limit="10" type="speaker" attr="twitter")
           template(slot-scope="slot") {{slot.item.name | capitalizeIfNeeded}}
-        a.navbar-item(@click="$refs.channels.toggleCollapse()")
+        a.navbar-item(title="Channels" @click="$refs.channels.toggleCollapse()")
           i.fab.fa-youtube
-          | &nbsp;Channels
         ExpandableTags(ref="channels" title="Channels" items="channels" :limit="10" type="channel" attr="title")
           template(slot-scope="slot") {{slot.item.title | truncate(25) | capitalizeIfNeeded}}
         slot
