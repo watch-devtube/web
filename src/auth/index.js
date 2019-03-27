@@ -23,6 +23,9 @@ let getters = {
 }
 
 let actions = {
+  loginRequired({commit}) {
+    commit("notify/error", { error: 'Login required.' }, { root: true })
+  },
   clearError ({commit}) {
     commit('clearError')
   },

@@ -5,9 +5,8 @@
             .container
               .columns
                 .column
-                  router-link.button.is-small.is-outlined(v-if="speaker || tag || channel" :to="{ name: 'search' }")
+                  router-link.button.is-small.is-outlined(v-if="tag || channel" :to="{ name: 'search' }")
                     span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
-                    span.is-lowercased(v-if="speaker") @{{speaker}}
                     span.icon.is-small: i.fas.fa-times
               .loading(v-if="loading")
                 .notification.overrideVueNotificationsIssue
@@ -25,8 +24,27 @@
                         a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
                         | .
                 section(v-if="speaker")
-                  SpeakerStats(:stats="stats")
-                ais-results#videos.columns.is-multiline
+                  .columns
+                      .column.is-3
+                        SpeakerStats(:stats="stats" :twt="speaker")
+                      .column.is-9
+                        ais-results#videos.columns.is-multiline
+                          template(slot-scope="{ result }")
+                            .column.is-flex-tablet.is-4-widescreen.shrinkIfEmpty
+                              VideoCard(
+                                :tags="result.tags" 
+                                :isFeatured="result.featured"
+                                :speaker="result.speaker" 
+                                :creationDate="result.creationDate" 
+                                :recordingDate="result.recordingDate" 
+                                :duration="result.duration" 
+                                :views="result.views" 
+                                :likes="result.likes + (result.dtLikes || 0)"
+                                :dislikes="result.dislikes + (result.dtDislikes || 0)"
+                                :title="result.title" 
+                                :id="result.objectID" 
+                                :channel="result.channelTitle")                    
+                ais-results#videos.columns.is-multiline(v-if="!speaker")
                   template(slot-scope="{ result }")
                     .column.is-6.is-flex-tablet.is-3-widescreen.shrinkIfEmpty
                       VideoCard(

@@ -41,7 +41,7 @@
   import Lang from './LangFilter.vue'
   import { mapState, mapGetters, mapMutations } from 'vuex'
   
-  export default { 
+  export default {     
     computed: {
      ...mapGetters('loading', ['completed']),
      ...mapState({show: state => state.notify.show})
@@ -53,6 +53,7 @@
                 title: this.$store.state.notify.title,
                 text: this.$store.state.notify.text,
                 type: this.$store.state.notify.type,
+                duration: this.$store.state.notify.duration,
                 group: 'notification'
             })
         }

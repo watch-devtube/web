@@ -8,7 +8,7 @@
             .is-overlay
             .ttl.is-capitalized.is-size-7 
               .image.is-32x32(v-if="speaker" :title="speaker.name")
-                router-link.is-lowercase(:to="{ name: 'speaker', params: { speaker : speaker.twitter} }")
+                a.is-lowercase(:href="'/@' + speaker.twitter")
                   img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter" :alt="speaker.name + ' avatar'")
               .image.is-32x32(title="Add speaker" v-else)
                 a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")

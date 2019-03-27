@@ -8,9 +8,9 @@ import * as path from 'path'
 import * as dayjs from 'dayjs'
 
 import './utils'
-import Vue from 'vue'
 import { Fastr } from 'devtube-commons'
 import { Request, Response } from 'express'
+import axios from 'axios'
 import { dnsCache, Logger } from 'devtube-commons'
 import { Videos } from './videos'
 import { User } from './api/user'
@@ -131,11 +131,14 @@ async function proxy(req: Request, res: Response) {
   } else if (req.path.startsWith("/@")) {
     let [_, speaker] = req.path.split("/@")
     Logger.info(`SPEAKER REQUEST: ${speaker}`)
+
+    let profile = await axios.get(`https://dossier.dev.tube/twt/${speaker}`)
+    let profileData = profile.data    
     indexHtml(res, {
-      title: `DevTube - Videos by @${speaker}`,
-      description: `All conference videos by @${speaker} are here`,
-      speaker: `"${speaker}"`,
-      ogImage: new OgImage(speaker).url
+      title: `${profileData.name}'s conference talks, videos and tutorials`,
+      description: profileData.info,
+      speaker: JSON.stringify(profileData),
+      ogImage: new OgImage(speaker, profileData.name, profileData.info).url
     })
   } else if (req.path.startsWith("/api/")) {
     let module = await import(`.${req.path}`)

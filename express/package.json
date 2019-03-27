@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "dayjs": "^1.7.5",
     "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/201901071822/devtube-commons-v0.1.0.tgz",
+    "emoji-strip": "^1.0.1",
     "express": "^4.16.3",
     "firebase-admin": "^6.0.0",
     "lodash": "^4.17.11",

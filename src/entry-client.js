@@ -24,8 +24,6 @@ import App from './App.vue'
 import Watch from './Watch.vue'
 import Search from './Search.vue'
 import Contributors from './Contributors.vue'
-import VueChartkick from 'vue-chartkick'
-import Chart from 'chart.js'
 import { flatten, duration, kilo, truncate, published, capitalizeIfNeeded, durationFull } from './helpers/filters'
 
 import auth from './auth'
@@ -41,7 +39,6 @@ Vue.use(VueCookie)
 Vue.use(Notifications)
 Vue.use(VueRouter)
 Vue.use(AsyncComputed)
-Vue.use(VueChartkick, {adapter: Chart})
 Vue.use(VueProgressBar, {
   color: 'rgb(143, 255, 199)',
   failedColor: 'red',
