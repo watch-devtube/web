@@ -1,4 +1,3 @@
-
 import * as Datastore  from '@google-cloud/datastore'
 
 let datastore = new Datastore({})

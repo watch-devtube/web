@@ -11,9 +11,9 @@ import VueProgressBar from 'vue-progressbar'
 import Notifications from 'vue-notification'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faUser, faPlusCircle, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown} from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisV, faTimes, faCheck, faClock, faPaperPlane, faStar, faEnvelope, faCircle, faPlus, faMinus, faUser, faPlusCircle, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
-library.add(faEllipsisV, faTimes, faCheck, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown)
+library.add(faEllipsisV, faTimes, faCheck, faPaperPlane, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
@@ -22,9 +22,10 @@ import {firebase} from './helpers/firebase'
 
 import App from './App.vue'
 import Watch from './Watch.vue'
+import Brownbag from './Brownbag.vue'
 import Search from './Search.vue'
 import Contributors from './Contributors.vue'
-import { flatten, duration, kilo, truncate, published, capitalizeIfNeeded, durationFull } from './helpers/filters'
+import { flatten, duration, kilo, noemoji, truncate, published, dateFmt, capitalizeIfNeeded, durationFull } from './helpers/filters'
 
 import auth from './auth'
 import videos from './videos'
@@ -32,6 +33,8 @@ import loading from './loading'
 import notify from './notify'
 import query from './query'
 import likes from './likes'
+
+
 
 Vue.use(Vuex)
 Vue.use(InstantSearch)
@@ -45,12 +48,14 @@ Vue.use(VueProgressBar, {
   height: '2px'
 })
 
+Vue.filter('dateFmt', dateFmt)
 Vue.filter('flatten', flatten)
 Vue.filter('duration', duration)
 Vue.filter('durationFull', durationFull)
 Vue.filter('truncate', truncate)
 Vue.filter('published', published)
 Vue.filter('kilo', kilo)
+Vue.filter('noemoji', noemoji)
 Vue.filter('capitalizeIfNeeded', capitalizeIfNeeded)
 
 Vue.mixin({
@@ -70,6 +75,7 @@ const router = new VueRouter({
   linkExactActiveClass: 'is-active',
   routes: [
     { name: 'contributors', path: '/contributors', component: Contributors },
+    { name: 'brownbag', path: '/brownbags/:id', component: Brownbag, props: true },
     { name: 'video', path: '/video/:id', component: Watch, props: true },
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },

@@ -13,6 +13,7 @@ import { Request, Response } from 'express'
 import axios from 'axios'
 import { dnsCache, Logger } from 'devtube-commons'
 import { Videos } from './videos'
+import { Brownbags } from './brownbags'
 import { User } from './api/user'
 import { OgImage } from './ogImage'
 import responseTime from './responseTime'
@@ -128,6 +129,15 @@ async function proxy(req: Request, res: Response) {
       description: 'Let\'s build the best tech video hub together!',
       board: fs.readFileSync(`${dataDir}/board.json`, 'utf8')
     })
+  } else if (req.path.startsWith("/brownbags/")) {
+    let objectID = req.path.split('/')[2]
+    let brownbags = new Brownbags()
+    let brownbag = await brownbags.fetchOne(objectID)
+    indexHtml(res, {
+      title: 'DevTube – Brown-Bags',
+      description: 'Let\'s watch videos together, real-time.',
+      brownbag: JSON.stringify(brownbag)
+    })    
   } else if (req.path.startsWith("/@")) {
     let [_, speaker] = req.path.split("/@")
     Logger.info(`SPEAKER REQUEST: ${speaker}`)

@@ -18,6 +18,7 @@
     "dayjs": "^1.5.16",
     "firebase": "^5.3.1",
     "v-debounce": "^0.1.2",
+    "video.js": "^7.4.1",
     "vue": "^2.2.1",
     "vue-async-computed": "^3.3.1",
     "vue-cookie": "^1.1.4",
@@ -25,6 +26,7 @@
     "vue-notification": "^1.3.12",
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.0.1",
+    "vue-timers": "^1.10.0",
     "vuex": "^3.0.1",
     "vuex-persistedstate": "^2.5.4"
   },

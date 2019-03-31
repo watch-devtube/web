@@ -7,6 +7,7 @@ html(lang='en')
     meta(http-equiv='x-ua-compatible' content='ie=edge')
     meta(name='keywords' content='')
     meta(name='robots' content='index,follow')
+    link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/video.js/7.5.2/alt/video-js-cdn.min.css')
     |     {{#nightMode}}
     link(rel='stylesheet' href='https://jenil.github.io/bulmaswatch/superhero/bulmaswatch.min.css')
     style.
@@ -55,6 +56,7 @@ html(lang='en')
       window.newVideos = {{& newVideos}}{{^newVideos}}[]{{/newVideos}}
       window.board = {{& board}}{{^board}}undefined{{/board}}
       window.speaker = {{& speaker}}{{^speaker}}undefined{{/speaker}}
+      window.brownbag = {{& brownbag}}{{^brownbag}}undefined{{/brownbag}}
       window.featured = {{& featured}}{{^featured}}undefined{{/featured}}
     include yandex.pug
   body

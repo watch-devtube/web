@@ -26,6 +26,13 @@ export const duration = it => {
   return (hours ? `${hours} h `: '') + (minutes ? `${minutes} min` : '')
 }
 
+export const dateFmt = it => {
+  if (!it) {
+    return it
+  }
+  return dayjs(it * 1000).format('HH:mm')
+}
+
 export const durationFull = it => {
   if (!it) {
     return it
@@ -35,6 +42,13 @@ export const durationFull = it => {
   const hours = Math.floor(it / 3600)
   const minutes = date.getUTCMinutes()
   return (hours ? `${hours} hours`: `${minutes} minutes`)
+}
+
+export const noemoji = it => {
+  if (!it) {
+    return it
+  }  
+  return it.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
 }
 
 export const capitalizeIfNeeded = (it) => { 
