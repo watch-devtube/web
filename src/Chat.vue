@@ -17,11 +17,13 @@
       br
       .columns
         .column
-            p.is-size-7.has-text-grey
-              | {{message.length}}/120
-        .column
-          a.is-pulled-right.button.is-small(:disabled="message.length < 1 || message.length > 120" @click="send()")
+            a(@click="$emit('heart-pressed')")
+              i.fa.fa-heart
+        .column.has-text-right
+          a.button.is-small(:disabled="message.length < 1 || message.length > 120" @click="send()")
             font-awesome-icon(:icon="['far', 'paper-plane']")
+          p.is-size-7.has-text-grey
+            | {{message.length}}/120            
     article.message.is-danger.is-small(v-else)
       .message-body Log in to send messages.
 </template>

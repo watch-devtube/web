@@ -3,15 +3,17 @@
     .container
       .columns
         .column.is-9
-          .notification.is-primary(v-if="completed") This brown-bag has completed {{completedOn}}. 
-            a Watch recording
-            | , discover other brown-bags or 
-            a create your own
-            | .
-          .notification.is-primary(v-if="cannotAutoplay") Autoplay does not work in your browser. Press 
-            strong
-              a(@click="play()") play
-            |  to watch brown-bag session.
+          .yo(v-if="completed")
+            .notification.is-primary This brown-bag has completed {{completedOn}}. 
+              a(:href="'/video/' + brownbag.videoId") Watch recording
+              | , discover other brown-bags or 
+              a create your own
+              | .
+            .notification.is-primary(v-if="cannotAutoplay") Autoplay does not work in your browser. Press 
+              strong
+                a(@click="play()") play
+              |  to watch brown-bag session.
+            .image.is-16by9(:style="'background-image: url(//img.youtube.com/vi/' + brownbag.videoId + '/hqdefault.jpg)'")
           .yo(v-if="soon")
             p coming soon {{startsOn}}
           .yo(v-if="live")
@@ -27,9 +29,10 @@
               .top.heading
                 font-awesome-icon.has-text-danger(:icon="['fas', 'circle']")
                 span  35 watching
-              video-player(ref="player" :options="videoOptions" :starts="brownbag.datetime" :duration="duration" v-on:autoplayPrevented="autoplayPrevented")                                      
+              video-player(ref="player" :options="videoOptions" :starts="brownbag.datetime" :duration="duration" v-on:autoplayPrevented="autoplayPrevented")
+          Hearts(ref="hts" :room="id")
         .column.is-3
-          Chat(:room="id")
+          Chat(:room="id" v-on:heart-pressed="loveInTheAir()")
           
     br
     br
@@ -43,6 +46,9 @@
     width: 100%;
   }
 
+  .is-16by9 {
+    background-size: cover;
+  }
   .videoWrapper {
     position: relative;
       .top {
@@ -54,18 +60,12 @@
         top: 5px;
         z-index: 99;
       }
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
   }  
 
   
 </style>
 <script>
+  import Hearts from './Hearts.vue'
   import SpeakerStats from './SpeakerStats.vue'
   import VideoPlayer from './VideoPlayer.vue'
   import Chat from './Chat.vue'
@@ -130,6 +130,10 @@
       }
     },
     methods: {
+      loveInTheAir() {
+          // console.log(this.$refs)
+          this.$refs.hts.show()
+      },
       endsAt() {
         return dayjs(this.brownbag.datetime).add(this.duration, 'second')
       },
@@ -141,6 +145,6 @@
         this.cannotAutoplay = true
       }
     },
-    components: { VideoPlayer, Chat }
+    components: { VideoPlayer, Chat, Hearts }
   }
 </script>
