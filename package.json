@@ -18,7 +18,7 @@
     "dayjs": "^1.5.16",
     "firebase": "^5.3.1",
     "v-debounce": "^0.1.2",
-    "video.js": "^7.4.1",
+    "video.js": "7.5.3",
     "vue": "^2.2.1",
     "vue-async-computed": "^3.3.1",
     "vue-cookie": "^1.1.4",

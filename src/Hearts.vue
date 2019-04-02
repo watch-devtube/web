@@ -112,18 +112,34 @@
 </style>
 <script>
   import { firestore, ts } from './helpers/firebase'
+  import VueTimers from 'vue-timers/mixin'
+  import { timer } from 'vue-timers'  
   export default {
     props: ['room'],
+    mixins: [VueTimers],
+    timers: {
+      killOldHearts: { time: 5000, autostart: true, repeat: true }
+    },    
     created() {
       firestore
         .collection('chat-rooms')
         .doc(this.room)
         .collection('hearts')
+        .doc('live')
         .onSnapshot(hearts => {    
-          this.show()
+          let ts = hearts.data().ts
+          this.show(ts)
         })
     },
     methods: {
+      killOldHearts() {
+        this.hearts = this.hearts.filter(x => {
+          let tss = x.ts + 10000
+          let now = new Date().getTime()
+          let notExpired = now < tss
+          return notExpired
+        })
+      },
       send() {
         firestore
           .collection('chat-rooms')
@@ -131,13 +147,13 @@
           .collection('hearts')
           .doc('live')
           .set({
-            ts: ts
+            ts: new Date().getTime()
           })
       },
-      show() {
+      show(ts) {
         for (var i = 0; i < 5; i++) {
 
-          let any = (arr, len = arr.length + 1) => arr[Math.floor(Math.random() * len)]
+          let any = (arr, len = arr.length) => arr[Math.floor(Math.random() * len)]
           let random = (min, max) => Math.random() * (max - min) + min
 
           let animations = ["flowOne", "flowTwo", "flowThree"]
@@ -153,8 +169,10 @@
           let color = any(colors)
           let animation = any(animations)
 
+
           this.hearts.push({
             font: font,
+            ts: ts,
             color: color,
             ani: "" + animation + " " + duration + "s linear"
           })

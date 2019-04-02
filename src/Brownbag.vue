@@ -3,33 +3,33 @@
     .container
       .columns
         .column.is-9
-          .yo(v-if="completed")
-            .notification.is-primary This brown-bag has completed {{completedOn}}. 
-              a(:href="'/video/' + brownbag.videoId") Watch recording
-              | , discover other brown-bags or 
-              a create your own
-              | .
-            .notification.is-primary(v-if="cannotAutoplay") Autoplay does not work in your browser. Press 
-              strong
-                a(@click="play()") play
-              |  to watch brown-bag session.
-            .image.is-16by9(:style="'background-image: url(//img.youtube.com/vi/' + brownbag.videoId + '/hqdefault.jpg)'")
-          .yo(v-if="soon")
+          .notification.is-primary(v-if="completed") This brown-bag has completed {{completedOn}}. 
+            a(:href="'/video/' + brownbag.videoId") Watch recording
+            | , discover other brown-bags or 
+            a create your own
+            | .
+          .notification.is-primary(v-if="cannotAutoplay") Autoplay does not work in your browser. Press 
+            strong
+              a(@click="play()") play
+            |  to watch brown-bag session.
+
+          .notification.is-primary(v-if="soon")
             p coming soon {{startsOn}}
-          .yo(v-if="live")
-            h1.title.is-uppercase.is-size-5.is-marginless {{this.brownbag.title}}
-            span(v-if="profile").is-size-7 {{profile.name | noemoji}}
-            span  &nbsp;·&nbsp; 
-            a.is-size-7.is-lowercased(:href="'https://twitter.com/' + brownbag.speaker" rel="nofollow" target="_blank")
-              i.fab.fa-twitter
-              |  {{brownbag.speaker}}
-            br
-            br
-            .videoWrapper
-              .top.heading
-                font-awesome-icon.has-text-danger(:icon="['fas', 'circle']")
-                span  35 watching
-              video-player(ref="player" :options="videoOptions" :starts="brownbag.datetime" :duration="duration" v-on:autoplayPrevented="autoplayPrevented")
+
+          h1.title.is-uppercase.is-size-5.is-marginless {{this.brownbag.title}}
+          span(v-if="profile").is-size-7 {{profile.name | noemoji}}
+          span  &nbsp;·&nbsp; 
+          a.is-size-7.is-lowercased(:href="'https://twitter.com/' + brownbag.speaker" rel="nofollow" target="_blank")
+            i.fab.fa-twitter
+            |  {{brownbag.speaker}}
+          br
+          br
+          .videoWrapper(v-if="live")
+            .top.heading
+              font-awesome-icon.has-text-danger(:icon="['fas', 'circle']")
+              span  35 watching
+            video-player(ref="player" :options="videoOptions" :starts="brownbag.datetime" :duration="duration" v-on:autoplayPrevented="autoplayPrevented")
+          .image.is-16by9(v-else :style="'background-image: url(//img.youtube.com/vi/' + brownbag.videoId + '/hqdefault.jpg)'")
           Hearts(ref="hts" :room="id")
         .column.is-3
           Chat(:room="id" v-on:heart-pressed="loveInTheAir()")
@@ -42,10 +42,6 @@
 
 </template>
 <style lang="scss">
-  #player {
-    width: 100%;
-  }
-
   .is-16by9 {
     background-size: cover;
   }
@@ -131,8 +127,7 @@
     },
     methods: {
       loveInTheAir() {
-          // console.log(this.$refs)
-          this.$refs.hts.show()
+          this.$refs.hts.send()
       },
       endsAt() {
         return dayjs(this.brownbag.datetime).add(this.duration, 'second')

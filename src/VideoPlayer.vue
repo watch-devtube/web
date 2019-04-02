@@ -63,7 +63,12 @@ export default {
         this.player = videojs(this.$refs.videoPlayer, this.options, function onPlayerReady() {
             this.currentTime(playTime)
             this.volume(1.0)
-            this.play().catch(error => that.$emit('autoplayPrevented'))    
+            // firefox hack 
+            let promise = document.querySelector('video').play()
+            if (promise !== undefined) {
+                promise.catch(error => that.$emit('autoplayPrevented'))
+            }
+            this.play().catch(error => that.$emit('autoplayPrevented'))
             that.$emit('playerLoaded')
         })
     },
