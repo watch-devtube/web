@@ -12,6 +12,7 @@ import { Fastr } from 'devtube-commons'
 import { Request, Response } from 'express'
 import axios from 'axios'
 import { dnsCache, Logger } from 'devtube-commons'
+import { unescape } from 'querystring'
 import { Videos } from './videos'
 import { Brownbags } from './brownbags'
 import { User } from './api/user'
@@ -154,6 +155,7 @@ async function proxy(req: Request, res: Response) {
     let module = await import(`.${req.path}`)
     module.default(req, res, fastr)
   } else if (directLink) {
+    // let param = unescape(req.path.split(directLink)[1])
     let param = req.path.split(directLink)[1]
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
     indexHtml(res, {
