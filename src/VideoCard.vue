@@ -9,9 +9,6 @@
               .image.is-32x32(v-if="speaker" :title="speaker.name")
                 a.is-lowercase(:href="'/@' + speaker.twitter")
                   img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter" :alt="speaker.name + ' avatar'")
-              .image.is-32x32(title="Add speaker" v-else)
-                a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
-                  img.avatar(src="/add-speaker.png" alt="Add speaker")
               | {{title}}
       .card-content
           nav.level.is-mobile
