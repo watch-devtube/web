@@ -38,7 +38,7 @@
                       div
                         p.heading Recorded
                         p.title.is-size-7 {{video.recordingDate | published}}
-                    .level-item.has-text-centered
+                    .level-item.has-text-centered.is-hidden-touch
                       div
                         p.heading Share
                         p.title.is-size-7
