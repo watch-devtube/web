@@ -109,11 +109,7 @@
         .image {
           position: absolute;
           top: 0; left: -20px; bottom: 0;
-
           margin: auto;
-          img {
-            border: 1px solid white;
-          }
         }
 
         .image:hover {
