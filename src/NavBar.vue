@@ -77,7 +77,6 @@ header {
     background-repeat: no-repeat;
     overflow: hidden;
     border-radius: 50%;
-    border: 1px solid white;
     margin-right: 0.5em;
   }
 
