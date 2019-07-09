@@ -4,7 +4,6 @@
         VideoToggles(:videoId="id")
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
-            i.fab.fa-youtube.watch
             .is-overlay
             .ttl.is-capitalized.is-size-7 
               .image.is-32x32(v-if="speaker" :title="speaker.name")
