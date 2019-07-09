@@ -16,22 +16,27 @@
       .navbar-start
         router-link.navbar-item(v-if="auth.user && hasSubscriptions" :to='{ name: "search", query: { feed: "true" } }' @click.native="hide()") Subscriptions
         router-link.navbar-item(title="Watched" v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()") 
+          span.is-hidden-tablet Watched 
           font-awesome-icon(:icon="['far', 'eye']")
           font-awesome-layers(style="position: relative; top: -5px")
             font-awesome-layers-text(:value="watchedCount" transform="shrink-4")
         router-link.navbar-item(title="Favorites" v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()") 
+          span.is-hidden-tablet Favorites 
           font-awesome-icon(:icon="['far', 'star']")
           font-awesome-layers(style="position: relative; top: -5px")
             font-awesome-layers-text(:value="favoriteCount" transform="shrink-4")          
         a.navbar-item(title="Tags" @click="$refs.tags.toggleCollapse()")
+          span.is-hidden-tablet Tags 
           i.fas.fa-hashtag
         ExpandableTags(ref="tags" title="Tags" items="tags" :limit="10" type="tag" attr="tag")
           template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
         a.navbar-item(title="Speakers" @click="$refs.speakers.toggleCollapse()")
+          span.is-hidden-tablet Speakers  
           i.far.fa-user-circle
         ExpandableTags(ref="speakers" title="Speakers" items="speakers" :limit="10" type="speaker" attr="twitter")
           template(slot-scope="slot") {{slot.item.name | capitalizeIfNeeded}}
         a.navbar-item(title="Channels" @click="$refs.channels.toggleCollapse()")
+          span.is-hidden-tablet Channels 
           i.fab.fa-youtube
         ExpandableTags(ref="channels" title="Channels" items="channels" :limit="10" type="channel" attr="title")
           template(slot-scope="slot") {{slot.item.title | truncate(25) | capitalizeIfNeeded}}
