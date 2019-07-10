@@ -44,9 +44,9 @@
                                 :title="result.title" 
                                 :id="result.objectID" 
                                 :channel="result.channelTitle")                    
-                ais-results#videos.columns.is-multiline(v-if="!speaker")
+                ais-results#videos.columns.is-multiline.is-mobile(v-if="!speaker")
                   template(slot-scope="{ result }")
-                    .column.is-6.is-flex-tablet.is-3-widescreen.shrinkIfEmpty
+                    .column.shrinkIfEmpty
                       VideoCard(
                         :tags="result.tags" 
                         :isFeatured="result.featured"

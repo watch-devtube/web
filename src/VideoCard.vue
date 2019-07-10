@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card(style="height: 100%; width:100%" v-if="visible")
+  .card(v-if="visible")
       .card-image
         VideoToggles(:videoId="id")
         a(:href="'/video' + '/' + id")
@@ -26,11 +26,11 @@
                 p.title.is-size-7 {{views | kilo}}
             .level-item.has-text-centered
               div                
-                p.heading.is-capitalized Duration
+                p.heading.is-capitalized Length
                 p.title.is-size-7 {{duration | duration}}
             .level-item.has-text-centered
               div                
-                p.heading.is-capitalized Recorded
+                p.heading.is-capitalized Date
                 p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :isFeatured="isFeatured" :channel="channel")
 </template>
@@ -38,18 +38,16 @@
 
   .card {
 
-    position: relative;
-    transition: 0.4s ease;  
+    min-width: 240px;
+    height: 100%;
 
     .avatar {
       border-radius: 50% !important;
     }
 
-
     div.image {
       background-size: cover;
         div.is-overlay {
-          transition: 0.4s ease;
           background: url('./overlay.png');
         }
 
