@@ -33,16 +33,6 @@
                 p.heading.is-capitalized Recorded
                 p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :isFeatured="isFeatured" :channel="channel")
-          .channel
-            p.subtitle.is-7
-              a.is-capitalized(v-on:click="refineChannel(channel)")
-                i.fab.fa-youtube
-                | &nbsp; {{channel | truncate(25)}}
-          .contribute
-            p.subtitle.is-7
-              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
-                font-awesome-icon(icon="edit")
-                |  edit
 </template>
 <style lang="scss">
 
@@ -51,19 +41,6 @@
     position: relative;
     transition: 0.4s ease;  
 
-
-    .channel {
-      position: absolute; 
-      left: 10px; 
-      bottom: 10px;      
-    }
-
-    .contribute {
-      position: absolute; 
-      right: 10px; 
-      bottom: 10px;
-    }
-
     .avatar {
       border-radius: 50% !important;
     }
@@ -71,24 +48,6 @@
 
     div.image {
       background-size: cover;
-
-        .watch {
-          color: white;
-          opacity: 0.5;
-          transition: 0.4s ease;
-          position: absolute;
-          top: 55%;
-          left: 50%;
-          z-index: 1;
-          height: 20%;
-          width: 50%;
-          margin: -15% 0 0 -25%;
-        }
-
-        .watch:hover {
-          animation: pulse 1s infinite linear;
-        }
-
         div.is-overlay {
           transition: 0.4s ease;
           background: url('./overlay.png');
