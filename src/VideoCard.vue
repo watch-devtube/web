@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card(v-if="visible")
+  .card(v-if="visible" style="height: 100%")
       .card-image
         VideoToggles(:videoId="id")
         a(:href="'/video' + '/' + id")
@@ -39,7 +39,8 @@
   .card {
 
     min-width: 240px;
-    height: 100%;
+    // max-width: 400px;
+    
 
     .avatar {
       border-radius: 50% !important;
