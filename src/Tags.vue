@@ -19,3 +19,9 @@
   }
   }
 </script>
+<style lang="scss">
+  .tag {
+    font-size: 11px !important;
+  }
+</style>
+
