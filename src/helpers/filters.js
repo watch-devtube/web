@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+import numeral from 'numeral'
 
 const sameFlatten = arr =>
   arr.reduce((acc, item) =>
@@ -7,13 +8,7 @@ const sameFlatten = arr =>
 
 export const flatten = it => !it ? it : sameFlatten(it)
 
-const makeKilo = it => it < 100000
-  ? Math.round(it / 1000) + '.' + (it % 1000).toString().padStart(3, "0").charAt(0)
-  : Math.round(it / 1000)
-
-export const kilo = it => it && it >= 1000
-? `${makeKilo(it)}K`
-: it
+export const kilo = it => numeral(it).format('0a')
 
 export const duration = it => {
   if (!it) {
@@ -23,7 +18,7 @@ export const duration = it => {
   const date = new Date(it * 1000)
   const hours = Math.floor(it / 3600)
   const minutes = date.getUTCMinutes()
-  return (hours ? `${hours} h `: '') + (minutes ? `${minutes} min` : '')
+  return (hours ? `${hours}h `: '') + (minutes ? `${minutes}m` : '')
 }
 
 export const dateFmt = it => {
