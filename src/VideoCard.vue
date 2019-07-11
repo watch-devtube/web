@@ -8,7 +8,7 @@
             .ttl.is-capitalized.is-size-7 
               .image.is-32x32(v-if="speaker" :title="speaker.name")
                 a.is-lowercase(:href="'/@' + speaker.twitter")
-                  img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter" :alt="speaker.name + ' avatar'")
+                  img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter + '/small'" :alt="speaker.name + ' avatar'")
               | {{title}}
       .card-content
           nav.level.is-mobile
