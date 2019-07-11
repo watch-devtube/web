@@ -22,7 +22,7 @@ import {firebase} from './helpers/firebase'
 
 import App from './App.vue'
 import Watch from './Watch.vue'
-import Brownbag from './Brownbag.vue'
+// import Brownbag from './Brownbag.vue'
 import Search from './Search.vue'
 import Contributors from './Contributors.vue'
 import { flatten, duration, kilo, noemoji, truncate, published, dateFmt, capitalizeIfNeeded, durationFull } from './helpers/filters'
@@ -75,7 +75,7 @@ const router = new VueRouter({
   linkExactActiveClass: 'is-active',
   routes: [
     { name: 'contributors', path: '/contributors', component: Contributors },
-    { name: 'brownbag', path: '/brownbags/:id', component: Brownbag, props: true },
+    // { name: 'brownbag', path: '/brownbags/:id', component: Brownbag, props: true },
     { name: 'video', path: '/video/:id', component: Watch, props: true },
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },

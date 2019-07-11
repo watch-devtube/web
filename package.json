@@ -20,7 +20,6 @@
     "numeral": "^2.0.6",
     "tar": "^4.4.2",
     "v-debounce": "^0.1.2",
-    "video.js": "7.5.3",
     "vue": "^2.2.1",
     "vue-async-computed": "^3.3.1",
     "vue-cookie": "^1.1.4",
