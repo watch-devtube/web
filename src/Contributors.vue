@@ -4,7 +4,7 @@
       .container
         nav.level(style="min-height: 80px")
           .level-item.has-text-white.has-text-centered 
-            i.far.fa-heart.has-text-danger
+            font-awesome-icon(:icon="['far', 'heart']").has-text-danger
             | &nbsp;Contributors
     .section.container
       .content
@@ -12,10 +12,10 @@
           | Let's build the best tech video hub together. 
           a(href="https://github.com/watch-devtube/contrib" target="_blank") Contributing is simple!
         p 
-          i.far.fa-heart.has-text-danger
+          font-awesome-icon(:icon="['far', 'heart']").has-text-danger
           |   5000 karma points – we'll thank you on Twitter
         p 
-          i.far.fa-heart.has-text-danger
+          font-awesome-icon(:icon="['far', 'heart']").has-text-danger
           |   10000 karma points — you can make any good video featured on the front page for a week.
       .columns.is-multiline.is-mobile
         .column.is-3-widescreen.is-4-tablet(v-for="contributor in contributors" v-if="contributor.name")
@@ -40,15 +40,15 @@
                     p.title.is-size-7 {{contributor.videosUpdated}}
                 .level-item.has-text-centered
                   .item
-                    p.heading.is-capitalized: i.fab.fa-youtube
+                    p.heading.is-capitalized: font-awesome-icon(:icon="['fab', 'youtube']")
                     p.title.is-size-7 {{contributor.channelContributions}}
                 .level-item.has-text-centered
                   .item
-                    p.heading.is-capitalized: i.far.fa-user-circle
+                    p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'heart']")
                     p.title.is-size-7 {{contributor.speakerContributions}}
                 .level-item.has-text-centered                              
                   .item
-                    p.heading.is-capitalized: i.fas.fa-hashtag
+                    p.heading.is-capitalized: font-awesome-icon(:icon="['fas', 'hashtag']")
                     p.title.is-size-7 {{contributor.tagContributions}}
               ContributorRank(:karma="contributor.karma")
 </template>
@@ -76,7 +76,6 @@
 <script>
   import NightMode from './NightMode.vue'
   import ContributorRank from './ContributorRank.vue'
-
   export default {
     computed: {
       contributors() {

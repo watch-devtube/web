@@ -5,7 +5,7 @@
         img.is-rounded(:src="'https://avatars.io/twitter/' + twt" :alt="twt + ' avatar'")
       h2.is-size-5 {{profile.name}}
       a.is-size-7.is-lowercased(:href="'https://twitter.com/' + twt" rel="nofollow")
-        i.fab.fa-twitter
+        font-awesome-icon(:icon="['fab', 'twitter']")
         |  {{twt}}
       p.profileInfo.is-size-7 {{profile.info}}
       hr

@@ -1,13 +1,13 @@
 <template lang="pug">
   .share
     a(:href="'//www.facebook.com/sharer/sharer.php?u=' + url" target="_blank" aria-label="facebook") 
-      i.fab.fa-facebook
+      font-awesome-icon(:icon="['fab', 'facebook-square']")
     a(:href="'//twitter.com/intent/tweet?text=' + thanksOrBlank + encodedTitle + '&via=WatchDevTube&hashtags=' + csvTags + '&url=' + url" target="_blank" aria-label="twitter")
       | &nbsp;
-      i.fab.fa-twitter-square
+      font-awesome-icon(:icon="['fab', 'twitter-square']")
     a(:href="'//linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + encodedTitle" target="_blank" aria-label="twitter")
       | &nbsp;
-      i.fab.fa-linkedin
+      font-awesome-icon(:icon="['fab', 'linkedin']")
 </template>
 <style lang="scss">
   .share a:hover {

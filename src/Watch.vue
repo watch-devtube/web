@@ -63,7 +63,7 @@
                 .tags
                   a.tag(v-for="tag in video.tags" @click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
                   a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
-                    i.fab.fa-youtube 
+                    font-awesome-icon(:icon="['fab', 'youtube']") 
                     | &nbsp; {{video.channelTitle}}
               .column
                 p

@@ -11,9 +11,15 @@ import VueProgressBar from 'vue-progressbar'
 import Notifications from 'vue-notification'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEllipsisV, faTimes, faCheck, faClock, faPaperPlane, faStar, faEnvelope, faCircle, faPlus, faMinus, faUser, faPlusCircle, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
-library.add(faEllipsisV, faTimes, faCheck, faPaperPlane, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown)
+
+import { faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEllipsisV, faTimes, faCheck, faClock, faPaperPlane, faEnvelope, faCircle, faPlus, faMinus, faUser, faPlusCircle, faMinusCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag} from '@fortawesome/free-solid-svg-icons'
+import { faThumbsDown as fasThumbsDown } from '@fortawesome/free-solid-svg-icons/faThumbsDown'
+import { faThumbsUp as fasThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp'
+import { faCheckCircle, faHeart, faUserCircle, faEye, faStar, faThumbsUp, faThumbsDown } from '@fortawesome/free-regular-svg-icons'
+library.add(faEllipsisV, faTimes, faCheck, faPaperPlane, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag, faHeart, faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin, faEye, fasThumbsDown, fasThumbsUp)
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)

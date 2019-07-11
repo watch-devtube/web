@@ -27,17 +27,17 @@
             font-awesome-layers-text(:value="favoriteCount" transform="shrink-4")          
         a.navbar-item(title="Tags" @click="$refs.tags.toggleCollapse()")
           span.is-hidden-tablet Tags 
-          i.fas.fa-hashtag
+          font-awesome-icon(:icon="['fas', 'hashtag']")
         ExpandableTags(ref="tags" title="Tags" items="tags" :limit="10" type="tag" attr="tag")
           template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
         a.navbar-item(title="Speakers" @click="$refs.speakers.toggleCollapse()")
           span.is-hidden-tablet Speakers  
-          i.far.fa-user-circle
+          font-awesome-icon(:icon="['far', 'user-circle']")
         ExpandableTags(ref="speakers" title="Speakers" items="speakers" :limit="10" type="speaker" attr="twitter")
           template(slot-scope="slot") {{slot.item.name | capitalizeIfNeeded}}
         a.navbar-item(title="Channels" @click="$refs.channels.toggleCollapse()")
           span.is-hidden-tablet Channels 
-          i.fab.fa-youtube
+          font-awesome-icon(:icon="['fab', 'youtube']")
         ExpandableTags(ref="channels" title="Channels" items="channels" :limit="10" type="channel" attr="title")
           template(slot-scope="slot") {{slot.item.title | truncate(25) | capitalizeIfNeeded}}
         slot

@@ -2,7 +2,7 @@
   .tags.has-addons
     .tag
       | Karma&nbsp;
-      i.far.fa-heart.has-text-danger
+      font-awesome-icon(:icon="['far', 'heart']").has-text-danger
       strong &nbsp;{{karma}}
 </template>
 <script>
