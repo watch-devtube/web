@@ -7,7 +7,7 @@
                 .column
                   router-link.button.is-small.is-outlined(v-if="tag || channel" :to="{ name: 'search' }")
                     span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
-                    span.icon.is-small: i.fas.fa-times
+                    span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
               .loading(v-if="loading")
                 .notification.overrideVueNotificationsIssue
                   p
