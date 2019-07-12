@@ -2,7 +2,7 @@
   .toggles
     a.video-action.watched(@click="toggleWatched(videoId)" v-if="auth.user")
       font-awesome-layers(v-if="isWatched(videoId)" title="unmark watched")
-        font-awesome-icon.fa-stack-1x(icon="check-circle")
+        font-awesome-icon.fa-stack-1x(:icon="['fas', 'check-circle']")
       font-awesome-layers(v-else title="mark watched")
         font-awesome-icon.fa-stack-1x(:icon="['far', 'check-circle']")
     a.video-action.favorite(@click="toggleFavorite(videoId)" v-if="auth.user")
