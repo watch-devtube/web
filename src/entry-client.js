@@ -17,8 +17,8 @@ import { faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin } f
 import { faEllipsisV, faTimes, faCheck, faClock, faPaperPlane, faEnvelope, faCircle, faPlus, faMinus, faUser, faPlusCircle, faMinusCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag} from '@fortawesome/free-solid-svg-icons'
 import { faThumbsDown as fasThumbsDown } from '@fortawesome/free-solid-svg-icons/faThumbsDown'
 import { faThumbsUp as fasThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp'
-import { faCheckCircle, faHeart, faUserCircle, faEye, faStar, faThumbsUp, faThumbsDown } from '@fortawesome/free-regular-svg-icons'
-library.add(faEllipsisV, faTimes, faCheck, faPaperPlane, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag, faHeart, faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin, faEye, fasThumbsDown, fasThumbsUp)
+import { faCheckCircle, faHeart, faUserCircle, faEye, faStar, faThumbsUp, faThumbsDown, faGrinStars } from '@fortawesome/free-regular-svg-icons'
+library.add(faEllipsisV, faTimes, faCheck, faPaperPlane, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faCheckCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag, faHeart, faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin, faEye, fasThumbsDown, fasThumbsUp, faGrinStars)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
