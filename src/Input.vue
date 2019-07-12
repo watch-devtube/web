@@ -3,7 +3,7 @@
     p.control.has-icons-left
       input.input(ref="query" v-model.lazy="query" v-debounce="300" autofocus)
       span.icon.is-small.is-left
-        i.fas.fa-search
+        font-awesome-icon(:icon="['fas', 'search']")
 </template>
 <script>
 import debounce from 'v-debounce'
