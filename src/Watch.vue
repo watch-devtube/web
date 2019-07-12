@@ -32,46 +32,37 @@
                         p.title.is-size-7 {{video.views | kilo}}
                     .level-item.has-text-centered
                       div
-                        p.heading Duration
+                        p.heading Length
                         p.title.is-size-7 {{video.duration | duration}}
                     .level-item.has-text-centered
                       div
-                        p.heading Recorded
+                        p.heading Date
                         p.title.is-size-7 {{video.recordingDate | published}}
                     .level-item.has-text-centered.is-hidden-touch
                       div
                         p.heading Share
                         p.title.is-size-7
                           ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
-          .content
+          .content          
             h3
-            .media(v-if="video.speaker && video.speaker.twitter")
+            .columns.is-vcentered.is-mobile
+              .column.is-narrow(v-for="tag in video.tags") 
+                .tags.has-addons
+                  a.tag(@click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
+                  a.tag.is-delete(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
+              .column
+                a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
+                  font-awesome-icon(:icon="['fab', 'youtube']") 
+                  | &nbsp; {{video.channelTitle}}                        
+            h2.title.is-4 {{video.title}}
+            .media(v-if="video.speaker && video.speaker.twitter" style="margin-bottom: 1em")
                 .media-left.has-text-left
                     figure.image.is-32x32.is-marginless
                       img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter" :alt="video.speaker.name + ' avatar'")
                 .media-content
-                  p.title.is-4 {{video.speaker.name}}
-                  p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
-            .media(v-else)
-                .media-left.has-text-left
-                    figure.image.is-32x32.is-marginless
-                      a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                        img.avatar(src="/add-speaker.png" alt="Add speaker")
-            .media
-            .columns
-              .column.is-narrow
-                .tags
-                  a.tag(v-for="tag in video.tags" @click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
-                  a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
-                    font-awesome-icon(:icon="['fab', 'youtube']") 
-                    | &nbsp; {{video.channelTitle}}
-              .column
-                p
-                  | Wrong data? 
-                  a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-                    i.fas.fa-heart
-                    |  fix
-            p {{video.description}}
+                  p.title.is-5 {{video.speaker.name}}
+                  p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}            
+            p.is-size-6 {{video.description}}            
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
