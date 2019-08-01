@@ -41,7 +41,7 @@ import loading from './loading'
 import notify from './notify'
 import query from './query'
 import likes from './likes'
-
+import './styles/main.sass'
 
 
 Vue.use(Vuex)
@@ -88,9 +88,9 @@ const router = new VueRouter({
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },
     { name: 'tag', path: '/tag/:tag', component: Search, props: true },
-    { name: 'search', path: '/', component: Search, 
-      props: (route) => ({ 
-        q: route.query.q, 
+    { name: 'search', path: '/', component: Search,
+      props: (route) => ({
+        q: route.query.q,
         showMyWatched: (route.query.w === 'true'),
         showMyFeed: (route.query.feed === 'true'),
         showFavorites: (route.query.f === 'true') })
@@ -120,5 +120,5 @@ new Vue({
       store.dispatch('auth/autoSignIn', user)
       store.dispatch('videos/initialize', user)
     })
-  }  
+  }
 })

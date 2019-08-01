@@ -19,9 +19,9 @@ module.exports = {
       { from: "src/static" }
     ]),
     new WriteFilePlugin()
-  ],  
+  ],
   module: {
-    rules: [  
+    rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -40,13 +40,27 @@ module.exports = {
         oneOf: [
           {
             resourceQuery: /^\?vue/,
-            use: ['pug-plain-loader'] 
+            use: ['pug-plain-loader']
           },
           {
             use: ['source-loader', 'pug-static-loader']
           }
         ]
-      },          
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader', options: {
+              includePaths: [
+                require('path').resolve(__dirname, 'node_modules/bulma')
+              ]
+            }
+          }
+        ]
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',

@@ -1500,6 +1500,16 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
+bulma@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
+  integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
+
+bulmaswatch@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/bulmaswatch/-/bulmaswatch-0.7.2.tgz#99b05844123dd9dca2cb1f271b54c8bc0c49e421"
+  integrity sha512-qickVpky/vv/PX/G7DVz1UpYPncJIjoxbovVELf48tgZ7Fd8UAzfWLSzniPWHwPt1YAq/UX9CGTtcl0AbxSMYg==
+
 bytebuffer@~5:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/bytebuffer/-/bytebuffer-5.0.1.tgz#582eea4b1a873b6d020a48d58df85f0bba6cfddd"
@@ -4065,6 +4075,7 @@ html-minifier@^3.2.3:
 html-webpack-plugin@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.2.0.tgz#b01abbd723acaaa7b37b6af4492ebda03d9dd37b"
+  integrity sha1-sBq71yOsqqeze2r0SS69oD2d03s=
   dependencies:
     html-minifier "^3.2.3"
     loader-utils "^0.2.16"
