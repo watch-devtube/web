@@ -1,4 +1,4 @@
-import "babel-polyfill"
+import 'babel-polyfill'
 
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -14,19 +14,17 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
 
 import { faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEllipsisV, faTimes, faCheck, faClock, faPaperPlane, faEnvelope, faCircle, faPlus, faMinus, faUser, faPlusCircle, faMinusCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag, faSearch} from '@fortawesome/free-solid-svg-icons'
+import {
+  faEllipsisV, faTimes, faCheck, faClock, faPaperPlane, faEnvelope, faCircle, faPlus, faMinus, faUser,
+  faPlusCircle, faMinusCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag, faSearch
+} from '@fortawesome/free-solid-svg-icons'
 import { faThumbsDown as fasThumbsDown } from '@fortawesome/free-solid-svg-icons/faThumbsDown'
 import { faThumbsUp as fasThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp'
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons/faStar'
 import { faCheckCircle as fasCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle'
 import { faHeart, faUserCircle, faEye, faStar, faThumbsUp, faThumbsDown, faGrinStars, faCheckCircle } from '@fortawesome/free-regular-svg-icons'
-library.add(faEllipsisV, faTimes, faCheck, faPaperPlane, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag, faHeart, faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin, faEye, fasThumbsDown, fasThumbsUp, faGrinStars, faSearch, faCheckCircle, fasCheckCircle, fasStar)
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.component('font-awesome-layers', FontAwesomeLayers)
-Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
-
-import {firebase} from './helpers/firebase'
+import { firebase } from './helpers/firebase'
 
 import App from './App.vue'
 import Watch from './Watch.vue'
@@ -41,8 +39,13 @@ import loading from './loading'
 import notify from './notify'
 import query from './query'
 import likes from './likes'
+import createPersistedState from 'vuex-persistedstate'
 
+library.add(faEllipsisV, faTimes, faCheck, faPaperPlane, faClock, faStar, faEnvelope, faCircle, faPlus, faMinus, faPlusCircle, faUser, faMinusCircle, faThumbsUp, faThumbsDown, faUserCircle, faLanguage, faEdit, faSortAlphaDown, faHashtag, faHeart, faYoutube, faTwitter, faFacebookSquare, faTwitterSquare, faLinkedin, faEye, fasThumbsDown, fasThumbsUp, faGrinStars, faSearch, faCheckCircle, fasCheckCircle, fasStar)
 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-layers', FontAwesomeLayers)
+Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
 
 Vue.use(Vuex)
 Vue.use(InstantSearch)
@@ -68,12 +71,12 @@ Vue.filter('capitalizeIfNeeded', capitalizeIfNeeded)
 
 Vue.mixin({
   methods: {
-    shuffle(a) {
+    shuffle (a) {
       for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
+        [a[i], a[j]] = [a[j], a[i]]
       }
-      return a;
+      return a
     }
   }
 })
@@ -88,24 +91,27 @@ const router = new VueRouter({
     { name: 'speaker', path: '/@:speaker', component: Search, props: true },
     { name: 'channel', path: '/channel/:channel', component: Search, props: true },
     { name: 'tag', path: '/tag/:tag', component: Search, props: true },
-    { name: 'search', path: '/', component: Search, 
-      props: (route) => ({ 
-        q: route.query.q, 
+    {
+      name: 'search',
+      path: '/',
+      component: Search,
+      props: (route) => ({
+        q: route.query.q,
         showMyWatched: (route.query.w === 'true'),
         showMyFeed: (route.query.feed === 'true'),
-        showFavorites: (route.query.f === 'true') })
+        showFavorites: (route.query.f === 'true')
+      })
     }
-  ],
+  ]
 })
 
-import createPersistedState from "vuex-persistedstate"
 const store = new Vuex.Store({
   modules: {
     auth, videos, loading, notify, query, likes
   },
   strict: true,
-  plugins:[
-    createPersistedState({key: 'devtube', paths: ['auth', 'query']})
+  plugins: [
+    createPersistedState({ key: 'devtube', paths: ['auth', 'query'] })
   ]
 })
 
@@ -120,5 +126,5 @@ new Vue({
       store.dispatch('auth/autoSignIn', user)
       store.dispatch('videos/initialize', user)
     })
-  }  
+  }
 })

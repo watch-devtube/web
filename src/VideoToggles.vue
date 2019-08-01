@@ -9,7 +9,7 @@
       font-awesome-icon.has-text-warning(icon="star" v-if="isFavorite(videoId)")
       font-awesome-icon(:icon="['far', 'star']" v-else)
 </template>
-  
+
 <style lang="scss">
 
   .toggles {
@@ -27,9 +27,8 @@
       z-index: 29;
       left: 6px;
       top: 3px;
-      position: absolute;      
+      position: absolute;
     }
-
 
     .video-action {
       font-size: 22px;
@@ -45,18 +44,18 @@
 </style>
 <script>
 
-  import { mapState, mapActions, mapGetters } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
-  export default {
-    props: {
-      videoId: { type: String, required: true }
-    },
-    computed: {
-      ...mapState([ 'videos', 'auth' ]),
-      ...mapGetters('videos', ['isWatched', 'isFavorite']),
-    },
-    methods: {
-      ...mapActions('videos', [ 'toggleWatched', 'toggleFavorite' ])
-    }
+export default {
+  props: {
+    videoId: { type: String, required: true }
+  },
+  computed: {
+    ...mapState([ 'videos', 'auth' ]),
+    ...mapGetters('videos', ['isWatched', 'isFavorite'])
+  },
+  methods: {
+    ...mapActions('videos', [ 'toggleWatched', 'toggleFavorite' ])
   }
+}
 </script>

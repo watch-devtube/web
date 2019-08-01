@@ -8,27 +8,27 @@
       a.navbar-item.is-size-7(v-bind:class="{ 'is-active': query.sortOrder == 'duration' }" @click="sortNow('duration')") Duration
 </template>
 <script>
-  import { mapState, mapActions, mapGetters } from 'vuex'
-  export default {
-    created() {
-      let q = this.$route.query
-      let forceOrder = q.by
-      if (forceOrder) {
-        this.sort(forceOrder)
-        let query = Object.assign({}, q)
-        delete query.by
-        this.$router.replace({ query })
-      }
+import { mapState, mapActions } from 'vuex'
+export default {
+  created () {
+    let q = this.$route.query
+    let forceOrder = q.by
+    if (forceOrder) {
+      this.sort(forceOrder)
+      let query = Object.assign({}, q)
+      delete query.by
+      this.$router.replace({ query })
+    }
+  },
+  computed: {
+    ...mapState([ 'query' ])
+  },
+  methods: {
+    sortNow (order) {
+      this.$parent.hide()
+      this.sort(order)
     },
-    computed: {
-      ...mapState([ 'query' ])
-    },
-    methods: {
-      sortNow: function(order) {
-        this.$parent.hide()
-        this.sort(order)
-      },
-      ...mapActions('query', [ 'sort' ])
-    }    
+    ...mapActions('query', [ 'sort' ])
   }
+}
 </script>

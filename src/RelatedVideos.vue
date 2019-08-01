@@ -10,61 +10,52 @@
   }
 </style>
 <script>
-  import axios from 'axios'
-  import VideoCard from './VideoCard.vue'
-  import { mapState, mapGetters } from 'vuex'
+import axios from 'axios'
+import VideoCard from './VideoCard.vue'
+import { mapGetters } from 'vuex'
 
-  export default {
-    props: {
-      videoId: { type: String },
-      channel: { type: String },
-      speakerTwitter: { type: String },
-      tags: { type: Array, required: false, default: () => [] }
-    },
-    computed: {
-      ...mapGetters('videos', ['watchedIds'])
-    },
-    asyncComputed: {
-      hits() {
+export default {
+  props: {
+    videoId: { type: String },
+    channel: { type: String },
+    speakerTwitter: { type: String },
+    tags: { type: Array, required: false, default: () => [] }
+  },
+  computed: {
+    ...mapGetters('videos', ['watchedIds'])
+  },
+  asyncComputed: {
+    hits () {
+      let watchedIds = this.watchedIds
 
-        let watchedIds = this.watchedIds
-
-        if (!this.videoId) {
-          return []
-        }
-
-        let refinement = 
-            this.tags.length 
-              ? 
-                { 'tags' : { $containsAny: this.tags } }
-              : 
-                this.speakerTwitter 
-                  ? 
-                    { 'speaker.twitter': this.speakerTwitter } 
-                  :
-                    { 'channelTitle' : this.channel }
-
-          
-        return axios.post(`/api/search`, {
-            requests: [
-              {
-                params: {
-                  refinement: refinement,
-                  sortOrder: '-satisfaction',
-                  excludes: watchedIds.concat([this.videoId])
-                }
-              }
-            ]
-          })
-          .then(response => response.data.results[0].hits)
-          .then(hits => this.shuffle(hits).slice(0, 4))
-          .then(hits => {
-            this.$Progress.finish()
-            return hits
-          })
-
+      if (!this.videoId) {
+        return []
       }
-    },
-    components: { VideoCard }
-  };
+
+      let refinement =
+        this.tags.length
+          ? { 'tags': { $containsAny: this.tags } }
+          : this.speakerTwitter
+            ? { 'speaker.twitter': this.speakerTwitter }
+            : { 'channelTitle': this.channel }
+
+      return axios.post(`/api/search`, {
+        requests: [{
+          params: {
+            refinement: refinement,
+            sortOrder: '-satisfaction',
+            excludes: watchedIds.concat([this.videoId])
+          }
+        }]
+      })
+        .then(response => response.data.results[0].hits)
+        .then(hits => this.shuffle(hits).slice(0, 4))
+        .then(hits => {
+          this.$Progress.finish()
+          return hits
+        })
+    }
+  },
+  components: { VideoCard }
+}
 </script>

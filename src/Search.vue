@@ -20,7 +20,7 @@
                   template(slot-scope="props")
                     .notification.overrideVueNotificationsIssue
                       p
-                        | No videos matching your query. Please 
+                        | No videos matching your query. Please
                         a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
                         | .
                 section(v-if="speaker")
@@ -32,33 +32,33 @@
                           template(slot-scope="{ result }")
                             .column.is-flex-tablet.is-4-widescreen.shrinkIfEmpty
                               VideoCard(
-                                :tags="result.tags" 
+                                :tags="result.tags"
                                 :isFeatured="result.featured"
-                                :speaker="result.speaker" 
-                                :creationDate="result.creationDate" 
-                                :recordingDate="result.recordingDate" 
-                                :duration="result.duration" 
-                                :views="result.views" 
+                                :speaker="result.speaker"
+                                :creationDate="result.creationDate"
+                                :recordingDate="result.recordingDate"
+                                :duration="result.duration"
+                                :views="result.views"
                                 :likes="result.likes + (result.dtLikes || 0)"
                                 :dislikes="result.dislikes + (result.dtDislikes || 0)"
-                                :title="result.title" 
-                                :id="result.objectID" 
-                                :channel="result.channelTitle")                    
+                                :title="result.title"
+                                :id="result.objectID"
+                                :channel="result.channelTitle")
                 ais-results#videos.columns.is-multiline.is-mobile(v-if="!speaker")
                   template(slot-scope="{ result }")
                     .column.shrinkIfEmpty
                       VideoCard(
-                        :tags="result.tags" 
+                        :tags="result.tags"
                         :isFeatured="result.featured"
-                        :speaker="result.speaker" 
-                        :creationDate="result.creationDate" 
-                        :recordingDate="result.recordingDate" 
-                        :duration="result.duration" 
-                        :views="result.views" 
+                        :speaker="result.speaker"
+                        :creationDate="result.creationDate"
+                        :recordingDate="result.recordingDate"
+                        :duration="result.duration"
+                        :views="result.views"
                         :likes="result.likes + (result.dtLikes || 0)"
                         :dislikes="result.dislikes + (result.dtDislikes || 0)"
-                        :title="result.title" 
-                        :id="result.objectID" 
+                        :title="result.title"
+                        :id="result.objectID"
                         :channel="result.channelTitle")
       section.section
         .container
@@ -71,7 +71,7 @@
 </template>
 <script>
 import { createFromAlgoliaClient } from 'vue-instantsearch'
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 import VideoCard from './VideoCard.vue'
 import SpeakerStats from './SpeakerStats.vue'
@@ -79,11 +79,11 @@ import NavBar from './NavBar.vue'
 import Sorting from './Sorting.vue'
 import ExpandableTags from './ExpandableTags.vue'
 
-export default { 
+export default {
   props: {
     q: { type: String, default: '' },
     showMyWatched: { type: Boolean, default: false },
-    showMyFeed: { type: Boolean, default: false },    
+    showMyFeed: { type: Boolean, default: false },
     showFavorites: { type: Boolean, default: false },
     speaker: { type: String, required: false },
     channel: { type: String, required: false },
@@ -99,20 +99,20 @@ export default {
     '$route': 'fetch',
     '$store.state.query.sortOrder': 'syncQuery',
     '$store.state.query.lang': 'syncQuery'
-  },  
-  created() {
+  },
+  created () {
     let that = this
 
     let fastr = {
-      search(requests) {
+      search (requests) {
         that.$Progress.start()
         that.loading = true
         return fetch('/api/search', {
           method: 'post',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ requests }),
+          body: JSON.stringify({ requests })
         }).then(res => {
           let json = res.json()
           that.$Progress.finish()
@@ -122,9 +122,8 @@ export default {
           that.stats = json.stats
           return json
         })
-      },
-      addAlgoliaAgent(agent) {}
-    };
+      }
+    }
 
     let searchStore = createFromAlgoliaClient(fastr)
     this.searchStore = searchStore
@@ -138,48 +137,47 @@ export default {
     ...mapGetters('loading', ['completed'])
   },
   methods: {
-    scrollTop() {
+    scrollTop () {
       window.scrollTo(0, 0)
     },
-    syncQuery() {
+    syncQuery () {
       this.searchStore.queryParameters = this.query
     },
-    fetch() {
-
+    fetch () {
       this.searchStore.stop()
 
-      // ## start 
+      // ## start
       // when seach query is present, tag clicking must reset it
       this.searchStore.query = this.q
       // ## end
 
-      this.searchStore.queryParameters = { refinement : undefined }
+      this.searchStore.queryParameters = { refinement: undefined }
 
       let watchedVideoIds = this.watchedIds
       let favoriteVideoIds = this.favoriteIds
 
       if (this.showMyWatched) {
-        this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: watchedVideoIds } } }
+        this.searchStore.queryParameters = { refinement: { 'objectID': { $in: watchedVideoIds } } }
         this.searchStore.queryParameters = { excludes: [] }
       } else {
         this.searchStore.queryParameters = { excludes: watchedVideoIds }
       }
 
       if (this.showFavorites) {
-        this.searchStore.queryParameters = { refinement: { 'objectID' : { $in: favoriteVideoIds } } }
+        this.searchStore.queryParameters = { refinement: { 'objectID': { $in: favoriteVideoIds } } }
         this.searchStore.queryParameters = { excludes: [] }
       }
 
       if (this.showMyFeed) {
         let subscriptions = this.videos.subscriptions
 
-        let subscribedTags = subscriptions.filter(sub => sub.type == 'tag').map(sub => sub.topic)
-        let subscribedChannels = subscriptions.filter(sub => sub.type == 'channel').map(sub => sub.topic)
-        let subscribedSpeakers = subscriptions.filter(sub => sub.type == 'speaker').map(sub => sub.topic)
+        let subscribedTags = subscriptions.filter(sub => sub.type === 'tag').map(sub => sub.topic)
+        let subscribedChannels = subscriptions.filter(sub => sub.type === 'channel').map(sub => sub.topic)
+        let subscribedSpeakers = subscriptions.filter(sub => sub.type === 'speaker').map(sub => sub.topic)
 
-        let myFeedQuery = { 
+        let myFeedQuery = {
           $or: [
-            { 'tags': { $containsAny: subscribedTags} },
+            { 'tags': { $containsAny: subscribedTags } },
             { 'channelTitle': { $in: subscribedChannels } },
             { 'speaker.twitter': { $in: subscribedSpeakers } }
           ]
@@ -190,24 +188,23 @@ export default {
       }
 
       if (this.speaker) {
-        this.searchStore.queryParameters = { refinement: { 'speaker.twitter' : this.speaker } }
+        this.searchStore.queryParameters = { refinement: { 'speaker.twitter': this.speaker } }
       }
 
       if (this.tag) {
-        this.searchStore.queryParameters = { refinement: { 'tags' : { $contains: this.tag } } }
+        this.searchStore.queryParameters = { refinement: { 'tags': { $contains: this.tag } } }
       }
       if (this.channel) {
-        this.searchStore.queryParameters = { refinement: { 'channelTitle' : this.channel } }
+        this.searchStore.queryParameters = { refinement: { 'channelTitle': this.channel } }
       }
-
 
       this.searchStore.start()
       this.searchStore.refresh()
     }
   },
-  components: { 
+  components: {
     ExpandableTags,
-    VideoCard, 
+    VideoCard,
     Sorting,
     NavBar,
     SpeakerStats

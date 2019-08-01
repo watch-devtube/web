@@ -3,18 +3,18 @@
     header
       .container
         nav.level(style="min-height: 80px")
-          .level-item.has-text-white.has-text-centered 
+          .level-item.has-text-white.has-text-centered
             font-awesome-icon(:icon="['far', 'heart']").has-text-danger
             | &nbsp;Contributors
     .section.container
       .content
-        p 
-          | Let's build the best tech video hub together. 
+        p
+          | Let's build the best tech video hub together.
           a(href="https://github.com/watch-devtube/contrib" target="_blank") Contributing is simple!
-        p 
+        p
           font-awesome-icon(:icon="['far', 'heart']").has-text-danger
           |   5000 karma points – we'll thank you on Twitter
-        p 
+        p
           font-awesome-icon(:icon="['far', 'heart']").has-text-danger
           |   10000 karma points — you can make any good video featured on the front page for a week.
       .columns.is-multiline.is-mobile
@@ -27,7 +27,7 @@
                     img.avatar(:src="contributor.avatar")
                 .media-content
                   p.title.is-6.is-capitalized {{contributor.name}}
-                  p.subtitle.is-7 
+                  p.subtitle.is-7
                     a(:href="'https://github.com/' + contributor.login" target="_blank") @{{contributor.login}}
               nav.level.is-mobile
                 .level-item.has-text-centered
@@ -46,7 +46,7 @@
                   .item
                     p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'heart']")
                     p.title.is-size-7 {{contributor.speakerContributions}}
-                .level-item.has-text-centered                              
+                .level-item.has-text-centered
                   .item
                     p.heading.is-capitalized: font-awesome-icon(:icon="['fas', 'hashtag']")
                     p.title.is-size-7 {{contributor.tagContributions}}
@@ -74,26 +74,26 @@
   }
 </style>
 <script>
-  import NightMode from './NightMode.vue'
-  import ContributorRank from './ContributorRank.vue'
-  export default {
-    computed: {
-      contributors() {
-        return window.board.contributors
-          .map(c => Object.assign(c, { karma : this.karma(c) }))
-          .sort((it, that) => that.karma - it.karma)
-      }
-    },
-    methods: {
-      karma(contributor) {
-        return (
-          contributor.tagContributions + 
-          contributor.speakerContributions + 
-          contributor.channelContributions +
-          contributor.videosUpdated
-        ) * 10
-      }
-    },
-    components: { NightMode, ContributorRank }
-  }
+import NightMode from './NightMode.vue'
+import ContributorRank from './ContributorRank.vue'
+export default {
+  computed: {
+    contributors () {
+      return window.board.contributors
+        .map(c => Object.assign(c, { karma: this.karma(c) }))
+        .sort((it, that) => that.karma - it.karma)
+    }
+  },
+  methods: {
+    karma (contributor) {
+      return (
+        contributor.tagContributions +
+        contributor.speakerContributions +
+        contributor.channelContributions +
+        contributor.videosUpdated
+      ) * 10
+    }
+  },
+  components: { NightMode, ContributorRank }
+}
 </script>

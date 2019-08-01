@@ -16,24 +16,24 @@ export default {
     waiting: true
   }),
 
-  created() {
+  created () {
     this.timer = setTimeout(() => {
       this.waiting = false
     }, this.from - Date.now() + this.wait)
   },
 
-  destroyed() {
+  destroyed () {
     clearTimeout(this.timer)
   },
 
-  render(h) {
+  render (h) {
     return h(
       'div',
       this.waiting ? this.$slots.loading || null : this.$slots.default
     )
   },
 
-  install(Vue, name) {
+  install (Vue, name) {
     Vue.component(name || 'Delay', this)
   }
 }

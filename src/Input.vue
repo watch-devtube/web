@@ -10,17 +10,17 @@ import debounce from 'v-debounce'
 
 export default {
   directives: { debounce },
-  data() {
+  data () {
     return {
       blockClassName: 'ais-input'
     }
   },
   computed: {
     query: {
-      get() {
+      get () {
         return this.$route.query.q
       },
-      set(value) {
+      set (value) {
         this.$router.push({
           name: 'search',
           query: { q: value }

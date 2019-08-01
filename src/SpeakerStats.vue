@@ -33,9 +33,9 @@
             <p class="heading">Views</p>
             <p>{{stats.views | kilo}}</p>
           </div>
-        </div>  
+        </div>
       br
-      .subscriptions(v-if="auth.user") 
+      .subscriptions(v-if="auth.user")
         a.button(v-if="hasSubscription(subscription(twt))" @click="toggleSubscription(subscription(twt))") Unsubscribe
         a.button(v-else @click="toggleSubscription(subscription(twt))") Subscribe
       a.button(v-else @click="requreLogin()") Subscribe
@@ -50,36 +50,37 @@
 
 </style>
 <script>
-  import { mapState, mapActions, mapGetters } from 'vuex'
-  import TalksChart from './TalksChart.vue'
-  import axios from 'axios'
-  export default {
-    props: {
-      twt: { type: String, required: true },
-      stats: { type: Object, required: false }
-    },
-    created() {
-      this.profile = window.speaker
-    },
-    computed: {
-      ...mapState([ 'auth' ]),
-      ...mapGetters('videos', ['hasSubscription']),
-    },
-    asyncComputed: {
-      profile() {
-        if (this.twt)
-          return window.speaker || axios.get(`https://dossier.dev.tube/twt/` + this.twt).then(response => response.data)
+import { mapState, mapActions, mapGetters } from 'vuex'
+import TalksChart from './TalksChart.vue'
+import axios from 'axios'
+export default {
+  props: {
+    twt: { type: String, required: true },
+    stats: { type: Object, required: false }
+  },
+  created () {
+    this.profile = window.speaker
+  },
+  computed: {
+    ...mapState([ 'auth' ]),
+    ...mapGetters('videos', ['hasSubscription'])
+  },
+  asyncComputed: {
+    profile () {
+      if (this.twt) {
+        return window.speaker || axios.get(`https://dossier.dev.tube/twt/` + this.twt).then(response => response.data)
       }
+    }
+  },
+  methods: {
+    requreLogin () {
+      this.$store.dispatch('notify/error', { text: 'You have to login first.', title: '', duration: 3000 })
     },
-    methods: {
-      requreLogin() {
-        this.$store.dispatch('notify/error', { text: 'You have to login first.', title: '', duration: 3000 })
-      },
-      subscription(item) {
-        return { topic : item, type : 'speaker' }
-      },      
-      ...mapActions('videos', [ 'toggleSubscription']),
+    subscription (item) {
+      return { topic: item, type: 'speaker' }
     },
-    components: { TalksChart }
-  }
+    ...mapActions('videos', [ 'toggleSubscription' ])
+  },
+  components: { TalksChart }
+}
 </script>

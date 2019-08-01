@@ -5,7 +5,7 @@
         a(:href="'/video' + '/' + id")
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             .is-overlay
-            .ttl.is-capitalized.is-size-7 
+            .ttl.is-capitalized.is-size-7
               .image.is-32x32(v-if="speaker" :title="speaker.name")
                 a.is-lowercase(:href="'/@' + speaker.twitter")
                   img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter + '/small'" :alt="speaker.name + ' avatar'")
@@ -15,7 +15,7 @@
             .level-item.has-text-centered
               div
                 p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'thumbs-up']")
-                p.title.is-size-7 {{likes | kilo}} 
+                p.title.is-size-7 {{likes | kilo}}
             .level-item.has-text-centered
               div
                 p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'thumbs-down']")
@@ -25,13 +25,13 @@
                 p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'eye']")
                 p.title.is-size-7 {{views | kilo}}
             .level-item.has-text-centered
-              div                
+              div
                 p.heading.is-capitalized Length
                 p.title.is-size-7 {{duration | duration}}
             .level-item.has-text-centered
-              div                
+              div
                 p.heading.is-capitalized Date
-                p.title.is-size-7 {{recordingDate | published}}                
+                p.title.is-size-7 {{recordingDate | published}}
           Tags(:tags="tags" :isNew="isNew" :isFeatured="isFeatured" :channel="channel")
 </template>
 <style lang="scss">
@@ -40,7 +40,6 @@
 
     min-width: 240px;
     // max-width: 400px;
-    
 
     .avatar {
       border-radius: 50% !important;
@@ -59,7 +58,7 @@
         width: 80%;
         left: 20%;
         background-color:#1f2d3b;
-        
+
         color: white;
         padding: 5px 0 5px 20px;
         padding-right: 20px;
@@ -73,8 +72,8 @@
         .image:hover {
           animation: pulse 1s infinite linear;
         }
-    }       
-      } 
+    }
+      }
 
   }
 
@@ -89,59 +88,59 @@
   }
 </style>
 <script>
-  import Tags from './Tags.vue'
-  import VideoToggles from './VideoToggles.vue'
-  import dayjs from 'dayjs'
-  import { mapState, mapActions, mapGetters } from 'vuex'
+import Tags from './Tags.vue'
+import VideoToggles from './VideoToggles.vue'
+import dayjs from 'dayjs'
+import { mapGetters } from 'vuex'
 
-  export default {
-    props: { 
-      id: { type: String, required: true },
-      title: { type: String, required: true },
-      isFeatured: { type: Boolean, default: false },
-      channel: { type: String, required: true },
-      likes: { type: Number, required: true },
-      dislikes: { type: Number, required: true },
-      views: { type: Number, default: 0 },
-      duration: { type: Number, required: true },
-      recordingDate: { type: Number, required: true },
-      creationDate: { type: Number, required: true },
-      tags: { type: Array, required: false },
-      speaker: {
-        required: false,
-        name: {
-          type: String
-        },
-        twitter: {
-          type: String
-        }        
-      }
-    },
-    data: function() {
-      return {
-        visible: true
-      }
-    },
-    computed: {
-      isNew() {
-        let today = dayjs()
-        let videoCreated = dayjs(this.creationDate * 1000)
-        let videoAgeInDays = today.diff(videoCreated, 'days')
-        return videoAgeInDays <= 7
+export default {
+  props: {
+    id: { type: String, required: true },
+    title: { type: String, required: true },
+    isFeatured: { type: Boolean, default: false },
+    channel: { type: String, required: true },
+    likes: { type: Number, required: true },
+    dislikes: { type: Number, required: true },
+    views: { type: Number, default: 0 },
+    duration: { type: Number, required: true },
+    recordingDate: { type: Number, required: true },
+    creationDate: { type: Number, required: true },
+    tags: { type: Array, required: false },
+    speaker: {
+      required: false,
+      name: {
+        type: String
       },
-      ...mapGetters('videos', ['isWatched']),
+      twitter: {
+        type: String
+      }
+    }
+  },
+  data () {
+    return {
+      visible: true
+    }
+  },
+  computed: {
+    isNew () {
+      let today = dayjs()
+      let videoCreated = dayjs(this.creationDate * 1000)
+      let videoAgeInDays = today.diff(videoCreated, 'days')
+      return videoAgeInDays <= 7
     },
-    methods: {
-      watch: function(videoId) {
-        this.$router.push({
-          name: 'watch',
-          params: { id: videoId }
-        });
-      },
-      refineChannel(channel) {
-        this.$router.push({ name: 'channel', params: { channel: channel } } )
-      }      
-    },    
-    components: { Tags, VideoToggles }
-  };
+    ...mapGetters('videos', ['isWatched'])
+  },
+  methods: {
+    watch (videoId) {
+      this.$router.push({
+        name: 'watch',
+        params: { id: videoId }
+      })
+    },
+    refineChannel (channel) {
+      this.$router.push({ name: 'channel', params: { channel: channel } })
+    }
+  },
+  components: { Tags, VideoToggles }
+}
 </script>

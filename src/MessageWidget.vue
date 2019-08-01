@@ -8,7 +8,7 @@
         .content(v-html="ad.message")
 </template>
 <style lang="scss">
-  .message-widget {  
+  .message-widget {
       opacity: 0.95;
       border-radius: 5px;
       width: 320px;
@@ -17,7 +17,7 @@
       bottom: 20px;
       z-index: 40;
       box-shadow: 2px 10px 40px rgba(22,20,19,0.4);
-    
+
     .buttons {
       position: absolute;
       right: 10px;
@@ -35,7 +35,7 @@
       position: absolute;
       left: -40px;
       top: 20px;
-      border: 3px solid #fff;      
+      border: 3px solid #fff;
       width: 60px;
       border-radius: 50%;
     }
@@ -47,39 +47,38 @@ import axios from 'axios'
 import Delay from './Delay'
 
 export default {
-    props: { 
-      videoId: { type: String, required: true },
-      channel: { type: String, required: true },
-      speakerTwitter: { type: String, required: false, default: '' },
-      tags: { required: false, default: function() { return [] } }
-    },  
-    data: function() {
-      return {
-        ad: ''
-      }
+  props: {
+    videoId: { type: String, required: true },
+    channel: { type: String, required: true },
+    speakerTwitter: { type: String, required: false, default: '' },
+    tags: { required: false, default () { return [] } }
+  },
+  data () {
+    return {
+      ad: ''
+    }
+  },
+  created () {
+    this.fetch()
+  },
+  watch: {
+    '$route': 'fetch'
+  },
+  methods: {
+    close () {
+      this.ad = undefined
     },
-    created() {
-      this.fetch()
-    },
-    watch: {
-      '$route': 'fetch'
-    },    
-    methods: {
-      close() {
-        this.ad = undefined
-      },
-      fetch() {
+    fetch () {
+      let textForMatching = `${this.videoId}/${this.channel}/@${this.speakerTwitter}/${this.tags.map(tag => '#' + tag + '#')}`
 
-        let textForMatching = `${this.videoId}/${this.channel}/@${this.speakerTwitter}/${this.tags.map(tag => '#' + tag + '#')}`
-
-        axios.get(`//raw.githubusercontent.com/watch-devtube/messages/master/messages.json?r=${Math.random()}`
-        ).then(response => {
-          this.ad = response.data.reverse().find(it => new RegExp(it.pattern, 'i').test(textForMatching))
-        }).catch(error => {
-        })
-      }      
-    },
-    components: { Delay }
+      axios.get(`//raw.githubusercontent.com/watch-devtube/messages/master/messages.json?r=${Math.random()}`
+      ).then(response => {
+        this.ad = response.data.reverse().find(it => new RegExp(it.pattern, 'i').test(textForMatching))
+      }).catch(_ => {
+      })
+    }
+  },
+  components: { Delay }
 }
 
 </script>

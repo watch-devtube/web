@@ -1,4 +1,4 @@
-import {firestore} from '../helpers/firebase'
+import { firestore } from '../helpers/firebase'
 
 let state = {
   subscriptions: [],
@@ -8,73 +8,71 @@ let state = {
 }
 
 let userVideos = (id) => {
-  return firestore.collection('videos').doc(id)  
+  return firestore.collection('videos').doc(id)
 }
 
 let actions = {
-  initialize({commit}, user) {
+  initialize ({ commit }, user) {
     if (user) {
       userVideos(user.uid).get()
         .then(snapshot => { commit('init', snapshot.data()) })
-        .catch(error => { commit("notify/error", { error: error }, { root: true })})
+        .catch(error => { commit('notify/error', { error: error }, { root: true }) })
     } else {
       commit('init', { watched: [], favorites: [] })
     }
   },
-  toggleSubscription({commit, getters, rootState}, sub) {
-    let toggledSubscription = it => it.topic == sub.topic && it.type == sub.type
+  toggleSubscription ({ commit, getters, rootState }, sub) {
+    let toggledSubscription = it => it.topic === sub.topic && it.type === sub.type
     let isSubscribed = getters.hasSubscription(sub)
 
-    let newSubscriptions = isSubscribed 
-      ? state.subscriptions.filter(it => !toggledSubscription(it)) 
+    let newSubscriptions = isSubscribed
+      ? state.subscriptions.filter(it => !toggledSubscription(it))
       : state.subscriptions.concat([sub])
 
-    userVideos(rootState.auth.user.uid).set({subscriptions: newSubscriptions, favorites: state.favorites, watched : state.watched})
-    .then(ok => { commit('changeSubscriptions', newSubscriptions) })
-    .catch(error => { commit("notify/error", { error: error }, { root: true }) })
+    userVideos(rootState.auth.user.uid).set({ subscriptions: newSubscriptions, favorites: state.favorites, watched: state.watched })
+      .then(ok => { commit('changeSubscriptions', newSubscriptions) })
+      .catch(error => { commit('notify/error', { error: error }, { root: true }) })
   },
-  toggleFavorite({commit, state, rootState}, videoId) {
-   
+  toggleFavorite ({ commit, state, rootState }, videoId) {
     let video = {
       videoId: videoId,
       timestamp: new Date().getTime()
     }
 
-    let isFavorited = state.favorites.some(it => it.videoId == videoId)
-    let newVideos = isFavorited 
-      ? state.favorites.filter(it => it.videoId != videoId) 
+    let isFavorited = state.favorites.some(it => it.videoId === videoId)
+    let newVideos = isFavorited
+      ? state.favorites.filter(it => it.videoId !== videoId)
       : state.favorites.concat([video])
-      
-    userVideos(rootState.auth.user.uid).set({favorites: newVideos, watched : state.watched, subscriptions: state.subscriptions})
-      .then(ok => { commit('changeFavorites', newVideos) })
-      .catch(error => { commit("notify/error", { error: error }, { root: true }) })
-  },
-  toggleWatched({commit, state, rootState}, videoId) {
 
+    userVideos(rootState.auth.user.uid).set({ favorites: newVideos, watched: state.watched, subscriptions: state.subscriptions })
+      .then(ok => { commit('changeFavorites', newVideos) })
+      .catch(error => { commit('notify/error', { error: error }, { root: true }) })
+  },
+  toggleWatched ({ commit, state, rootState }, videoId) {
     let video = {
       videoId: videoId,
       timestamp: new Date().getTime()
     }
 
-    let isWatched = state.watched.some(it => it.videoId == videoId)
-    let newVideos = isWatched 
-      ? state.watched.filter(it => it.videoId != videoId) 
+    let isWatched = state.watched.some(it => it.videoId === videoId)
+    let newVideos = isWatched
+      ? state.watched.filter(it => it.videoId !== videoId)
       : state.watched.concat([video])
 
-    userVideos(rootState.auth.user.uid).set({watched: newVideos, favorites: state.favorites, subscriptions: state.subscriptions})
+    userVideos(rootState.auth.user.uid).set({ watched: newVideos, favorites: state.favorites, subscriptions: state.subscriptions })
       .then(ok => { commit('changeWatched', newVideos) })
-      .catch(error => { commit("notify/error", { error: error }, { root: true }) })
+      .catch(error => { commit('notify/error', { error: error }, { root: true }) })
   }
 }
 
 let getters = {
-  hasSubscription: state => (sub) => state.subscriptions.some(it => it.topic == sub.topic && it.type == sub.type),
+  hasSubscription: state => (sub) => state.subscriptions.some(it => it.topic === sub.topic && it.type === sub.type),
   hasSubscriptions: (state) => state.subscriptions.length > 0,
-  isWatched: state => videoId => state.watched.some(item => item.videoId == videoId),
-  isFavorite: state => videoId => state.favorites.some(item => item.videoId == videoId),
+  isWatched: state => videoId => state.watched.some(item => item.videoId === videoId),
+  isFavorite: state => videoId => state.favorites.some(item => item.videoId === videoId),
 
-  watchedIds: state => state.watched.map(video => video.videoId).filter(video => video != undefined),
-  favoriteIds: state => state.favorites.map(video => video.videoId).filter(video => video != undefined),
+  watchedIds: state => state.watched.map(video => video.videoId).filter(video => video !== undefined),
+  favoriteIds: state => state.favorites.map(video => video.videoId).filter(video => video !== undefined),
 
   watchedCount: (state, getters) => getters.watchedIds.length,
   favoriteCount: (state, getters) => getters.favoriteIds.length
@@ -100,7 +98,7 @@ let mutations = {
   },
   changeSubscriptions: (state, subscriptions) => {
     state.subscriptions = subscriptions
-  }  
+  }
 }
 
 export default {

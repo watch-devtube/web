@@ -18,7 +18,7 @@ export const duration = it => {
   const date = new Date(it * 1000)
   const hours = Math.floor(it / 3600)
   const minutes = date.getUTCMinutes()
-  return (hours ? `${hours}h `: '') + (minutes ? `${minutes}m` : '')
+  return (hours ? `${hours}h ` : '') + (minutes ? `${minutes}m` : '')
 }
 
 export const dateFmt = it => {
@@ -32,41 +32,41 @@ export const durationFull = it => {
   if (!it) {
     return it
   }
-  
+
   const date = new Date(it * 1000)
   const hours = Math.floor(it / 3600)
   const minutes = date.getUTCMinutes()
-  return (hours ? `${hours} hours`: `${minutes} minutes`)
+  return (hours ? `${hours} hours` : `${minutes} minutes`)
 }
 
 export const noemoji = it => {
   if (!it) {
     return it
-  }  
+  }
   return it.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
 }
 
-export const capitalizeIfNeeded = (it) => { 
+export const capitalizeIfNeeded = (it) => {
   let tags = [
-    "iOS", 
-    "IoT", 
-    "DI", 
-    "TDD", 
-    "GraphQL", 
-    "BDD", 
-    "PHP", 
-    ".NET", 
-    "DevOps", 
-    "ML", 
-    "HTML5", 
-    "API",
-    "AWS",
-    "RxJava",
-    "CSS",
-    "REST"
+    'iOS',
+    'IoT',
+    'DI',
+    'TDD',
+    'GraphQL',
+    'BDD',
+    'PHP',
+    '.NET',
+    'DevOps',
+    'ML',
+    'HTML5',
+    'API',
+    'AWS',
+    'RxJava',
+    'CSS',
+    'REST'
   ]
-  
-  let noCapitalizeTag = tags.find(tag => new RegExp(`^${tag}$`, "i").test(it))
+
+  let noCapitalizeTag = tags.find(tag => new RegExp(`^${tag}$`, 'i').test(it))
   return noCapitalizeTag || capitalize(it)
 }
 

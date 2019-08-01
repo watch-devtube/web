@@ -1,4 +1,4 @@
-import {firebase} from '../helpers/firebase'
+import { firebase } from '../helpers/firebase'
 
 let authProviders = {
   google: {
@@ -10,7 +10,7 @@ let authProviders = {
   twitter: {
     name: firebase.auth.TwitterAuthProvider
   }
-};
+}
 
 let state = {
   loading: true,
@@ -18,25 +18,23 @@ let state = {
   error: undefined
 }
 
-let getters = {
-  
-}
+let getters = {}
 
 let actions = {
-  loginRequired({commit}) {
-    commit("notify/error", { error: 'Login required.' }, { root: true })
+  loginRequired ({ commit }) {
+    commit('notify/error', { error: 'Login required.' }, { root: true })
   },
-  clearError ({commit}) {
+  clearError ({ commit }) {
     commit('clearError')
   },
-  setError ({commit}, payload) {
+  setError ({ commit }, payload) {
     commit('setError', payload)
-  },  
-  signOut() {
+  },
+  signOut () {
     firebase.auth().signOut()
     location.reload()
   },
-  autoSignIn ({commit}, payload) {
+  autoSignIn ({ commit }, payload) {
     if (payload) {
       payload.getIdToken().then(token => {
         commit('setUser', {
@@ -51,22 +49,20 @@ let actions = {
     } else {
       commit('setUser', undefined)
     }
-
-  },  
-  signIn({commit}, providerName) {
+  },
+  signIn ({ commit }, providerName) {
     commit('clearError')
     let providerInfo = authProviders[providerName]
     let provider = new (providerInfo.name)()
     firebase.auth().signInWithPopup(provider)
       .then(user => location.reload())
       .catch(error => {
-          if (error.code == "auth/popup-closed-by-user") {
-            return
-          }
-          commit('setError', error)
-          commit("notify/error", { error: error }, { root: true })
+        if (error.code === 'auth/popup-closed-by-user') {
+          return
         }
-      )
+        commit('setError', error)
+        commit('notify/error', { error: error }, { root: true })
+      })
   }
 }
 
@@ -82,7 +78,7 @@ let mutations = {
   clearError (state) {
     state.error = null
     state.loading = false
-  }  
+  }
 }
 
 export default {

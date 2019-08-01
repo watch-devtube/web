@@ -14,12 +14,12 @@
     0% { opacity: 1; }
     50% { opacity: 0.3; }
     100% { opacity: 1; }
-  }  
+  }
 
   header {
     padding: 10px;
   }
-  
+
   .shrinkIfEmpty:empty {
     display: none !important
   }
@@ -36,33 +36,33 @@
   }
 </style>
 <script>
-  import NavBar from './NavBar.vue'
-  import Sorting from './Sorting.vue'
-  import Lang from './LangFilter.vue'
-  import { mapState, mapGetters, mapMutations } from 'vuex'
-  
-  export default {     
-    computed: {
-     ...mapGetters('loading', ['completed']),
-     ...mapState({show: state => state.notify.show})
-    },
-    watch: {
-      show() {
-        if (this.show) {
-            this.$notify({
-                title: this.$store.state.notify.title,
-                text: this.$store.state.notify.text,
-                type: this.$store.state.notify.type,
-                duration: this.$store.state.notify.duration,
-                group: 'notification'
-            })
-        }
-        this.disableNotify()
+import NavBar from './NavBar.vue'
+import Sorting from './Sorting.vue'
+import Lang from './LangFilter.vue'
+import { mapState, mapGetters, mapMutations } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters('loading', ['completed']),
+    ...mapState({ show: state => state.notify.show })
+  },
+  watch: {
+    show () {
+      if (this.show) {
+        this.$notify({
+          title: this.$store.state.notify.title,
+          text: this.$store.state.notify.text,
+          type: this.$store.state.notify.type,
+          duration: this.$store.state.notify.duration,
+          group: 'notification'
+        })
       }
-    }, 
-    methods: {
-      ...mapMutations('notify', ['disableNotify'])
-    },
-    components: { NavBar, Sorting, Lang }
-  }
+      this.disableNotify()
+    }
+  },
+  methods: {
+    ...mapMutations('notify', ['disableNotify'])
+  },
+  components: { NavBar, Sorting, Lang }
+}
 </script>

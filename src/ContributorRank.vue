@@ -6,7 +6,7 @@
       strong &nbsp;{{karma}}
 </template>
 <script>
-export default { 
+export default {
   props: {
     karma: { type: Number, required: true }
   }
