@@ -5,11 +5,12 @@
 <script>
 export default {
   mounted() {
+    this.theme = localStorage.getItem('theme') || 'day'
     this.toggle()
   },
   data() {
     return {
-      theme: localStorage.getItem('theme') || 'day'
+      theme: ''
     }
   },
   methods: {
