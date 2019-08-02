@@ -41,7 +41,6 @@ import loading from './loading'
 import notify from './notify'
 import query from './query'
 import likes from './likes'
-import './styles/main.sass'
 
 
 Vue.use(Vuex)

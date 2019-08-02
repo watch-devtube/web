@@ -5,9 +5,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const dest = path.resolve(__dirname, './dist')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: './src/entry-client.js',
+  entry: {
+    app: ['./src/styles/main.sass', './src/entry-client.js']
+  },
   output: {
     path: dest,
     publicPath: '/',
@@ -18,7 +21,12 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: "src/static" }
     ]),
-    new WriteFilePlugin()
+    new WriteFilePlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+      ignoreOrder: false
+    })
   ],
   module: {
     rules: [
@@ -50,13 +58,34 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          'vue-style-loader',
-          'css-loader',
           {
-            loader: 'sass-loader', options: {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: false,
+              publicPath: 'src/static'
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
+              importLoaders: 2
+            }
+          },
+          // {
+          //   loader: 'postcss-loader',
+          //   options: {
+          //     sourceMap: process.env.NODE_ENV !== 'production'
+          //   }
+          // },
+          {
+            loader: 'sass-loader',
+            options: {
               includePaths: [
                 require('path').resolve(__dirname, 'node_modules/bulma')
-              ]
+              ],
+              sourceMap: process.env.NODE_ENV !== 'production',
+              indentedSyntax: true
             }
           }
         ]
@@ -78,7 +107,7 @@ module.exports = {
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-    },
+    }
   },
   devServer: {
     historyApiFallback: false
