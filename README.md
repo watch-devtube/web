@@ -2,11 +2,9 @@
 
 # Dev.Tube
 
-> Hi! I am Dev.Tube – the place where developer videos live.
+> Dev.Tube is where all developer videos live.
 
 ## How to run the app locally?
-
-⚠️ While we are working on creating integration mocks, local dev mode is unavailable.
 
 This web app comprises of `Vue` client app and a slim `node` server app, through which the client app is served.
 
