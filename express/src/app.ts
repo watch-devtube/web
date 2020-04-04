@@ -127,8 +127,7 @@ async function proxy(req: Request, res: Response) {
   } else if (req.path.startsWith("/contributors")) {
     indexHtml(res, {
       title: 'DevTube – Community and Contributors',
-      description: 'Let\'s build the best tech video hub together!',
-      board: fs.readFileSync(`${dataDir}/board.json`, 'utf8')
+      description: 'Let\'s build the best tech video hub together!'
     })
   } else if (req.path.startsWith("/brownbags/")) {
     let objectID = req.path.split('/')[2]

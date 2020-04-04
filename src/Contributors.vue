@@ -74,14 +74,19 @@
   }
 </style>
 <script>
+  import axios from 'axios'
   import NightMode from './NightMode.vue'
   import ContributorRank from './ContributorRank.vue'
   export default {
-    computed: {
+    asyncComputed: {
       contributors() {
-        return window.board.contributors
-          .map(c => Object.assign(c, { karma : this.karma(c) }))
-          .sort((it, that) => that.karma - it.karma)
+        return axios
+          .get('https://storage.googleapis.com/dev-tube-index/board.json')
+          .then(({data}) => data
+                            .contributors
+                            .map(it => ({...it, karma : this.karma(it) }))
+                            .sort((it, that) => that.karma - it.karma)
+          )
       }
     },
     methods: {
