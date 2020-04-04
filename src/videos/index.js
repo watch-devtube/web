@@ -1,4 +1,4 @@
-import {firestore} from '../helpers/firebase'
+import { firestore } from '../helpers/firebase'
 
 let state = {
   subscriptions: [],

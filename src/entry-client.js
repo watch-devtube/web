@@ -38,11 +38,10 @@ import { flatten, duration, kilo, noemoji, truncate, published, dateFmt, capital
 import auth from './auth'
 import videos from './videos'
 import loading from './loading'
+import karma from './karma'
 import notify from './notify'
 import query from './query'
 import likes from './likes'
-
-
 
 Vue.use(Vuex)
 Vue.use(InstantSearch)
@@ -101,7 +100,7 @@ const router = new VueRouter({
 import createPersistedState from "vuex-persistedstate"
 const store = new Vuex.Store({
   modules: {
-    auth, videos, loading, notify, query, likes
+    auth, videos, loading, notify, query, likes, karma
   },
   strict: true,
   plugins:[
@@ -119,6 +118,7 @@ new Vue({
     firebase.auth().onAuthStateChanged(user => {
       store.dispatch('auth/autoSignIn', user)
       store.dispatch('videos/initialize', user)
+      store.dispatch('karma/initialize', user)
     })
   }  
 })

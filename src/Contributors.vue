@@ -44,7 +44,7 @@
                     p.title.is-size-7 {{contributor.channelContributions}}
                 .level-item.has-text-centered
                   .item
-                    p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'heart']")
+                    p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'user-circle']")
                     p.title.is-size-7 {{contributor.speakerContributions}}
                 .level-item.has-text-centered                              
                   .item

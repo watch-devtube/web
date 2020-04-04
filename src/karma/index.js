@@ -1,0 +1,32 @@
+import axios from "axios";
+
+const state = {
+  karma: 0
+}
+
+const actions = {
+  initialize({commit}, user) {
+    if (user) {
+      console.log(user);
+      const [ provider ] = user.providerData;      
+      const what = window.btoa(provider.providerId + '/' + provider.email + '/' + provider.uid);
+      axios
+        .get(`/api/karma`, { params: { user: what } })
+        .then(response => commit('init', response.data ));
+    } else {
+      commit('init', { karma: 0 })
+    }
+  }
+}
+const mutations = {
+  init: (state, { karma }) => {
+    state.karma = karma
+  },
+}
+
+export default {
+  namespaced: true,
+  state,
+  actions,
+  mutations
+}

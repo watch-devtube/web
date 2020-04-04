@@ -43,6 +43,9 @@
         slot
       .navbar-end
         a.navbar-item.is-hoverable(v-if="auth.user")
+          .karma.is-hidden-touch
+            font-awesome-icon(:icon="['far', 'heart']").has-text-danger
+            | &nbsp;{{karma.karma}} &nbsp
           .face.is-hidden-touch(:style="'background-image: url(' + auth.user.photoUrl + ')'")
           font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
           span.is-hidden-desktop {{auth.user.name}}
@@ -98,7 +101,7 @@ header {
 
   export default {
     computed: {
-      ...mapState([ 'auth' ]),
+      ...mapState([ 'auth', 'karma' ]),
       ...mapGetters('videos', [ 'watchedCount', 'favoriteCount', 'hasSubscriptions' ])
     },
     data: function() {
