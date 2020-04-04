@@ -17,14 +17,14 @@
                         p.heading
                           span(v-if="!auth.user || iDisliked"): font-awesome-icon(:icon="['far', 'thumbs-up']")
                           span(v-else-if="iLiked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-up']")
-                          a(v-else @click="putALike(id)"): font-awesome-icon(:icon="['far', 'thumbs-up']")
+                          a.has-text-info(v-else @click="putALike(id)"): font-awesome-icon(:icon="['far', 'thumbs-up']")
                         p.title.is-size-7 {{video.likes + dtLikes | kilo}} 
                     .level-item.has-text-centered
                       div
                         p.heading
                           span(v-if="!auth.user || iLiked"): font-awesome-icon(:icon="['far', 'thumbs-down']")
                           span(v-else-if="iDisliked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-down']")
-                          a(v-else @click="putADislike(id)"): font-awesome-icon(:icon="['far', 'thumbs-down']")
+                          a.has-text-info(v-else @click="putADislike(id)"): font-awesome-icon(:icon="['far', 'thumbs-down']")
                         p.title.is-size-7 {{video.dislikes + dtDislikes | kilo}}
                     .level-item.has-text-centered
                       div
@@ -40,8 +40,7 @@
                         p.title.is-size-7 {{video.recordingDate | published}}
                     .level-item.has-text-centered.is-hidden-touch
                       div
-                        p.heading Share
-                        p.title.is-size-7
+                        p.title.is-size-3
                           ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
           .content          
             h3
@@ -84,9 +83,12 @@
         height: 100%;
       }
   }
+  .card {
+    border: none;
+  }
   .card-content {
     p { color: white; }
-    background-color: #343d46;
+    background-color: hsl(0, 0%, 7%);
     a:hover {
       color: white;
     }

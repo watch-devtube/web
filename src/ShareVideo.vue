@@ -1,11 +1,11 @@
 <template lang="pug">
   .share
-    a(:href="'//www.facebook.com/sharer/sharer.php?u=' + url" target="_blank" aria-label="facebook") 
+    a.has-text-info(:href="'//www.facebook.com/sharer/sharer.php?u=' + url" target="_blank" aria-label="facebook") 
       font-awesome-icon(:icon="['fab', 'facebook-square']")
-    a(:href="'//twitter.com/intent/tweet?text=' + thanksOrBlank + encodedTitle + '&via=WatchDevTube&hashtags=' + csvTags + '&url=' + url" target="_blank" aria-label="twitter")
+    a.has-text-info(:href="'//twitter.com/intent/tweet?text=' + thanksOrBlank + encodedTitle + '&via=WatchDevTube&hashtags=' + csvTags + '&url=' + url" target="_blank" aria-label="twitter")
       | &nbsp;
       font-awesome-icon(:icon="['fab', 'twitter-square']")
-    a(:href="'//linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + encodedTitle" target="_blank" aria-label="twitter")
+    a.has-text-info(:href="'//linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + encodedTitle" target="_blank" aria-label="twitter")
       | &nbsp;
       font-awesome-icon(:icon="['fab', 'linkedin']")
 </template>
