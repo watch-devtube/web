@@ -45,7 +45,7 @@
         a.navbar-item.is-hoverable(v-if="auth.user")
           .karma.is-hidden-touch
             font-awesome-icon(:icon="['far', 'heart']").has-text-danger
-            | &nbsp;{{karma.karma}} &nbsp
+            | &nbsp; {{karma.karma}} &nbsp; 
           .face.is-hidden-touch(:style="'background-image: url(' + auth.user.photoUrl + ')'")
           font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
           span.is-hidden-desktop {{auth.user.name}}
