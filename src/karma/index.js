@@ -7,7 +7,6 @@ const state = {
 const actions = {
   initialize({commit}, user) {
     if (user) {
-      console.log(user);
       const [ provider ] = user.providerData;      
       const what = window.btoa(provider.providerId + '/' + provider.email + '/' + provider.uid);
       axios
