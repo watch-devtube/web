@@ -19,7 +19,9 @@ let state = {
 }
 
 let getters = {
-  
+  isSignedIn: state => {
+    return !!state.user;
+  }  
 }
 
 let actions = {

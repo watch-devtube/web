@@ -21,7 +21,13 @@ let actions = {
       commit('init', { watched: [], favorites: [] })
     }
   },
-  toggleSubscription({commit, getters, rootState}, sub) {
+  toggleSubscription({commit, getters, rootState, rootGetters}, sub) {
+    const signedIn = rootGetters["auth/isSignedIn"];
+    if (!signedIn) {
+      commit("notify/error", { text: 'You have to login first.', title: '', duration: 3000 }, { root: true });
+      return;
+    }
+
     let toggledSubscription = it => it.topic == sub.topic && it.type == sub.type
     let isSubscribed = getters.hasSubscription(sub)
 

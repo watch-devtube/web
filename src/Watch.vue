@@ -14,37 +14,69 @@
                   nav.level.is-mobile
                     .level-item.has-text-centered
                       div
-                        p.heading
+                        .media(v-if="video.speaker && video.speaker.twitter")
+                            .media-left
+                                figure.image.is-32x32.is-marginless
+                                  img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter" :alt="video.speaker.name + ' avatar'")
+                            .media-content
+                              .content
+                                p.title.is-5 
+                                  | {{video.speaker.name}}
+                                p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
+                                .buttons
+                                  a.button.is-danger.is-outlined.is-small(v-if="hasSubscription(subscription(video.speaker.twitter))" @click="toggleSubscription(subscription(video.speaker.twitter))") 
+                                    .icon.is-small
+                                      font-awesome-icon(icon="times")
+                                    span unsubscribe
+                                  a.button.is-info.is-outlined.is-small(v-else @click="toggleSubscription(subscription(video.speaker.twitter))") 
+                                    span subscribe
+                                  TwitterThanks(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker.twitter")
+                        .media(v-else)
+                          //- .media-left
+                            figure.image.is-32x32.is-marginless(title="Add speaker")
+                              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
+                                img.avatar(src="/add-speaker.png" alt="Add speaker")
+                          .media-content
+                            .content
+                              p.title.is-5 Know the speaker?
+                              p.subtitle.is-6: a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank") Boost your karma
+                              a.button.is-info.is-outlined.is-small(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank") Contribute
+                    .level-item.has-text-centered
+                      div
+                        p.heading.is-size-5
                           span(v-if="!auth.user || iDisliked"): font-awesome-icon(:icon="['far', 'thumbs-up']")
                           span(v-else-if="iLiked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-up']")
                           a.has-text-info(v-else @click="putALike(id)"): font-awesome-icon(:icon="['far', 'thumbs-up']")
                         p.title.is-size-7 {{video.likes + dtLikes | kilo}} 
                     .level-item.has-text-centered
                       div
-                        p.heading
+                        p.heading.is-size-5
                           span(v-if="!auth.user || iLiked"): font-awesome-icon(:icon="['far', 'thumbs-down']")
                           span(v-else-if="iDisliked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-down']")
                           a.has-text-info(v-else @click="putADislike(id)"): font-awesome-icon(:icon="['far', 'thumbs-down']")
                         p.title.is-size-7 {{video.dislikes + dtDislikes | kilo}}
                     .level-item.has-text-centered
                       div
-                        p.heading: font-awesome-icon(:icon="['far', 'eye']")
+                        p.heading.is-size-5: font-awesome-icon(:icon="['far', 'eye']")
                         p.title.is-size-7 {{video.views | kilo}}
                     .level-item.has-text-centered
                       div
-                        p.heading Length
+                        p.heading.is-size-5: font-awesome-icon(:icon="['far', 'clock']")
                         p.title.is-size-7 {{video.duration | duration}}
-                    .level-item.has-text-centered
+                    //- .level-item.has-text-centered
                       div
-                        p.heading Date
+                        p.heading.is-size-5: font-awesome-icon(:icon="['far', 'calendar-plus']")
                         p.title.is-size-7 {{video.recordingDate | published}}
                     .level-item.has-text-centered.is-hidden-touch
                       div
-                        p.title.is-size-3
-                          ShareVideo(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker ? video.speaker.twitter : ''")
+                        p.heading.is-size-5
+                          a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
+                            font-awesome-icon(:icon="['far', 'edit']") 
+                            |  edit
+                          p.title.is-size-7 and get karma
           .content          
             h3
-            .columns.is-vcentered.is-mobile
+            //- .columns.is-vcentered.is-mobile
               .column.is-narrow(v-for="tag in video.tags") 
                 .tags.has-addons
                   a.tag(@click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
@@ -53,15 +85,7 @@
                 a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
                   font-awesome-icon(:icon="['fab', 'youtube']") 
                   | &nbsp; {{video.channelTitle}}                        
-            h2.title.is-4 {{video.title}}
-            .media(v-if="video.speaker && video.speaker.twitter" style="margin-bottom: 1em")
-                .media-left.has-text-left
-                    figure.image.is-32x32.is-marginless
-                      img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter" :alt="video.speaker.name + ' avatar'")
-                .media-content
-                  p.title.is-5 {{video.speaker.name}}
-                  p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}            
-            p.is-size-6 {{video.description}}            
+            //- h2.title.is-4 {{video.title}}
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
@@ -103,7 +127,7 @@
   import MessageWidget from './MessageWidget.vue'
   import VideoToggles from './VideoToggles.vue'
   import NightMode from './NightMode.vue'
-  import ShareVideo from './ShareVideo.vue'
+  import TwitterThanks from './TwitterThanks.vue'
   import NavBar from './NavBar.vue'
   import { mapState, mapActions, mapGetters } from 'vuex'
 
@@ -138,9 +162,13 @@
         let me = this.auth.user.uid
         return this.video.reactions && this.video.reactions.dislikes.some(dislike => dislike.uid == me)
       },
-      ...mapState([ 'videos', 'auth' ])
+      ...mapState([ 'videos', 'auth' ]),
+      ...mapGetters('videos', ['hasSubscription'])
     },
     methods: {
+      subscription(twitterHandle) {
+        return { topic : twitterHandle, type : 'speaker' }
+      },
       putALike(id) {
         this.$store.dispatch('likes/putALike', id)
         .then(r => this.$set(this.video, 'reactions', r.data))
@@ -164,10 +192,10 @@
       refineChannel: function (channel) {
         this.$router.push({ name: 'channel', params: { channel: channel } } )
       },
-      ...mapActions('videos', [ 'toggleWatched' ])
+      ...mapActions('videos', [ 'toggleWatched', 'toggleSubscription' ])
     },
     props: ['id'],
-    components: { RelatedVideos, MessageWidget, NightMode, ShareVideo, NavBar, VideoToggles}
+    components: { RelatedVideos, MessageWidget, NightMode, TwitterThanks, NavBar, VideoToggles}
   }
 
 </script>
