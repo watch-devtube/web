@@ -26,11 +26,11 @@
                 p.title.is-size-7 {{views | kilo}}
             .level-item.has-text-centered
               div                
-                p.heading.is-capitalized Length
+                p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'clock']")
                 p.title.is-size-7 {{duration | duration}}
             .level-item.has-text-centered
               div                
-                p.heading.is-capitalized Date
+                p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'calendar-plus']")
                 p.title.is-size-7 {{recordingDate | published}}                
           Tags(:tags="tags" :isNew="isNew" :isFeatured="isFeatured" :channel="channel")
 </template>
