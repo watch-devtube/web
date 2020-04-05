@@ -23,12 +23,12 @@
                                 p.title.is-5 
                                   | {{video.speaker.name}}
                                 p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
-                                .buttons
-                                  a.button.is-danger.is-outlined.is-small(v-if="hasSubscription(subscription(video.speaker.twitter))" @click="toggleSubscription(subscription(video.speaker.twitter))") 
+                                .buttons.are-small
+                                  a.button.is-danger.is-outlined(v-if="hasSubscription(subscription(video.speaker.twitter))" @click="toggleSubscription(subscription(video.speaker.twitter))") 
                                     .icon.is-small
                                       font-awesome-icon(icon="times")
                                     span unsubscribe
-                                  a.button.is-info.is-outlined.is-small(v-else @click="toggleSubscription(subscription(video.speaker.twitter))") 
+                                  a.button.is-info.is-outlined(v-else @click="toggleSubscription(subscription(video.speaker.twitter))") 
                                     span subscribe
                                   TwitterThanks(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker.twitter")
                         .media(v-else)
@@ -55,11 +55,11 @@
                           span(v-else-if="iDisliked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-down']")
                           a.has-text-info(v-else @click="putADislike(id)"): font-awesome-icon(:icon="['far', 'thumbs-down']")
                         p.title.is-size-7 {{video.dislikes + dtDislikes | kilo}}
-                    .level-item.has-text-centered
+                    .level-item.has-text-centered.is-hidden-mobile
                       div
                         p.heading.is-size-5: font-awesome-icon(:icon="['far', 'eye']")
                         p.title.is-size-7 {{video.views | kilo}}
-                    .level-item.has-text-centered
+                    .level-item.has-text-centered.is-hidden-mobile
                       div
                         p.heading.is-size-5: font-awesome-icon(:icon="['far', 'clock']")
                         p.title.is-size-7 {{video.duration | duration}}
