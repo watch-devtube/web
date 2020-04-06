@@ -3,11 +3,15 @@
     ais-index(:search-store="searchStore" index-name="videos")
       section.section(style="margin-top: 20px")
             .container
-              .columns
+              .columns.is-mobile
                 .column
                   router-link.button.is-small.is-outlined(v-if="tag || channel" :to="{ name: 'search' }")
                     span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
                     span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
+                .column
+                  .is-pulled-right
+                    Sorting
+
               .loading(v-if="loading")
                 .notification.overrideVueNotificationsIssue
                   p
@@ -75,7 +79,6 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 
 import VideoCard from './VideoCard.vue'
 import SpeakerStats from './SpeakerStats.vue'
-import NavBar from './NavBar.vue'
 import Sorting from './Sorting.vue'
 import ExpandableTags from './ExpandableTags.vue'
 
@@ -209,7 +212,6 @@ export default {
     ExpandableTags,
     VideoCard, 
     Sorting,
-    NavBar,
     SpeakerStats
   }
 }
