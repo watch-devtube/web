@@ -42,7 +42,6 @@ script:
 
   # compile vue app
   - yarn
-  - gsutil -m cp gs://dev-tube-index/*.xml ./src/static
   - yarn build
 
   # compile express app
