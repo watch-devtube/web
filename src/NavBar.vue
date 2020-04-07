@@ -7,7 +7,7 @@
         a.is-size-7.has-text-white(href="https://devternity.com" target="_blank")
           span.is-hidden-mobile &nbsp; by DevTernity
       .navbar-item
-        Input(placeholder="Search for videos...") 
+        Input(placeholder="Search for videos...")
       .navbar-burger.burger.has-text-white(data-target="navbarMenu" @click="toggle()" v-bind:class="{ 'is-active': active }")
         span
         span
@@ -15,28 +15,28 @@
     .navbar-menu#navbarMenu(style=" margin-right: -.75rem" v-bind:class="{ 'is-active': active }")
       .navbar-start
         router-link.navbar-item(v-if="auth.user && hasSubscriptions" :to='{ name: "search", query: { feed: "true" } }' @click.native="hide()") Subscriptions
-        router-link.navbar-item(title="Watched" v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()") 
-          span.is-hidden-tablet Watched 
+        router-link.navbar-item(title="Watched" v-if="watchedCount"  :to='{ name: "search", query: { w: "true" } }' @click.native="hide()")
+          span.is-hidden-tablet Watched
           font-awesome-icon(:icon="['far', 'eye']")
           font-awesome-layers(style="position: relative; top: -5px")
             font-awesome-layers-text(:value="watchedCount" transform="shrink-4")
-        router-link.navbar-item(title="Favorites" v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()") 
-          span.is-hidden-tablet Favorites 
+        router-link.navbar-item(title="Favorites" v-if="favoriteCount" :to='{ name: "search", query: { f: "true" } }' @click.native="hide()")
+          span.is-hidden-tablet Favorites
           font-awesome-icon(:icon="['far', 'star']")
           font-awesome-layers(style="position: relative; top: -5px")
-            font-awesome-layers-text(:value="favoriteCount" transform="shrink-4")          
+            font-awesome-layers-text(:value="favoriteCount" transform="shrink-4")
         a.navbar-item(title="Tags" @click="$refs.tags.toggleCollapse()")
-          span.is-hidden-tablet Tags 
+          span.is-hidden-tablet Tags
           font-awesome-icon(:icon="['fas', 'hashtag']")
         ExpandableTags(ref="tags" title="Tags" items="tags" :limit="10" type="tag" attr="tag")
           template(slot-scope="slot") {{slot.item.tag | capitalizeIfNeeded}}
         a.navbar-item(title="Speakers" @click="$refs.speakers.toggleCollapse()")
-          span.is-hidden-tablet Speakers  
+          span.is-hidden-tablet Speakers
           font-awesome-icon(:icon="['far', 'user-circle']")
         ExpandableTags(ref="speakers" title="Speakers" items="speakers" :limit="10" type="speaker" attr="twitter")
           template(slot-scope="slot") {{slot.item.name | capitalizeIfNeeded}}
         a.navbar-item(title="Channels" @click="$refs.channels.toggleCollapse()")
-          span.is-hidden-tablet Channels 
+          span.is-hidden-tablet Channels
           font-awesome-icon(:icon="['fab', 'youtube']")
         ExpandableTags(ref="channels" title="Channels" items="channels" :limit="10" type="channel" attr="title")
           template(slot-scope="slot") {{slot.item.title | truncate(25) | capitalizeIfNeeded}}
@@ -45,7 +45,7 @@
         a.navbar-item.is-hoverable(v-if="auth.user")
           .karma.is-hidden-touch
             font-awesome-icon(:icon="['far', 'heart']").has-text-danger
-            | &nbsp; {{karma.karma}} &nbsp; 
+            | &nbsp; {{karma.karma}} &nbsp;
           .face.is-hidden-touch(:style="'background-image: url(' + auth.user.photoUrl + ')'")
           font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
           span.is-hidden-desktop {{auth.user.name}}
@@ -53,7 +53,7 @@
             NightMode
             a.navbar-item(@click="signOut()") Logout
 
-        a.navbar-item.is-hoverable(v-else) 
+        a.navbar-item.is-hoverable(v-else)
           font-awesome-icon(:icon="['fa', 'user']")
           | &nbsp;Log in
           .navbar-dropdown.is-right.is-boxed
@@ -64,7 +64,6 @@
 </template>
 <style lang="scss" scoped>
 header {
-  
   .logo {
     cursor: pointer;
   }
@@ -88,40 +87,42 @@ header {
       width: 45px;
     }
   }
-
 }
 </style>
 <script>
-  import Input from './Input.vue'
-  import NightMode from './NightMode.vue'
-  import ExpandableTags from './ExpandableTags.vue'
+import Input from "./Input.vue";
+import NightMode from "./NightMode.vue";
+import ExpandableTags from "./ExpandableTags.vue";
 
-  import { mapState, mapActions, mapGetters } from 'vuex'
+import { mapState, mapActions, mapGetters } from "vuex";
 
-
-  export default {
-    computed: {
-      ...mapState([ 'auth', 'karma' ]),
-      ...mapGetters('videos', [ 'watchedCount', 'favoriteCount', 'hasSubscriptions' ])
+export default {
+  components: { Input, NightMode, ExpandableTags },
+  data: function () {
+    return {
+      active: false,
+    };
+  },
+  computed: {
+    ...mapState(["auth", "karma"]),
+    ...mapGetters("videos", [
+      "watchedCount",
+      "favoriteCount",
+      "hasSubscriptions",
+    ]),
+  },
+  methods: {
+    // double check if toggle() is not used in children components
+    toggle() {
+      this.active = !this.active;
     },
-    data: function() {
-      return {
-        active: false
-      }
+    hide() {
+      this.active = false;
     },
-    methods: {
-      // double check if toggle() is not used in children components
-      toggle() {
-        this.active = !this.active
-      },
-      hide() {
-        this.active = false
-      },
-      home() {
-        window.location = "/"
-      },
-      ...mapActions('auth', [ 'signOut', 'signIn']),
+    home() {
+      window.location = "/";
     },
-    components: { Input, NightMode, ExpandableTags }  
-  }
+    ...mapActions("auth", ["signOut", "signIn"]),
+  },
+};
 </script>

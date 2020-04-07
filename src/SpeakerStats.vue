@@ -33,53 +33,59 @@
             <p class="heading">Views</p>
             <p>{{stats.views | kilo}}</p>
           </div>
-        </div>  
+        </div>
       br
-      .subscriptions(v-if="auth.user") 
+      .subscriptions(v-if="auth.user")
         a.button(v-if="hasSubscription(subscription(twt))" @click="toggleSubscription(subscription(twt))") Unsubscribe
         a.button(v-else @click="toggleSubscription(subscription(twt))") Subscribe
       a.button(v-else @click="requreLogin()") Subscribe
 </template>
 <style lang="scss">
-  .is-rounded {
-    border: 1px solid white;
-  }
-  .profileInfo {
-    margin-top: 0.5rem;
-  }
-
+.is-rounded {
+  border: 1px solid white;
+}
+.profileInfo {
+  margin-top: 0.5rem;
+}
 </style>
 <script>
-  import { mapState, mapActions, mapGetters } from 'vuex'
-  import TalksChart from './TalksChart.vue'
-  import axios from 'axios'
-  export default {
-    props: {
-      twt: { type: String, required: true },
-      stats: { type: Object, required: false }
+import { mapState, mapActions, mapGetters } from "vuex";
+import axios from "axios";
+export default {
+  props: {
+    twt: { type: String, required: true },
+    stats: { type: Object, required: true },
+  },
+  computed: {
+    ...mapState(["auth"]),
+    ...mapGetters("videos", ["hasSubscription"]),
+  },
+  created() {
+    this.profile = window.speaker;
+  },
+  asyncComputed: {
+    profile() {
+      if (this.twt)
+        return (
+          window.speaker ||
+          axios
+            .get(`https://dossier.dev.tube/twt/` + this.twt)
+            .then((response) => response.data)
+        );
     },
-    created() {
-      this.profile = window.speaker
+  },
+  methods: {
+    requreLogin() {
+      this.$store.dispatch("notify/error", {
+        text: "You have to login first.",
+        title: "",
+        duration: 3000,
+      });
     },
-    computed: {
-      ...mapState([ 'auth' ]),
-      ...mapGetters('videos', ['hasSubscription']),
+    subscription(item) {
+      return { topic: item, type: "speaker" };
     },
-    asyncComputed: {
-      profile() {
-        if (this.twt)
-          return window.speaker || axios.get(`https://dossier.dev.tube/twt/` + this.twt).then(response => response.data)
-      }
-    },
-    methods: {
-      requreLogin() {
-        this.$store.dispatch('notify/error', { text: 'You have to login first.', title: '', duration: 3000 })
-      },
-      subscription(item) {
-        return { topic : item, type : 'speaker' }
-      },      
-      ...mapActions('videos', [ 'toggleSubscription']),
-    },
-    components: { TalksChart }
-  }
+    ...mapActions("videos", ["toggleSubscription"]),
+  },
+};
 </script>

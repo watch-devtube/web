@@ -1,25 +1,18 @@
-let state = {
-
-}
+let state = {};
 
 let getters = {
-  completed: (state, getters, rootState) => 
-    !rootState.videos.loading && !rootState.auth.loading
-}
+  completed: (state, getters, rootState) =>
+    !rootState.videos.loading && !rootState.auth.loading,
+};
 
-let mutations = {
-  
-}
+let mutations = {};
 
-let actions = {
-  
-}
-
+let actions = {};
 
 export default {
   namespaced: true,
   state,
   actions,
   getters,
-  mutations
-}
+  mutations,
+};

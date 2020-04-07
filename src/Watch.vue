@@ -20,17 +20,17 @@
                                   img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter" :alt="video.speaker.name + ' avatar'")
                             .media-content
                               .content
-                                p.title.is-5 
+                                p.title.is-5
                                   | {{video.speaker.name}}
                                 p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
                                 .buttons.are-small
-                                  a.button.is-danger.is-outlined(v-if="hasSubscription(subscription(video.speaker.twitter))" @click="toggleSubscription(subscription(video.speaker.twitter))") 
+                                  a.button.is-danger.is-outlined(v-if="hasSubscription(subscription(video.speaker.twitter))" @click="toggleSubscription(subscription(video.speaker.twitter))")
                                     .icon.is-small
                                       font-awesome-icon(icon="times")
                                     span unsubscribe
-                                  a.button.is-info.is-outlined(v-else @click="toggleSubscription(subscription(video.speaker.twitter))") 
+                                  a.button.is-info.is-outlined(v-else @click="toggleSubscription(subscription(video.speaker.twitter))")
                                     span subscribe
-                                  TwitterThanks(:videoId="video.objectID" :title="video.title" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker.twitter")
+                                  TwitterThanks(:videoId="video.objectID" :title="video.title" :tags="video.tags" :channel="video.channelTitle" :speaker="video.speaker.twitter")
                         .media(v-else)
                           //- .media-left
                             figure.image.is-32x32.is-marginless(title="Add speaker")
@@ -47,7 +47,7 @@
                           span(v-if="!auth.user || iDisliked"): font-awesome-icon(:icon="['far', 'thumbs-up']")
                           span(v-else-if="iLiked"): font-awesome-icon.has-text-warning(:icon="['fas', 'thumbs-up']")
                           a.has-text-info(v-else @click="putALike(id)"): font-awesome-icon(:icon="['far', 'thumbs-up']")
-                        p.title.is-size-7 {{video.likes + dtLikes | kilo}} 
+                        p.title.is-size-7 {{video.likes + dtLikes | kilo}}
                     .level-item.has-text-centered
                       div
                         p.heading.is-size-5
@@ -71,131 +71,154 @@
                       div
                         p.heading.is-size-5
                           a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
-                            font-awesome-icon(:icon="['far', 'edit']") 
+                            font-awesome-icon(:icon="['far', 'edit']")
                             |  edit
                           p.title.is-size-7 and get karma
-          .content          
+          .content
             h3
             //- .columns.is-vcentered.is-mobile
-              .column.is-narrow(v-for="tag in video.tags") 
+              .column.is-narrow(v-for="tag in video.tags")
                 .tags.has-addons
                   a.tag(@click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
                   a.tag.is-delete(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
               .column
                 a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
-                  font-awesome-icon(:icon="['fab', 'youtube']") 
-                  | &nbsp; {{video.channelTitle}}                        
+                  font-awesome-icon(:icon="['fab', 'youtube']")
+                  | &nbsp; {{video.channelTitle}}
             //- h2.title.is-4 {{video.title}}
       RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
       MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
 </template>
 <style scoped lang="scss">
+.columns:not(.is-desktop) {
+  flex-wrap: wrap;
+}
 
-  .columns:not(.is-desktop) {
-    flex-wrap: wrap;
+.videoWrapper {
+  position: relative;
+  padding-bottom: 51.6%;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
+}
+.card {
+  border: none;
+}
+.card-content {
+  p {
+    color: white;
+  }
+  background-color: hsl(0, 0%, 7%);
+  a:hover {
+    color: white;
+  }
+}
 
-  .videoWrapper {
-    position: relative;
-    padding-bottom: 51.6%;
-    height: 0;
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-  }
-  .card {
-    border: none;
-  }
-  .card-content {
-    p { color: white; }
-    background-color: hsl(0, 0%, 7%);
-    a:hover {
-      color: white;
-    }
-  }
-
-  .avatar {
-    border-radius: 50%
-  }  
+.avatar {
+  border-radius: 50%;
+}
 </style>
 <script>
-  import RelatedVideos from './RelatedVideos.vue'
-  import MessageWidget from './MessageWidget.vue'
-  import VideoToggles from './VideoToggles.vue'
-  import NightMode from './NightMode.vue'
-  import TwitterThanks from './TwitterThanks.vue'
-  import NavBar from './NavBar.vue'
-  import { mapState, mapActions, mapGetters } from 'vuex'
+import RelatedVideos from "./RelatedVideos.vue";
+import MessageWidget from "./MessageWidget.vue";
+import VideoToggles from "./VideoToggles.vue";
+import NightMode from "./NightMode.vue";
+import TwitterThanks from "./TwitterThanks.vue";
+import NavBar from "./NavBar.vue";
+import { mapState, mapActions, mapGetters } from "vuex";
 
-  export default {
-    data: function() {
-      return {
-        errors: [],
-        video: {
-          reactions: {}
-        },
-        isFullWidth: false
-      }
+export default {
+  components: {
+    RelatedVideos,
+    MessageWidget,
+    NightMode,
+    TwitterThanks,
+    NavBar,
+    VideoToggles,
+  },
+  props: {
+    id: {
+      type: String,
+      required: true,
     },
-    created() {
-      this.fetch()
+  },
+  data: function () {
+    return {
+      errors: [],
+      video: {
+        reactions: {},
+      },
+      isFullWidth: false,
+    };
+  },
+  computed: {
+    dtLikes() {
+      return (this.video.reactions && this.video.reactions.likes.length) || 0;
     },
-    watch: {
-      '$route': 'fetch'
+    dtDislikes() {
+      return (
+        (this.video.reactions && this.video.reactions.dislikes.length) || 0
+      );
     },
-    computed: {
-      dtLikes() {
-        return (this.video.reactions && this.video.reactions.likes.length) || 0
-      },
-      dtDislikes() {
-        return (this.video.reactions && this.video.reactions.dislikes.length) || 0
-      },
-      iLiked() {
-        let me = this.auth.user.uid
-        return this.video.reactions && this.video.reactions.likes.some(like => like.uid == me)
-      },
-      iDisliked() {
-        let me = this.auth.user.uid
-        return this.video.reactions && this.video.reactions.dislikes.some(dislike => dislike.uid == me)
-      },
-      ...mapState([ 'videos', 'auth' ]),
-      ...mapGetters('videos', ['hasSubscription'])
+    iLiked() {
+      let me = this.auth.user.uid;
+      return (
+        this.video.reactions &&
+        this.video.reactions.likes.some((like) => like.uid == me)
+      );
     },
-    methods: {
-      subscription(twitterHandle) {
-        return { topic : twitterHandle, type : 'speaker' }
-      },
-      putALike(id) {
-        this.$store.dispatch('likes/putALike', id)
-        .then(r => this.$set(this.video, 'reactions', r.data))
-        .catch(e => this.$store.dispatch("notify/error", { error: e }))
-      },
-      putADislike(id) {
-        this.$store.dispatch('likes/putADislike', id)
-          .then(r => this.$set(this.video, 'reactions', r.data))
-          .catch(e => this.$store.dispatch("notify/error", { error: e }))
-      },
-      fetch() {
-        this.video = window.preloadedEntity
-        this.$Progress.finish()   
-      },
-      toggleWidth: function() {
-        this.isFullWidth = !this.isFullWidth;
-      },
-      refineTag: function (tag) {
-        this.$router.push({ name: 'tag', params: { tag: tag } })
-      },
-      refineChannel: function (channel) {
-        this.$router.push({ name: 'channel', params: { channel: channel } } )
-      },
-      ...mapActions('videos', [ 'toggleWatched', 'toggleSubscription' ])
+    iDisliked() {
+      let me = this.auth.user.uid;
+      return (
+        this.video.reactions &&
+        this.video.reactions.dislikes.some((dislike) => dislike.uid == me)
+      );
     },
-    props: ['id'],
-    components: { RelatedVideos, MessageWidget, NightMode, TwitterThanks, NavBar, VideoToggles}
-  }
+    ...mapState(["videos", "auth"]),
+    ...mapGetters("videos", ["hasSubscription"]),
+  },
 
+  watch: {
+    $route: "fetch",
+  },
+  created() {
+    this.fetch();
+  },
+  methods: {
+    subscription(twitterHandle) {
+      return { topic: twitterHandle, type: "speaker" };
+    },
+    putALike(id) {
+      this.$store
+        .dispatch("likes/putALike", id)
+        .then((r) => this.$set(this.video, "reactions", r.data))
+        .catch((e) => this.$store.dispatch("notify/error", { error: e }));
+    },
+    putADislike(id) {
+      this.$store
+        .dispatch("likes/putADislike", id)
+        .then((r) => this.$set(this.video, "reactions", r.data))
+        .catch((e) => this.$store.dispatch("notify/error", { error: e }));
+    },
+    fetch() {
+      this.video = window.preloadedEntity;
+      this.$Progress.finish();
+    },
+    toggleWidth: function () {
+      this.isFullWidth = !this.isFullWidth;
+    },
+    refineTag: function (tag) {
+      this.$router.push({ name: "tag", params: { tag: tag } });
+    },
+    refineChannel: function (channel) {
+      this.$router.push({ name: "channel", params: { channel: channel } });
+    },
+    ...mapActions("videos", ["toggleWatched", "toggleSubscription"]),
+  },
+};
 </script>

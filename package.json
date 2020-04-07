@@ -5,6 +5,7 @@
   "author": "Eduards Sizovs <eduards@devternity.com>",
   "private": true,
   "scripts": {
+    "lint": "eslint --ext .js,.vue src",
     "dev": "cross-env webpack-dev-server --hot --mode=development",
     "build": "cross-env webpack --progress --hide-modules --mode=production"
   },
@@ -36,6 +37,7 @@
   "devDependencies": {
     "autoprefixer": "^9.1.0",
     "babel-core": "^6.0.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -43,11 +45,17 @@
     "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.9",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.2.0",
     "node-sass": "^4.9.0",
     "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.4",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "pug-static-loader": "^2.0.0",

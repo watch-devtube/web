@@ -6,27 +6,27 @@
         font-awesome-icon(:icon="['fas', 'search']")
 </template>
 <script>
-import debounce from 'v-debounce'
+import debounce from "v-debounce";
 
 export default {
   directives: { debounce },
   data() {
     return {
-      blockClassName: 'ais-input'
-    }
+      blockClassName: "ais-input",
+    };
   },
   computed: {
     query: {
       get() {
-        return this.$route.query.q
+        return this.$route.query.q;
       },
       set(value) {
         this.$router.push({
-          name: 'search',
-          query: { q: value }
-        })
-      }
-    }
-  }
-}
+          name: "search",
+          query: { q: value },
+        });
+      },
+    },
+  },
+};
 </script>

@@ -7,26 +7,39 @@
       a.navbar-item.is-size-7(v-for="language in languages" v-bind:class="{ 'is-active': query.lang == language }" @click="langFilter(language)") {{language}}
 </template>
 <script>
-  import { mapState, mapActions } from 'vuex'
-  export default {
-    computed: {
-      ...mapState([ 'query' ])
-    },
-  data: function() {
+import { mapState, mapActions } from "vuex";
+export default {
+  data: function () {
     return {
-      languages: ['Chinese', 'Danish', 'English', 'French', 'Italian', 'Spanish', 'German', 'Russian', 'Portuguese', 'Lithuanian', 'Korean', 'Ukrainian'].sort()
-    }
+      languages: [
+        "Chinese",
+        "Danish",
+        "English",
+        "French",
+        "Italian",
+        "Spanish",
+        "German",
+        "Russian",
+        "Portuguese",
+        "Lithuanian",
+        "Korean",
+        "Ukrainian",
+      ].sort(),
+    };
   },
-    methods: {
-      langFilter: function(lang) {
-        this.$parent.hide()
-        this.lang(lang)
-      },      
-      sortNow: function(order) {
-        this.$parent.hide()
-        this.sort(order)
-      },
-      ...mapActions('query', [ 'sort', 'lang' ])
-    }    
-  }
+  computed: {
+    ...mapState(["query"]),
+  },
+  methods: {
+    langFilter: function (lang) {
+      this.$parent.hide();
+      this.lang(lang);
+    },
+    sortNow: function (order) {
+      this.$parent.hide();
+      this.sort(order);
+    },
+    ...mapActions("query", ["sort", "lang"]),
+  },
+};
 </script>

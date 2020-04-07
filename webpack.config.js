@@ -43,7 +43,13 @@ module.exports = {
             use: ['source-loader', 'pug-static-loader']
           }
         ]
-      },          
+      },
+      {
+        enforce: "pre",
+        test: /\.(js|vue)$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',

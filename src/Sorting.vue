@@ -6,21 +6,22 @@
       option(value="duration" :selected="(query.sortOrder == 'duration')") Shortest first
 </template>
 <script>
-  import { mapState, mapActions, mapGetters } from 'vuex'
-  export default {
-    data() {
-       return {
-         sorting: undefined
-       }
-    },
-    created() {
-      this.sorting = this.query.sortOrder;
-    },
-    computed: {
-      ...mapState([ 'query' ])
-    },
-    methods: {
-      ...mapActions('query', [ 'sort' ])
-    }    
-  }
+import { mapState, mapActions } from "vuex";
+export default {
+  data() {
+    return {
+      sorting: undefined,
+    };
+  },
+  computed: {
+    ...mapState(["query"]),
+  },
+  created() {
+    this.sorting = this.query.sortOrder;
+  },
+
+  methods: {
+    ...mapActions("query", ["sort"]),
+  },
+};
 </script>
