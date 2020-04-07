@@ -84,19 +84,8 @@
           .get('https://storage.googleapis.com/dev-tube-index/board.json')
           .then(({data}) => data
                             .contributors
-                            .map(it => ({...it, karma : this.karma(it) }))
                             .sort((it, that) => that.karma - it.karma)
           )
-      }
-    },
-    methods: {
-      karma(contributor) {
-        return (
-          contributor.tagContributions + 
-          contributor.speakerContributions + 
-          contributor.channelContributions +
-          contributor.videosUpdated
-        ) * 10
       }
     },
     components: { NightMode, ContributorRank }
