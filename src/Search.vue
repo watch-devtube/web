@@ -5,13 +5,16 @@
             .container
               .columns.is-mobile
                 .column
-                  router-link.button.is-small.is-outlined(v-if="tag || channel" :to="{ name: 'search' }")
-                    span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
-                    span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
+                  .buttons
+                    a.button.is-small.is-outlined(v-if="query.lang" @click="lang(undefined)")
+                      span {{query.lang}}
+                      span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
+                    router-link.button.is-small.is-outlined(v-if="tag || channel" :to="{ name: 'search' }")
+                      span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
+                      span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
                 .column
                   .is-pulled-right
                     Sorting
-
               .loading(v-if="loading")
                 .notification.overrideVueNotificationsIssue
                   p
@@ -25,6 +28,7 @@
                     .notification.overrideVueNotificationsIssue
                       p
                         | No videos matching your query. Please
+                        | &nbsp;
                         a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
                         | .
                 section(v-if="speaker")
@@ -75,7 +79,7 @@
 </template>
 <script>
 import { createFromAlgoliaClient } from "vue-instantsearch";
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 import VideoCard from "./VideoCard.vue";
 import SpeakerStats from "./SpeakerStats.vue";
@@ -149,6 +153,7 @@ export default {
     this.syncQuery();
   },
   methods: {
+    ...mapActions("query", ["lang"]),
     scrollTop() {
       window.scrollTo(0, 0);
     },
