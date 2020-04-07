@@ -12,7 +12,7 @@ This web app comprises of `Vue` client app and a slim `node` server app, through
 # make sure yarn is installed
 npm install --global yarn
 
-# install dependencies and run client app 
+# install dependencies and run client app
 yarn && yarn dev
 
 # go to server app

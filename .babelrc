@@ -1,8 +1,16 @@
 {
   "presets": [
-    ["latest", {
-      "es2015": { "modules": false }
-    }]
+    [
+      "latest",
+      {
+        "es2015": {
+          "modules": false
+        }
+      }
+    ]
   ],
-  "plugins": ["syntax-dynamic-import", "babel-plugin-transform-object-rest-spread"]
+  "plugins": [
+    "syntax-dynamic-import",
+    "babel-plugin-transform-object-rest-spread"
+  ]
 }
