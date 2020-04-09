@@ -1,98 +1,71 @@
 language: node_js
 node_js:
-  - 10
-
+- 10
 branches:
   only:
-   - master
-
+  - master
 cache:
   directories:
-    - $HOME/gcloud/
-    - node_modules
-#    - express/node_modules
-
+  - "$HOME/gcloud/"
+  - node_modules
 env:
   global:
-    - secure: "eeuhASPfOvjwdGadQsej82RDP/at1pB7Q2h4uRyAMEaJ1W5x2PcHarcq8bMQYC4q+s2lNBz5zBAOxC54dQouDDN5H8IprWMj3yfUdEGKIkwwQvzCx51B1fJU0glbzE8jGBfsS77wFUclPWmHFvcF/PYs3BBguM54CVPzH0k+oJ8nasg5HvpBNuZnCwaz92vOJwwR32DwaaS8BVdgMWHt+gLVSN+fN59tVn8RdXwUlOb0cEvNTk+TETjy4ilG8QfWnqEfJh2AMWT8nsHHuxDoenmvgYPeVluH69jGAo6nTUkBOGRrlxT8MoxLXzJjEmFh2THzxM1ZvzLJ3tdfgH+tU97xaf2f0j27D+FJtsKXy9TRLs4UiAiFl41aZVXb/NZdIJduAjiP0tm51OjMsb7hJkxFVd0oD86xK5XEvbrS8M6wNWOKn8Bw67WDrbqbRnXYKoEy6SIicrrD+LVThUf7xvLQaob7MknBfWFYSNrr7JWtFegcF8D6C4264iFMWa7YG8fvgZLMezbRPcsL6lU0mcxJN4Czh9QOqW0uWMe6KrojMgTEXhm9bePLHXhdJ5kyEWRsHr0VC1kosGd4XPK51B0XQ12/e5Mu+0CTmFeG6/V0vaD0zgtV3NqL9GWrf6nbh9ZzaXzCQ/Cm3/QbYeehjPmlNOFiehtK2Anvh3Nnl04="
+  - secure: eeuhASPfOvjwdGadQsej82RDP/at1pB7Q2h4uRyAMEaJ1W5x2PcHarcq8bMQYC4q+s2lNBz5zBAOxC54dQouDDN5H8IprWMj3yfUdEGKIkwwQvzCx51B1fJU0glbzE8jGBfsS77wFUclPWmHFvcF/PYs3BBguM54CVPzH0k+oJ8nasg5HvpBNuZnCwaz92vOJwwR32DwaaS8BVdgMWHt+gLVSN+fN59tVn8RdXwUlOb0cEvNTk+TETjy4ilG8QfWnqEfJh2AMWT8nsHHuxDoenmvgYPeVluH69jGAo6nTUkBOGRrlxT8MoxLXzJjEmFh2THzxM1ZvzLJ3tdfgH+tU97xaf2f0j27D+FJtsKXy9TRLs4UiAiFl41aZVXb/NZdIJduAjiP0tm51OjMsb7hJkxFVd0oD86xK5XEvbrS8M6wNWOKn8Bw67WDrbqbRnXYKoEy6SIicrrD+LVThUf7xvLQaob7MknBfWFYSNrr7JWtFegcF8D6C4264iFMWa7YG8fvgZLMezbRPcsL6lU0mcxJN4Czh9QOqW0uWMe6KrojMgTEXhm9bePLHXhdJ5kyEWRsHr0VC1kosGd4XPK51B0XQ12/e5Mu+0CTmFeG6/V0vaD0zgtV3NqL9GWrf6nbh9ZzaXzCQ/Cm3/QbYeehjPmlNOFiehtK2Anvh3Nnl04=
   matrix:
-    - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json
-
+  - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json
 before_install:
-  - openssl aes-256-cbc -K $encrypted_97a0b4bf9e4a_key -iv $encrypted_97a0b4bf9e4a_iv -in express/service_key.json.enc -out express/service_key.json -d
-  - openssl aes-256-cbc -K $encrypted_2e4cd36ad6d9_key -iv $encrypted_2e4cd36ad6d9_iv -in express/firebase.json.enc -out express/firebase.json -d
-  - openssl aes-256-cbc -K $encrypted_2e4cd36ad6d9_key -iv $encrypted_2e4cd36ad6d9_iv -in express/admin.dev.tube.pem.enc -out express/admin.dev.tube.pem -d
-  - chmod 400 express/admin.dev.tube.pem
-  - export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" &&
-    echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list &&
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - &&
-    sudo apt-get update -y &&
-    sudo apt-get install google-cloud-sdk=216.0.0-0 -y
-  - if [ -a express/service_key.json ]; then
-      gcloud -q auth activate-service-account --key-file express/service_key.json;
-    fi
-  # - npm i typescript -g
-  - npm i artillery -g
-  - npm i yarn -g
-
+- openssl aes-256-cbc -K $encrypted_4094f599414b_key -iv $encrypted_4094f599414b_iv
+  -in firebase.config.json.enc -out firebase.config.json -d
+- openssl aes-256-cbc -K $encrypted_97a0b4bf9e4a_key -iv $encrypted_97a0b4bf9e4a_iv
+  -in express/service_key.json.enc -out express/service_key.json -d
+- openssl aes-256-cbc -K $encrypted_2e4cd36ad6d9_key -iv $encrypted_2e4cd36ad6d9_iv
+  -in express/firebase.json.enc -out express/firebase.json -d
+- openssl aes-256-cbc -K $encrypted_2e4cd36ad6d9_key -iv $encrypted_2e4cd36ad6d9_iv
+  -in express/admin.dev.tube.pem.enc -out express/admin.dev.tube.pem -d
+- chmod 400 express/admin.dev.tube.pem
+- export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && echo "deb http://packages.cloud.google.com/apt
+  $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+  && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+  - && sudo apt-get update -y && sudo apt-get install google-cloud-sdk=216.0.0-0 -y
+- if [ -a express/service_key.json ]; then gcloud -q auth activate-service-account
+  --key-file express/service_key.json; fi
+- npm i artillery -g
+- npm i yarn -g
 script:
-
-  # magic
-  - set -e
-
-  # compile vue app
-  - yarn
-  - yarn build
-
-  # compile express app
-  - cd express
-  # - tsc --version
-  - yarn
-  - yarn build
-  - rm -rf node_modules
-  - yarn install --production
-  - cp -r ../dist/* ./dist
-
-  # get data
-  - mkdir ./data
-  - gsutil -m cp gs://dev-tube-index/*.json ./data
-
-  # select deployment
-  - export SSH="ssh -oStrictHostKeyChecking=no -i admin.dev.tube.pem ${DEPLOY_USER}@${DEPLOY_HOST}"
-  - export GREEN=$(${SSH} ls -1 /etc/nginx/green | wc -l)
-  - export BLUE=$(${SSH} ls -1 /etc/nginx/blue | wc -l)
-  - echo $GREEN
-  - echo $BLUE
-  - if [ $BLUE -eq 1 ]; then
-      export DEPLOYMENT="green";
-    else
-      export DEPLOYMENT="blue";
-    fi
-  - echo $DEPLOYMENT
-
-  # deploy express app
-  - touch ./dist/deployment.txt
-  - echo $DEPLOYMENT > ./dist/deployment.txt
-  - echo https://github.com/watch-devtube/web/commits/$(git rev-parse HEAD) >> ./dist/deployment.txt
-  - ls -latr ./dist
-  - ls -latr ./data
-  - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --runtime nodejs8 --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
-
-  # test deployment
-  - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/deployment.txt | tee -a artilery.log
-
-  # switch green/blue
-  - set +e
-  - if [ $BLUE -eq 0 -a $GREEN -eq 0 ]; then
-      ${SSH} sudo touch /etc/nginx/${DEPLOYMENT};
-    elif [ "$DEPLOYMENT" = "blue" ]; then
-      ${SSH} sudo mv /etc/nginx/green /etc/nginx/blue;
-    else
-      ${SSH} sudo mv /etc/nginx/blue /etc/nginx/green;
-    fi
-  - ${SSH} ls -1 /etc/nginx/green | wc -l
-  - ${SSH} ls -1 /etc/nginx/blue | wc -l
-
+- set -e
+- yarn
+- yarn build
+- cd express
+- yarn
+- yarn build
+- rm -rf node_modules
+- yarn install --production
+- cp -r ../dist/* ./dist
+- mkdir ./data
+- gsutil -m cp gs://dev-tube-index/*.json ./data
+- export SSH="ssh -oStrictHostKeyChecking=no -i admin.dev.tube.pem ${DEPLOY_USER}@${DEPLOY_HOST}"
+- export GREEN=$(${SSH} ls -1 /etc/nginx/green | wc -l)
+- export BLUE=$(${SSH} ls -1 /etc/nginx/blue | wc -l)
+- echo $GREEN
+- echo $BLUE
+- if [ $BLUE -eq 1 ]; then export DEPLOYMENT="green"; else export DEPLOYMENT="blue";
+  fi
+- echo $DEPLOYMENT
+- touch ./dist/deployment.txt
+- echo $DEPLOYMENT > ./dist/deployment.txt
+- echo https://github.com/watch-devtube/web/commits/$(git rev-parse HEAD) >> ./dist/deployment.txt
+- ls -latr ./dist
+- ls -latr ./data
+- gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --runtime nodejs8 --verbosity=debug
+  --memory=2048MB --timeout=30s --project=dev-tube
+- artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/deployment.txt
+  | tee -a artilery.log
+- set +e
+- if [ $BLUE -eq 0 -a $GREEN -eq 0 ]; then ${SSH} sudo touch /etc/nginx/${DEPLOYMENT};
+  elif [ "$DEPLOYMENT" = "blue" ]; then ${SSH} sudo mv /etc/nginx/green /etc/nginx/blue;
+  else ${SSH} sudo mv /etc/nginx/blue /etc/nginx/green; fi
+- "${SSH} ls -1 /etc/nginx/green | wc -l"
+- "${SSH} ls -1 /etc/nginx/blue | wc -l"
 notifications:
   slack:
     secure: RlPU/MveCOFlOT5LCWxkTNQ6dZsjyiESIaxBUUYzH2opz8pe7RyUyFBr972IaJq3MQpHXfRQ3ctgrwaThX23KBKC9Gtl4u0bHt9BiWV9nTv0ZvqkHINN5Fomb5QHCEKAmfeuOuKWR/yMVAIZ/VAKMkWqcYwzz4/7neRUkcBXAy8IvAY+QDJj6MlN7/VXnpS4z3c/yAQOpeCecqdXs5CgxrGAVdx9yJKgmGxwS/xs18UZ68B/bKbFirM714o0+I/P7O0VwLsaW5bwgho0jzj8cA66R9VNg7JEHaHxzJUHgia51JJB5YIXoyU20IQc1uVHeT0UptqM0VRKfG25zGmDq+shfd9hxD3i+6B+TeHoRNbBKiv3PM3VCpiydysNlrjFYmNVab8BeHbAONy8dltX/oEQsAa8VQrTSw7ex0pUOHJPbjbQgxrBRMjem+HOM2du1zCytz/PIeCB8AEtXZc9GwIkNdr9g+pPlYbD/FqJ7y65roMuDWLuAVZBbwm9znmHohNYQzfz2lJkxwYHxfqSgVz5ccDfcNaDrli1FFdCPNEVnFNL93SXMZQ43kyYfr3G0jMsHkQT4GD9r78CaPknJVLbAg8avDM4Q+6HMfVNoQkSf5Uc0idzrM3oNBMqFd5Lrsw3QxI/KFf7LVUog3YRAsayNjwUGDVuxwhOH5Iky5o=
