@@ -56,7 +56,7 @@ script:
 - echo https://github.com/watch-devtube/web/commits/$(git rev-parse HEAD) >> ./dist/deployment.txt
 - ls -latr ./dist
 - ls -latr ./data
-- gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --runtime nodejs8 --verbosity=debug
+- gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug
   --memory=2048MB --timeout=30s --project=dev-tube
 - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/deployment.txt
   | tee -a artilery.log
