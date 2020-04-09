@@ -6,7 +6,7 @@
 
 ## How to run DevTube locally
 
-#### Set up firebase authentication
+#### Set up Firebase Authentication
 
 DevTube depends on Firebase Authentication, because some of its functionality requires a user to be authenticated via one of three OAuth providers – Google, Twitter, or GitHub. For development purposes, it's enough to configure GitHub authentication.
 
@@ -26,8 +26,27 @@ Create `devtube-web/firebase.config.json` file with and populate it with the con
   "authDomain": "<projectId>.firebaseapp.com",
   "databaseURL": "https://<projectId>.firebaseio.com"
 }
+```
+
+#### Set up Firestore
+
+1. In firebase, create a new Firestore database
+2. Set the following permissions:
 
 ```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+```
+
+#### Set up a service account
+1. In firebase, generate a new private key under Service accounts panel
+2. Store downloaded credentials under `devtube-web/express/firebase.json`.
 
 #### Install global dependencies
 

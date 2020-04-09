@@ -2,9 +2,8 @@
 import * as admin from 'firebase-admin'
 import * as serviceAccount from '../../firebase.json'
 
-const devMode = process.env.NODE_ENV === "development";
 admin.initializeApp({
-  ...(!devMode && { credential: admin.credential.cert(serviceAccount as admin.ServiceAccount) }),
+  credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
   databaseURL: 'https://watchdevtube.firebaseio.com'
 })
 
