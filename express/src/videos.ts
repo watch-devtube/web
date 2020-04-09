@@ -1,6 +1,6 @@
-import * as Datastore  from '@google-cloud/datastore'
+import * as Datastore from '@google-cloud/datastore'
 
-let datastore = new Datastore({})
+const datastore = new Datastore()
 
 export class Videos {
 
@@ -20,7 +20,7 @@ export class Videos {
     }
     return datastore.get(this.videoKeys)
       .then(([videos]) => videos)
-      .then(videos => videos.sort((a, b) => this.ids.indexOf(a.objectID) - this.ids.indexOf(b.objectID) ))
+      .then(videos => videos.sort((a, b) => this.ids.indexOf(a.objectID) - this.ids.indexOf(b.objectID)))
   }
 
   reactions() {
@@ -38,9 +38,9 @@ export class Videos {
   }
 
   private react(uid, collection, counter) {
-  
-    let [ videoKey ] = this.videoKeys
-    let [ reactionKey ] = this.reactionKeys
+
+    let [videoKey] = this.videoKeys
+    let [reactionKey] = this.reactionKeys
 
     let tx = datastore.transaction()
 
@@ -55,7 +55,7 @@ export class Videos {
         }]).dedup(it => it.uid)
         video[counter] = reactions[collection].length
         tx.save([
-          { key: videoKey, data: video, excludeFromIndexes: ['description'] }, 
+          { key: videoKey, data: video, excludeFromIndexes: ['description'] },
           { key: reactionKey, data: reactions }
         ])
         tx.commit()

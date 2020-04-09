@@ -4,5 +4,6 @@ backup/
 dist/
 src/static/*.xml
 service_key.json
+firebase.config.json
 .idea/
 *.log

@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "private": true,
   "scripts": {
+    "datastore-init": "node datastore.init.js",
     "dev": "webpack --mode=development && node dist/index.js dev",
     "build": "webpack --hide-modules --mode=production"
   },

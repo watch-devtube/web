@@ -64,6 +64,7 @@ module.exports = {
   resolve: {
     alias: {
       vue$: "vue/dist/vue.esm.js",
+      FirebaseConfig$: path.resolve(__dirname, "firebase.config.json"),
     },
   },
   devServer: {

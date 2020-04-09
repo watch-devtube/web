@@ -12,9 +12,7 @@ import { Fastr } from 'devtube-commons'
 import { Request, Response } from 'express'
 import axios from 'axios'
 import { dnsCache, Logger } from 'devtube-commons'
-import { unescape } from 'querystring'
 import { Videos } from './videos'
-import { Brownbags } from './brownbags'
 import { User } from './api/user'
 import { OgImage } from './ogImage'
 import responseTime from './responseTime'
@@ -122,28 +120,19 @@ async function proxy(req: Request, res: Response) {
 
   }
 
-  if (!req.path || req.path == "/" || req.path == '/find' ) {
+  if (!req.path || req.path == "/" || req.path == '/find') {
     indexHtml(res)
   } else if (req.path.startsWith("/contributors")) {
     indexHtml(res, {
       title: 'DevTube – Community and Contributors',
       description: 'Let\'s build the best tech video hub together!'
     })
-  } else if (req.path.startsWith("/brownbags/")) {
-    let objectID = req.path.split('/')[2]
-    let brownbags = new Brownbags()
-    let brownbag = await brownbags.fetchOne(objectID)
-    indexHtml(res, {
-      title: 'DevTube – Brown-Bags',
-      description: 'Let\'s watch videos together, real-time.',
-      brownbag: JSON.stringify(brownbag)
-    })    
   } else if (req.path.startsWith("/@")) {
     let [_, speaker] = req.path.split("/@")
     Logger.info(`SPEAKER REQUEST: ${speaker}`)
 
     let profile = await axios.get(`https://dossier.dev.tube/twt/${speaker}`)
-    let profileData = profile.data    
+    let profileData = profile.data
     indexHtml(res, {
       title: `${profileData.name}'s conference talks, videos and tutorials`,
       description: profileData.info,
@@ -154,22 +143,21 @@ async function proxy(req: Request, res: Response) {
     let module = await import(`.${req.path}`)
     module.default(req, res, fastr)
   } else if (directLink) {
-    // let param = unescape(req.path.split(directLink)[1])
     let param = req.path.split(directLink)[1]
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`)
     indexHtml(res, {
       title: `DevTube - Videos, tutorials, webinars about ${param}`,
       description: `All videos and tutorials by @${param} are here`,
-    })   
+    })
   } else if (req.path.startsWith('/video/')) {
 
     let objectID = req.path.split('/')[2]
-    
+
     Logger.info(`VIDEO REQUEST: ${objectID}`)
-    
+
     let q = undefined
     let sortOrder = ['-satisfaction']
-    let refinement = { 'objectID' : objectID } 
+    let refinement = { 'objectID': objectID }
 
     let videoId = fastr.search(q, refinement, sortOrder)
       .filter(hit => hit != null)
@@ -195,7 +183,7 @@ async function proxy(req: Request, res: Response) {
         title: title,
         description: video.description,
         ogImage: ogImage,
-        preloadedEntity: JSON.stringify({...video, reactions: reactions}),
+        preloadedEntity: JSON.stringify({ ...video, reactions: reactions }),
         jsonld: JSON.stringify({
           "@context": "http://schema.org/",
           "@type": "VideoObject",

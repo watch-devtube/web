@@ -1,5 +1,6 @@
 *.js
 !webpack.config.js
+!datastore.init.js
 *.pem
 service_key.json
 firebase.json

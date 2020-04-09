@@ -1,34 +1,30 @@
-const path = require('path')
+const path = require("path");
 
-const { CheckerPlugin } = require('awesome-typescript-loader')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const nodeExternals = require('webpack-node-externals')
-
+const { CheckerPlugin } = require("awesome-typescript-loader");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  target: 'node',
+  target: "node",
   entry: {
-    index: './index.ts'
+    index: "./index.ts",
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].js',
-    libraryTarget: 'commonjs2'
+    path: path.resolve(__dirname, "./dist"),
+    filename: "[name].js",
+    libraryTarget: "commonjs2",
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
-      }
-    ]
+        loader: "awesome-typescript-loader",
+      },
+    ],
   },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new CheckerPlugin()
-  ],    
-  externals: [nodeExternals()]
-}
+  plugins: [new CleanWebpackPlugin(["dist"]), new CheckerPlugin()],
+  externals: [nodeExternals()],
+};
