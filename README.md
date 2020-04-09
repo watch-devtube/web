@@ -2,36 +2,53 @@
 
 # Dev.Tube
 
-> Dev.Tube is where all developer videos live.
+This repository contains `Vue.js` frontend and `Express.js` backend for DevTube.
+
+## Table of content
+* [How to run DevTube locally](#how-to-run-devtube-locally)
+  * [Install global dependencies](#install-global-dependencies)
+  * [Firebase: Authentication](#firebase-authentication)  
+  * [Firebase: Firestore](#firebase-firestore)
+  * [Firebase: Connect DevTube](#firebase-connect-devtube)
+  * [Datastore: Download data](#datastore-download-data)
+  * [Datastore: Run emulator](#datastore-run-emulator)
+  * [Run backend](#run-backend)
+  * [Run frontend](#run-frontend)
+* [How to contribute](#how-to-contribute)
+* [How to contribute content](#how-to-contribute-content)
 
 ## How to run DevTube locally
 
-#### Set up Firebase Authentication
+#### Install global dependencies
 
-DevTube depends on Firebase Authentication, because some of its functionality requires a user to be authenticated via one of three OAuth providers – Google, Twitter, or GitHub. For development purposes, it's enough to configure GitHub authentication.
-
-1. Create new OAuth app in your GitHub account: github.com/settings/applications/new. GitHub will ask you to provide *Authorization callback URL*
-
-3. Create a new Firebase account on firebase.google.com
-4. In authentication panel, enable GitHub sign-in method. Copy *Authorization callback URL*.
-5. Switch back to GitHub.com and paste the *Authorization callback URL*.
-6. Copy *Client ID* and *Client Secret*; switch back to firebase.com and provide those values.
-
-Create `devtube-web/firebase.config.json` file with and populate it with the content:
-
-```json
-{
-  "projectId": "<projectId>",
-  "apiKey": "<apiKey>",
-  "authDomain": "<projectId>.firebaseapp.com",
-  "databaseURL": "https://<projectId>.firebaseio.com"
-}
+Install Yarn:
+```bash
+npm install -g yarn
 ```
 
-#### Set up Firestore
+Install [Google Cloud SDK](https://cloud.google.com/sdk/install):
+```bash
+brew cask install google-cloud-sdk
+```
 
-1. In firebase, create a new Firestore database
-2. Set the following permissions:
+#### Firebase: Authentication
+
+DevTube uses Firebase for OAuth authentication. For now, Google, Twitter, and GitHub providers are supported. For development purposes, it's enough to configure GitHub provider.
+
+1. [Create a new GitHub OAuth app](https://github.com/settings/applications/new). GitHub will ask you to provide *Authorization callback URL*.
+2. [Create a new Firebase account](https:///firebase.google.com).
+3. Go to Authentication and enable GitHub sign-in. Copy *Authorization callback URL*.
+4. Go to Github and finalize app creation by providing *Authorization callback URL*.
+5. Copy *Client ID* and *Client Secret*. 
+6. Go to Firebase and provide those values.
+
+#### Firebase: Firestore
+
+DevTube stores your subscriptions, favorites, and watched videos in Firestore. 
+
+1. Open your Firebase account
+2. Ceate a new Firestore database
+2. Provide the following database permissions:
 
 ```
 rules_version = '2';
@@ -44,22 +61,24 @@ service cloud.firestore {
 }
 ```
 
-#### Set up a service account
-1. In firebase, generate a new private key under Service accounts panel
-2. Store downloaded credentials under `devtube-web/express/firebase.json`.
+#### Firebase: Connect DevTube
+1. Open your Firebase account
+2. Generate a new private key under Service accounts panel
+3. Store downloaded credentials under `devtube-web/express/firebase.json`.
+4. Create `devtube-web/firebase.config.json` file with and populate it with the content:
 
-#### Install global dependencies
-
-```bash
-npm install -g yarn
+```json
+{
+  "projectId": "<firebase projectId>",
+  "apiKey": "<firebase apiKey>",
+  "authDomain": "<firebase projectId>.firebaseapp.com",
+  "databaseURL": "https://<firebase projectId>.firebaseio.com"
+}
 ```
 
-```bash
-# see cloud.google.com/sdk/install
-brew cask install google-cloud-sdk
-```
+#### Datastore: Download data
 
-#### Download and unzip test data
+DevTube data lives in Cloud Datastore. Download and unzip the following test data:
 
 ```bash
 curl --create-dirs -f -o express/data/loki.json https://storage.googleapis.com/dev-tube-index/loki-test.json
@@ -71,7 +90,7 @@ curl --create-dirs -f -o express/data/data-test.zip https://storage.googleapis.c
 unzip express/data/data-test.zip -d "express/data/videos"
 ```
 
-#### Prepare Cloud Datastore Emulator
+#### Datastore: Run emulator
 
 ```bash
 # run emulator
@@ -80,29 +99,28 @@ gcloud beta emulators datastore start --project=dev-tube
 # point environment variables to the emulator
 $(gcloud beta emulators datastore env-init)
 
-# populate datastore with data
-cd express # if haven't done already
+# populate Datastore Emulator 
+# From ./express directory run:
 yarn run datastore-init
 ```
 
 #### Run backend
 
-DevTube is built of Vue.js frontend and Express.js backend. You need to run backend first, because frontend relies on it.
+You need to run backend first, because frontend relies on it.
 
 ```bash
-cd express # if haven't done already
+# From ./express directory run:
 yarn && yarn dev
 ```
 
-### Run frontend
-
-From a project root directory, run:
+#### Run frontend
 
 ```bash
-  yarn && yarn dev
+# from project root directory, run:
+yarn && yarn dev
 ```
 
-DevTube is now running on [localhost:8100](http://localhost:8100)
+> 🚀 DevTube is now running on [localhost:8100](http://localhost:8100)
 
 ---
 
@@ -111,7 +129,7 @@ DevTube is now running on [localhost:8100](http://localhost:8100)
 Before submitting PR, check the code for violations:
 
 ```bash
-  yarn lint
+yarn lint
 ```
 
 ## How to contribute content?
