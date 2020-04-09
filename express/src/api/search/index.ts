@@ -1,5 +1,4 @@
 import { Videos } from '../../videos'
-import * as dayjs from 'dayjs'
 import * as LRU from 'lru-cache'
 
 const hottestResponses = new LRU({ maxAge: 1000 * 60 * 60 * 24, max: 100 })
@@ -26,21 +25,20 @@ export default async (req, res, fastr) => {
       .filter(hit => hit != null)
 
     let calculateStats = (stats, it) => {
-      let x = dayjs(it.recordingDate * 1000).format('YYYY')
       stats.likes = (stats.likes || 0) + it.likes
       stats.views = (stats.views || 0) + it.views
       stats.stage = (stats.stage || 0) + it.duration
       stats.videos = (stats.videos || 0) + 1
-      stats.timeline = (stats.timeline || {})
-      stats.timeline[x] = (stats.timeline[x] || 0) + 1 
       return stats
     }
-    let stats = hits.reduce(calculateStats, {})
+
+    let needStats = refinement && !!refinement['speaker.twitter'];
+    let stats = needStats ? hits.reduce(calculateStats, {}) : {}
 
     let hitsIds = hits
-      .filter(hit => !lang || hit.language == lang) 
+      .filter(hit => !lang || hit.language == lang)
       .filter(hit => !(excludes || []).includes(hit.objectID))
-      .map(hit => hit.objectID)  
+      .map(hit => hit.objectID)
 
     let from = (page || 0) * maxHitsPerPage
     let to = from + maxHitsPerPage
@@ -50,13 +48,14 @@ export default async (req, res, fastr) => {
     let response = {
       stats: stats,
       results: [{
-          hits: hitsPage,
-          page: page,
-          nbHits: hitsIds.length,
-          nbPages: nbPages,
-          hitsPerPage: maxHitsPerPage
-      }]}
-    
+        hits: hitsPage,
+        page: page,
+        nbHits: hitsIds.length,
+        nbPages: nbPages,
+        hitsPerPage: maxHitsPerPage
+      }]
+    }
+
     hottestResponses.set(requestKey, response)
 
     res.json(response)
