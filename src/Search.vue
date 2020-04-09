@@ -38,7 +38,7 @@
                       .column.is-9
                         ais-results#videos.columns.is-multiline
                           template(slot-scope="{ result }")
-                            .column.is-flex-tablet.is-4-widescreen.shrinkIfEmpty
+                            .column.shrinkIfEmpty
                               VideoCard(
                                 :tags="result.tags"
                                 :isFeatured="result.featured"
