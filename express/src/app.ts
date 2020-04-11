@@ -128,7 +128,7 @@ async function proxy(req: Request, res: Response) {
       description: 'Let\'s build the best tech video hub together!'
     })
   } else if (req.path.startsWith("/@")) {
-    let [_, speaker] = req.path.split("/@")
+    let [, speaker] = req.path.split("/@")
     Logger.info(`SPEAKER REQUEST: ${speaker}`)
 
     let profile = await axios.get(`https://dossier.dev.tube/twt/${speaker}`)
@@ -195,10 +195,10 @@ async function proxy(req: Request, res: Response) {
           "thumbnail": ogImage,
           "interactionCount": video.views,
           "uploadDate": dayjs(video.recordingDate * 1000).format('YYYY-MM-DD'),
-          "author": {
-            "@type": "Person",
-            "name": video.speaker ? video.speaker.name : ""
-          }
+          "author": video.speaker.map(it => ({
+              "@type": "Person",
+              "name": it.name
+          }))
         })
       })
     }

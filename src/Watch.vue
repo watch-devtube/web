@@ -14,28 +14,27 @@
                   nav.level.is-mobile
                     .level-item.has-text-centered
                       div
-                        .media(v-if="video.speaker && video.speaker.twitter")
-                            .media-left
-                                figure.image.is-32x32.is-marginless
-                                  img.avatar(:src="'https://avatars.io/twitter/' + video.speaker.twitter" :alt="video.speaker.name + ' avatar'")
-                            .media-content
-                              .content
-                                p.title.is-5
-                                  | {{video.speaker.name}}
-                                p.subtitle.is-6: a(:href="'/@' + video.speaker.twitter") @{{video.speaker.twitter}}
+                        .multiple(v-if="video.speaker.length")
+                          .media(v-for="each in video.speaker")
+                              .media-left
+                                  figure.image.is-32x32.is-marginless
+                                    img.avatar(:src="'https://avatars.io/twitter/' + each.twitter" :alt="each.name + ' avatar'")
+                              .media-content
+                                .content
+                                  p.title.is-6(style="margin-bottom: 1.2em")
+                                    | {{each.name}}
+                                  p.subtitle.is-7: a(:href="'/@' + each.twitter") @{{each.twitter}}
+                              .media-right.is-hidden-mobile
                                 .buttons.are-small
-                                  a.button.is-danger.is-outlined(v-if="hasSubscription(subscription(video.speaker.twitter))" @click="toggleSubscription(subscription(video.speaker.twitter))")
+                                  a.button.is-danger.is-outlined(v-if="hasSubscription(subscription(each.twitter))" @click="toggleSubscription(subscription(each.twitter))")
                                     .icon.is-small
                                       font-awesome-icon(icon="times")
                                     span unsubscribe
-                                  a.button.is-info.is-outlined(v-else @click="toggleSubscription(subscription(video.speaker.twitter))")
+                                  a.button.is-info.is-outlined(v-else @click="toggleSubscription(subscription(each.twitter))")
                                     span subscribe
-                                  TwitterThanks(:videoId="video.objectID" :title="video.title" :tags="video.tags" :channel="video.channelTitle" :speaker="video.speaker.twitter")
+                          .buttons.are-small
+                            TwitterThanks(:videoId="video.objectID" :title="video.title" :tags="video.tags" :channel="video.channelTitle" :speaker="video.speaker")
                         .media(v-else)
-                          //- .media-left
-                            figure.image.is-32x32.is-marginless(title="Add speaker")
-                              a(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'" target="_blank")
-                                img.avatar(src="/add-speaker.png" alt="Add speaker")
                           .media-content
                             .content
                               p.title.is-5 Know the speaker?
@@ -76,18 +75,8 @@
                           p.title.is-size-7 and get karma
           .content
             h3
-            //- .columns.is-vcentered.is-mobile
-              .column.is-narrow(v-for="tag in video.tags")
-                .tags.has-addons
-                  a.tag(@click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
-                  a.tag.is-delete(:href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + video.objectID + '.yml'" target="_blank")
-              .column
-                a.tag.is-capitalized(@click="refineChannel(video.channelTitle)")
-                  font-awesome-icon(:icon="['fab', 'youtube']")
-                  | &nbsp; {{video.channelTitle}}
-            //- h2.title.is-4 {{video.title}}
-      RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
-      MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speakerTwitter="video.speaker ? video.speaker.twitter : ''")
+      RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speaker="video.speaker")
+      MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker")
 </template>
 <style scoped lang="scss">
 .columns:not(.is-desktop) {

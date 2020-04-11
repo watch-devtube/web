@@ -1,64 +1,84 @@
-import { Videos } from '../../videos'
-import * as LRU from 'lru-cache'
+import { Videos } from "../../videos";
+import * as LRU from "lru-cache";
 
-const hottestResponses = new LRU({ maxAge: 1000 * 60 * 60 * 24, max: 100 })
+const hottestResponses = new LRU({ maxAge: 1000 * 60 * 60 * 24, max: 100 });
 
 export default async (req, res, fastr) => {
-
   if (!req.body.requests || !req.body.requests.length) {
-    res.sendStatus(400)
+    res.sendStatus(400);
   }
 
-  let { query, page, refinement, sortOrder, lang, excludes } = req.body.requests[0].params
-  let q = query ? query.trim().split(/\s+/).map(token => `+${token}`).join(" ") : query
+  let {
+    query,
+    page,
+    refinement,
+    sortOrder,
+    lang,
+    excludes,
+  } = req.body.requests[0].params;
+  let q = query
+    ? query
+        .trim()
+        .split(/\s+/)
+        .map((token) => `+${token}`)
+        .join(" ")
+    : query;
 
-  let requestKey = JSON.stringify({ query, page, refinement, sortOrder, lang, excludes })
+  let requestKey = JSON.stringify({
+    query,
+    page,
+    refinement,
+    sortOrder,
+    lang,
+    excludes,
+  });
 
-  let hottestResponse = hottestResponses.get(requestKey)
+  let hottestResponse = hottestResponses.get(requestKey);
 
   if (hottestResponse) {
-    return res.json(hottestResponse)
+    return res.json(hottestResponse);
   } else {
-    let maxHitsPerPage = 20
+    let maxHitsPerPage = 20;
     let hits = fastr
-      .search(q, refinement, ['-featured', sortOrder])
-      .filter(hit => hit != null)
+      .search(q, refinement, ["-featured", sortOrder])
+      .filter((hit) => hit != null);
 
     let calculateStats = (stats, it) => {
-      stats.likes = (stats.likes || 0) + it.likes
-      stats.views = (stats.views || 0) + it.views
-      stats.stage = (stats.stage || 0) + it.duration
-      stats.videos = (stats.videos || 0) + 1
-      return stats
-    }
+      stats.likes = (stats.likes || 0) + it.likes;
+      stats.views = (stats.views || 0) + it.views;
+      stats.stage = (stats.stage || 0) + it.duration;
+      stats.videos = (stats.videos || 0) + 1;
+      return stats;
+    };
 
-    let needStats = refinement && !!refinement['speaker.twitter'];
-    let stats = needStats ? hits.reduce(calculateStats, {}) : {}
+    let needStats = refinement && !!refinement["speaker.twitter"];
+    let stats = needStats ? hits.reduce(calculateStats, {}) : {};
 
     let hitsIds = hits
-      .filter(hit => !lang || hit.language == lang)
-      .filter(hit => !(excludes || []).includes(hit.objectID))
-      .map(hit => hit.objectID)
+      .filter((hit) => !lang || hit.language == lang)
+      .filter((hit) => !(excludes || []).includes(hit.objectID))
+      .map((hit) => hit.objectID);
 
-    let from = (page || 0) * maxHitsPerPage
-    let to = from + maxHitsPerPage
-    let hitsPage = await new Videos(hitsIds.slice(from, to)).fetch()
-    let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage)
+    let from = (page || 0) * maxHitsPerPage;
+    let to = from + maxHitsPerPage;
+    let hitsPage = await new Videos(hitsIds.slice(from, to)).fetch();
+    let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage);
 
     let response = {
       stats: stats,
-      results: [{
-        hits: hitsPage,
-        page: page,
-        nbHits: hitsIds.length,
-        nbPages: nbPages,
-        hitsPerPage: maxHitsPerPage
-      }]
-    }
+      results: [
+        {
+          hits: hitsPage,
+          page: page,
+          nbHits: hitsIds.length,
+          nbPages: nbPages,
+          hitsPerPage: maxHitsPerPage,
+        },
+      ],
+    };
 
-    hottestResponses.set(requestKey, response)
+    hottestResponses.set(requestKey, response);
 
-    res.json(response)
+    res.json(response);
   }
-
-}
+};

@@ -6,9 +6,9 @@
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             .is-overlay
             .ttl.is-capitalized.is-size-7
-              .image.is-32x32(v-if="speaker" :title="speaker.name")
-                a.is-lowercase(:href="'/@' + speaker.twitter")
-                  img.avatar(:src="'https://avatars.io/twitter/' + speaker.twitter + '/small'" :alt="speaker.name + ' avatar'")
+              .image.is-32x32(:title="each.name" v-for="(each, index) in speaker" :style="'left: -' + (20 + (10 * index)) + 'px'")
+                a.is-lowercase(:href="'/@' + each.twitter")
+                  img.avatar(:src="'https://avatars.io/twitter/' + each.twitter + '/small'" :alt="each.name + ' avatar'")
               | {{title}}
       .card-content
           nav.level.is-mobile
@@ -40,6 +40,7 @@
 
   .avatar {
     border-radius: 50% !important;
+    border: 2px solid white;
   }
 
   div.image {
@@ -63,13 +64,12 @@
       .image {
         position: absolute;
         top: 0;
-        left: -20px;
         bottom: 0;
         margin: auto;
       }
 
       .image:hover {
-        animation: pulse 1s infinite linear;
+        z-index: 666;
       }
     }
   }
@@ -106,15 +106,8 @@ export default {
     creationDate: { type: Number, required: true },
     tags: { type: Array, required: false, default: () => [] },
     speaker: {
-      default: undefined,
-      type: Object,
-      required: false,
-      name: {
-        type: String,
-      },
-      twitter: {
-        type: String,
-      },
+      type: Array,
+      required: true,
     },
   },
   data: function () {

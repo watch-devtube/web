@@ -19,7 +19,7 @@ export default {
   props: {
     videoId: { type: String, required: true },
     channel: { type: String, required: true },
-    speakerTwitter: { type: String, required: true },
+    speaker: { type: Array, required: true },
     tags: { type: Array, required: false, default: () => [] },
   },
   computed: {
@@ -27,18 +27,23 @@ export default {
   },
   asyncComputed: {
     hits() {
-      let watchedIds = this.watchedIds;
+      const watchedIds = this.watchedIds;
 
       if (!this.videoId) {
         return [];
       }
 
-      let refinement = this.tags.length
+      const refinement = this.speaker.length
+        ? {
+            "speaker.twitter": {
+              $containsAny: this.speaker.map((it) => it.twitter),
+            },
+          }
+        : this.tags.length
         ? { tags: { $containsAny: this.tags } }
-        : this.speakerTwitter
-        ? { "speaker.twitter": this.speakerTwitter }
         : { channelTitle: this.channel };
 
+      console.log(refinement);
       return axios
         .post(`/api/search`, {
           requests: [

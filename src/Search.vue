@@ -206,7 +206,7 @@ export default {
           $or: [
             { tags: { $containsAny: subscribedTags } },
             { channelTitle: { $in: subscribedChannels } },
-            { "speaker.twitter": { $in: subscribedSpeakers } },
+            { "speaker.twitter": { $containsAny: subscribedSpeakers } },
           ],
         };
 
