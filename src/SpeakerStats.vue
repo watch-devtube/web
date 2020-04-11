@@ -41,9 +41,6 @@
       a.button(v-else @click="requreLogin()") Subscribe
 </template>
 <style lang="scss">
-.is-rounded {
-  border: 1px solid white;
-}
 .profileInfo {
   margin-top: 0.5rem;
 }
