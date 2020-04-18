@@ -1,10 +1,10 @@
 <template lang="pug">
-  .columns.is-centered(v-if="profile && profile.name")
+  .columns.is-centered
     .column.has-text-centered
       figure.image.is-128x128.container
-        img.is-rounded(:src="'https://avatars.io/twitter/' + twt" :alt="twt + ' avatar'")
+        img.is-rounded(:src="`https://avatars.io/twitter/${twt}`" :alt="`${twt} avatar`")
       h2.is-size-5 {{profile.name}}
-      a.is-size-7.is-lowercased(:href="'https://twitter.com/' + twt" rel="nofollow")
+      a.is-size-7.is-lowercased(:href="`https://twitter.com/${twt}`" rel="nofollow")
         font-awesome-icon(:icon="['fab', 'twitter']")
         |  {{twt}}
       p.profileInfo.is-size-7 {{profile.info}}
@@ -35,16 +35,10 @@
           </div>
         </div>
       br
-      .subscriptions(v-if="auth.user")
-        a.button(v-if="hasSubscription(subscription(twt))" @click="toggleSubscription(subscription(twt))") Unsubscribe
-        a.button(v-else @click="toggleSubscription(subscription(twt))") Subscribe
-      a.button(v-else @click="requreLogin()") Subscribe
+      .subscriptions
+        a.button(@click="toggleSpeakerSubscription(twt)")
+          | {{hasSpeakerSubscription(twt) ? 'Unsubscribe' : 'Subscribe'}}
 </template>
-<style lang="scss">
-.profileInfo {
-  margin-top: 0.5rem;
-}
-</style>
 <script>
 import { mapState, mapActions, mapGetters } from "vuex";
 import axios from "axios";
@@ -53,36 +47,26 @@ export default {
     twt: { type: String, required: true },
     stats: { type: Object, required: true },
   },
+  data() {
+    return {
+      profile: {},
+    };
+  },
   computed: {
     ...mapState(["auth"]),
-    ...mapGetters("videos", ["hasSubscription"]),
+    ...mapGetters("videos", ["hasSpeakerSubscription"]),
   },
   created() {
-    this.profile = window.speaker;
-  },
-  asyncComputed: {
-    profile() {
-      if (this.twt)
-        return (
-          window.speaker ||
-          axios
-            .get(`https://dossier.dev.tube/twt/` + this.twt)
-            .then((response) => response.data)
-        );
-    },
+    axios
+      .get(`https://dossier.dev.tube/twt/${this.twt}`)
+      .then(({ data }) => data)
+      .then((profile) => (this.profile = profile));
   },
   methods: {
-    requreLogin() {
-      this.$store.dispatch("notify/error", {
-        text: "You have to login first.",
-        title: "",
-        duration: 3000,
-      });
-    },
-    subscription(item) {
-      return { topic: item, type: "speaker" };
-    },
-    ...mapActions("videos", ["toggleSubscription"]),
+    ...mapActions("videos", [
+      "toggleSubscription",
+      "toggleSpeakerSubscription",
+    ]),
   },
 };
 </script>

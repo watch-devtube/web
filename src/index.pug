@@ -87,10 +87,7 @@ html(lang='en')
       {{{jsonld}}}
     script.
       window.preloadedEntity = {{& preloadedEntity}}{{^preloadedEntity}}undefined{{/preloadedEntity}}
-      window.serverSideError = {{& serverSideError}}{{^serverSideError}}undefined{{/serverSideError}}
       window.newVideos = {{& newVideos}}{{^newVideos}}[]{{/newVideos}}
-      window.speaker = {{& speaker}}{{^speaker}}undefined{{/speaker}}
-      window.brownbag = {{& brownbag}}{{^brownbag}}undefined{{/brownbag}}
       window.featured = {{& featured}}{{^featured}}undefined{{/featured}}
     include yandex.pug
   body

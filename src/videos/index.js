@@ -26,6 +26,9 @@ let actions = {
       commit("init", { watched: [], favorites: [] });
     }
   },
+  toggleSpeakerSubscription({ dispatch }, speaker) {
+    dispatch("toggleSubscription", { topic: speaker, type: "speaker" });
+  },
   toggleSubscription({ commit, getters, rootState, rootGetters }, sub) {
     const signedIn = rootGetters["auth/isSignedIn"];
     if (!signedIn) {
@@ -109,6 +112,10 @@ let actions = {
 };
 
 let getters = {
+  hasSpeakerSubscription: (state) => (speaker) =>
+    state.subscriptions.some(
+      (it) => it.topic == speaker && it.type == "speaker"
+    ),
   hasSubscription: (state) => (sub) =>
     state.subscriptions.some(
       (it) => it.topic == sub.topic && it.type == sub.type

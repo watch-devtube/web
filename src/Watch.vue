@@ -9,7 +9,7 @@
               VideoToggles(:videoId="id")
               a(@click="toggleWatched(id)" v-if="auth.user")
               .videoWrapper
-                iframe(:src="'https://www.youtube.com/embed/' + id + '?modestbranding=1&showinfo=0&rel=0'" title="Embedded video" frameborder="0" allowfullscreen)
+                iframe(:src="`https://www.youtube.com/embed/${id}?modestbranding=1&showinfo=0&rel=0`" title="Embedded video" frameborder="0" allowfullscreen)
             .card-content
                   nav.level.is-mobile
                     .level-item.has-text-centered
