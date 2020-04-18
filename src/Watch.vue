@@ -14,7 +14,7 @@
                   nav.level.is-mobile
                     .level-item.has-text-centered
                       div
-                        .multiple(v-if="video.speaker.length")
+                        .multiple(v-if="video.speaker && video.speaker.length")
                           .media(v-for="each in video.speaker")
                               .media-left
                                   figure.image.is-32x32.is-marginless
@@ -75,8 +75,8 @@
                           p.title.is-size-7 and get karma
           .content
             h3
-      RelatedVideos(:videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speaker="video.speaker")
-      MessageWidget(:videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker")
+      RelatedVideos(v-if="!!video.objectID" :videoId="video.objectID" :channel="video.channelTitle" :featured="video.featured" :tags="video.tags" :speaker="video.speaker")
+      MessageWidget(v-if="!!video.objectID" :videoId="video.objectID" :channel="video.channelTitle" :tags="video.tags" :speaker="video.speaker")
 </template>
 <style scoped lang="scss">
 .columns:not(.is-desktop) {
@@ -140,27 +140,23 @@ export default {
   data: function () {
     return {
       errors: [],
-      video: {
-        speaker: {},
-        reactions: {},
-      },
-      isFullWidth: false,
+      video: {},
     };
   },
   computed: {
     dtLikes() {
-      return this.video.reactions?.likes.length || 0;
+      return this.video.reactions?.likes?.length || 0;
     },
     dtDislikes() {
-      return this.video.reactions?.dislikes.length || 0;
+      return this.video.reactions?.dislikes?.length || 0;
     },
     iLiked() {
       let me = this.auth.user.uid;
-      return this.video.reactions?.likes.some((like) => like.uid == me);
+      return this.video.reactions?.likes?.some((like) => like.uid == me);
     },
     iDisliked() {
       let me = this.auth.user.uid;
-      return this.video.reactions?.dislikes.some(
+      return this.video.reactions?.dislikes?.some(
         (dislike) => dislike.uid == me
       );
     },
@@ -195,9 +191,6 @@ export default {
         .get(`/api2/videos/${this.id}`)
         .then((it) => (this.video = it.data))
         .then(() => this.$Progress.finish());
-    },
-    toggleWidth: function () {
-      this.isFullWidth = !this.isFullWidth;
     },
     refineTag: function (tag) {
       this.$router.push({ name: "tag", params: { tag: tag } });

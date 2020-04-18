@@ -1,14 +1,5 @@
 {
-  "presets": [
-    [
-      "latest",
-      {
-        "es2015": {
-          "modules": false
-        }
-      }
-    ]
-  ],
+  "presets": ["@babel/preset-env"],
   "plugins": [
     "syntax-dynamic-import",
     "@babel/plugin-proposal-object-rest-spread",
