@@ -126,6 +126,7 @@ import karma from "./karma";
 import notify from "./notify";
 import query from "./query";
 import likes from "./likes";
+import lists from "./lists";
 
 Vue.use(Vuex);
 Vue.use(InstantSearch);
@@ -198,6 +199,7 @@ const store = new Vuex.Store({
     notify,
     query,
     likes,
+    lists,
     karma,
   },
   strict: true,
@@ -209,6 +211,7 @@ new Vue({
   el: "#vue",
   store,
   created() {
+    store.dispatch("lists/initialize");
     firebase.auth().onAuthStateChanged((user) => {
       store.dispatch("auth/autoSignIn", user);
       store.dispatch("videos/initialize", user);

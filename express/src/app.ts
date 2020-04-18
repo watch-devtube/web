@@ -71,12 +71,6 @@ Logger.info("---- APPLICATION STARTED ----");
 // Application logic
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const featured = JSON.stringify({
-  tags: fastr.listTags(),
-  channels: fastr.listChannels(),
-  speakers: fastr.listSpeakers(),
-});
-
 console.timeEnd("Application start");
 
 async function proxy(req: Request, res: Response) {
@@ -85,9 +79,9 @@ async function proxy(req: Request, res: Response) {
   Logger.info(`REQUEST PATH: ${req.path}`);
 
   if (!req.path || req.path == "/" || req.path == "/find") {
-    new IndexHtml(featured).render(req, res);
+    new IndexHtml().render(req, res);
   } else if (req.path.startsWith("/contributors")) {
-    new IndexHtml(featured, {
+    new IndexHtml({
       title: LEADERBOARD_TITLE,
       descr: LEADERBOARD_DESCR,
     }).render(req, res);
@@ -96,7 +90,7 @@ async function proxy(req: Request, res: Response) {
     Logger.info(`SPEAKER REQUEST: ${speaker}`);
     let profile = await axios.get(`https://dossier.dev.tube/twt/${speaker}`);
     let profileData = profile.data;
-    new IndexHtml(featured, {
+    new IndexHtml({
       title: `${profileData.name} on DevTube: conference talks, videos and tutorials`,
       descr: profileData.info,
       image: new OgImage(speaker, profileData.name, profileData.info).url,
@@ -107,7 +101,7 @@ async function proxy(req: Request, res: Response) {
   } else if (directLink) {
     let param = req.path.split(directLink)[1];
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`);
-    new IndexHtml(featured, {
+    new IndexHtml({
       title: `${param} videos, tutorials, webinars on DevTube`,
       descr: `All videos and tutorials by @${param} are here`,
     }).render(req, res);
@@ -139,7 +133,7 @@ async function proxy(req: Request, res: Response) {
     } else {
       let ogImage = `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`;
       let title = `${video.title} – Watch on DevTube`;
-      new IndexHtml(featured, {
+      new IndexHtml({
         title: title,
         descr: video.description,
         image: ogImage,
@@ -171,6 +165,14 @@ async function proxy(req: Request, res: Response) {
     }
   }
 }
+
+app.get("/api2/lists/all", async (req: Request, res: Response) => {
+  res.send({
+    tags: fastr.listTags(),
+    channels: fastr.listChannels(),
+    speakers: fastr.listSpeakers(),
+  });
+});
 
 app.get("/api2/videos/:videoId", async (req: Request, res: Response) => {
   const { videoId } = req.params;

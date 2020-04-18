@@ -6,10 +6,8 @@ export class IndexHtml {
   title: string;
   descr: string;
   image: string;
-  featured: Object;
 
-  constructor(featured: Object, params = {} as any) {
-    this.featured = featured;
+  constructor(params = {} as any) {
     this.image = params.image || DEFAULT_OG_IMG;
     this.title = this.normalizeQuotes(params.title || DEFAULT_TITLE);
     this.descr = this.normalizeQuotes(params.descr || DEFAULT_DESCR);
@@ -20,7 +18,6 @@ export class IndexHtml {
     const nightMode = cookies && cookies.includes("nightMode");
     const attrs = {
       nightMode: nightMode,
-      featured: this.featured,
       title: this.title,
       meta: [
         { name: "description", content: this.descr },

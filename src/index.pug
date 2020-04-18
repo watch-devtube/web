@@ -85,9 +85,6 @@ html(lang='en')
     |   {{/meta}}
     script(type="application/ld+json").
       {{{jsonld}}}
-    script.
-      window.newVideos = {{& newVideos}}{{^newVideos}}[]{{/newVideos}}
-      window.featured = {{& featured}}{{^featured}}undefined{{/featured}}
     include yandex.pug
   body
     #vue

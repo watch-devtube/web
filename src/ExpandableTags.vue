@@ -5,7 +5,7 @@
   .modal(v-bind:class="{'is-active': isExpanded}")
     .modal-background(@click="toggleCollapse()")
     .modal-content
-      .field.is-grouped.is-grouped-multiline(v-for="item in itemsColection")
+      .field.is-grouped.is-grouped-multiline(v-for="item in lists[items]")
         .control
           .tags.has-addons
             a.tag.is-dark(@click="navigate(item)")
@@ -58,10 +58,7 @@ export default {
     isExpanded() {
       return !this.collapsed;
     },
-    itemsColection() {
-      return window.featured[this.items];
-    },
-    ...mapState(["auth"]),
+    ...mapState(["auth", "lists"]),
     ...mapGetters("videos", ["hasSubscription"]),
   },
   methods: {
@@ -70,7 +67,6 @@ export default {
     },
     toggleCollapse() {
       this.collapsed = !this.collapsed;
-
       if (!this.collapsed) {
         this.html.classList.add("is-clipped");
       } else {
