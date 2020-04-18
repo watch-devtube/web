@@ -113,6 +113,7 @@
 }
 </style>
 <script>
+import axios from "axios";
 import RelatedVideos from "./RelatedVideos.vue";
 import MessageWidget from "./MessageWidget.vue";
 import VideoToggles from "./VideoToggles.vue";
@@ -140,6 +141,7 @@ export default {
     return {
       errors: [],
       video: {
+        speaker: {},
         reactions: {},
       },
       isFullWidth: false,
@@ -147,25 +149,19 @@ export default {
   },
   computed: {
     dtLikes() {
-      return (this.video.reactions && this.video.reactions.likes.length) || 0;
+      return this.video.reactions?.likes.length || 0;
     },
     dtDislikes() {
-      return (
-        (this.video.reactions && this.video.reactions.dislikes.length) || 0
-      );
+      return this.video.reactions?.dislikes.length || 0;
     },
     iLiked() {
       let me = this.auth.user.uid;
-      return (
-        this.video.reactions &&
-        this.video.reactions.likes.some((like) => like.uid == me)
-      );
+      return this.video.reactions?.likes.some((like) => like.uid == me);
     },
     iDisliked() {
       let me = this.auth.user.uid;
-      return (
-        this.video.reactions &&
-        this.video.reactions.dislikes.some((dislike) => dislike.uid == me)
+      return this.video.reactions?.dislikes.some(
+        (dislike) => dislike.uid == me
       );
     },
     ...mapState(["videos", "auth"]),
@@ -195,8 +191,10 @@ export default {
         .catch((e) => this.$store.dispatch("notify/error", { error: e }));
     },
     fetch() {
-      this.video = window.preloadedEntity;
-      this.$Progress.finish();
+      axios
+        .get(`/api2/videos/${this.id}`)
+        .then((it) => (this.video = it.data))
+        .then(() => this.$Progress.finish());
     },
     toggleWidth: function () {
       this.isFullWidth = !this.isFullWidth;

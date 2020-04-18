@@ -86,7 +86,6 @@ html(lang='en')
     script(type="application/ld+json").
       {{{jsonld}}}
     script.
-      window.preloadedEntity = {{& preloadedEntity}}{{^preloadedEntity}}undefined{{/preloadedEntity}}
       window.newVideos = {{& newVideos}}{{^newVideos}}[]{{/newVideos}}
       window.featured = {{& featured}}{{^featured}}undefined{{/featured}}
     include yandex.pug

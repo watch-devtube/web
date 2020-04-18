@@ -35,12 +35,13 @@
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
     "autoprefixer": "^9.1.0",
-    "babel-core": "^6.0.0",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^8.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-latest": "^6.0.0",
     "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.1.3",

@@ -6,6 +6,8 @@ import * as fs from "fs";
 import * as path from "path";
 import * as dayjs from "dayjs";
 
+import { LEADERBOARD_TITLE, LEADERBOARD_DESCR } from "./texts";
+
 import "./utils";
 import { Fastr } from "devtube-commons";
 import { Request, Response } from "express";
@@ -14,6 +16,7 @@ import { dnsCache, Logger } from "devtube-commons";
 import { Videos } from "./videos";
 import { User } from "./api/user";
 import { OgImage } from "./ogImage";
+import { IndexHtml } from "./indexHtml";
 import responseTime from "./responseTime";
 
 console.timeEnd("Imports");
@@ -68,87 +71,46 @@ Logger.info("---- APPLICATION STARTED ----");
 // Application logic
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let featuredOrUndefined = () => {
-  let tags = fastr.listTags();
-  let channels = fastr.listChannels();
-  let speakers = fastr.listSpeakers();
-  return JSON.stringify({
-    tags: tags,
-    channels: channels,
-    speakers: speakers,
-  });
-};
+const featured = JSON.stringify({
+  tags: fastr.listTags(),
+  channels: fastr.listChannels(),
+  speakers: fastr.listSpeakers(),
+});
 
 console.timeEnd("Application start");
 
 async function proxy(req: Request, res: Response) {
   let directLink = ["/channel/", "/tag/"].find((it) => req.path.startsWith(it));
 
-  let cookies = req.get("Cookie");
-  let nightMode = cookies && cookies.includes("nightMode");
-
   Logger.info(`REQUEST PATH: ${req.path}`);
 
-  let indexHtml = (res, overrides = {} as any) => {
-    let doubleToSingleQuotes = (str) => str.replace(/"/g, "'");
-
-    let title = doubleToSingleQuotes(
-      overrides.title || "DevTube - The best developer videos in one place"
-    );
-    let description = doubleToSingleQuotes(
-      overrides.description ||
-        "Enjoy the best tech conference videos, webinars and tutorials and share it with friends, colleagues, and the world."
-    );
-    let ogImage = overrides.ogImage || "https://dev.tube/open_graph.jpg";
-
-    let defaultResponse = {
-      title: title,
-      nightMode: nightMode,
-      featured: featuredOrUndefined(),
-      meta: [
-        { name: "description", content: description },
-        { property: "og:title", content: title },
-        { property: "og:description", content: description },
-        { property: "og:image", content: ogImage },
-        { property: "twitter:title", content: title },
-        { property: "twitter:description", content: description },
-        { property: "twitter:image", content: ogImage },
-        { property: "twitter:card", content: "summary_large_image" },
-        { property: "twitter:site", content: "@WatchDevTube" },
-        { property: "twitter:creator", content: "@WatchDevTube" },
-      ],
-    };
-
-    res.render(`${staticDir}/index.html`, { ...defaultResponse, ...overrides });
-  };
-
   if (!req.path || req.path == "/" || req.path == "/find") {
-    indexHtml(res);
+    new IndexHtml(featured).render(req, res);
   } else if (req.path.startsWith("/contributors")) {
-    indexHtml(res, {
-      title: "DevTube – Community and Contributors",
-      description: "Let's build the best tech video hub together!",
-    });
+    new IndexHtml(featured, {
+      title: LEADERBOARD_TITLE,
+      descr: LEADERBOARD_DESCR,
+    }).render(req, res);
   } else if (req.path.startsWith("/@")) {
     let [, speaker] = req.path.split("/@");
     Logger.info(`SPEAKER REQUEST: ${speaker}`);
     let profile = await axios.get(`https://dossier.dev.tube/twt/${speaker}`);
     let profileData = profile.data;
-    indexHtml(res, {
+    new IndexHtml(featured, {
       title: `${profileData.name} on DevTube: conference talks, videos and tutorials`,
-      description: profileData.info,
-      ogImage: new OgImage(speaker, profileData.name, profileData.info).url,
-    });
+      descr: profileData.info,
+      image: new OgImage(speaker, profileData.name, profileData.info).url,
+    }).render(req, res);
   } else if (req.path.startsWith("/api/")) {
     let module = await import(`.${req.path}`);
     module.default(req, res, fastr);
   } else if (directLink) {
     let param = req.path.split(directLink)[1];
     Logger.info(`DIRECT LINK REQUEST: ${directLink}`);
-    indexHtml(res, {
-      title: `DevTube - Videos, tutorials, webinars about ${param}`,
-      description: `All videos and tutorials by @${param} are here`,
-    });
+    new IndexHtml(featured, {
+      title: `${param} videos, tutorials, webinars on DevTube`,
+      descr: `All videos and tutorials by @${param} are here`,
+    }).render(req, res);
   } else if (req.path.startsWith("/video/")) {
     let objectID = req.path.split("/")[2];
 
@@ -171,23 +133,21 @@ async function proxy(req: Request, res: Response) {
 
     let videos = new Videos([videoId]);
     let [video] = await videos.fetch();
-    let [reactions] = await videos.reactions();
 
     if (!video) {
       res.status(404).send("Not found");
     } else {
       let ogImage = `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`;
-      let title = `${video.title} – Watch on Dev.Tube`;
-      indexHtml(res, {
+      let title = `${video.title} – Watch on DevTube`;
+      new IndexHtml(featured, {
         title: title,
-        description: video.description,
-        ogImage: ogImage,
-        preloadedEntity: JSON.stringify({ ...video, reactions: reactions }),
+        descr: video.description,
+        image: ogImage,
         jsonld: JSON.stringify({
           "@context": "http://schema.org/",
           "@type": "VideoObject",
-          name: title,
           "@id": "https://dev.tube/video/" + videoId,
+          name: title,
           datePublished: dayjs(video.recordingDate * 1000).format("YYYY-MM-DD"),
           description: video.description,
           thumbnailURL: ogImage,
@@ -199,7 +159,7 @@ async function proxy(req: Request, res: Response) {
             name: it.name,
           })),
         }),
-      });
+      }).render(req, res);
     }
   } else {
     let absoluteFilePath = path.resolve(`${staticDir}/${req.path}`);
@@ -211,6 +171,14 @@ async function proxy(req: Request, res: Response) {
     }
   }
 }
+
+app.get("/api2/videos/:videoId", async (req: Request, res: Response) => {
+  const { videoId } = req.params;
+  const videos = new Videos([videoId]);
+  const [video] = await videos.fetch();
+  const [reactions] = await videos.reactions();
+  res.send({ ...video, reactions });
+});
 
 app.post("/api2/videos/:videoId/likes", async (req: Request, res: Response) => {
   let { auth } = req.headers;
