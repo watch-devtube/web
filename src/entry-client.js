@@ -162,6 +162,8 @@ Vue.mixin({
   },
 });
 
+require("./main.scss");
+
 const router = new VueRouter({
   mode: "history",
   linkExactActiveClass: "is-active",
