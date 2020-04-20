@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    title {{{title}}}
+    title The best developer videos from YouTube – on DevTube
     meta(name='viewport' content='width=device-width, initial-scale=1')
     meta(http-equiv='x-ua-compatible' content='ie=edge')
     meta(name='keywords' content='')
@@ -75,16 +75,6 @@ html(lang='en')
     link(rel='alternate' type='application/rss+xml' title="Newly added videos" href='https://dev.tube/rss.xml')
     script(src='//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js')
     meta(name='apple-mobile-web-app-title' content='DevTube')
-    |     {{#meta}}
-    |       {{#name}}
-    meta(name='{{name}}', content='{{{content}}}')
-    |      {{/name}}
-    |      {{^name}}
-    meta(property='{{property}}', content='{{{content}}}')
-    |     {{/name}}
-    |   {{/meta}}
-    script(type="application/ld+json").
-      {{{jsonld}}}
     include yandex.pug
   body
     #vue

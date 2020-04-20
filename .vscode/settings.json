@@ -1,6 +1,5 @@
 {
   "git.autofetch": true,
-  "files.autoSave": "afterDelay",
   "editor.renderControlCharacters": false,
   "git.enableSmartCommit": true,
   "editor.tabSize": 2,

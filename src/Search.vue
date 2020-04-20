@@ -34,7 +34,37 @@
                 section(v-if="speaker")
                   .columns
                       .column.is-3
-                        SpeakerStats(:stats="stats" :twt="speaker")
+                        .columns.is-centered
+                          .column.has-text-centered
+                            figure.image.is-128x128.container
+                              img.is-rounded(:src="`https://avatars.io/twitter/${speaker}`" :alt="`${speaker} avatar`")
+                            h2.is-size-5 {{profile.name}}
+                            a.is-size-7.is-lowercased(:href="`https://twitter.com/${speaker}`" rel="nofollow")
+                              font-awesome-icon(:icon="['fab', 'twitter']")
+                              |  {{speaker}}
+                            p.profileInfo.is-size-7 {{profile.info}}
+                            hr
+                            .level.is-mobile
+                              .level-item.has-text-centered
+                                div
+                                  p.heading Videos
+                                  p {{stats.videos | kilo}}
+                              .level-item.has-text-centered
+                                div
+                                  p.heading On Stage
+                                  p {{stats.stage | durationFull}}
+                              .level-item.has-text-centered
+                                div
+                                  p.heading Likes
+                                  p {{stats.likes | kilo}}
+                              .level-item.has-text-centered
+                                div
+                                  p.heading Views
+                                  p {{stats.views | kilo}}
+                            br
+                            .subscriptions
+                              a.button(@click="toggleSpeakerSubscription(speaker)")
+                                | {{hasSpeakerSubscription(speaker) ? 'Unsubscribe' : 'Subscribe'}}
                       .column.is-9
                         ais-results#videos.columns.is-multiline
                           template(slot-scope="{ result }")
@@ -81,17 +111,19 @@
 import { createFromAlgoliaClient } from "vue-instantsearch";
 import { mapState, mapGetters, mapActions } from "vuex";
 
+import axios from "axios";
+
+import { capitalizeIfNeeded } from "./helpers/filters";
+import { meta, ogImage } from "./helpers/meta";
+
 import VideoCard from "./VideoCard.vue";
-import SpeakerStats from "./SpeakerStats.vue";
 import Sorting from "./Sorting.vue";
 import ExpandableTags from "./ExpandableTags.vue";
-
 export default {
   components: {
     ExpandableTags,
     VideoCard,
     Sorting,
-    SpeakerStats,
   },
   props: {
     q: { type: String, default: "" },
@@ -106,11 +138,16 @@ export default {
     return {
       loading: false,
       stats: {},
+      profile: {},
     };
   },
   computed: {
     ...mapState(["videos", "query"]),
-    ...mapGetters("videos", ["watchedIds", "favoriteIds"]),
+    ...mapGetters("videos", [
+      "watchedIds",
+      "favoriteIds",
+      "hasSpeakerSubscription",
+    ]),
     ...mapGetters("loading", ["completed"]),
   },
   watch: {
@@ -120,7 +157,6 @@ export default {
   },
   created() {
     let that = this;
-
     let fastr = {
       search(requests) {
         that.$Progress.start();
@@ -154,6 +190,7 @@ export default {
   },
   methods: {
     ...mapActions("query", ["lang"]),
+    ...mapActions("videos", ["toggleSpeakerSubscription"]),
     scrollTop() {
       window.scrollTo(0, 0);
     },
@@ -215,6 +252,12 @@ export default {
       }
 
       if (this.speaker) {
+        axios
+          .get(`https://dossier.dev.tube/twt/${this.speaker}`)
+          .then(({ data }) => data)
+          .then((profile) => (this.profile = profile))
+          .then(() => this.$emit("updateHead"));
+
         this.searchStore.queryParameters = {
           refinement: { "speaker.twitter": this.speaker },
         };
@@ -233,6 +276,35 @@ export default {
 
       this.searchStore.start();
       this.searchStore.refresh();
+      this.$emit("updateHead");
+    },
+    title() {
+      const topic = this.tag
+        ? capitalizeIfNeeded(this.tag)
+        : this.channel
+        ? this.channel
+        : this.profile.name
+        ? `${this.profile.name} -`
+        : "The best developer";
+      return `${topic} videos and tutorials from YouTube`;
+    },
+  },
+  head: {
+    title() {
+      return {
+        separator: "–",
+        complement: "on DevTube",
+        inner: this.title(),
+      };
+    },
+    meta() {
+      return meta({
+        title: this.title(),
+        descr: this.title(),
+        ...(this.profile.name && {
+          image: ogImage(this.speaker, this.profile.name, this.profile.info),
+        }),
+      });
     },
   },
 };

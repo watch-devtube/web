@@ -4,20 +4,14 @@ console.time("Imports");
 
 import * as fs from "fs";
 import * as path from "path";
-import * as dayjs from "dayjs";
-
-import { LEADERBOARD_TITLE, LEADERBOARD_DESCR } from "./texts";
 
 import "./utils";
 import { Fastr } from "devtube-commons";
 import { Request, Response } from "express";
-import axios from "axios";
 import { dnsCache, Logger } from "devtube-commons";
 import { Videos } from "./videos";
 import { User } from "./api/user";
-import { OgImage } from "./ogImage";
 import { IndexHtml } from "./indexHtml";
-import responseTime from "./responseTime";
 
 console.timeEnd("Imports");
 
@@ -36,6 +30,9 @@ let body = require("body-parser");
 let mustache = require("mustache-express");
 let cors = require("cors");
 
+let winston = require("winston");
+let expressWinston = require("express-winston");
+
 let app = express();
 let devMode = process.env.DEV_MODE === "true" || process.argv[2] === "dev";
 let staticDir = path.resolve(devMode ? `../dist` : "./dist");
@@ -47,8 +44,15 @@ let fastr = new Fastr({ dataDir: dataDir, serialized: true });
 Logger.timeEnd("Fastr indexing");
 
 app.use(cors());
-app.use(responseTime);
 app.use(body.json());
+app.use(
+  expressWinston.logger({
+    transports: [new winston.transports.Console()],
+    meta: false,
+    expressFormat: true,
+  })
+);
+app.use(require("prerender-node"));
 
 app.use(
   express.static(staticDir, {
@@ -74,51 +78,29 @@ Logger.info("---- APPLICATION STARTED ----");
 console.timeEnd("Application start");
 
 async function proxy(req: Request, res: Response) {
-  let directLink = ["/channel/", "/tag/"].find((it) => req.path.startsWith(it));
-
-  Logger.info(`REQUEST PATH: ${req.path}`);
-
-  if (!req.path || req.path == "/" || req.path == "/find") {
+  if (
+    !req.path ||
+    req.path == "/" ||
+    req.path == "/find" ||
+    req.path.startsWith("/contributors") ||
+    req.path.startsWith("/@") ||
+    req.path.startsWith("/channel/") ||
+    req.path.startsWith("/tag/")
+  ) {
     new IndexHtml().render(req, res);
-  } else if (req.path.startsWith("/contributors")) {
-    new IndexHtml({
-      title: LEADERBOARD_TITLE,
-      descr: LEADERBOARD_DESCR,
-    }).render(req, res);
-  } else if (req.path.startsWith("/@")) {
-    let [, speaker] = req.path.split("/@");
-    Logger.info(`SPEAKER REQUEST: ${speaker}`);
-    let profile = await axios.get(`https://dossier.dev.tube/twt/${speaker}`);
-    let profileData = profile.data;
-    new IndexHtml({
-      title: `${profileData.name} on DevTube: conference talks, videos and tutorials`,
-      descr: profileData.info,
-      image: new OgImage(speaker, profileData.name, profileData.info).url,
-    }).render(req, res);
   } else if (req.path.startsWith("/api/")) {
     let module = await import(`.${req.path}`);
     module.default(req, res, fastr);
-  } else if (directLink) {
-    let param = req.path.split(directLink)[1];
-    Logger.info(`DIRECT LINK REQUEST: ${directLink}`);
-    new IndexHtml({
-      title: `${param} videos, tutorials, webinars on DevTube`,
-      descr: `All videos and tutorials by @${param} are here`,
-    }).render(req, res);
   } else if (req.path.startsWith("/video/")) {
-    let objectID = req.path.split("/")[2];
-
-    Logger.info(`VIDEO REQUEST: ${objectID}`);
-
+    let [, , objectID] = req.path.split("/");
     let q = undefined;
     let sortOrder = ["-satisfaction"];
     let refinement = { objectID: objectID };
 
-    let videoId = fastr
+    let [videoId] = fastr
       .search(q, refinement, sortOrder)
-      .filter((hit) => hit != null)
-      .map((it) => it.objectID)
-      .find((it) => true);
+      .filter((hit) => !!hit)
+      .map((it) => it.objectID);
 
     if (!videoId) {
       res.status(404).send("Not found");
@@ -131,29 +113,7 @@ async function proxy(req: Request, res: Response) {
     if (!video) {
       res.status(404).send("Not found");
     } else {
-      let ogImage = `https://img.youtube.com/vi/${video.objectID}/maxresdefault.jpg`;
-      let title = `${video.title} – Watch on DevTube`;
-      new IndexHtml({
-        title: title,
-        descr: video.description,
-        image: ogImage,
-        jsonld: JSON.stringify({
-          "@context": "http://schema.org/",
-          "@type": "VideoObject",
-          "@id": "https://dev.tube/video/" + videoId,
-          name: title,
-          datePublished: dayjs(video.recordingDate * 1000).format("YYYY-MM-DD"),
-          description: video.description,
-          thumbnailURL: ogImage,
-          thumbnail: ogImage,
-          interactionCount: video.views,
-          uploadDate: dayjs(video.recordingDate * 1000).format("YYYY-MM-DD"),
-          author: video.speaker.map((it) => ({
-            "@type": "Person",
-            name: it.name,
-          })),
-        }),
-      }).render(req, res);
+      new IndexHtml().render(req, res);
     }
   } else {
     let absoluteFilePath = path.resolve(`${staticDir}/${req.path}`);

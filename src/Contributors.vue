@@ -78,15 +78,26 @@ import axios from "axios";
 import NightMode from "./NightMode.vue";
 import ContributorRank from "./ContributorRank.vue";
 export default {
-  asyncComputed: {
-    contributors() {
-      return axios
-        .get("https://storage.googleapis.com/dev-tube-index/board.json")
-        .then(({ data }) =>
-          data.contributors.sort((it, that) => that.karma - it.karma)
-        );
+  components: { NightMode, ContributorRank },
+  data() {
+    return {
+      contributors: [],
+    };
+  },
+  created() {
+    axios
+      .get("https://storage.googleapis.com/dev-tube-index/board.json")
+      .then(
+        ({ data }) =>
+          (this.contributors = data.contributors.sort(
+            (it, that) => that.karma - it.karma
+          ))
+      );
+  },
+  head: {
+    title() {
+      return { inner: "Community of contributors" };
     },
   },
-  components: { NightMode, ContributorRank },
 };
 </script>

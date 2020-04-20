@@ -22,47 +22,44 @@ export default {
     speaker: { type: Array, required: true },
     tags: { type: Array, required: false, default: () => [] },
   },
+  data() {
+    return {
+      hits: [],
+    };
+  },
   computed: {
     ...mapGetters("videos", ["watchedIds"]),
   },
-  asyncComputed: {
-    hits() {
-      const watchedIds = this.watchedIds;
+  created() {
+    const watchedIds = this.watchedIds;
+    const refinement = this.speaker.length
+      ? {
+          "speaker.twitter": {
+            $containsAny: this.speaker.map((it) => it.twitter),
+          },
+        }
+      : this.tags.length
+      ? { tags: { $containsAny: this.tags } }
+      : { channelTitle: this.channel };
 
-      if (!this.videoId) {
-        return [];
-      }
-
-      const refinement = this.speaker.length
-        ? {
-            "speaker.twitter": {
-              $containsAny: this.speaker.map((it) => it.twitter),
+    axios
+      .post(`/api/search`, {
+        requests: [
+          {
+            params: {
+              refinement: refinement,
+              sortOrder: "-satisfaction",
+              excludes: watchedIds.concat([this.videoId]),
             },
-          }
-        : this.tags.length
-        ? { tags: { $containsAny: this.tags } }
-        : { channelTitle: this.channel };
-
-      console.log(refinement);
-      return axios
-        .post(`/api/search`, {
-          requests: [
-            {
-              params: {
-                refinement: refinement,
-                sortOrder: "-satisfaction",
-                excludes: watchedIds.concat([this.videoId]),
-              },
-            },
-          ],
-        })
-        .then((response) => response.data.results[0].hits)
-        .then((hits) => this.shuffle(hits).slice(0, 4))
-        .then((hits) => {
-          this.$Progress.finish();
-          return hits;
-        });
-    },
+          },
+        ],
+      })
+      .then(({ data }) => data.results[0].hits)
+      .then((hits) => this.shuffle(hits).slice(0, 4))
+      .then((hits) => {
+        this.$Progress.finish();
+        this.hits = hits;
+      });
   },
 };
 </script>

@@ -70,7 +70,7 @@ export const capitalizeIfNeeded = (it) => {
     "REST",
   ];
 
-  let noCapitalizeTag = tags.find((tag) =>
+  const noCapitalizeTag = tags.find((tag) =>
     new RegExp(`^${tag}$`, "i").test(it)
   );
   return noCapitalizeTag || capitalize(it);

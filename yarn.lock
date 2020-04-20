@@ -3766,6 +3766,11 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+emoji-regex@^6.1.3:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.5.1.tgz#9baea929b155565c11ea41c6626eaa65cef992c2"
+  integrity sha512-PAHp6TxrCy7MGMFidro8uikr+zlJJKJ/Q6mm2ExZ7HwkyR9lSVFfE3kt36qcwa24BQL7y0G9axycGjK1A/0uNQ==
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
@@ -3775,6 +3780,13 @@ emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
+
+emoji-strip@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/emoji-strip/-/emoji-strip-1.0.1.tgz#cf9390535044121888420ae4db436d03a6cc459d"
+  integrity sha1-z5OQU1BEEhiIQgrk20NtA6bMRZ0=
+  dependencies:
+    emoji-regex "^6.1.3"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -10463,10 +10475,6 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-async-computed@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/vue-async-computed/-/vue-async-computed-3.3.1.tgz#9d754e649ccabef97e7e3932f1bc097a66a23db7"
-
 vue-cookie@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/vue-cookie/-/vue-cookie-1.1.4.tgz#b8b46d112bda9f93a2f47017c2ed5282d2064fda"
@@ -10484,6 +10492,11 @@ vue-eslint-parser@^7.0.0:
     espree "^6.1.2"
     esquery "^1.0.1"
     lodash "^4.17.15"
+
+vue-head@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vue-head/-/vue-head-2.2.0.tgz#9e3a141d5a011599a3f6d7adb42a65c428cf73e1"
+  integrity sha512-Oss1gakOSPQ4e/XZ0yM7yolnhSDvfDYZbM6CDD3xkCpAyPfTR+Bv3tabgtKE41gHr5GzC/NJh1EwQSu7o05XRw==
 
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"

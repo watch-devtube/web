@@ -3,9 +3,9 @@ import "babel-polyfill";
 import Vue from "vue";
 import Vuex from "vuex";
 
+import VueHead from "vue-head";
 import VueRouter from "vue-router";
 import VueCookie from "vue-cookie";
-import AsyncComputed from "vue-async-computed";
 import InstantSearch from "vue-instantsearch";
 import VueProgressBar from "vue-progressbar";
 import Notifications from "vue-notification";
@@ -128,12 +128,12 @@ import query from "./query";
 import likes from "./likes";
 import lists from "./lists";
 
+Vue.use(VueHead);
 Vue.use(Vuex);
 Vue.use(InstantSearch);
 Vue.use(VueCookie);
 Vue.use(Notifications);
 Vue.use(VueRouter);
-Vue.use(AsyncComputed);
 Vue.use(VueProgressBar, {
   color: "rgb(143, 255, 199)",
   failedColor: "red",
@@ -206,7 +206,6 @@ const store = new Vuex.Store({
   plugins: [createPersistedState({ key: "devtube", paths: ["auth", "query"] })],
 });
 
-// eslint-disable-next-line no-new
 new Vue({
   el: "#vue",
   store,

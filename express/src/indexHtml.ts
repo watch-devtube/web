@@ -19,18 +19,6 @@ export class IndexHtml {
     const attrs = {
       nightMode: nightMode,
       title: this.title,
-      meta: [
-        { name: "description", content: this.descr },
-        { property: "og:title", content: this.title },
-        { property: "og:description", content: this.descr },
-        { property: "og:image", content: this.image },
-        { property: "twitter:title", content: this.title },
-        { property: "twitter:description", content: this.descr },
-        { property: "twitter:image", content: this.image },
-        { property: "twitter:card", content: "summary_large_image" },
-        { property: "twitter:site", content: "@WatchDevTube" },
-        { property: "twitter:creator", content: "@WatchDevTube" },
-      ],
     };
 
     res.render("index.html", attrs);

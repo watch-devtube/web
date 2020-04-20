@@ -62,10 +62,6 @@
                       div
                         p.heading.is-size-5: font-awesome-icon(:icon="['far', 'clock']")
                         p.title.is-size-7 {{video.duration | duration}}
-                    //- .level-item.has-text-centered
-                      div
-                        p.heading.is-size-5: font-awesome-icon(:icon="['far', 'calendar-plus']")
-                        p.title.is-size-7 {{video.recordingDate | published}}
                     .level-item.has-text-centered.is-hidden-touch
                       div
                         p.heading.is-size-5
@@ -114,6 +110,7 @@
 </style>
 <script>
 import axios from "axios";
+import dayjs from "dayjs";
 import RelatedVideos from "./RelatedVideos.vue";
 import MessageWidget from "./MessageWidget.vue";
 import VideoToggles from "./VideoToggles.vue";
@@ -121,6 +118,7 @@ import NightMode from "./NightMode.vue";
 import TwitterThanks from "./TwitterThanks.vue";
 import NavBar from "./NavBar.vue";
 import { mapState, mapActions, mapGetters } from "vuex";
+import { meta } from "./helpers/meta";
 
 export default {
   components: {
@@ -190,6 +188,7 @@ export default {
       axios
         .get(`/api2/videos/${this.id}`)
         .then((it) => (this.video = it.data))
+        .then(() => this.$emit("updateHead"))
         .then(() => this.$Progress.finish());
     },
     refineTag: function (tag) {
@@ -199,6 +198,50 @@ export default {
       this.$router.push({ name: "channel", params: { channel: channel } });
     },
     ...mapActions("videos", ["toggleWatched", "toggleSubscription"]),
+  },
+
+  head: {
+    title() {
+      return {
+        separator: "–",
+        complement: "on DevTube",
+        inner: this.video.title,
+      };
+    },
+    script() {
+      [
+        {
+          t: "application/ld+json",
+          i: JSON.stringify({
+            "@context": "http://schema.org/",
+            "@type": "VideoObject",
+            "@id": "https://dev.tube/video/" + this.id,
+            name: this.video.title,
+            datePublished: dayjs(this.video.recordingDate * 1000).format(
+              "YYYY-MM-DD"
+            ),
+            description: this.video.description,
+            thumbnailURL: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
+            thumbnail: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
+            interactionCount: this.video.views,
+            uploadDate: dayjs(this.video.recordingDate * 1000).format(
+              "YYYY-MM-DD"
+            ),
+            author: this.video.speaker?.map((it) => ({
+              "@type": "Person",
+              name: it.name,
+            })),
+          }),
+        },
+      ];
+    },
+    meta() {
+      return meta({
+        title: this.video.title,
+        descr: this.video.description,
+        image: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
+      });
+    },
   },
 };
 </script>
