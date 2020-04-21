@@ -4,7 +4,7 @@
     .container
       .columns
         .column
-          .section.section(v-if="!video.objectID")
+          .section.section(v-if="loaded && !video.objectID")
             p.is-size-1.is-size-5-mobile.has-text-centered
               | ¯\_(ツ)_/¯
               br
@@ -147,6 +147,7 @@ export default {
   },
   data: function () {
     return {
+      loaded: false,
       errors: [],
       video: {},
     };
@@ -195,9 +196,11 @@ export default {
         .catch((e) => this.$store.dispatch("notify/error", { error: e }));
     },
     fetch() {
+      this.$Progress.start();
       axios
         .get(`/api2/videos/${this.id}`)
         .then((it) => (this.video = it.data))
+        .then(() => (this.loaded = true))
         .then(() => this.$emit("updateHead"))
         .then(() => this.$Progress.finish());
     },
