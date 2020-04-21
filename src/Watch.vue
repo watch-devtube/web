@@ -219,7 +219,7 @@ export default {
       };
     },
     script() {
-      [
+      return [
         {
           t: "application/ld+json",
           i: JSON.stringify({
