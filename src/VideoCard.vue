@@ -2,7 +2,7 @@
   .card(v-if="visible" style="height: 100%")
       .card-image
         VideoToggles(:videoId="id")
-        a(:href="'/video' + '/' + id")
+        router-link(:to='{ name: "video", params: { id } }')
           .image.is-4by3(:style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'")
             .is-overlay
             .ttl.is-capitalized.is-size-7
