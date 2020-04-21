@@ -6,4 +6,5 @@ src/static/*.xml
 service_key.json
 firebase.config.json
 .idea/
+.firebase
 *.log
