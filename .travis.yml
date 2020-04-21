@@ -11,6 +11,7 @@ cache:
 env:
   global:
     - secure: eeuhASPfOvjwdGadQsej82RDP/at1pB7Q2h4uRyAMEaJ1W5x2PcHarcq8bMQYC4q+s2lNBz5zBAOxC54dQouDDN5H8IprWMj3yfUdEGKIkwwQvzCx51B1fJU0glbzE8jGBfsS77wFUclPWmHFvcF/PYs3BBguM54CVPzH0k+oJ8nasg5HvpBNuZnCwaz92vOJwwR32DwaaS8BVdgMWHt+gLVSN+fN59tVn8RdXwUlOb0cEvNTk+TETjy4ilG8QfWnqEfJh2AMWT8nsHHuxDoenmvgYPeVluH69jGAo6nTUkBOGRrlxT8MoxLXzJjEmFh2THzxM1ZvzLJ3tdfgH+tU97xaf2f0j27D+FJtsKXy9TRLs4UiAiFl41aZVXb/NZdIJduAjiP0tm51OjMsb7hJkxFVd0oD86xK5XEvbrS8M6wNWOKn8Bw67WDrbqbRnXYKoEy6SIicrrD+LVThUf7xvLQaob7MknBfWFYSNrr7JWtFegcF8D6C4264iFMWa7YG8fvgZLMezbRPcsL6lU0mcxJN4Czh9QOqW0uWMe6KrojMgTEXhm9bePLHXhdJ5kyEWRsHr0VC1kosGd4XPK51B0XQ12/e5Mu+0CTmFeG6/V0vaD0zgtV3NqL9GWrf6nbh9ZzaXzCQ/Cm3/QbYeehjPmlNOFiehtK2Anvh3Nnl04=
+    - secure: vqwSKZE50zEfgwQcBMp9q1JRJSkzvJVXnDv9xo5A8dyusvHc+DKMZU7v3T+b/TGpu1SIKN6XgSd3F9Px92PkPPYdAi0yJvW9myhfUaPeIP2eBAhojNzFSx2Dg5M6vNnYJDDtEBi9zdak7tc5OkDjEz4Agn38joS7CkcVR8VY8uXuvJIX2sBB9uiu7uqsvfKNHxyqTQLYeaMwvxdcyvsIKvyAGT0FOGQAhgHItLZ4mf3kN6x+hcQVENid1KCzTByr6ShclOplpqg0WNzDynXdT8ewoOY3x3aiEIjKqOQgVGxgIgpzGpk5pDQFTfKw+A4dBWATTJc7OuNfQdaqKLxmonPNw0J3C60+ttPwIZx3E2Wlwamdbz/wmaewckb1KV/63HNP82XU+q0Il6SZ8I/w5UiNEgG88rL2OCbJfECy0AlmupNqcda69eQMVhEePvO15AYkovVPwL5WrwrhIMlrbHFBRefzCfB8ZSmjnvRG1oi4K5LFpnrsUkWoJOr4nZo15KTcHShfBkG2CFg+KwmhAHiAtIjrwbcWUScT+MzAyTKq5fKHBiULb1PQTx42LGOeWmRfHJXZJbK0AGoab3HrATS1Al+V+eD+silvFnvyKLvquVFtZa+jnNgqW4xyiIHJ4nS9bw1bQsiSFK0bCng/zLsaC2MQ2wN3Gh1MtjxlZDI=
   matrix:
     - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/express/service_key.json
 before_install:
@@ -58,8 +59,8 @@ script:
   - echo https://github.com/watch-devtube/web/commits/$(git rev-parse HEAD) >> ./dist/deployment.txt
   - ls -latr ./dist
   - ls -latr ./data
-  - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug
-    --memory=2048MB --timeout=30s --project=dev-tube
+  - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10
+    --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
   - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/deployment.txt
     | tee -a artilery.log
   - set +e
