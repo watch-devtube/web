@@ -814,7 +814,7 @@ async@^2.0.1, async@^2.3.0, async@^2.4.0:
   dependencies:
     lodash "^4.17.11"
 
-async@^2.1.4, async@~2.6.0:
+async@^2.1.4:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
@@ -3277,13 +3277,6 @@ lru-cache@^5.0.0:
   dependencies:
     yallist "^3.0.2"
 
-lru-cache@~4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
-  dependencies:
-    pseudomap "^1.0.2"
-    yallist "^2.1.2"
-
 lunr@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.0.tgz#4d7c0ca12bdd1e0447b0c131b91420929740c88f"
@@ -3523,18 +3516,6 @@ ms@^2.0.0, ms@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-
-mustache-express@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/mustache-express/-/mustache-express-1.2.7.tgz#c656311b5a39915a50c49024fd25163a3bbe86e3"
-  dependencies:
-    async "~2.6.0"
-    lru-cache "~4.1.3"
-    mustache "~2.3.0"
-
-mustache@~2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/mustache/-/mustache-2.3.0.tgz#4028f7778b17708a489930a6e52ac3bca0da41d0"
 
 nan@^2.13.2:
   version "2.14.0"

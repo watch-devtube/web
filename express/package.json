@@ -20,7 +20,6 @@
     "express-winston": "^4.0.3",
     "firebase-admin": "^6.0.0",
     "lru-cache": "^4.1.1",
-    "mustache-express": "^1.2.7",
     "prerender-node": "^3.2.5",
     "winston": "^3.2.1"
   },

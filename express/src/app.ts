@@ -11,7 +11,6 @@ import { Request, Response } from "express";
 import { dnsCache, Logger } from "devtube-commons";
 import { Videos } from "./videos";
 import { User } from "./api/user";
-import { IndexHtml } from "./indexHtml";
 
 console.timeEnd("Imports");
 
@@ -27,7 +26,6 @@ dnsCache();
 let oneHour = 3600000 * 4;
 let express = require("express");
 let body = require("body-parser");
-let mustache = require("mustache-express");
 let cors = require("cors");
 
 let winston = require("winston");
@@ -61,9 +59,7 @@ app.use(
   })
 );
 
-app.engine("html", mustache());
 app.set("port", port);
-app.set("view engine", "mustache");
 app.set("view cache", !devMode);
 app.set("views", path.join(__dirname, staticDir));
 
@@ -85,44 +81,25 @@ async function proxy(req: Request, res: Response) {
     req.path.startsWith("/contributors") ||
     req.path.startsWith("/@") ||
     req.path.startsWith("/channel/") ||
-    req.path.startsWith("/tag/")
+    req.path.startsWith("/tag/") ||
+    req.path.startsWith("/video/")
   ) {
-    new IndexHtml().render(req, res);
+    sendStatic(res, "index.html");
   } else if (req.path.startsWith("/api/")) {
     let module = await import(`.${req.path}`);
     module.default(req, res, fastr);
-  } else if (req.path.startsWith("/video/")) {
-    let [, , objectID] = req.path.split("/");
-    let q = undefined;
-    let sortOrder = ["-satisfaction"];
-    let refinement = { objectID: objectID };
-
-    let [videoId] = fastr
-      .search(q, refinement, sortOrder)
-      .filter((hit) => !!hit)
-      .map((it) => it.objectID);
-
-    if (!videoId) {
-      res.status(404).send("Not found");
-      return;
-    }
-
-    let videos = new Videos([videoId]);
-    let [video] = await videos.fetch();
-
-    if (!video) {
-      res.status(404).send("Not found");
-    } else {
-      new IndexHtml().render(req, res);
-    }
   } else {
-    let absoluteFilePath = path.resolve(`${staticDir}/${req.path}`);
-    if (fs.existsSync(absoluteFilePath)) {
-      res.sendFile(absoluteFilePath);
-    } else {
-      Logger.debug(`REQUESTED NOT EXISTING PATH: ${absoluteFilePath}`);
-      res.status(404).send("not found");
-    }
+    sendStatic(res, req.path);
+  }
+}
+
+function sendStatic(res: Response, which: string) {
+  const absoluteFilePath = path.resolve(`${staticDir}/${which}`);
+  if (fs.existsSync(absoluteFilePath)) {
+    res.sendFile(absoluteFilePath);
+  } else {
+    Logger.debug(`REQUESTED NOT EXISTING PATH: ${absoluteFilePath}`);
+    res.status(404).send("not found");
   }
 }
 
