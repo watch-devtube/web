@@ -2,26 +2,26 @@ import { firebase } from "../helpers/firebase";
 
 let authProviders = {
   google: {
-    name: firebase.auth.GoogleAuthProvider,
+    name: firebase.auth.GoogleAuthProvider
   },
   github: {
-    name: firebase.auth.GithubAuthProvider,
+    name: firebase.auth.GithubAuthProvider
   },
   twitter: {
-    name: firebase.auth.TwitterAuthProvider,
-  },
+    name: firebase.auth.TwitterAuthProvider
+  }
 };
 
 let state = {
   loading: true,
   user: undefined,
-  error: undefined,
+  error: undefined
 };
 
 let getters = {
-  isSignedIn: (state) => {
+  isSignedIn: state => {
     return !!state.user;
-  },
+  }
 };
 
 let actions = {
@@ -40,14 +40,14 @@ let actions = {
   },
   autoSignIn({ commit }, payload) {
     if (payload) {
-      payload.getIdToken().then((token) => {
+      payload.getIdToken().then(token => {
         commit("setUser", {
           id: payload.uid,
           name: payload.displayName,
           email: payload.email,
           photoUrl: payload.photoURL,
           uid: payload.uid,
-          tkn: token,
+          tkn: token
         });
       });
     } else {
@@ -62,14 +62,14 @@ let actions = {
       .auth()
       .signInWithPopup(provider)
       .then(() => location.reload())
-      .catch((error) => {
+      .catch(error => {
         if (error.code == "auth/popup-closed-by-user") {
           return;
         }
         commit("setError", error);
         commit("notify/error", { error: error }, { root: true });
       });
-  },
+  }
 };
 
 let mutations = {
@@ -84,7 +84,7 @@ let mutations = {
   clearError(state) {
     state.error = null;
     state.loading = false;
-  },
+  }
 };
 
 export default {
@@ -92,5 +92,5 @@ export default {
   state,
   getters,
   actions,
-  mutations,
+  mutations
 };

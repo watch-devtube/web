@@ -20,34 +20,34 @@ export const meta = (params = {}) => [
   ...descriptions(params.descr || DESCR),
   { p: "twitter:card", c: "summary_large_image", id: "twitter:card" },
   { p: "twitter:site", c: "@WatchDevTube", id: "twitter:site" },
-  { p: "twitter:creator", c: "@WatchDevTube", id: "twitter:creator" },
+  { p: "twitter:creator", c: "@WatchDevTube", id: "twitter:creator" }
 ];
 
-const images = (img) => {
+const images = img => {
   return [
     { id: "og:image", p: "og:image", c: img },
-    { id: "twitter:image", p: "twitter:image", c: img },
+    { id: "twitter:image", p: "twitter:image", c: img }
   ];
 };
 
-const descriptions = (desc) => {
+const descriptions = desc => {
   return [
     { id: "description", n: "description", c: desc },
     { id: "twitter:description", n: "twitter:description", c: desc },
-    { id: "og:description", p: "og:description", c: desc },
+    { id: "og:description", p: "og:description", c: desc }
   ];
 };
-const titles = (title) => {
+const titles = title => {
   return [
     {
       id: "twitter:title",
       n: "twitter:title",
-      c: `${title} - on DevTube`,
+      c: `${title} - on DevTube`
     },
     {
       id: "og:title",
       p: "og:title",
-      c: `${title} - on DevTube`,
-    },
+      c: `${title} - on DevTube`
+    }
   ];
 };

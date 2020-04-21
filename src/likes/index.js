@@ -9,7 +9,7 @@ let actions = {
       `/api2/videos/${videoId}/likes`,
       {},
       {
-        headers: { auth: tkn },
+        headers: { auth: tkn }
       }
     );
   },
@@ -19,10 +19,10 @@ let actions = {
       `/api2/videos/${videoId}/dislikes`,
       {},
       {
-        headers: { auth: tkn },
+        headers: { auth: tkn }
       }
     );
-  },
+  }
 };
 
 let getters = {};
@@ -34,5 +34,5 @@ export default {
   state,
   actions,
   getters,
-  mutations,
+  mutations
 };

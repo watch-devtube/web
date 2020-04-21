@@ -10,18 +10,18 @@ import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
-      sorting: undefined,
+      sorting: undefined
     };
   },
   computed: {
-    ...mapState(["query"]),
+    ...mapState(["query"])
   },
   created() {
     this.sorting = this.query.sortOrder;
   },
 
   methods: {
-    ...mapActions("query", ["sort"]),
-  },
+    ...mapActions("query", ["sort"])
+  }
 };
 </script>

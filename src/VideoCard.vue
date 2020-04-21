@@ -107,12 +107,12 @@ export default {
     tags: { type: Array, required: false, default: () => [] },
     speaker: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
-  data: function () {
+  data: function() {
     return {
-      visible: true,
+      visible: true
     };
   },
   computed: {
@@ -122,18 +122,18 @@ export default {
       let videoAgeInDays = today.diff(videoCreated, "days");
       return videoAgeInDays <= 7;
     },
-    ...mapGetters("videos", ["isWatched"]),
+    ...mapGetters("videos", ["isWatched"])
   },
   methods: {
-    watch: function (videoId) {
+    watch: function(videoId) {
       this.$router.push({
         name: "watch",
-        params: { id: videoId },
+        params: { id: videoId }
       });
     },
     refineChannel(channel) {
       this.$router.push({ name: "channel", params: { channel: channel } });
-    },
-  },
+    }
+  }
 };
 </script>

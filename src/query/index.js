@@ -1,6 +1,6 @@
 let state = {
   sortOrder: "-satisfaction",
-  lang: undefined,
+  lang: undefined
 };
 
 let getters = {};
@@ -11,7 +11,7 @@ let mutations = {
   },
   lang: (state, lang) => {
     state.lang = lang;
-  },
+  }
 };
 
 let actions = {
@@ -20,7 +20,7 @@ let actions = {
   },
   lang({ commit }, lang) {
     commit("lang", lang);
-  },
+  }
 };
 
 export default {
@@ -28,5 +28,5 @@ export default {
   state,
   actions,
   getters,
-  mutations,
+  mutations
 };

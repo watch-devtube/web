@@ -9,7 +9,7 @@
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
-  data: function () {
+  data: function() {
     return {
       languages: [
         "Chinese",
@@ -23,23 +23,23 @@ export default {
         "Portuguese",
         "Lithuanian",
         "Korean",
-        "Ukrainian",
-      ].sort(),
+        "Ukrainian"
+      ].sort()
     };
   },
   computed: {
-    ...mapState(["query"]),
+    ...mapState(["query"])
   },
   methods: {
-    langFilter: function (lang) {
+    langFilter: function(lang) {
       this.$parent.hide();
       this.lang(lang);
     },
-    sortNow: function (order) {
+    sortNow: function(order) {
       this.$parent.hide();
       this.sort(order);
     },
-    ...mapActions("query", ["sort", "lang"]),
-  },
+    ...mapActions("query", ["sort", "lang"])
+  }
 };
 </script>

@@ -1,5 +1,5 @@
 <template lang="pug">
-  #app
+  .app
     notifications(group="notification" :duration="-1")
     header
       .container
@@ -49,7 +49,7 @@ export default {
   components: { NavBar, Lang },
   computed: {
     ...mapGetters("loading", ["completed"]),
-    ...mapState({ show: (state) => state.notify.show }),
+    ...mapState({ show: state => state.notify.show })
   },
   watch: {
     show() {
@@ -59,14 +59,14 @@ export default {
           text: this.$store.state.notify.text,
           type: this.$store.state.notify.type,
           duration: this.$store.state.notify.duration,
-          group: "notification",
+          group: "notification"
         });
       }
       this.disableNotify();
-    },
+    }
   },
   methods: {
-    ...mapMutations("notify", ["disableNotify"]),
-  },
+    ...mapMutations("notify", ["disableNotify"])
+  }
 };
 </script>

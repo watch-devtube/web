@@ -17,10 +17,9 @@
                     Sorting
               .loading(v-if="loading")
                 p.is-size-1.is-size-5-mobile.has-text-centered
-                  | (งツ)ว Searching for the best tech videos...
+                  | (งツ)ว
                   br
-                  br
-                  | We're working on reducing Cloud Function cold start time.
+                  | Searching for the best tech videos...
               .loaded(v-else)
                 ais-no-results
                   template(slot-scope="props")
@@ -125,7 +124,7 @@ export default {
   components: {
     ExpandableTags,
     VideoCard,
-    Sorting,
+    Sorting
   },
   props: {
     q: { type: String, default: "" },
@@ -134,13 +133,13 @@ export default {
     showFavorites: { type: Boolean, default: false },
     speaker: { type: String, required: false, default: undefined },
     channel: { type: String, required: false, default: undefined },
-    tag: { type: String, required: false, default: undefined },
+    tag: { type: String, required: false, default: undefined }
   },
   data: () => {
     return {
       loading: false,
       stats: {},
-      profile: {},
+      profile: {}
     };
   },
   computed: {
@@ -148,14 +147,14 @@ export default {
     ...mapGetters("videos", [
       "watchedIds",
       "favoriteIds",
-      "hasSpeakerSubscription",
+      "hasSpeakerSubscription"
     ]),
-    ...mapGetters("loading", ["completed"]),
+    ...mapGetters("loading", ["completed"])
   },
   watch: {
     $route: "fetch",
     "$store.state.query.sortOrder": "syncQuery",
-    "$store.state.query.lang": "syncQuery",
+    "$store.state.query.lang": "syncQuery"
   },
   created() {
     let that = this;
@@ -165,19 +164,19 @@ export default {
         that.loading = true;
         return api
           .post("/api/search", {
-            requests,
+            requests
           })
           .then(({ data }) => {
             that.$Progress.finish();
             that.loading = false;
             return data;
           })
-          .then((json) => {
+          .then(json => {
             that.stats = json.stats;
             return json;
           });
       },
-      addAlgoliaAgent() {},
+      addAlgoliaAgent() {}
     };
 
     let searchStore = createFromAlgoliaClient(fastr);
@@ -210,7 +209,7 @@ export default {
 
       if (this.showMyWatched) {
         this.searchStore.queryParameters = {
-          refinement: { objectID: { $in: watchedVideoIds } },
+          refinement: { objectID: { $in: watchedVideoIds } }
         };
         this.searchStore.queryParameters = { excludes: [] };
       } else {
@@ -219,7 +218,7 @@ export default {
 
       if (this.showFavorites) {
         this.searchStore.queryParameters = {
-          refinement: { objectID: { $in: favoriteVideoIds } },
+          refinement: { objectID: { $in: favoriteVideoIds } }
         };
         this.searchStore.queryParameters = { excludes: [] };
       }
@@ -228,21 +227,21 @@ export default {
         let subscriptions = this.videos.subscriptions;
 
         let subscribedTags = subscriptions
-          .filter((sub) => sub.type == "tag")
-          .map((sub) => sub.topic);
+          .filter(sub => sub.type == "tag")
+          .map(sub => sub.topic);
         let subscribedChannels = subscriptions
-          .filter((sub) => sub.type == "channel")
-          .map((sub) => sub.topic);
+          .filter(sub => sub.type == "channel")
+          .map(sub => sub.topic);
         let subscribedSpeakers = subscriptions
-          .filter((sub) => sub.type == "speaker")
-          .map((sub) => sub.topic);
+          .filter(sub => sub.type == "speaker")
+          .map(sub => sub.topic);
 
         let myFeedQuery = {
           $or: [
             { tags: { $containsAny: subscribedTags } },
             { channelTitle: { $in: subscribedChannels } },
-            { "speaker.twitter": { $containsAny: subscribedSpeakers } },
-          ],
+            { "speaker.twitter": { $containsAny: subscribedSpeakers } }
+          ]
         };
 
         this.searchStore.queryParameters = { refinement: myFeedQuery };
@@ -253,22 +252,22 @@ export default {
         dossier
           .get(`/twt/${this.speaker}`)
           .then(({ data }) => data)
-          .then((profile) => (this.profile = profile))
+          .then(profile => (this.profile = profile))
           .then(() => this.$emit("updateHead"));
 
         this.searchStore.queryParameters = {
-          refinement: { "speaker.twitter": this.speaker },
+          refinement: { "speaker.twitter": this.speaker }
         };
       }
 
       if (this.tag) {
         this.searchStore.queryParameters = {
-          refinement: { tags: { $contains: this.tag } },
+          refinement: { tags: { $contains: this.tag } }
         };
       }
       if (this.channel) {
         this.searchStore.queryParameters = {
-          refinement: { channelTitle: this.channel },
+          refinement: { channelTitle: this.channel }
         };
       }
 
@@ -285,14 +284,14 @@ export default {
         ? `${this.profile.name} -`
         : "The best developer";
       return `${topic} videos and tutorials from YouTube`;
-    },
+    }
   },
   head: {
     title() {
       return {
         separator: "–",
         complement: "on DevTube",
-        inner: this.title(),
+        inner: this.title()
       };
     },
     meta() {
@@ -300,10 +299,10 @@ export default {
         title: this.title(),
         descr: this.title(),
         ...(this.profile.name && {
-          image: ogImage(this.speaker, this.profile.name, this.profile.info),
-        }),
+          image: ogImage(this.speaker, this.profile.name, this.profile.info)
+        })
       });
-    },
-  },
+    }
+  }
 };
 </script>

@@ -54,18 +54,18 @@ export default {
     tags: {
       required: false,
       type: Array,
-      default: function () {
+      default: function() {
         return [];
-      },
-    },
+      }
+    }
   },
-  data: function () {
+  data: function() {
     return {
-      ad: "",
+      ad: ""
     };
   },
   watch: {
-    $route: "fetch",
+    $route: "fetch"
   },
   created() {
     this.fetch();
@@ -77,18 +77,18 @@ export default {
     fetch() {
       const textForMatching = `${this.videoId}/${
         this.channel
-      }/${this.speaker.map((speaker) => "@" + speaker.twitter)}/${this.tags.map(
-        (tag) => "#" + tag + "#"
+      }/${this.speaker.map(speaker => "@" + speaker.twitter)}/${this.tags.map(
+        tag => "#" + tag + "#"
       )}`;
       ads
         .get(`messages.json?r=${Math.random()}`)
-        .then((response) => {
+        .then(response => {
           this.ad = response.data
             .reverse()
-            .find((it) => new RegExp(it.pattern, "i").test(textForMatching));
+            .find(it => new RegExp(it.pattern, "i").test(textForMatching));
         })
         .catch(() => {});
-    },
-  },
+    }
+  }
 };
 </script>

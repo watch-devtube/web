@@ -1,11 +1,12 @@
 <template lang="pug">
   nav.navbar.is-fixed-top.is-dark(role="navigation" aria-label="main navigation")
-    .navbar-brand(style="margin-left: -.75rem")
+    .navbar-brand
       .navbar-item
-        | &nbsp;&nbsp;&nbsp;
         img#logo.logo(src="/logo.png" srcset="/logo.svg" @click="home()" alt="logo")
         a.is-size-7.has-text-white(href="https://devternity.com" target="_blank")
-          span.is-hidden-mobile &nbsp; by DevTernity
+          span.is-hidden-mobile
+            |
+            | by DevTernity
       .navbar-item
         Input(placeholder="Search for videos...")
       .navbar-burger.burger.has-text-white(data-target="navbarMenu" @click="toggle()" v-bind:class="{ 'is-active': active }")
@@ -44,8 +45,11 @@
       .navbar-end
         a.navbar-item.is-hoverable(v-if="auth.user")
           .karma.is-hidden-touch
-            font-awesome-icon(:icon="['far', 'heart']").has-text-danger
-            | &nbsp; {{karma.karma}} &nbsp;
+            .is-inline
+              font-awesome-icon(:icon="['far', 'heart']").has-text-danger
+              |
+              | {{karma.karma}}
+              |
           .face.is-hidden-touch(:style="'background-image: url(' + auth.user.photoUrl + ')'")
           font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
           span.is-hidden-desktop {{auth.user.name}}
@@ -53,13 +57,11 @@
             a.navbar-item(@click="signOut()") Logout
 
         a.navbar-item.is-hoverable(v-else)
-          font-awesome-icon(:icon="['fa', 'user']")
-          | &nbsp;Log in
+          a.navbar-link Log in
           .navbar-dropdown.is-right.is-boxed
             a.navbar-item(@click="signIn('github'); hide()") via Github
             a.navbar-item(@click="signIn('twitter'); hide()") via Twitter
             a.navbar-item(@click="signIn('google'); hide()") via Google
-        | &nbsp;&nbsp;&nbsp;
 </template>
 <style lang="scss" scoped>
 header {
@@ -96,9 +98,9 @@ import { mapState, mapActions, mapGetters } from "vuex";
 
 export default {
   components: { Input, ExpandableTags },
-  data: function () {
+  data: function() {
     return {
-      active: false,
+      active: false
     };
   },
   computed: {
@@ -106,8 +108,8 @@ export default {
     ...mapGetters("videos", [
       "watchedCount",
       "favoriteCount",
-      "hasSubscriptions",
-    ]),
+      "hasSubscriptions"
+    ])
   },
   methods: {
     // double check if toggle() is not used in children components
@@ -120,7 +122,7 @@ export default {
     home() {
       window.location = "/";
     },
-    ...mapActions("auth", ["signOut", "signIn"]),
-  },
+    ...mapActions("auth", ["signOut", "signIn"])
+  }
 };
 </script>

@@ -2,7 +2,7 @@ let state = {};
 
 let getters = {
   completed: (state, getters, rootState) =>
-    !rootState.videos.loading && !rootState.auth.loading,
+    !rootState.videos.loading && !rootState.auth.loading
 };
 
 let mutations = {};
@@ -14,5 +14,5 @@ export default {
   state,
   actions,
   getters,
-  mutations,
+  mutations
 };

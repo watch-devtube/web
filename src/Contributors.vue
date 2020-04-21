@@ -1,16 +1,10 @@
 <template lang="pug">
   .contributors
-    header
-      .container
-        nav.level(style="min-height: 80px")
-          .level-item.has-text-white.has-text-centered
-            font-awesome-icon(:icon="['far', 'heart']").has-text-danger
-            | &nbsp;Contributors
     .section.container
       .content
         p
-          | Let's build the best tech video hub together.
-          a(href="https://github.com/watch-devtube/contrib" target="_blank") Contributing is simple!
+          strong
+            a(href="https://github.com/watch-devtube/contrib" target="_blank") Contribution guideline
         p
           font-awesome-icon(:icon="['far', 'heart']").has-text-danger
           |   5000 karma points – we'll thank you on Twitter
@@ -52,7 +46,7 @@
                     p.title.is-size-7 {{contributor.tagContributions}}
               ContributorRank(:karma="contributor.karma")
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   background-color: #343d46;
   padding: 30px;
@@ -80,7 +74,7 @@ export default {
   components: { ContributorRank },
   data() {
     return {
-      contributors: [],
+      contributors: []
     };
   },
   created() {
@@ -96,7 +90,7 @@ export default {
   head: {
     title() {
       return { inner: "Community of contributors" };
-    },
-  },
+    }
+  }
 };
 </script>

@@ -44,14 +44,14 @@ import { mapState, mapActions, mapGetters } from "vuex";
 
 export default {
   props: {
-    videoId: { type: String, required: true },
+    videoId: { type: String, required: true }
   },
   computed: {
     ...mapState(["videos", "auth"]),
-    ...mapGetters("videos", ["isWatched", "isFavorite"]),
+    ...mapGetters("videos", ["isWatched", "isFavorite"])
   },
   methods: {
-    ...mapActions("videos", ["toggleWatched", "toggleFavorite"]),
-  },
+    ...mapActions("videos", ["toggleWatched", "toggleFavorite"])
+  }
 };
 </script>

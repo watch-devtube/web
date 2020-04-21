@@ -4,12 +4,12 @@ export default {
     show: false,
     title: "",
     text: "",
-    type: "",
+    type: ""
   },
   actions: {
     error(context, state) {
       context.commit("error", state);
-    },
+    }
   },
   mutations: {
     error(
@@ -18,7 +18,7 @@ export default {
         error,
         text = "Please see logs and submit an issue: bit.ly/devtube-issue",
         title = "Something went wrong!",
-        duration = undefined,
+        duration = undefined
       }
     ) {
       state.show = true;
@@ -30,6 +30,6 @@ export default {
     },
     disableNotify(state) {
       state.show = false;
-    },
-  },
+    }
+  }
 };

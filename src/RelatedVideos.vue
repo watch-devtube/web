@@ -20,23 +20,23 @@ export default {
     videoId: { type: String, required: true },
     channel: { type: String, required: true },
     speaker: { type: Array, required: true },
-    tags: { type: Array, required: false, default: () => [] },
+    tags: { type: Array, required: false, default: () => [] }
   },
   data() {
     return {
-      hits: [],
+      hits: []
     };
   },
   computed: {
-    ...mapGetters("videos", ["watchedIds"]),
+    ...mapGetters("videos", ["watchedIds"])
   },
   created() {
     const watchedIds = this.watchedIds;
     const refinement = this.speaker.length
       ? {
           "speaker.twitter": {
-            $containsAny: this.speaker.map((it) => it.twitter),
-          },
+            $containsAny: this.speaker.map(it => it.twitter)
+          }
         }
       : this.tags.length
       ? { tags: { $containsAny: this.tags } }
@@ -49,17 +49,17 @@ export default {
             params: {
               refinement: refinement,
               sortOrder: "-satisfaction",
-              excludes: watchedIds.concat([this.videoId]),
-            },
-          },
-        ],
+              excludes: watchedIds.concat([this.videoId])
+            }
+          }
+        ]
       })
       .then(({ data }) => data.results[0].hits)
-      .then((hits) => this.shuffle(hits).slice(0, 4))
-      .then((hits) => {
+      .then(hits => this.shuffle(hits).slice(0, 4))
+      .then(hits => {
         this.$Progress.finish();
         this.hits = hits;
       });
-  },
+  }
 };
 </script>

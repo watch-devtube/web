@@ -4,16 +4,16 @@ export default {
   props: {
     wait: {
       type: Number,
-      default: 0,
+      default: 0
     },
     from: {
       type: Number,
-      default: Date.now(),
-    },
+      default: Date.now()
+    }
   },
 
   data: () => ({
-    waiting: true,
+    waiting: true
   }),
 
   created() {
@@ -35,5 +35,5 @@ export default {
 
   install(Vue, name) {
     Vue.component(name || "Delay", this);
-  },
+  }
 };

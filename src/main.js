@@ -1,5 +1,3 @@
-import "babel-polyfill";
-
 import Vue from "vue";
 import Vuex from "vuex";
 
@@ -13,7 +11,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   FontAwesomeIcon,
   FontAwesomeLayers,
-  FontAwesomeLayersText,
+  FontAwesomeLayersText
 } from "@fortawesome/vue-fontawesome";
 
 import {
@@ -21,7 +19,7 @@ import {
   faTwitter,
   faFacebookSquare,
   faTwitterSquare,
-  faLinkedin,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEllipsisV,
@@ -38,7 +36,7 @@ import {
   faLanguage,
   faSortAlphaDown,
   faHashtag,
-  faSearch,
+  faSearch
 } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsDown as fasThumbsDown } from "@fortawesome/free-solid-svg-icons/faThumbsDown";
 import { faThumbsUp as fasThumbsUp } from "@fortawesome/free-solid-svg-icons/faThumbsUp";
@@ -55,7 +53,7 @@ import {
   faCheckCircle,
   faClock,
   faEdit,
-  faCalendarPlus,
+  faCalendarPlus
 } from "@fortawesome/free-regular-svg-icons";
 library.add(
   faEllipsisV,
@@ -115,7 +113,7 @@ import {
   published,
   dateFmt,
   capitalizeIfNeeded,
-  durationFull,
+  durationFull
 } from "./helpers/filters";
 
 import auth from "./auth";
@@ -135,7 +133,7 @@ Vue.use(VueRouter);
 Vue.use(VueProgressBar, {
   color: "rgb(143, 255, 199)",
   failedColor: "red",
-  height: "2px",
+  height: "2px"
 });
 
 Vue.filter("dateFmt", dateFmt);
@@ -156,8 +154,8 @@ Vue.mixin({
         [a[i], a[j]] = [a[j], a[i]];
       }
       return a;
-    },
-  },
+    }
+  }
 });
 
 require("./styles/main.scss");
@@ -173,21 +171,21 @@ const router = new VueRouter({
       name: "channel",
       path: "/channel/:channel",
       component: Search,
-      props: true,
+      props: true
     },
     { name: "tag", path: "/tag/:tag", component: Search, props: true },
     {
       name: "search",
       path: "/",
       component: Search,
-      props: (route) => ({
+      props: route => ({
         q: route.query.q,
         showMyWatched: route.query.w === "true",
         showMyFeed: route.query.feed === "true",
-        showFavorites: route.query.f === "true",
-      }),
-    },
-  ],
+        showFavorites: route.query.f === "true"
+      })
+    }
+  ]
 });
 
 import createPersistedState from "vuex-persistedstate";
@@ -200,23 +198,23 @@ const store = new Vuex.Store({
     query,
     likes,
     lists,
-    karma,
+    karma
   },
   strict: true,
-  plugins: [createPersistedState({ key: "devtube", paths: ["auth", "query"] })],
+  plugins: [createPersistedState({ key: "devtube", paths: ["auth", "query"] })]
 });
 
 new Vue({
-  el: "#vue",
+  el: "#app",
   store,
   created() {
     store.dispatch("lists/initialize");
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(user => {
       store.dispatch("auth/autoSignIn", user);
       store.dispatch("videos/initialize", user);
       store.dispatch("karma/initialize", user);
     });
   },
-  render: (h) => h(App),
-  router,
+  render: h => h(App),
+  router
 });

@@ -44,11 +44,11 @@ export default {
     title: { type: String, required: true },
     type: { type: String, required: true },
     limit: { type: Number, required: true },
-    items: { type: String, required: true },
+    items: { type: String, required: true }
   },
-  data: function () {
+  data: function() {
     return {
-      collapsed: true,
+      collapsed: true
     };
   },
   computed: {
@@ -59,7 +59,7 @@ export default {
       return !this.collapsed;
     },
     ...mapState(["auth", "lists"]),
-    ...mapGetters("videos", ["hasSubscription"]),
+    ...mapGetters("videos", ["hasSubscription"])
   },
   methods: {
     subscription(item) {
@@ -83,7 +83,7 @@ export default {
       this.$router.push(route);
       this.html.classList.remove("is-clipped");
     },
-    ...mapActions("videos", ["toggleSubscription"]),
-  },
+    ...mapActions("videos", ["toggleSubscription"])
+  }
 };
 </script>

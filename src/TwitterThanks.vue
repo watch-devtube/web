@@ -1,7 +1,8 @@
 <template lang="pug">
   a.button.is-text.is-small(:href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url" target="_blank" aria-label="twitter")
     font-awesome-icon(:icon="['far', 'heart']").has-text-danger
-    | &nbsp; say thanks
+    |
+    | say thanks
 </template>
 <style lang="scss" scoped>
 a {
@@ -18,28 +19,28 @@ export default {
     title: { type: String, required: true },
     speaker: { type: Array, required: true },
     channel: { type: String, required: true },
-    tags: { type: Array, required: false, default: () => [] },
+    tags: { type: Array, required: false, default: () => [] }
   },
   computed: {
     text() {
       return this.thanks + this.encodedTitle + " " + this.mentions;
     },
     mentions() {
-      return this.speaker.map((it) => "@" + it.twitter).join(" ");
+      return this.speaker.map(it => "@" + it.twitter).join(" ");
     },
     hashtags() {
       const tags = this.tags.slice();
       tags.push("DevTube");
       tags.push(this.channel);
-      return tags.map((t) => t.replace(/\s|\./g, "")).join(",");
+      return tags.map(t => t.replace(/\s|\./g, "")).join(",");
     },
     thanks() {
-      const firstName = (name) => {
+      const firstName = name => {
         const [first] = name.split(" ");
         return first.trim();
       };
       const everyone = this.speaker
-        .map((it) => firstName(it.name))
+        .map(it => firstName(it.name))
         .reduce(
           (text, value, i, array) =>
             text + (i < array.length - 1 ? ", " : " and ") + value
@@ -51,7 +52,7 @@ export default {
     },
     url() {
       return `https://dev.tube/video/${this.videoId}`;
-    },
-  },
+    }
+  }
 };
 </script>

@@ -1,17 +1,17 @@
 import dayjs from "dayjs";
 import numeral from "numeral";
 
-const sameFlatten = (arr) =>
+const sameFlatten = arr =>
   arr.reduce(
     (acc, item) => [...acc, Array.isArray(item) ? sameFlatten(item) : item],
     []
   );
 
-export const flatten = (it) => (!it ? it : sameFlatten(it));
+export const flatten = it => (!it ? it : sameFlatten(it));
 
-export const kilo = (it) => numeral(it).format("0a");
+export const kilo = it => numeral(it).format("0a");
 
-export const duration = (it) => {
+export const duration = it => {
   if (!it) {
     return it;
   }
@@ -22,14 +22,14 @@ export const duration = (it) => {
   return (hours ? `${hours}h ` : "") + (minutes ? `${minutes}m` : "");
 };
 
-export const dateFmt = (it) => {
+export const dateFmt = it => {
   if (!it) {
     return it;
   }
   return dayjs(it * 1000).format("HH:mm");
 };
 
-export const durationFull = (it) => {
+export const durationFull = it => {
   if (!it) {
     return it;
   }
@@ -40,7 +40,7 @@ export const durationFull = (it) => {
   return hours ? `${hours} hours` : `${minutes} minutes`;
 };
 
-export const noemoji = (it) => {
+export const noemoji = it => {
   if (!it) {
     return it;
   }
@@ -50,7 +50,7 @@ export const noemoji = (it) => {
   );
 };
 
-export const capitalizeIfNeeded = (it) => {
+export const capitalizeIfNeeded = it => {
   let tags = [
     "iOS",
     "IoT",
@@ -67,20 +67,19 @@ export const capitalizeIfNeeded = (it) => {
     "AWS",
     "RxJava",
     "CSS",
-    "REST",
+    "REST"
   ];
 
-  const noCapitalizeTag = tags.find((tag) =>
+  const noCapitalizeTag = tags.find(tag =>
     new RegExp(`^${tag}$`, "i").test(it)
   );
   return noCapitalizeTag || capitalize(it);
 };
 
-const capitalize = (str) =>
-  str ? str.replace(/\b\w/g, (l) => l.toUpperCase()) : str;
+const capitalize = str =>
+  str ? str.replace(/\b\w/g, l => l.toUpperCase()) : str;
 
 export const truncate = (it, max) =>
   it ? it.slice(0, max) + (max < it.length ? "..." : "") : it;
 
-export const published = (it) =>
-  it ? dayjs(it * 1000).format("YYYY MMM") : it;
+export const published = it => (it ? dayjs(it * 1000).format("YYYY MMM") : it);

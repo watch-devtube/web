@@ -12,7 +12,7 @@ export default {
   directives: { debounce },
   data() {
     return {
-      blockClassName: "ais-input",
+      blockClassName: "ais-input"
     };
   },
   computed: {
@@ -23,10 +23,10 @@ export default {
       set(value) {
         this.$router.push({
           name: "search",
-          query: { q: value },
+          query: { q: value }
         });
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
