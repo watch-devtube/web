@@ -4,7 +4,19 @@
     .container
       .columns
         .column
-          .card
+          .section.section(v-if="!video.objectID")
+            p.is-size-1.is-size-5-mobile.has-text-centered
+              | ¯\_(ツ)_/¯
+              br
+              br
+              | There is no video with ID {{id}}.
+              br
+              | Try
+              |
+              a(href="https://dev.tube") resetting
+              |
+              | your criteria.
+          .card(v-else)
             .card-image
               VideoToggles(:videoId="id")
               a(@click="toggleWatched(id)" v-if="auth.user")
