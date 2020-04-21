@@ -5,7 +5,7 @@ const endpoint = window.location.href.includes("localhost")
   : "//api.dev.tube";
 
 export const bucket = axios.create({
-  baseURL: "https://storage.googleapis.com/dev-tube-index",
+  baseURL: "//storage.googleapis.com/dev-tube-index",
 });
 
 export const ads = axios.create({
@@ -13,7 +13,7 @@ export const ads = axios.create({
 });
 
 export const dossier = axios.create({
-  baseURL: "https://dossier.dev.tube",
+  baseURL: "//dossier.dev.tube",
 });
 
 export const api = axios.create({
