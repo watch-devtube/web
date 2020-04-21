@@ -121,7 +121,7 @@
 }
 </style>
 <script>
-import axios from "axios";
+import { api } from "./api";
 import dayjs from "dayjs";
 import RelatedVideos from "./RelatedVideos.vue";
 import MessageWidget from "./MessageWidget.vue";
@@ -197,7 +197,7 @@ export default {
     },
     fetch() {
       this.$Progress.start();
-      axios
+      api
         .get(`/api2/videos/${this.id}`)
         .then((it) => (this.video = it.data))
         .then(() => (this.loaded = true))

@@ -1,4 +1,4 @@
-import axios from "axios";
+import { api } from "../api";
 
 const state = {
   karma: 0,
@@ -11,7 +11,7 @@ const actions = {
       const what = window.btoa(
         provider.providerId + "/" + provider.email + "/" + provider.uid
       );
-      axios
+      api
         .get(`/api/karma`, { params: { user: what } })
         .then((response) => commit("init", response.data));
     } else {

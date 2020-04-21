@@ -10,7 +10,7 @@
 }
 </style>
 <script>
-import axios from "axios";
+import { api } from "./api";
 import VideoCard from "./VideoCard.vue";
 import { mapGetters } from "vuex";
 
@@ -42,7 +42,7 @@ export default {
       ? { tags: { $containsAny: this.tags } }
       : { channelTitle: this.channel };
 
-    axios
+    api
       .post(`/api/search`, {
         requests: [
           {

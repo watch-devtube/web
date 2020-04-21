@@ -42,7 +42,7 @@
 }
 </style>
 <script>
-import axios from "axios";
+import { ads } from "./api";
 import Delay from "./Delay";
 
 export default {
@@ -80,10 +80,8 @@ export default {
       }/${this.speaker.map((speaker) => "@" + speaker.twitter)}/${this.tags.map(
         (tag) => "#" + tag + "#"
       )}`;
-      axios
-        .get(
-          `//raw.githubusercontent.com/watch-devtube/messages/master/messages.json?r=${Math.random()}`
-        )
+      ads
+        .get(`messages.json?r=${Math.random()}`)
         .then((response) => {
           this.ad = response.data
             .reverse()

@@ -113,7 +113,7 @@
 import { createFromAlgoliaClient } from "vue-instantsearch";
 import { mapState, mapGetters, mapActions } from "vuex";
 
-import axios from "axios";
+import { dossier, api } from "./api";
 
 import { capitalizeIfNeeded } from "./helpers/filters";
 import { meta, ogImage } from "./helpers/meta";
@@ -163,18 +163,14 @@ export default {
       search(requests) {
         that.$Progress.start();
         that.loading = true;
-        return fetch("/api/search", {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ requests }),
-        })
-          .then((res) => {
-            let json = res.json();
+        return api
+          .post("/api/search", {
+            requests,
+          })
+          .then(({ data }) => {
             that.$Progress.finish();
             that.loading = false;
-            return json;
+            return data;
           })
           .then((json) => {
             that.stats = json.stats;
@@ -254,8 +250,8 @@ export default {
       }
 
       if (this.speaker) {
-        axios
-          .get(`https://dossier.dev.tube/twt/${this.speaker}`)
+        dossier
+          .get(`/twt/${this.speaker}`)
           .then(({ data }) => data)
           .then((profile) => (this.profile = profile))
           .then(() => this.$emit("updateHead"));

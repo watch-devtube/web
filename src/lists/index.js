@@ -1,4 +1,4 @@
-import axios from "axios";
+import { api } from "../api";
 
 const state = {
   tags: [],
@@ -8,7 +8,7 @@ const state = {
 
 const actions = {
   initialize({ commit }) {
-    axios
+    api
       .get(`/api2/lists/all`)
       .then((response) => commit("init", response.data));
   },

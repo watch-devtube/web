@@ -1,11 +1,11 @@
-import axios from "axios";
+import { api } from "../api";
 
 let state = {};
 
 let actions = {
   putALike({ rootState }, videoId) {
     let tkn = rootState.auth.user.tkn;
-    return axios.post(
+    return api.post(
       `/api2/videos/${videoId}/likes`,
       {},
       {
@@ -15,7 +15,7 @@ let actions = {
   },
   putADislike({ rootState }, videoId) {
     let tkn = rootState.auth.user.tkn;
-    return axios.post(
+    return api.post(
       `/api2/videos/${videoId}/dislikes`,
       {},
       {

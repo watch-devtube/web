@@ -74,7 +74,7 @@ header {
 }
 </style>
 <script>
-import axios from "axios";
+import { bucket } from "./api";
 import ContributorRank from "./ContributorRank.vue";
 export default {
   components: { ContributorRank },
@@ -84,8 +84,8 @@ export default {
     };
   },
   created() {
-    axios
-      .get("https://storage.googleapis.com/dev-tube-index/board.json")
+    bucket
+      .get("board.json")
       .then(
         ({ data }) =>
           (this.contributors = data.contributors.sort(
