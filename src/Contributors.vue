@@ -75,10 +75,9 @@ header {
 </style>
 <script>
 import axios from "axios";
-import NightMode from "./NightMode.vue";
 import ContributorRank from "./ContributorRank.vue";
 export default {
-  components: { NightMode, ContributorRank },
+  components: { ContributorRank },
   data() {
     return {
       contributors: [],

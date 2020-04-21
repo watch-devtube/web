@@ -114,7 +114,6 @@ import dayjs from "dayjs";
 import RelatedVideos from "./RelatedVideos.vue";
 import MessageWidget from "./MessageWidget.vue";
 import VideoToggles from "./VideoToggles.vue";
-import NightMode from "./NightMode.vue";
 import TwitterThanks from "./TwitterThanks.vue";
 import NavBar from "./NavBar.vue";
 import { mapState, mapActions, mapGetters } from "vuex";
@@ -124,7 +123,6 @@ export default {
   components: {
     RelatedVideos,
     MessageWidget,
-    NightMode,
     TwitterThanks,
     NavBar,
     VideoToggles,

@@ -50,7 +50,6 @@
           font-awesome-icon.is-hidden-touch(icon="ellipsis-v")
           span.is-hidden-desktop {{auth.user.name}}
           .navbar-dropdown.is-right.is-boxed
-            NightMode
             a.navbar-item(@click="signOut()") Logout
 
         a.navbar-item.is-hoverable(v-else)
@@ -91,13 +90,12 @@ header {
 </style>
 <script>
 import Input from "./Input.vue";
-import NightMode from "./NightMode.vue";
 import ExpandableTags from "./ExpandableTags.vue";
 
 import { mapState, mapActions, mapGetters } from "vuex";
 
 export default {
-  components: { Input, NightMode, ExpandableTags },
+  components: { Input, ExpandableTags },
   data: function () {
     return {
       active: false,

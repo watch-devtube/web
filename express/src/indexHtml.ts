@@ -14,13 +14,9 @@ export class IndexHtml {
   }
 
   render(req: Request, res: Response) {
-    const cookies = req.get("Cookie");
-    const nightMode = cookies && cookies.includes("nightMode");
     const attrs = {
-      nightMode: nightMode,
       title: this.title,
     };
-
     res.render("index.html", attrs);
   }
 

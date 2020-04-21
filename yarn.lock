@@ -2115,6 +2115,11 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
+bulmaswatch@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/bulmaswatch/-/bulmaswatch-0.8.0.tgz#11057ea5ecc1765de0f7049dd2bdbe3a0afbc992"
+  integrity sha512-ubqgGrUXL/BM0dhG309lmR9BQnV7kjp1vXhqGOE6xqOR+qHjHpuqxACNbBCWn+uSXhTAyE7VnmXffc9qQkm3xg==
+
 bytebuffer@~5:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/bytebuffer/-/bytebuffer-5.0.1.tgz#582eea4b1a873b6d020a48d58df85f0bba6cfddd"
@@ -7446,22 +7451,6 @@ node-libs-browser@^2.0.0:
     util "^0.10.3"
     vm-browserify "0.0.4"
 
-node-pre-gyp@*:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.14.0.tgz#9a0596533b877289bcad4e143982ca3d904ddc83"
-  integrity sha512-+CvDC7ZttU/sSt9rFjix/P05iS43qHCOOGzcr3Ry99bXG7VX953+vFyEuph/tfqoYu8dttBkE86JSKBO2OzcxA==
-  dependencies:
-    detect-libc "^1.0.2"
-    mkdirp "^0.5.1"
-    needle "^2.2.1"
-    nopt "^4.0.1"
-    npm-packlist "^1.1.6"
-    npmlog "^4.0.2"
-    rc "^1.2.7"
-    rimraf "^2.6.1"
-    semver "^5.3.0"
-    tar "^4.4.2"
-
 node-pre-gyp@^0.10.0:
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.10.3.tgz#3070040716afdc778747b61b6887bf78880b80fc"
@@ -10502,10 +10491,6 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tiny-cookie@^1.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/tiny-cookie/-/tiny-cookie-1.0.1.tgz#753786079c642a3c3d0b2accad600f8de119ac2a"
-
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -11048,12 +11033,6 @@ vm-browserify@0.0.4:
 void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
-
-vue-cookie@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/vue-cookie/-/vue-cookie-1.1.4.tgz#b8b46d112bda9f93a2f47017c2ed5282d2064fda"
-  dependencies:
-    tiny-cookie "^1.0"
 
 vue-eslint-parser@^7.0.0:
   version "7.0.0"

@@ -1,0 +1,51 @@
+.tag {
+  background-color: inherit !important;
+  border: 1px solid hsl(0, 0%, 96%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .pagination-link,
+  .pagination-next,
+  .pagination-previous {
+    color: #8694a4;
+  }
+
+  .tag {
+    border: 1px solid #31404f !important;
+    background-color: inherit !important;
+  }
+
+  input.input,
+  .select select {
+    background-color: #1f2d3b;
+    border: none;
+    color: white;
+  }
+
+  input.input:focus,
+  input.input:active,
+  input.input:hover {
+    border: none !important;
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .tags.has-addons .tag.is-white {
+    background-color: #1a2531;
+    color: #f5f5f5;
+  }
+
+  .has-background-light {
+    background-color: #1c252f !important;
+  }
+
+  input[type="text"] {
+    background-color: #1f2d3b !important;
+    color: white;
+  }
+
+  input::placeholder {
+    color: #fff !important;
+  }
+}

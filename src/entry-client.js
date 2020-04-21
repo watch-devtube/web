@@ -5,7 +5,6 @@ import Vuex from "vuex";
 
 import VueHead from "vue-head";
 import VueRouter from "vue-router";
-import VueCookie from "vue-cookie";
 import InstantSearch from "vue-instantsearch";
 import VueProgressBar from "vue-progressbar";
 import Notifications from "vue-notification";
@@ -131,7 +130,6 @@ import lists from "./lists";
 Vue.use(VueHead);
 Vue.use(Vuex);
 Vue.use(InstantSearch);
-Vue.use(VueCookie);
 Vue.use(Notifications);
 Vue.use(VueRouter);
 Vue.use(VueProgressBar, {
@@ -162,7 +160,7 @@ Vue.mixin({
   },
 });
 
-require("./main.scss");
+require("./styles/main.scss");
 
 const router = new VueRouter({
   mode: "history",

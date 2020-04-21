@@ -16,21 +16,23 @@
                   .is-pulled-right
                     Sorting
               .loading(v-if="loading")
-                .notification.overrideVueNotificationsIssue
-                  p
-                    | Searching for the best tech videos 👨🏻‍💻...
-                    br
-                    br
-                    | We're working on reducing Cloud Function cold start time.
+                p.is-size-1.is-size-5-mobile.has-text-centered
+                  | (งツ)ว Searching for the best tech videos...
+                  br
+                  br
+                  | We're working on reducing Cloud Function cold start time.
               .loaded(v-else)
                 ais-no-results
                   template(slot-scope="props")
-                    .notification.overrideVueNotificationsIssue
-                      p
-                        | No videos matching your query. Please
-                        | &nbsp;
-                        a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute on GitHub
-                        | .
+                    p.is-size-1.is-size-5-mobile.has-text-centered
+                      | ¯\_(ツ)_/¯ There are no video matching your criteria.
+                      |
+                      a(href="https://dev.tube" target="_blank") Reset
+                      |  your search criteria or
+                      |
+                      a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute
+                      |
+                      | YouTube channels.
                 section(v-if="speaker")
                   .columns
                       .column.is-3
