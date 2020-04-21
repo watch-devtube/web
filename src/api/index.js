@@ -2,7 +2,7 @@ import axios from "axios";
 
 const endpoint = window.location.href.includes("localhost")
   ? "//localhost:8100"
-  : "//api.dev.events";
+  : "//api.dev.tube";
 
 export const bucket = axios.create({
   baseURL: "https://storage.googleapis.com/dev-tube-index",
