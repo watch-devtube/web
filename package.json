@@ -20,7 +20,7 @@
     "core-js": "^3.4.3",
     "dayjs": "^1.5.16",
     "emoji-strip": "^1.0.1",
-    "firebase": "^5.3.1",
+    "firebase": "7.14.1",
     "numeral": "^2.0.6",
     "tar": "^4.4.2",
     "v-debounce": "^0.1.2",

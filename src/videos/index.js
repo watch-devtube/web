@@ -1,4 +1,4 @@
-import { firestore } from "../helpers/firebase";
+import { apiAxios } from "../api";
 
 let state = {
   subscriptions: [],
@@ -7,20 +7,20 @@ let state = {
   favorites: []
 };
 
-let userVideos = id => {
-  return firestore.collection("videos").doc(id);
-};
+let userVideos = () => apiAxios().then(api => api.get("api2/videos/my"));
+
+let newUserVideos = data =>
+  apiAxios().then(api => api.post("api2/videos/my", data));
 
 let actions = {
   initialize({ commit }, user) {
     if (user) {
-      userVideos(user.uid)
-        .get()
-        .then(snapshot => {
-          commit("init", snapshot.data());
+      userVideos()
+        .then(({ data }) => {
+          commit("init", data);
         })
         .catch(error => {
-          commit("notify/error", { error: error }, { root: true });
+          commit("notify/error", { error }, { root: true });
         });
     } else {
       commit("init", { watched: [], favorites: [] });
@@ -29,7 +29,7 @@ let actions = {
   toggleSpeakerSubscription({ dispatch }, speaker) {
     dispatch("toggleSubscription", { topic: speaker, type: "speaker" });
   },
-  toggleSubscription({ commit, getters, rootState, rootGetters }, sub) {
+  toggleSubscription({ commit, getters, rootGetters }, sub) {
     const signedIn = rootGetters["auth/isSignedIn"];
     if (!signedIn) {
       commit(
@@ -48,20 +48,19 @@ let actions = {
       ? state.subscriptions.filter(it => !toggledSubscription(it))
       : state.subscriptions.concat([sub]);
 
-    userVideos(rootState.auth.user.uid)
-      .set({
-        subscriptions: newSubscriptions,
-        favorites: state.favorites,
-        watched: state.watched
-      })
+    newUserVideos({
+      subscriptions: newSubscriptions,
+      favorites: state.favorites,
+      watched: state.watched
+    })
       .then(() => {
         commit("changeSubscriptions", newSubscriptions);
       })
       .catch(error => {
-        commit("notify/error", { error: error }, { root: true });
+        commit("notify/error", { error }, { root: true });
       });
   },
-  toggleFavorite({ commit, state, rootState }, videoId) {
+  toggleFavorite({ commit, state }, videoId) {
     let video = {
       videoId: videoId,
       timestamp: new Date().getTime()
@@ -72,20 +71,19 @@ let actions = {
       ? state.favorites.filter(it => it.videoId != videoId)
       : state.favorites.concat([video]);
 
-    userVideos(rootState.auth.user.uid)
-      .set({
-        favorites: newVideos,
-        watched: state.watched,
-        subscriptions: state.subscriptions
-      })
+    newUserVideos({
+      favorites: newVideos,
+      watched: state.watched,
+      subscriptions: state.subscriptions
+    })
       .then(() => {
         commit("changeFavorites", newVideos);
       })
       .catch(error => {
-        commit("notify/error", { error: error }, { root: true });
+        commit("notify/error", { error }, { root: true });
       });
   },
-  toggleWatched({ commit, state, rootState }, videoId) {
+  toggleWatched({ commit, state }, videoId) {
     let video = {
       videoId: videoId,
       timestamp: new Date().getTime()
@@ -96,12 +94,11 @@ let actions = {
       ? state.watched.filter(it => it.videoId != videoId)
       : state.watched.concat([video]);
 
-    userVideos(rootState.auth.user.uid)
-      .set({
-        watched: newVideos,
-        favorites: state.favorites,
-        subscriptions: state.subscriptions
-      })
+    newUserVideos({
+      watched: newVideos,
+      favorites: state.favorites,
+      subscriptions: state.subscriptions
+    })
       .then(() => {
         commit("changeWatched", newVideos);
       })

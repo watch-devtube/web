@@ -10,7 +10,7 @@ import { Fastr } from "devtube-commons";
 import { Request, Response } from "express";
 import { dnsCache, Logger } from "devtube-commons";
 import { Videos } from "./videos";
-import { User } from "./api/user";
+import { User, firestore } from "./api/user";
 
 console.timeEnd("Imports");
 
@@ -47,7 +47,7 @@ app.use(
   expressWinston.logger({
     transports: [new winston.transports.Console()],
     meta: false,
-    expressFormat: true,
+    expressFormat: true
   })
 );
 app.use(require("prerender-node"));
@@ -55,7 +55,7 @@ app.use(require("prerender-node"));
 app.use(
   express.static(staticDir, {
     index: false,
-    maxAge: oneHour,
+    maxAge: oneHour
   })
 );
 
@@ -103,11 +103,45 @@ function sendStatic(res: Response, which: string) {
   }
 }
 
+app.post("/api2/videos/my", (req: Request, res: Response) => {
+  const { auth } = req.headers;
+  const { subscriptions, favorites, watched } = req.body;
+  const u = new User(auth);
+  u.uid()
+    .then(uid =>
+      firestore
+        .collection("videos")
+        .doc(uid)
+        .set({
+          subscriptions,
+          favorites,
+          watched
+        })
+    )
+    .then(ok => res.send(ok))
+    .catch(nok => res.status(400).send(nok));
+});
+
+app.get("/api2/videos/my", (req: Request, res: Response) => {
+  const { auth } = req.headers;
+  const u = new User(auth);
+  u.uid()
+    .then(uid =>
+      firestore
+        .collection("videos")
+        .doc(uid)
+        .get()
+        .then(snapshot => snapshot.data())
+    )
+    .then(ok => res.send(ok))
+    .catch(nok => res.status(400).send(nok));
+});
+
 app.get("/api2/lists/all", async (req: Request, res: Response) => {
   res.send({
     tags: fastr.listTags(),
     channels: fastr.listChannels(),
-    speakers: fastr.listSpeakers(),
+    speakers: fastr.listSpeakers()
   });
 });
 

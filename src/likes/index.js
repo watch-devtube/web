@@ -1,26 +1,16 @@
-import { api } from "../api";
+import { apiAxios } from "../api";
 
 let state = {};
 
 let actions = {
-  putALike({ rootState }, videoId) {
-    let tkn = rootState.auth.user.tkn;
-    return api.post(
-      `/api2/videos/${videoId}/likes`,
-      {},
-      {
-        headers: { auth: tkn }
-      }
+  putALike(context, videoId) {
+    return apiAxios().then(api =>
+      api.post(`/api2/videos/${videoId}/likes`, {})
     );
   },
-  putADislike({ rootState }, videoId) {
-    let tkn = rootState.auth.user.tkn;
-    return api.post(
-      `/api2/videos/${videoId}/dislikes`,
-      {},
-      {
-        headers: { auth: tkn }
-      }
+  putADislike(context, videoId) {
+    return apiAxios().then(api =>
+      api.post(`/api2/videos/${videoId}/dislikes`, {})
     );
   }
 };

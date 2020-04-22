@@ -81,6 +81,7 @@ header {
     overflow: hidden;
     border-radius: 50%;
     margin-right: 0.5em;
+    margin-left: 0.5em;
   }
 
   @media only screen and (max-width: 768px) {

@@ -1,7 +1,7 @@
 import * as Datastore from "@google-cloud/datastore";
 
 const datastore = new Datastore();
-const flat = (arr) => arr.reduce((acc, val) => acc.concat(val), []);
+const flat = arr => arr.reduce((acc, val) => acc.concat(val), []);
 
 export class Videos {
   videoKeys: any[];
@@ -10,8 +10,8 @@ export class Videos {
 
   constructor(ids) {
     this.ids = ids || [];
-    this.videoKeys = this.ids.map((id) => datastore.key(["video", id]));
-    this.reactionKeys = this.ids.map((id) =>
+    this.videoKeys = this.ids.map(id => datastore.key(["video", id]));
+    this.reactionKeys = this.ids.map(id =>
       datastore.key(["video-reactions", id])
     );
   }
@@ -21,13 +21,13 @@ export class Videos {
       return Promise.resolve([]);
     }
 
-    const alwaysArrayOfSpeakers = (video) =>
+    const alwaysArrayOfSpeakers = video =>
       Object.assign(video, { speaker: flat([video.speaker]).filter(Boolean) });
     return datastore
       .get(this.videoKeys)
       .then(([videos]) => videos)
-      .then((videos) => videos.map(alwaysArrayOfSpeakers))
-      .then((videos) =>
+      .then(videos => videos.map(alwaysArrayOfSpeakers))
+      .then(videos =>
         videos.sort(
           (a, b) => this.ids.indexOf(a.objectID) - this.ids.indexOf(b.objectID)
         )
@@ -61,19 +61,19 @@ export class Videos {
           .concat([
             {
               ts: new Date().getTime(),
-              uid: uid,
-            },
+              uid: uid
+            }
           ])
-          .dedup((it) => it.uid);
+          .dedup(it => it.uid);
         video[counter] = reactions[collection].length;
         tx.save([
           { key: videoKey, data: video, excludeFromIndexes: ["description"] },
-          { key: reactionKey, data: reactions },
+          { key: reactionKey, data: reactions }
         ]);
         tx.commit();
         return reactions;
       })
-      .catch((e) => {
+      .catch(e => {
         console.error(e);
         tx.rollback();
         throw e;

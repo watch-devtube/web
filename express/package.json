@@ -18,7 +18,7 @@
     "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/202004111054/devtube-commons-v0.1.0.tgz",
     "express": "4.16.4",
     "express-winston": "^4.0.3",
-    "firebase-admin": "^6.0.0",
+    "firebase-admin": "8.10.0",
     "lru-cache": "^4.1.1",
     "prerender-node": "^3.2.5",
     "winston": "^3.2.1"
