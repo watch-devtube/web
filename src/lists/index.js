@@ -8,7 +8,7 @@ const state = {
 
 const actions = {
   initialize({ commit }) {
-    api.get(`/api2/lists/all`).then(response => commit("init", response.data));
+    api.get("/api/lists").then(response => commit("init", response.data));
   }
 };
 const mutations = {

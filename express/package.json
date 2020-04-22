@@ -20,7 +20,6 @@
     "express-winston": "^4.0.3",
     "firebase-admin": "8.10.0",
     "lru-cache": "^4.1.1",
-    "prerender-node": "^3.2.5",
     "winston": "^3.2.1"
   },
   "devDependencies": {

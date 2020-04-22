@@ -196,11 +196,13 @@ export default {
     fetch() {
       this.$Progress.start();
       api
-        .get(`/api2/videos/${this.id}`)
+        .get(`/api/videos/${this.id}`)
         .then(it => (this.video = it.data))
-        .then(() => (this.loaded = true))
-        .then(() => this.$emit("updateHead"))
-        .then(() => this.$Progress.finish());
+        .finally(() => {
+          this.loaded = true;
+          this.$emit("updateHead");
+          this.$Progress.finish();
+        });
     },
     refineTag: function(tag) {
       this.$router.push({ name: "tag", params: { tag: tag } });

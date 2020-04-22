@@ -7,10 +7,10 @@ let state = {
   favorites: []
 };
 
-let userVideos = () => apiAxios().then(api => api.get("api2/videos/my"));
+let userVideos = () => apiAxios().then(api => api.get("api/myvideos"));
 
 let newUserVideos = data =>
-  apiAxios().then(api => api.post("api2/videos/my", data));
+  apiAxios().then(api => api.post("api/myvideos", data));
 
 let actions = {
   initialize({ commit }, user) {
