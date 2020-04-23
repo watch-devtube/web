@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "datastore-init": "node datastore.init.js",
-    "dev": "webpack --mode=development && node dist/index.js dev",
+    "dev": "webpack --mode=development && node dist/index.js",
     "build": "webpack --hide-modules --mode=production"
   },
   "dependencies": {
