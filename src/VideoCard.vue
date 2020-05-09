@@ -8,7 +8,7 @@
             .ttl.is-capitalized.is-size-7
               .image.is-32x32(:title="each.name" v-for="(each, index) in speaker" :style="'left: -' + (20 + (10 * index)) + 'px'")
                 a.is-lowercase(:href="'/@' + each.twitter")
-                  img.avatar(:src="'https://twitter-avatar.now.sh/' + each.twitter + '/small'" :alt="each.name + ' avatar'")
+                  img.avatar(:src="'https://twitter-avatar.now.sh/' + each.twitter" :alt="each.name + ' avatar'")
               | {{title}}
       .card-content
           nav.level.is-mobile
