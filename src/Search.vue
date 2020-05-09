@@ -38,7 +38,7 @@
                         .columns.is-centered
                           .column.has-text-centered
                             figure.image.is-128x128.container
-                              img.is-rounded(:src="`https://avatars.io/twitter/${speaker}`" :alt="`${speaker} avatar`")
+                              img.is-rounded(:src="`https://twitter-avatar.now.sh/${speaker}`" :alt="`${speaker} avatar`")
                             h2.is-size-5 {{profile.name}}
                             a.is-size-7.is-lowercased(:href="`https://twitter.com/${speaker}`" rel="nofollow")
                               font-awesome-icon(:icon="['fab', 'twitter']")

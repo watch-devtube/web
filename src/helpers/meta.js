@@ -5,9 +5,9 @@ const DESCR = "🍿 Enjoy the best developer videos and tutorials from YouTube";
 import emojiStrip from "emoji-strip";
 
 export const ogImage = (twt, name = "", desc = "") => {
-  const avatarUrl = Buffer.from(`http://avatars.io/twitter/${twt}`).toString(
-    "base64"
-  );
+  const avatarUrl = Buffer.from(
+    `https://twitter-avatar.now.sh/${twt}`
+  ).toString("base64");
   const bio = encodeURIComponent(encodeURIComponent(emojiStrip(desc)));
   return `https://res.cloudinary.com/eduardsi/image/upload/l_fetch:${avatarUrl},w_256,h_256,g_north_west,x_100,y_100,r_max,bo_2px_solid_white/e_colorize,co_white,l_text:Lato_50:${emojiStrip(
     name

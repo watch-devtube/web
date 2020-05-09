@@ -30,7 +30,7 @@
                           .media(v-for="each in video.speaker")
                               .media-left
                                   figure.image.is-32x32.is-marginless
-                                    img.avatar(:src="'https://avatars.io/twitter/' + each.twitter" :alt="each.name + ' avatar'")
+                                    img.avatar(:src="'https://twitter-avatar.now.sh/' + each.twitter" :alt="each.name + ' avatar'")
                               .media-content
                                 .content
                                   p.title.is-6(style="margin-bottom: 1.2em")

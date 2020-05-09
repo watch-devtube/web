@@ -3,7 +3,7 @@
     .message-widget(v-if="ad")
       .buttons
         a(v-on:click.stop="close"): font-awesome-icon(:icon="['fas', 'times']")
-      a(:href="'https://twitter.com/' + this.ad.author"): img.agent(:src="'https://avatars.io/twitter/' + this.ad.author" :alt="this.ad.author + ' avatar'")
+      a(:href="'https://twitter.com/' + this.ad.author"): img.agent(:src="'https://twitter-avatar.now.sh/' + this.ad.author" :alt="this.ad.author + ' avatar'")
       .message
         .content(v-html="ad.message")
 </template>
