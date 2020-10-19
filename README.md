@@ -105,6 +105,7 @@ $(gcloud beta emulators datastore env-init)
 
 # populate Datastore Emulator
 # From ./express directory run:
+yarn
 yarn run datastore-init
 ```
 

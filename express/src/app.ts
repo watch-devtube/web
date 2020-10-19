@@ -1,8 +1,8 @@
 import "./utils";
-import { dnsCache, Logger } from "devtube-commons";
+import { dnsCache } from "devtube-commons";
+import { Timer } from "./timer";
 
-Logger.enabled = true;
-Logger.time("Application start");
+let coldstartTime = new Timer("cold start").withWarningIfSlow();
 
 dnsCache();
 
@@ -21,11 +21,14 @@ app.use(
   expressWinston.logger({
     transports: [new winston.transports.Console()],
     meta: false,
-    expressFormat: true
+    msg: (req: Request, res) => {
+      const slow = res.responseTime >= 10;
+      return `${req.method} ${req.url} ${res.statusCode} ${res.responseTime}ms ${slow ? '(slow)' : ''}`;
+    }
   })
 );
 
-Logger.timeEnd("Application start");
+coldstartTime.print();
 
 require("./routes/index")(app);
 

@@ -4,7 +4,7 @@ const shuffle = (a) => {
     let j = Math.floor(Math.random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]]
   }
-  return a  
+  return a
 }
 
 declare global {
@@ -16,13 +16,13 @@ declare global {
 }
 
 if (!Array.prototype.shuffle) {
-  Array.prototype.shuffle = function<T>(): T[] {
+  Array.prototype.shuffle = function <T>(): T[] {
     return shuffle(this)
   }
 }
 
 if (!Array.prototype.dedup) {
-  Array.prototype.dedup = function<T>(f: Function): T[] {
+  Array.prototype.dedup = function <T>(f: Function): T[] {
     return this.filter((that, pos, arr) => {
       return arr.map(it => f(it)).indexOf(f(that)) === pos;
     })
@@ -32,11 +32,11 @@ if (!Array.prototype.dedup) {
 
 
 if (!Array.prototype.flatMap) {
-  Array.prototype.flatMap = function(f: Function) {
+  Array.prototype.flatMap = function (f: Function) {
     return this.reduce((ys: any, x: any) => {
-        return ys.concat(f.call(this, x))
+      return ys.concat(f.call(this, x))
     }, [])
   }
 }
 
-export {}
+export { }
