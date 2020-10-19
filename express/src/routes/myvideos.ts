@@ -14,7 +14,10 @@ router.get("/", (req, res) => {
         .then(snapshot => snapshot.data())
     )
     .then(ok => res.send(ok))
-    .catch(nok => res.status(400).send(nok));
+    .catch(nok => {
+      console.error(nok);
+      res.status(400).send(nok);
+    });
 });
 
 router.post("/", (req, res) => {
@@ -33,7 +36,10 @@ router.post("/", (req, res) => {
         })
     )
     .then(ok => res.send(ok))
-    .catch(nok => res.status(400).send(nok));
+    .catch(nok => {
+      console.error(nok);
+      res.status(400).send(nok);
+    });
 });
 
 module.exports = router;
