@@ -22,7 +22,7 @@ app.use(
     transports: [new winston.transports.Console()],
     meta: false,
     msg: (req: Request, res) => {
-      const slow = res.responseTime >= 10;
+      const slow = res.responseTime >= 2000;
       return `${req.method} ${req.url} ${res.statusCode} ${res.responseTime}ms ${slow ? '(slow)' : ''}`;
     }
   })
