@@ -63,6 +63,8 @@ script:
     --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
   - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/deployment.txt
     | tee -a artilery.log
+  - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/api/videos/NQ5hTEp-GTM
+    | tee -a artilery.log
   - set +e
   - if [ $BLUE -eq 0 -a $GREEN -eq 0 ]; then ${SSH} sudo touch /etc/nginx/${DEPLOYMENT};
     elif [ "$DEPLOYMENT" = "blue" ]; then ${SSH} sudo mv /etc/nginx/green /etc/nginx/blue;
