@@ -22,10 +22,10 @@ router.post("/", (req, res) => {
   } = req.body.requests[0].params;
   let q = query
     ? query
-        .trim()
-        .split(/\s+/)
-        .map(token => `+${token}`)
-        .join(" ")
+      .trim()
+      .split(/\s+/)
+      .map(token => `+${token}`)
+      .join(" ")
     : query;
 
   let requestKey = JSON.stringify({
@@ -43,9 +43,22 @@ router.post("/", (req, res) => {
     return res.json(hottestResponse);
   } else {
     let maxHitsPerPage = 20;
-    let hits = fastr
+
+    let hits = [];
+    let hitsIds = [];
+
+    fastr
       .search(q, refinement, ["-featured", sortOrder])
-      .filter(hit => hit != null);
+      .forEach(hit => {
+        if (hit != null) {
+          hits.push(hit);
+          const languageMatches = !lang || hit.language == lang;
+          const notExcluded = !(excludes || []).includes(hit.objectID);
+          if (languageMatches && notExcluded) {
+            hitsIds.push(hit.objectID);
+          }
+        }
+      })
 
     let calculateStats = (stats, it) => {
       stats.likes = (stats.likes || 0) + it.likes;
@@ -57,11 +70,6 @@ router.post("/", (req, res) => {
 
     let needStats = refinement && !!refinement["speaker.twitter"];
     let stats = needStats ? hits.reduce(calculateStats, {}) : {};
-
-    let hitsIds = hits
-      .filter(hit => !lang || hit.language == lang)
-      .filter(hit => !(excludes || []).includes(hit.objectID))
-      .map(hit => hit.objectID);
 
     let from = (page || 0) * maxHitsPerPage;
     let to = from + maxHitsPerPage;
