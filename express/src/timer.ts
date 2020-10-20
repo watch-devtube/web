@@ -16,7 +16,7 @@ export class Timer {
   }
 
   print() {
-    const elapsedMs = this.hrTimeToMillis(process.hrtime(this.start));
+    const elapsedMs = this.elapsed();
     console.debug(`${this.label}: ${elapsedMs}ms`);
 
     if (elapsedMs >= this.warnThresholdMs) {
@@ -25,11 +25,9 @@ export class Timer {
 
   }
 
-  private hrTimeToMillis(hrtime: [number, number]) {
-    // magic taken from https://github.com/seriousManual/hirestime/blob/master/src/index.ts
-    return Math.round(hrtime[0] * 1e3 + hrtime[1] / 1e6);
+  private elapsed() {
+    const [seconds, nanos] = process.hrtime(this.start);
+    return Math.round(seconds * 1000 + nanos / 1000000);
   }
-
-
 
 }
