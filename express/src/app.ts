@@ -28,9 +28,9 @@ app.use(
   })
 );
 
-coldstartTime.print();
-
 require("./routes/index")(app);
+
+coldstartTime.print();
 
 if (process.env.NODE_ENV === "development") {
   const listener = app.listen(port, () => {
