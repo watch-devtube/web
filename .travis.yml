@@ -61,10 +61,14 @@ script:
   - ls -latr ./data
   - gcloud functions deploy devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10
     --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
+  - gcloud functions deploy devtube_${DEPLOYMENT}_loki --trigger-http --runtime nodejs10
+    --verbosity=debug --ignore-file=.gcloudignore.loki --memory=2048MB --timeout=30s --project=dev-tube
+  - gcloud functions deploy devtube_${DEPLOYMENT}_lunr --trigger-http --runtime nodejs10
+    --verbosity=debug --ignore-file=.gcloudignore.lunr --memory=2048MB --timeout=30s --project=dev-tube
   - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/deployment.txt
-    | tee -a artilery.log
+    | tee -a artillery.log
   - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/api/videos/NQ5hTEp-GTM
-    | tee -a artilery.log
+    | tee -a artillery.log
   - set +e
   - if [ $BLUE -eq 0 -a $GREEN -eq 0 ]; then ${SSH} sudo touch /etc/nginx/${DEPLOYMENT};
     elif [ "$DEPLOYMENT" = "blue" ]; then ${SSH} sudo mv /etc/nginx/green /etc/nginx/blue;

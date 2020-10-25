@@ -1,0 +1,10 @@
+.gitignore
+yarn*
+service_key.json
+tsconfig.json
+./src/
+*.yml
+*.enc
+*.ts
+.serverless/
+./data/lunr.json
