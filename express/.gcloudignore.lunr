@@ -7,5 +7,5 @@ tsconfig.json
 *.enc
 *.ts
 .serverless/
-./data/loki.json
-./data/loki-test.json
+loki.json
+loki-test.json

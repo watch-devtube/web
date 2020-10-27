@@ -7,5 +7,5 @@ tsconfig.json
 *.enc
 *.ts
 .serverless/
-./data/lunr.json
-./data/lunr-test.json
+lunr.json
+lunr-test.json
