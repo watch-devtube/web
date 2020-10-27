@@ -74,9 +74,9 @@ script:
   - ls -latr ./data
 
   - echo "Deploy function variants"
-  - gcloud functions deploy devtube_${DEPLOYMENT}      --entry-point=devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug                                  --memory=2048MB --timeout=30s --project=dev-tube
-  - gcloud functions deploy devtube_${DEPLOYMENT}_loki --entry-point=devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug --ignore-file=.gcloudignore.loki --memory=2048MB --timeout=30s --project=dev-tube
-  - gcloud functions deploy devtube_${DEPLOYMENT}_lunr --entry-point=devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug --ignore-file=.gcloudignore.lunr --memory=2048MB --timeout=30s --project=dev-tube
+  - gcloud functions deploy devtube_${DEPLOYMENT}                                                                   --entry-point=devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
+  - gcloud functions deploy devtube_${DEPLOYMENT}_loki --set-env-vars lokiDir=data --ignore-file=.gcloudignore.loki --entry-point=devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
+  - gcloud functions deploy devtube_${DEPLOYMENT}_lunr --set-env-vars lunrDir=data --ignore-file=.gcloudignore.lunr --entry-point=devtube_${DEPLOYMENT} --trigger-http --runtime nodejs10 --verbosity=debug --memory=2048MB --timeout=30s --project=dev-tube
   
   - echo "Warm-up functions with artillery"
   - artillery quick -d 30 -r 2 https://us-central1-dev-tube.cloudfunctions.net/devtube_${DEPLOYMENT}/deployment.txt
