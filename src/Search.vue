@@ -1,112 +1,134 @@
 <template lang="pug">
-  .searchContainer
-    ais-index(:search-store="searchStore" index-name="videos")
-      section.section(style="margin-top: 20px")
-            .container
-              .columns.is-mobile
-                .column
-                  .buttons
-                    a.button.is-small.is-outlined(v-if="query.lang" @click="lang(undefined)")
-                      span {{query.lang}}
-                      span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
-                    router-link.button.is-small.is-outlined(v-if="tag || channel" :to="{ name: 'search' }")
-                      span(v-if="tag || channel") {{tag || channel | capitalizeIfNeeded}}
-                      span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
-                .column
-                  .is-pulled-right
-                    Sorting
-              .loading(v-if="loading")
-                p.is-size-1.is-size-5-mobile.has-text-centered
-                  | (งツ)ว
-                  br
-                  | Searching for the best tech videos...
-              .loaded(v-else)
-                ais-no-results
-                  template(slot-scope="props")
-                    p.is-size-1.is-size-5-mobile.has-text-centered
-                      | ¯\_(ツ)_/¯ There are no video matching your criteria.
+.searchContainer
+  ais-index(:search-store="searchStore", index-name="videos")
+    section.section(style="margin-top: 20px")
+      .container
+        .columns.is-mobile
+          .column
+            .buttons
+              a.button.is-small.is-outlined(
+                v-if="query.lang",
+                @click="lang(undefined)"
+              )
+                span {{ query.lang }}
+                span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
+              router-link.button.is-small.is-outlined(
+                v-if="tag || channel",
+                :to="{ name: 'search' }"
+              )
+                span(v-if="tag || channel") {{ tag || channel | capitalizeIfNeeded }}
+                span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
+          .column
+            .is-pulled-right
+              Sorting
+        .loading(v-if="loading")
+          p.is-size-1.is-size-5-mobile.has-text-centered
+            | (งツ)ว
+            br
+            | Searching for the best tech videos...
+        .loaded(v-else)
+          ais-no-results
+            template(slot-scope="props")
+              p.is-size-1.is-size-5-mobile.has-text-centered
+                | ¯\_(ツ)_/¯ There are no video matching your criteria.
+                |
+                a(href="https://dev.tube", target="_blank") Reset
+                |
+                | your search criteria or
+                |
+                a(
+                  href="https://github.com/watch-devtube/contrib",
+                  target="_blank"
+                ) contribute
+                |
+                | YouTube channels.
+          section(v-if="speaker")
+            .columns
+              .column.is-3
+                .columns.is-centered
+                  .column.has-text-centered
+                    figure.image.is-128x128.container
+                      img.is-rounded(
+                        :src="`https://unavatar.now.sh/twitter/${speaker}`",
+                        :alt="`${speaker} avatar`"
+                      )
+                    h2.is-size-5 {{ profile.name }}
+                    a.is-size-7.is-lowercased(
+                      :href="`https://twitter.com/${speaker}`",
+                      rel="nofollow"
+                    )
+                      font-awesome-icon(:icon="['fab', 'twitter']")
                       |
-                      a(href="https://dev.tube" target="_blank") Reset
-                      |  your search criteria or
-                      |
-                      a(href="https://github.com/watch-devtube/contrib" target="_blank") contribute
-                      |
-                      | YouTube channels.
-                section(v-if="speaker")
-                  .columns
-                      .column.is-3
-                        .columns.is-centered
-                          .column.has-text-centered
-                            figure.image.is-128x128.container
-                              img.is-rounded(:src="`https://twitter-avatar.now.sh/${speaker}`" :alt="`${speaker} avatar`")
-                            h2.is-size-5 {{profile.name}}
-                            a.is-size-7.is-lowercased(:href="`https://twitter.com/${speaker}`" rel="nofollow")
-                              font-awesome-icon(:icon="['fab', 'twitter']")
-                              |  {{speaker}}
-                            p.profileInfo.is-size-7 {{profile.info}}
-                            hr
-                            .level.is-mobile
-                              .level-item.has-text-centered
-                                div
-                                  p.heading Videos
-                                  p {{stats.videos | kilo}}
-                              .level-item.has-text-centered
-                                div
-                                  p.heading On Stage
-                                  p {{stats.stage | durationFull}}
-                              .level-item.has-text-centered
-                                div
-                                  p.heading Likes
-                                  p {{stats.likes | kilo}}
-                              .level-item.has-text-centered
-                                div
-                                  p.heading Views
-                                  p {{stats.views | kilo}}
-                            br
-                            .subscriptions
-                              a.button(@click="toggleSpeakerSubscription(speaker)")
-                                | {{hasSpeakerSubscription(speaker) ? 'Unsubscribe' : 'Subscribe'}}
-                      .column.is-9
-                        ais-results#videos.columns.is-multiline
-                          template(slot-scope="{ result }")
-                            .column.shrinkIfEmpty
-                              VideoCard(
-                                :tags="result.tags"
-                                :isFeatured="result.featured"
-                                :speaker="result.speaker"
-                                :creationDate="result.creationDate"
-                                :recordingDate="result.recordingDate"
-                                :duration="result.duration"
-                                :views="result.views"
-                                :likes="result.likes + (result.dtLikes || 0)"
-                                :dislikes="result.dislikes + (result.dtDislikes || 0)"
-                                :title="result.title"
-                                :id="result.objectID"
-                                :channel="result.channelTitle")
-                ais-results#videos.columns.is-multiline.is-mobile(v-if="!speaker")
+                      | {{ speaker }}
+                    p.profileInfo.is-size-7 {{ profile.info }}
+                    hr
+                    .level.is-mobile
+                      .level-item.has-text-centered
+                        div
+                          p.heading Videos
+                          p {{ stats.videos | kilo }}
+                      .level-item.has-text-centered
+                        div
+                          p.heading On Stage
+                          p {{ stats.stage | durationFull }}
+                      .level-item.has-text-centered
+                        div
+                          p.heading Likes
+                          p {{ stats.likes | kilo }}
+                      .level-item.has-text-centered
+                        div
+                          p.heading Views
+                          p {{ stats.views | kilo }}
+                    br
+                    .subscriptions
+                      a.button(@click="toggleSpeakerSubscription(speaker)")
+                        | {{ hasSpeakerSubscription(speaker) ? 'Unsubscribe' : 'Subscribe' }}
+              .column.is-9
+                ais-results#videos.columns.is-multiline
                   template(slot-scope="{ result }")
                     .column.shrinkIfEmpty
                       VideoCard(
-                        :tags="result.tags"
-                        :isFeatured="result.featured"
-                        :speaker="result.speaker"
-                        :creationDate="result.creationDate"
-                        :recordingDate="result.recordingDate"
-                        :duration="result.duration"
-                        :views="result.views"
-                        :likes="result.likes + (result.dtLikes || 0)"
-                        :dislikes="result.dislikes + (result.dtDislikes || 0)"
-                        :title="result.title"
-                        :id="result.objectID"
-                        :channel="result.channelTitle")
-      section.section
-        .container
-          .columns
-            .column.has-text-right
-              br
-              br
-              nav.paging(role="navigation" aria-label="pagination")
-                ais-pagination.pagination(v-on:page-change="scrollTop" :class-names="{'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current'}")
+                        :tags="result.tags",
+                        :isFeatured="result.featured",
+                        :speaker="result.speaker",
+                        :creationDate="result.creationDate",
+                        :recordingDate="result.recordingDate",
+                        :duration="result.duration",
+                        :views="result.views",
+                        :likes="result.likes + (result.dtLikes || 0)",
+                        :dislikes="result.dislikes + (result.dtDislikes || 0)",
+                        :title="result.title",
+                        :id="result.objectID",
+                        :channel="result.channelTitle"
+                      )
+          ais-results#videos.columns.is-multiline.is-mobile(v-if="!speaker")
+            template(slot-scope="{ result }")
+              .column.shrinkIfEmpty
+                VideoCard(
+                  :tags="result.tags",
+                  :isFeatured="result.featured",
+                  :speaker="result.speaker",
+                  :creationDate="result.creationDate",
+                  :recordingDate="result.recordingDate",
+                  :duration="result.duration",
+                  :views="result.views",
+                  :likes="result.likes + (result.dtLikes || 0)",
+                  :dislikes="result.dislikes + (result.dtDislikes || 0)",
+                  :title="result.title",
+                  :id="result.objectID",
+                  :channel="result.channelTitle"
+                )
+    section.section
+      .container
+        .columns
+          .column.has-text-right
+            br
+            br
+            nav.paging(role="navigation", aria-label="pagination")
+              ais-pagination.pagination(
+                v-on:page-change="scrollTop",
+                :class-names="{ 'ais-pagination': 'pagination-list', 'ais-pagination__item': 'page', 'ais-pagination__link': 'pagination-link', 'ais-pagination__item--previous': 'is-hidden', 'ais-pagination__item--next': 'is-hidden', 'ais-pagination__item--active': 'is-current' }"
+              )
 </template>
 <script>
 import { createFromAlgoliaClient } from "vue-instantsearch";

@@ -1,11 +1,14 @@
 <template lang="pug">
-  delay(:wait="5000")
-    .message-widget(v-if="ad")
-      .buttons
-        a(v-on:click.stop="close"): font-awesome-icon(:icon="['fas', 'times']")
-      a(:href="'https://twitter.com/' + this.ad.author"): img.agent(:src="'https://twitter-avatar.now.sh/' + this.ad.author" :alt="this.ad.author + ' avatar'")
-      .message
-        .content(v-html="ad.message")
+delay(:wait="5000")
+  .message-widget(v-if="ad")
+    .buttons
+      a(v-on:click.stop="close"): font-awesome-icon(:icon="['fas', 'times']")
+    a(:href="'https://twitter.com/' + this.ad.author"): img.agent(
+      :src="'https://unavatar.now.sh/twitter/' + this.ad.author",
+      :alt="this.ad.author + ' avatar'"
+    )
+    .message
+      .content(v-html="ad.message")
 </template>
 <style lang="scss">
 .message-widget {
