@@ -3,6 +3,10 @@
   border: 1px solid hsl(0, 0%, 96%);
 }
 
+a.button.is-text:hover {
+  background-color: transparent;
+}
+
 @media (prefers-color-scheme: dark) {
   .pagination-link,
   .pagination-next,

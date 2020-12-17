@@ -1,7 +1,12 @@
 <template lang="pug">
-  a.button.is-text.is-small(:href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url" target="_blank" aria-label="twitter")
-    font-awesome-icon(:icon="['far', 'heart']").has-text-danger
-    |
+a.button.is-text.is-small(
+  :href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url",
+  target="_blank",
+  aria-label="twitter"
+)
+  span
+    font-awesome-icon.has-text-danger(:icon="['far', 'heart']")
+    | &nbsp;
     | say thanks
 </template>
 <style lang="scss" scoped>
