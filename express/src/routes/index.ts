@@ -7,4 +7,3 @@ module.exports = app => {
   app.use("/api/myvideos", require("./myvideos"));
   app.use("/api/lists", require("./lists"));
 };
-f
