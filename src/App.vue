@@ -1,12 +1,11 @@
 <template lang="pug">
-  .app
-    notifications(group="notification" :duration="-1")
-    header
-      .container
-        NavBar
-          Lang
-    router-view(v-if="completed")
-    vue-progress-bar
+.app
+  notifications(group="notification", :duration="-1")
+  header
+    .container
+      NavBar
+  router-view(v-if="completed")
+  vue-progress-bar
 </template>
 <style lang="scss">
 @keyframes pulse {
@@ -42,11 +41,10 @@ header {
 </style>
 <script>
 import NavBar from "./NavBar.vue";
-import Lang from "./LangFilter.vue";
 import { mapState, mapGetters, mapMutations } from "vuex";
 
 export default {
-  components: { NavBar, Lang },
+  components: { NavBar },
   computed: {
     ...mapGetters("loading", ["completed"]),
     ...mapState({ show: state => state.notify.show })

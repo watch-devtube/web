@@ -7,16 +7,11 @@ const hottestResponses = new LRU({ maxAge: 1000 * 60 * 60 * 24, max: 100 });
 const router = require("express").Router();
 
 router.post("/", (req, res) => {
-  if (!req.body.requests || !req.body.requests.length) {
-    res.sendStatus(400);
-    return;
-  }
 
   let {
     page,
     refinement,
     sortOrder,
-    lang,
     excludes
   } = req.body.requests[0].params;
 
@@ -24,7 +19,6 @@ router.post("/", (req, res) => {
     page,
     refinement,
     sortOrder,
-    lang,
     excludes
   });
 
@@ -40,9 +34,8 @@ router.post("/", (req, res) => {
       .searchInLoki(refinement, ["-featured", sortOrder])
       .forEach(hit => {
         if (hit != null) {
-          const languageMatches = !lang || hit.language == lang;
           const notExcluded = !(excludes || []).includes(hit.objectID);
-          if (languageMatches && notExcluded) {
+          if (notExcluded) {
             hitsIds.push(hit.objectID);
           }
         }

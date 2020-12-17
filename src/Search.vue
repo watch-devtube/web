@@ -6,12 +6,6 @@
         .columns.is-mobile
           .column
             .buttons
-              a.button.is-small.is-outlined(
-                v-if="query.lang",
-                @click="lang(undefined)"
-              )
-                span {{ query.lang }}
-                span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
               router-link.button.is-small.is-outlined(
                 v-if="tag || channel",
                 :to="{ name: 'search' }"
@@ -156,8 +150,7 @@ export default {
   },
   watch: {
     $route: "fetch",
-    "$store.state.query.sortOrder": "syncQuery",
-    "$store.state.query.lang": "syncQuery"
+    "$store.state.query.sortOrder": "syncQuery"
   },
   created() {
     let that = this;
@@ -191,7 +184,6 @@ export default {
     this.syncQuery();
   },
   methods: {
-    ...mapActions("query", ["lang"]),
     ...mapActions("videos", ["toggleSpeakerSubscription"]),
     scrollTop() {
       window.scrollTo(0, 0);

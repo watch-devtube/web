@@ -33,7 +33,6 @@ import {
   faUser,
   faPlusCircle,
   faMinusCircle,
-  faLanguage,
   faSortAlphaDown,
   faHashtag,
   faSearch
@@ -72,7 +71,6 @@ library.add(
   faThumbsUp,
   faThumbsDown,
   faUserCircle,
-  faLanguage,
   faEdit,
   faSortAlphaDown,
   faHashtag,

@@ -1,22 +1,13 @@
 import { Videos } from "../videos";
-import * as LRU from "lru-cache";
 
 const fastr = require("../fastr");
-
-const hottestResponses = new LRU({ maxAge: 1000 * 60 * 60 * 24, max: 100 });
 const router = require("express").Router();
 
 router.post("/", (req, res) => {
-  if (!req.body.requests || !req.body.requests.length) {
-    res.sendStatus(400);
-    return;
-  }
-
   let {
     query,
     page,
     sortOrder,
-    lang,
     excludes
   } = req.body.requests[0].params;
 
@@ -28,58 +19,43 @@ router.post("/", (req, res) => {
       .join(" ")
     : query;
 
-  let requestKey = JSON.stringify({
-    query,
-    page,
-    sortOrder,
-    lang,
-    excludes
-  });
+  let maxHitsPerPage = 20;
+  let hitsIds = [];
 
-  let hottestResponse = hottestResponses.get(requestKey);
-
-  if (hottestResponse) {
-    return res.json(hottestResponse);
-  } else {
-    let maxHitsPerPage = 20;
-    let hitsIds = [];
-
-    fastr
-      .searchInLunr(q, ["-featured", sortOrder])
-      .forEach(hit => {
-        if (hit != null) {
-          const languageMatches = !lang || hit.language == lang;
-          const notExcluded = !(excludes || []).includes(hit.objectID);
-          if (languageMatches && notExcluded) {
-            hitsIds.push(hit.objectID);
-          }
+  fastr
+    .searchInLunr(q, ["-featured", sortOrder])
+    .forEach(hit => {
+      if (hit != null) {
+        const notExcluded = !(excludes || []).includes(hit.objectID);
+        if (notExcluded) {
+          hitsIds.push(hit.objectID);
         }
-      })
+      }
+    })
 
 
-    let from = (page || 0) * maxHitsPerPage;
-    let to = from + maxHitsPerPage;
+  let from = (page || 0) * maxHitsPerPage;
+  let to = from + maxHitsPerPage;
 
-    new Videos(hitsIds.slice(from, to))
-      .fetch()
-      .then(hitsPage => {
-        let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage);
-        let response = {
-          results: [
-            {
-              hits: hitsPage,
-              page: page,
-              nbHits: hitsIds.length,
-              nbPages: nbPages,
-              hitsPerPage: maxHitsPerPage
-            }
-          ]
-        };
-        hottestResponses.set(requestKey, response);
-        res.json(response);
-      })
-      .catch(error => res.status(500).send(error));
-  }
+  new Videos(hitsIds.slice(from, to))
+    .fetch()
+    .then(hitsPage => {
+      let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage);
+      let response = {
+        results: [
+          {
+            hits: hitsPage,
+            page: page,
+            nbHits: hitsIds.length,
+            nbPages: nbPages,
+            hitsPerPage: maxHitsPerPage
+          }
+        ]
+      };
+      res.json(response);
+    })
+    .catch(error => res.status(500).send(error));
+
 });
 
 module.exports = router;
