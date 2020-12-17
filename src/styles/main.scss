@@ -7,6 +7,10 @@ a.button.is-text:hover {
   background-color: transparent;
 }
 
+input.input {
+  color: black;
+}
+
 @media (prefers-color-scheme: dark) {
   .pagination-link,
   .pagination-next,
