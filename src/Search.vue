@@ -62,24 +62,6 @@
                       | {{ speaker }}
                     p.profileInfo.is-size-7 {{ profile.info }}
                     hr
-                    .level.is-mobile
-                      .level-item.has-text-centered
-                        div
-                          p.heading Videos
-                          p {{ stats.videos | kilo }}
-                      .level-item.has-text-centered
-                        div
-                          p.heading On Stage
-                          p {{ stats.stage | durationFull }}
-                      .level-item.has-text-centered
-                        div
-                          p.heading Likes
-                          p {{ stats.likes | kilo }}
-                      .level-item.has-text-centered
-                        div
-                          p.heading Views
-                          p {{ stats.views | kilo }}
-                    br
                     .subscriptions
                       a.button(@click="toggleSpeakerSubscription(speaker)")
                         | {{ hasSpeakerSubscription(speaker) ? 'Unsubscribe' : 'Subscribe' }}
@@ -160,7 +142,6 @@ export default {
   data: () => {
     return {
       loading: false,
-      stats: {},
       profile: {}
     };
   },
@@ -194,7 +175,6 @@ export default {
             return data;
           })
           .then(json => {
-            that.stats = json.stats;
             return json;
           });
       },

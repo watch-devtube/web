@@ -34,11 +34,12 @@
                     .multiple(v-if="video.speaker && video.speaker.length")
                       .media(v-for="each in video.speaker")
                         .media-left
-                          figure.image.is-32x32.is-marginless
-                            img.avatar(
-                              :src="'https://unavatar.now.sh/twitter/' + each.twitter",
-                              :alt="each.name + ' avatar'"
-                            )
+                          router-link(:to="'/@' + each.twitter")
+                            figure.image.is-32x32.is-marginless
+                              img.avatar(
+                                :src="'https://unavatar.now.sh/twitter/' + each.twitter",
+                                :alt="each.name + ' avatar'"
+                              )
                         .media-content
                           .content
                             p.title.is-6(style="margin-bottom: 1.2em")

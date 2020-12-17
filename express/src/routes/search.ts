@@ -60,16 +60,6 @@ router.post("/", (req, res) => {
         }
       })
 
-    let calculateStats = (stats, it) => {
-      stats.likes = (stats.likes || 0) + it.likes;
-      stats.views = (stats.views || 0) + it.views;
-      stats.stage = (stats.stage || 0) + it.duration;
-      stats.videos = (stats.videos || 0) + 1;
-      return stats;
-    };
-
-    let needStats = refinement && !!refinement["speaker.twitter"];
-    let stats = needStats ? hits.reduce(calculateStats, {}) : {};
 
     let from = (page || 0) * maxHitsPerPage;
     let to = from + maxHitsPerPage;
@@ -79,7 +69,6 @@ router.post("/", (req, res) => {
       .then(hitsPage => {
         let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage);
         let response = {
-          stats: stats,
           results: [
             {
               hits: hitsPage,

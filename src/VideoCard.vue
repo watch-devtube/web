@@ -13,7 +13,7 @@
             v-for="(each, index) in speaker",
             :style="'left: -' + (20 + 10 * index) + 'px'"
           )
-            a.is-lowercase(:href="'/@' + each.twitter")
+            router-link(:to="'/@' + each.twitter")
               img.avatar(
                 :src="'https://unavatar.now.sh/twitter/' + each.twitter",
                 :alt="each.name + ' avatar'"
