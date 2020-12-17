@@ -1,8 +1,22 @@
 <template lang="pug">
-  .related-videos
-    .columns.is-multiline
-      .column.is-6.is-3-widescreen.shrinkIfEmpty(v-for="video in hits")
-        VideoCard(:tags="video.tags" :isFeatured="video.featured" :speaker="video.speaker" :likes="video.likes + (video.dtLikes || 0)" :dislikes="video.dislikes  + (video.dtDislikes || 0)" :creationDate="video.creationDate" :recordingDate="video.recordingDate" :duration="video.duration" :views="video.views" :satisfaction="video.satisfaction" :title="video.title" :id="video.objectID" :channel="video.channelTitle")
+.related-videos
+  .columns.is-multiline
+    .column.is-6.is-3-widescreen.shrinkIfEmpty(v-for="video in hits")
+      VideoCard(
+        :tags="video.tags",
+        :isFeatured="video.featured",
+        :speaker="video.speaker",
+        :likes="video.likes + (video.dtLikes || 0)",
+        :dislikes="video.dislikes + (video.dtDislikes || 0)",
+        :creationDate="video.creationDate",
+        :recordingDate="video.recordingDate",
+        :duration="video.duration",
+        :views="video.views",
+        :satisfaction="video.satisfaction",
+        :title="video.title",
+        :id="video.objectID",
+        :channel="video.channelTitle"
+      )
 </template>
 <style lang="scss">
 .shrinkIfEmpty:empty {
@@ -43,7 +57,7 @@ export default {
       : { channelTitle: this.channel };
 
     api
-      .post(`/api/search`, {
+      .post(`/api/s`, {
         requests: [
           {
             params: {

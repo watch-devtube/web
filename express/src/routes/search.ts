@@ -43,15 +43,12 @@ router.post("/", (req, res) => {
     return res.json(hottestResponse);
   } else {
     let maxHitsPerPage = 20;
-
-    let hits = [];
     let hitsIds = [];
 
     fastr
       .search(q, refinement, ["-featured", sortOrder])
       .forEach(hit => {
         if (hit != null) {
-          hits.push(hit);
           const languageMatches = !lang || hit.language == lang;
           const notExcluded = !(excludes || []).includes(hit.objectID);
           if (languageMatches && notExcluded) {

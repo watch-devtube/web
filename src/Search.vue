@@ -165,8 +165,11 @@ export default {
       search(requests) {
         that.$Progress.start();
         that.loading = true;
+
+        const { query } = requests[0].params;
+
         return api
-          .post("/api/search", {
+          .post(query ? "/api/fts" : "/api/s", {
             requests
           })
           .then(({ data }) => {
