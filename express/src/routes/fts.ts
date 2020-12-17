@@ -13,16 +13,24 @@ router.post("/", (req, res) => {
   }
 
   let {
+    query,
     page,
-    refinement,
     sortOrder,
     lang,
     excludes
   } = req.body.requests[0].params;
 
+  let q = query
+    ? query
+      .trim()
+      .split(/\s+/)
+      .map(token => `+${token}`)
+      .join(" ")
+    : query;
+
   let requestKey = JSON.stringify({
+    query,
     page,
-    refinement,
     sortOrder,
     lang,
     excludes
@@ -37,7 +45,7 @@ router.post("/", (req, res) => {
     let hitsIds = [];
 
     fastr
-      .searchInLoki(refinement, ["-featured", sortOrder])
+      .searchInLunr(q, ["-featured", sortOrder])
       .forEach(hit => {
         if (hit != null) {
           const languageMatches = !lang || hit.language == lang;
