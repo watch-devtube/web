@@ -1,4 +1,4 @@
-import { apiAxios } from "../api";
+import { firestore } from "../helpers/firebase";
 
 let state = {
   subscriptions: [],
@@ -7,17 +7,17 @@ let state = {
   favorites: []
 };
 
-let userVideos = () => apiAxios().then(api => api.get("api/myvideos"));
-
-let newUserVideos = data =>
-  apiAxios().then(api => api.post("api/myvideos", data));
+let userVideos = id => {
+  return firestore.collection("videos").doc(id);
+};
 
 let actions = {
   initialize({ commit }, user) {
     if (user) {
-      userVideos()
-        .then(({ data }) => {
-          commit("init", data);
+      userVideos(user.uid)
+        .get()
+        .then(snapshot => {
+          commit("init", snapshot.data());
         })
         .catch(error => {
           commit("notify/error", { error }, { root: true });
@@ -29,7 +29,7 @@ let actions = {
   toggleSpeakerSubscription({ dispatch }, speaker) {
     dispatch("toggleSubscription", { topic: speaker, type: "speaker" });
   },
-  toggleSubscription({ commit, getters, rootGetters }, sub) {
+  toggleSubscription({ commit, getters, rootState, rootGetters }, sub) {
     const signedIn = rootGetters["auth/isSignedIn"];
     if (!signedIn) {
       commit(
@@ -48,11 +48,12 @@ let actions = {
       ? state.subscriptions.filter(it => !toggledSubscription(it))
       : state.subscriptions.concat([sub]);
 
-    newUserVideos({
-      subscriptions: newSubscriptions,
-      favorites: state.favorites,
-      watched: state.watched
-    })
+    userVideos(rootState.auth.user.uid)
+      .set({
+        subscriptions: newSubscriptions,
+        favorites: state.favorites,
+        watched: state.watched
+      })
       .then(() => {
         commit("changeSubscriptions", newSubscriptions);
       })
@@ -60,7 +61,7 @@ let actions = {
         commit("notify/error", { error }, { root: true });
       });
   },
-  toggleFavorite({ commit, state }, videoId) {
+  toggleFavorite({ commit, state, rootState }, videoId) {
     let video = {
       videoId: videoId,
       timestamp: new Date().getTime()
@@ -71,11 +72,12 @@ let actions = {
       ? state.favorites.filter(it => it.videoId != videoId)
       : state.favorites.concat([video]);
 
-    newUserVideos({
-      favorites: newVideos,
-      watched: state.watched,
-      subscriptions: state.subscriptions
-    })
+    userVideos(rootState.auth.user.uid)
+      .set({
+        favorites: newVideos,
+        watched: state.watched,
+        subscriptions: state.subscriptions
+      })
       .then(() => {
         commit("changeFavorites", newVideos);
       })
@@ -83,7 +85,7 @@ let actions = {
         commit("notify/error", { error }, { root: true });
       });
   },
-  toggleWatched({ commit, state }, videoId) {
+  toggleWatched({ commit, state, rootState }, videoId) {
     let video = {
       videoId: videoId,
       timestamp: new Date().getTime()
@@ -94,11 +96,15 @@ let actions = {
       ? state.watched.filter(it => it.videoId != videoId)
       : state.watched.concat([video]);
 
-    newUserVideos({
-      watched: newVideos,
-      favorites: state.favorites,
-      subscriptions: state.subscriptions
-    })
+    userVideos(rootState.auth.user.uid)
+      .set({
+        watched: newVideos,
+        favorites: state.favorites,
+        subscriptions: state.subscriptions
+      })
+      .then(() => {
+        commit("changeWatched", newVideos);
+      })
       .then(() => {
         commit("changeWatched", newVideos);
       })

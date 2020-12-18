@@ -1,8 +1,10 @@
 import FirebaseConfig from "../../firebase.config.json";
 import firebase from "firebase/app";
+import "firebase/firestore";
 import "firebase/auth";
 
 firebase.initializeApp(FirebaseConfig);
+const firestore = firebase.firestore();
 
 const authReady = () =>
   new Promise((resolve, reject) => {
@@ -30,4 +32,4 @@ const jwtToken = () =>
     );
   });
 
-export { firebase, authReady, jwtToken };
+export { firebase, firestore, authReady, jwtToken };
