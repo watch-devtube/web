@@ -12,59 +12,50 @@ router.post("/", (req, res) => {
     page,
     refinement,
     sortOrder,
-    excludes
+    excludes = []
   } = req.body.requests[0].params;
 
-  let requestKey = JSON.stringify({
+  let cacheKey = JSON.stringify({
     page,
     refinement,
     sortOrder,
     excludes
   });
 
-  let hottestResponse = hottestResponses.get(requestKey);
-
-  if (hottestResponse) {
-    return res.json(hottestResponse);
-  } else {
-    let maxHitsPerPage = 20;
-    let hitsIds = [];
-
-    fastr
-      .searchInLoki(refinement, ["-featured", sortOrder])
-      .forEach(hit => {
-        if (hit != null) {
-          const notExcluded = !(excludes || []).includes(hit.objectID);
-          if (notExcluded) {
-            hitsIds.push(hit.objectID);
-          }
-        }
-      })
-
-
-    let from = (page || 0) * maxHitsPerPage;
-    let to = from + maxHitsPerPage;
-
-    new Videos(hitsIds.slice(from, to))
-      .fetch()
-      .then(hitsPage => {
-        let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage);
-        let response = {
-          results: [
-            {
-              hits: hitsPage,
-              page: page,
-              nbHits: hitsIds.length,
-              nbPages: nbPages,
-              hitsPerPage: maxHitsPerPage
-            }
-          ]
-        };
-        hottestResponses.set(requestKey, response);
-        res.json(response);
-      })
-      .catch(error => res.status(500).send(error));
+  let cacheHit = hottestResponses.get(cacheKey);
+  if (cacheHit) {
+    return res.json(cacheHit);
   }
+
+
+  let maxHitsPerPage = 20;
+  let hitsIds = fastr
+    .searchInLoki(refinement, ["-featured", sortOrder])
+    .map(({ objectID }) => objectID)
+    .filter(objectID => !excludes.includes(objectID));
+
+  let from = (page || 0) * maxHitsPerPage;
+  let to = from + maxHitsPerPage;
+
+  new Videos(hitsIds.slice(from, to))
+    .fetch()
+    .then(hitsPage => {
+      let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage);
+      let response = {
+        results: [
+          {
+            hits: hitsPage,
+            page: page,
+            nbHits: hitsIds.length,
+            nbPages: nbPages,
+            hitsPerPage: maxHitsPerPage
+          }
+        ]
+      };
+      hottestResponses.set(cacheKey, response);
+      res.json(response);
+    })
+    .catch(error => res.status(500).send(error));
 });
 
 module.exports = router;

@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build --report"
   },
   "dependencies": {
     "@firebase/app-types": "^0.3.2",

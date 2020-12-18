@@ -237,7 +237,7 @@ export default {
           $or: [
             { tags: { $containsAny: subscribedTags } },
             { channelTitle: { $in: subscribedChannels } },
-            { "speaker.twitter": { $containsAny: subscribedSpeakers } }
+            { speaker: { $containsAny: subscribedSpeakers } }
           ]
         };
 
@@ -246,6 +246,7 @@ export default {
       }
 
       if (this.speaker) {
+        console.log(this.speaker);
         dossier
           .get(`/twt/${this.speaker}`)
           .then(({ data }) => data)
@@ -253,7 +254,7 @@ export default {
           .then(() => this.$emit("updateHead"));
 
         this.searchStore.queryParameters = {
-          refinement: { "speaker.twitter": this.speaker }
+          refinement: { speaker: { $contains: this.speaker } }
         };
       }
 

@@ -48,7 +48,7 @@ export default {
     const watchedIds = this.watchedIds;
     const refinement = this.speaker.length
       ? {
-          "speaker.twitter": {
+          speaker: {
             $containsAny: this.speaker.map(it => it.twitter)
           }
         }
