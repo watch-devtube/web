@@ -1,4 +1,4 @@
-import { api } from "../api";
+import { bucket } from "../api";
 
 const state = {
   karma: 0
@@ -6,17 +6,15 @@ const state = {
 
 const actions = {
   initialize({ commit }, user) {
-    if (user) {
-      const [provider] = user.providerData;
-      const what = window.btoa(
-        provider.providerId + "/" + provider.email + "/" + provider.uid
-      );
-      api
-        .get(`/api/karma`, { params: { user: what } })
-        .then(response => commit("init", response.data));
-    } else {
+    if (!user) {
       commit("init", { karma: 0 });
+      return;
     }
+
+    const [userInfo] = user.providerData;
+    bucket
+      .get("board.json")
+      .then(({ data }) => commit("init", karma(userInfo, data.contributors)));
   }
 };
 const mutations = {
@@ -30,4 +28,18 @@ export default {
   state,
   actions,
   mutations
+};
+
+const karma = ({ uid = "", email = "" }, contributors) => {
+  const contributor = contributors.find(
+    each => each.email === email || uidOf(each) === uid
+  );
+  return { karma: contributor?.karma || 0 };
+};
+
+const uidOf = contributor => {
+  const [, uid] = contributor.avatar.match(
+    /githubusercontent.com\/u\/(\d+).*$/
+  );
+  return uid;
 };

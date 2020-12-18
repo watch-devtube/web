@@ -1,4 +1,4 @@
-import { api } from "../api";
+import { bucket } from "../api";
 
 const state = {
   tags: [],
@@ -8,7 +8,9 @@ const state = {
 
 const actions = {
   initialize({ commit }) {
-    api.get("/api/lists").then(response => commit("init", response.data));
+    bucket
+      .get("/categories.json")
+      .then(response => commit("init", response.data));
   }
 };
 const mutations = {
