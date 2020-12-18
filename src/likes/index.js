@@ -4,12 +4,10 @@ let state = {};
 
 let actions = {
   putALike(context, videoId) {
-    return apiAxios().then(api => api.post(`/api/liking/likes/${videoId}`, {}));
+    return apiAxios().then(api => api.post(`/liking/likes/${videoId}`, {}));
   },
   putADislike(context, videoId) {
-    return apiAxios().then(api =>
-      api.post(`/api/liking/dislikes/${videoId}`, {})
-    );
+    return apiAxios().then(api => api.post(`/liking/dislikes/${videoId}`, {}));
   }
 };
 

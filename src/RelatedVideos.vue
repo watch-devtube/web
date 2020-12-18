@@ -57,7 +57,7 @@ export default {
       : { channelTitle: this.channel };
 
     api
-      .post(`/api/s`, {
+      .post(`/s`, {
         requests: [
           {
             params: {

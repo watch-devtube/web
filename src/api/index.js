@@ -15,8 +15,8 @@ export const dossier = axios.create({
 
 export const api = axios.create({
   baseURL: window.location.href.includes("localhost")
-    ? "//localhost:8100"
-    : "//api.dev.tube"
+    ? "//localhost:8100/api"
+    : "//api.dev.tube/api"
 });
 
 function withAuthorization(axiosInstance) {

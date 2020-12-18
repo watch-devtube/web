@@ -256,7 +256,7 @@ export default {
     fetch() {
       this.$Progress.start();
       api
-        .get(`/api/videos/${this.id}`)
+        .get(`/videos/${this.id}`)
         .then(it => (this.video = it.data))
         .finally(() => {
           this.loaded = true;

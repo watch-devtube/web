@@ -162,7 +162,7 @@ export default {
         const { query } = requests[0].params;
 
         return api
-          .post(query ? "/api/fts" : "/api/s", {
+          .post(query ? "/fts" : "/s", {
             requests
           })
           .then(({ data }) => {
