@@ -1,7 +1,7 @@
 <template lang="pug">
 .searchContainer
   ais-index(:search-store="searchStore", index-name="videos")
-    section.section(style="margin-top: 20px")
+    section.section
       .container
         .columns.is-mobile
           .column
