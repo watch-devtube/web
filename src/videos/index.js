@@ -134,10 +134,7 @@ let getters = {
   favoriteIds: state =>
     state.favorites
       .map(video => video.videoId)
-      .filter(video => video != undefined),
-
-  watchedCount: (state, getters) => getters.watchedIds.length,
-  favoriteCount: (state, getters) => getters.favoriteIds.length
+      .filter(video => video != undefined)
 };
 
 let mutations = {
