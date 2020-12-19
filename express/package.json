@@ -15,7 +15,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/202012182345/devtube-commons-v0.1.0.tgz",
+    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/202012191930/devtube-commons-v0.1.0.tgz",
     "express": "4.16.4",
     "express-winston": "^4.0.3",
     "firebase-admin": "8.10.0",
