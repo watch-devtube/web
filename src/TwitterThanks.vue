@@ -1,6 +1,6 @@
 <template lang="pug">
 a.button.is-text.is-small(
-  :href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url",
+  :href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url + '&via=WatchDevTube'",
   target="_blank",
   aria-label="twitter"
 )
@@ -35,7 +35,6 @@ export default {
     },
     hashtags() {
       const tags = this.tags.slice();
-      tags.push("DevTube");
       tags.push(this.channel);
       return tags.map(t => t.replace(/\s|\./g, "")).join(",");
     },
