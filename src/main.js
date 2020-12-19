@@ -110,7 +110,6 @@ import {
   truncate,
   published,
   dateFmt,
-  capitalizeIfNeeded,
   durationFull
 } from "./helpers/filters";
 
@@ -142,7 +141,6 @@ Vue.filter("truncate", truncate);
 Vue.filter("published", published);
 Vue.filter("kilo", kilo);
 Vue.filter("noemoji", noemoji);
-Vue.filter("capitalizeIfNeeded", capitalizeIfNeeded);
 
 Vue.mixin({
   methods: {
@@ -171,7 +169,6 @@ const router = new VueRouter({
       component: Search,
       props: true
     },
-    { name: "tag", path: "/tag/:tag", component: Search, props: true },
     {
       name: "search",
       path: "/",

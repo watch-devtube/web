@@ -47,7 +47,7 @@
             :icon="['far', 'calendar-plus']"
           )
           p.title.is-size-7 {{ recordingDate | published }}
-    Tags(:tags="tags", :isNew="isNew", :isFeatured="isFeatured")
+    Tags(:isNew="isNew", :isFeatured="isFeatured")
 </template>
 <style lang="scss">
 .card {
@@ -101,13 +101,14 @@
 }
 </style>
 <script>
-import Tags from "./Tags.vue";
 import VideoToggles from "./VideoToggles.vue";
+import Tags from "./Tags.vue";
+
 import dayjs from "dayjs";
 import { mapGetters } from "vuex";
 
 export default {
-  components: { Tags, VideoToggles },
+  components: { VideoToggles, Tags },
   props: {
     id: { type: String, required: true },
     title: { type: String, required: true },
@@ -119,7 +120,6 @@ export default {
     duration: { type: Number, required: true },
     recordingDate: { type: Number, required: true },
     creationDate: { type: Number, required: true },
-    tags: { type: Array, required: false, default: () => [] },
     speaker: {
       type: Array,
       required: true

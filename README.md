@@ -139,4 +139,4 @@ yarn lint
 
 ## How to contribute content?
 
-You can contribute channels, speakers, and tags in [watch-devtube/contrib](https://github.com/watch-devtube/contrib) repo.
+You can contribute channels and speakers in [watch-devtube/contrib](https://github.com/watch-devtube/contrib) repo.

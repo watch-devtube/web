@@ -53,14 +53,7 @@ export default {
   props: {
     videoId: { type: String, required: true },
     channel: { type: String, required: true },
-    speaker: { type: Array, required: true },
-    tags: {
-      required: false,
-      type: Array,
-      default: function() {
-        return [];
-      }
-    }
+    speaker: { type: Array, required: true }
   },
   data: function() {
     return {
@@ -80,9 +73,7 @@ export default {
     fetch() {
       const textForMatching = `${this.videoId}/${
         this.channel
-      }/${this.speaker.map(speaker => "@" + speaker.twitter)}/${this.tags.map(
-        tag => "#" + tag + "#"
-      )}`;
+      }/${this.speaker.map(speaker => "@" + speaker.twitter)}}`;
       ads
         .get(`messages.json?r=${Math.random()}`)
         .then(response => {

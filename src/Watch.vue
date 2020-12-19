@@ -63,7 +63,6 @@
                         TwitterThanks(
                           :videoId="video.objectID",
                           :title="video.title",
-                          :tags="video.tags",
                           :channel="video.channelTitle",
                           :speaker="video.speaker"
                         )
@@ -135,14 +134,12 @@
         :videoId="video.objectID",
         :channel="video.channelTitle",
         :featured="video.featured",
-        :tags="video.tags",
         :speaker="video.speaker"
       )
       MessageWidget(
         v-if="!!video.objectID",
         :videoId="video.objectID",
         :channel="video.channelTitle",
-        :tags="video.tags",
         :speaker="video.speaker"
       )
 </template>
@@ -263,9 +260,6 @@ export default {
           this.$emit("updateHead");
           this.$Progress.finish();
         });
-    },
-    refineTag: function(tag) {
-      this.$router.push({ name: "tag", params: { tag: tag } });
     },
     refineChannel: function(channel) {
       this.$router.push({ name: "channel", params: { channel: channel } });

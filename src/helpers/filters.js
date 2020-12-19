@@ -50,35 +50,6 @@ export const noemoji = it => {
   );
 };
 
-export const capitalizeIfNeeded = it => {
-  let tags = [
-    "iOS",
-    "IoT",
-    "DI",
-    "TDD",
-    "GraphQL",
-    "BDD",
-    "PHP",
-    ".NET",
-    "DevOps",
-    "ML",
-    "HTML5",
-    "API",
-    "AWS",
-    "RxJava",
-    "CSS",
-    "REST"
-  ];
-
-  const noCapitalizeTag = tags.find(tag =>
-    new RegExp(`^${tag}$`, "i").test(it)
-  );
-  return noCapitalizeTag || capitalize(it);
-};
-
-const capitalize = str =>
-  str ? str.replace(/\b\w/g, l => l.toUpperCase()) : str;
-
 export const truncate = (it, max) =>
   it ? it.slice(0, max) + (max < it.length ? "..." : "") : it;
 

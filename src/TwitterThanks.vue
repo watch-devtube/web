@@ -23,8 +23,7 @@ export default {
     videoId: { type: String, required: true },
     title: { type: String, required: true },
     speaker: { type: Array, required: true },
-    channel: { type: String, required: true },
-    tags: { type: Array, required: false, default: () => [] }
+    channel: { type: String, required: true }
   },
   computed: {
     text() {
@@ -34,8 +33,7 @@ export default {
       return this.speaker.map(it => "@" + it.twitter).join(" ");
     },
     hashtags() {
-      const tags = this.tags.slice();
-      tags.push(this.channel);
+      const tags = [this.channel];
       return tags.map(t => t.replace(/\s|\./g, "")).join(",");
     },
     thanks() {

@@ -7,10 +7,10 @@
           .column
             .buttons
               router-link.button.is-small.is-outlined(
-                v-if="tag || channel",
+                v-if="channel",
                 :to="{ name: 'search' }"
               )
-                span(v-if="tag || channel") {{ tag || channel | capitalizeIfNeeded }}
+                span(v-if="channel") {{ channel }}
                 span.icon.is-small: font-awesome-icon(:icon="['fas', 'times']")
           .column
             .is-pulled-right
@@ -64,7 +64,6 @@
                   template(slot-scope="{ result }")
                     .column.shrinkIfEmpty
                       VideoCard(
-                        :tags="result.tags",
                         :isFeatured="result.featured",
                         :speaker="result.speaker",
                         :creationDate="result.creationDate",
@@ -81,7 +80,6 @@
             template(slot-scope="{ result }")
               .column.shrinkIfEmpty
                 VideoCard(
-                  :tags="result.tags",
                   :isFeatured="result.featured",
                   :speaker="result.speaker",
                   :creationDate="result.creationDate",
@@ -112,7 +110,6 @@ import { mapState, mapGetters, mapActions } from "vuex";
 
 import { dossier, api } from "./api";
 
-import { capitalizeIfNeeded } from "./helpers/filters";
 import { meta, ogImage } from "./helpers/meta";
 
 import VideoCard from "./VideoCard.vue";
@@ -130,8 +127,7 @@ export default {
     showMyFeed: { type: Boolean, default: false },
     showFavorites: { type: Boolean, default: false },
     speaker: { type: String, required: false, default: undefined },
-    channel: { type: String, required: false, default: undefined },
-    tag: { type: String, required: false, default: undefined }
+    channel: { type: String, required: false, default: undefined }
   },
   data: () => {
     return {
@@ -223,9 +219,6 @@ export default {
       if (this.showMyFeed) {
         let subscriptions = this.videos.subscriptions;
 
-        let subscribedTags = subscriptions
-          .filter(sub => sub.type == "tag")
-          .map(sub => sub.topic);
         let subscribedChannels = subscriptions
           .filter(sub => sub.type == "channel")
           .map(sub => sub.topic);
@@ -235,7 +228,6 @@ export default {
 
         let myFeedQuery = {
           $or: [
-            { tags: { $containsAny: subscribedTags } },
             { channelTitle: { $in: subscribedChannels } },
             { speaker: { $containsAny: subscribedSpeakers } }
           ]
@@ -258,11 +250,6 @@ export default {
         };
       }
 
-      if (this.tag) {
-        this.searchStore.queryParameters = {
-          refinement: { tags: { $contains: this.tag } }
-        };
-      }
       if (this.channel) {
         this.searchStore.queryParameters = {
           refinement: { channelTitle: this.channel }
@@ -274,9 +261,7 @@ export default {
       this.$emit("updateHead");
     },
     title() {
-      const topic = this.tag
-        ? capitalizeIfNeeded(this.tag)
-        : this.channel
+      const topic = this.channel
         ? this.channel
         : this.profile.name
         ? `${this.profile.name} -`

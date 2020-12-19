@@ -1,31 +1,21 @@
 <template lang="pug">
-  .tags
-    span.tag.is-borderless.is-capitalized(v-if="isNew")
-      .is-inline
-        font-awesome-icon(:icon="['far', 'grin-stars']").has-text-success
-        |
-        | New
-    span.tag.is-borderless.is-capitalized(v-if="isFeatured")
-      .is-inline
-        font-awesome-icon(:icon="['far', 'heart']").has-text-danger
-        |
-        | Best
-    a.tag(v-for="(tag) in tags" v-on:click="refineTag(tag)") {{tag | capitalizeIfNeeded}}
+.tags.is-inline
+  span.tag.is-borderless(v-if="isNew")
+    .is-inline
+      font-awesome-icon.has-text-success(:icon="['far', 'grin-stars']")
+      |
+      | New
+  span.tag.is-borderless(v-if="isFeatured")
+    .is-inline
+      font-awesome-icon.has-text-danger(:icon="['far', 'heart']")
+      |
+      | Best
 </template>
 <script>
 export default {
   props: {
-    tags: {
-      type: Array,
-      required: true
-    },
     isNew: { type: Boolean, required: true },
     isFeatured: { type: Boolean, required: true }
-  },
-  methods: {
-    refineTag(tag) {
-      this.$router.push({ name: "tag", params: { tag: tag } });
-    }
   }
 };
 </script>

@@ -3,7 +3,6 @@
   .columns.is-multiline
     .column.is-6.is-3-widescreen.shrinkIfEmpty(v-for="video in hits")
       VideoCard(
-        :tags="video.tags",
         :isFeatured="video.featured",
         :speaker="video.speaker",
         :likes="video.likes + (video.dtLikes || 0)",
@@ -33,8 +32,7 @@ export default {
   props: {
     videoId: { type: String, required: true },
     channel: { type: String, required: true },
-    speaker: { type: Array, required: true },
-    tags: { type: Array, required: false, default: () => [] }
+    speaker: { type: Array, required: true }
   },
   data() {
     return {
@@ -52,8 +50,6 @@ export default {
             $containsAny: this.speaker.map(it => it.twitter)
           }
         }
-      : this.tags.length
-      ? { tags: { $containsAny: this.tags } }
       : { channelTitle: this.channel };
 
     api
