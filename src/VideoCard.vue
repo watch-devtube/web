@@ -15,7 +15,7 @@
           )
             router-link(:to="'/@' + each.twitter")
               img.avatar(
-                :src="'https://unavatar.now.sh/twitter/' + each.twitter",
+                :src="'//dossier.dev.tube/avatar/' + each.twitter + '/48'",
                 :alt="each.name + ' avatar'"
               )
           | {{ title }}

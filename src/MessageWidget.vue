@@ -3,8 +3,8 @@ delay(:wait="5000")
   .message-widget(v-if="ad")
     .buttons
       a(v-on:click.stop="close"): font-awesome-icon(:icon="['fas', 'times']")
-    a(:href="'https://twitter.com/' + this.ad.author"): img.agent(
-      :src="'https://unavatar.now.sh/twitter/' + this.ad.author",
+    a(:href="'//twitter.com/' + this.ad.author"): img.agent(
+      :src="'//dossier.dev.tube/avatar/' + this.ad.author + '/48'",
       :alt="this.ad.author + ' avatar'"
     )
     .message

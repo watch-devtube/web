@@ -43,7 +43,7 @@
                   .column.has-text-centered
                     figure.image.is-128x128.container
                       img.is-rounded(
-                        :src="`https://unavatar.now.sh/twitter/${speaker}`",
+                        :src="`//dossier.dev.tube/avatar/${speaker}/48`",
                         :alt="`${speaker} avatar`"
                       )
                     h2.is-size-5 {{ profile.name }}
