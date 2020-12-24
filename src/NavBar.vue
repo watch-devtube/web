@@ -42,7 +42,7 @@ nav.navbar.is-fixed-top.is-dark(role="navigation", aria-label="main navigation")
         :to="{ name: 'watched' }",
         @click.native="hide()"
       )
-        span.is-hidden-tablet Watched
+        span.is-hidden-desktop Watched&nbsp;
         font-awesome-icon(:icon="['far', 'eye']")
       router-link.navbar-item(
         v-bind:class="{ 'is-active': $route.name === 'favorites' }",
@@ -50,11 +50,12 @@ nav.navbar.is-fixed-top.is-dark(role="navigation", aria-label="main navigation")
         :to="{ name: 'favorites' }",
         @click.native="hide()"
       )
-        span.is-hidden-tablet Favorites
+        span.is-hidden-desktop Favorites&nbsp;
         font-awesome-icon(:icon="['far', 'star']")
       a.navbar-item(title="Speakers", @click="$refs.speakers.toggleCollapse()")
-        span.is-hidden-tablet Speakers
-        font-awesome-icon(:icon="['far', 'user-circle']")
+        span Speakers
+          | &nbsp;
+          font-awesome-icon(:icon="['far', 'user-circle']")
       ExpandableTags(
         ref="speakers",
         title="Speakers",
@@ -65,8 +66,9 @@ nav.navbar.is-fixed-top.is-dark(role="navigation", aria-label="main navigation")
       )
         template(slot-scope="slot") {{ slot.item.name }}
       a.navbar-item(title="Channels", @click="$refs.channels.toggleCollapse()")
-        span.is-hidden-tablet Channels
-        font-awesome-icon(:icon="['fab', 'youtube']")
+        span Channels
+          | &nbsp;
+          font-awesome-icon(:icon="['fab', 'youtube']")
       ExpandableTags(
         ref="channels",
         title="Channels",
