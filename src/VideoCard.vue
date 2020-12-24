@@ -1,108 +1,51 @@
 <template lang="pug">
-.card(style="height: 100%")
-  .card-image
-    VideoToggles(:videoId="id")
-    router-link(:to="{ name: 'video', params: { id } }")
-      .image.is-4by3(
-        :style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'"
-      )
-        .is-overlay
-        .ttl.is-capitalized.is-size-7
-          .image.is-32x32(
-            :title="each.name",
-            v-for="(each, index) in speaker",
-            :style="'left: -' + (20 + 10 * index) + 'px'"
-          )
-            router-link(:to="'/@' + each.twitter")
-              img.avatar(
-                :src="'//dossier.dev.tube/avatar/' + each.twitter + '/48'",
-                :alt="each.name + ' avatar'"
-              )
-          | {{ title }}
-  .card-content
-    nav.level.is-mobile
-      .level-item.has-text-centered
-        div
-          p.heading.is-capitalized: font-awesome-icon(
-            :icon="['far', 'thumbs-up']"
-          )
-          p.title.is-size-7 {{ likes | kilo }}
-      .level-item.has-text-centered
-        div
-          p.heading.is-capitalized: font-awesome-icon(
-            :icon="['far', 'thumbs-down']"
-          )
-          p.title.is-size-7 {{ dislikes | kilo }}
-      .level-item.has-text-centered.is-capitalized
-        div
-          p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'eye']")
-          p.title.is-size-7 {{ views | kilo }}
-      .level-item.has-text-centered
-        div
-          p.heading.is-capitalized: font-awesome-icon(:icon="['far', 'clock']")
-          p.title.is-size-7 {{ duration | duration }}
-      .level-item.has-text-centered
-        div
-          p.heading.is-capitalized: font-awesome-icon(
-            :icon="['far', 'calendar-plus']"
-          )
-          p.title.is-size-7 {{ recordingDate | published }}
-    Tags(:isNew="isNew", :isFeatured="isFeatured")
+.video
+  .card
+    .shadow
+      VideoToggles(:videoId="id")
+      router-link(:to="{ name: 'video', params: { id } }")
+        .image.is-16by9(
+          :style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'"
+        )
+  br
+  .videoTitle
+    h1.title.is-6 {{ title | truncate(68) }}
+  .columns
+    .column
+      span.has-text-grey.title.is-size-7
+        span(v-if="isFeatured")
+          font-awesome-icon.has-text-danger(:icon="['far', 'heart']") 
+        |
+        | {{ duration | duration }} · {{ recordingDate | published }}
+    .column
+      span(v-for="(each, index) in speaker")
+        span.has-text-grey.title.is-size-7
+          router-link(:to="'/@' + each.twitter") {{ each.name }}
+        br
 </template>
 <style lang="scss">
-.card {
-  min-width: 240px;
-
-  .avatar {
-    border-radius: 50% !important;
-    border: 2px solid white;
-  }
-
-  div.image {
-    background-size: cover;
-    div.is-overlay {
-      background: url("./overlay.png");
-    }
-
-    .ttl {
-      text-align: left;
-      position: absolute;
-      bottom: 20px;
-      width: 80%;
-      left: 20%;
-      background-color: #1f2d3b;
-
-      color: white;
-      padding: 5px 0 5px 20px;
-      padding-right: 20px;
-
-      .image {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-      }
-    }
-  }
+.video {
+  width: 318px;
 }
 
-.card em {
-  color: #ec0047;
+.videoTitle {
+  min-height: 4em !important;
 }
 
-.card-image:hover {
-  .watch {
-    opacity: 1 !important;
-  }
+.image {
+  background-size: cover;
+}
+
+.shadow {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
 </style>
 <script>
 import VideoToggles from "./VideoToggles.vue";
-import Tags from "./Tags.vue";
 import dayjs from "dayjs";
 
 export default {
-  components: { VideoToggles, Tags },
+  components: { VideoToggles },
   props: {
     id: { type: String, required: true },
     title: { type: String, required: true },

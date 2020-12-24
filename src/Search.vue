@@ -9,10 +9,8 @@ section.section
     ChannelAbout(v-if="channel", :channel="channel")
     SpeakerAbout(v-if="speaker", :twitter="speaker")
     Loading(:loading="loading", :hasVideos="loadedVideos.length > 0")
-      .columns.is-multiline.is-mobile
-        .column.is-one-fifth-fullhd.is-one-third-desktop.is-one-half-mobile(
-          v-for="video in loadedVideos"
-        )
+      .columns.is-multiline.is-centered.is-mobile
+        .column.is-narrow(v-for="video in loadedVideos")
           VideoCard(
             :isFeatured="video.featured",
             :speaker="video.speaker",

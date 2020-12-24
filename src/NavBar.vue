@@ -52,10 +52,7 @@ nav.navbar.is-fixed-top.is-dark(role="navigation", aria-label="main navigation")
       )
         span.is-hidden-desktop Favorites&nbsp;
         font-awesome-icon(:icon="['far', 'star']")
-      a.navbar-item(title="Speakers", @click="$refs.speakers.toggleCollapse()")
-        span Speakers
-          | &nbsp;
-          font-awesome-icon(:icon="['far', 'user-circle']")
+      a.navbar-item(title="Speakers", @click="$refs.speakers.toggleCollapse()") Speakers
       ExpandableTags(
         ref="speakers",
         title="Speakers",
@@ -65,10 +62,7 @@ nav.navbar.is-fixed-top.is-dark(role="navigation", aria-label="main navigation")
         attr="twitter"
       )
         template(slot-scope="slot") {{ slot.item.name }}
-      a.navbar-item(title="Channels", @click="$refs.channels.toggleCollapse()")
-        span Channels
-          | &nbsp;
-          font-awesome-icon(:icon="['fab', 'youtube']")
+      a.navbar-item(title="Channels", @click="$refs.channels.toggleCollapse()") Channels
       ExpandableTags(
         ref="channels",
         title="Channels",

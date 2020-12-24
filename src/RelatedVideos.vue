@@ -1,9 +1,7 @@
 <template lang="pug">
 .related-videos
   .columns.is-multiline.is-mobile
-    .column.is-one-fifth-fullhd.is-one-third-desktop.is-one-half-mobile(
-      v-for="video in hits"
-    )
+    .column.is-narrow(v-for="video in hits")
       VideoCard(
         :isFeatured="video.featured",
         :speaker="video.speaker",
