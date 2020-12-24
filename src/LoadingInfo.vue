@@ -5,7 +5,8 @@
     br
     | Searching for the best tech videos...
 .loaded(v-else)
-  p.is-size-1.is-size-5-mobile.has-text-centered(v-if="!hasVideos")
+  slot(v-if="hasVideos")
+  p.is-size-1.is-size-5-mobile.has-text-centered(v-else)
     | ¯\_(ツ)_/¯ There are no video matching your criteria.
     |
     router-link(:to="{ name: 'search' }") Reset

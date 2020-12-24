@@ -9,23 +9,23 @@ section.section
     ChannelAbout(v-if="channel", :channel="channel")
     SpeakerAbout(v-if="speaker", :twitter="speaker")
     Loading(:loading="loading", :hasVideos="loadedVideos.length > 0")
-    .columns.is-multiline.is-mobile
-      .column.is-one-fifth-fullhd.is-one-third-desktop.is-one-half-mobile(
-        v-for="video in loadedVideos"
-      )
-        VideoCard(
-          :isFeatured="video.featured",
-          :speaker="video.speaker",
-          :creationDate="video.creationDate",
-          :recordingDate="video.recordingDate",
-          :duration="video.duration",
-          :views="video.views",
-          :likes="video.likes + video.dtLikes",
-          :dislikes="video.dislikes + video.dtDislikes",
-          :title="video.title",
-          :id="video.objectID",
-          :channel="video.channelTitle"
+      .columns.is-multiline.is-mobile
+        .column.is-one-fifth-fullhd.is-one-third-desktop.is-one-half-mobile(
+          v-for="video in loadedVideos"
         )
+          VideoCard(
+            :isFeatured="video.featured",
+            :speaker="video.speaker",
+            :creationDate="video.creationDate",
+            :recordingDate="video.recordingDate",
+            :duration="video.duration",
+            :views="video.views",
+            :likes="video.likes + video.dtLikes",
+            :dislikes="video.dislikes + video.dtDislikes",
+            :title="video.title",
+            :id="video.objectID",
+            :channel="video.channelTitle"
+          )
   Pagination(:page="parseInt(p)", :pages="pages")
 </template>
 <script>
