@@ -52,7 +52,7 @@ script:
 
   - echo "Copy data"
   - mkdir ./data
-  - gsutil -m cp gs://dev-tube-index/*.json ./data
+  - gsutil -m cp gs://dev-tube-index/index-new.json ./data
 
   - echo "Determine currently deployed color"
   - export SSH="ssh -oStrictHostKeyChecking=no -i admin.dev.tube.pem ${DEPLOY_USER}@${DEPLOY_HOST}"

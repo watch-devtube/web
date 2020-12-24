@@ -24,10 +24,6 @@ header {
   padding: 10px;
 }
 
-.shrinkIfEmpty:empty {
-  display: none !important;
-}
-
 .paging {
   .pagination-list {
     justify-content: center;

@@ -1,5 +1,5 @@
 let state = {
-  sortOrder: "-satisfaction"
+  sortOrder: "satisfaction"
 };
 
 let getters = {};

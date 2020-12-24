@@ -1,7 +1,9 @@
 <template lang="pug">
 .related-videos
-  .columns.is-multiline
-    .column.is-6.is-3-widescreen.shrinkIfEmpty(v-for="video in hits")
+  .columns.is-multiline.is-mobile
+    .column.is-one-fifth-fullhd.is-one-third-desktop.is-one-half-mobile(
+      v-for="video in hits"
+    )
       VideoCard(
         :isFeatured="video.featured",
         :speaker="video.speaker",
@@ -17,11 +19,6 @@
         :channel="video.channelTitle"
       )
 </template>
-<style lang="scss">
-.shrinkIfEmpty:empty {
-  display: none !important;
-}
-</style>
 <script>
 import { api } from "./api";
 import VideoCard from "./VideoCard.vue";
@@ -43,31 +40,20 @@ export default {
     ...mapGetters("videos", ["watchedIds"])
   },
   created() {
-    const watchedIds = this.watchedIds;
-    const refinement = this.speaker.length
-      ? {
-          speaker: {
-            $containsAny: this.speaker.map(it => it.twitter)
-          }
-        }
-      : { channelTitle: this.channel };
+    const refinement = {
+      speakers: this.speaker.map(it => it.twitter),
+      channels: [this.channel]
+    };
+    const excludes = this.watchedIds.concat([this.videoId]);
 
     api
       .post(`/s`, {
-        requests: [
-          {
-            params: {
-              refinement: refinement,
-              sortOrder: "-satisfaction",
-              excludes: watchedIds.concat([this.videoId])
-            }
-          }
-        ]
+        refinement,
+        excludes
       })
-      .then(({ data }) => data.results[0].hits)
+      .then(({ data }) => data.hits)
       .then(hits => this.shuffle(hits).slice(0, 4))
       .then(hits => {
-        this.$Progress.finish();
         this.hits = hits;
       });
   }

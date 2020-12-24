@@ -31,20 +31,23 @@ nav.navbar.is-fixed-top.is-dark(role="navigation", aria-label="main navigation")
   )
     .navbar-start
       router-link.navbar-item(
+        v-bind:class="{ 'is-active': $route.name === 'subscriptions' }",
         v-if="auth.user && hasSubscriptions",
-        :to="{ name: 'search', query: { feed: 'true' } }",
+        :to="{ name: 'subscriptions' }",
         @click.native="hide()"
       ) Subscriptions
       router-link.navbar-item(
+        v-bind:class="{ 'is-active': $route.name === 'watched' }",
         title="Watched",
-        :to="{ name: 'search', query: { w: 'true' } }",
+        :to="{ name: 'watched' }",
         @click.native="hide()"
       )
         span.is-hidden-tablet Watched
         font-awesome-icon(:icon="['far', 'eye']")
       router-link.navbar-item(
+        v-bind:class="{ 'is-active': $route.name === 'favorites' }",
         title="Favorites",
-        :to="{ name: 'search', query: { f: 'true' } }",
+        :to="{ name: 'favorites' }",
         @click.native="hide()"
       )
         span.is-hidden-tablet Favorites

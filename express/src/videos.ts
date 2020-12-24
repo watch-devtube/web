@@ -8,7 +8,7 @@ export class Videos {
   reactionKeys: any[];
   ids: string[];
 
-  constructor(ids) {
+  constructor(ids: string[]) {
     this.ids = ids || [];
     this.videoKeys = this.ids.map(id => datastore.key(["video", id]));
     this.reactionKeys = this.ids.map(id =>

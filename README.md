@@ -85,13 +85,11 @@ service cloud.firestore {
 DevTube data lives in Cloud Datastore. Download and unzip the following test data:
 
 ```bash
-curl --create-dirs -f -o express/data/loki.json https://storage.googleapis.com/dev-tube-index/loki-test.json
+curl --create-dirs -f -o express/data/index-new.json https://storage.googleapis.com/dev-tube-index/index-test-new.json
 
-curl --create-dirs -f -o express/data/lunr.json https://storage.googleapis.com/dev-tube-index/lunr-test.json
+curl --create-dirs -f -o express/data/data-test-new.zip https://storage.googleapis.com/dev-tube-index/data-test-new.zip
 
-curl --create-dirs -f -o express/data/data-test.zip https://storage.googleapis.com/dev-tube-index/data-test.zip
-
-unzip express/data/data-test.zip -d "express/data/videos"
+unzip express/data/data-test-new.zip -d "express/data/videos"
 ```
 
 #### Datastore: Run emulator

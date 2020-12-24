@@ -3,7 +3,6 @@ import Vuex from "vuex";
 
 import VueHead from "vue-head";
 import VueRouter from "vue-router";
-import InstantSearch from "vue-instantsearch";
 import VueProgressBar from "vue-progressbar";
 import Notifications from "vue-notification";
 
@@ -124,7 +123,6 @@ import lists from "./lists";
 
 Vue.use(VueHead);
 Vue.use(Vuex);
-Vue.use(InstantSearch);
 Vue.use(Notifications);
 Vue.use(VueRouter);
 Vue.use(VueProgressBar, {
@@ -175,9 +173,31 @@ const router = new VueRouter({
       component: Search,
       props: route => ({
         q: route.query.q,
-        showMyWatched: route.query.w === "true",
-        showMyFeed: route.query.feed === "true",
-        showFavorites: route.query.f === "true"
+        p: route.query.p ? parseInt(route.query.p) : 1
+      })
+    },
+    {
+      name: "subscriptions",
+      path: "/subscriptions",
+      component: Search,
+      props: route => ({
+        p: route.query.p ? parseInt(route.query.p) : 1
+      })
+    },
+    {
+      name: "watched",
+      path: "/watched",
+      component: Search,
+      props: route => ({
+        p: route.query.p ? parseInt(route.query.p) : 1
+      })
+    },
+    {
+      name: "favorites",
+      path: "/favorites",
+      component: Search,
+      props: route => ({
+        p: route.query.p ? parseInt(route.query.p) : 1
       })
     }
   ]

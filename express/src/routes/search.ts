@@ -1,59 +1,47 @@
+import { Criteria } from "devtube-commons/dist/lib/Fastr";
 import { Videos } from "../videos";
-import * as LRU from "lru-cache";
 
-const fastr = require("../fastr");
+import { fastr } from "../fastr";
 
-const hottestResponses = new LRU({ maxAge: 1000 * 60 * 60 * 24, max: 100 });
 const router = require("express").Router();
 
 router.post("/", (req, res) => {
 
   let {
-    page,
+    query = '',
+    page = 1,
     refinement,
-    sortOrder,
-    excludes = []
-  } = req.body.requests[0].params;
-
-  let cacheKey = JSON.stringify({
-    page,
-    refinement,
-    sortOrder,
+    sortOrder = 'satisfaction',
     excludes
-  });
+  } = req.body
 
-  let cacheHit = hottestResponses.get(cacheKey);
-  if (cacheHit) {
-    return res.json(cacheHit);
-  }
+  page--;
 
+  const { channels, ids, speakers } = refinement;
 
-  let maxHitsPerPage = 20;
-  let hitsIds = fastr
-    .searchInLoki(refinement, ["-featured", sortOrder])
-    .map(({ objectID }) => objectID)
-    .filter(objectID => !excludes.includes(objectID));
+  const criteria = new Criteria()
+    .excludeIds(excludes)
+    .limitFts(query)
+    .limitChannels(channels)
+    .limitSpeakers(speakers)
+    .limitIds(ids)
 
-  let from = (page || 0) * maxHitsPerPage;
-  let to = from + maxHitsPerPage;
+  const hitsIds = fastr.search(criteria, sortOrder.replace("-", ""))
+
+  const hitsPerPage = 20;
+  const from = page * hitsPerPage;
+  const to = from + hitsPerPage;
 
   new Videos(hitsIds.slice(from, to))
     .fetch()
-    .then(hitsPage => {
-      let nbPages = Math.ceil(hitsIds.length / maxHitsPerPage);
-      let response = {
-        results: [
-          {
-            hits: hitsPage,
-            page: page,
-            nbHits: hitsIds.length,
-            nbPages: nbPages,
-            hitsPerPage: maxHitsPerPage
-          }
-        ]
-      };
-      hottestResponses.set(cacheKey, response);
-      res.json(response);
+    .then(hits => {
+      const pages = Math.min(10, Math.ceil(hitsIds.length / hitsPerPage));
+      res.json(
+        {
+          hits,
+          pages,
+        }
+      )
     })
     .catch(error => res.status(500).send(error));
 });

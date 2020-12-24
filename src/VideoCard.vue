@@ -1,5 +1,5 @@
 <template lang="pug">
-.card(v-if="visible", style="height: 100%")
+.card(style="height: 100%")
   .card-image
     VideoToggles(:videoId="id")
     router-link(:to="{ name: 'video', params: { id } }")
@@ -82,10 +82,6 @@
         bottom: 0;
         margin: auto;
       }
-
-      .image:hover {
-        z-index: 666;
-      }
     }
   }
 }
@@ -103,9 +99,7 @@
 <script>
 import VideoToggles from "./VideoToggles.vue";
 import Tags from "./Tags.vue";
-
 import dayjs from "dayjs";
-import { mapGetters } from "vuex";
 
 export default {
   components: { VideoToggles, Tags },
@@ -125,29 +119,12 @@ export default {
       required: true
     }
   },
-  data: function() {
-    return {
-      visible: true
-    };
-  },
   computed: {
     isNew() {
-      let today = dayjs();
-      let videoCreated = dayjs(this.creationDate * 1000);
-      let videoAgeInDays = today.diff(videoCreated, "days");
+      const today = dayjs();
+      const videoCreated = dayjs.unix(this.creationDate);
+      const videoAgeInDays = today.diff(videoCreated, "days");
       return videoAgeInDays <= 7;
-    },
-    ...mapGetters("videos", ["isWatched"])
-  },
-  methods: {
-    watch: function(videoId) {
-      this.$router.push({
-        name: "watch",
-        params: { id: videoId }
-      });
-    },
-    refineChannel(channel) {
-      this.$router.push({ name: "channel", params: { channel: channel } });
     }
   }
 };

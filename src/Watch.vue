@@ -4,19 +4,7 @@
     .container
       .columns
         .column
-          .section.section(v-if="loaded && !video.objectID")
-            p.is-size-1.is-size-5-mobile.has-text-centered
-              | ¯\_(ツ)_/¯
-              br
-              br
-              | There is no video with ID {{ id }}.
-              br
-              | Try
-              |
-              a(href="https://dev.tube") resetting
-              |
-              | your criteria.
-          .card(v-else)
+          .card(v-if="video.objectID")
             .card-image
               VideoToggles(:videoId="id")
               a(@click="toggleWatched(id)", v-if="auth.user")
@@ -194,19 +182,19 @@ export default {
     MessageWidget,
     TwitterThanks,
     NavBar,
-    VideoToggles,
+    VideoToggles
   },
   props: {
     id: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
-  data: function () {
+  data: function() {
     return {
       loaded: false,
       errors: [],
-      video: {},
+      video: {}
     };
   },
   computed: {
@@ -218,20 +206,18 @@ export default {
     },
     iLiked() {
       let me = this.auth.user.uid;
-      return this.video.reactions?.likes?.some((like) => like.uid == me);
+      return this.video.reactions?.likes?.some(like => like.uid == me);
     },
     iDisliked() {
       let me = this.auth.user.uid;
-      return this.video.reactions?.dislikes?.some(
-        (dislike) => dislike.uid == me
-      );
+      return this.video.reactions?.dislikes?.some(dislike => dislike.uid == me);
     },
     ...mapState(["videos", "auth"]),
-    ...mapGetters("videos", ["hasSubscription"]),
+    ...mapGetters("videos", ["hasSubscription"])
   },
 
   watch: {
-    $route: "fetch",
+    $route: "fetch"
   },
   created() {
     this.fetch();
@@ -243,30 +229,30 @@ export default {
     putALike(id) {
       this.$store
         .dispatch("likes/putALike", id)
-        .then((r) => this.$set(this.video, "reactions", r.data))
-        .catch((e) => this.$store.dispatch("notify/error", { error: e }));
+        .then(r => this.$set(this.video, "reactions", r.data))
+        .catch(e => this.$store.dispatch("notify/error", { error: e }));
     },
     putADislike(id) {
       this.$store
         .dispatch("likes/putADislike", id)
-        .then((r) => this.$set(this.video, "reactions", r.data))
-        .catch((e) => this.$store.dispatch("notify/error", { error: e }));
+        .then(r => this.$set(this.video, "reactions", r.data))
+        .catch(e => this.$store.dispatch("notify/error", { error: e }));
     },
     fetch() {
       this.$Progress.start();
       api
         .get(`/videos/${this.id}`)
-        .then((it) => (this.video = it.data))
+        .then(it => (this.video = it.data))
         .finally(() => {
           this.loaded = true;
           this.$emit("updateHead");
           this.$Progress.finish();
         });
     },
-    refineChannel: function (channel) {
+    refineChannel: function(channel) {
       this.$router.push({ name: "channel", params: { channel: channel } });
     },
-    ...mapActions("videos", ["toggleWatched", "toggleSubscription"]),
+    ...mapActions("videos", ["toggleWatched", "toggleSubscription"])
   },
 
   head: {
@@ -274,7 +260,7 @@ export default {
       return {
         separator: "–",
         complement: "on DevTube",
-        inner: this.video.title,
+        inner: this.video.title
       };
     },
     script() {
@@ -296,21 +282,21 @@ export default {
             uploadDate: dayjs(this.video.recordingDate * 1000).format(
               "YYYY-MM-DD"
             ),
-            author: this.video.speaker?.map((it) => ({
+            author: this.video.speaker?.map(it => ({
               "@type": "Person",
-              name: it.name,
-            })),
-          }),
-        },
+              name: it.name
+            }))
+          })
+        }
       ];
     },
     meta() {
       return meta({
         title: this.video.title,
         descr: this.video.description,
-        image: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
+        image: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`
       });
-    },
-  },
+    }
+  }
 };
 </script>

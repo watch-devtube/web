@@ -448,11 +448,6 @@
   version "4.14.116"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.116.tgz#5ccf215653e3e8c786a58390751033a9adca0eb9"
 
-"@types/lokijs@^1.5.2":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.3.tgz#e45db0b35e53ec09a4c2ff4f253037abd56be151"
-  integrity sha512-ssiP6F7rpDqlaOzo+0Y/0dkVH2JiAjc+o7n6M4pFnfAMscf+7FthqS0cobvGJEJvxmzp4PWfMOfe0q3VETtrgQ==
-
 "@types/long@*", "@types/long@^4.0.0", "@types/long@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@types/long/-/long-4.0.1.tgz#459c65fa1867dafe6a8f322c4c51695663cc55e9"
@@ -1758,21 +1753,18 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-"devtube-commons@https://github.com/watch-devtube/commons/releases/download/202012182345/devtube-commons-v0.1.0.tgz":
+"devtube-commons@https://github.com/watch-devtube/commons/releases/download/202012222312/devtube-commons-v0.1.0.tgz":
   version "0.1.0"
-  resolved "https://github.com/watch-devtube/commons/releases/download/202012182345/devtube-commons-v0.1.0.tgz#4bbf1b48eef756b14cda95ecd9c7dd8363fb53fe"
+  resolved "https://github.com/watch-devtube/commons/releases/download/202012222312/devtube-commons-v0.1.0.tgz#20bee5b21a93326a27fd449dfab91020b4808a7f"
   dependencies:
     "@google-cloud/pubsub" "^0.18.0"
     "@google-cloud/storage" "^1.7.0"
     "@types/google-cloud__pubsub" "^0.18.0"
     "@types/google-cloud__storage" "^1.1.7"
     "@types/lodash" "^4.14.110"
-    "@types/lokijs" "^1.5.2"
     dnscache "^1.0.1"
     lodash "^4.17.4"
-    lokijs "^1.5.5"
-    lunr "^2.3.0"
-    thenby "^1.2.6"
+    msgpack "^1.0.3"
 
 diagnostics@^1.1.1:
   version "1.1.1"
@@ -3690,11 +3682,6 @@ loglevelnext@^1.0.1:
     es6-symbol "^3.1.1"
     object.assign "^4.1.0"
 
-lokijs@^1.5.5:
-  version "1.5.11"
-  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.5.11.tgz#2b2ea82ec66050e4b112c6cfc588dac22d362b13"
-  integrity sha512-YYyuBPxMn/oS0tFznQDbIX5XL1ltMcwFqCboDr8voYE4VCDzR5vAsrvQDhlnua4lBeqMqHmLvUXRTmRUzUKH1Q==
-
 long@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
@@ -3705,7 +3692,7 @@ long@~3:
   resolved "https://registry.yarnpkg.com/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
   integrity sha1-2CG3E4yhy1gcFymQ7xTbIAtcR0s=
 
-lru-cache@^4.1.1, lru-cache@^4.1.3:
+lru-cache@^4.1.3:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
   integrity sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
@@ -3719,11 +3706,6 @@ lru-cache@^5.0.0:
   integrity sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
   dependencies:
     yallist "^3.0.2"
-
-lunr@^2.3.0:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.9.tgz#18b123142832337dd6e964df1a5a7707b25d35e1"
-  integrity sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==
 
 make-dir@^1.0.0:
   version "1.3.0"
@@ -3985,7 +3967,14 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-nan@^2.13.2:
+msgpack@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/msgpack/-/msgpack-1.0.3.tgz#4106369ef1691a23884098c6217c4c07b95aa2f9"
+  integrity sha512-FX88+Pexuh+UItdqg68WhNPGPhqs57RlXAYyXNZ8eTQC/Tx5lzeIoxTxA2qAd7qU5a/crON5F0ADf4l6k2b7Jw==
+  dependencies:
+    nan "^2.14.0"
+
+nan@^2.13.2, nan@^2.14.0:
   version "2.14.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
@@ -5518,11 +5507,6 @@ text-hex@1.0.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/text-hex/-/text-hex-1.0.0.tgz#69dc9c1b17446ee79a92bf5b884bb4b9127506f5"
   integrity sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==
-
-thenby@^1.2.6:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/thenby/-/thenby-1.3.4.tgz#81581f6e1bb324c6dedeae9bfc28e59b1a2201cc"
-  integrity sha512-89Gi5raiWA3QZ4b2ePcEwswC3me9JIg+ToSgtE0JWeCynLnLxNr/f9G+xfo9K+Oj4AFdom8YNJjibIARTJmapQ==
 
 through2@^2.0.0, through2@^2.0.3:
   version "2.0.5"

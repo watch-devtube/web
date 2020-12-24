@@ -29,6 +29,9 @@ let actions = {
   toggleSpeakerSubscription({ dispatch }, speaker) {
     dispatch("toggleSubscription", { topic: speaker, type: "speaker" });
   },
+  toggleChannelSubscription({ dispatch }, channel) {
+    dispatch("toggleSubscription", { topic: channel, type: "channel" });
+  },
   toggleSubscription({ commit, getters, rootState, rootGetters }, sub) {
     const signedIn = rootGetters["auth/isSignedIn"];
     if (!signedIn) {
@@ -116,7 +119,13 @@ let actions = {
 
 let getters = {
   hasSpeakerSubscription: state => speaker =>
-    state.subscriptions.some(it => it.topic == speaker && it.type == "speaker"),
+    state.subscriptions.some(
+      it => it.topic === speaker && it.type === "speaker"
+    ),
+  hasChannelSubscription: state => speaker =>
+    state.subscriptions.some(
+      it => it.topic === speaker && it.type === "channel"
+    ),
   hasSubscription: state => sub =>
     state.subscriptions.some(
       it => it.topic == sub.topic && it.type == sub.type
@@ -127,14 +136,16 @@ let getters = {
   isFavorite: state => videoId =>
     state.favorites.some(item => item.videoId == videoId),
 
-  watchedIds: state =>
-    state.watched
-      .map(video => video.videoId)
-      .filter(video => video != undefined),
-  favoriteIds: state =>
-    state.favorites
-      .map(video => video.videoId)
-      .filter(video => video != undefined)
+  watchedIds: state => state.watched.map(({ videoId }) => videoId),
+  favoriteIds: state => state.favorites.map(({ videoId }) => videoId),
+  channelSubscriptions: state =>
+    state.subscriptions
+      .filter(sub => sub.type == "channel")
+      .map(sub => sub.topic),
+  speakerSubscriptions: state =>
+    state.subscriptions
+      .filter(sub => sub.type == "speaker")
+      .map(sub => sub.topic)
 };
 
 let mutations = {
