@@ -95,13 +95,15 @@ export default {
       this.refinement = {};
       this.excludes = this.watchedIds;
 
+      const hack = 123;
+
       if (this.$route.name === "watched") {
-        this.refinement = { ids: this.watchedIds };
+        this.refinement = { ids: [...this.watchedIds, hack] };
         this.excludes = [];
       }
 
       if (this.$route.name === "favorites") {
-        this.refinement = { ids: this.favoriteIds };
+        this.refinement = { ids: [...this.favoriteIds, hack] };
         this.excludes = [];
       }
 
