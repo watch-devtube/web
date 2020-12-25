@@ -20,19 +20,19 @@ section.section
                 v-bind:class="{ 'nav-active': $route.name === 'subscriptions' }",
                 v-if="auth.user && hasSubscriptions",
                 :to="{ name: 'subscriptions' }"
-              ): strong Subscriptions
+              ): strong.is-lowercase Subscriptions
             .column.is-narrow
               router-link.nav-link(
                 v-bind:class="{ 'nav-active': $route.name === 'watched' }",
                 title="Watched",
                 :to="{ name: 'watched' }"
-              ): strong Watched
+              ): strong watched
             .column.is-narrow
               router-link.nav-link(
                 v-bind:class="{ 'nav-active': $route.name === 'favorites' }",
                 title="Favorites",
                 :to="{ name: 'favorites' }"
-              ): strong Favorites
+              ): strong favorites
             .column.is-narrow
               .columns.is-gapless.is-mobile.is-vcentered
                 .column.is-narrow.is-hidden-mobile
@@ -46,7 +46,7 @@ section.section
                     :style="'background-image: url(' + auth.user.photoUrl + ')'"
                   ) 
                 .column.is-narrow
-                  a.title.is-size-7(@click="signOut()") Logout
+                  a.title.is-size-7(@click="signOut()") logout
           .columns.is-mobile.is-vcentered(v-else)
             .column.is-narrow
               a(@click="signIn('github')") Github login
