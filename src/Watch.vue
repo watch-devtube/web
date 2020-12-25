@@ -172,7 +172,6 @@ import RelatedVideos from "./RelatedVideos.vue";
 import MessageWidget from "./MessageWidget.vue";
 import VideoToggles from "./VideoToggles.vue";
 import TwitterThanks from "./TwitterThanks.vue";
-import NavBar from "./NavBar.vue";
 import { mapState, mapActions, mapGetters } from "vuex";
 import { meta } from "./helpers/meta";
 
@@ -181,7 +180,6 @@ export default {
     RelatedVideos,
     MessageWidget,
     TwitterThanks,
-    NavBar,
     VideoToggles
   },
   props: {

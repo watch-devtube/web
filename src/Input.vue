@@ -1,8 +1,14 @@
 <template lang="pug">
 .field
   p.control.has-icons-left
-    input.input(ref="query", v-model.lazy="query", v-debounce="300", autofocus)
-    span.icon.is-small.is-left
+    input.input.is-large(
+      ref="query",
+      placeholder="Search",
+      v-model.lazy="query",
+      v-debounce="300",
+      autofocus
+    )
+    span.icon.is-left.has-text-grey
       font-awesome-icon(:icon="['fas', 'search']")
 </template>
 <script>

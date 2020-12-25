@@ -26,3 +26,8 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.pagination-list {
+  justify-content: center;
+}
+</style>

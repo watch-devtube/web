@@ -10,14 +10,14 @@
   br
   .videoTitle
     h1.title.is-6 {{ title | truncate(68) }}
-  .columns
+  .columns.is-mobile
     .column
       span.has-text-grey.title.is-size-7
         span(v-if="isFeatured")
           font-awesome-icon.has-text-danger(:icon="['far', 'heart']") 
         |
         | {{ duration | duration }} · {{ recordingDate | published }}
-    .column
+    .column.has-text-right
       span(v-for="(each, index) in speaker")
         span.has-text-grey.title.is-size-7
           router-link(:to="'/@' + each.twitter") {{ each.name }}

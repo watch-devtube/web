@@ -1,7 +1,9 @@
 <template lang="pug">
-section.section
+section.section(style="padding-top: 0px")
   .container
     .columns.is-mobile
+      .column
+        Input(placeholder="Search for videos...")
       .column
         .is-pulled-right
           Sorting
@@ -9,7 +11,7 @@ section.section
     ChannelAbout(v-if="channel", :channel="channel")
     SpeakerAbout(v-if="speaker", :twitter="speaker")
     Loading(:loading="loading", :hasVideos="loadedVideos.length > 0")
-      .columns.is-multiline.is-centered.is-mobile
+      .columns.is-multiline.is-mobile
         .column.is-narrow(v-for="video in loadedVideos")
           VideoCard(
             :isFeatured="video.featured",
@@ -24,7 +26,7 @@ section.section
             :id="video.objectID",
             :channel="video.channelTitle"
           )
-  Pagination(:page="parseInt(p)", :pages="pages")
+      Pagination(:page="parseInt(p)", :pages="pages")
 </template>
 <script>
 import { mapState, mapGetters } from "vuex";
@@ -35,19 +37,19 @@ import { meta } from "./helpers/meta";
 
 import VideoCard from "./VideoCard.vue";
 import Sorting from "./Sorting.vue";
+import Input from "./Input.vue";
 import Loading from "./LoadingInfo";
 import Pagination from "./Pagination";
 import SpeakerAbout from "./SpeakerAbout";
 import ChannelAbout from "./ChannelAbout";
-import ExpandableTags from "./ExpandableTags.vue";
 export default {
   components: {
     Loading,
     Pagination,
     ChannelAbout,
     SpeakerAbout,
-    ExpandableTags,
     VideoCard,
+    Input,
     Sorting
   },
   props: {

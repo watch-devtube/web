@@ -1,9 +1,7 @@
 <template lang="pug">
 .app
   notifications(group="notification", :duration="-1")
-  header
-    .container
-      NavBar
+  NavBar
   router-view(v-if="completed")
   vue-progress-bar
 </template>
@@ -17,21 +15,6 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-header {
-  padding: 10px;
-}
-
-.paging {
-  .pagination-list {
-    justify-content: center;
-  }
-
-  .is-current a {
-    background-color: #343d46;
-    color: white;
   }
 }
 </style>
