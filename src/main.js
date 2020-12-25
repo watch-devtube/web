@@ -159,12 +159,21 @@ const router = new VueRouter({
   routes: [
     { name: "contributors", path: "/contributors", component: Contributors },
     { name: "video", path: "/video/:id", component: Watch, props: true },
-    { name: "speaker", path: "/@:speaker", component: Search, props: true },
+    {
+      name: "speaker",
+      path: "/@:speaker",
+      component: Search,
+      props: route => ({
+        p: route.query.p ? parseInt(route.query.p) : 1
+      })
+    },
     {
       name: "channel",
       path: "/channel/:channel",
       component: Search,
-      props: true
+      props: route => ({
+        p: route.query.p ? parseInt(route.query.p) : 1
+      })
     },
     {
       name: "search",
