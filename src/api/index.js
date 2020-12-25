@@ -10,7 +10,7 @@ export const ads = axios.create({
 });
 
 export const dossier = axios.create({
-  baseURL: "//dossier.dev.tube"
+  baseURL: "//dossier.glitch.me"
 });
 
 export const api = axios.create({
