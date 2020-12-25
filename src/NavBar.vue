@@ -9,7 +9,7 @@ section.section
               srcset="/logo_dark.svg",
               media="(prefers-color-scheme: dark)"
             )
-            img(src="/logo.png", srcset="/logo.svg", alt="logo") 
+            img.logo(src="/logo.png", srcset="/logo.svg", alt="logo")
       .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile(
@@ -65,6 +65,12 @@ section.section
   border-radius: 50%;
   margin-right: 0.5em;
   margin-left: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 60px;
+  }
 }
 </style>
 <script>
