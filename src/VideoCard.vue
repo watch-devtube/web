@@ -23,7 +23,7 @@
           router-link(:to="'/@' + each.twitter") {{ each.name }}
         br
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .video {
   width: 318px;
 }

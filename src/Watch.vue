@@ -1,129 +1,107 @@
 <template lang="pug">
 .watch
   section.section.body
-    .container
+    .container(v-if="video.objectID")
       .columns
         .column
-          .card(v-if="video.objectID")
-            .card-image
-              VideoToggles(:videoId="id")
-              a(@click="toggleWatched(id)", v-if="auth.user")
-              .videoWrapper
-                iframe(
-                  :src="`https://www.youtube.com/embed/${id}?modestbranding=1&showinfo=0&rel=0`",
-                  title="Embedded video",
-                  frameborder="0",
-                  allowfullscreen
+          .shadow
+            a(@click="toggleWatched(id)", v-if="auth.user")
+            .videoWrapper
+              iframe(
+                :src="`https://www.youtube.com/embed/${id}?modestbranding=1&showinfo=0&rel=0`",
+                title="Embedded video",
+                frameborder="0",
+                allowfullscreen
+              )
+      .columns.is-mobile
+        .column
+          p.has-text-grey.title.is-size-7 {{ video.duration | duration }} · {{ video.recordingDate | published }}
+          .channel
+            .columns.is-mobile.is-vcentered
+              .column.is-narrow
+                router-link(:to="'/channel/' + video.channelTitle")
+                  figure.image.is-48x48.is-marginless
+                    img.is-rounded(
+                      :src="'//dossier.dev.tube/avatar/youtube'",
+                      :alt="video.channelTitle + ' avatar'"
+                    ) 
+              .column.is-narrow
+                p.is-7: strong: router-link(:to="'/channel/' + video.channelTitle") {{ video.channelTitle }}
+                a.button.is-text.is-small(
+                  @click="toggleChannelSubscription(video.channelTitle)"
                 )
-            .card-content
-              nav.level.is-mobile
-                .level-item.has-text-centered
-                  div
-                    .multiple(v-if="video.speaker && video.speaker.length")
-                      .media(v-for="each in video.speaker")
-                        .media-left
-                          router-link(:to="'/@' + each.twitter")
-                            figure.image.is-32x32.is-marginless
-                              img.avatar(
-                                :src="'//dossier.dev.tube/avatar/' + each.twitter",
-                                :alt="each.name + ' avatar'"
-                              )
-                        .media-content
-                          .content
-                            p.title.is-6(style="margin-bottom: 1.2em")
-                              | {{ each.name }}
-                            p.subtitle.is-7: a(:href="'/@' + each.twitter") @{{ each.twitter }}
-                        .media-right.is-hidden-mobile
-                          .buttons.are-small
-                            a.button.is-danger.is-outlined(
-                              v-if="hasSubscription(subscription(each.twitter))",
-                              @click="toggleSubscription(subscription(each.twitter))"
-                            )
-                              .icon.is-small
-                                font-awesome-icon(icon="times")
-                              span unsubscribe
-                            a.button.is-info.is-outlined(
-                              v-else,
-                              @click="toggleSubscription(subscription(each.twitter))"
-                            )
-                              span subscribe
-                      .buttons.are-small
-                        TwitterThanks(
-                          :videoId="video.objectID",
-                          :title="video.title",
-                          :channel="video.channelTitle",
-                          :speaker="video.speaker"
-                        )
-                    .media(v-else)
-                      .media-content
-                        .content
-                          p.title.is-5 Know the speaker?
-                          p.subtitle.is-6: a(
-                            :href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'",
-                            target="_blank"
-                          ) Boost your karma
-                          a.button.is-info.is-outlined.is-small(
-                            :href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'",
-                            target="_blank"
-                          ) Contribute
-                .level-item.has-text-centered
-                  div
-                    p.heading.is-size-5
-                      span(v-if="!auth.user || iDisliked"): font-awesome-icon(
-                        :icon="['far', 'thumbs-up']"
-                      )
-                      span(v-else-if="iLiked"): font-awesome-icon.has-text-warning(
-                        :icon="['fas', 'thumbs-up']"
-                      )
-                      a.has-text-info(v-else, @click="putALike(id)"): font-awesome-icon(
-                        :icon="['far', 'thumbs-up']"
-                      )
-                    p.title.is-size-7 {{ video.likes + dtLikes | kilo }}
-                .level-item.has-text-centered
-                  div
-                    p.heading.is-size-5
-                      span(v-if="!auth.user || iLiked"): font-awesome-icon(
-                        :icon="['far', 'thumbs-down']"
-                      )
-                      span(v-else-if="iDisliked"): font-awesome-icon.has-text-warning(
-                        :icon="['fas', 'thumbs-down']"
-                      )
-                      a.has-text-info(v-else, @click="putADislike(id)"): font-awesome-icon(
-                        :icon="['far', 'thumbs-down']"
-                      )
-                    p.title.is-size-7 {{ video.dislikes + dtDislikes | kilo }}
-                .level-item.has-text-centered.is-hidden-mobile
-                  div
-                    p.heading.is-size-5: font-awesome-icon(
-                      :icon="['far', 'eye']"
+                  .icon.is-small
+                    font-awesome-icon(
+                      :icon="hasChannelSubscription(video.channelTitle) ? 'times' : 'plus'"
                     )
-                    p.title.is-size-7 {{ video.views | kilo }}
-                .level-item.has-text-centered.is-hidden-mobile
-                  div
-                    p.heading.is-size-5: font-awesome-icon(
-                      :icon="['far', 'clock']"
+                  span {{ hasChannelSubscription(video.channelTitle) ? 'unsubscribe' : 'subscribe' }}
+          .speakers(v-if="video.speaker.length")
+            .columns.is-mobile.is-vcentered(v-for="speaker in video.speaker")
+              .column.is-narrow
+                router-link(:to="'/@' + speaker.twitter")
+                  figure.image.is-48x48.is-marginless
+                    img.is-rounded(
+                      :src="'//dossier.dev.tube/avatar/' + speaker.twitter",
+                      :alt="speaker.name + ' avatar'"
                     )
-                    p.title.is-size-7 {{ video.duration | duration }}
-                .level-item.has-text-centered.is-hidden-touch
-                  div
-                    p.heading.is-size-5
-                      a(
-                        :href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'",
-                        target="_blank"
-                      )
-                        font-awesome-icon(:icon="['far', 'edit']")
-                        |
-                        | edit
-                      p.title.is-size-7 and get karma
-          .content
-            h3
-      RelatedVideos(
-        v-if="!!video.objectID",
-        :videoId="video.objectID",
-        :channel="video.channelTitle",
-        :featured="video.featured",
-        :speaker="video.speaker"
-      )
+              .column.is-narrow
+                p.is-7: strong: router-link(:to="'/@' + speaker.twitter") {{ speaker.name }}
+                a.button.is-text.is-small(
+                  @click="toggleSpeakerSubscription(speaker.twitter)"
+                )
+                  .icon.is-small
+                    font-awesome-icon(
+                      :icon="hasSpeakerSubscription(speaker.twitter) ? 'times' : 'plus'"
+                    )
+                  span {{ hasSpeakerSubscription(speaker.twitter) ? 'unsubscribe' : 'subscribe' }}
+            TwitterThanks(
+              :videoId="video.objectID",
+              :title="video.title",
+              :channel="video.channelTitle",
+              :speaker="video.speaker"
+            )
+          .noSpeaker(v-else)
+            strong Know the speaker?
+            br
+            a.button.is-text.is-small(
+              :href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'",
+              target="_blank"
+            )
+              span
+                font-awesome-icon.has-text-danger(:icon="['far', 'heart']")
+                | &nbsp;
+                | contribute for karma
+        .column.is-narrow
+          button.button.is-small(
+            @click="putALike(id)",
+            :disabled="!auth.user || iDisliked || iLiked"
+          )
+            span
+              font-awesome-icon.has-text-primary(:icon="['far', 'thumbs-up']")
+              | &nbsp;
+              | like
+              | &nbsp;
+              strong {{ video.likes + dtLikes | kilo }}
+        .column.is-narrow
+          button.button.is-small(
+            @click="putADislike(id)",
+            :disabled="!auth.user || iDisliked || iLiked"
+          ) 
+            span
+              font-awesome-icon.has-text-danger(:icon="['far', 'thumbs-down']")
+              | &nbsp;
+              | dislike
+              | &nbsp;
+              strong {{ video.dislikes + dtDislikes | kilo }}
+  section.section
+    h3.title Recommended videos
+    RelatedVideos(
+      v-if="!!video.objectID",
+      :videoId="video.objectID",
+      :channel="video.channelTitle",
+      :featured="video.featured",
+      :speaker="video.speaker"
+    )
       MessageWidget(
         v-if="!!video.objectID",
         :videoId="video.objectID",
@@ -132,8 +110,8 @@
       )
 </template>
 <style scoped lang="scss">
-.columns:not(.is-desktop) {
-  flex-wrap: wrap;
+.shadow {
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.3), 6px 6px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 .videoWrapper {
@@ -148,29 +126,12 @@
     height: 100%;
   }
 }
-.card {
-  border: none;
-}
-.card-content {
-  p {
-    color: white;
-  }
-  background-color: hsl(0, 0%, 7%);
-  a:hover {
-    color: white;
-  }
-}
-
-.avatar {
-  border-radius: 50%;
-}
 </style>
 <script>
 import { api } from "./api";
 import dayjs from "dayjs";
 import RelatedVideos from "./RelatedVideos.vue";
 import MessageWidget from "./MessageWidget.vue";
-import VideoToggles from "./VideoToggles.vue";
 import TwitterThanks from "./TwitterThanks.vue";
 import { mapState, mapActions, mapGetters } from "vuex";
 import { meta } from "./helpers/meta";
@@ -179,8 +140,7 @@ export default {
   components: {
     RelatedVideos,
     MessageWidget,
-    TwitterThanks,
-    VideoToggles
+    TwitterThanks
   },
   props: {
     id: {
@@ -211,7 +171,11 @@ export default {
       return this.video.reactions?.dislikes?.some(dislike => dislike.uid == me);
     },
     ...mapState(["videos", "auth"]),
-    ...mapGetters("videos", ["hasSubscription"])
+    ...mapGetters("videos", [
+      "hasSubscription",
+      "hasSpeakerSubscription",
+      "hasChannelSubscription"
+    ])
   },
 
   watch: {
@@ -221,9 +185,6 @@ export default {
     this.fetch();
   },
   methods: {
-    subscription(twitterHandle) {
-      return { topic: twitterHandle, type: "speaker" };
-    },
     putALike(id) {
       this.$store
         .dispatch("likes/putALike", id)
@@ -250,7 +211,11 @@ export default {
     refineChannel: function(channel) {
       this.$router.push({ name: "channel", params: { channel: channel } });
     },
-    ...mapActions("videos", ["toggleWatched", "toggleSubscription"])
+    ...mapActions("videos", [
+      "toggleWatched",
+      "toggleSpeakerSubscription",
+      "toggleChannelSubscription"
+    ])
   },
 
   head: {

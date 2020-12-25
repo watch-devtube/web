@@ -1,5 +1,5 @@
 <template lang="pug">
-a.button.is-text.is-small(
+a.button.is-outlined.is-small(
   :href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url + '&via=WatchDevTube'",
   target="_blank",
   aria-label="twitter"
@@ -9,14 +9,6 @@ a.button.is-text.is-small(
     | &nbsp;
     | say thanks
 </template>
-<style lang="scss" scoped>
-a {
-  text-decoration: none !important;
-}
-.share a:hover {
-  color: white;
-}
-</style>
 <script>
 export default {
   props: {
