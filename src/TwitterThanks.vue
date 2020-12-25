@@ -1,5 +1,5 @@
 <template lang="pug">
-a.button.is-outlined.is-small(
+a.button.is-text.is-small(
   :href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url + '&via=WatchDevTube'",
   target="_blank",
   aria-label="twitter"

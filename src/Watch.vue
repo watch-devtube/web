@@ -54,13 +54,25 @@
                       :icon="hasSpeakerSubscription(speaker.twitter) ? 'times' : 'plus'"
                     )
                   span {{ hasSpeakerSubscription(speaker.twitter) ? 'unsubscribe' : 'subscribe' }}
-            TwitterThanks(
-              :videoId="video.objectID",
-              :title="video.title",
-              :channel="video.channelTitle",
-              :speaker="video.speaker"
+                  TwitterThanks(
+                    :videoId="video.objectID",
+                    :title="video.title",
+                    :channel="video.channelTitle",
+                    :speaker="video.speaker"
+                  )
+            br
+            strong Wrong information?
+            br
+            a.button.is-text.is-small(
+              :href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'",
+              target="_blank"
             )
+              span
+                font-awesome-icon(:icon="['far', 'edit']")
+                | &nbsp;
+                | fix for karma
           .noSpeaker(v-else)
+            br
             strong Know the speaker?
             br
             a.button.is-text.is-small(
