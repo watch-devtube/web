@@ -1,5 +1,5 @@
 <template lang="pug">
-.select.is-medium(@change="sort(sorting)")
+.select.is-small(@change="sort(sorting)")
   select(v-model="sorting")
     option(value="satisfaction", :selected="query.sortOrder == 'satisfaction'") Top first
     option(

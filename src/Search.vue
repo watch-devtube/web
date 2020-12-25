@@ -1,7 +1,7 @@
 <template lang="pug">
 section.section(style="padding-top: 0px")
   .container
-    .columns.is-mobile
+    .columns.is-mobile.is-vcentered
       .column
         Input(placeholder="Search for videos...")
       .column
