@@ -54,11 +54,7 @@ export default {
   },
   props: {
     q: { type: String, default: "" },
-    p: { type: Number },
-    showMyWatched: { type: Boolean, default: false },
-    showFavorites: { type: Boolean, default: false },
-    speaker: { type: String, required: false, default: undefined },
-    channel: { type: String, required: false, default: undefined }
+    p: { type: Number }
   },
   data: () => {
     return {
@@ -70,6 +66,12 @@ export default {
     };
   },
   computed: {
+    speaker() {
+      return this.$route.params.speaker;
+    },
+    channel() {
+      return this.$route.params.channel;
+    },
     ...mapState(["videos", "query"]),
     ...mapGetters("videos", [
       "watchedIds",
