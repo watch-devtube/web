@@ -22,7 +22,7 @@
                 router-link(:to="'/channel/' + video.channelTitle")
                   figure.image.is-48x48.is-marginless
                     img.is-rounded(
-                      :src="'//dossier.dev.tube/avatar/youtube'",
+                      :src="'//dossier.glitch.me/avatar/youtube'",
                       :alt="video.channelTitle + ' avatar'"
                     ) 
               .column.is-narrow
@@ -41,7 +41,7 @@
                 router-link(:to="'/@' + speaker.twitter")
                   figure.image.is-48x48.is-marginless
                     img.is-rounded(
-                      :src="'//dossier.dev.tube/avatar/' + speaker.twitter",
+                      :src="'//dossier.glitch.me/avatar/' + speaker.twitter",
                       :alt="speaker.name + ' avatar'"
                     )
               .column.is-narrow
@@ -105,21 +105,21 @@
               | dislike
               | &nbsp;
               strong {{ video.dislikes + dtDislikes | kilo }}
-  section.section
-    h3.title Recommended videos
-    RelatedVideos(
-      v-if="!!video.objectID",
-      :videoId="video.objectID",
-      :channel="video.channelTitle",
-      :featured="video.featured",
-      :speaker="video.speaker"
-    )
-      MessageWidget(
+    section.section(style="padding-left: 0; padding-right: 0")
+      h3.title Recommended videos
+      RelatedVideos(
         v-if="!!video.objectID",
         :videoId="video.objectID",
         :channel="video.channelTitle",
+        :featured="video.featured",
         :speaker="video.speaker"
       )
+        MessageWidget(
+          v-if="!!video.objectID",
+          :videoId="video.objectID",
+          :channel="video.channelTitle",
+          :speaker="video.speaker"
+        )
 </template>
 <style scoped lang="scss">
 .shadow {

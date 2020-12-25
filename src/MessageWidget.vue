@@ -4,7 +4,7 @@ delay(:wait="5000")
     .buttons
       a(v-on:click.stop="close"): font-awesome-icon(:icon="['fas', 'times']")
     a(:href="'//twitter.com/' + this.ad.author"): img.agent(
-      :src="'//dossier.dev.tube/avatar/' + this.ad.author",
+      :src="'//dossier.glitch.me/avatar/' + this.ad.author",
       :alt="this.ad.author + ' avatar'"
     )
     .message

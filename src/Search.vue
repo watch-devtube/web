@@ -1,9 +1,9 @@
 <template lang="pug">
 section.section(style="padding-top: 0px")
-  .container
+  .container(v-if="!channel && !speaker")
     .columns.is-mobile.is-vcentered
       .column
-        Input(placeholder="Search for videos...")
+        Input
       .column
         .is-pulled-right
           Sorting
@@ -26,7 +26,7 @@ section.section(style="padding-top: 0px")
             :id="video.objectID",
             :channel="video.channelTitle"
           )
-      Pagination(:page="parseInt(p)", :pages="pages")
+      Pagination(:page="p", :pages="pages")
 </template>
 <script>
 import { mapState, mapGetters } from "vuex";
@@ -76,7 +76,6 @@ export default {
     ...mapGetters("videos", [
       "watchedIds",
       "favoriteIds",
-      "hasSpeakerSubscription",
       "speakerSubscriptions",
       "channelSubscriptions"
     ])
