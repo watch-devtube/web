@@ -9,7 +9,7 @@
         )
   br
   .videoTitle
-    h1.title.is-6 {{ title | truncate(68) }}
+    h1.title.is-6(:title="title") {{ title | truncate(68) }}
   .columns.is-mobile
     .column
       span.has-text-grey.title.is-size-7
