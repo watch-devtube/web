@@ -1,7 +1,7 @@
 <template lang="pug">
 .watch
-  section.section.body
-    .container(v-if="video.objectID")
+  section.section.body(v-if="video.objectID")
+    .container
       .columns
         .column
           .shadow
