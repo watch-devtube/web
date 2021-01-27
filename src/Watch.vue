@@ -108,14 +108,13 @@
     section.section(style="padding-left: 0; padding-right: 0")
       h3.title Recommended videos
       RelatedVideos(
-        v-if="!!video.objectID",
+        :key="video.objectID",
         :videoId="video.objectID",
         :channel="video.channelTitle",
         :featured="video.featured",
         :speaker="video.speaker"
       )
         MessageWidget(
-          v-if="!!video.objectID",
           :videoId="video.objectID",
           :channel="video.channelTitle",
           :speaker="video.speaker"
