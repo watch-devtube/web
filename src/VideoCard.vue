@@ -17,7 +17,9 @@
           font-awesome-icon.has-text-danger(:icon="['far', 'heart']") 
         |
         | {{ duration | duration }} · {{ recordingDate | published }}
-    .column.has-text-right
+        |
+        span(v-if="language && language !== 'English'") · {{ language }}
+    .column.has-text-right(v-if="speaker.length")
       span(v-for="(each, index) in speaker")
         span.has-text-grey.title.is-size-7
           router-link(:to="'/@' + each.twitter") {{ each.name }}
@@ -51,6 +53,7 @@ export default {
     title: { type: String, required: true },
     isFeatured: { type: Boolean, default: false },
     channel: { type: String, required: true },
+    language: { type: String },
     likes: { type: Number, required: true },
     dislikes: { type: Number, required: true },
     views: { type: Number, default: 0 },

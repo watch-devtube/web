@@ -19,6 +19,7 @@ section.section(style="padding-top: 0px")
             :creationDate="video.creationDate",
             :recordingDate="video.recordingDate",
             :duration="video.duration",
+            :language="video.language",
             :views="video.views",
             :likes="video.likes + video.dtLikes",
             :dislikes="video.dislikes + video.dtDislikes",

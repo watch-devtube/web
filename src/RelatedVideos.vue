@@ -11,6 +11,7 @@
         :recordingDate="video.recordingDate",
         :duration="video.duration",
         :views="video.views",
+        :language="video.language",
         :satisfaction="video.satisfaction",
         :title="video.title",
         :id="video.objectID",
