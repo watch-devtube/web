@@ -114,11 +114,11 @@
         :featured="video.featured",
         :speaker="video.speaker"
       )
-        MessageWidget(
-          :videoId="video.objectID",
-          :channel="video.channelTitle",
-          :speaker="video.speaker"
-        )
+      MessageWidget(
+        :videoId="video.objectID",
+        :channel="video.channelTitle",
+        :speaker="video.speaker"
+      )
 </template>
 <style scoped lang="scss">
 .shadow {
