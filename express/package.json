@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/202012222312/devtube-commons-v0.1.0.tgz",
