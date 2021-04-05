@@ -213,6 +213,7 @@ export default {
       api
         .get(`/videos/${this.id}`)
         .then(it => (this.video = it.data))
+        .catch(() => (window.location.href = "//api.dev.tube/404.html"))
         .finally(() => {
           this.loaded = true;
           this.$emit("updateHead");
