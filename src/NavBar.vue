@@ -10,6 +10,13 @@ section.section
               media="(prefers-color-scheme: dark)"
             )
             img.logo(src="/logo.png", srcset="/logo.svg", alt="logo")
+      .column.is-narrow.is-hidden-mobile
+        a.is-size-7.has-text-weight-bold(
+          style="position: relative; top: -3px",
+          href="//devternity.com",
+          target="_blank",
+          ref="noopener"
+        ) by DevTernity
       .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile(
