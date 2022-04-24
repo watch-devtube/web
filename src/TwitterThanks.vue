@@ -1,5 +1,5 @@
 <template lang="pug">
-a.button.is-text.is-small(
+a.button.is-text(
   :href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url + '&via=WatchDevTube'",
   target="_blank",
   aria-label="twitter"
@@ -25,8 +25,7 @@ export default {
       return this.speaker.map(it => "@" + it.twitter).join(" ");
     },
     hashtags() {
-      const tags = [this.channel];
-      return tags.map(t => t.replace(/\s|\./g, "")).join(",");
+      return []
     },
     thanks() {
       const firstName = name => {
@@ -39,7 +38,7 @@ export default {
           (text, value, i, array) =>
             text + (i < array.length - 1 ? ", " : " and ") + value
         );
-      return `Kudos to ${everyone} for amazing `;
+      return `Thanks, ${everyone}, for the amazing `;
     },
     encodedTitle() {
       return encodeURIComponent('"' + this.title + '"');

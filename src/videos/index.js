@@ -1,5 +1,3 @@
-import { firestore } from "../helpers/firebase";
-
 let state = {
   subscriptions: [],
   loading: true,
@@ -7,8 +5,9 @@ let state = {
   favorites: []
 };
 
-let userVideos = id => {
-  return firestore.collection("videos").doc(id);
+let userVideos = _id => {
+  console.log(_id);
+  return []
 };
 
 let actions = {

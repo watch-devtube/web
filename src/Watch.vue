@@ -16,25 +16,6 @@
       .columns.is-mobile
         .column
           p.has-text-grey.title.is-size-7 {{ video.duration | duration }} · {{ video.recordingDate | published }}
-          .channel
-            .columns.is-mobile.is-vcentered
-              .column.is-narrow
-                router-link(:to="'/channel/' + video.channelTitle")
-                  figure.image.is-48x48.is-marginless
-                    img.is-rounded(
-                      :src="'//dossier.glitch.me/avatar/youtube'",
-                      :alt="video.channelTitle + ' avatar'"
-                    ) 
-              .column.is-narrow
-                p.is-7: strong: router-link(:to="'/channel/' + video.channelTitle") {{ video.channelTitle }}
-                a.button.is-text.is-small(
-                  @click="toggleChannelSubscription(video.channelTitle)"
-                )
-                  .icon.is-small
-                    font-awesome-icon(
-                      :icon="hasChannelSubscription(video.channelTitle) ? 'times' : 'plus'"
-                    )
-                  span {{ hasChannelSubscription(video.channelTitle) ? 'unsubscribe' : 'subscribe' }}
           .speakers(v-if="video.speaker.length")
             .columns.is-mobile.is-vcentered(v-for="speaker in video.speaker")
               .column.is-narrow
@@ -45,32 +26,13 @@
                       :alt="speaker.name + ' avatar'"
                     )
               .column.is-narrow
-                p.is-7: strong: router-link(:to="'/@' + speaker.twitter") {{ speaker.name }}
-                a.button.is-text.is-small(
-                  @click="toggleSpeakerSubscription(speaker.twitter)"
+                p: strong: router-link(:to="'/@' + speaker.twitter") {{ speaker.name }}
+                TwitterThanks(
+                  :videoId="video.objectID",
+                  :title="video.title",
+                  :channel="video.channelTitle",
+                  :speaker="video.speaker"
                 )
-                  .icon.is-small
-                    font-awesome-icon(
-                      :icon="hasSpeakerSubscription(speaker.twitter) ? 'times' : 'plus'"
-                    )
-                  span {{ hasSpeakerSubscription(speaker.twitter) ? 'unsubscribe' : 'subscribe' }}
-                  TwitterThanks(
-                    :videoId="video.objectID",
-                    :title="video.title",
-                    :channel="video.channelTitle",
-                    :speaker="video.speaker"
-                  )
-            br
-            strong Wrong information?
-            br
-            a.button.is-text.is-small(
-              :href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'",
-              target="_blank"
-            )
-              span
-                font-awesome-icon(:icon="['far', 'edit']")
-                | &nbsp;
-                | fix for karma
           .noSpeaker(v-else)
             br
             strong Know the speaker?
@@ -83,28 +45,6 @@
                 font-awesome-icon.has-text-danger(:icon="['far', 'heart']")
                 | &nbsp;
                 | contribute for karma
-        .column.is-narrow
-          button.button.is-small(
-            @click="putALike(id)",
-            :disabled="!auth.user || iDisliked || iLiked"
-          )
-            span
-              font-awesome-icon.has-text-primary(:icon="['far', 'thumbs-up']")
-              | &nbsp;
-              | like
-              | &nbsp;
-              strong {{ video.likes + dtLikes | kilo }}
-        .column.is-narrow
-          button.button.is-small(
-            @click="putADislike(id)",
-            :disabled="!auth.user || iDisliked || iLiked"
-          ) 
-            span
-              font-awesome-icon.has-text-danger(:icon="['far', 'thumbs-down']")
-              | &nbsp;
-              | dislike
-              | &nbsp;
-              strong {{ video.dislikes + dtDislikes | kilo }}
     section.section(style="padding-left: 0; padding-right: 0")
       h3.title Recommended videos
       RelatedVideos(

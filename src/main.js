@@ -95,8 +95,6 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component("font-awesome-layers", FontAwesomeLayers);
 Vue.component("font-awesome-layers-text", FontAwesomeLayersText);
 
-import { firebase } from "./helpers/firebase";
-
 import App from "./App.vue";
 import Watch from "./Watch.vue";
 import Search from "./Search.vue";
@@ -229,13 +227,6 @@ const store = new Vuex.Store({
 new Vue({
   el: "#app",
   store,
-  created() {
-    firebase.auth().onAuthStateChanged(user => {
-      store.dispatch("auth/autoSignIn", user);
-      store.dispatch("videos/initialize", user);
-      store.dispatch("karma/initialize", user);
-    });
-  },
   render: h => h(App),
   router
 });

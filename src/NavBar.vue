@@ -13,7 +13,7 @@ section.section
       .column.is-narrow.is-hidden-mobile
         a.is-size-7.has-text-weight-bold(
           style="position: relative; top: -3px",
-          href="//devternity.com",
+          href="//devternity.com?utm_source=devtube&utm_medium=header",
           target="_blank",
           ref="noopener"
         ) by DevTernity
@@ -54,13 +54,6 @@ section.section
                   ) 
                 .column.is-narrow
                   a.title.is-size-7(@click="signOut()") logout
-          .columns.is-mobile.is-vcentered(v-else)
-            .column.is-narrow
-              a(@click="signIn('github')") Github login
-            .column.is-narrow 
-              a(@click="signIn('twitter')") Twitter login
-            .column.is-narrow 
-              a(@click="signIn('google')") Google login
 </template>
 <style lang="scss" scoped>
 .face {

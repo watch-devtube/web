@@ -2,7 +2,7 @@
 .app
   notifications(group="notification", :duration="-1")
   NavBar
-  router-view(v-if="completed")
+  router-view
   vue-progress-bar
 </template>
 <style lang="scss">
