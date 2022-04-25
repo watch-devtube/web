@@ -1,5 +1,5 @@
 module.exports = app => {
-  app.use("/api/s", require("./search"));
-  app.use("/api/liking", require("./liking"));
-  app.use("/api/videos", require("./videos"));
+  app.use("/s", require("./search"));
+  app.use("/liking", require("./liking"));
+  app.use("/videos", require("./videos"));
 };

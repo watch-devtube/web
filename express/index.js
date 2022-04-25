@@ -40,4 +40,4 @@ if (process.env.MODE === "dev") {
   });
 }
 
-module.exports = app;
+exports.api = app;
