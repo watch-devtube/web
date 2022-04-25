@@ -36,7 +36,7 @@ jobs:
       - name: "download data"
         uses: wei/wget@v1
         with:
-          args: -P ./data https://storage.googleapis.com/dev-tube-index/index-new.json
+          args: -P ./express/data https://storage.googleapis.com/dev-tube-index/index-new.json
       - name: "auth"
         uses: "google-github-actions/auth@v0"
         with:
