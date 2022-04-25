@@ -1,9 +1,12 @@
 name: Deploy Express
 
-# on:
-#   schedule:
-#     # Run every hour
-#     - cron: "0 * * * *"
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # Run every hour
+    - cron: "0 * * * *"
 
 on:
   workflow_dispatch:
