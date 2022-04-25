@@ -11,6 +11,9 @@ jobs:
       contents: "read"
       id-token: "write"
 
+  build:
+    runs-on: ubuntu-latest
+
     steps:
       - id: "checkout"
         uses: actions/checkout@v3
