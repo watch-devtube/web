@@ -8,12 +8,6 @@ on:
     # Run every hour
     - cron: "0 * * * *"
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        required: false
-
 jobs:
   build:
     permissions:
