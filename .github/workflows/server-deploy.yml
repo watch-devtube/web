@@ -36,12 +36,14 @@ jobs:
         uses: wei/wget@v1
         with:
           args: -P ./express/data https://storage.googleapis.com/dev-tube-index/index-new.json
+      - name: "auth"
+        uses: "google-github-actions/auth@v0"
+        with:
+          credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
       - name: "deploy"
-        uses: "google-github-actions/deploy-cloud-functions@v0.10.0"
+        uses: "google-github-actions/deploy-cloud-functions@v0.1.0"
         with:
           name: "poc-api"
-          project_id: dev-tube
-          runtime: "nodejs10"
+          runtime: "nodejs16"
           memory_mb: 1024
           source_dir: express
-          credentials: ${{ secrets.GCP_CREDENTIALS }}
