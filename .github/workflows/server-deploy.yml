@@ -46,3 +46,5 @@ jobs:
         with:
           name: "poc-api"
           runtime: "nodejs10"
+          memory_mb: 1024
+          source_dir: express
