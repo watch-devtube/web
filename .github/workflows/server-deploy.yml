@@ -37,10 +37,10 @@ jobs:
         with:
           args: -P ./express/data https://storage.googleapis.com/dev-tube-index/index-new.json
       - name: "deploy"
-        uses: "google-github-actions/deploy-cloud-functions@v0.1.0"
+        uses: "google-github-actions/deploy-cloud-functions@v0.10.0"
         with:
           name: "poc-api"
-          project: dev-tube
+          project_id: dev-tube
           runtime: "nodejs10"
           memory_mb: 1024
           source_dir: express
