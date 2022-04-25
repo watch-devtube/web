@@ -3,7 +3,7 @@
   "description": "Dev.Tube Web Express App",
   "version": "1.0.0",
   "author": "Eduards Sizovs <eduards@devternity.com>",
-  "main": "dist/index.js",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "dev": "export GOOGLE_APPLICATION_CREDENTIALS=./datastore_key.json && MODE=dev nodemon index.js"

@@ -46,4 +46,4 @@ jobs:
 
       - name: "deploy"
         ## source-dir: express
-        run: "gcloud functions deploy api --trigger-http --runtime nodejs16 --verbosity=debug --memory=1024MB --timeout=30s --project=dev-tube"
+        run: "gcloud functions deploy api --trigger-http --runtime nodejs16 --memory=1024MB --timeout=30s --project=dev-tube"
