@@ -1,4 +1,5 @@
 const dnsCache = require("dnscache");
+const isDevMode = process.env.MODE === "dev"
 
 console.time("Cold start")
 
@@ -17,7 +18,9 @@ let app = express();
 let port = process.env.PORT || 8100;
 
 app.set("port", port);
-app.use(cors());
+app.use(cors({
+  origin: isDevMode ? '*' : 'https://dev.tube'
+}));
 app.use(body.json());
 app.use(
   expressWinston.logger({
@@ -34,7 +37,7 @@ require("./src/routes/index")(app);
 
 console.timeEnd("Cold start")
 
-if (process.env.MODE === "dev") {
+if (isDevMode) {
   const listener = app.listen(port, () => {
     console.log("Your app is listening on port " + listener.address().port);
   });
