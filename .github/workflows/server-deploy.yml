@@ -41,9 +41,9 @@ jobs:
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
 
-    - name: 'setup gcloud'
-      uses: 'google-github-actions/setup-gcloud@v0'
-      
-    - name: 'deploy'
-      ## source-dir: express
-      run:   'gcloud functions deploy api --trigger-http --runtime nodejs16 --verbosity=debug --memory=1024MB --timeout=30s --project=dev-tube'
+      - name: "setup gcloud"
+        uses: "google-github-actions/setup-gcloud@v0"
+
+      - name: "deploy"
+        ## source-dir: express
+        run: "gcloud functions deploy api --trigger-http --runtime nodejs16 --verbosity=debug --memory=1024MB --timeout=30s --project=dev-tube"
