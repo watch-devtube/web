@@ -15,7 +15,7 @@ export const dossier = axios.create({
 export const api = axios.create({
   baseURL: window.location.href.includes("localhost")
     ? "//localhost:8100"
-    : "//api.dev.tube/api"
+    : "//us-central1-dev-tube.cloudfunctions.net/api"
 });
 
 export const apiAxios = () => axios;
