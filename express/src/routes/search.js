@@ -1,12 +1,11 @@
-import { Criteria } from "../libs/Fastr";
-import { Videos } from "../videos";
+const { Criteria } = require("../libs/Fastr");
+const { Videos } = require("../videos");
 
-import { fastr } from "../fastr";
+const { fastr } = require("../fastr");
 
 const router = require("express").Router();
 
 router.post("/", (req, res) => {
-
   let {
     query = '',
     page = 1,

@@ -1,10 +1,12 @@
-import "./utils";
-import { dnsCache } from "./libs/Dns";
-import { Timer } from "./timer";
+const dnsCache = require("dnscache");
 
-let coldstartTime = new Timer("cold start").withWarningIfSlow();
+console.time("Cold start")
 
-dnsCache();
+dnsCache({
+  enable: true,
+  ttl: 300,
+  cachesize: 1000,
+});
 
 let express = require("express");
 let body = require("body-parser");
@@ -21,7 +23,7 @@ app.use(
   expressWinston.logger({
     transports: [new winston.transports.Console()],
     meta: false,
-    msg: (req: Request, res) => {
+    msg: (req, res) => {
       const slow = res.responseTime >= 2000;
       return `${req.method} ${req.url} ${res.statusCode} ${res.responseTime}ms ${slow ? '(slow)' : ''}`;
     }
@@ -30,9 +32,9 @@ app.use(
 
 require("./routes/index")(app);
 
-coldstartTime.print();
+console.timeEnd("Cold start")
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.MODE === "dev") {
   const listener = app.listen(port, () => {
     console.log("Your app is listening on port " + listener.address().port);
   });

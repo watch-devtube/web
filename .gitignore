@@ -5,6 +5,7 @@ backup/
 dist/
 src/static/*.xml
 service_key.json
+datastore_key.json
 firebase.config.json
 .idea/
 .firebase

@@ -6,12 +6,10 @@
   "main": "dist/index.js",
   "private": true,
   "scripts": {
-    "datastore-init": "node datastore.init.js",
-    "dev": "webpack --mode=development && node dist/index.js",
-    "build": "webpack --mode=production"
+    "dev": "export GOOGLE_APPLICATION_CREDENTIALS=./datastore_key.json && MODE=dev nodemon index.js"
   },
   "dependencies": {
-    "@google-cloud/datastore": "^1.4.2",
+    "@google-cloud/datastore": "^6.6.2",
     "@msgpack/msgpack": "^2.7.2",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
@@ -23,18 +21,6 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@firebase/app-types": "^0.3.2",
-    "@types/express": "4.16.1",
-    "@types/lodash": "^4.14.116",
-    "@types/lru-cache": "^4.1.1",
-    "@types/node": "10.17.5",
-    "@types/request": "^2.47.1",
-    "awesome-typescript-loader": "^5.2.1",
-    "clean-webpack-plugin": "^1.0.0",
-    "serverless-google-cloudfunctions": "^2.0.0",
-    "typescript": "^3.1.6",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.3.5",
-    "webpack-node-externals": "^1.7.2"
+    "nodemon": "^2.0.15"
   }
 }
