@@ -1,5 +1,5 @@
 import "./utils";
-import { dnsCache } from "devtube-commons";
+import { dnsCache } from "./libs/Dns";
 import { Timer } from "./timer";
 
 let coldstartTime = new Timer("cold start").withWarningIfSlow();

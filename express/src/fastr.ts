@@ -1,4 +1,4 @@
-import { Fastr } from "devtube-commons";
+import { Fastr } from "./libs/Fastr";
 import { Timer } from "./timer";
 
 const time = new Timer("fastr init").withWarningIfSlow();

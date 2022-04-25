@@ -1,4 +1,4 @@
-import { Criteria } from "devtube-commons/dist/lib/Fastr";
+import { Criteria } from "../libs/Fastr";
 import { Videos } from "../videos";
 
 import { fastr } from "../fastr";

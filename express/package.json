@@ -12,10 +12,11 @@
   },
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
+    "@msgpack/msgpack": "^2.7.2",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "devtube-commons": "https://github.com/watch-devtube/commons/releases/download/202012222312/devtube-commons-v0.1.0.tgz",
+    "dnscache": "^1.0.2",
     "express": "4.16.4",
     "express-winston": "^4.0.3",
     "firebase-admin": "8.10.0",
