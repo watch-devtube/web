@@ -17,7 +17,9 @@ jobs:
       contents: "read"
       id-token: "write"
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./express
     steps:
       - name: "checkout"
         uses: actions/checkout@v3
@@ -27,7 +29,6 @@ jobs:
         with:
           node-version: "10"
 
-      - run: cd express
       - run: npm install --only=production
       - run: mkdir ./data
 
