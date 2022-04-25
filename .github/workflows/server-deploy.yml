@@ -40,10 +40,10 @@ jobs:
         uses: "google-github-actions/auth@v0"
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
-      - name: "deploy"
-        uses: "google-github-actions/deploy-cloud-functions@v0.1.0"
-        with:
-          name: "poc-api"
-          runtime: "nodejs16"
-          memory_mb: 1024
-          source_dir: express
+
+    - name: 'setup gcloud'
+      uses: 'google-github-actions/setup-gcloud@v0'
+      
+    - name: 'deploy'
+      ## source-dir: express
+      run:   'gcloud functions deploy api --trigger-http --runtime nodejs16 --verbosity=debug --memory=1024MB --timeout=30s --project=dev-tube'
