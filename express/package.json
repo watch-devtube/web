@@ -8,7 +8,7 @@
   "scripts": {
     "datastore-init": "node datastore.init.js",
     "dev": "webpack --mode=development && node dist/index.js",
-    "build": "webpack --hide-modules --mode=production"
+    "build": "webpack --mode=production"
   },
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
