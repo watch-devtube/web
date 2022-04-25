@@ -1,0 +1,42 @@
+name: Deploy Express
+
+on:
+  schedule:
+    # Run every hour
+    - cron: "0 * * * *"
+
+jobs:
+  job_id:
+    permissions:
+      contents: "read"
+      id-token: "write"
+
+    steps:
+      - id: "checkout"
+        uses: actions/checkout@v3
+
+      - id: "build"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "10"
+      - run: npm install --only=production
+
+      - id: Create folder
+        run: |
+          mkdir ./data
+
+      - id: "download data"
+        uses: wei/wget@v1
+        with:
+          args: -O ./data/index-new.json https://storage.googleapis.com/dev-tube-index/index-new.json
+
+      - id: "auth"
+        uses: "google-github-actions/auth@v0"
+        with:
+          credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
+
+      - id: "deploy"
+        uses: "google-github-actions/deploy-cloud-functions@v0"
+        with:
+          name: "poc-api"
+          runtime: "nodejs10"
