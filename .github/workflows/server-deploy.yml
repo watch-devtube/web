@@ -13,6 +13,9 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: "read"
+      id-token: "write"
     runs-on: ubuntu-latest
 
     steps:
@@ -31,16 +34,11 @@ jobs:
         uses: wei/wget@v1
         with:
           args: -O ./data/index-new.json https://storage.googleapis.com/dev-tube-index/index-new.json
-  deploy:
-    permissions:
-      contents: "read"
-      id-token: "write"
-    steps:
-      - id: "auth"
+      - name: "auth"
         uses: "google-github-actions/auth@v0"
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
-      - id: "deploy"
+      - name: "deploy"
         uses: "google-github-actions/deploy-cloud-functions@v0"
         with:
           name: "poc-api"
