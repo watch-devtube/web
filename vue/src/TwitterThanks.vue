@@ -25,7 +25,7 @@ export default {
       return this.speaker.map(it => "@" + it.twitter).join(" ");
     },
     hashtags() {
-      return []
+      return [];
     },
     thanks() {
       const firstName = name => {

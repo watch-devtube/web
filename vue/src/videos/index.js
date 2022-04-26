@@ -7,7 +7,7 @@ let state = {
 
 let userVideos = _id => {
   console.log(_id);
-  return []
+  return [];
 };
 
 let actions = {

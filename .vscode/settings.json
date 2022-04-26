@@ -9,19 +9,5 @@
   "vetur.validation.template": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  "cSpell.words": [
-    "chmod",
-    "coldstart",
-    "devtube",
-    "elif",
-    "fastr",
-    "gcloud",
-    "gcloudignore",
-    "gsutil",
-    "latr",
-    "lunr",
-    "mkdir",
-    "watchdevtube"
-  ]
+  }
 }
