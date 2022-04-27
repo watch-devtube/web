@@ -20,7 +20,7 @@ export const apiUrl = window.location.href.includes("localhost")
 export const api = axios.create({
   baseURL: apiUrl
 });
-api.interceptors.request.use(function(config) {
+api.interceptors.request.use(function (config) {
   config.headers.jwt = Cookies.get("devtube-jwt");
   return config;
 });

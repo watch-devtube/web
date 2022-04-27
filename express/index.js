@@ -22,7 +22,8 @@ const port = process.env.PORT || 8100;
 app.set("port", port);
 app.use(cookieParser());
 app.use(cors({
-  origin: isDevMode ? true : 'https://dev.tube'
+  origin: true
+  // origin: isDevMode ? true : 'https://dev.tube'
 }));
 app.use(body.json());
 app.use(
