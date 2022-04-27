@@ -6,7 +6,6 @@ const { fastr } = require("../fastr");
 const router = require("express").Router();
 
 router.post("/", (req, res) => {
-  console.log(req.headers);
   let {
     query = '',
     page = 1,

@@ -419,10 +419,8 @@
         type: "GET",
         url: url,
       }).success(function (data, status) {
-        //console.log('success');
         self.handleStatusFetchSuccess(pageType, data);
       }).fail(function (xhr, msg) {
-        //console.log('fail');
         self.handleStatusFetchFail(pageType);
       });
 

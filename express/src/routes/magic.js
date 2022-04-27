@@ -28,7 +28,10 @@ router.post("/send", (req, res) => {
   const magicToken = generateMagicToken(email, origin);
 
 
-  const magicLink = `${req.protocol}://${req.headers.host}/magic/click/${magicToken}`
+  const host = req.headers['x-forwarded-host'] || req.headers['host'];
+  const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+
+  const magicLink = `${protocol}://${host}/magic/click/${magicToken}`
   lazyPostmark().sendEmail({
     From: "auth@dev.tube",
     To: email,
@@ -36,7 +39,6 @@ router.post("/send", (req, res) => {
     HtmlBody: `Someone (hopefully you) requested a log in link to DevTube. If that's you, please click <a href="${magicLink}">the link</a>. If not, just ignore this message.`
   });
 
-  console.log()
   res.send("OK");
 
 });
