@@ -47,4 +47,4 @@ if (isDevMode) {
   });
 }
 
-exports.api2 = app;
+exports.api = app;
