@@ -1,4 +1,4 @@
-name: Deploy Express
+name: Deploy
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  build-web:
+  web:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-      - name: build
         run: npm install && npm run build
       - name: deploy
         uses: w9jds/firebase-action@master
@@ -29,7 +28,8 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-  build-server:
+          PROJECT_PATH: ./vue
+  server:
     permissions:
       contents: "read"
       id-token: "write"
