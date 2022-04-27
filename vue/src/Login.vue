@@ -54,7 +54,7 @@ export default {
   },
   data: () => {
     return {
-      email: "eduards@sizovs.net",
+      email: undefined,
       link: "default"
     };
   },

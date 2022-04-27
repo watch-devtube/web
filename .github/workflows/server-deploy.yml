@@ -9,7 +9,21 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  build:
+  build-web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./vue
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: build
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: build and deploy
+        run: npm install && npm run build && firebase deploy --only hosting --token ${{ secrets.FIREBASE_TOKEN }}
+  build-server:
     permissions:
       contents: "read"
       id-token: "write"
