@@ -5,8 +5,6 @@
       VideoCard(
         :isFeatured="video.featured",
         :speaker="video.speaker",
-        :likes="video.likes + (video.dtLikes || 0)",
-        :dislikes="video.dislikes + (video.dtDislikes || 0)",
         :creationDate="video.creationDate",
         :recordingDate="video.recordingDate",
         :duration="video.duration",

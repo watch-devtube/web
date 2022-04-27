@@ -107,20 +107,6 @@ export default {
     };
   },
   computed: {
-    dtLikes() {
-      return this.video.reactions?.likes?.length || 0;
-    },
-    dtDislikes() {
-      return this.video.reactions?.dislikes?.length || 0;
-    },
-    iLiked() {
-      let me = this.auth.user.uid;
-      return this.video.reactions?.likes?.some(like => like.uid == me);
-    },
-    iDisliked() {
-      let me = this.auth.user.uid;
-      return this.video.reactions?.dislikes?.some(dislike => dislike.uid == me);
-    },
     ...mapState(["videos", "auth"]),
     ...mapGetters("videos", [
       "hasSubscription",
@@ -136,24 +122,12 @@ export default {
     this.fetch();
   },
   methods: {
-    putALike(id) {
-      this.$store
-        .dispatch("likes/putALike", id)
-        .then(r => this.$set(this.video, "reactions", r.data))
-        .catch(e => this.$store.dispatch("notify/error", { error: e }));
-    },
-    putADislike(id) {
-      this.$store
-        .dispatch("likes/putADislike", id)
-        .then(r => this.$set(this.video, "reactions", r.data))
-        .catch(e => this.$store.dispatch("notify/error", { error: e }));
-    },
     fetch() {
       this.$Progress.start();
       api
         .get(`/videos/${this.id}`)
         .then(it => (this.video = it.data))
-        .catch(() => (window.location.href = "//api.dev.tube/404.html"))
+        .catch(() => (window.location.href = "//dev.tube/404.html"))
         .finally(() => {
           this.loaded = true;
           this.$emit("updateHead");

@@ -3,6 +3,7 @@
 *.pem
 service_key.json
 firebase.json
+.env
 .serverless/
 .build/
 dist/

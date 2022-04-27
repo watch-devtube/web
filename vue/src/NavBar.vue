@@ -17,11 +17,12 @@ section.section
           target="_blank",
           ref="noopener"
         ) by DevTernity
-      .column.is-hidden
+      .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile
-            .column.is-narrow
-              .button Add video
+            .column.is-narrow(v-if="authEnabled")
+              a.button.is-text.is-small(v-if="jwtToken" @click="logout()") logout
+              a.button.is-text.is-small(v-else @click="login(true)") login
 </template>
 <style lang="scss" scoped>
 .face {
@@ -42,15 +43,14 @@ section.section
 }
 </style>
 <script>
-import { mapState, mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["auth", "karma"]),
-    ...mapGetters("videos", ["hasSubscriptions"])
+    ...mapGetters("auth", ["jwtToken", "authEnabled"])
   },
   methods: {
-    ...mapActions("auth", ["signOut", "signIn"])
+    ...mapActions("auth", ["login", "logout"])
   }
 };
 </script>

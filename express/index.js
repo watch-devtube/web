@@ -1,5 +1,6 @@
 const dnsCache = require("dnscache");
 const isDevMode = process.env.MODE === "dev"
+require('dotenv').config()
 
 console.time("Cold start")
 
@@ -9,17 +10,19 @@ dnsCache({
   cachesize: 1000,
 });
 
-let express = require("express");
-let body = require("body-parser");
-let cors = require("cors");
-let winston = require("winston");
-let expressWinston = require("express-winston");
-let app = express();
-let port = process.env.PORT || 8100;
+const express = require("express");
+const body = require("body-parser");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const winston = require("winston");
+const expressWinston = require("express-winston");
+const app = express();
+const port = process.env.PORT || 8100;
 
 app.set("port", port);
+app.use(cookieParser());
 app.use(cors({
-  origin: isDevMode ? '*' : 'https://dev.tube'
+  origin: isDevMode ? true : 'https://dev.tube'
 }));
 app.use(body.json());
 app.use(

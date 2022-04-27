@@ -102,7 +102,6 @@ import Contributors from "./Contributors.vue";
 import {
   flatten,
   duration,
-  kilo,
   noemoji,
   truncate,
   published,
@@ -116,7 +115,6 @@ import loading from "./loading";
 import karma from "./karma";
 import notify from "./notify";
 import query from "./query";
-import likes from "./likes";
 
 Vue.use(VueHead);
 Vue.use(Vuex);
@@ -134,7 +132,6 @@ Vue.filter("duration", duration);
 Vue.filter("durationFull", durationFull);
 Vue.filter("truncate", truncate);
 Vue.filter("published", published);
-Vue.filter("kilo", kilo);
 Vue.filter("noemoji", noemoji);
 
 Vue.mixin({
@@ -217,11 +214,10 @@ const store = new Vuex.Store({
     loading,
     notify,
     query,
-    likes,
     karma
   },
   strict: true,
-  plugins: [createPersistedState({ key: "devtube", paths: ["auth", "query"] })]
+  plugins: [createPersistedState({ key: "devtube", paths: ["query"] })]
 });
 
 new Vue({

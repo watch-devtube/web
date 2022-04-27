@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import numeral from "numeral";
 
 const sameFlatten = arr =>
   arr.reduce(
@@ -8,8 +7,6 @@ const sameFlatten = arr =>
   );
 
 export const flatten = it => (!it ? it : sameFlatten(it));
-
-export const kilo = it => numeral(it).format("0a");
 
 export const duration = it => {
   if (!it) {

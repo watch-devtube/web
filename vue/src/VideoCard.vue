@@ -54,8 +54,6 @@ export default {
     isFeatured: { type: Boolean, default: false },
     channel: { type: String, required: true },
     language: { type: String },
-    likes: { type: Number, required: true },
-    dislikes: { type: Number, required: true },
     views: { type: Number, default: 0 },
     duration: { type: Number, required: true },
     recordingDate: { type: Number, required: true },

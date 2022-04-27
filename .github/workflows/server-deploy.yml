@@ -29,6 +29,14 @@ jobs:
       - name: install node deps
         run: npm install --only=production
 
+      - name: env file
+        run: |
+          touch .env
+          echo EMAIL_CRYPTO_KEY=${{ secrets.EMAIL_CRYPTO_KEY }} >> .env
+          echo JWT_SECRET=${{ secrets.JWT_SECRET }} >> .env
+          echo POSTMARK_API_KEY=${{ secrets.POSTMARK_API_KEY }} >> .env
+          cat .env
+
       - name: gcp auth
         uses: "google-github-actions/auth@v0"
         with:

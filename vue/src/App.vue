@@ -1,5 +1,6 @@
 <template lang="pug">
 .app
+  Login
   notifications(group="notification", :duration="-1")
   NavBar
   router-view
@@ -20,10 +21,11 @@
 </style>
 <script>
 import NavBar from "./NavBar.vue";
+import Login from "./Login.vue";
 import { mapState, mapGetters, mapMutations } from "vuex";
 
 export default {
-  components: { NavBar },
+  components: { NavBar, Login },
   computed: {
     ...mapGetters("loading", ["completed"]),
     ...mapState({ show: state => state.notify.show })

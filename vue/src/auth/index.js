@@ -1,12 +1,18 @@
+import Cookies from "js-cookie";
+
 let state = {
   loading: true,
   user: undefined,
-  error: undefined
+  error: undefined,
+  loginInProgress: false
 };
 
 let getters = {
-  isSignedIn: state => {
-    return !!state.user;
+  jwtToken: () => {
+    return Cookies.get("devtube-jwt");
+  },
+  authEnabled: () => {
+    return Cookies.get("auth-enabled");
   }
 };
 
@@ -20,12 +26,19 @@ let actions = {
   setError({ commit }, payload) {
     commit("setError", payload);
   },
-  signOut() {
+  login({ commit }, progress) {
+    commit("login", progress);
+  },
+  logout() {
+    Cookies.remove("devtube-jwt");
     location.reload();
   }
 };
 
 let mutations = {
+  login: (state, progress) => {
+    state.loginInProgress = progress;
+  },
   setUser: (state, user) => {
     state.user = user;
     state.loading = false;
