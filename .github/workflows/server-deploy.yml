@@ -17,10 +17,11 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: build
+      - name: install node
         uses: actions/setup-node@v3
         with:
           node-version: "16"
+      - name: build
         run: npm install && npm run build
       - name: deploy
         uses: w9jds/firebase-action@master
