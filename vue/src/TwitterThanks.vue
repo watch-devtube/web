@@ -19,26 +19,18 @@ export default {
   },
   computed: {
     text() {
-      return this.thanks + this.encodedTitle + " " + this.mentions;
+      return `🚀 Great talk ` + this.encodedTitle + " by " + this.names + " " + this.mentions;
     },
     mentions() {
       return this.speaker.map(it => "@" + it.twitter).join(" ");
     },
-    hashtags() {
-      return [];
-    },
-    thanks() {
-      const firstName = name => {
-        const [first] = name.split(" ");
-        return first.trim();
-      };
-      const everyone = this.speaker
-        .map(it => firstName(it.name))
+    names() {
+      return this.speaker
+        .map(it => it.name)
         .reduce(
           (text, value, i, array) =>
             text + (i < array.length - 1 ? ", " : " and ") + value
         );
-      return `Thanks, ${everyone}, for the amazing `;
     },
     encodedTitle() {
       return encodeURIComponent('"' + this.title + '"');
