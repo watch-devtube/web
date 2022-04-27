@@ -21,8 +21,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-      - name: build and deploy
-        run: npm install && npm run build && firebase deploy --only hosting --token ${{ secrets.FIREBASE_TOKEN }}
+      - name: build
+        run: npm install && npm run build
+      - name: deploy
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
   build-server:
     permissions:
       contents: "read"
