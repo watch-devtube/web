@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "dev-tube"
+  },
+  "targets": {
+    "dev-tube": {
+      "hosting": {
+        "devtube": [
+          "dev-tube"
+        ],
+        "devtube-api": [
+          "devtube-api"
+        ]
+      }
+    }
   }
 }
