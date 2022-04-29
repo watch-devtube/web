@@ -1,5 +1,4 @@
 import axios from "axios";
-import Cookies from "js-cookie";
 
 export const bucket = axios.create({
   baseURL: "//storage.googleapis.com/dev-tube-index"
@@ -18,11 +17,8 @@ export const apiUrl = window.location.href.includes("localhost")
   : "//api.dev.tube";
 
 export const api = axios.create({
-  baseURL: apiUrl
-});
-api.interceptors.request.use(function (config) {
-  config.headers.jwt = Cookies.get("devtube-jwt");
-  return config;
+  baseURL: apiUrl,
+  withCredentials: true
 });
 
 export const apiAxios = () => axios;

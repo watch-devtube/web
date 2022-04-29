@@ -11,17 +11,27 @@ dnsCache({
 });
 
 const express = require("express");
+const passport = require("passport");
 const body = require("body-parser");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const cookieSession = require("cookie-session");
 const winston = require("winston");
 const expressWinston = require("express-winston");
 const app = express();
 const port = process.env.PORT || 8100;
 
+app.use(cookieSession({
+  name: 'devtube-session',
+  secret: process.env.COOKIE_SECRET,
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.set("port", port);
 app.use(cookieParser());
 app.use(cors({
+  credentials: true,
   origin: isDevMode ? true : 'https://dev.tube'
 }));
 app.use(body.json());

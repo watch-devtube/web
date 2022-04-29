@@ -20,9 +20,9 @@ section.section
       .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile
-            .column.is-narrow(v-if="authEnabled")
-              a.button.is-text.is-small(v-if="jwtToken" @click="logout()") logout
-              a.button.is-text.is-small(v-else @click="login(true)") login
+            .column.is-narrow(v-if="this.$router.currentRoute.hash == '#enableLogin'")
+              a.button.is-text.is-small(v-if="isLoggedIn" @click="logout()") logout
+              a.button.is-text.is-small(v-else @click="showPopup()") login
 </template>
 <style lang="scss" scoped>
 .face {
@@ -47,10 +47,10 @@ import { mapActions, mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters("auth", ["jwtToken", "authEnabled"])
+    ...mapGetters("auth", ["isLoggedIn"])
   },
   methods: {
-    ...mapActions("auth", ["login", "logout"])
+    ...mapActions("auth", ["showPopup", "logout"])
   }
 };
 </script>

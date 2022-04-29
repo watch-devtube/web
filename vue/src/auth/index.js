@@ -1,55 +1,44 @@
-import Cookies from "js-cookie";
+import { apiUrl, api } from "../api";
 
-let state = {
-  loading: true,
-  user: undefined,
-  error: undefined,
-  loginInProgress: false
+const state = {
+  popupVisible: false,
+  loggedIn: false
 };
 
-let getters = {
-  jwtToken: () => {
-    return Cookies.get("devtube-jwt");
-  },
-  authEnabled: () => {
-    return Cookies.get("auth-enabled");
-  }
+const getters = {
+  isLoggedIn: state => state.loggedIn,
+  isPopupVisible: state => state.popupVisible
 };
 
-let actions = {
-  loginRequired({ commit }) {
-    commit("notify/error", { error: "Login required." }, { root: true });
+const actions = {
+  bootstrap({ commit }) {
+    api.get("/auth/loggedIn").then(({ data }) => commit("loggedIn", data));
   },
-  clearError({ commit }) {
-    commit("clearError");
+  showPopup({ commit }) {
+    commit("popupVisible", true);
+    const classes = document.documentElement.classList;
+    classes?.add("is-clipped");
   },
-  setError({ commit }, payload) {
-    commit("setError", payload);
+  hidePopup({ commit }) {
+    commit("popupVisible", false);
+    const classes = document.documentElement.classList;
+    classes?.remove("is-clipped");
   },
-  login({ commit }, progress) {
-    commit("login", progress);
+  // eslint-disable-next-line no-unused-vars
+  login({ commit }, provider) {
+    window.location.href = apiUrl + "/auth/" + provider;
   },
   logout() {
-    Cookies.remove("devtube-jwt");
-    location.reload();
+    window.location.href = apiUrl + "/auth/logout";
   }
 };
 
-let mutations = {
-  login: (state, progress) => {
-    state.loginInProgress = progress;
+const mutations = {
+  loggedIn: (state, { loggedIn }) => {
+    state.loggedIn = loggedIn;
   },
-  setUser: (state, user) => {
-    state.user = user;
-    state.loading = false;
-  },
-  setError(state, payload) {
-    state.error = payload;
-    state.loading = false;
-  },
-  clearError(state) {
-    state.error = null;
-    state.loading = false;
+  popupVisible: (state, visible) => {
+    state.popupVisible = visible;
   }
 };
 

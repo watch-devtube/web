@@ -1,5 +1,5 @@
 <template lang="pug">
-  .modal(v-bind:class="{ 'is-active': loginInProgress }")
+  .modal(v-bind:class="{'is-active': isPopupVisible}")
     .modal-background
     .modal-content
       .columns.is-mobile
@@ -7,18 +7,29 @@
           .columns
             .column.has-text-centered
               h1.title.has-text-weight-bold.is-4 Log in to DevTube
-              p.description We'll send you a magic link for authentication.
+              p.description ...and get some superpowers
               .form
-                .field
-                  .control
-                    input.input.is-medium(type='email' placeholder='Email' v-model="email")
-                button.button.is-primary.is-fullwidth.is-medium(v-bind:class="{'is-loading': link === 'flying'}" :disabled="!isSendButtonEnabled" @click="magicLink()") {{buttonTitle}}
+                br
+                a.button.is-primary.is-fullwidth.is-medium(@click="login('twitter')")
+                  span.icon
+                    font-awesome-icon(:icon="['fab', 'twitter']")
+                  span Twitter
+                br
+                button.button.is-primary.is-fullwidth.is-medium(@click="login('github')") 
+                  span.icon
+                    font-awesome-icon(:icon="['fab', 'github']")
+                  span Github
+                br
+                button.button.is-primary.is-fullwidth.is-medium(@click="login('google')") 
+                  span.icon
+                    font-awesome-icon(:icon="['fab', 'google']")
+                  span Google
                 br
                 small
                   em
                     font-awesome-icon.has-text-danger(:icon="['far', 'heart']")  
                     |  We use your email just to know it's you. We won't email you anything. Ever.
-      .modal-close.is-large(aria-label="close" @click="login(false); reset()")
+      .modal-close.is-large(aria-label="close" @click="hidePopup()")
 </template>
 <style scoped>
 .register {
@@ -39,56 +50,13 @@
 }
 </style>
 <script>
-import { api } from "./api";
-import { mapState, mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
-  watch: {
-    loginInProgress: loginInProgress => {
-      const classes = document.documentElement.classList;
-      if (loginInProgress) {
-        classes?.add("is-clipped");
-      } else {
-        classes?.remove("is-clipped");
-      }
-    }
-  },
-  data: () => {
-    return {
-      email: undefined,
-      link: "default"
-    };
-  },
   computed: {
-    isSendButtonEnabled() {
-      return this.email?.match("^(.+)@(.+)\\.(.+)$") && this.link === "default";
-    },
-    buttonTitle() {
-      const titles = {
-        default: "Send me a magic link",
-        flying: "Sending...",
-        emailed: "Emailed.",
-        error: "Something went wrong."
-      };
-      return titles[this.link];
-    },
-    ...mapState("auth", ["loginInProgress"])
+    ...mapGetters("auth", ["isPopupVisible"])
   },
   methods: {
-    reset() {
-      this.link = "default";
-    },
-    magicLink() {
-      this.link = "flying";
-      api
-        .post(`/magic/send`, { email: this.email })
-        .then(() => {
-          this.link = `emailed`;
-        })
-        .catch(() => {
-          this.link = `error`;
-        });
-    },
-    ...mapActions("auth", ["login"])
+    ...mapActions("auth", ["login", "hidePopup"])
   }
 };
 </script>

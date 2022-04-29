@@ -53,9 +53,9 @@ jobs:
       - name: env file
         run: |
           touch .env
-          echo EMAIL_CRYPTO_KEY=${{ secrets.EMAIL_CRYPTO_KEY }} >> .env
-          echo JWT_SECRET=${{ secrets.JWT_SECRET }} >> .env
-          echo POSTMARK_API_KEY=${{ secrets.POSTMARK_API_KEY }} >> .env
+          echo COOKIE_SECRET=${{ secrets.COOKIE_SECRET }} >> .env
+          echo TWITTER_CONSUMER_KEY=${{ secrets.TWITTER_CONSUMER_KEY }} >> .env
+          echo TWITTER_CONSUMER_SECRET=${{ secrets.TWITTER_CONSUMER_SECRET }} >> .env
           cat .env
 
       - name: gcp auth

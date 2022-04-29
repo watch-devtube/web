@@ -16,6 +16,8 @@ import {
 import {
   faYoutube,
   faTwitter,
+  faGithub,
+  faGoogle,
   faFacebookSquare,
   faTwitterSquare,
   faLinkedin
@@ -65,11 +67,13 @@ library.add(
   faPlus,
   faMinus,
   faPlusCircle,
+  faGithub,
   faUser,
   faMinusCircle,
   faThumbsUp,
   faThumbsDown,
   faUserCircle,
+  faGoogle,
   faEdit,
   faSortAlphaDown,
   faHashtag,
@@ -224,5 +228,8 @@ new Vue({
   el: "#app",
   store,
   render: h => h(App),
+  created() {
+    store.dispatch("auth/bootstrap");
+  },
   router
 });

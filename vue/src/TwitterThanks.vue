@@ -19,7 +19,14 @@ export default {
   },
   computed: {
     text() {
-      return `🚀 Great talk ` + this.encodedTitle + " by " + this.names + " " + this.mentions;
+      return (
+        `🚀 Great talk ` +
+        this.encodedTitle +
+        " by " +
+        this.names +
+        " " +
+        this.mentions
+      );
     },
     mentions() {
       return this.speaker.map(it => "@" + it.twitter).join(" ");

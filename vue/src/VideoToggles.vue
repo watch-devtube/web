@@ -46,8 +46,7 @@ export default {
   },
   computed: {
     ...mapState(["videos", "auth"]),
-    ...mapGetters("videos", ["isWatched", "isFavorite"]),
-    ...mapGetters("auth", ["jwtToken"])
+    ...mapGetters("videos", ["isWatched", "isFavorite"])
   },
   methods: {
     ...mapActions("videos", ["toggleWatched", "toggleFavorite"])
