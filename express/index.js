@@ -23,6 +23,7 @@ const port = process.env.PORT || 8100;
 
 app.use(cookieSession({
   name: 'devtube-session',
+  domain: isDevMode ? '' : '.dev.tube',
   secret: process.env.COOKIE_SECRET,
 }))
 app.use(passport.initialize());
