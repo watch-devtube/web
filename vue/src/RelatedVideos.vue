@@ -44,7 +44,7 @@ export default {
     const excludes = this.watchedIds.concat([this.videoId]);
 
     api
-      .post(`/sx`, {
+      .post(`/s`, {
         refinement,
         excludes
       })
