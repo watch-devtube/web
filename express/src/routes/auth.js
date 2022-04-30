@@ -26,6 +26,7 @@ passport.deserializeUser((obj, cb) => {
 
 router.get('/loggedIn', (req, res) => {
   const loggedIn = !!req.user;
+  console.log("Logged in ? " + loggedIn);
   res.json({ loggedIn })
 })
 
