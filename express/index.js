@@ -14,7 +14,6 @@ const express = require("express");
 const passport = require("passport");
 const body = require("body-parser");
 const cors = require("cors");
-const cookieParser = require("cookie-parser");
 const cookieSession = require("cookie-session");
 const winston = require("winston");
 const expressWinston = require("express-winston");
@@ -31,7 +30,6 @@ app.use(passport.session());
 
 app.set("port", port);
 app.set('trust proxy', true);
-app.use(cookieParser());
 app.use(cors({
   credentials: true,
   origin: isDevMode ? true : 'https://dev.tube'
