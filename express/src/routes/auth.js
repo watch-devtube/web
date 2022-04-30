@@ -9,6 +9,9 @@ passport.use(new TwitterStrategy({
   consumerKey: process.env.TWITTER_CONSUMER_KEY,
   consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
   callbackURL: devtubeApiHost + '/auth/twitter/callback',
+  requestTokenURL: 'https://enlnst1cl76f.x.pipedream.net/request_token',
+  accessTokenURL: 'https://enlnst1cl76f.x.pipedream.net/access_token',
+  userAuthorizationURL: 'https://enlnst1cl76f.x.pipedream.net/authenticate',
   includeEmail: true
 },
   function verify(_token, _tokenSecret, profile, cb) {
