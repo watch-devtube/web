@@ -8,10 +8,8 @@ const devtubeApiHost = process.env.DEVTUBE_API_HOST || 'https://api.dev.tube'
 passport.use(new TwitterStrategy({
   consumerKey: process.env.TWITTER_CONSUMER_KEY,
   consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-  callbackURL: devtubeApiHost + '/auth/twitter/callback',
-  requestTokenURL: 'https://enlnst1cl76f.x.pipedream.net/request_token',
-  accessTokenURL: 'https://enlnst1cl76f.x.pipedream.net/access_token',
-  userAuthorizationURL: 'https://enlnst1cl76f.x.pipedream.net/authenticate',
+  callbackURL: '/auth/twitter/callback',
+  proxy: true,
   includeEmail: true
 },
   function verify(_token, _tokenSecret, profile, cb) {
