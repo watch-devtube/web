@@ -30,6 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.set("port", port);
+app.set('trust proxy', true);
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
