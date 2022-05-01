@@ -4,7 +4,6 @@ const TwitterStrategy = require('passport-twitter');
 const GitHubStrategy = require('passport-github2');
 const GoogleStrategy = require('passport-google-oauth2');
 
-
 const successRedirect = process.env.DEVTUBE_HOST || 'https://dev.tube'
 
 function toUserProfile(_token, _tokenSecret, profile, cb) {
@@ -66,7 +65,7 @@ router.get('/loggedIn', (req, res) => {
 router.get('/logout', (req, res) => {
   req.logout();
   req.session = null;
-  res.redirect(devtubeHost);
+  res.redirect(successRedirect);
 });
 
 router.get('/github', passport.authenticate('github', { scope: ['user:email'] }));
