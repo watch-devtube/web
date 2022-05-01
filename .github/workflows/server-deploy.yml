@@ -58,6 +58,8 @@ jobs:
           echo TWITTER_CONSUMER_SECRET=${{ secrets.TWITTER_CONSUMER_SECRET }} >> .env
           echo GH_CLIENT_ID=${{ secrets.GH_CLIENT_ID }} >> .env
           echo GH_CLIENT_SECRET=${{ secrets.GH_CLIENT_SECRET }} >> .env
+          echo GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }} >> .env
+          echo GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }} >> .env
           cat .env
 
       - name: gcp auth

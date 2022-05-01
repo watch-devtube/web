@@ -40,8 +40,8 @@ passport.use(new TwitterStrategy({
   toUserProfile));
 
 passport.use(new GoogleStrategy({
-  clientID: process.env.GOOGLE_CLIENT_ID + "xxx",
-  clientSecret: process.env.GOOGLE_CLIENT_SECRET + "xxx",
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   callbackURL: "/auth/google/callback",
   passReqToCallback: true
 },
@@ -77,7 +77,14 @@ router.get('/twitter', passport.authenticate('twitter'));
 router.get('/twitter/callback',
   passport.authenticate('twitter', { successRedirect, failureRedirect: '/' }));
 
-
+router.get('/google',
+  passport.authenticate('google', {
+    scope:
+      ['email', 'profile']
+  }
+  ));
+router.get('/google/callback',
+  passport.authenticate('google', { successRedirect, failureRedirect: '/' }));
 
 
 module.exports = router;
