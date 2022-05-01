@@ -56,6 +56,8 @@ jobs:
           echo COOKIE_SECRET=${{ secrets.COOKIE_SECRET }} >> .env
           echo TWITTER_CONSUMER_KEY=${{ secrets.TWITTER_CONSUMER_KEY }} >> .env
           echo TWITTER_CONSUMER_SECRET=${{ secrets.TWITTER_CONSUMER_SECRET }} >> .env
+          echo GITHUB_CLIENT_ID=${{ secrets.GITHUB_CLIENT_ID }} >> .env
+          echo GITHUB_CLIENT_SECRET=${{ secrets.GITHUB_CLIENT_SECRET }} >> .env
           cat .env
 
       - name: gcp auth

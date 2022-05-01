@@ -36,7 +36,6 @@ const actions = {
 
 const mutations = {
   loggedIn: (state, { loggedIn, avatar }) => {
-    console.log(avatar);
     state.loggedIn = loggedIn;
     state.avatar = avatar;
   },
