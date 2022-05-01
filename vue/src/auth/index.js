@@ -2,7 +2,8 @@ import { apiUrl, api } from "../api";
 
 const state = {
   popupVisible: false,
-  loggedIn: false
+  loggedIn: false,
+  avatar: undefined
 };
 
 const getters = {
@@ -34,8 +35,10 @@ const actions = {
 };
 
 const mutations = {
-  loggedIn: (state, { loggedIn }) => {
+  loggedIn: (state, { loggedIn, avatar }) => {
+    console.log(avatar);
     state.loggedIn = loggedIn;
+    state.avatar = avatar;
   },
   popupVisible: (state, visible) => {
     state.popupVisible = visible;

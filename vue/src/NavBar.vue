@@ -20,8 +20,13 @@ section.section
       .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile
-            .column.is-narrow(v-if="this.$router.currentRoute.hash == '#enableLogin'")
-              a.button.is-text.is-small(v-if="isLoggedIn" @click="logout()") logout
+            .column.is-narrow(v-if="isAuthEnabled")
+              .columns.is-gapless.is-vcentered.is-mobile(v-if="isLoggedIn")
+                .column.is-narrow(v-if="avatar")
+                  figure.image.is-16x16
+                    img.is-rounded(:src="avatar")
+                .column.is-narrow
+                  a.button.is-text.is-small(@click="logout()") logout
               a.button.is-text.is-small(v-else @click="showPopup()") login
 </template>
 <style lang="scss" scoped>
@@ -43,10 +48,17 @@ section.section
 }
 </style>
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters, mapState } from "vuex";
 
 export default {
   computed: {
+    isAuthEnabled() {
+      return (
+        window.location.href.includes(".test") ||
+        this.$router.currentRoute.hash == "#enableLogin"
+      );
+    },
+    ...mapState("auth", ["avatar"]),
     ...mapGetters("auth", ["isLoggedIn"])
   },
   methods: {

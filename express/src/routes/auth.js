@@ -25,8 +25,8 @@ passport.deserializeUser((obj, cb) => {
 
 router.get('/loggedIn', (req, res) => {
   const loggedIn = !!req.user;
-  console.log("Logged in ? " + loggedIn);
-  res.json({ loggedIn })
+  const avatar = req.user?.avatar;
+  res.json({ loggedIn, avatar })
 })
 
 router.get('/logout', (req, res) => {
@@ -40,8 +40,15 @@ router.get('/twitter', passport.authenticate('twitter'));
 router.get('/twitter/callback',
   passport.authenticate('twitter', { assignProperty: 'twitterProfile', failureRedirect: '/' }),
   (req, res, next) => {
+    console.log(req.twitterProfile);
+    const avatar = req.twitterProfile.photos[0].value
+    const email = req.twitterProfile.emails[0].value
+    if (!avatar || !email) {
+      throw "Sorry, unable to retrieve data from Twitter"
+    }
     const user = {
-      email: req.twitterProfile.emails[0].value,
+      avatar,
+      email,
       username: req.twitterProfile.username,
       provider: req.twitterProfile.provider
     };
