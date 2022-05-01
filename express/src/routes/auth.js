@@ -3,7 +3,6 @@ const passport = require("passport");
 const TwitterStrategy = require('passport-twitter');
 
 const devtubeHost = process.env.DEVTUBE_HOST || 'https://dev.tube'
-const devtubeApiHost = process.env.DEVTUBE_API_HOST || 'https://api.dev.tube'
 
 passport.use(new TwitterStrategy({
   consumerKey: process.env.TWITTER_CONSUMER_KEY,

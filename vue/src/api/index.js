@@ -12,8 +12,8 @@ export const dossier = axios.create({
   baseURL: "//dossier.glitch.me"
 });
 
-export const apiUrl = window.location.href.includes("localhost")
-  ? "//localhost:8100"
+export const apiUrl = window.location.href.includes(".test")
+  ? "//api.devtube.test:8100"
   : "//api.dev.tube";
 
 export const api = axios.create({
