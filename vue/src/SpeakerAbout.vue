@@ -7,7 +7,7 @@
     .column
       h1.title {{ profile.name | noemoji }}
       h2.subtitle.is-size-6 {{ profile.info | noemoji }}
-  .buttons
+  .buttons(v-if="isLoggedIn")
     a.button(@click="toggleSpeakerSubscription(twitter)")
       | {{ hasSpeakerSubscription(twitter) ? 'Unsubscribe' : 'Subscribe' }}
   hr
@@ -39,6 +39,7 @@ export default {
     ...mapActions("videos", ["toggleSpeakerSubscription"])
   },
   computed: {
+    ...mapGetters("auth", ["isLoggedIn"]),
     ...mapGetters("videos", ["hasSpeakerSubscription"])
   }
 };
