@@ -24,7 +24,8 @@ function toUserProfile(_token, _tokenSecret, profile, cb) {
 passport.use(new GitHubStrategy({
   clientID: process.env.GH_CLIENT_ID,
   clientSecret: process.env.GH_CLIENT_SECRET,
-  callbackURL: "/auth/github/callback"
+  callbackURL: "/auth/github/callback",
+  proxy: true
 },
   toUserProfile
 ));
@@ -42,7 +43,7 @@ passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   callbackURL: "/auth/google/callback",
-  passReqToCallback: true
+  proxy: true
 },
   toUserProfile));
 
