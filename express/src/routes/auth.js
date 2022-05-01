@@ -50,6 +50,7 @@ router.get('/twitter/callback',
     };
     req.login(user, (err) => {
       if (err) { return next(err); }
+      res.setHeader('Cache-Control', 'private');  // Recommended by Firebase https://stackoverflow.com/questions/44929653/firebase-cloud-function-wont-store-cookie-named-other-than-session
       res.redirect(devtubeHost);
     });
   });

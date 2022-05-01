@@ -30,7 +30,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.set("port", port);
-app.set('trust proxy', true);
 app.use(cors({
   credentials: true,
   origin: isDevMode ? true : 'https://dev.tube'
