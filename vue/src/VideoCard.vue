@@ -5,7 +5,7 @@
       VideoToggles(:videoId="id")
       router-link(:to="{ name: 'video', params: { id } }")
         .image.is-16by9(
-          :style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg)'"
+          :style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg); background-position: 0 -30px'"
         )
   br
   .videoTitle
