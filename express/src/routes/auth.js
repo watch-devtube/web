@@ -35,10 +35,7 @@ router.get('/logout', (req, res) => {
   res.redirect(devtubeHost);
 });
 
-router.get('/twitter', (req, res) => {
-  console.log(req.headers);
-  passport.authenticate('twitter')(req, res)
-});
+router.get('/twitter', passport.authenticate('twitter'));
 
 router.get('/twitter/callback',
   passport.authenticate('twitter', { assignProperty: 'twitterProfile', failureRedirect: '/' }),
