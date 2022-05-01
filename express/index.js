@@ -22,6 +22,7 @@ const port = process.env.PORT || 8100;
 
 app.use(cookieSession({
   name: 'devtube-session',
+  secure: false,
   domain: isDevMode ? '.devtube.test' : '.dev.tube',
   secret: process.env.COOKIE_SECRET,
 }))
