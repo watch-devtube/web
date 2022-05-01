@@ -21,9 +21,8 @@ const app = express();
 const port = process.env.PORT || 8100;
 
 app.use(cookieSession({
-  name: '__session',
-  signed: false,
-  secure: false,
+  name: '__session', // limitation because Firebase only supports that cookie name
+  signed: false,     // limitation because Firebase only supports __session cookie, no __session.sig.
   domain: isDevMode ? '.devtube.test' : '.dev.tube',
   secret: process.env.COOKIE_SECRET,
 }))
