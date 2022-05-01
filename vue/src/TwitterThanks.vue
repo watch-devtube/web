@@ -1,6 +1,6 @@
 <template lang="pug">
 a.button.is-text(
-  :href="'//twitter.com/intent/tweet?text=' + text + '&hashtags=' + hashtags + '&url=' + url + '&via=WatchDevTube'",
+  :href="'//twitter.com/intent/tweet?text=' + text + '&url=' + url + '&via=WatchDevTube'",
   target="_blank",
   aria-label="twitter"
 )

@@ -4,8 +4,8 @@ export const bucket = axios.create({
   baseURL: "//storage.googleapis.com/dev-tube-index"
 });
 
-export const ads = axios.create({
-  baseURL: "//raw.githubusercontent.com/watch-devtube/messages/master/"
+export const devternity = axios.create({
+  baseURL: "https://devternity.com"
 });
 
 export const dossier = axios.create({

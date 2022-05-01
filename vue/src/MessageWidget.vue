@@ -3,12 +3,15 @@ delay(:wait="5000")
   .message-widget(v-if="ad")
     .buttons
       a(v-on:click.stop="close"): font-awesome-icon(:icon="['fas', 'times']")
-    a(:href="'//twitter.com/' + this.ad.author"): img.agent(
-      :src="'//dossier.glitch.me/avatar/' + this.ad.author",
-      :alt="this.ad.author + ' avatar'"
-    )
+    MagicCircle.magic(:width='60')
+      a(:href="'https://devternity.com?utm_source=devtube&utm_medium=popup'")
+        img.agent.is-rounded(
+          :src="this.ad.pic",
+          :alt="this.ad.name + ' avatar'"
+        )
     .message
-      .content(v-html="ad.message")
+      .content
+        p(v-html='ad.message')
 </template>
 <style lang="scss">
 .message-widget {
@@ -34,22 +37,25 @@ delay(:wait="5000")
     padding: 30px;
   }
 
-  .agent {
+  .magic {
     position: absolute;
     left: -40px;
     top: 20px;
-    border: 3px solid #fff;
+  }
+
+  .agent {
     width: 60px;
-    border-radius: 50%;
+    border: 3px solid #fff;
   }
 }
 </style>
 <script>
-import { ads } from "./api";
+import { devternity } from "./api";
+import MagicCircle from "./MagicCircle.vue";
 import Delay from "./Delay";
 
 export default {
-  components: { Delay },
+  components: { Delay, MagicCircle },
   props: {
     videoId: { type: String, required: true },
     channel: { type: String, required: true },
@@ -57,7 +63,7 @@ export default {
   },
   data: function() {
     return {
-      ad: ""
+      ad: undefined
     };
   },
   watch: {
@@ -70,18 +76,23 @@ export default {
     close() {
       this.ad = undefined;
     },
-    fetch() {
-      const textForMatching = `${this.videoId}/${
-        this.channel
-      }/${this.speaker.map(speaker => "@" + speaker.twitter)}}`;
-      ads
-        .get(`messages.json?r=${Math.random()}`)
-        .then(response => {
-          this.ad = response.data
-            .reverse()
-            .find(it => new RegExp(it.pattern, "i").test(textForMatching));
-        })
-        .catch(() => {});
+    async fetch() {
+      const schedule = await devternity
+        .get(`/js/event.js?r=${Math.random()}`)
+        .then(({ data }) => data)
+        .then(([event]) => event.program[1].schedule);
+
+      const videoAuthor = this.speaker[0].twitter;
+      const session =
+        schedule.find(({ twitter }) => twitter === videoAuthor) ||
+        schedule.find(({ twitter }) => twitter === "unclebobmartin");
+      const firstName = session.name.split(" ")[0];
+      const ad = {
+        pic: `//dossier.glitch.me/avatar/${session.twitter}`,
+        name: firstName,
+        message: `${session.name} will be speaking at DevTernity this year with a new talk <b>«${session.title}»</b>.<br><br><a class="button is-success" href="https://devternity.com?utm_source=devtube&utm_medium=popup">Join ${firstName}</a>`
+      };
+      this.ad = ad;
     }
   }
 };
