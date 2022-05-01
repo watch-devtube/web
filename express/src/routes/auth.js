@@ -2,6 +2,8 @@ const router = require("express").Router();
 const passport = require("passport");
 const TwitterStrategy = require('passport-twitter');
 const GitHubStrategy = require('passport-github2');
+const GoogleStrategy = require('passport-google-oauth2');
+
 
 const successRedirect = process.env.DEVTUBE_HOST || 'https://dev.tube'
 
@@ -21,8 +23,8 @@ function toUserProfile(_token, _tokenSecret, profile, cb) {
 }
 
 passport.use(new GitHubStrategy({
-  clientID: process.env.GITHUB_CLIENT_ID,
-  clientSecret: process.env.GITHUB_CLIENT_SECRET,
+  clientID: process.env.GH_CLIENT_ID,
+  clientSecret: process.env.GH_CLIENT_SECRET,
   callbackURL: "/auth/github/callback"
 },
   toUserProfile
@@ -36,6 +38,15 @@ passport.use(new TwitterStrategy({
   includeEmail: true
 },
   toUserProfile));
+
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID + "xxx",
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET + "xxx",
+  callbackURL: "/auth/google/callback",
+  passReqToCallback: true
+},
+  toUserProfile));
+
 
 passport.serializeUser((user, cb) => {
   cb(null, user);
