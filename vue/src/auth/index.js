@@ -3,11 +3,13 @@ import { apiUrl, api } from "../api";
 const state = {
   popupVisible: false,
   loggedIn: false,
+  admin: false,
   avatar: undefined
 };
 
 const getters = {
   isLoggedIn: state => state.loggedIn,
+  isAdmin: state => state.admin,
   isPopupVisible: state => state.popupVisible
 };
 
@@ -35,9 +37,10 @@ const actions = {
 };
 
 const mutations = {
-  loggedIn: (state, { loggedIn, avatar }) => {
+  loggedIn: (state, { loggedIn, admin, avatar }) => {
     state.loggedIn = loggedIn;
     state.avatar = avatar;
+    state.admin = admin;
   },
   popupVisible: (state, visible) => {
     state.popupVisible = visible;

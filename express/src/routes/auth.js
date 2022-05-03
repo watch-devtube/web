@@ -5,6 +5,8 @@ const GitHubStrategy = require('passport-github2');
 const GoogleStrategy = require('passport-google-oauth2');
 
 const successRedirect = process.env.DEVTUBE_HOST || 'https://dev.tube'
+const admins = ['eduards@sizovs.net', 'eduards@devternity.com', 'eduards.sizovs@gmail.com']
+
 
 function toUserProfile(_token, _tokenSecret, profile, cb) {
   const avatar = profile.photos[0].value
@@ -12,9 +14,13 @@ function toUserProfile(_token, _tokenSecret, profile, cb) {
   if (!avatar || !email) {
     throw "Sorry, unable to retrieve user data from OAuth provider"
   }
+
+  const admin = admins.includes(email);
+
   const user = {
     avatar,
     email,
+    admin,
     username: profile.username,
     provider: profile.provider
   };
@@ -58,9 +64,11 @@ passport.deserializeUser((obj, cb) => {
 
 router.get('/loggedIn', (req, res) => {
   const loggedIn = !!req.user;
+
   console.log(req.user);
   const avatar = req.user?.avatar;
-  res.json({ loggedIn, avatar })
+  const admin = !!req.user?.admin;
+  res.json({ loggedIn, admin, avatar })
 })
 
 router.get('/logout', (req, res) => {

@@ -27,5 +27,11 @@ const processVideos = (mapper = (data) => data, done = () => { }) => {
     );
 };
 
+const updateVideo = (video) => {
+  const key = datastore.key(["video", video.objectID])
+  return datastore.update({ key, data: video })
+}
+
 module.exports.processVideos = processVideos;
+module.exports.updateVideo = updateVideo;
 module.exports.datastore = datastore;

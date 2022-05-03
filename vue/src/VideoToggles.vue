@@ -8,6 +8,8 @@
   a.video-action.favorite(@click="toggleFavorite(videoId)", v-if="auth.user")
     font-awesome-icon.has-text-warning(icon="star", v-if="isFavorite(videoId)")
     font-awesome-icon(:icon="['far', 'star']", v-else)
+  a.video-action.edit(@click="showPopup(videoId)", v-if="isAdmin")
+    font-awesome-icon(:icon="['far', 'edit']")
 </template>
 
 <style lang="scss">
@@ -23,6 +25,13 @@
     z-index: 29;
     left: 6px;
     top: 3px;
+    position: absolute;
+  }
+
+  .edit {
+    z-index: 29;
+    right: 6px;
+    bottom: 3px;
     position: absolute;
   }
 
@@ -46,10 +55,12 @@ export default {
   },
   computed: {
     ...mapState(["videos", "auth"]),
-    ...mapGetters("videos", ["isWatched", "isFavorite"])
+    ...mapGetters("videos", ["isWatched", "isFavorite"]),
+    ...mapGetters("auth", ["isAdmin"])
   },
   methods: {
-    ...mapActions("videos", ["toggleWatched", "toggleFavorite"])
+    ...mapActions("videos", ["toggleWatched", "toggleFavorite"]),
+    ...mapActions("edit", ["showPopup"])
   }
 };
 </script>

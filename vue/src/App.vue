@@ -1,6 +1,7 @@
 <template lang="pug">
 .app
   Login
+  EditVideo
   notifications(group="notification", :duration="-1")
   NavBar
   router-view
@@ -22,10 +23,11 @@
 <script>
 import NavBar from "./NavBar.vue";
 import Login from "./Login.vue";
+import EditVideo from "./EditVideo.vue";
 import { mapState, mapGetters, mapMutations } from "vuex";
 
 export default {
-  components: { NavBar, Login },
+  components: { NavBar, Login, EditVideo },
   computed: {
     ...mapGetters("loading", ["completed"]),
     ...mapState({ show: state => state.notify.show })

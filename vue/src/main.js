@@ -119,6 +119,7 @@ import loading from "./loading";
 import karma from "./karma";
 import notify from "./notify";
 import query from "./query";
+import edit from "./edit";
 
 Vue.use(VueHead);
 Vue.use(Vuex);
@@ -214,6 +215,7 @@ import createPersistedState from "vuex-persistedstate";
 const store = new Vuex.Store({
   modules: {
     auth,
+    edit,
     videos,
     loading,
     notify,
