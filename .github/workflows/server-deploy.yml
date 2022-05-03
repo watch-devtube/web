@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - master
-  schedule:
-    # Run every hour
-    - cron: "0 * * * *"
 
 jobs:
   web:
