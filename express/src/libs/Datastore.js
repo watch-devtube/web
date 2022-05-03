@@ -4,11 +4,11 @@ const jsonDiff = require("json-diff");
 
 const processVideos = (mapper = (data) => data, done = () => { }) => {
   let changed = 0;
+  let processed = 0;
   datastore
     .runQueryStream(datastore.createQuery("video").filter("status", "approved"))
     .on("error", console.error)
     .on("data", (data) => {
-      console.log(data)
       const key = data[datastore.KEY];
       const copy = { ...data };
       mapper(copy);
@@ -18,9 +18,10 @@ const processVideos = (mapper = (data) => data, done = () => { }) => {
         changed++;
         console.log(diff);
       }
+      processed++
     })
     .on("end", () => {
-      console.log(`Processing has completed. ${changed} entities updated.`)
+      console.log(`Processing has completed. ${processed} entities processed. ${changed} updated.`)
       done()
     }
     );

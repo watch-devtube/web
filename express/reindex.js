@@ -33,8 +33,6 @@ const done = () => {
       .value()
   }
 
-  console.log(stats)
-
   writeFileSync('./data/stats.json', JSON.stringify(stats));
 }
 

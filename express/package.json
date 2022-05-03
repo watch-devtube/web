@@ -23,6 +23,7 @@
     "express": "4.16.4",
     "express-winston": "^4.0.3",
     "json-diff": "^0.7.4",
+    "memoizee": "^0.4.15",
     "passport": "^0.5.2",
     "passport-github2": "^0.1.12",
     "passport-google-oauth2": "^0.2.0",
