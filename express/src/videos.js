@@ -1,8 +1,6 @@
-const { Datastore } = require("@google-cloud/datastore");
+const { datastore } = require("./libs/Datastore");
 
-const datastore = new Datastore();
 const flat = arr => arr.reduce((acc, val) => acc.concat(val), []);
-
 
 module.exports.Videos = class Videos {
   constructor(ids) {

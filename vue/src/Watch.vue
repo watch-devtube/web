@@ -164,7 +164,7 @@ export default {
             datePublished: dayjs(this.video.recordingDate * 1000).format(
               "YYYY-MM-DD"
             ),
-            description: this.video.description,
+            description: this.video.title,
             thumbnailURL: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
             thumbnail: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
             interactionCount: this.video.views,
@@ -182,7 +182,7 @@ export default {
     meta() {
       return meta({
         title: this.video.title,
-        descr: this.video.description,
+        descr: this.video.title,
         image: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`
       });
     }

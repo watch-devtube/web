@@ -6,7 +6,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "export GOOGLE_APPLICATION_CREDENTIALS=./datastore_key.json && MODE=dev nodemon index.js"
+    "dev": "export GOOGLE_APPLICATION_CREDENTIALS=../datastore_key.json && MODE=dev nodemon index.js",
+    "devReindex": "export GOOGLE_APPLICATION_CREDENTIALS=../datastore_key.json && node reindex.js",
+    "reindex": "node reindex.js"
   },
   "dependencies": {
     "@google-cloud/datastore": "^6.6.2",
@@ -20,6 +22,7 @@
     "dotenv": "^16.0.0",
     "express": "4.16.4",
     "express-winston": "^4.0.3",
+    "json-diff": "^0.7.4",
     "passport": "^0.5.2",
     "passport-github2": "^0.1.12",
     "passport-google-oauth2": "^0.2.0",

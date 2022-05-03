@@ -73,6 +73,9 @@ jobs:
       - name: prepare data dir
         run: mkdir ./data
 
+      - name: build index
+        run: npm run reindex
+
       - name: sync data
         run: gsutil -m cp gs://dev-tube-index/index-new.json ./data
 
