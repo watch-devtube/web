@@ -6,10 +6,10 @@ const router = require("express").Router();
 const { random } = require("lodash");
 
 const config = {
-  consumer_key: process.env.TWITTER_CONSUMER_KEY || "none",
-  consumer_secret: process.env.TWITTER_CONSUMER_SECRET || "none",
-  access_token: process.env.TWITTER_ACCESS_TOKEN || "none",
-  access_token_secret: process.env.TWITTER_ACCESS_SECRET || "none",
+  consumer_key: process.env.AUTO_TWT_CONSUMER_KEY || "none",
+  consumer_secret: process.env.AUTO_TWT_CONSUMER_SECRET || "none",
+  access_token: process.env.AUTO_TWT_ACCESS_TOKEN || "none",
+  access_token_secret: process.env.AUTO_TWT_ACCESS_SECRET || "none",
 };
 const twitter = new Twit(config);
 
