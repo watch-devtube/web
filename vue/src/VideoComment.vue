@@ -3,21 +3,20 @@ article.media
   figure.media-left
     p.image.is-32x32
       img.is-rounded(:src='comment.authorProfileImageUrl')
-  .media-content
-    .content
-      p
-        strong {{comment.authorDisplayName}}
-        span.ml-1.mr-1 &middot; {{comment.publishedAt | ago}}
-        br
-        span(style="white-space: pre-line") {{comment.textOriginal}}
-        br
-      .columns.is-variable.is-1.is-vcentered.is-mobile
-        .column.py-2.px-1.is-narrow(v-if="comment.canReply && !replyOpen" )
-          a.has-text-weight-bold.mr-3(@click="reply()") reply
-        .column.py-2.px-1.is-narrow(v-if="comment.totalReplyCount && !replies.length")
-          a.has-text-weight-bold(@click="showReplies(comment.id)") show {{comment.totalReplyCount}} replies
-      VideoCommentEditor(v-if="replyOpen" :replyUrl="'/youtube/' + comment.id + '/replies'" @commented="replyAdded")
-      VideoComment(v-for="reply in replies" :key="reply.id" :comment="reply" :video="video")
+  .content
+    p
+      strong {{comment.authorDisplayName}}
+      span.ml-1.mr-1 &middot; {{comment.publishedAt | ago}}
+      br
+      span(style="white-space: pre-line") {{comment.textOriginal}}
+      br
+    .columns.is-variable.is-1.is-vcentered.is-mobile
+      .column.py-2.px-1.is-narrow(v-if="comment.canReply && !replyOpen" )
+        a.has-text-weight-bold.mr-3(@click="reply()") reply
+      .column.py-2.px-1.is-narrow(v-if="comment.totalReplyCount && !replies.length")
+        a.has-text-weight-bold(@click="showReplies(comment.id)") show {{comment.totalReplyCount}} replies
+    VideoCommentEditor(v-if="replyOpen" :replyUrl="'/youtube/' + comment.id + '/replies'" @commented="replyAdded")
+    VideoComment(v-for="reply in replies" :key="reply.id" :comment="reply" :video="video")
 </template>
 <style lang="scss" scoped>
 .image {

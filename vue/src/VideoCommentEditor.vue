@@ -3,14 +3,14 @@ article.media
     figure.media-left
       p.image.is-rounded.is-32x32
         img.is-rounded(:src='$store.state.auth.avatar')
-    .media-content
+    .form
       .field
         p.control
           textarea.textarea.is-small(:disabled="!hasYoutubeAccess()" placeholder='Type something here...' v-model="text")
       .field
         .columns.is-vcentered
           .column.is-narrow
-            span Commenting is disabled while we're waiting for OAuth app approvel from Google. The approval should take few days.
+            span Commenting is disabled while we're waiting for OAuth app approval from Google. The approval should take few days.
           //- .column.is-narrow(v-if="hasYoutubeAccess()")
           //-   a.button.is-small(@click="postComment()" :disabled="!text.length" v-bind:class="{ 'is-loading': isWorking }") Post
           //- .column(v-else)
