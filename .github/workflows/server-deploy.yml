@@ -52,7 +52,7 @@ jobs:
       - name: build
         uses: actions/setup-node@v3
         with:
-          node-version: "10"
+          node-version: "14"
 
       - name: install node deps
         run: npm install --only=production
