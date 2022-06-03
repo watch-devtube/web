@@ -1,8 +1,26 @@
 [![Build Status](https://travis-ci.org/watch-devtube/web.svg?branch=master)](https://travis-ci.org/watch-devtube/web)
 
-# Dev.Tube
+# DevTube
 
 This repository contains `Vue.js` frontend and `Express.js` backend for DevTube.
+
+# Why DevTube?
+**💎 Discover hidden gems** — Watch videos that are not publicly available on YouTube (e.g. Chad Fowler's "Legacy").
+
+**🕛 Save time** — Watch only the best talks, curated by community, grouped by categories and speakers. Quality beats quantity.
+
+**🔖 Create lists** – Watch later, bookmark, and keep track of watched videos.
+
+**💬 Comments** – Read, write, and reply to comments directly from DevTube.
+
+**❤️ Contribute videos** – Get karma for video contributions. Your name will also be visible next to the video.
+
+**🔔 Subscribe** – Stay up-to-date with the latest videos via RSS. Too busy? Receive one tech talk per week.
+
+**🧘 Fewer distractions** – No annoying YouTube algorithms, irrelevant videos, ads, and tracking.
+
+
+# How to run DevTube locally
 
 ### Get datastore access
 
@@ -10,7 +28,7 @@ Ask the repo owners for Google Datastore credentials, then put them in `./datast
 
 ### Configure env variables
 
-Create a file ./express/.env with the following variables:
+Create a file `./express/.env` with the following variables:
 
 ```
 COOKIE_SECRET = DEVDEVDEVDEVDEVDEVDEVDEVDEVDEVDE
