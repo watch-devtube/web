@@ -5,7 +5,7 @@
 This repository contains `Vue.js` frontend and `Express.js` backend for DevTube.
 
 # Why DevTube?
-**💎 Discover hidden gems** — Watch videos that are not publicly available on YouTube (e.g. Chad Fowler's "Legacy").
+**💎 Discover hidden gems** — Watch videos that are not publicly available on YouTube (e.g. [Chad Fowler's "Tiny"](https://dev.tube/video/NXSS01n97G0)).
 
 **🕛 Save time** — Watch only the best talks, curated by community, grouped by categories and speakers. Quality beats quantity.
 
