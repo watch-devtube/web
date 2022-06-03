@@ -11,7 +11,7 @@ export const apiUrl = window.location.href.includes("devtube.xxx")
 
 export const api = axios.create({
   baseURL: apiUrl,
-  timeout: 5000,
+  timeout: 10000,
   withCredentials: true
 });
 
