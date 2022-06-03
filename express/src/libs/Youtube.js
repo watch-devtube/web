@@ -1,5 +1,10 @@
 const dayjs = require("dayjs");
-const { google } = require('googleapis')
+const memoize = require("memoizee");
+
+const googleForever = memoize(() => {
+  const { google } = require('googleapis')
+  return google;
+})
 
 
 function mapComment(it) {
@@ -34,7 +39,7 @@ function mapCommentReply(c) {
 class Youtube {
   constructor(auth) {
     this.auth = auth;
-    this.youtube = google.youtube({
+    this.youtube = googleForever().youtube({
       version: 'v3',
       auth
     })

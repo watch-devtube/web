@@ -42,7 +42,9 @@ app.use(
   })
 );
 
+console.time("Routes init")
 require("./src/routes/index")(app);
+console.timeEnd("Routes init")
 
 console.timeEnd("Cold start")
 

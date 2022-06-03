@@ -1,11 +1,17 @@
+function initRoute(app, route, requirePath) {
+  console.time(route + " init")
+  app.use(route, require(requirePath));
+  console.timeEnd(route + " init")
+}
+
 module.exports = app => {
-  app.use("/s", require("./search"));
-  app.use("/videos", require("./videos"));
-  app.use("/auth", require("./auth"));
-  app.use("/stats", require("./stats"));
-  app.use("/sitemap", require("./sitemap"));
-  app.use("/rss", require("./rss"));
-  app.use("/user", require("./user"));
-  app.use("/tweets", require("./tweets"));
-  app.use("/youtube", require("./youtube"));
+  initRoute(app, "/s", "./search");
+  initRoute(app, "/videos", "./videos");
+  initRoute(app, "/auth", "./auth");
+  initRoute(app, "/stats", "./stats");
+  initRoute(app, "/sitemap", "./sitemap");
+  initRoute(app, "/rss", "./rss");
+  initRoute(app, "/user", "./user");
+  initRoute(app, "/tweets", "./tweets");
+  initRoute(app, "/youtube", "./youtube");
 };
