@@ -3,14 +3,18 @@ import { apiUrl, api } from "../api";
 const state = {
   popupVisible: false,
   loggedIn: false,
+  youtubeAccess: false,
   admin: false,
-  avatar: undefined
+  avatar: undefined,
+  username: undefined,
+  karma: 0
 };
 
 const getters = {
   isLoggedIn: state => state.loggedIn,
   isAdmin: state => state.admin,
-  isPopupVisible: state => state.popupVisible
+  isPopupVisible: state => state.popupVisible,
+  hasYoutubeAccess: state => state.youtubeAccess
 };
 
 const actions = {
@@ -29,18 +33,26 @@ const actions = {
   },
   // eslint-disable-next-line no-unused-vars
   login({ commit }, provider) {
-    window.location.href = apiUrl + "/auth/" + provider;
+    window.location.href =
+      apiUrl + "/auth/" + provider + "?returnTo=" + window.location.href;
   },
   logout() {
-    window.location.href = apiUrl + "/auth/logout";
+    window.location.href =
+      apiUrl + "/auth/logout" + "?returnTo=" + window.location.href;
   }
 };
 
 const mutations = {
-  loggedIn: (state, { loggedIn, admin, avatar }) => {
+  loggedIn: (
+    state,
+    { loggedIn, admin, avatar, username, karma, youtubeAccess }
+  ) => {
     state.loggedIn = loggedIn;
+    state.username = username;
     state.avatar = avatar;
     state.admin = admin;
+    state.karma = karma;
+    state.youtubeAccess = youtubeAccess;
   },
   popupVisible: (state, visible) => {
     state.popupVisible = visible;

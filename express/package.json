@@ -7,31 +7,46 @@
   "private": true,
   "scripts": {
     "dev": "export GOOGLE_APPLICATION_CREDENTIALS=../datastore_key.json && MODE=dev nodemon index.js",
-    "devReindex": "export GOOGLE_APPLICATION_CREDENTIALS=../datastore_key.json && node reindex.js",
-    "reindex": "node reindex.js"
+    "devReindex": "export GOOGLE_APPLICATION_CREDENTIALS=../datastore_key.json && node reindex-run.js",
+    "reindex": "node reindex-run.js",
+    "test": "jest"
   },
   "dependencies": {
     "@google-cloud/datastore": "^6.6.2",
-    "@msgpack/msgpack": "^2.7.2",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
-    "connect-ensure-login": "^0.1.1",
     "cookie-session": "^2.0.0",
     "cors": "^2.8.4",
+    "dayjs": "^1.11.2",
     "dnscache": "^1.0.2",
     "dotenv": "^16.0.0",
     "express": "4.16.4",
+    "express-async-handler": "^1.2.0",
     "express-winston": "^4.0.3",
+    "feed": "^4.2.2",
+    "googleapis": "^100.0.0",
+    "jest": "^28.1.0",
+    "joi": "^17.6.0",
     "json-diff": "^0.7.4",
     "memoizee": "^0.4.15",
     "passport": "^0.5.2",
     "passport-github2": "^0.1.12",
     "passport-google-oauth2": "^0.2.0",
     "passport-twitter": "^1.0.4",
-    "postmark": "^3.0.1",
-    "winston": "^3.2.1"
+    "sitemap": "^7.1.1",
+    "twit": "^2.2.11",
+    "winston": "^3.2.1",
+    "youtubei.js": "^1.4.2-d.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "tmp"
+    ],
+    "testMatch": [
+      "**/**.test.js"
+    ]
   }
 }

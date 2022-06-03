@@ -1,48 +1,104 @@
-const { Criteria } = require("../libs/Fastr");
-const { Videos } = require("../videos");
-
-const { fastr } = require("../fastr");
-
+const asyncHandler = require('express-async-handler')
+const { datastore, weekPickForever, oneVideo } = require("../libs/Datastore");
+const { authenticated } = require('../libs/Middlewares');
+const { orderBy } = require("lodash");
 const router = require("express").Router();
 
-router.post("/", (req, res) => {
-  let {
-    query = '',
-    page = 1,
-    refinement,
-    sortOrder = 'satisfaction',
-    excludes
-  } = req.body
+const NOTHING_FOUND = `¯\\_(ツ)_/¯ No talks matching your criteria`
 
-  page--;
+router.post("/", asyncHandler(async (req, res) => {
+  const { p, s } = req.body;
 
-  const { channels, ids, speakers } = refinement;
+  const q = datastore.createQuery("videos");
+  if (!req.user?.admin) {
+    q.filter("status", "approved")
+  }
+  const { videos, more } = await paginate(q, p, s);
 
-  const criteria = new Criteria()
-    .excludeIds(excludes)
-    .limitFts(query)
-    .limitChannels(channels)
-    .limitSpeakers(speakers)
-    .limitIds(ids)
+  const { video } = await weekPickForever();
+  const weekPick = await oneVideo(video);
 
-  const hitsIds = fastr.search(criteria, sortOrder.replace("-", ""))
+  res.json({
+    videos,
+    more,
+    weekPick
+  })
+}));
 
-  const hitsPerPage = 20;
-  const from = page * hitsPerPage;
-  const to = from + hitsPerPage;
+router.post("/@:speaker", asyncHandler(async (req, res) => {
+  const { speaker } = req.params;
+  const { p, s } = req.body;
 
-  new Videos(hitsIds.slice(from, to))
-    .fetch()
-    .then(hits => {
-      const pages = Math.min(10, Math.ceil(hitsIds.length / hitsPerPage));
-      res.json(
-        {
-          hits,
-          pages,
-        }
-      )
-    })
-    .catch(error => res.status(500).send(error));
-});
+  const q = datastore.createQuery("videos").filter("speakerTwitters", speaker).filter("status", "approved");
+
+  const { videos, more } = await paginate(q, p, s);
+
+  const speakerIndex = videos[0]?.speakerTwitters.indexOf(speaker)
+  const whois = videos[0]?.speakerNames[speakerIndex];
+  res.json({
+    videos,
+    more,
+    speakerIndex,
+    title: videos.length ? `The best tech talks by ${whois}` : NOTHING_FOUND
+  })
+}));
+
+router.post("/~:topic", asyncHandler(async (req, res) => {
+  const { topic } = req.params;
+  const { p, s } = req.body;
+  const q = datastore.createQuery("videos").filter("topics", topic).filter("status", "approved");
+  const { videos, more } = await paginate(q, p, s);
+  res.json({
+    videos,
+    more,
+    title: videos.length ? `The best tech talks about ${topic}` : NOTHING_FOUND
+  })
+}));
+
+router.post("/:list(later|watched|favorites)", authenticated, asyncHandler(async (req, res) => {
+  const list = req.params.list;
+  const tx = datastore.transaction();
+  const [lists] = await tx.get(datastore.key(['lists', req.user.email]));
+  if (!lists || !lists[list] || !lists[list].length) {
+    res.json({})
+    return
+  }
+  const videoIds = lists[list];
+
+  const keys = videoIds.map(id => datastore.key(["videos", id]));
+  const [matches] = await tx.get(keys);
+  const matchesRecentFirst = orderBy(matches, match => -videoIds.indexOf(match.objectID))
+  const videos = matchesRecentFirst;
+
+  const titles = {
+    later: `Tech talks to watch later (${matches.length})`,
+    watched: `Tech talks I watched (${matches.length})`,
+    favorites: `My favorite tech talks (${matches.length})`
+  }
+
+  res.json({
+    videos,
+    title: titles[list]
+  })
+}));
+
+async function paginate(q, p, s) {
+  if (p) {
+    q.start(p);
+  }
+  if (s === 'likes') {
+    q.order('likes', { descending: true })
+  }
+  if (s === 'recent') {
+    q.order('submissionDate', { descending: true })
+  }
+
+  const [videos, info] = await datastore.runQuery(q.limit(30));
+  const more = info.moreResults !== datastore.NO_MORE_RESULTS ? info.endCursor : ""
+  return {
+    videos,
+    more
+  }
+}
 
 module.exports = router;

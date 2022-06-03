@@ -1,64 +1,34 @@
-input,
-input:active,
-input:focus,
-a.is-text,
-a.is-text:focus,
-a.is-text:active,
-select,
-select:active,
-select:focus {
+$info:  #4988ca;
+$link: #4988ca;
+
+.select::after {
+  border-color: hsl(0, 0%, 86%) !important;
+}
+
+.select select {
   border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
 }
 
-input::placeholder {
-  color: #dbdbdb !important;
+.button.is-text {
+  background: none !important;
 }
 
-.is-192x192 {
-  width: 192px;
-  height: 192px;  
+.is-borderless {
+  border: none !important;
 }
 
-a.button.is-text:hover, a.button.is-text:focus {
-  background-color: transparent;
+.is-transparent {
+  background-color: transparent !important;
 }
 
-footer.footer {
-  background-color: white;
+$card-radius: 25px !important;
+.card {
+  background-color: #343d46 !important;
 }
 
-input.input {
-  color: black;
-}
+@import '~bulma';
+@import "vue-loading-overlay/dist/vue-loading";
 
-.nav-link {
-  border-bottom: 1px solid #4988ca;
-}
-
-.nav-active {
-  color: #363636;
-  border-bottom: none;
-}
-
-@media (prefers-color-scheme: dark) {
-
-  .nav-link {
-    color: white;
-  }
-
-  .nav-active {
-    color: #4e5d6c;
-  }  
-
-  input.input,
-  .select select {
-    background-color: #1f2d3b;
-    color: #dbdbdb
-  }
-
-  footer.footer {
-    background-color: #1f2d3b;
-  }
+.clearfix {
+  @include clearfix;
 }

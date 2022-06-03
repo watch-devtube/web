@@ -1,53 +1,17 @@
 <template lang="pug">
 .app
   Login
-  EditVideo
   notifications(group="notification", :duration="-1")
   NavBar
   router-view
-  vue-progress-bar
+  Footer
 </template>
-<style lang="scss">
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-</style>
 <script>
 import NavBar from "./NavBar.vue";
 import Login from "./Login.vue";
-import EditVideo from "./EditVideo.vue";
-import { mapState, mapGetters, mapMutations } from "vuex";
+import Footer from "./Footer.vue";
 
 export default {
-  components: { NavBar, Login, EditVideo },
-  computed: {
-    ...mapGetters("loading", ["completed"]),
-    ...mapState({ show: state => state.notify.show })
-  },
-  watch: {
-    show() {
-      if (this.show) {
-        this.$notify({
-          title: this.$store.state.notify.title,
-          text: this.$store.state.notify.text,
-          type: this.$store.state.notify.type,
-          duration: this.$store.state.notify.duration,
-          group: "notification"
-        });
-      }
-      this.disableNotify();
-    }
-  },
-  methods: {
-    ...mapMutations("notify", ["disableNotify"])
-  }
+  components: { NavBar, Login, Footer }
 };
 </script>

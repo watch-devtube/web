@@ -1,24 +1,29 @@
 import axios from "axios";
+import Vue from "vue";
 
 export const bucket = axios.create({
   baseURL: "//storage.googleapis.com/dev-tube-index"
 });
 
-export const devternity = axios.create({
-  baseURL: "https://devternity.com"
-});
-
-export const dossier = axios.create({
-  baseURL: "//dossier.glitch.me"
-});
-
-export const apiUrl = window.location.href.includes(".test")
-  ? "//api.devtube.test:8100"
+export const apiUrl = window.location.href.includes("devtube.xxx")
+  ? "//api.devtube.xxx:8100"
   : "//api.dev.tube";
 
 export const api = axios.create({
   baseURL: apiUrl,
+  timeout: 5000,
   withCredentials: true
 });
 
-export const apiAxios = () => axios;
+api.interceptors.response.use(
+  response => response,
+  error => {
+    Vue.notify({
+      group: "notification",
+      title: "Oops! Something went wrong.",
+      type: "error",
+      text: "Please see logs and submit an issue: bit.ly/devtube-issue"
+    });
+    return Promise.reject(error);
+  }
+);

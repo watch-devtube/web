@@ -1,14 +1,8 @@
-<template>
-  <span>
-    <span
-      class="circle"
-      :style="'width:' + width + 'px; height:' + width + 'px'"
-    >
-    </span>
-    <figure :class="'image is-' + width + 'x' + width">
-      <slot />
-    </figure>
-  </span>
+<template lang="pug">
+span
+  span.circle(:style="'width:' + width + 'px; height:' + width + 'px'")
+  figure(:class="'image is-' + width + 'x' + width")
+    slot
 </template>
 <script>
 export default {

@@ -23,7 +23,7 @@ const port = process.env.PORT || 8100;
 app.use(cookieSession({
   name: '__session', // limitation because Firebase only supports that cookie name
   signed: false,     // limitation because Firebase only supports __session cookie, no __session.sig.
-  domain: isDevMode ? '.devtube.test' : '.dev.tube',
+  domain: isDevMode ? '.devtube.xxx' : '.dev.tube',
   secret: process.env.COOKIE_SECRET,
 }))
 app.use(passport.initialize());
@@ -38,11 +38,7 @@ app.use(body.json());
 app.use(
   expressWinston.logger({
     transports: [new winston.transports.Console()],
-    meta: false,
-    msg: (req, res) => {
-      const slow = res.responseTime >= 2000;
-      return `${req.method} ${req.url} ${res.statusCode} ${res.responseTime}ms ${slow ? '(slow)' : ''}`;
-    }
+    meta: false
   })
 );
 

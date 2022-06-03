@@ -1,74 +1,63 @@
 <template lang="pug">
-.video
-  .card
-    .shadow
-      VideoToggles(:videoId="id")
-      router-link(:to="{ name: 'video', params: { id } }")
-        .image.is-16by9(
-          :style="'background-image: url(//img.youtube.com/vi/' + id + '/hqdefault.jpg); background-position: 0 -30px'"
-        )
-  br
-  .videoTitle
-    h1.title.is-6(:title="title") {{ title | truncate(68) }}
-  .columns.is-mobile
+.column.video.mb-6
+  .columns.is-mobile.is-multiline(v-bind:class="{'is-watched': listedIn('watched'), 'has-background-danger-light': video.status === 'submitted'}")
+    .column.is-3
+      span.has-text-grey.is-size-7 {{addedAgo(video)}}
+      br
+      span.has-text-weight-bold.has-text-grey.is-size-7 thanks to @{{video.contributor}}
+    .column.is-narrow
+      router-link(:to="'/@' + video.speakerTwitters[speakerIndex]" :title="video.speakerNames[speakerIndex]")
+          figure.image.is-48x48
+            img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]")
     .column
-      span.has-text-grey.title.is-size-7
-        span(v-if="isFeatured")
-          font-awesome-icon.has-text-danger(:icon="['far', 'heart']") 
-        |
-        | {{ duration | duration }} · {{ recordingDate | published }}
-        |
-        span(v-if="language && language !== 'English'") · {{ language }}
-    .column.has-text-right(v-if="speaker.length")
-      span(v-for="(each, index) in speaker")
-        span.has-text-grey.title.is-size-7
-          router-link(:to="'/@' + each.twitter") {{ each.name }}
-        br
+      h1.is-3.title.is-size-4-mobile
+        router-link.has-text-grey-darker(:to="{ name: 'video', params: { id: video.objectID } }") 
+          | {{ video.title }} ({{video.recordingDate | year}})
+          | — 
+          | {{video.speakerNames[speakerIndex]}}
+      .tags
+        router-link.has-text-weight-bold.has-text-grey.tag(v-for="topic in video.topics" :key="topic" :to="'/~' + encodeURIComponent(topic)") {{topic}}
+        WatchingNow(:video="video")
+      .columns
+        .column
+          VideoActions(:video="video")
 </template>
 <style lang="scss" scoped>
-.video {
-  width: 318px;
+h1 {
+  letter-spacing: -1px;
 }
 
-.videoTitle {
-  min-height: 4em !important;
+.avatar {
+  opacity: 0.8;
+  object-fit: cover;
+  width: 48px;
+  height: 48px;
 }
 
-.image {
-  background-size: cover;
-}
-
-.shadow {
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+.is-watched {
+  .title,
+  .avatar,
+  .tags {
+    opacity: 0.4;
+  }
 }
 </style>
 <script>
-import VideoToggles from "./VideoToggles.vue";
-import dayjs from "dayjs";
-
+import VideoActions from "./VideoActions.vue";
+import WatchingNow from "./WatchingNow.vue";
+import { avatar, addedAgo } from "./helpers/videos";
 export default {
-  components: { VideoToggles },
+  components: { VideoActions, WatchingNow },
   props: {
-    id: { type: String, required: true },
-    title: { type: String, required: true },
-    isFeatured: { type: Boolean, default: false },
-    channel: { type: String, required: true },
-    language: { type: String },
-    views: { type: Number, default: 0 },
-    duration: { type: Number, required: true },
-    recordingDate: { type: Number, required: true },
-    creationDate: { type: Number, required: true },
-    speaker: {
-      type: Array,
-      required: true
-    }
+    video: { type: Object, required: true },
+    speakerIndex: { type: Number, default: 0 }
   },
-  computed: {
-    isNew() {
-      const today = dayjs();
-      const videoCreated = dayjs.unix(this.creationDate);
-      const videoAgeInDays = today.diff(videoCreated, "days");
-      return videoAgeInDays <= 7;
+  methods: {
+    avatar,
+    addedAgo,
+    listedIn(list) {
+      const videoID = this.video.objectID;
+      return this.$store.state.user[list]?.includes(videoID);
     }
   }
 };

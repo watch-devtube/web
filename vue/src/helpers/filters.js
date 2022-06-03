@@ -1,53 +1,19 @@
-import dayjs from "dayjs";
-
-const sameFlatten = arr =>
-  arr.reduce(
-    (acc, item) => [...acc, Array.isArray(item) ? sameFlatten(item) : item],
-    []
-  );
-
-export const flatten = it => (!it ? it : sameFlatten(it));
-
-export const duration = it => {
-  if (!it) {
-    return it;
-  }
-
-  const date = new Date(it * 1000);
-  const hours = Math.floor(it / 3600);
-  const minutes = date.getUTCMinutes();
-  return (hours ? `${hours}h ` : "") + (minutes ? `${minutes}m` : "");
-};
-
-export const dateFmt = it => {
-  if (!it) {
-    return it;
-  }
-  return dayjs(it * 1000).format("HH:mm");
-};
+import { dayjs } from "./datetime";
 
 export const durationFull = it => {
   if (!it) {
     return it;
   }
 
-  const date = new Date(it * 1000);
-  const hours = Math.floor(it / 3600);
-  const minutes = date.getUTCMinutes();
-  return hours ? `${hours} hours` : `${minutes} minutes`;
+  const videoDuration = dayjs.duration(it);
+  const hours = videoDuration.hours();
+  const minutes = videoDuration.minutes();
+  return hours ? `${hours} hour(s)` : `${minutes} minutes`;
 };
 
-export const noemoji = it => {
-  if (!it) {
-    return it;
-  }
-  return it.replace(
-    /([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
-    ""
-  );
+export const published = it => (it ? dayjs(it).format("MMM YYYY") : it);
+export const year = it => (it ? dayjs(it).format("YYYY") : it);
+
+export const ago = it => {
+  return dayjs(it).fromNow();
 };
-
-export const truncate = (it, max) =>
-  it ? it.slice(0, max) + (max < it.length ? "..." : "") : it;
-
-export const published = it => (it ? dayjs(it * 1000).format("YYYY MMM") : it);

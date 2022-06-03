@@ -1,14 +1,18 @@
+const asyncHandler = require('express-async-handler')
 const router = require("express").Router();
 const passport = require("passport");
 const TwitterStrategy = require('passport-twitter');
 const GitHubStrategy = require('passport-github2');
 const GoogleStrategy = require('passport-google-oauth2');
+const { statsForever } = require('../libs/Stats');
+
+const { returnBack } = require("../libs/Middlewares")
 
 const successRedirect = process.env.DEVTUBE_HOST || 'https://dev.tube'
+const successReturnToOrRedirect = successRedirect
 const admins = ['eduards@sizovs.net', 'eduards@devternity.com', 'eduards.sizovs@gmail.com']
 
-
-function toUserProfile(_token, _tokenSecret, profile, cb) {
+function toUserProfile(request, access_token, refresh_token, profile, done) {
   const avatar = profile.photos[0].value
   const email = profile.emails[0].value
   if (!avatar || !email) {
@@ -17,20 +21,24 @@ function toUserProfile(_token, _tokenSecret, profile, cb) {
 
   const admin = admins.includes(email);
 
-  const user = {
+  const user = request.user || {
     avatar,
     email,
     admin,
-    username: profile.username,
+    username: profile.username || email.split("@")[0],
     provider: profile.provider
   };
-  return cb(null, user);
+
+  user[profile.provider] = { access_token, refresh_token }
+
+  return done(null, user);
 }
 
 passport.use(new GitHubStrategy({
   clientID: process.env.GH_CLIENT_ID,
   clientSecret: process.env.GH_CLIENT_SECRET,
   callbackURL: "/auth/github/callback",
+  passReqToCallback: true,
   proxy: true
 },
   toUserProfile
@@ -40,6 +48,7 @@ passport.use(new TwitterStrategy({
   consumerKey: process.env.TWITTER_CONSUMER_KEY,
   consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
   callbackURL: '/auth/twitter/callback',
+  passReqToCallback: true,
   proxy: true,
   includeEmail: true
 },
@@ -49,6 +58,7 @@ passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   callbackURL: "/auth/google/callback",
+  passReqToCallback: true,
   proxy: true
 },
   toUserProfile));
@@ -62,37 +72,49 @@ passport.deserializeUser((obj, cb) => {
   cb(null, obj);
 });
 
-router.get('/loggedIn', (req, res) => {
+router.get('/loggedIn', asyncHandler(async (req, res) => {
   const loggedIn = !!req.user;
 
-  console.log(req.user);
+  const username = req.user?.username;
   const avatar = req.user?.avatar;
   const admin = !!req.user?.admin;
-  res.json({ loggedIn, admin, avatar })
-})
+  const youtubeAccess = !!req.user?.google
+
+  const calculateKarma = async () => {
+    if (loggedIn) {
+      const stats = await statsForever();
+      return stats.karma[username] || 0
+    } else {
+      return 0;
+    }
+  }
+
+  const karma = await calculateKarma();
+
+  res.json({ loggedIn, admin, avatar, username, karma, youtubeAccess })
+}))
 
 router.get('/logout', (req, res) => {
   req.logout();
   req.session = null;
-  res.redirect(successRedirect);
+  res.redirect(req.query.returnTo);
 });
 
-router.get('/github', passport.authenticate('github', { scope: ['user:email'] }));
-router.get('/github/callback',
-  passport.authenticate('github', { successRedirect, failureRedirect: '/' }));
+const googleScopes = ['email', 'profile', 'https://www.googleapis.com/auth/youtube.force-ssl']
 
-router.get('/twitter', passport.authenticate('twitter'));
-router.get('/twitter/callback',
-  passport.authenticate('twitter', { successRedirect, failureRedirect: '/' }));
+router.get('/github', returnBack, passport.authenticate('github', { scope: ['user:email'] }));
+router.get('/twitter', returnBack, passport.authenticate('twitter'));
+router.get('/google', returnBack, passport.authenticate('google', {
+  scope: googleScopes, accessType: 'offline', prompt: 'consent'
+}));
 
-router.get('/google',
-  passport.authenticate('google', {
-    scope:
-      ['email', 'profile']
-  }
-  ));
 router.get('/google/callback',
-  passport.authenticate('google', { successRedirect, failureRedirect: '/' }));
+  passport.authenticate('google', { successReturnToOrRedirect, failureRedirect: '/' }));
 
+router.get('/twitter/callback',
+  passport.authenticate('twitter', { successReturnToOrRedirect, failureRedirect: '/' }));
+
+router.get('/github/callback',
+  passport.authenticate('github', { successReturnToOrRedirect, failureRedirect: '/' }));
 
 module.exports = router;

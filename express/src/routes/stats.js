@@ -1,15 +1,10 @@
+const asyncHandler = require('express-async-handler')
 const router = require("express").Router();
-const { readFile } = require("fs/promises");
-const memoize = require("memoizee");
+const { statsForever } = require("../libs/Stats")
 
-const readStats = () => readFile('./data/stats.json', { encoding: "utf8" }).then(txt => JSON.parse(txt));
-const memoizedStats = memoize(readStats, { promise: true });
-
-
-router.get("/", (_req, res) => {
-  memoizedStats()
-    .then(stats => res.json(stats))
-    .catch(() => res.status(500).send("Something went wrong"))
-});
+router.get("/", asyncHandler(async (_req, res) => {
+  const stats = await statsForever();
+  res.json(stats);
+}));
 
 module.exports = router;

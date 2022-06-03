@@ -3,27 +3,27 @@
     .modal-background
     .modal-content
       .columns.is-mobile
-        .column.is-8.is-offset-2.register
+        .column.is-8.is-offset-2.auth
           .columns
             .column.has-text-centered
               h1.title.has-text-weight-bold.is-4 Log in to DevTube
-              p.description ...and get some superpowers
+              p.description ...and unlock some superpowers
               .form
                 br
-                a.button.is-primary.is-fullwidth.is-medium(@click="login('twitter')")
+                a.button.is-info.is-fullwidth.is-medium(@click="login('twitter')")
                   span.icon
                     font-awesome-icon(:icon="['fab', 'twitter']")
                   span Twitter
                 br
-                button.button.is-primary.is-fullwidth.is-medium(@click="login('github')") 
+                button.button.is-info.is-fullwidth.is-medium(@click="login('github')") 
                   span.icon
                     font-awesome-icon(:icon="['fab', 'github']")
                   span Github
-                br
-                button.button.is-primary.is-fullwidth.is-medium(@click="login('google')") 
-                  span.icon
-                    font-awesome-icon(:icon="['fab', 'google']")
-                  span Google
+                //- br
+                //- button.button.is-info.is-fullwidth.is-medium(@click="login('google')") 
+                //-   span.icon
+                //-     font-awesome-icon(:icon="['fab', 'google']")
+                //-   span Google
                 br
                 small
                   em
@@ -32,17 +32,15 @@
       .modal-close.is-large(aria-label="close" @click="hidePopup()")
 </template>
 <style scoped>
-.register {
+.auth {
   margin-top: 5rem;
   background: white;
   border-radius: 10px;
   padding: 4.5rem;
 }
-
 .title {
   letter-spacing: -1px;
 }
-
 .description {
   margin-top: 1rem;
   margin-bottom: 1rem;

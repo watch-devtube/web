@@ -1,50 +1,48 @@
 <template lang="pug">
-section.section
+section.section.header.p-5.mb-6
   .container(role="navigation", aria-label="main navigation")
     .columns.is-mobile.is-vcentered.is-gapless
       .column.is-narrow
-        router-link(:to="{ name: 'search' }")
-          picture
-            source(
-              srcset="/logo_dark.svg",
-              media="(prefers-color-scheme: dark)"
-            )
-            img.logo(src="/logo.png", srcset="/logo.svg", alt="logo")
-      .column.is-narrow.is-hidden-mobile
-        a.is-size-7.has-text-weight-bold(
-          style="position: relative; top: -3px",
-          href="//devternity.com?utm_source=devtube&utm_medium=header",
-          target="_blank",
-          ref="noopener"
-        ) by DevTernity
+        router-link(:to="'/'")
+          img.logo(src="/logo_dark.png", srcset="/logo_dark.svg", alt="logo")
       .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile
-            .column.is-narrow(v-if="isAuthEnabled")
-              .columns.is-gapless.is-vcentered.is-mobile(v-if="isLoggedIn")
-                .column.is-narrow(v-if="avatar")
-                  figure.image.is-16x16
+            .column.is-narrow(v-if="isLoggedIn && lists.later.length")
+              router-link.has-text-weight-bold.has-text-white.is-size-7(:to="'/later'") later
+              span.count.has-text-white.is-size-7 {{lists.later.length}}
+            .column.is-narrow(v-if="isLoggedIn && lists.favorites.length")
+              router-link.has-text-weight-bold.has-text-white.is-size-7(:to="'/favorites'") favorites
+              span.count.has-text-white.is-size-7 {{lists.favorites.length}}
+            .column.is-narrow(v-if="isLoggedIn &&lists.watched.length")
+              router-link.has-text-weight-bold.has-text-white.is-size-7(:to="'/watched'") watched          
+              span.count.has-text-white.is-size-7 {{lists.watched.length}}          
+            .column.is-narrow
+              .columns.is-2.is-variable.is-vcentered.is-mobile(v-if="isLoggedIn")
+                .column.is-hidden-mobile.is-size-7.is-narrow
+                  font-awesome-icon(:icon="['far', 'heart']").has-text-danger
+                  span.has-text-white  {{karma()}}
+                .column.is-hidden-mobile(v-if="avatar")
+                  figure.image.is-32x32
                     img.is-rounded(:src="avatar")
-                .column.is-narrow
-                  a.button.is-text.is-small(@click="logout()") logout
-              a.button.is-text.is-small(v-else @click="showPopup()") login
+                .column
+                  a.button.is-text.has-text-white.is-small(@click="logout()") logout
+              a.button.is-text.is-small.has-text-white(v-else @click="showPopup()") login
 </template>
 <style lang="scss" scoped>
-.face {
-  height: 30px;
-  width: 30px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-right: 0.5em;
-  margin-left: 0.5em;
+.header {
+  background-color: #343d46;
 }
-
 @media (max-width: 768px) {
   .logo {
     width: 60px;
   }
+}
+
+.count {
+  position: relative;
+  left: 2px;
+  bottom: 5px;
 }
 </style>
 <script>
@@ -52,16 +50,21 @@ import { mapActions, mapGetters, mapState } from "vuex";
 
 export default {
   computed: {
-    isAuthEnabled() {
-      return (
-        window.location.href.includes(".test") ||
-        this.$router.currentRoute.hash == "#enableLogin"
-      );
+    lists() {
+      return this.$store.state.user;
     },
-    ...mapState("auth", ["avatar"]),
+    ...mapState("auth", ["avatar", "username"]),
     ...mapGetters("auth", ["isLoggedIn"])
   },
   methods: {
+    karma() {
+      const karma = this.$store.state.auth.karma;
+      if (karma >= 1000) {
+        return Math.round(karma / 1000) + "K";
+      } else {
+        return karma;
+      }
+    },
     ...mapActions("auth", ["showPopup", "logout"])
   }
 };

@@ -4,137 +4,51 @@
 
 This repository contains `Vue.js` frontend and `Express.js` backend for DevTube.
 
-## Table of content
+### Get datastore access
 
-- [How to run DevTube locally](#how-to-run-devtube-locally)
-  - [Install global dependencies](#install-global-dependencies)
-  - [Firebase: Authentication](#firebase-authentication)
-  - [Firebase: Firestore](#firebase-firestore)
-  - [Firebase: Connect DevTube](#firebase-connect-devtube)
-  - [Datastore: Download data](#datastore-download-data)
-  - [Datastore: Run emulator](#datastore-run-emulator)
-  - [Run backend](#run-backend)
-  - [Run frontend](#run-frontend)
-- [How to contribute](#how-to-contribute)
-- [How to contribute content](#how-to-contribute-content)
+Ask the repo owners for Google Datastore credentials, then put them in `./datastore_key.json`.
 
-## How to run DevTube locally
+### Configure env variables
 
-#### Install global dependencies
-
-Install Yarn:
-
-```bash
-npm install -g yarn
-```
-
-Install [Google Cloud SDK](https://cloud.google.com/sdk/install):
-
-```bash
-brew cask install google-cloud-sdk
-```
-
-#### Firebase: Authentication
-
-DevTube uses Firebase for OAuth authentication. For now, Google, Twitter, and GitHub providers are supported. For development purposes, it's enough to configure GitHub provider.
-
-1. [Create a new GitHub OAuth app](https://github.com/settings/applications/new). GitHub will ask you to provide _Authorization callback URL_.
-2. [Create a new Firebase account](https:///firebase.google.com).
-3. Go to Authentication and enable GitHub sign-in. Copy _Authorization callback URL_.
-4. Go to Github and finalize app creation by providing _Authorization callback URL_.
-5. Copy _Client ID_ and _Client Secret_.
-6. Go to Firebase and provide those values.
-
-#### Firebase: Firestore
-
-DevTube stores your subscriptions, favorites, and watched videos in Firestore.
-
-1. Open your Firebase account
-2. Ceate a new Firestore database
-3. Provide the following database permissions:
+Create a file ./express/.env with the following variables:
 
 ```
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if true;
-    }
-  }
-}
+COOKIE_SECRET = DEVDEVDEVDEVDEVDEVDEVDEVDEVDEVDE
+DEVTUBE_HOST = http://devtube.xxx:8080
+
+YOUTUBE_API_KEY = <ask repo owners>
+
+TWITTER_CONSUMER_KEY = <ask repo owners>
+TWITTER_CONSUMER_SECRET = <ask repo owners>
+
+GH_CLIENT_ID = <ask repo owners>
+GH_CLIENT_SECRET = <ask repo owners>
+
+GOOGLE_CLIENT_ID = <ask repo owners>
+GOOGLE_CLIENT_SECRET = <ask repo owners>
 ```
 
-#### Firebase: Connect DevTube
+### Add new entries to /etc/hosts file
 
-1. Open your Firebase account
-2. Generate a new private key under Service accounts panel
-3. Store downloaded credentials under `devtube-web/express/firebase.json`.
-4. Create `devtube-web/firebase.config.json` file with and populate it with the content:
-
-```json
-{
-  "projectId": "<firebase projectId>",
-  "apiKey": "<firebase apiKey>",
-  "authDomain": "<firebase projectId>.firebaseapp.com",
-  "databaseURL": "https://<firebase projectId>.firebaseio.com"
-}
 ```
-
-#### Datastore: Download data
-
-DevTube data lives in Cloud Datastore. Download and unzip the following test data:
-
-```bash
-curl --create-dirs -f -o express/data/index-new.json https://storage.googleapis.com/dev-tube-index/index-test-new.json
-
-curl --create-dirs -f -o express/data/data-test-new.zip https://storage.googleapis.com/dev-tube-index/data-test-new.zip
-
-unzip express/data/data-test-new.zip -d "express/data/videos"
-```
-
-#### Datastore: Run emulator
-
-```bash
-# run emulator
-gcloud beta emulators datastore start --project=dev-tube
-
-# point environment variables to the emulator
-$(gcloud beta emulators datastore env-init)
-
-# populate Datastore Emulator
-# From ./express directory run:
-yarn
-yarn run datastore-init
+127.0.0.1 devtube.xxx
+127.0.0.1 api.devtube.xxx
 ```
 
 #### Run backend
 
-You need to run backend first, because frontend relies on it.
-
 ```bash
 # From ./express directory run:
-yarn && yarn dev
+npm install
+npm run dev
 ```
 
 #### Run frontend
 
 ```bash
-# from project root directory, run:
-yarn && yarn dev
+# from ./vue directory run:
+npm install
+npm run dev
 ```
 
-> 🚀 DevTube front-end is now running on [localhost:8080](http://localhost:8080)
-
----
-
-## How to contribute?
-
-Before submitting PR, check the code for violations:
-
-```bash
-yarn lint
-```
-
-## How to contribute content?
-
-You can contribute channels and speakers in [watch-devtube/contrib](https://github.com/watch-devtube/contrib) repo.
+> 🚀 DevTube front-end is now running on [devtube.xxx:8080](http://devtube.xxx:8080)

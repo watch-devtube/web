@@ -1,64 +1,43 @@
 <template lang="pug">
 .watch
-  section.section.body(v-if="video.objectID")
+  section.section(v-if="error")
+    .container
+      article.message.is-danger
+        .message-header
+          p Error
+        .message-body {{error}}
+  section.section
     .container
       .columns
         .column
-          .shadow
-            a(@click="toggleWatched(id)", v-if="auth.user")
-            .videoWrapper
-              iframe(
-                :src="`https://www.youtube.com/embed/${id}?modestbranding=1&showinfo=0&rel=0`",
-                title="Embedded video",
-                frameborder="0",
-                allowfullscreen
-              )
-      .columns.is-mobile
-        .column
-          p.has-text-grey.title.is-size-7 {{ video.duration | duration }} · {{ video.recordingDate | published }}
-          .speakers(v-if="video.speaker.length")
-            .columns.is-mobile.is-vcentered(v-for="speaker in video.speaker")
-              .column.is-narrow
-                router-link(:to="'/@' + speaker.twitter")
-                  figure.image.is-48x48.is-marginless
-                    img.is-rounded(
-                      :src="'//dossier.glitch.me/avatar/' + speaker.twitter",
-                      :alt="speaker.name + ' avatar'"
-                    )
-              .column.is-narrow
-                p: strong: router-link(:to="'/@' + speaker.twitter") {{ speaker.name }}
-                TwitterThanks(
-                  :videoId="video.objectID",
-                  :title="video.title",
-                  :channel="video.channelTitle",
-                  :speaker="video.speaker"
-                )
-          .noSpeaker(v-else)
-            br
-            strong Know the speaker?
-            br
-            a.button.is-text.is-small(
-              :href="'https://github.com/watch-devtube/contrib/edit/master/videos/' + id + '.yml'",
-              target="_blank"
+          .videoWrapper.shadow
+            iframe(
+              :src="`https://www.youtube-nocookie.com/embed/${id}`",
+              title="Embedded video",
+              frameborder="0",
+              allow="autoplay; encrypted-media" allowfullscreen
             )
-              span
-                font-awesome-icon.has-text-danger(:icon="['far', 'heart']")
-                | &nbsp;
-                | contribute for karma
-    section.section(style="padding-left: 0; padding-right: 0")
-      h3.title Recommended videos
-      RelatedVideos(
-        :key="video.objectID",
-        :videoId="video.objectID",
-        :channel="video.channelTitle",
-        :featured="video.featured",
-        :speaker="video.speaker"
-      )
-      MessageWidget(
-        :videoId="video.objectID",
-        :channel="video.channelTitle",
-        :speaker="video.speaker"
-      )
+      .columns
+        .column
+          span.has-text-grey.title.is-size-7 
+            span.mr-4 {{ video.duration | durationFull }}
+            span.mr-3 {{ video.recordingDate | published }}
+            WatchingNow(:video="video" v-if="video.objectID" :minimumWatching="1")
+            span(v-if="video.series")
+              br
+              router-link.mr-4(v-for="(serie, index) in video.series" :key="serie" :to="{ name: 'video', params: { id: serie } }" v-bind:class="{'has-text-grey' : serie === id}") Part {{index + 1}}
+            br
+            span.mr-4(v-for="(speakerTwitter, speakerIndex) in video.speakerTwitters")
+              router-link(:to="'/@' + speakerTwitter") {{ video.speakerNames[speakerIndex] }}
+        .column
+          .is-pulled-right.has-text-right
+            VideoActions(:video="video" v-if="video.objectID")
+            br
+            TwitterThanks(:video="video" v-if="video.objectID")
+          .clearfix
+  section.section(v-if="video.objectID")
+    .container
+      VideoComments(:video="video" :key="video.objectID")
 </template>
 <style scoped lang="scss">
 .shadow {
@@ -80,18 +59,18 @@
 </style>
 <script>
 import { api } from "./api";
-import dayjs from "dayjs";
 import RelatedVideos from "./RelatedVideos.vue";
-import MessageWidget from "./MessageWidget.vue";
 import TwitterThanks from "./TwitterThanks.vue";
-import { mapState, mapActions, mapGetters } from "vuex";
-import { meta } from "./helpers/meta";
-
+import WatchingNow from "./WatchingNow.vue";
+import VideoActions from "./VideoActions.vue";
+import VideoComments from "./VideoComments.vue";
 export default {
   components: {
     RelatedVideos,
-    MessageWidget,
-    TwitterThanks
+    TwitterThanks,
+    VideoActions,
+    VideoComments,
+    WatchingNow
   },
   props: {
     id: {
@@ -101,20 +80,12 @@ export default {
   },
   data: function() {
     return {
-      loaded: false,
-      errors: [],
-      video: {}
+      error: undefined,
+      video: {
+        speakerNames: []
+      }
     };
   },
-  computed: {
-    ...mapState(["videos", "auth"]),
-    ...mapGetters("videos", [
-      "hasSubscription",
-      "hasSpeakerSubscription",
-      "hasChannelSubscription"
-    ])
-  },
-
   watch: {
     $route: "fetch"
   },
@@ -123,33 +94,25 @@ export default {
   },
   methods: {
     fetch() {
-      this.$Progress.start();
       api
-        .get(`/videos/${this.id}`)
-        .then(it => (this.video = it.data))
-        .catch(() => (window.location.href = "//dev.tube/404.html"))
-        .finally(() => {
-          this.loaded = true;
+        .get("/videos/" + this.id)
+        .then(({ data }) => {
+          this.video = data;
           this.$emit("updateHead");
-          this.$Progress.finish();
-        });
-    },
-    refineChannel: function(channel) {
-      this.$router.push({ name: "channel", params: { channel: channel } });
-    },
-    ...mapActions("videos", [
-      "toggleWatched",
-      "toggleSpeakerSubscription",
-      "toggleChannelSubscription"
-    ])
+        })
+        .catch(
+          () =>
+            (this.error = "Could not fetch video. Is it uploaded to DevTube?")
+        );
+    }
   },
 
   head: {
     title() {
       return {
-        separator: "–",
-        complement: "on DevTube",
-        inner: this.video.title
+        inner: this.video.objectID
+          ? this.video.title + " by " + this.video.speakerNames.join(", ")
+          : this.id
       };
     },
     script() {
@@ -161,30 +124,17 @@ export default {
             "@type": "VideoObject",
             "@id": "https://dev.tube/video/" + this.id,
             name: this.video.title,
-            datePublished: dayjs(this.video.recordingDate * 1000).format(
-              "YYYY-MM-DD"
-            ),
             description: this.video.title,
             thumbnailURL: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
             thumbnail: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
-            interactionCount: this.video.views,
-            uploadDate: dayjs(this.video.recordingDate * 1000).format(
-              "YYYY-MM-DD"
-            ),
-            author: this.video.speaker?.map(it => ({
+            interactionCount: this.video.likes,
+            author: this.video.speakerNames.map(name => ({
               "@type": "Person",
-              name: it.name
+              name
             }))
           })
         }
       ];
-    },
-    meta() {
-      return meta({
-        title: this.video.title,
-        descr: this.video.title,
-        image: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`
-      });
     }
   }
 };

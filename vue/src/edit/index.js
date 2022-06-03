@@ -2,7 +2,8 @@ import { api } from "../api";
 
 const state = {
   popupVisible: false,
-  video: undefined
+  video: undefined,
+  speakers: []
 };
 
 const getters = {
@@ -15,21 +16,11 @@ const actions = {
     const videoId = newVideo.objectID;
     api
       .put("/videos/" + videoId, { newVideo, tweet })
-      .then(() => dispatch("hidePopup"))
-      .catch(() =>
-        dispatch(
-          "notify/error",
-          {
-            title: "Unable to save video",
-            text: "Something went wrong on the server"
-          },
-          { root: true }
-        )
-      );
+      .then(() => dispatch("hidePopup"));
   },
   showPopup({ commit }, videoId) {
-    api.get("/videos/" + videoId).then(({ data }) => {
-      commit("videoFetched", data);
+    api.get("/videos/" + videoId + "/edit").then(({ data }) => {
+      commit("editReady", data);
       commit("popupVisible", true);
       const classes = document.documentElement.classList;
       classes?.add("is-clipped");
@@ -46,8 +37,9 @@ const mutations = {
   editVideo: (state, data) => {
     state.video = data;
   },
-  videoFetched: (state, data) => {
-    state.video = JSON.stringify(data, null, 2);
+  editReady: (state, { video, speakers }) => {
+    state.video = video;
+    state.speakers = speakers;
   },
   popupVisible: (state, visible) => {
     state.popupVisible = visible;

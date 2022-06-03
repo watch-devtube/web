@@ -1,0 +1,36 @@
+indexes:
+  - kind: videos
+    properties:
+      - name: status
+      - name: likes
+        direction: desc
+
+  - kind: videos
+    properties:
+      - name: topics
+      - name: likes
+        direction: desc
+
+  - kind: videos
+    properties:
+      - name: speakerTwitters
+      - name: likes
+        direction: desc
+
+  - kind: videos
+    properties:
+      - name: status
+      - name: submissionDate
+        direction: desc
+
+  - kind: videos
+    properties:
+      - name: topics
+      - name: submissionDate
+        direction: desc
+
+  - kind: videos
+    properties:
+      - name: speakerTwitters
+      - name: submissionDate
+        direction: desc

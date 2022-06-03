@@ -1,170 +1,143 @@
 <template lang="pug">
-section.section(style="padding-top: 0px")
-  .container(v-if="!channel && !speaker")
-    .columns.is-mobile.is-vcentered
-      .column
-        Input
-      .column
+section.section.pt-0
+  loading(:active.sync="isLoading")
+  aside.container.pb-6
+    .columns.is-mobile.is-multiline.is-vcentered
+      .column.column.is-two-thirds-desktop.is-full-tablet
+        h1.title.is-1.is-size-3-mobile(style="letter-spacing: -2px") {{title}}
+      .column.is-one-third-desktop.is-full-mobile
         .is-pulled-right
-          Sorting
-  .container
-    ChannelAbout(v-if="channel", :channel="channel")
-    SpeakerAbout(v-if="speaker", :twitter="speaker")
-    Loading(:loading="loading", :hasVideos="loadedVideos.length > 0")
-      .columns.is-multiline.is-mobile
-        .column.is-narrow(v-for="video in loadedVideos")
-          VideoCard(
-            :isFeatured="video.featured",
-            :speaker="video.speaker",
-            :creationDate="video.creationDate",
-            :recordingDate="video.recordingDate",
-            :duration="video.duration",
-            :language="video.language",
-            :views="video.views",
-            :title="video.title",
-            :id="video.objectID",
-            :channel="video.channelTitle"
+          .select.is-small(@change='sortingChanged()')
+            select(aria-label='Sorting' v-model="sorting")
+              option(value='recent') Newest first
+              option(value='likes') Most liked first
+        .is-pulled-left
+          .is-hidden-tablet.is-size-7
+            a.has-text-grey-dark(@click='toggleCategories()' v-if='categoriesVisible')
+              font-awesome-icon(:icon="['far', 'eye-slash']")
+              |  Hide categories
+          .is-hidden-tablet.is-size-7
+            a.has-text-grey-dark(@click='toggleCategories()' v-if='!categoriesVisible')
+              font-awesome-icon(:icon="['far', 'eye']")
+              |  Show categories
+  main.container.mt-6
+    .columns
+      .column.is-4
+        Categories.mb-6(:class="{ 'is-hidden-mobile': !forceShowCategories }"
+            v-observe-visibility="categoryVisibilityChanged")
+      .column.is-8
+        .columns.is-multiline.is-mobile
+          WeekPick(v-if="weekPick" :video="weekPick")
+          VideoCard.is-12(v-for="video in videos"
+            :speakerIndex="speakerIndex"
+            :video="video" :key="video.objectID"
           )
-      Pagination(:page="p", :pages="pages")
+        button.button.is-small(v-if="more" @click="showMore()") More
+        a.button.submit-video.is-info(@click="submitVideo()") Submit a talk
+        component(v-bind:is="component" v-on:close="component = ''")
 </template>
+<style lang="scss" scoped>
+.submit-video {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+</style>
 <script>
-import { mapState, mapGetters } from "vuex";
+const DEFAULT_TITLE = "The best tech talks for developers";
 
 import { api } from "./api";
 
-import { meta } from "./helpers/meta";
-
+import Loading from "vue-loading-overlay";
 import VideoCard from "./VideoCard.vue";
-import Sorting from "./Sorting.vue";
-import Input from "./Input.vue";
-import Loading from "./LoadingInfo";
-import Pagination from "./Pagination";
-import SpeakerAbout from "./SpeakerAbout";
-import ChannelAbout from "./ChannelAbout";
+import Categories from "./Categories";
+import SubmitVideo from "./SubmitVideo";
+import WeekPick from "./WeekPick";
+
 export default {
   components: {
-    Loading,
-    Pagination,
-    ChannelAbout,
-    SpeakerAbout,
+    Categories,
     VideoCard,
-    Input,
-    Sorting
-  },
-  props: {
-    q: { type: String, default: "" },
-    p: { type: Number }
+    WeekPick,
+    Loading
   },
   data: () => {
     return {
-      loadedVideos: [],
-      refinement: {},
-      pages: 0,
-      excludes: [],
-      loading: false
+      categoriesVisible: true,
+      forceShowCategories: false,
+      isLoading: false,
+      title: DEFAULT_TITLE,
+      videos: [],
+      weekPick: undefined,
+      more: undefined,
+      speakerIndex: 0,
+      sorting: localStorage.sorting || "recent",
+      component: ""
     };
   },
-  computed: {
-    speaker() {
-      return this.$route.params.speaker;
-    },
-    channel() {
-      return this.$route.params.channel;
-    },
-    ...mapState(["videos", "query"]),
-    ...mapGetters("videos", [
-      "watchedIds",
-      "favoriteIds",
-      "speakerSubscriptions",
-      "channelSubscriptions"
-    ])
-  },
   watch: {
-    $route: "fetch",
-    "$store.state.query.sortOrder": "fetch"
+    $route: "fetchVideos"
   },
   created() {
-    this.fetch();
+    this.fetchVideos();
   },
   methods: {
-    fetch() {
-      this.$Progress.start();
-      this.loading = true;
-
-      this.refinement = {};
-      this.excludes = this.watchedIds;
-
-      const hack = 123;
-
-      if (this.$route.name === "watched") {
-        this.refinement = { ids: [...this.watchedIds, hack] };
-        this.excludes = [];
+    requireLogin() {
+      const loggedIn = this.$store.getters["auth/isLoggedIn"];
+      if (!loggedIn) {
+        this.$store.dispatch("auth/showPopup");
       }
-
-      if (this.$route.name === "favorites") {
-        this.refinement = { ids: [...this.favoriteIds, hack] };
-        this.excludes = [];
-      }
-
-      if (this.$route.name === "subscriptions") {
-        this.refinement = {
-          channels: this.channelSubscriptions,
-          speakers: this.speakerSubscriptions
-        };
-      }
-
-      if (this.speaker) {
-        this.refinement = { speakers: [this.speaker] };
-      }
-
-      if (this.channel) {
-        this.refinement = { channels: [this.channel] };
-      }
-
-      api
-        .post("/s", {
-          query: this.q,
-          page: this.p,
-          sortOrder: this.query.sortOrder,
-          refinement: this.refinement,
-          excludes: this.excludes
-        })
-        .then(({ data }) => {
-          this.$Progress.finish();
-          this.loading = false;
-          this.loadedVideos = data.hits;
-          this.pages = data.pages;
-          this.$emit("updateHead");
-        })
-        .catch(error => {
-          this.loading = false;
-          this.$store.dispatch("notify/error", { error });
-          this.$Progress.fail();
-        });
+      return !loggedIn;
     },
-    title() {
-      const speakerName = this.loadedVideos[0]?.speaker[0]?.name;
-      const topic = this.channel
-        ? this.channel
-        : this.speaker
-        ? `${speakerName} -`
-        : "The best developer";
-      return `${topic} talks, videos and tutorials from YouTube`;
+    sortingChanged() {
+      localStorage.sorting = this.sorting;
+      this.fetchVideos();
+    },
+    categoryVisibilityChanged(categoriesVisible) {
+      this.categoriesVisible = categoriesVisible;
+    },
+    toggleCategories() {
+      this.forceShowCategories = !this.forceShowCategories;
+    },
+    submitVideo() {
+      if (this.requireLogin()) {
+        return;
+      }
+      this.component = SubmitVideo;
+    },
+    showMore() {
+      this.fetchVideos({ p: this.more });
+    },
+    fetchVideos({ p } = {}) {
+      this.isLoading = true;
+      api
+        .post("/s" + this.$route.path, {
+          ...this.$route.query,
+          s: this.sorting,
+          p
+        })
+        .then(({ data: { videos, more, weekPick, title, speakerIndex } }) => {
+          if (p) {
+            this.videos = [...this.videos, ...videos];
+          } else {
+            this.videos = videos;
+          }
+          this.more = more;
+          this.weekPick = weekPick;
+          this.speakerIndex = speakerIndex || 0;
+          this.title = title || DEFAULT_TITLE;
+        })
+        .finally(() => {
+          this.isLoading = false;
+          this.$emit("updateHead");
+        });
     }
   },
   head: {
     title() {
       return {
-        separator: "–",
-        complement: "on DevTube",
-        inner: this.title()
+        inner: this.title
       };
-    },
-    meta() {
-      return meta({
-        title: this.title(),
-        descr: this.title()
-      });
     }
   }
 };

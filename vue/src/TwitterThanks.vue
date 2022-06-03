@@ -1,21 +1,17 @@
 <template lang="pug">
-a.button.is-text(
+a.button(
   :href="'//twitter.com/intent/tweet?text=' + text + '&url=' + url + '&via=WatchDevTube'",
   target="_blank",
   aria-label="twitter"
 )
-  span
-    font-awesome-icon.has-text-danger(:icon="['far', 'heart']")
-    | &nbsp;
-    | say thanks
+  span.icon
+    font-awesome-icon.has-text-info(:icon="['fab', 'twitter']")
+  span great talk!
 </template>
 <script>
 export default {
   props: {
-    videoId: { type: String, required: true },
-    title: { type: String, required: true },
-    speaker: { type: Array, required: true },
-    channel: { type: String, required: true }
+    video: { type: Object, required: true }
   },
   computed: {
     text() {
@@ -25,25 +21,25 @@ export default {
         " by " +
         this.names +
         " " +
-        this.mentions
+        this.twitters
       );
     },
-    mentions() {
-      return this.speaker.map(it => "@" + it.twitter).join(" ");
+    twitters() {
+      return this.video.speakerTwitters.map(twitter => "@" + twitter).join(" ");
     },
     names() {
-      return this.speaker
-        .map(it => it.name)
+      return this.video.speakerNames
+        .map(name => name)
         .reduce(
           (text, value, i, array) =>
             text + (i < array.length - 1 ? ", " : " and ") + value
         );
     },
     encodedTitle() {
-      return encodeURIComponent('"' + this.title + '"');
+      return encodeURIComponent('"' + this.video.title + '"');
     },
     url() {
-      return `https://dev.tube/video/${this.videoId}`;
+      return `https://dev.tube/video/${this.video.objectID}`;
     }
   }
 };

@@ -3,8 +3,8 @@ import Vuex from "vuex";
 
 import VueHead from "vue-head";
 import VueRouter from "vue-router";
-import VueProgressBar from "vue-progressbar";
 import Notifications from "vue-notification";
+import VueObserveVisibility from "vue-observe-visibility";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -20,7 +20,8 @@ import {
   faGoogle,
   faFacebookSquare,
   faTwitterSquare,
-  faLinkedin
+  faLinkedin,
+  faProductHunt
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEllipsisV,
@@ -28,27 +29,32 @@ import {
   faCheck,
   faPaperPlane,
   faEnvelope,
-  faCircle,
   faPlus,
   faMinus,
   faUser,
   faPlusCircle,
   faMinusCircle,
   faSortAlphaDown,
+  faCircle,
   faHashtag,
-  faSearch
+  faSearch,
+  faSquareRss
 } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsDown as fasThumbsDown } from "@fortawesome/free-solid-svg-icons/faThumbsDown";
 import { faThumbsUp as fasThumbsUp } from "@fortawesome/free-solid-svg-icons/faThumbsUp";
 import { faStar as fasStar } from "@fortawesome/free-solid-svg-icons/faStar";
 import { faCheckCircle as fasCheckCircle } from "@fortawesome/free-solid-svg-icons/faCheckCircle";
+import { faClock as fasClock } from "@fortawesome/free-solid-svg-icons/faClock";
+import { faHeart as fasHeart } from "@fortawesome/free-solid-svg-icons/faHeart";
 import {
   faHeart,
   faUserCircle,
   faEye,
+  faEyeSlash,
   faStar,
   faThumbsUp,
   faThumbsDown,
+  faBookmark,
   faGrinStars,
   faCheckCircle,
   faClock,
@@ -57,27 +63,31 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 library.add(
   faEllipsisV,
+  faBookmark,
   faTimes,
   faCheck,
   faPaperPlane,
   faClock,
   faStar,
   faEnvelope,
-  faCircle,
+  faProductHunt,
   faPlus,
   faMinus,
   faPlusCircle,
   faGithub,
   faUser,
+  faCircle,
   faMinusCircle,
   faThumbsUp,
   faThumbsDown,
   faUserCircle,
   faGoogle,
   faEdit,
+  faEyeSlash,
   faSortAlphaDown,
   faHashtag,
   faHeart,
+  faSquareRss,
   faYoutube,
   faTwitter,
   faFacebookSquare,
@@ -89,12 +99,16 @@ library.add(
   faGrinStars,
   faSearch,
   faCheckCircle,
+  fasHeart,
   fasCheckCircle,
   fasStar,
+  fasClock,
   faClock,
   faCalendarPlus
 );
 
+import VideoComment from "./VideoComment.vue";
+Vue.component("VideoComment", VideoComment);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component("font-awesome-layers", FontAwesomeLayers);
 Vue.component("font-awesome-layers-text", FontAwesomeLayersText);
@@ -102,136 +116,59 @@ Vue.component("font-awesome-layers-text", FontAwesomeLayersText);
 import App from "./App.vue";
 import Watch from "./Watch.vue";
 import Search from "./Search.vue";
-import Contributors from "./Contributors.vue";
-import {
-  flatten,
-  duration,
-  noemoji,
-  truncate,
-  published,
-  dateFmt,
-  durationFull
-} from "./helpers/filters";
+import { ago, published, year, durationFull } from "./helpers/filters";
 
 import auth from "./auth";
-import videos from "./videos";
-import loading from "./loading";
-import karma from "./karma";
-import notify from "./notify";
-import query from "./query";
 import edit from "./edit";
+import user from "./user";
 
-Vue.use(VueHead);
+Vue.use(VueHead, {
+  separator: "-",
+  complement: "on DevTube"
+});
 Vue.use(Vuex);
 Vue.use(Notifications);
 Vue.use(VueRouter);
-Vue.use(VueProgressBar, {
-  color: "rgb(143, 255, 199)",
-  failedColor: "red",
-  height: "2px"
-});
+Vue.use(VueObserveVisibility);
 
-Vue.filter("dateFmt", dateFmt);
-Vue.filter("flatten", flatten);
-Vue.filter("duration", duration);
 Vue.filter("durationFull", durationFull);
-Vue.filter("truncate", truncate);
 Vue.filter("published", published);
-Vue.filter("noemoji", noemoji);
-
-Vue.mixin({
-  methods: {
-    shuffle(a) {
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    }
-  }
-});
-
+Vue.filter("year", year);
+Vue.filter("ago", ago);
 require("./styles/main.scss");
 
 const router = new VueRouter({
   mode: "history",
   linkExactActiveClass: "is-active",
   routes: [
-    { name: "contributors", path: "/contributors", component: Contributors },
     { name: "video", path: "/video/:id", component: Watch, props: true },
     {
-      name: "speaker",
-      path: "/@:speaker",
-      component: Search,
-      props: route => ({
-        p: route.query.p ? parseInt(route.query.p) : 1
-      })
-    },
-    {
-      name: "channel",
-      path: "/channel/:channel",
-      component: Search,
-      props: route => ({
-        p: route.query.p ? parseInt(route.query.p) : 1
-      })
-    },
-    {
       name: "search",
-      path: "/",
-      component: Search,
-      props: route => ({
-        q: route.query.q,
-        p: route.query.p ? parseInt(route.query.p) : 1
-      })
-    },
-    {
-      name: "subscriptions",
-      path: "/subscriptions",
-      component: Search,
-      props: route => ({
-        p: route.query.p ? parseInt(route.query.p) : 1
-      })
-    },
-    {
-      name: "watched",
-      path: "/watched",
-      component: Search,
-      props: route => ({
-        p: route.query.p ? parseInt(route.query.p) : 1
-      })
-    },
-    {
-      name: "favorites",
-      path: "/favorites",
-      component: Search,
-      props: route => ({
-        p: route.query.p ? parseInt(route.query.p) : 1
-      })
+      path: "/:query?",
+      component: Search
     }
-  ]
+  ],
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  }
 });
 
-import createPersistedState from "vuex-persistedstate";
 const store = new Vuex.Store({
   modules: {
     auth,
     edit,
-    videos,
-    loading,
-    notify,
-    query,
-    karma
+    user
   },
-  strict: true,
-  plugins: [createPersistedState({ key: "devtube", paths: ["query"] })]
+  strict: true
 });
 
 new Vue({
   el: "#app",
   store,
+  router,
   render: h => h(App),
-  created() {
+  async created() {
     store.dispatch("auth/bootstrap");
-  },
-  router
+    store.dispatch("user/bootstrap");
+  }
 });
