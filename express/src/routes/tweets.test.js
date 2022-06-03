@@ -29,8 +29,8 @@ test("tweet a trending video", async () => {
   expect(twitter.post).toHaveBeenCalledWith("statuses/update", {
     status: `@eduardsi:
 📈 Your talk "Beyond Software Craftsmanship" is trending on DevTube:
-❤️  117 likes
-✍️  34 comments 
+❤️ 117 likes
+✍️ 34 comments 
 📺 10 watching now
 
 > https://dev.tube/video/AEtCEt44vlE`,

@@ -37,8 +37,8 @@ async function tweetTrending(video, watchingNow, comments) {
     ...[
       `@${video.speakerTwitters[0]}:`,
       `📈 Your talk "${video.title}" is trending on DevTube:`,
-      `❤️  ${video.likes} likes`,
-      `✍️  ${comments} comments `,
+      `❤️ ${video.likes} likes`,
+      `✍️ ${comments} comments `,
       `📺 ${watchingNow} watching now`,
       "",
       `> https://dev.tube/video/${video.objectID}`,
