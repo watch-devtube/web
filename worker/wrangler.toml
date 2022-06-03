@@ -1,6 +1,6 @@
 name = "worker"
 type = "webpack"
-account_id = ""
+account_id = "3ef2bbbd14c3c8946513f654cb9889b5"
 workers_dev = false
 route = "dev.tube/*"
 zone_id = "8b517acf9c49c6702ca6c388a54319b3"
