@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master
-
-on:
   schedule:
     # Run every 4 hours
     - cron: "0 */4 * * *"
