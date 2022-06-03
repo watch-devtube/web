@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler')
-const { datastore, weekPickForever, oneVideo } = require("../libs/Datastore");
+const { datastoreForever, weekPickForever, oneVideo } = require("../libs/Datastore");
 const { authenticated } = require('../libs/Middlewares');
 const { orderBy } = require("lodash");
 const router = require("express").Router();
@@ -9,7 +9,7 @@ const NOTHING_FOUND = `¯\\_(ツ)_/¯ No talks matching your criteria`
 router.post("/", asyncHandler(async (req, res) => {
   const { p, s } = req.body;
 
-  const q = datastore.createQuery("videos");
+  const q = datastoreForever().createQuery("videos");
   if (!req.user?.admin) {
     q.filter("status", "approved")
   }
@@ -29,7 +29,7 @@ router.post("/@:speaker", asyncHandler(async (req, res) => {
   const { speaker } = req.params;
   const { p, s } = req.body;
 
-  const q = datastore.createQuery("videos").filter("speakerTwitters", speaker).filter("status", "approved");
+  const q = datastoreForever().createQuery("videos").filter("speakerTwitters", speaker).filter("status", "approved");
 
   const { videos, more } = await paginate(q, p, s);
 
@@ -46,7 +46,7 @@ router.post("/@:speaker", asyncHandler(async (req, res) => {
 router.post("/~:topic", asyncHandler(async (req, res) => {
   const { topic } = req.params;
   const { p, s } = req.body;
-  const q = datastore.createQuery("videos").filter("topics", topic).filter("status", "approved");
+  const q = datastoreForever().createQuery("videos").filter("topics", topic).filter("status", "approved");
   const { videos, more } = await paginate(q, p, s);
   res.json({
     videos,
@@ -57,15 +57,15 @@ router.post("/~:topic", asyncHandler(async (req, res) => {
 
 router.post("/:list(later|watched|favorites)", authenticated, asyncHandler(async (req, res) => {
   const list = req.params.list;
-  const tx = datastore.transaction();
-  const [lists] = await tx.get(datastore.key(['lists', req.user.email]));
+  const tx = datastoreForever().transaction();
+  const [lists] = await tx.get(datastoreForever().key(['lists', req.user.email]));
   if (!lists || !lists[list] || !lists[list].length) {
     res.json({})
     return
   }
   const videoIds = lists[list];
 
-  const keys = videoIds.map(id => datastore.key(["videos", id]));
+  const keys = videoIds.map(id => datastoreForever().key(["videos", id]));
   const [matches] = await tx.get(keys);
   const matchesRecentFirst = orderBy(matches, match => -videoIds.indexOf(match.objectID))
   const videos = matchesRecentFirst;
@@ -93,8 +93,8 @@ async function paginate(q, p, s) {
     q.order('submissionDate', { descending: true })
   }
 
-  const [videos, info] = await datastore.runQuery(q.limit(30));
-  const more = info.moreResults !== datastore.NO_MORE_RESULTS ? info.endCursor : ""
+  const [videos, info] = await datastoreForever().runQuery(q.limit(30));
+  const more = info.moreResults !== datastoreForever().NO_MORE_RESULTS ? info.endCursor : ""
   return {
     videos,
     more

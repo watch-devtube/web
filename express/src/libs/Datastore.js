@@ -1,21 +1,25 @@
-const { Datastore } = require("@google-cloud/datastore");
-const datastore = new Datastore();
 const jsonDiff = require("json-diff");
 const memoize = require("memoizee");
+
+const datastoreForever = memoize(() => {
+  const { Datastore } = require("@google-cloud/datastore");
+  const datastore = new Datastore();
+  return datastore;
+})
 
 const processVideos = (mapper = (data) => data, done = () => { }) => {
   let changed = 0;
   let processed = 0;
-  datastore
-    .runQueryStream(datastore.createQuery("videos").filter("status", "approved"))
+  datastoreForever()
+    .runQueryStream(datastoreForever().createQuery("videos").filter("status", "approved"))
     .on("error", console.error)
     .on("data", (data) => {
-      const key = data[datastore.KEY];
+      const key = data[datastoreForever().KEY];
       const copy = { ...data };
       mapper(copy);
       const diff = jsonDiff.diffString(data, copy);
       if (diff) {
-        datastore.update({ key, data: copy });
+        datastoreForever().update({ key, data: copy });
         changed++;
         console.log(diff);
       }
@@ -29,41 +33,41 @@ const processVideos = (mapper = (data) => data, done = () => { }) => {
 };
 
 const oneVideo = async (videoID) => {
-  const key = datastore.key(["videos", videoID])
-  const [video] = await datastore.get(key);
+  const key = datastoreForever().key(["videos", videoID])
+  const [video] = await datastoreForever().get(key);
   return video;
 }
 
 const deleteVideo = async (videoID) => {
-  const key = datastore.key(["videos", videoID])
-  return datastore.delete(key);
+  const key = datastoreForever().key(["videos", videoID])
+  return datastoreForever().delete(key);
 }
 
 const updateVideo = async (videoID, mutate) => {
-  const key = datastore.key(["videos", videoID])
-  const [video] = await datastore.get(key);
+  const key = datastoreForever().key(["videos", videoID])
+  const [video] = await datastoreForever().get(key);
 
   const newVideo = { ...video }
   mutate(newVideo);
   const diff = jsonDiff.diffString(video, newVideo);
   console.log(diff)
-  return datastore.update({ key, data: newVideo })
+  return datastoreForever().update({ key, data: newVideo })
 }
 
 const processWeekPicks = async (mutate) => {
-  const query = datastore.createQuery("videos").select('__key__');
-  const [items] = await datastore.runQuery(query);
-  const videoIds = items.map(it => it[datastore.KEY].name)
+  const query = datastoreForever().createQuery("videos").select('__key__');
+  const [items] = await datastoreForever().runQuery(query);
+  const videoIds = items.map(it => it[datastoreForever().KEY].name)
 
-  const key = datastore.key(["weekly", "WEEK_PICKS"])
-  const [item] = await datastore.get(key)
+  const key = datastoreForever().key(["weekly", "WEEK_PICKS"])
+  const [item] = await datastoreForever().get(key)
   const newPicks = mutate(item?.picks || [], videoIds)
-  return datastore.save({ key, data: { picks: newPicks } })
+  return datastoreForever().save({ key, data: { picks: newPicks } })
 }
 
 const weekPick = async () => {
-  const key = datastore.key(["weekly", "WEEK_PICKS"])
-  const [item] = await datastore.get(key)
+  const key = datastoreForever().key(["weekly", "WEEK_PICKS"])
+  const [item] = await datastoreForever().get(key)
   if (!item) {
     throw 'No week pick found.'
   }
@@ -75,21 +79,21 @@ const weekPick = async () => {
 const weekPickForever = memoize(weekPick, { promise: true });
 
 const replaceVideo = async (newVideo) => {
-  const key = datastore.key(["videos", newVideo.objectID])
-  const [video] = await datastore.get(key);
+  const key = datastoreForever().key(["videos", newVideo.objectID])
+  const [video] = await datastoreForever().get(key);
   const diff = jsonDiff.diffString(video, newVideo);
   console.log(diff)
-  return datastore.update({ key, data: newVideo })
+  return datastoreForever().update({ key, data: newVideo })
 }
 
 const createVideo = async (newVideo) => {
-  const key = datastore.key(["videos", newVideo.objectID])
-  return datastore.insert({ key, data: newVideo })
+  const key = datastoreForever().key(["videos", newVideo.objectID])
+  return datastoreForever().insert({ key, data: newVideo })
 }
 
 const searchApprovedVideos = () => {
-  const q = datastore.createQuery("videos").filter("status", "approved");
-  return datastore.runQuery(q);
+  const q = datastoreForever().createQuery("videos").filter("status", "approved");
+  return datastoreForever().runQuery(q);
 }
 
 const searchApprovedVideosForever = memoize(searchApprovedVideos, { promise: true })
@@ -104,4 +108,4 @@ module.exports.replaceVideo = replaceVideo;
 module.exports.deleteVideo = deleteVideo;
 module.exports.searchApprovedVideos = searchApprovedVideos;
 module.exports.searchApprovedVideosForever = searchApprovedVideosForever;
-module.exports.datastore = datastore;
+module.exports.datastoreForever = datastoreForever;

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const { authenticated } = require("../libs/Middlewares");
-const { datastore } = require("../libs/Datastore")
+const { datastoreForever } = require("../libs/Datastore")
 
 router.get("/bootstrap", async (req, res) => {
 
@@ -12,7 +12,7 @@ router.get("/bootstrap", async (req, res) => {
 
   const userKey = req.user.email
   try {
-    const [user] = await datastore.get(datastore.key(['user', userKey]));
+    const [user] = await datastoreForever().get(datastoreForever().key(['user', userKey]));
     res.json(user)
   } catch (err) {
     console.log(err);
@@ -23,8 +23,8 @@ router.get("/bootstrap", async (req, res) => {
 router.post("/weekly-subscription", authenticated, async (req, res) => {
   const userKey = req.user.email
   try {
-    const key = datastore.key(['user', userKey]);
-    const tx = datastore.transaction();
+    const key = datastoreForever().key(['user', userKey]);
+    const tx = datastoreForever().transaction();
 
     const [user] = await tx.get(key);
     const data = user || {
@@ -47,8 +47,8 @@ router.post("/weekly-subscription", authenticated, async (req, res) => {
 router.delete("/weekly-subscription", authenticated, async (req, res) => {
   const userKey = req.user.email
   try {
-    const key = datastore.key(['user', userKey]);
-    const tx = datastore.transaction();
+    const key = datastoreForever().key(['user', userKey]);
+    const tx = datastoreForever().transaction();
     const [user] = await tx.get(key);
     user.subscribedToWeekly = false
     tx.upsert({ key, data: user });
@@ -68,10 +68,10 @@ router.delete("/lists/:list/:videoId", authenticated, async (req, res) => {
     return;
   }
 
-  const key = datastore.key(['user', userKey])
+  const key = datastoreForever().key(['user', userKey])
 
   try {
-    const tx = datastore.transaction();
+    const tx = datastoreForever().transaction();
     const [data] = await tx.get(key);
 
 
@@ -99,8 +99,8 @@ router.post("/lists/:list/:videoId", authenticated, async (req, res) => {
   const userKey = req.user.email
 
   try {
-    const key = datastore.key(['user', userKey]);
-    const tx = datastore.transaction();
+    const key = datastoreForever().key(['user', userKey]);
+    const tx = datastoreForever().transaction();
 
     const [user] = await tx.get(key);
     const data = user || {
