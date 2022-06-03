@@ -11,9 +11,6 @@ module.exports.begin = () => {
 }
 
 module.exports.each = (video, data) => {
-
-  data.videoIds.push(video.objectID)
-
   data.karma[video.contributor] = (data.karma[video.contributor] || 0) + (video.likes || 1)
   video.speakerTwitters.forEach((twitter, index) => {
     data.speakerStats[twitter] = (data.speakerStats[twitter] || 0) + 1
