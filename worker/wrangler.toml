@@ -4,4 +4,4 @@ account_id = ""
 workers_dev = false
 route = "dev.tube/*"
 zone_id = "8b517acf9c49c6702ca6c388a54319b3"
-main = index.js
+main = "index.js"
