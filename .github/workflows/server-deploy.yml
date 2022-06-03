@@ -5,6 +5,11 @@ on:
     branches:
       - master
 
+on:
+  schedule:
+    # Run every 4 hours
+    - cron: "0 */4 * * *"
+
 jobs:
   worker:
     runs-on: ubuntu-latest
