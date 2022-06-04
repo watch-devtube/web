@@ -10,7 +10,7 @@ footer.footer.has-background-white
         | 🚀 Inspired by 
         a(href='https://devternity.com' target='_blank') DevTernity 
         | &ndash; the top software developer conference.
-    p.is-size-6
+    p.is-size-5
       a.mr-3.has-text-grey-dark(href='https://github.com/watch-devtube/web' rel="nofollow noopener noreferrer"): font-awesome-icon(:icon="['fab', 'github']")
       a.mr-3.has-text-grey-dark(href='https://twitter.com/watchdevtube' rel="nofollow noopener noreferrer"): font-awesome-icon(:icon="['fab', 'twitter']")
       a.mr-3.has-text-grey-dark(href='mailto:hello@dev.tube'): font-awesome-icon(:icon="['fa', 'envelope']")
