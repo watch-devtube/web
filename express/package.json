@@ -24,7 +24,6 @@
     "express-async-handler": "^1.2.0",
     "feed": "^4.2.2",
     "googleapis": "^100.0.0",
-    "jest": "^28.1.0",
     "joi": "^17.6.0",
     "json-diff": "^0.7.4",
     "lodash": "^4.17.21",
@@ -35,10 +34,10 @@
     "passport-google-oauth2": "^0.2.0",
     "passport-twitter": "^1.0.4",
     "sitemap": "^7.1.1",
-    "twit": "^2.2.11",
-    "youtubei.js": "^1.4.2-d.9"
+    "twit": "^2.2.11"
   },
   "devDependencies": {
+    "jest": "^28.1.0",
     "nodemon": "^2.0.15"
   },
   "jest": {
