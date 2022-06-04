@@ -11,12 +11,11 @@ dnsCache({
 });
 
 const express = require("express");
+const morgan = require('morgan');
 const passport = require("passport");
 const body = require("body-parser");
 const cors = require("cors");
 const cookieSession = require("./src/libs/Cookies");
-const winston = require("winston");
-const expressWinston = require("express-winston");
 const app = express();
 const port = process.env.PORT || 8100;
 
@@ -35,12 +34,8 @@ app.use(cors({
   origin: isDevMode ? true : 'https://dev.tube'
 }));
 app.use(body.json());
-app.use(
-  expressWinston.logger({
-    transports: [new winston.transports.Console()],
-    meta: false
-  })
-);
+app.use(morgan('tiny'))
+
 
 console.time("Routes init")
 require("./src/routes/index")(app);
