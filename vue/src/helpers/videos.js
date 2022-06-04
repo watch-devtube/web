@@ -16,7 +16,8 @@ export function avatar(video, speakerIndex) {
   };
   const speaker = video.speakerTwitters[speakerIndex];
   return (
-    customAvatars[speaker] || "https://dossier.glitch.me/avatar/" + speaker
+    customAvatars[speaker] ||
+    `https://res.cloudinary.com/eduardsi/image/twitter_name/w_128,h_128,f_auto/${speaker}.jpg`
   );
 }
 
