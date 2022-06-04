@@ -13,11 +13,11 @@ section.section.pt-0
               option(value='likes') Most liked first
         .is-pulled-left
           .is-hidden-tablet.is-size-7
-            a.has-text-grey-dark(@click='toggleCategories()' v-if='categoriesVisible')
+            a.has-text-grey-dark(@click='toggleCategories()' v-if='categoriesVisible' rel="noopener noreferrer nofollow")
               font-awesome-icon(:icon="['far', 'eye-slash']")
               |  Hide categories
           .is-hidden-tablet.is-size-7
-            a.has-text-grey-dark(@click='toggleCategories()' v-if='!categoriesVisible')
+            a.has-text-grey-dark(@click='toggleCategories()' v-if='!categoriesVisible' rel="noopener noreferrer nofollow")
               font-awesome-icon(:icon="['far', 'eye']")
               |  Show categories
   main.container.mt-6
@@ -33,7 +33,7 @@ section.section.pt-0
             :video="video" :key="video.objectID"
           )
         button.button.is-small(v-if="more" @click="showMore()") More
-        a.button.submit-video.is-info(@click="submitVideo()") Submit a talk
+        button.button.submit-video.is-info(@click="submitVideo()") Submit a talk
         component(v-bind:is="component" v-on:close="component = ''")
 </template>
 <style lang="scss" scoped>

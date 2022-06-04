@@ -26,8 +26,8 @@ section.section.header.p-5.mb-6
                   figure.image.is-32x32
                     img.is-rounded(:src="avatar")
                 .column
-                  a.button.is-text.has-text-white.is-small(@click="logout()") logout
-              a.button.is-text.is-small.has-text-white(v-else @click="showPopup()") login
+                  button.button.is-text.has-text-white.is-small(@click="logout()") logout
+              button.button.is-text.is-small.has-text-white(v-else @click="showPopup()") login
 </template>
 <style lang="scss" scoped>
 .header {
