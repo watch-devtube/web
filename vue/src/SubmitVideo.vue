@@ -81,12 +81,6 @@
 export default {};
 </script>
 <style scoped>
-.window {
-  margin-top: 5rem;
-  background: white;
-  border-radius: 10px;
-  padding: 4.5rem;
-}
 .title {
   letter-spacing: -1px;
 }

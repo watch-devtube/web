@@ -1,21 +1,22 @@
 <template lang="pug">
-.column.card.mb-6.p-6.has-text-light
+.column.card.has-text-light
   h2.title.is-4.has-text-weight-bold.has-text-light(style="letter-spacing: -1px")
     font-awesome-icon.has-text-danger(:icon="['far', 'heart']")
     |  Video of the week
   .columns.is-mobile.is-multiline
-    .column.is-3
+    .column.is-12-tablet.is-3-desktop.is-12-mobile
       span.is-size-7 expires {{expiresIn()}}
-      br
-      a.button.is-text.is-paddingless.is-primary.has-text-weight-bold.is-size-7(v-if="subscribedForUpdates" @click="unsubscribe()" v-bind:class="{ 'is-loading': subscriptionWip }") unsubscribe
-      a.button.is-text.is-paddingless.is-primary.has-text-weight-bold.is-size-7(v-else @click="subscribe()" v-bind:class="{ 'is-loading': subscriptionWip }") subscribe for updates
+      span &nbsp;
+      br.is-hidden-mobile
+      a.subscribe.has-text-weight-bold.is-size-7(v-if="subscribedForUpdates" @click="unsubscribe()" v-bind:class="{ 'is-loading': subscriptionWip }") unsubscribe
+      a.subscribe.has-text-weight-bold.is-size-7(v-else @click="subscribe()" v-bind:class="{ 'is-loading': subscriptionWip }") subscribe for updates
     .column.is-narrow
       MagicCircle(:width="48")
         router-link(:to="'/@' + video.speakerTwitters[speakerIndex]" :title="video.speakerNames[speakerIndex]")
           figure.image.is-48x48
             img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]")
     .column
-      h1.is-3.title.is-size-4-mobile
+      h1.title.is-size-4
         router-link.has-text-light(:to="{ name: 'video', params: { id: video.objectID } }") 
           | {{ video.title }} ({{video.recordingDate | year}})
           | — 
@@ -28,17 +29,22 @@
           VideoActions(:video="video" :darkMode="true")
 </template>
 <style lang="scss" scoped>
-a:hover {
+.subscribe {
   color: white;
+  text-decoration: underline;
+}
+a:hover {
+  color: #dbdbdb;
 }
 .tag {
+  text-decoration: none;
   color: white;
 }
 .tag-border {
   border: 1px solid #4a4a4a !important;
 }
 h1 {
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 </style>
 <script>

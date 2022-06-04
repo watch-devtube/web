@@ -10,7 +10,7 @@
           figure.image.is-48x48
             img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]")
     .column
-      h1.is-3.title.is-size-4-mobile
+      h1.is-4.title
         router-link.has-text-grey-darker(:to="{ name: 'video', params: { id: video.objectID } }") 
           | {{ video.title }} ({{video.recordingDate | year}})
           | — 

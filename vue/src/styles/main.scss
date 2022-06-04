@@ -24,11 +24,33 @@ $link: #4988ca;
 $card-radius: 25px !important;
 .card {
   background-color: #343d46 !important;
+  padding: 3rem !important;
+  margin-bottom: 3rem !important;
 }
+
+.window {
+  margin-top: 5rem !important;
+  background: white !important;
+  border-radius: 10px !important;
+  padding: 4.5rem !important
+}
+
 
 @import '~bulma';
 @import "vue-loading-overlay/dist/vue-loading";
 
 .clearfix {
   @include clearfix;
+}
+
+@include mobile {
+  .card {
+    padding: 2rem !important;
+  }
+}
+
+@include mobile {
+  .window {
+    padding: 2.5rem !important;
+  }
 }
