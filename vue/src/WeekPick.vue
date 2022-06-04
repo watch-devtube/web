@@ -14,7 +14,7 @@
       MagicCircle(:width="48")
         router-link(:to="'/@' + video.speakerTwitters[speakerIndex]" :title="video.speakerNames[speakerIndex]")
           figure.image.is-48x48
-            img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]")
+            img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]" width="48px")
     .column
       h1.title.is-size-4
         router-link.has-text-light(:to="{ name: 'video', params: { id: video.objectID } }") 

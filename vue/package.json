@@ -10,7 +10,6 @@
     "build": "vue-cli-service build --report"
   },
   "dependencies": {
-    "@firebase/app-types": "^0.3.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
@@ -27,8 +26,7 @@
     "vue-notification": "^1.3.12",
     "vue-observe-visibility": "^1.0.0",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "youtubei.js": "^1.4.2-d.9"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.9.5",

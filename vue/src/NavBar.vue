@@ -33,6 +33,9 @@ section.section.header.p-5.mb-6
 .header {
   background-color: #343d46;
 }
+.logo {
+  width: 100px;
+}
 @media (max-width: 768px) {
   .logo {
     width: 60px;

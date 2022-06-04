@@ -8,7 +8,7 @@
     .column.is-narrow
       router-link(:to="'/@' + video.speakerTwitters[speakerIndex]" :title="video.speakerNames[speakerIndex]")
           figure.image.is-48x48
-            img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]")
+            img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]" width="48px" height="48px")
     .column
       h1.is-4.title
         router-link.has-text-grey-darker(:to="{ name: 'video', params: { id: video.objectID } }") 
