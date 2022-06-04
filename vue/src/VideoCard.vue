@@ -1,9 +1,9 @@
 <template lang="pug">
 .column.video.mb-6
   .columns.is-mobile.is-multiline(v-bind:class="{'is-watched': listedIn('watched'), 'has-background-danger-light': video.status === 'submitted'}")
-    .column.is-3
-      span.has-text-grey.is-size-7 {{addedAgo(video)}}
-      br
+    .column.is-3-desktop.is-3-tablet.is-12-mobile
+      span.has-text-grey.is-size-7 {{addedAgo(video)}}&nbsp;
+      br.is-hidden-mobile
       span.has-text-weight-bold.has-text-grey.is-size-7 thanks to @{{video.contributor}}
     .column.is-narrow
       router-link(:to="'/@' + video.speakerTwitters[speakerIndex]" :title="video.speakerNames[speakerIndex]")

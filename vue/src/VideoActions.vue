@@ -11,32 +11,32 @@
     // Watch later
     button.button(v-if="listedIn('later')" @click="removeFrom('later')" v-bind:class="{ 'is-loading': wip === 'later'}")
       span.icon
-        font-awesome-icon.has-text-info(:icon="['fas', 'clock']")
-      span later            
+        font-awesome-icon.has-text-info(:icon="['fas', 'clock']" title="remove from watch later")
+      span.is-hidden-mobile later            
     button.button(v-else @click="addTo('later')" v-bind:class="{ 'is-loading': wip === 'later' }")
       span.icon
-        font-awesome-icon(:icon="['far', 'clock']")
-      span later             
+        font-awesome-icon(:icon="['far', 'clock']" title="watch later")
+      span.is-hidden-mobile later             
 
     // Watched
     button.button(v-if="listedIn('watched')"  @click="removeFrom('watched')" v-bind:class="{ 'is-loading': wip === 'watched' }")
       span.icon
-        font-awesome-icon.has-text-primary(:icon="['fas', 'check-circle']")
-      span watched
+        font-awesome-icon.has-text-primary(:icon="['fas', 'check-circle']" title="remove from watched")
+      span.is-hidden-mobile watched
     button.button(v-else @click="addTo('watched')" v-bind:class="{ 'is-loading': wip === 'watched' }")
         span.icon
-          font-awesome-icon(:icon="['far', 'check-circle']")
-        span watched
+          font-awesome-icon(:icon="['far', 'check-circle']" title="add to watched")
+        span.is-hidden-mobile watched
 
     // Favorites
     button.button(v-if="listedIn('favorites')" @click="removeFrom('favorites')" v-bind:class="{ 'is-loading': wip === 'favorites' }")
       span.icon
-        font-awesome-icon.has-text-warning(:icon="['fas', 'star']")
-      span favorites
+        font-awesome-icon.has-text-warning(:icon="['fas', 'star']" title="remove from favorites")
+      span.is-hidden-mobile favorites
     button.button(v-else @click="addTo('favorites')" v-bind:class="{ 'is-loading': wip === 'favorites' }")
       span.icon
-        font-awesome-icon(:icon="['far', 'star']")
-      span favorites            
+        font-awesome-icon(:icon="['far', 'star']" title="add to favorites")
+      span.is-hidden-mobile favorites            
 
     // Edit
     button.button(v-if="isAdmin()" @click="editVideo()")
