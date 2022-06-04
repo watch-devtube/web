@@ -3,7 +3,6 @@ const { adminsOnly } = require("../libs/Middlewares");
 const { Youtube } = require("../libs/Youtube");
 const asyncHandler = require('express-async-handler')
 const router = require("express").Router();
-const { random } = require("lodash");
 
 const config = {
   consumer_key: process.env.AUTO_TWT_CONSUMER_KEY || "none",
@@ -13,6 +12,9 @@ const config = {
 };
 const twitter = new Twit(config);
 
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 router.post("/", adminsOnly, asyncHandler(async (req, res) => {
   const video = req.body

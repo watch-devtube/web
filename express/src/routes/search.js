@@ -1,7 +1,6 @@
 const asyncHandler = require('express-async-handler')
 const { datastoreForever, weekPickForever, oneVideo } = require("../libs/Datastore");
 const { authenticated } = require('../libs/Middlewares');
-const { orderBy } = require("lodash");
 const router = require("express").Router();
 
 const NOTHING_FOUND = `¯\\_(ツ)_/¯ No talks matching your criteria`
@@ -58,7 +57,7 @@ router.post("/~:topic", asyncHandler(async (req, res) => {
 router.post("/:list(later|watched|favorites)", authenticated, asyncHandler(async (req, res) => {
   const list = req.params.list;
   const tx = datastoreForever().transaction();
-  const [lists] = await tx.get(datastoreForever().key(['lists', req.user.email]));
+  const [lists] = await tx.get(datastoreForever().key(['user', req.user.email]));
   if (!lists || !lists[list] || !lists[list].length) {
     res.json({})
     return
@@ -67,8 +66,8 @@ router.post("/:list(later|watched|favorites)", authenticated, asyncHandler(async
 
   const keys = videoIds.map(id => datastoreForever().key(["videos", id]));
   const [matches] = await tx.get(keys);
-  const matchesRecentFirst = orderBy(matches, match => -videoIds.indexOf(match.objectID))
-  const videos = matchesRecentFirst;
+  matches.sort(match => -videoIds.indexOf(match.objectID))
+  const videos = matches;
 
   const titles = {
     later: `Tech talks to watch later (${matches.length})`,

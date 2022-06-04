@@ -1,5 +1,3 @@
-const { chain } = require("lodash");
-
 module.exports.begin = () => {
   const data = {
     speakerStats: {},
@@ -25,17 +23,17 @@ module.exports.each = (video, data) => {
 };
 
 module.exports.end = (data) => {
+
+  const topics = Object.entries(data.topicStats).map(([key, count]) => ({ key, count }));
+  topics.sort((a, b) => a.key.localeCompare(b.key))
+
+
+  const speakers = Object.entries(data.speakerStats).map(([key, count]) => ({ key, count, name: data.speakerNames[key] }))
+  speakers.sort((a, b) => a.name.localeCompare(b.key))
+
   const stats = {
-    topics: chain(data.topicStats)
-      .entries()
-      .map(([key, count]) => ({ key, count }))
-      .orderBy('key', 'asc')
-      .value(),
-    speakers: chain(data.speakerStats)
-      .entries()
-      .map(([key, count]) => ({ key, count, name: data.speakerNames[key] }))
-      .orderBy('name', 'asc')
-      .value(),
+    topics,
+    speakers,
     karma: data.karma
   }
 

@@ -1,5 +1,3 @@
-const { sample } = require("lodash");
-
 const dayjs = require('dayjs');
 const utc = require('dayjs/plugin/utc')
 dayjs.extend(utc)
@@ -10,6 +8,10 @@ const excludedVideos = [
   "dGtasFJnUxI", // TDD part 4
   "gWD6REVeKW4"  // TDD part 5
 ]
+
+function sample(items) {
+  return items[Math.floor(Math.random() * items.length)];
+}
 
 function determineWeekPicks(weekPicks, allVideoIds, randomVideo = sample, now = dayjs.utc()) {
   const [weekPick] = weekPicks;

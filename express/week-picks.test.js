@@ -5,11 +5,17 @@ const { determineWeekPicks } = require("./week-picks")
 
 const videoIds = ['AAA', 'BBB', 'CCC']
 
-const { first, last } = require("lodash")
-
 const expires = dayjs.utc().endOf('week');
 const minuteBeforeExpiration = expires.subtract(1, 'm').toDate()
 const minuteAfterExpiration = expires.add(1, 'm').toDate()
+
+function first(items) {
+  return items[0];
+}
+
+function last(items) {
+  return items[items.length - 1];
+}
 
 test('picks a random weekly video with expiration at the end of the week', () => {
   const random = first;
