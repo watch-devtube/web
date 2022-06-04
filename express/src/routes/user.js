@@ -28,11 +28,12 @@ router.post("/weekly-subscription", authenticated, async (req, res) => {
 
     const [user] = await tx.get(key);
     const data = user || {
-      subscribedToWeekly: true,
       later: [],
       favorites: [],
       watched: [],
     }
+
+    data.subscribedToWeekly = true;
 
     tx.upsert({ key, data });
     await tx.commit();
