@@ -3,10 +3,10 @@ article.media
     figure.media-left
       p.image.is-rounded.is-32x32
         img.is-rounded(:src='$store.state.auth.avatar')
-    .form
+    .form(style="width: 100%")
       .field
         p.control
-          textarea.textarea.is-small(:disabled="!hasYoutubeAccess()" placeholder='Type something here...' v-model="text")
+          textarea.textarea.is-small(:disabled="!hasYoutubeAccess()" placeholder='Type something here...' v-model="text" )
       .field
         .columns.is-vcentered
           .column.is-narrow(v-if="hasYoutubeAccess()")
