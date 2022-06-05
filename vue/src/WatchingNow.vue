@@ -14,21 +14,13 @@ export default {
   },
   data: () => {
     return {
-      watchingNow: undefined,
-      polling: undefined
+      watchingNow: undefined
     };
   },
   created() {
     this.recalculate();
-    this.poll();
-  },
-  beforeDestroy() {
-    clearInterval(this.polling);
   },
   methods: {
-    poll() {
-      this.polling = setInterval(() => this.recalculate(), 15000);
-    },
     recalculate() {
       const now = [0, 0, 1, 0, 8, 5, 2, 0, 20, 5];
       const charCode = this.video.objectID.charCodeAt(0);
