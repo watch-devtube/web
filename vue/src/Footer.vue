@@ -15,4 +15,11 @@ footer.footer.has-background-white
       a.mr-3.has-text-grey-dark(href='https://twitter.com/watchdevtube' rel="nofollow noopener noreferrer"): font-awesome-icon(:icon="['fab', 'twitter']" title="Our Twitter")
       a.mr-3.has-text-grey-dark(href='mailto:hello@dev.tube'): font-awesome-icon(:icon="['fa', 'envelope']" title="Our Email")
       a.mr-3.has-text-grey-dark(href='https://dev.tube/rss.xml'): font-awesome-icon(:icon="['fa', 'square-rss']" title="Subscribe to RSS feed")
+    p.has-text-grey-light(style='font-size: 9px;')
+      | We use cookies to improve UX &ndash; sorting pref, user session, night mode. To inspect and block cookies use
+      a(href='//ghostery.com')  Ghostery
+      |  on your browser. Read our
+      a(href='/privacy.html')  privacy policy
+      | .
+      
 </template>
