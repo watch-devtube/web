@@ -15,15 +15,15 @@
                   font-awesome-icon(:icon="['fab', 'twitter']")
                 span Twitter
               br
-              button.button.is-info.is-fullwidth.is-medium(@click="login('github')") 
+              button.button.is-info.is-fullwidth.is-medium(@click="login('github')")
                 span.icon
                   font-awesome-icon(:icon="['fab', 'github']")
                 span Github
-              //- br
-              //- button.button.is-info.is-fullwidth.is-medium(@click="login('google')") 
-              //-   span.icon
-              //-     font-awesome-icon(:icon="['fab', 'google']")
-              //-   span Google
+              br
+              button.button.is-info.is-fullwidth.is-medium(@click="login('google')")
+                span.icon
+                  font-awesome-icon(:icon="['fab', 'google']")
+                span Google
               br
               small
                 em
