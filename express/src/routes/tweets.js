@@ -25,7 +25,7 @@ router.post("/", adminsOnly, asyncHandler(async (req, res) => {
 }))
 
 function kilo(num) {
-  return num < 1000 ? num : Math.round(num / 1000) + "K"
+  return num < 1000 ? num : Math.floor(num / 1000) + "K"
 }
 
 async function tweetTrending(video, watchingNow, comments) {

@@ -15,7 +15,7 @@ afterEach(() => {
 
 test("tweet a trending video", async () => {
   const video = {
-    "likes": 117,
+    "likes": 1501,
     "objectID": "AEtCEt44vlE",
     "speakerTwitters": [
       "eduardsi"
@@ -29,7 +29,7 @@ test("tweet a trending video", async () => {
   expect(twitter.post).toHaveBeenCalledWith("statuses/update", {
     status: `@eduardsi:
 📈 Your talk "Beyond Software Craftsmanship" is trending on DevTube:
-❤️ 117 likes
+❤️ 1K likes
 ✍️ 3K comments 
 📺 10 watching now
 
