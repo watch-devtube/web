@@ -51,7 +51,7 @@ class Youtube {
       part: "statistics"
     })
 
-    return response?.data?.items?.[0]?.statistics?.likeCount || 0
+    return response?.data?.items?.[0]?.statistics?.commentCount || 0
   }
 
   async fetchVideo(videoId) {

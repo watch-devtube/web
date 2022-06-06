@@ -11,6 +11,7 @@ module.exports = app => {
   initRoute(app, "/stats", "./stats");
   initRoute(app, "/sitemap", "./sitemap");
   initRoute(app, "/rss", "./rss");
+  initRoute(app, "/og", "./og");
   initRoute(app, "/user", "./user");
   initRoute(app, "/tweets", "./tweets");
   initRoute(app, "/youtube", "./youtube");
