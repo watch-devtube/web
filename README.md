@@ -5,9 +5,12 @@
 This repository contains `Vue.js` frontend and `Express.js` backend for DevTube.
 
 # Why DevTube?
-**💎 Discover hidden gems** — Watch videos that are not publicly available on YouTube (e.g. [Chad Fowler's "Tiny"](https://dev.tube/video/NXSS01n97G0)).
 
-**🕛 Save time** — Watch only the best talks, curated by the community, grouped by categories and speakers. Quality beats quantity.
+DevTube contains the best `350+` tech talks from different sources – @eduardsi's personal favorites, github lists, YouTube most liked. You can say that DevTube is YouTube uncluttered + some secret gems reuploaded from InfoQ, Vimeo, and private video archives. The talks are updated and contributed regularly thanks to the community. 
+
+**💎 Discover hidden gems** – Watch videos that are not publicly available on YouTube (e.g. [Chad Fowler's "Tiny"](https://dev.tube/video/NXSS01n97G0)).
+
+**🕛 Save time** – Watch only the best talks, curated by the community, grouped by categories and speakers. Quality beats quantity.
 
 **🔖 Create lists** – Watch later, bookmark, and keep track of watched videos.
 
