@@ -21,8 +21,8 @@ router.get(
     const markup = `<html>
     <head>
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:site" content="@dev_events">
-      <meta name="twitter:creator" content="@dev_events">
+      <meta name="twitter:site" content="@watchdevtube">
+      <meta name="twitter:creator" content="@watchdevtube">
       <meta name="twitter:title" content="${video.title}">
       <meta name="twitter:description" content="A tech talk by ${video.speakerNames[0]}">
       <meta name="twitter:image" content="${ogLink}">
@@ -47,9 +47,9 @@ function ogImage(video, watchingNow, comments) {
     "/w_1000,c_fit,co_white,l_text:Lato_30:" + kilo(video.likes) + " likes" + ",g_north_west,x_140,y_232" +
     "/w_1000,c_fit,co_white,l_text:Lato_30:" + kilo(watchingNow) + " watching now" + ",g_north_west,x_428,y_232" +
     "/w_1000,c_fit,co_white,l_text:Lato_30:" + kilo(comments) + " comments" + ",g_north_west,x_855,y_232" +
-    "/w_1000,c_fit,co_white,l_text:Lato_40_bold:" + video.speakerNames[0] + ",g_north_west,x_240,y_524" +
-    "/w_1000,c_fit,co_grey,l_text:Lato_30_bold:" + "@" + video.speakerTwitters[0] + ",g_north_west,x_240,y_572" +
-    "/l_twitter_name:" + video.speakerTwitters[0] + ".png,w_96,r_max,g_north_west,x_100,y_500,bo_5px_solid_white" +
+    "/w_1000,c_fit,co_white,l_text:Lato_40_bold:" + video.speakerNames[0] + ",g_north_west,x_240,y_539" +
+    "/w_1000,c_fit,co_grey,l_text:Lato_30_bold:" + "@" + video.speakerTwitters[0] + ",g_north_west,x_240,y_587" +
+    "/l_twitter_name:" + video.speakerTwitters[0] + ".png,w_96,r_max,g_north_west,x_100,y_515,bo_5px_solid_white" +
     "/" +
     imageTemplate;
   return image;
