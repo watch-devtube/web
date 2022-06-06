@@ -16,7 +16,21 @@ router.get(
     const comments = await new Youtube(process.env.YOUTUBE_API_KEY).fetchCommentCount(videoId);
 
     const video = await oneVideo(videoId);
-    res.redirect(ogImage(video, watchingNow, comments))
+    const ogLink = ogImage(video, watchingNow, comments)
+
+    const markup = `<html>
+    <head>
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@dev_events">
+      <meta name="twitter:creator" content="@dev_events">
+      <meta name="twitter:title" content="${video.title}">
+      <meta name="twitter:description" content="A tech talk by ${video.speakerNames[0]}">
+      <meta name="twitter:image" content="${ogLink}">
+    </head>
+    <body>
+    </body>
+  </html>`;
+    res.send(markup)
 
   })
 );
