@@ -24,15 +24,15 @@ test("tweet a trending video", async () => {
   }
 
   const watchingNow = 10
-  const comments = 34
+  const comments = 3400
   await tweetTrending(video, watchingNow, comments);
   expect(twitter.post).toHaveBeenCalledWith("statuses/update", {
     status: `@eduardsi:
 📈 Your talk "Beyond Software Craftsmanship" is trending on DevTube:
 ❤️ 117 likes
-✍️ 34 comments 
+✍️ 3K comments 
 📺 10 watching now
 
-> https://dev.tube/video/AEtCEt44vlE`,
+https://dev.tube/video/AEtCEt44vlE`,
   })
 });

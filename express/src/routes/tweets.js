@@ -24,6 +24,10 @@ router.post("/", adminsOnly, asyncHandler(async (req, res) => {
   res.sendStatus(200);
 }))
 
+function kilo(num) {
+  return num < 1000 ? num : Math.round(num / 1000) + "K"
+}
+
 async function tweetTrending(video, watchingNow, comments) {
   if (!video?.objectID) {
     throw new Error("No video to tweet");
@@ -35,15 +39,16 @@ async function tweetTrending(video, watchingNow, comments) {
     throw new Error("Zero or no people commented.")
   }
 
+
   const status = [
     ...[
       `@${video.speakerTwitters[0]}:`,
       `📈 Your talk "${video.title}" is trending on DevTube:`,
-      `❤️ ${video.likes} likes`,
-      `✍️ ${comments} comments `,
+      `❤️ ${kilo(video.likes)} likes`,
+      `✍️ ${kilo(comments)} comments `,
       `📺 ${watchingNow} watching now`,
       "",
-      `> https://dev.tube/video/${video.objectID}`,
+      `https://dev.tube/video/${video.objectID}`,
     ],
   ]
     .filter((line) => line !== undefined)
