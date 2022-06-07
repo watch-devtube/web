@@ -27,8 +27,18 @@ router.post("/:commentId/replies", authenticated, asyncHandler(async (req, res) 
 router.get("/:videoId/comments", asyncHandler(async (req, res) => {
   const { videoId } = req.params;
   const pageToken = req.query.nextPageToken;
-  const comments = await new Youtube(process.env.YOUTUBE_API_KEY).fetchComments(videoId, pageToken);
-  res.json(comments);
+  try {
+    const comments = await new Youtube(process.env.YOUTUBE_API_KEY).fetchComments(videoId, pageToken);
+    res.json(comments);
+  } catch (e) {
+    const [error] = e.errors
+    if (error.reason === 'commentsDisabled') {
+      res.json({ comments: [], commentsDisabled: true });
+    } else {
+      throw e;
+    }
+  }
+
 }));
 
 router.post("/:videoId/comments", authenticated, asyncHandler(async (req, res) => {

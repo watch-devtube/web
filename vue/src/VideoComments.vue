@@ -1,5 +1,5 @@
 <template lang="pug">
-.comments.is-size-7
+.comments.is-size-7(v-if="commentsEnabled")
   VideoCommentEditor(:replyUrl="'/youtube/' + video.objectID + '/comments'" @commented="newCommentAdded")
   PromoVideoComment(:video="video")
   VideoComment(v-for="comment in comments" :key="comment.id" :comment="comment" :video="video")
@@ -21,7 +21,8 @@ export default {
   data: () => {
     return {
       nextPageToken: "",
-      comments: []
+      comments: [],
+      commentsEnabled: true
     };
   },
   created() {
@@ -46,6 +47,7 @@ export default {
             this.comments = [...this.comments, ...data.comments];
           }
           this.nextPageToken = data.nextPageToken;
+          this.commentsEnabled = !data.commentsDisabled;
         });
     }
   }

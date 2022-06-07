@@ -32,6 +32,7 @@ export default {
   },
   data: () => {
     return {
+      disabled: false,
       isWorking: false,
       text: "",
       error: ""
