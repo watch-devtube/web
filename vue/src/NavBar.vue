@@ -5,6 +5,9 @@ section.section.header.p-5.mb-6
       .column.is-narrow
         router-link(:to="'/'")
           img.logo(src="/logo_dark.png", srcset="/logo_dark.svg", alt="logo")
+        span.is-hidden-mobile
+          br
+          a.devternity.is-size-7.is-family-code.has-text-white.has-text-weight-bold(href="https://devternity.com" target="_blank") &nbsp;inspired by DevTernity
       .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile
