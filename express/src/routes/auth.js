@@ -39,6 +39,7 @@ passport.use(new GitHubStrategy({
   clientSecret: process.env.GH_CLIENT_SECRET,
   callbackURL: "/auth/github/callback",
   passReqToCallback: true,
+  scope: ['user:email'],
   proxy: true
 },
   toUserProfile
@@ -102,7 +103,7 @@ router.get('/logout', (req, res) => {
 
 const googleScopes = ['email', 'profile', 'https://www.googleapis.com/auth/youtube.force-ssl']
 
-router.get('/github', returnBack, passport.authenticate('github', { scope: ['user:email'] }));
+router.get('/github', returnBack, passport.authenticate('github'));
 router.get('/twitter', returnBack, passport.authenticate('twitter'));
 router.get('/google', returnBack, passport.authenticate('google', {
   scope: googleScopes, accessType: 'offline', prompt: 'consent'
