@@ -42,7 +42,7 @@ router.post("/@:speaker", asyncHandler(async (req, res) => {
   })
 }));
 
-router.post("/~:topic*", asyncHandler(async (req, res) => {
+router.post("/~:topic(*)", asyncHandler(async (req, res) => {
   const { topic } = req.params;
   const { p, s } = req.body;
   const q = datastoreForever().createQuery("videos").filter("topics", topic).filter("status", "approved");
