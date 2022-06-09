@@ -16,7 +16,7 @@ function toUserProfile(request, access_token, refresh_token, profile, done) {
   const avatar = profile.photos[0].value
   const email = profile.emails[0].value
   if (!avatar || !email) {
-    throw "Sorry, unable to retrieve user data from OAuth provider"
+    throw "Sorry, unable to retrieve user data from OAuth"
   }
 
   const admin = admins.includes(email);
