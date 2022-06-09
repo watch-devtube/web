@@ -74,8 +74,8 @@ jobs:
 
           echo GH_CLIENT_ID=${{ secrets.GH_CLIENT_ID }} >> .env
           echo GH_CLIENT_SECRET=${{ secrets.GH_CLIENT_SECRET }} >> .env
-          echo GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }} >> .env
-          echo GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }} >> .env
+          echo GOOG_CLIENT_ID=${{ secrets.GOOG_CLIENT_ID }} >> .env
+          echo GOOG_CLIENT_SECRET=${{ secrets.GOOG_CLIENT_SECRET }} >> .env
           echo YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }} >> .env
           cat .env
 

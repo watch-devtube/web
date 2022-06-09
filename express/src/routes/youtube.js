@@ -6,7 +6,7 @@ const { Youtube } = require("../libs/Youtube")
 
 function userAuth(req) {
   const { google } = require('googleapis');
-  const oauthClient = new google.auth.OAuth2(process.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRET, "");
+  const oauthClient = new google.auth.OAuth2(process.env.GOOG_CLIENT_ID, process.env.GOOG_CLIENT_SECRET, "");
   oauthClient.setCredentials(req.user.google)
   return oauthClient;
 }

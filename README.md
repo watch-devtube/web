@@ -6,7 +6,7 @@ This repository contains `Vue.js` frontend and `Express.js` backend for DevTube.
 
 # Why DevTube?
 
-DevTube contains the best `350+` tech talks from different sources – @eduardsi's personal favorites, github lists, YouTube most liked. You can say that DevTube is YouTube uncluttered + some secret gems reuploaded from InfoQ, Vimeo, and private video archives. The talks are updated and contributed regularly thanks to the community. 
+DevTube contains the best `350+` tech talks from different sources – @eduardsi's personal favorites, github lists, YouTube most liked. You can say that DevTube is YouTube uncluttered + some secret gems reuploaded from InfoQ, Vimeo, and private video archives. The talks are updated and contributed regularly thanks to the community.
 
 **💎 Discover hidden gems** – Watch videos that are not publicly available on YouTube (e.g. [Chad Fowler's "Tiny"](https://dev.tube/video/NXSS01n97G0)).
 
@@ -21,7 +21,6 @@ DevTube contains the best `350+` tech talks from different sources – @eduardsi
 **🔔 Subscribe** – Stay up-to-date with the latest videos via RSS. Too busy? Receive one tech talk per week.
 
 **🧘 Fewer distractions** – No annoying YouTube algorithms, irrelevant videos, ads, and tracking.
-
 
 # How to run DevTube locally
 
@@ -45,8 +44,8 @@ TWITTER_CONSUMER_SECRET = <ask repo owners>
 GH_CLIENT_ID = <ask repo owners>
 GH_CLIENT_SECRET = <ask repo owners>
 
-GOOGLE_CLIENT_ID = <ask repo owners>
-GOOGLE_CLIENT_SECRET = <ask repo owners>
+GOOG_CLIENT_ID = <ask repo owners>
+GOOG_CLIENT_SECRET = <ask repo owners>
 ```
 
 ### Add new entries to /etc/hosts file
