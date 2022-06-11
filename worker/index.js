@@ -6,9 +6,9 @@ async function handleRequest(request) {
   const { url, headers } = request
 
   const userAgent = headers.get('user-agent') || ""
-  const isTwitterBot = userAgent.includes('Twitterbot')
+  const bots = ["Twitterbot", "Slackbot", "LinkedIn"];
 
-  if (isTwitterBot && url.includes('https://dev.tube/video/')) {
+  if (url.includes('https://dev.tube/video/') && bots.some(bot => userAgent.includes(bot))) {
     const redirectUrl = url.replace('https://dev.tube/video/', 'https://api.dev.tube/og/')
     return Response.redirect(redirectUrl, 302)
   }
