@@ -8,8 +8,7 @@
       span.is-size-7 expires {{expiresIn()}}
       span &nbsp;
       br.is-hidden-mobile
-      a.subscribe.is-loadable.has-text-weight-bold.is-size-7(v-if="subscribedForUpdates" @click="unsubscribe()" v-bind:class="{ 'is-loading': subscriptionWip }" rel="noopener noreferrer nofollow") unsubscribe
-      a.subscribe.is-loadable.has-text-weight-bold.is-size-7(v-else @click="subscribe()" v-bind:class="{ 'is-loading': subscriptionWip }" rel="noopener noreferrer nofollow") subscribe for updates
+      span.has-text-weight-bold.is-size-7 added by @{{video.contributor}}
     .column.is-narrow
       MagicCircle(:width="48")
         router-link(:to="'/@' + video.speakerTwitters[speakerIndex]" :title="video.speakerNames[speakerIndex]")
