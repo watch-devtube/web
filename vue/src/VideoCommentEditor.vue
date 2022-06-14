@@ -12,15 +12,32 @@ article.media
           .column.is-narrow(v-if="hasYoutubeAccess()")
             a.button.is-small(@click="postComment()" :disabled="!text.length" v-bind:class="{ 'is-loading': isWorking }") Post
           .column(v-else)
-            a(@click="youtubeLogin()") Sign in to YouTube
-            span  to post comments 
+            .columns.is-vcentered.is-mobile
+              .column.is-narrow
+                a(@click="youtubeLogin()")
+                  #goog(alt="Signin with Google")
+              .column
+                span  to post comments 
           .column
             span.help(v-if="error") 
               | Oops. something went wrong. 
               a(@click="youtubeLogin()") Sign in to YouTube
               |  and try again.
 </template>
-
+<style scoped lang="scss">
+#goog {
+  background-image: url(/btn_google_signin_light_normal_web@2x.png);
+  background-size: contain;
+  height: 36px;
+  width: 150px;
+  &:hover {
+    background-image: url(/btn_google_signin_light_focus_web@2x.png);
+  }
+  &:active {
+    background-image: url(/btn_google_signin_light_pressed_web@2x.png);
+  }
+}
+</style>
 <script>
 import { api } from "./api";
 export default {
