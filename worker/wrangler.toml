@@ -1,4 +1,4 @@
-name = "worker"
+name = "worker-devtube"
 type = "webpack"
 account_id = "3ef2bbbd14c3c8946513f654cb9889b5"
 workers_dev = false
