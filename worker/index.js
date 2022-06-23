@@ -5,7 +5,7 @@ addEventListener('fetch', event => {
 async function handleRequest(request) {
   const { url, headers } = request
 
-  const userAgent = headers.get('user-agent') || ""
+  const userAgent = headers.get('user-agent') || ''
   const bots = ["Twitterbot", "Slackbot", "LinkedIn"];
 
   if (url.includes('https://dev.tube/video/') && bots.some(bot => userAgent.includes(bot))) {
