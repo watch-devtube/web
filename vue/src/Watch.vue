@@ -5,7 +5,7 @@
       article.message.is-danger
         .message-header
           p Error
-        .message-body {{error}}
+        .message-body {{ error }}
   section.section
     .container
       .columns
@@ -25,7 +25,7 @@
             WatchingNow(:video="video" v-if="video.objectID" :minimumWatching="1")
             span(v-if="video.series")
               br
-              router-link.mr-4(v-for="(serie, index) in video.series" :key="serie" :to="{ name: 'video', params: { id: serie } }" v-bind:class="{'has-text-grey' : serie === id}") Part {{index + 1}}
+              router-link.mr-4(v-for="(serie, index) in video.series" :key="serie" :to="{ name: 'video', params: { id: serie } }" v-bind:class="{ 'has-text-grey': serie === id }") Part {{ index + 1 }}
             br
             span.mr-4(v-for="(speakerTwitter, speakerIndex) in video.speakerTwitters")
               router-link(:to="'/@' + speakerTwitter") {{ video.speakerNames[speakerIndex] }}
@@ -48,6 +48,7 @@
   position: relative;
   padding-bottom: 51.6%;
   height: 0;
+
   iframe {
     position: absolute;
     top: 0;
@@ -78,7 +79,7 @@ export default {
       required: true
     }
   },
-  data: function() {
+  data: function () {
     return {
       error: undefined,
       video: {
@@ -102,7 +103,7 @@ export default {
         })
         .catch(
           () =>
-            (this.error = "Could not fetch video. Is it uploaded to DevTube?")
+            window.location.href = "https://dev.tube/404.html"
         );
     }
   },
