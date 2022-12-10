@@ -20,7 +20,7 @@
     "dayjs": "^1.11.2",
     "dnscache": "^1.0.2",
     "dotenv": "^16.0.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-async-handler": "^1.2.0",
     "feed": "^4.2.2",
     "googleapis": "^100.0.0",
