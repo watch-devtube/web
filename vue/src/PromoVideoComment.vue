@@ -3,7 +3,7 @@ article.media
   figure.media-left
     MagicCircle(:width='32')
       a.image.is-32x32(href="https://devternity.com?utm_source=devtube&utm_medium=popup" target="_blank")
-        img.is-rounded(src="https://devternity.com/favicon.jpg" alt="DevTernity logo")
+        img.is-rounded(src="/devternity.png" alt="DevTernity logo")
   .media-content
     .content
       p
@@ -12,7 +12,7 @@ article.media
         br
         span
           b {{speaker || "Robert Martin"}} 
-          | and other legends of software development will be speaking at 
+          | and other legends of software development are speaking at 
           b
             a(href="https://devternity.com?utm_source=devtube&utm_medium=popup" target="_blank") DevTernity 2022
           | .
@@ -30,7 +30,7 @@ export default {
   props: {
     video: { type: Object, required: true }
   },
-  data: function() {
+  data: function () {
     return {
       speaker: undefined
     };
