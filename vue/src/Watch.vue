@@ -79,7 +79,7 @@ export default {
       required: true
     }
   },
-  data: function () {
+  data: function() {
     return {
       error: undefined,
       video: {
@@ -101,10 +101,7 @@ export default {
           this.video = data;
           this.$emit("updateHead");
         })
-        .catch(
-          () =>
-            window.location.href = "https://dev.tube/404.html"
-        );
+        .catch(() => (window.location.href = "https://dev.tube/404.html"));
     }
   },
 

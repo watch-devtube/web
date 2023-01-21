@@ -11,18 +11,14 @@ article.media
         span.ml-1.mr-1 &middot; {{new Date() | ago}}
         br
         span
-          b {{speaker || "Robert Martin"}} 
+          b {{speaker || "Scott Hanselman"}} 
           | and other legends of software development are speaking at 
           b
-            a(href="https://devternity.com?utm_source=devtube&utm_medium=popup" target="_blank") DevTernity 2022
+            a(href="https://devternity.com?utm_source=devtube&utm_medium=popup" target="_blank") DevTernity 2023
           | .
-          br
-          br
-          | Claim your 10% discount voucher: AWSM_DEVTUBE
         br
 </template>
 <script>
-import axios from "axios";
 import MagicCircle from "./MagicCircle.vue";
 
 export default {
@@ -30,19 +26,23 @@ export default {
   props: {
     video: { type: Object, required: true }
   },
-  data: function () {
+  data: function() {
     return {
       speaker: undefined
     };
   },
   created() {
-    axios
-      .get(`https://devternity.com/js/event.js`)
-      .then(({ data }) => data[0].program[1].schedule)
-      .then(schedule => {
-        this.speaker = schedule.find(({ twitter }) =>
-          this.video.speakerTwitters.includes(twitter)
-        )?.name;
+    fetch(
+      "https://raw.githubusercontent.com/devternity/devternity.com.src/master/src/event.yml"
+    )
+      .then(response => response.text())
+      .then(event => {
+        const speakerIndex = this.video.speakerTwitters.findIndex(
+          speakerTwitter => event.includes(`twitter: ${speakerTwitter}`)
+        );
+        if (speakerIndex >= 0) {
+          this.speaker = this.video.speakerNames[speakerIndex];
+        }
       });
   }
 };
