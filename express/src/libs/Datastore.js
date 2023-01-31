@@ -55,7 +55,7 @@ const updateVideo = async (videoID, mutate) => {
 }
 
 const processWeekPicks = async (mutate) => {
-  const query = datastoreForever().createQuery("videos").select('__key__');
+  const query = datastoreForever().createQuery("videos").filter('status', 'approved').select('__key__');
   const [items] = await datastoreForever().runQuery(query);
   const videoIds = items.map(it => it[datastoreForever().KEY].name)
 
