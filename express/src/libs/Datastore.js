@@ -54,29 +54,7 @@ const updateVideo = async (videoID, mutate) => {
   return datastoreForever().update({ key, data: newVideo })
 }
 
-const processWeekPicks = async (mutate) => {
-  const query = datastoreForever().createQuery("videos").filter('status', 'approved').select('__key__');
-  const [items] = await datastoreForever().runQuery(query);
-  const videoIds = items.map(it => it[datastoreForever().KEY].name)
 
-  const key = datastoreForever().key(["weekly", "WEEK_PICKS"])
-  const [item] = await datastoreForever().get(key)
-  const newPicks = mutate(item?.picks || [], videoIds)
-  return datastoreForever().save({ key, data: { picks: newPicks } })
-}
-
-const weekPick = async () => {
-  const key = datastoreForever().key(["weekly", "WEEK_PICKS"])
-  const [item] = await datastoreForever().get(key)
-  if (!item) {
-    throw 'No week pick found.'
-  }
-
-  const [weekPick] = item.picks
-  return weekPick
-}
-
-const weekPickForever = memoize(weekPick, { promise: true });
 
 const replaceVideo = async (newVideo) => {
   const key = datastoreForever().key(["videos", newVideo.objectID])
@@ -96,10 +74,13 @@ const searchApprovedVideos = () => {
   return datastoreForever().runQuery(q);
 }
 
+const searchAllVideos = () => {
+  const q = datastoreForever().createQuery("videos");
+  return datastoreForever().runQuery(q);
+}
+
 const searchApprovedVideosForever = memoize(searchApprovedVideos, { promise: true })
 
-module.exports.weekPickForever = weekPickForever;
-module.exports.processWeekPicks = processWeekPicks;
 module.exports.processVideos = processVideos;
 module.exports.oneVideo = oneVideo;
 module.exports.updateVideo = updateVideo;
@@ -107,5 +88,6 @@ module.exports.createVideo = createVideo;
 module.exports.replaceVideo = replaceVideo;
 module.exports.deleteVideo = deleteVideo;
 module.exports.searchApprovedVideos = searchApprovedVideos;
+module.exports.searchAllVideos = searchAllVideos;
 module.exports.searchApprovedVideosForever = searchApprovedVideosForever;
 module.exports.datastoreForever = datastoreForever;

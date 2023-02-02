@@ -1,8 +1,7 @@
 (async () => {
-  const { processVideos, processWeekPicks } = require("./src/libs/Datastore")
+  const { processVideos } = require("./src/libs/Datastore")
   const { begin, each, end } = require("./reindex-impl")
   const { writeFileSync } = require("fs");
-  const { determineWeekPicks } = require("./week-picks");
 
   const data = begin();
   const mapper = (video) => each(video, data)
@@ -12,8 +11,6 @@
   }
 
   processVideos(mapper, done);
-
-  await processWeekPicks(determineWeekPicks)
 })();
 
 

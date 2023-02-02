@@ -1,26 +1,21 @@
 const asyncHandler = require('express-async-handler')
-const { datastoreForever, weekPickForever, oneVideo } = require("../libs/Datastore");
+const { datastoreForever, searchApprovedVideosForever, searchAllVideos } = require("../libs/Datastore");
 const { authenticated } = require('../libs/Middlewares');
 const router = require("express").Router();
+const _ = require("lodash");
 
 const NOTHING_FOUND = `¯\\_(ツ)_/¯ No talks matching your criteria`
 
 router.post("/", asyncHandler(async (req, res) => {
   const { p, s } = req.body;
 
-  const q = datastoreForever().createQuery("videos");
-  if (!req.user?.admin) {
-    q.filter("status", "approved")
-  }
-  const { videos, more } = await paginate(q, p, s);
-
-  const { video } = await weekPickForever();
-  const weekPick = await oneVideo(video);
+  const search = req.user?.admin ? searchAllVideos : searchApprovedVideosForever
+  const [foundItems] = await search();
+  const { videos, more } = await paginate(foundItems, p, s);
 
   res.json({
     videos,
-    more,
-    weekPick
+    more
   })
 }));
 
@@ -28,9 +23,10 @@ router.post("/@:speaker", asyncHandler(async (req, res) => {
   const { speaker } = req.params;
   const { p, s } = req.body;
 
-  const q = datastoreForever().createQuery("videos").filter("speakerTwitters", speaker).filter("status", "approved");
+  const [foundItems] = await searchApprovedVideosForever()
+  const someItems = foundItems.filter(it => it.speakerTwitters.includes(speaker))
 
-  const { videos, more } = await paginate(q, p, s);
+  const { videos, more } = await paginate(someItems, p, s);
 
   const speakerIndex = videos[0]?.speakerTwitters.indexOf(speaker)
   const whois = videos[0]?.speakerNames[speakerIndex];
@@ -45,12 +41,15 @@ router.post("/@:speaker", asyncHandler(async (req, res) => {
 router.post("/~:topic(*)", asyncHandler(async (req, res) => {
   const { topic } = req.params;
   const { p, s } = req.body;
-  const q = datastoreForever().createQuery("videos").filter("topics", topic).filter("status", "approved");
-  const { videos, more } = await paginate(q, p, s);
+
+  const [foundItems] = await searchApprovedVideosForever()
+  const someItems = foundItems.filter(it => it.topics.includes(topic))
+
+  const { videos, more } = await paginate(someItems, p, s);
   res.json({
     videos,
     more,
-    title: videos.length ? `The best tech talks about ${topic}` : NOTHING_FOUND
+    title: videos.length ? `The best ${topic} talks` : NOTHING_FOUND
   })
 }));
 
@@ -81,19 +80,22 @@ router.post("/:list(later|watched|favorites)", authenticated, asyncHandler(async
   })
 }));
 
-async function paginate(q, p, s) {
-  if (p) {
-    q.start(p);
-  }
+async function paginate(items, p, s) {
+  const pg = Number(p) || 1;
+  const pgSize = 30;
+  const pgTotal = Math.ceil(items.length / pgSize);
+  const offset = (pg - 1) * pgSize;
+  const more = pgTotal === pg ? "" : pg + 1
+
+  let sortedItems = items
   if (s === 'likes') {
-    q.order('likes', { descending: true })
+    sortedItems = _.orderBy(items, ['likes'], ['desc'])
   }
   if (s === 'recent') {
-    q.order('submissionDate', { descending: true })
+    sortedItems = _.orderBy(items, ['submissionDate'], ['desc'])
   }
 
-  const [videos, info] = await datastoreForever().runQuery(q.limit(30));
-  const more = info.moreResults !== datastoreForever().NO_MORE_RESULTS ? info.endCursor : ""
+  const videos = _.drop(sortedItems, offset).slice(0, pgSize);
   return {
     videos,
     more
