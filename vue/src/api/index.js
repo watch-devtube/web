@@ -6,8 +6,8 @@ export const bucket = axios.create({
 });
 
 export const apiUrl = window.location.href.includes("devtube.xxx")
-  ? "//api.devtube.xxx:8100"
-  : "//api.dev.tube";
+  ? "//devtube.xxx:8100/api/"
+  : "//dev.tube/api/";
 
 export const api = axios.create({
   baseURL: apiUrl,

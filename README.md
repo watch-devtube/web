@@ -52,7 +52,6 @@ GOOG_CLIENT_SECRET = <ask repo owners>
 
 ```
 127.0.0.1 devtube.xxx
-127.0.0.1 api.devtube.xxx
 ```
 
 #### Run backend
