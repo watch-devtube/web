@@ -1,14 +1,14 @@
 <template lang="pug">
 .column.video.mb-6
   .columns.is-mobile.is-multiline(v-bind:class="{'is-watched': listedIn('watched'), 'has-background-danger-light': video.status === 'submitted'}")
-    .column.is-3-desktop.is-3-tablet.is-12-mobile
+    .column.is-3-desktop.is-3-tablet.is-12-mobile.is-hidden-mobile
       span.has-text-grey.is-size-7 {{addedAgo(video)}}&nbsp;
-      br.is-hidden-mobile
+      br
       span.has-text-weight-bold.has-text-grey.is-size-7 thanks to @{{video.contributor}}
     .column.is-narrow
       router-link(:to="'/@' + video.speakerTwitters[speakerIndex]" :title="video.speakerNames[speakerIndex]")
-          figure.image.is-48x48
-            img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]" width="48px" height="48px")
+        figure.image.is-48x48
+          img.avatar.is-rounded(:src="avatar(video, speakerIndex)" :alt="video.speakerNames[speakerIndex]" width="48px" height="48px")
     .column
       h1.is-4.title
         router-link.has-text-grey-darker(:to="{ name: 'video', params: { id: video.objectID } }") 
@@ -28,6 +28,7 @@ h1 {
 }
 
 .avatar {
+  filter: grayscale(0.5);
   opacity: 0.8;
   object-fit: cover;
   width: 48px;

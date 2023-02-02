@@ -1,13 +1,10 @@
 <template lang="pug">
 section.section.header.p-5.mb-6
   .container(role="navigation", aria-label="main navigation")
-    .columns.is-mobile.is-vcentered.is-gapless
+    .columns.is-mobile.is-vcentered
       .column.is-narrow
         router-link(:to="'/'")
           img.logo(src="/logo_dark.png", srcset="/logo_dark.svg", alt="logo")
-        span.is-hidden-mobile
-          br
-          a.devternity.is-size-7.is-family-code.has-text-white.has-text-weight-bold(href="https://devternity.com" target="_blank") &nbsp;inspired by DevTernity
       .column
         .is-pulled-right
           .columns.is-mobile.is-vcentered.is-size-5.is-size-7-mobile
@@ -36,10 +33,11 @@ section.section.header.p-5.mb-6
 .header {
   background-color: #343d46;
 }
+
 .logo {
-  height: 103px;
   height: 30px;
 }
+
 @media (max-width: 768px) {
   .logo {
     width: 60px;

@@ -24,10 +24,19 @@ section.section.pt-0
     .columns
       .column.is-4
         Categories.mb-6(:class="{ 'is-hidden-mobile': !forceShowCategories }"
-            v-observe-visibility="categoryVisibilityChanged")
+          v-observe-visibility="categoryVisibilityChanged")
       .column.is-8
         .columns.is-multiline.is-mobile
-          WeekPick(v-if="weekPick" :video="weekPick")
+          .column.mb-6
+            .columns.is-mobile.is-multiline.is-vcentered.promo
+              .column.is-narrow
+                MagicCircle(:width='48')
+                  a(href="https://devternity.com")
+                    figure.image.is-48x48
+                      img.avatar.is-rounded(src="/devternity.png" alt="DevTernity logo" width="48px" height="48px")
+              .column
+                h1.is-4.title
+                  a.devternity.has-text-white.has-text-weight-bold.is-size-2.is-size-4-mobile(href="https://devternity.com") Join DevTernity - The #1 Dev Conference
           VideoCard.is-12(v-for="video in videos"
             :speakerIndex="speakerIndex"
             :video="video" :key="video.objectID"
@@ -37,6 +46,30 @@ section.section.pt-0
         component(v-bind:is="component" v-on:close="component = ''")
 </template>
 <style lang="scss" scoped>
+.promo {
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+a.devternity {
+  background: linear-gradient(
+    to right,
+    hsl(98, 100%, 62%),
+    hsl(204, 100%, 59%)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+a.devternity:hover {
+  background: white;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
 .submit-video {
   position: fixed;
   right: 15px;
@@ -52,14 +85,14 @@ import Loading from "vue-loading-overlay";
 import VideoCard from "./VideoCard.vue";
 import Categories from "./Categories";
 import SubmitVideo from "./SubmitVideo";
-import WeekPick from "./WeekPick";
+import MagicCircle from "./MagicCircle";
 
 export default {
   components: {
     Categories,
     VideoCard,
-    WeekPick,
-    Loading
+    Loading,
+    MagicCircle
   },
   data: () => {
     return {
@@ -68,7 +101,6 @@ export default {
       isLoading: false,
       title: DEFAULT_TITLE,
       videos: [],
-      weekPick: undefined,
       more: undefined,
       speakerIndex: 0,
       sorting: localStorage.sorting || "recent",
@@ -116,14 +148,13 @@ export default {
           s: this.sorting,
           p
         })
-        .then(({ data: { videos, more, weekPick, title, speakerIndex } }) => {
+        .then(({ data: { videos, more, title, speakerIndex } }) => {
           if (p) {
             this.videos = [...this.videos, ...videos];
           } else {
             this.videos = videos;
           }
           this.more = more;
-          this.weekPick = weekPick;
           this.speakerIndex = speakerIndex || 0;
           this.title = title || DEFAULT_TITLE;
         })

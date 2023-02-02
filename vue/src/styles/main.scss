@@ -1,4 +1,4 @@
-$info:  #4988ca;
+$info: #4988ca;
 $link: #4988ca;
 
 .select::after {
@@ -23,7 +23,7 @@ $link: #4988ca;
 
 $card-radius: 25px !important;
 .card {
-  background-color: #343d46 !important;
+  background-color: black !important;
   padding: 3rem !important;
   margin-bottom: 3rem !important;
 }
@@ -32,13 +32,10 @@ $card-radius: 25px !important;
   margin-top: 5rem !important;
   background: white !important;
   border-radius: 10px !important;
-  padding: 4.5rem !important
+  padding: 4.5rem !important;
 }
 
-
-
-
-@import '~bulma';
+@import "~bulma";
 @import "vue-loading-overlay/dist/vue-loading";
 
 .clearfix {
@@ -59,17 +56,17 @@ $card-radius: 25px !important;
 
 .is-loadable {
   &.is-loading {
-      position: relative;
-      pointer-events: none;
-      opacity: 0.5;
-      &:after {
-          @include loader;
-          position: absolute;
-          top: calc(50% - 2.5em);
-          left: calc(50% - 2.5em);
-          width: 5em;
-          height: 5em;
-          border-width: 0.25em;
-      }
+    position: relative;
+    pointer-events: none;
+    opacity: 0.5;
+    &:after {
+      @include loader;
+      position: absolute;
+      top: calc(50% - 2.5em);
+      left: calc(50% - 2.5em);
+      width: 5em;
+      height: 5em;
+      border-width: 0.25em;
+    }
   }
 }
