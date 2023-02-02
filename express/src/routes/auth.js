@@ -37,7 +37,7 @@ function toUserProfile(request, access_token, refresh_token, profile, done) {
 passport.use(new GitHubStrategy({
   clientID: process.env.GH_CLIENT_ID,
   clientSecret: process.env.GH_CLIENT_SECRET,
-  callbackURL: "/auth/github/callback",
+  callbackURL: "/api/auth/github/callback",
   passReqToCallback: true,
   scope: ['user:email'],
   proxy: true
@@ -48,7 +48,7 @@ passport.use(new GitHubStrategy({
 passport.use(new TwitterStrategy({
   consumerKey: process.env.TWITTER_CONSUMER_KEY,
   consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-  callbackURL: '/auth/twitter/callback',
+  callbackURL: '/api/auth/twitter/callback',
   passReqToCallback: true,
   proxy: true,
   includeEmail: true
@@ -58,7 +58,7 @@ passport.use(new TwitterStrategy({
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOG_CLIENT_ID,
   clientSecret: process.env.GOOG_CLIENT_SECRET,
-  callbackURL: "/auth/google/callback",
+  callbackURL: "/api/auth/google/callback",
   passReqToCallback: true,
   proxy: true
 },

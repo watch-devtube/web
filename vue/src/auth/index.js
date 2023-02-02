@@ -34,11 +34,11 @@ const actions = {
   // eslint-disable-next-line no-unused-vars
   login({ commit }, provider) {
     window.location.href =
-      apiUrl + "/auth/" + provider + "?returnTo=" + window.location.href;
+      apiUrl + "auth/" + provider + "?returnTo=" + window.location.href;
   },
   logout() {
     window.location.href =
-      apiUrl + "/auth/logout" + "?returnTo=" + window.location.href;
+      apiUrl + "auth/logout" + "?returnTo=" + window.location.href;
   }
 };
 

@@ -78,7 +78,7 @@ import user from "./user";
 
 Vue.use(VueHead, {
   separator: "-",
-  complement: "on DevTube"
+  complement: ""
 });
 Vue.use(Vuex);
 Vue.use(Notifications);
