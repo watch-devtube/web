@@ -14,8 +14,7 @@ router.get(
     res.header("Content-Encoding", "gzip");
 
     const links = new Set();
-
-    const [videos] = await searchApprovedVideosForever();
+    const videos = await searchApprovedVideosForever();
 
     videos.forEach((video) => {
       links.add("/video/" + video.objectID);

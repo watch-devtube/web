@@ -10,7 +10,7 @@ router.post("/", asyncHandler(async (req, res) => {
   const { p, s } = req.body;
 
   const search = req.user?.admin ? searchAllVideos : searchApprovedVideosForever
-  const [foundItems] = await search();
+  const foundItems = await search();
   const { videos, more } = await paginate(foundItems, p, s);
 
   res.json({
@@ -23,7 +23,7 @@ router.post("/@:speaker", asyncHandler(async (req, res) => {
   const { speaker } = req.params;
   const { p, s } = req.body;
 
-  const [foundItems] = await searchApprovedVideosForever()
+  const foundItems = await searchApprovedVideosForever()
   const someItems = foundItems.filter(it => it.speakerTwitters.includes(speaker))
 
   const { videos, more } = await paginate(someItems, p, s);
@@ -42,7 +42,7 @@ router.post("/~:topic(*)", asyncHandler(async (req, res) => {
   const { topic } = req.params;
   const { p, s } = req.body;
 
-  const [foundItems] = await searchApprovedVideosForever()
+  const foundItems = await searchApprovedVideosForever()
   const someItems = foundItems.filter(it => it.topics.includes(topic))
 
   const { videos, more } = await paginate(someItems, p, s);

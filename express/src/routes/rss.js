@@ -6,7 +6,7 @@ router.get(
   "/",
   asyncHandler(async (req, res) => {
     console.time("rss fetch");
-    const [videos] = await searchApprovedVideosForever();
+    const videos = await searchApprovedVideosForever();
     console.timeEnd("rss fetch");
 
     const feedTitle = "Best tech talks for developers";

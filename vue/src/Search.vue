@@ -60,14 +60,21 @@ a.devternity {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
+  letter-spacing: -2px;
+}
+
+@import "~bulma";
+
+@include mobile {
+  a.devternity {
+    letter-spacing: -1px;
+  }
 }
 
 a.devternity:hover {
   background: white;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
 }
 
 .submit-video {

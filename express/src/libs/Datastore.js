@@ -1,5 +1,6 @@
 const jsonDiff = require("json-diff");
 const memoize = require("memoizee");
+const { readFileSync } = require("fs");
 
 const datastoreForever = memoize(() => {
   const { Datastore } = require("@google-cloud/datastore");
@@ -76,10 +77,11 @@ const searchApprovedVideos = () => {
 
 const searchAllVideos = () => {
   const q = datastoreForever().createQuery("videos");
-  return datastoreForever().runQuery(q);
+  return datastoreForever().runQuery(q).then(([videos]) => videos);
 }
 
-const searchApprovedVideosForever = memoize(searchApprovedVideos, { promise: true })
+const readApprovedVideos = () => JSON.parse(readFileSync('./data/videos.json', { encoding: "utf8" }));
+const searchApprovedVideosForever = memoize(readApprovedVideos)
 
 module.exports.processVideos = processVideos;
 module.exports.oneVideo = oneVideo;
