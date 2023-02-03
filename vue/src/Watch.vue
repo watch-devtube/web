@@ -116,11 +116,14 @@ export default {
     script() {
       return [
         {
+          id: "json/ld",
           t: "application/ld+json",
           i: JSON.stringify({
             "@context": "http://schema.org/",
             "@type": "VideoObject",
             "@id": "https://dev.tube/video/" + this.id,
+            uploadDate: this.video.recordingDate,
+            duration: this.video.duration,
             name: this.video.title,
             description: this.video.title,
             thumbnailURL: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
