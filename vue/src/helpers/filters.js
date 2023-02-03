@@ -14,6 +14,14 @@ export const durationFull = it => {
 export const published = it => (it ? dayjs(it).format("MMM YYYY") : it);
 export const year = it => (it ? dayjs(it).format("YYYY") : it);
 
+export const years = () => {
+  const yearNow = dayjs().year();
+  const yearNext = dayjs()
+    .add(1, "year")
+    .year();
+  return `${yearNow}/${yearNext}`;
+};
+
 export const ago = it => {
   return dayjs(it).fromNow();
 };

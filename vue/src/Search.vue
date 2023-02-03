@@ -3,9 +3,9 @@ section.section.pt-0
   loading(:active.sync="isLoading")
   aside.container.pb-6
     .columns.is-mobile.is-multiline.is-vcentered
-      .column.column.is-two-thirds-desktop.is-full-tablet
+      .column.column.is-four-fifths.is-full-tablet
         h1.title.is-1.is-size-3-mobile(style="letter-spacing: -2px") {{title}}
-      .column.is-one-third-desktop.is-full-mobile
+      .column.is-full-mobile
         .is-pulled-right
           .select.is-small(@change='sortingChanged()')
             select(aria-label='Sorting' v-model="sorting")
@@ -84,8 +84,6 @@ a.devternity:hover {
 }
 </style>
 <script>
-const DEFAULT_TITLE = "The best tech talks for developers";
-
 import { api } from "./api";
 
 import Loading from "vue-loading-overlay";
@@ -93,6 +91,7 @@ import VideoCard from "./VideoCard.vue";
 import Categories from "./Categories";
 import SubmitVideo from "./SubmitVideo";
 import MagicCircle from "./MagicCircle";
+import { years } from "./helpers/filters";
 
 export default {
   components: {
@@ -106,7 +105,7 @@ export default {
       categoriesVisible: true,
       forceShowCategories: false,
       isLoading: false,
-      title: DEFAULT_TITLE,
+      title: `The best tech talks for developers ${years()}`,
       videos: [],
       more: undefined,
       speakerIndex: 0,
@@ -163,7 +162,8 @@ export default {
           }
           this.more = more;
           this.speakerIndex = speakerIndex || 0;
-          this.title = title || DEFAULT_TITLE;
+          this.title =
+            (title || "The best tech talks for developers") + " " + years();
         })
         .finally(() => {
           this.isLoading = false;

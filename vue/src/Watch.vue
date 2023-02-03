@@ -17,9 +17,9 @@
               frameborder="0",
               allow="autoplay; encrypted-media" allowfullscreen
             )
-      .columns
+      .columns(v-if="video")
         .column
-          span.has-text-grey.title.is-size-7 
+          span.has-text-grey.title.is-size-7
             span.mr-4 {{ video.duration | durationFull }}
             span.mr-3 {{ video.recordingDate | published }}
             WatchingNow(:video="video" v-if="video.objectID" :minimumWatching="1")
@@ -35,7 +35,7 @@
             br
             TwitterThanks(:video="video" v-if="video.objectID")
           .clearfix
-  section.section(v-if="video.objectID")
+  section.section(v-if="video")
     .container
       VideoComments(:video="video" :key="video.objectID")
 </template>
@@ -65,6 +65,7 @@ import TwitterThanks from "./TwitterThanks.vue";
 import WatchingNow from "./WatchingNow.vue";
 import VideoActions from "./VideoActions.vue";
 import VideoComments from "./VideoComments.vue";
+import { years } from "./helpers/filters";
 export default {
   components: {
     RelatedVideos,
@@ -82,9 +83,7 @@ export default {
   data: function() {
     return {
       error: undefined,
-      video: {
-        speakerNames: []
-      }
+      video: undefined
     };
   },
   watch: {
@@ -94,6 +93,15 @@ export default {
     this.fetch();
   },
   methods: {
+    title() {
+      return this.video
+        ? this.video.title +
+            " by " +
+            this.video.speakerNames.join(", ") +
+            " " +
+            years()
+        : "";
+    },
     fetch() {
       api
         .get("/videos/" + this.id)
@@ -108,33 +116,33 @@ export default {
   head: {
     title() {
       return {
-        inner: this.video.objectID
-          ? this.video.title + " by " + this.video.speakerNames.join(", ")
-          : this.id
+        inner: this.title()
       };
     },
     script() {
       return [
-        {
-          id: "json/ld",
-          t: "application/ld+json",
-          i: JSON.stringify({
-            "@context": "http://schema.org/",
-            "@type": "VideoObject",
-            "@id": "https://dev.tube/video/" + this.id,
-            uploadDate: this.video.recordingDate,
-            duration: this.video.duration,
-            name: this.video.title,
-            description: this.video.title,
-            thumbnailURL: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
-            thumbnail: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
-            interactionCount: this.video.likes,
-            author: this.video.speakerNames.map(name => ({
-              "@type": "Person",
-              name
-            }))
-          })
-        }
+        this.video
+          ? {
+              id: "json/ld",
+              t: "application/ld+json",
+              i: JSON.stringify({
+                "@context": "http://schema.org/",
+                "@type": "VideoObject",
+                "@id": "https://dev.tube/video/" + this.id,
+                uploadDate: this.video.recordingDate,
+                duration: this.video.duration,
+                name: this.video.title,
+                description: this.video.title,
+                thumbnailURL: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
+                thumbnail: `https://img.youtube.com/vi/${this.id}/maxresdefault.jpg`,
+                interactionCount: this.video.likes,
+                author: this.video.speakerNames.map(name => ({
+                  "@type": "Person",
+                  name
+                }))
+              })
+            }
+          : {}
       ];
     }
   }
