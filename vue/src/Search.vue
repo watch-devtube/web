@@ -31,12 +31,12 @@ section.section.pt-0
             .columns.is-mobile.is-multiline.is-vcentered.promo
               .column.is-narrow
                 MagicCircle(:width='48')
-                  a(href="https://devternity.com")
+                  a(href="https://devternity.com?utm_source=devtube")
                     figure.image.is-48x48
                       img.avatar.is-rounded(src="/devternity.png" alt="DevTernity logo" width="48px" height="48px")
               .column
                 h1.is-4.title
-                  a.devternity.has-text-white.has-text-weight-bold.is-size-2.is-size-4-mobile(href="https://devternity.com") Join DevTernity - The #1 Dev Conference
+                  a.devternity.has-text-white.has-text-weight-bold.is-size-2.is-size-4-mobile(href="https://devternity.com?utm_source=devtube") Join DevTernity - The #1 Dev Conference
           VideoCard.is-12(v-for="video in videos"
             :speakerIndex="speakerIndex"
             :video="video" :key="video.objectID"

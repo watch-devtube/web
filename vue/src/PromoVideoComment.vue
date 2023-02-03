@@ -2,7 +2,7 @@
 article.media
   figure.media-left
     MagicCircle(:width='32')
-      a.image.is-32x32(href="https://devternity.com?utm_source=devtube&utm_medium=popup" target="_blank")
+      a.image.is-32x32(href="https://devternity.com?utm_source=devtube" target="_blank")
         img.is-rounded(src="/devternity.png" alt="DevTernity logo")
   .media-content
     .content
@@ -14,7 +14,7 @@ article.media
           b {{speaker || "Scott Hanselman"}} 
           | and other legends of software development are speaking at 
           b
-            a(href="https://devternity.com?utm_source=devtube&utm_medium=popup" target="_blank") DevTernity 2023
+            a(href="https://devternity.com?utm_source=devtube" target="_blank") DevTernity 2023
           | .
         br
 </template>

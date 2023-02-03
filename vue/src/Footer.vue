@@ -8,7 +8,7 @@ footer.footer.has-background-white
     p
       strong
         | 🚀 Inspired by 
-        a(href='https://devternity.com' target='_blank') DevTernity 
+        a(href='https://devternity.com?utm_source=devtube' target='_blank') DevTernity 
         | &ndash; the top software developer conference.
     p.is-size-5
       a.mr-3.has-text-grey-dark(href='https://github.com/watch-devtube/web' rel="nofollow noopener noreferrer"): font-awesome-icon(:icon="['fab', 'github']" title="Our GitHub")
