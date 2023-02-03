@@ -77,7 +77,7 @@ import edit from "./edit";
 import user from "./user";
 
 Vue.use(VueHead, {
-  separator: "-",
+  separator: "",
   complement: ""
 });
 Vue.use(Vuex);
