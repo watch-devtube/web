@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/watch-devtube/web.svg?branch=master)](https://travis-ci.org/watch-devtube/web)
+[![Build Status](https://github.com/watch-devtube/web/actions/workflows/server-deploy.yml/badge.svg)](https://github.com/watch-devtube/web/)
 
 # DevTube
 
