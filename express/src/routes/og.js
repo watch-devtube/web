@@ -24,11 +24,11 @@ router.get(
       <meta name="twitter:site" content="@watchdevtube">
       <meta name="twitter:creator" content="@watchdevtube">
       <meta name="twitter:title" content="${video.title}">
-      <meta name="og:title" content="${video.title}">
       <meta name="twitter:description" content="A tech talk by ${video.speakerNames[0]}">
-      <meta name="og:description" content="A tech talk by ${video.speakerNames[0]}">
       <meta name="twitter:image" content="${ogLink}">
-      <meta name="og:image" content="${ogLink}">
+      <meta property="og:image" content="${ogLink}">
+      <meta property="og:title" content="${video.title}">
+      <meta property="og:description" content="A tech talk by ${video.speakerNames[0]}">
     </head>
     <body>
     </body>
