@@ -59,7 +59,7 @@ function ogImage(video, watchingNow, comments) {
 }
 
 function doubleEscape(txt) {
-  return encodeURIComponent(encodeURIComponent(txt));
+  return encodeURIComponent(txt);
 }
 
 function kilo(num) {
