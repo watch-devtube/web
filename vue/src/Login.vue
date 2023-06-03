@@ -10,11 +10,6 @@
             p.description ...and unlock some superpowers
             .form
               br
-              a.button.is-info.is-fullwidth.is-medium(@click="login('twitter')")
-                span.icon
-                  font-awesome-icon(:icon="['fab', 'twitter']")
-                span Twitter
-              br
               button.button.is-info.is-fullwidth.is-medium(@click="login('github')")
                 span.icon
                   font-awesome-icon(:icon="['fab', 'github']")
