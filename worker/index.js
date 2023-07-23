@@ -9,8 +9,8 @@ async function handleRequest(request) {
   const bots = ["Twitterbot", "Slackbot", "LinkedIn"];
 
   if (url.includes('https://dev.tube/video/') && bots.some(bot => userAgent.includes(bot))) {
-    const redirectUrl = url.replace('https://dev.tube/video/', 'https://dev.tube/api/og/')
-    return Response.redirect(redirectUrl, 302)
+    const videoId = url.replace('https://dev.tube/video/', '')
+    return Response.redirect('https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg', 302)
   }
 
   if (url.includes('dev.tube/sitemap.xml')) {
@@ -20,4 +20,4 @@ async function handleRequest(request) {
   } else {
     return await fetch(request)
   }
-} 
+}
