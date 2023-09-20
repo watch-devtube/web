@@ -11,8 +11,8 @@ article.media
         span.ml-1.mr-1 &middot; {{new Date() | ago}}
         br
         span
-          b {{speaker || "Scott Hanselman"}} 
-          | and other legends of software development are speaking at 
+          b Scott Hanselman
+          | and other legends of software development are speaking at
           b
             a(href="https://devternity.com?utm_source=devtube" target="_blank") DevTernity 2023
           | .
@@ -25,25 +25,6 @@ export default {
   components: { MagicCircle },
   props: {
     video: { type: Object, required: true }
-  },
-  data: function() {
-    return {
-      speaker: undefined
-    };
-  },
-  created() {
-    fetch(
-      "https://raw.githubusercontent.com/devternity/devternity.com.src/master/src/event.yml"
-    )
-      .then(response => response.text())
-      .then(event => {
-        const speakerIndex = this.video.speakerTwitters.findIndex(
-          speakerTwitter => event.includes(`twitter: ${speakerTwitter}`)
-        );
-        if (speakerIndex >= 0) {
-          this.speaker = this.video.speakerNames[speakerIndex];
-        }
-      });
   }
 };
 </script>
