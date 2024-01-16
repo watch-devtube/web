@@ -1,7 +1,6 @@
 <template lang="pug">
 .comments.is-size-7(v-if="commentsEnabled")
   VideoCommentEditor(:replyUrl="'/youtube/' + video.objectID + '/comments'" @commented="newCommentAdded")
-  PromoVideoComment(:video="video")
   VideoComment(v-for="comment in comments" :key="comment.id" :comment="comment" :video="video")
   section.section
     button.button.is-small(v-if="nextPageToken" @click="fetchMoreComments()") More
@@ -9,9 +8,8 @@
 <script>
 import { api } from "./api";
 import VideoCommentEditor from "./VideoCommentEditor.vue";
-import PromoVideoComment from "./PromoVideoComment.vue";
 export default {
-  components: { VideoCommentEditor, PromoVideoComment },
+  components: { VideoCommentEditor },
   props: {
     video: {
       type: Object,

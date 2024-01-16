@@ -15,10 +15,7 @@ export function avatar(video, speakerIndex) {
     russolsen: "/speakers/russ_olsen.jpg"
   };
   const speaker = video.speakerTwitters[speakerIndex];
-  return (
-    customAvatars[speaker] ||
-    `https://res.cloudinary.com/eduardsi/image/twitter_name/w_128,h_128,f_auto/${speaker}.jpg`
-  );
+  return customAvatars[speaker] || `https://unavatar.io/twitter/${speaker}`;
 }
 
 export function addedAgo(video) {
