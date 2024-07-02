@@ -19,6 +19,7 @@
     "bulma": "^0.9.4",
     "dayjs": "^1.5.16",
     "parse-url": "^5.0.7",
+    "plausible-tracker": "^0.3.9",
     "vue": "^2.7.14",
     "vue-head": "^2.2.0",
     "vue-loading-overlay": "^3.0.1",

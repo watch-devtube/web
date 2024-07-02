@@ -116,6 +116,13 @@ const store = new Vuex.Store({
   strict: true
 });
 
+import Plausible from 'plausible-tracker'
+const { enableAutoPageviews } = Plausible({
+  domain: 'dev.tube',
+  apiHost: 'https://a.devternity.com'
+})
+enableAutoPageviews()
+
 new Vue({
   el: "#app",
   store,
