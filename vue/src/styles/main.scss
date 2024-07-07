@@ -1,12 +1,10 @@
 $info: #4988ca;
 $link: #4988ca;
-$bg-color: #fff;
 
 
 @media (prefers-color-scheme: dark) {
   :root {
     background-color: #222;
-    $bg-color: #222;
   }
 
   .title[data-v-25c182e1], .title.is-5, .footer, .footer.content {
