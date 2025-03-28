@@ -33,7 +33,7 @@ Ask the repo owners for Google Datastore credentials, then put them in `./datast
 Create a file `./express/.env` with the following variables:
 
 ```
-COOKIE_SECRET = DEVDEVDEVDEVDEVDEVDEVDEVDEVDEVDE
+COOKIE_SECRET = DEVDEVDEVDEVDEVDEVDEVDEVDEVDEVDEV
 DEVTUBE_HOST = http://devtube.xxx:8080
 
 YOUTUBE_API_KEY = <ask repo owners>
