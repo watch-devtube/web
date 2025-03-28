@@ -47,5 +47,8 @@
     "testMatch": [
       "**/**.test.js"
     ]
+  },
+  "volta": {
+    "node": "16.20.2"
   }
 }
