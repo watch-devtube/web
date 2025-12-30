@@ -34,7 +34,7 @@ jobs:
       - name: build
         run: npm install && npm run build
       - name: deploy
-        uses: w9jds/firebase-action@master
+        uses: w9jds/firebase-action@v13.13.2
         with:
           args: deploy --only hosting
         env:
@@ -94,4 +94,4 @@ jobs:
         run: npm run reindex
 
       - name: deploy
-        run: "gcloud functions deploy api --trigger-http --runtime nodejs18 --memory=1024MB --timeout=1m --project=dev-tube --no-gen2"
+        run: "gcloud functions deploy api --trigger-http --runtime nodejs20 --memory=1024MB --timeout=1m --project=dev-tube --no-gen2"

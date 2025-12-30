@@ -12,7 +12,7 @@
 
     <p class="super-text">
       <a class="super-link" href="https://principal.dev">The Principal Dev – Masterclass for Tech Leads</a>
-      • July 17-18
+      • 28-29 May
     </p>
     <a class="super-cta-button" href="https://principal.dev">Join →</a>
   </div>
