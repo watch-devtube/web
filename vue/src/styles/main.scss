@@ -1,6 +1,27 @@
 $info: #4988ca;
 $link: #4988ca;
 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #222;
+  }
+
+  .title[data-v-25c182e1], .title.is-5, .footer, .footer.content {
+    color: #ddd;
+  }
+
+  .footer, .content, .is-size-5 {
+    background-color: #222 !important;
+    color: #ddd;
+  }
+
+  .svg-inline--fa {
+    color: #ddd;
+  }
+
+}
+
 .select::after {
   border-color: hsl(0, 0%, 86%) !important;
 }

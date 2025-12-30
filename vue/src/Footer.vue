@@ -1,5 +1,5 @@
 <template lang="pug">
-footer.footer.has-background-white
+footer.footer
   .content.has-text-centered.is-size-6
     p
       | Coded at night under caffeine by
